@@ -1,0 +1,19 @@
+#nullable enable
+
+namespace Dataloop
+{
+    public partial interface IOntologiesClient
+    {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="attributeId"></param>
+        /// <param name="id"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Dataloop.ApiException"></exception>
+        global::System.Threading.Tasks.Task DeleteAttributeSectionAsync(
+            string attributeId,
+            string id,
+            global::System.Threading.CancellationToken cancellationToken = default);
+    }
+}

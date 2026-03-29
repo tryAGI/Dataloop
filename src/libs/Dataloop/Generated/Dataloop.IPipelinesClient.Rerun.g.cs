@@ -1,0 +1,50 @@
+#nullable enable
+
+namespace Dataloop
+{
+    public partial interface IPipelinesClient
+    {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="pipelineId"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Dataloop.ApiException"></exception>
+        /// <remarks>
+        /// pipeline.pipeline_executions.rerun(pipeline_id='pipeline_id', method=dl.CycleRerunMethod.START_FROM_BEGINNING)<br/>
+        /// # <br/>
+        /// # Get Pipeline Execution object<br/>
+        /// # <br/>
+        /// # **prerequisites**: You must be an *owner* or *developer* to use this method.<br/>
+        /// # <br/>
+        /// # :param str pipeline_id: pipeline id<br/>
+        /// # :param str method: method to run<br/>
+        /// # :param list start_nodes_ids: list of start nodes ids<br/>
+        /// # :param filters: Filters entity for a filtering before execute<br/>
+        /// # :param bool wait: wait until rerun finish<br/>
+        /// # :return: True if success<br/>
+        /// # :rtype: bool<br/>
+        /// # <br/>
+        /// # 
+        /// </remarks>
+        global::System.Threading.Tasks.Task<global::Dataloop.APICommand> RerunAsync(
+            string pipelineId,
+
+            global::Dataloop.IRerunCycleBatchOptions request,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="pipelineId"></param>
+        /// <param name="pipeline"></param>
+        /// <param name="batch"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::System.InvalidOperationException"></exception>
+        global::System.Threading.Tasks.Task<global::Dataloop.APICommand> RerunAsync(
+            string pipelineId,
+            global::Dataloop.IExecuteOptionsBatch batch,
+            global::Dataloop.IRerunCycleOptions? pipeline = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+    }
+}

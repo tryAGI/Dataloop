@@ -1,0 +1,236 @@
+
+#nullable enable
+
+namespace Dataloop
+{
+    public partial class AnnotationTasksClient
+    {
+        partial void PrepareDeleteAnnotationTaskArguments(
+            global::System.Net.Http.HttpClient httpClient,
+            ref string id,
+            global::Dataloop.DeleteTaskPayload request);
+        partial void PrepareDeleteAnnotationTaskRequest(
+            global::System.Net.Http.HttpClient httpClient,
+            global::System.Net.Http.HttpRequestMessage httpRequestMessage,
+            string id,
+            global::Dataloop.DeleteTaskPayload request);
+        partial void ProcessDeleteAnnotationTaskResponse(
+            global::System.Net.Http.HttpClient httpClient,
+            global::System.Net.Http.HttpResponseMessage httpResponseMessage);
+
+        partial void ProcessDeleteAnnotationTaskResponseContent(
+            global::System.Net.Http.HttpClient httpClient,
+            global::System.Net.Http.HttpResponseMessage httpResponseMessage,
+            ref string content);
+
+        /// <summary>
+        /// Delete a task
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Dataloop.ApiException"></exception>
+        /// <remarks>
+        /// dataset.tasks.delete(task_id='task_id')<br/>
+        /// # <br/>
+        /// # Delete the Task.<br/>
+        /// # <br/>
+        /// # **Prerequisites**: You must be in the role of an *owner* or *developer* or *annotation manager* who created that task.<br/>
+        /// # <br/>
+        /// # :param dtlpy.entities.task.Task task: the task object<br/>
+        /// # :param str task_name: the name of the task<br/>
+        /// # :param str task_id: the Id of the task<br/>
+        /// # :param bool wait: wait until delete task finish<br/>
+        /// # :return: True is success<br/>
+        /// # :rtype: bool<br/>
+        /// # <br/>
+        /// # 
+        /// </remarks>
+        public async global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<object, global::Dataloop.APICommand>> DeleteAnnotationTaskAsync(
+            string id,
+
+            global::Dataloop.DeleteTaskPayload request,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
+            request = request ?? throw new global::System.ArgumentNullException(nameof(request));
+
+            PrepareArguments(
+                client: HttpClient);
+            PrepareDeleteAnnotationTaskArguments(
+                httpClient: HttpClient,
+                id: ref id,
+                request: request);
+
+            var __pathBuilder = new global::Dataloop.PathBuilder(
+                path: $"/annotationtasks/{id}",
+                baseUri: HttpClient.BaseAddress); 
+            var __path = __pathBuilder.ToString();
+            using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
+                method: global::System.Net.Http.HttpMethod.Delete,
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
+#if NET6_0_OR_GREATER
+            __httpRequest.Version = global::System.Net.HttpVersion.Version11;
+            __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
+#endif
+
+            foreach (var __authorization in Authorizations)
+            {
+                if (__authorization.Type == "Http" ||
+                    __authorization.Type == "OAuth2")
+                {
+                    __httpRequest.Headers.Authorization = new global::System.Net.Http.Headers.AuthenticationHeaderValue(
+                        scheme: __authorization.Name,
+                        parameter: __authorization.Value);
+                }
+                else if (__authorization.Type == "ApiKey" &&
+                         __authorization.Location == "Header")
+                {
+                    __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
+                }
+            }
+            var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
+            var __httpRequestContent = new global::System.Net.Http.StringContent(
+                content: __httpRequestContentBody,
+                encoding: global::System.Text.Encoding.UTF8,
+                mediaType: "application/json");
+            __httpRequest.Content = __httpRequestContent;
+
+            PrepareRequest(
+                client: HttpClient,
+                request: __httpRequest);
+            PrepareDeleteAnnotationTaskRequest(
+                httpClient: HttpClient,
+                httpRequestMessage: __httpRequest,
+                id: id,
+                request: request);
+
+            using var __response = await HttpClient.SendAsync(
+                request: __httpRequest,
+                completionOption: global::System.Net.Http.HttpCompletionOption.ResponseContentRead,
+                cancellationToken: cancellationToken).ConfigureAwait(false);
+
+            ProcessResponse(
+                client: HttpClient,
+                response: __response);
+            ProcessDeleteAnnotationTaskResponse(
+                httpClient: HttpClient,
+                httpResponseMessage: __response);
+
+            if (ReadResponseAsString)
+            {
+                var __content = await __response.Content.ReadAsStringAsync(
+#if NET5_0_OR_GREATER
+                    cancellationToken
+#endif
+                ).ConfigureAwait(false);
+
+                ProcessResponseContent(
+                    client: HttpClient,
+                    response: __response,
+                    content: ref __content);
+                ProcessDeleteAnnotationTaskResponseContent(
+                    httpClient: HttpClient,
+                    httpResponseMessage: __response,
+                    content: ref __content);
+
+                try
+                {
+                    __response.EnsureSuccessStatusCode();
+
+                    return
+                        global::Dataloop.AnyOf<object, global::Dataloop.APICommand>.FromJson(__content, JsonSerializerContext) ??
+                        throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+                }
+                catch (global::System.Exception __ex)
+                {
+                    throw new global::Dataloop.ApiException(
+                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                        innerException: __ex,
+                        statusCode: __response.StatusCode)
+                    {
+                        ResponseBody = __content,
+                        ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                            __response.Headers,
+                            h => h.Key,
+                            h => h.Value),
+                    };
+                }
+            }
+            else
+            {
+                try
+                {
+                    __response.EnsureSuccessStatusCode();
+
+                    using var __content = await __response.Content.ReadAsStreamAsync(
+#if NET5_0_OR_GREATER
+                        cancellationToken
+#endif
+                    ).ConfigureAwait(false);
+
+                    return
+                        await global::Dataloop.AnyOf<object, global::Dataloop.APICommand>.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        throw new global::System.InvalidOperationException("Response deserialization failed.");
+                }
+                catch (global::System.Exception __ex)
+                {
+                    string? __content = null;
+                    try
+                    {
+                        __content = await __response.Content.ReadAsStringAsync(
+#if NET5_0_OR_GREATER
+                            cancellationToken
+#endif
+                        ).ConfigureAwait(false);
+                    }
+                    catch (global::System.Exception)
+                    {
+                    }
+
+                    throw new global::Dataloop.ApiException(
+                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                        innerException: __ex,
+                        statusCode: __response.StatusCode)
+                    {
+                        ResponseBody = __content,
+                        ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                            __response.Headers,
+                            h => h.Key,
+                            h => h.Value),
+                    };
+                }
+            }
+        }
+        /// <summary>
+        /// Delete a task
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="asynced"></param>
+        /// <param name="deleteWithPipeline"></param>
+        /// <param name="emptyOnly"></param>
+        /// <param name="force"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::System.InvalidOperationException"></exception>
+        public async global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<object, global::Dataloop.APICommand>> DeleteAnnotationTaskAsync(
+            string id,
+            bool? asynced = default,
+            bool? deleteWithPipeline = default,
+            bool? emptyOnly = default,
+            bool? force = default,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
+            var __request = new global::Dataloop.DeleteTaskPayload
+            {
+                Asynced = asynced,
+                DeleteWithPipeline = deleteWithPipeline,
+                EmptyOnly = emptyOnly,
+                Force = force,
+            };
+
+            return await DeleteAnnotationTaskAsync(
+                id: id,
+                request: __request,
+                cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+    }
+}

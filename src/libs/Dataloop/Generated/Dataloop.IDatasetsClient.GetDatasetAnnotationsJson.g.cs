@@ -1,0 +1,19 @@
+#nullable enable
+
+namespace Dataloop
+{
+    public partial interface IDatasetsClient
+    {
+        /// <summary>
+        /// Download a JSON file representing all annotations in the specified dataset
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="directory"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Dataloop.ApiException"></exception>
+        global::System.Threading.Tasks.Task GetDatasetAnnotationsJsonAsync(
+            string id,
+            string? directory = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+    }
+}
