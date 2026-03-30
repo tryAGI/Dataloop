@@ -18,6 +18,12 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("displayName")]
+        public string? DisplayName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("icon")]
         public global::Dataloop.DpkAttributeValueDefinitionIcon? Icon { get; set; }
 
@@ -49,6 +55,7 @@ namespace Dataloop
         /// Initializes a new instance of the <see cref="DpkAttributeValueDefinition" /> class.
         /// </summary>
         /// <param name="name"></param>
+        /// <param name="displayName"></param>
         /// <param name="icon"></param>
         /// <param name="color"></param>
         /// <param name="description"></param>
@@ -58,12 +65,14 @@ namespace Dataloop
 #endif
         public DpkAttributeValueDefinition(
             string name,
+            string? displayName,
             global::Dataloop.DpkAttributeValueDefinitionIcon? icon,
             global::Dataloop.DpkAttributeValueDefinitionColor? color,
             string? description,
             string? link)
         {
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
+            this.DisplayName = displayName;
             this.Icon = icon;
             this.Color = color;
             this.Description = description;

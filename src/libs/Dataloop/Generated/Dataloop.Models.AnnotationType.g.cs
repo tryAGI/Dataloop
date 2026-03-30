@@ -63,6 +63,10 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        Polygon,
+        /// <summary>
+        /// 
+        /// </summary>
         Polyline,
         /// <summary>
         /// 
@@ -131,6 +135,7 @@ namespace Dataloop
                 AnnotationType.Note => "note",
                 AnnotationType.PdfText => "pdf_text",
                 AnnotationType.Point => "point",
+                AnnotationType.Polygon => "polygon",
                 AnnotationType.Polyline => "polyline",
                 AnnotationType.Polyline3d => "polyline_3d",
                 AnnotationType.Pose => "pose",
@@ -165,6 +170,7 @@ namespace Dataloop
                 "note" => AnnotationType.Note,
                 "pdf_text" => AnnotationType.PdfText,
                 "point" => AnnotationType.Point,
+                "polygon" => AnnotationType.Polygon,
                 "polyline" => AnnotationType.Polyline,
                 "polyline_3d" => AnnotationType.Polyline3d,
                 "pose" => AnnotationType.Pose,

@@ -23,6 +23,9 @@ namespace Dataloop
         /// </summary>
         /// <param name="id"></param>
         /// <param name="force"></param>
+        /// <param name="serveDebugIngressCreated">
+        /// Server-only: set after first successful debug ingress create (ACTIVATE may poll frequently)
+        /// </param>
         /// <param name="time"></param>
         /// <param name="status"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -31,6 +34,7 @@ namespace Dataloop
             string id,
             string force,
             global::Dataloop.EDebugOptionsStatus status,
+            bool? serveDebugIngressCreated = default,
             global::System.DateTime? time = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

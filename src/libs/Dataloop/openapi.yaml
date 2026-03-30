@@ -1337,6 +1337,7 @@
           "ref_image",
           "ref_semantic_3d",
           "gis",
+          "polygon",
           "class",
           "point",
           "line",
@@ -8127,6 +8128,401 @@
         "type": "object",
         "additionalProperties": true
       },
+      "AssignmentStatus": {
+        "enum": [
+          "todo",
+          "in progress",
+          "done",
+          "completed with issues"
+        ],
+        "type": "string"
+      },
+      "ItemStatus": {
+        "properties": {
+          "completed": {
+            "type": "number",
+            "format": "double"
+          },
+          "remaining": {
+            "type": "number",
+            "format": "double"
+          },
+          "actions": {
+            "properties": {},
+            "additionalProperties": {
+              "type": "number",
+              "format": "double"
+            },
+            "type": "object",
+            "nullable": true
+          }
+        },
+        "required": [
+          "completed",
+          "remaining"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "APIAssignment": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "updatedBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string"
+          },
+          "annotator": {
+            "type": "string"
+          },
+          "status": {
+            "$ref": "#/components/schemas/AssignmentStatus"
+          },
+          "projectId": {
+            "type": "string"
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/APIMetadata"
+          },
+          "totalItems": {
+            "type": "number",
+            "format": "double"
+          },
+          "itemStatus": {
+            "$ref": "#/components/schemas/ItemStatus"
+          },
+          "taskType": {
+            "type": "string"
+          },
+          "progress": {
+            "type": "number",
+            "format": "double"
+          },
+          "forReview": {
+            "type": "number",
+            "format": "double"
+          },
+          "issues": {
+            "type": "number",
+            "format": "double"
+          },
+          "inRedistributeProcess": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "removeItemsProcess": {
+            "properties": {
+              "count": {
+                "type": "number",
+                "format": "double"
+              },
+              "date": {
+                "type": "string",
+                "format": "date-time"
+              }
+            },
+            "required": [
+              "count",
+              "date"
+            ],
+            "type": "object",
+            "nullable": true
+          },
+          "redistributeProcess": {
+            "properties": {
+              "count": {
+                "type": "number",
+                "format": "double"
+              },
+              "date": {
+                "type": "string",
+                "format": "date-time"
+              }
+            },
+            "required": [
+              "count",
+              "date"
+            ],
+            "type": "object",
+            "nullable": true
+          },
+          "error": {
+            "type": "string",
+            "nullable": true
+          },
+          "priority": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          }
+        },
+        "required": [
+          "id",
+          "url",
+          "name",
+          "annotator",
+          "status",
+          "projectId",
+          "metadata",
+          "totalItems",
+          "itemStatus",
+          "taskType",
+          "progress",
+          "forReview",
+          "issues"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "PartialAssignmentPayload": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "metadata": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Dictionary"
+              }
+            ],
+            "nullable": true
+          }
+        },
+        "type": "object",
+        "additionalProperties": true
+      },
+      "APIAssignmentCursor": {
+        "properties": {
+          "totalItemsCount": {
+            "type": "number",
+            "format": "double"
+          },
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/APIAssignment"
+            },
+            "type": "array"
+          },
+          "totalPagesCount": {
+            "type": "number",
+            "format": "double"
+          },
+          "hasNextPage": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "totalItemsCount",
+          "items",
+          "totalPagesCount",
+          "hasNextPage"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "ReassignAssignmentPayload": {
+        "properties": {
+          "annotator": {
+            "type": "string"
+          },
+          "asynced": {
+            "type": "boolean",
+            "nullable": true
+          }
+        },
+        "required": [
+          "annotator"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "AssignmentWorkload": {
+        "properties": {
+          "assigneeId": {
+            "type": "string"
+          },
+          "load": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "required": [
+          "assigneeId",
+          "load"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "RedistributeAssignmentPayload": {
+        "properties": {
+          "workload": {
+            "items": {
+              "$ref": "#/components/schemas/AssignmentWorkload"
+            },
+            "type": "array"
+          },
+          "selectNotAnnotatedOnly": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "asynced": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "isSudoCtx": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "allowToSkipAssignments": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "query": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "required": [
+          "workload"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "BatchAssignmentPayload": {
+        "properties": {
+          "assignmentId": {
+            "type": "string"
+          },
+          "asynced": {
+            "type": "boolean",
+            "nullable": true
+          }
+        },
+        "required": [
+          "assignmentId"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "AssignmentStatusPayload": {
+        "properties": {
+          "operation": {
+            "$ref": "#/components/schemas/ItemRefOperation"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "returnLastStatus": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "asynced": {
+            "type": "boolean",
+            "nullable": true
+          }
+        },
+        "required": [
+          "operation"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "AssignmentMetadata": {
+        "properties": {
+          "system": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Dictionary"
+              },
+              {
+                "properties": {
+                  "itemsAmountGoal": {
+                    "type": "number",
+                    "format": "double",
+                    "nullable": true
+                  },
+                  "markForDeletion": {
+                    "type": "boolean",
+                    "nullable": true
+                  },
+                  "archive": {
+                    "type": "boolean",
+                    "nullable": true
+                  },
+                  "active": {
+                    "type": "boolean",
+                    "nullable": true
+                  },
+                  "defaultAssignment": {
+                    "type": "boolean",
+                    "nullable": true
+                  },
+                  "consensusAssignment": {
+                    "type": "boolean",
+                    "nullable": true
+                  },
+                  "queueAssignment": {
+                    "type": "boolean",
+                    "nullable": true
+                  },
+                  "hidden": {
+                    "type": "boolean",
+                    "nullable": true
+                  },
+                  "type": {
+                    "type": "string",
+                    "enum": [
+                      "bucket"
+                    ],
+                    "nullable": true
+                  },
+                  "taskId": {
+                    "type": "string"
+                  },
+                  "dueDate": {
+                    "type": "number",
+                    "format": "double",
+                    "nullable": true
+                  },
+                  "datasetId": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "taskId",
+                  "datasetId"
+                ],
+                "type": "object"
+              }
+            ]
+          }
+        },
+        "required": [
+          "system"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
       "TaskType": {
         "enum": [
           "annotation",
@@ -8135,6 +8531,1105 @@
           "qa"
         ],
         "type": "string"
+      },
+      "AssignmentContext": {
+        "properties": {
+          "org": {
+            "type": "string",
+            "nullable": true
+          },
+          "project": {
+            "type": "string"
+          },
+          "creator": {
+            "type": "string"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "dataset": {
+            "type": "string"
+          },
+          "recipe": {
+            "type": "string"
+          },
+          "task": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "creator",
+          "createdAt",
+          "updatedAt",
+          "project",
+          "dataset",
+          "recipe",
+          "task"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "AuthZBlock_AssignmentContext_": {
+        "properties": {
+          "scope": {
+            "type": "string",
+            "nullable": true
+          },
+          "context": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Context"
+              },
+              {
+                "$ref": "#/components/schemas/AssignmentContext"
+              }
+            ]
+          },
+          "access": {
+            "items": {},
+            "type": "array",
+            "nullable": true
+          }
+        },
+        "required": [
+          "context"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "Partial_Assignment_": {
+        "properties": {
+          "_id": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ObjectID"
+              }
+            ],
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "annotator": {
+            "type": "string",
+            "nullable": true
+          },
+          "projectId": {
+            "type": "string",
+            "nullable": true
+          },
+          "metadata": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/AssignmentMetadata"
+              }
+            ],
+            "nullable": true
+          },
+          "totalItems": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "itemStatus": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ItemStatus"
+              }
+            ],
+            "nullable": true
+          },
+          "taskType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/TaskType"
+              }
+            ],
+            "nullable": true
+          },
+          "forReview": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "issues": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "inRedistributeProcess": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "redistributeProcess": {
+            "properties": {
+              "count": {
+                "type": "number",
+                "format": "double"
+              },
+              "date": {
+                "type": "string",
+                "format": "date-time"
+              }
+            },
+            "required": [
+              "count",
+              "date"
+            ],
+            "type": "object",
+            "nullable": true
+          },
+          "removeItemsProcess": {
+            "properties": {
+              "count": {
+                "type": "number",
+                "format": "double"
+              },
+              "date": {
+                "type": "string",
+                "format": "date-time"
+              }
+            },
+            "required": [
+              "count",
+              "date"
+            ],
+            "type": "object",
+            "nullable": true
+          },
+          "error": {
+            "type": "string",
+            "nullable": true
+          },
+          "authz": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/AuthZBlock_AssignmentContext_"
+              }
+            ],
+            "nullable": true
+          },
+          "priority": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "updatedBy": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "type": "object",
+        "description": "Make all properties in T optional"
+      },
+      "APILabelV2": {
+        "properties": {
+          "tag": {
+            "type": "string"
+          },
+          "displayLabel": {
+            "type": "string"
+          },
+          "color": {
+            "type": "string"
+          },
+          "attributes": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "nullable": true
+          },
+          "displayData": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/APILabelDisplayData"
+              }
+            ],
+            "nullable": true
+          }
+        },
+        "required": [
+          "tag",
+          "displayLabel",
+          "color"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "APILabelTreeNodeV2": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "updatedBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "parent": {
+            "type": "string",
+            "nullable": true
+          },
+          "root": {
+            "type": "string"
+          },
+          "ontologyId": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "value": {
+            "$ref": "#/components/schemas/APILabelV2"
+          },
+          "hasChildren": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "depth": {
+            "type": "number",
+            "format": "double"
+          },
+          "creator": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "url",
+          "parent",
+          "root",
+          "ontologyId",
+          "path",
+          "value",
+          "depth",
+          "creator"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "CursorPage_APILabelTreeNodeV2_": {
+        "properties": {
+          "totalItemsCount": {
+            "type": "number",
+            "format": "double"
+          },
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/APILabelTreeNodeV2"
+            },
+            "type": "array"
+          },
+          "totalPagesCount": {
+            "type": "number",
+            "format": "double"
+          },
+          "hasNextPage": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "totalItemsCount",
+          "items",
+          "totalPagesCount",
+          "hasNextPage"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "FilterQueryInput": {
+        "properties": {
+          "context": {
+            "properties": {
+              "projects": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array",
+                "nullable": true
+              },
+              "datasets": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array",
+                "nullable": true
+              },
+              "projectIds": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array",
+                "nullable": true
+              }
+            },
+            "type": "object"
+          },
+          "page": {
+            "type": "number",
+            "format": "double"
+          },
+          "pageSize": {
+            "type": "number",
+            "format": "double"
+          },
+          "resource": {
+            "type": "string"
+          },
+          "filter": {
+            "$ref": "#/components/schemas/Dictionary"
+          },
+          "join": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Dictionary"
+              }
+            ],
+            "nullable": true
+          },
+          "update": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Dictionary"
+              }
+            ],
+            "nullable": true
+          },
+          "delete": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "sort": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Dictionary"
+              }
+            ],
+            "nullable": true
+          },
+          "systemSpace": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "references": {
+            "properties": {
+              "refs": {
+                "items": {
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "type"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "operation": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "refs",
+              "operation"
+            ],
+            "type": "object",
+            "nullable": true
+          }
+        },
+        "required": [
+          "context",
+          "page",
+          "pageSize",
+          "resource",
+          "filter"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "UpdateLabelNodePayload": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "tag": {
+            "type": "string",
+            "nullable": true
+          },
+          "displayLabel": {
+            "type": "string",
+            "nullable": true
+          },
+          "color": {
+            "type": "string",
+            "nullable": true
+          },
+          "system": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "displayData": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/LabelDisplayData"
+              }
+            ],
+            "nullable": true
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "APIAttributeSection": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "updatedBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "ontologyId": {
+            "type": "string"
+          },
+          "scope": {
+            "$ref": "#/components/schemas/APILabelScopeV2"
+          },
+          "key": {
+            "type": "string"
+          },
+          "type": {
+            "$ref": "#/components/schemas/AttributeType"
+          },
+          "values": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "nullable": true
+          },
+          "range": {
+            "nullable": true
+          },
+          "creator": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "url",
+          "ontologyId",
+          "scope",
+          "key",
+          "type",
+          "creator"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "CreateAttributePayload": {
+        "properties": {
+          "key": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "scope": {
+            "properties": {
+              "labelIds": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "subtrees": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              }
+            },
+            "required": [
+              "labelIds",
+              "subtrees"
+            ],
+            "type": "object",
+            "nullable": true
+          },
+          "values": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "nullable": true
+          },
+          "range": {
+            "nullable": true
+          }
+        },
+        "required": [
+          "key",
+          "type"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "CursorPage_APIAttributeSection_": {
+        "properties": {
+          "totalItemsCount": {
+            "type": "number",
+            "format": "double"
+          },
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/APIAttributeSection"
+            },
+            "type": "array"
+          },
+          "totalPagesCount": {
+            "type": "number",
+            "format": "double"
+          },
+          "hasNextPage": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "totalItemsCount",
+          "items",
+          "totalPagesCount",
+          "hasNextPage"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "APIUpdateAttributePayload": {
+        "properties": {
+          "key": {
+            "type": "string",
+            "nullable": true
+          },
+          "scope": {
+            "properties": {
+              "labelIds": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array",
+                "nullable": true
+              },
+              "subtrees": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array",
+                "nullable": true
+              }
+            },
+            "type": "object",
+            "nullable": true
+          },
+          "values": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "nullable": true
+          },
+          "range": {
+            "nullable": true
+          }
+        },
+        "type": "object",
+        "additionalProperties": true
+      },
+      "APIStructure": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "updatedBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "order": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "arcs": {
+            "items": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "type": "array"
+          },
+          "name": {
+            "type": "string"
+          },
+          "ontologyId": {
+            "type": "string"
+          },
+          "creator": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "url",
+          "order",
+          "arcs",
+          "name",
+          "ontologyId",
+          "creator"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "CreateStructurePayload": {
+        "properties": {
+          "order": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "arcs": {
+            "items": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "type": "array"
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "order",
+          "arcs",
+          "name"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "APIUpdateStructurePayload": {
+        "properties": {
+          "order": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "nullable": true
+          },
+          "arcs": {
+            "items": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "type": "array",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "type": "object",
+        "additionalProperties": true
+      },
+      "CursorPage_APIStructure_": {
+        "properties": {
+          "totalItemsCount": {
+            "type": "number",
+            "format": "double"
+          },
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/APIStructure"
+            },
+            "type": "array"
+          },
+          "totalPagesCount": {
+            "type": "number",
+            "format": "double"
+          },
+          "hasNextPage": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "totalItemsCount",
+          "items",
+          "totalPagesCount",
+          "hasNextPage"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "ScoreType": {
+        "enum": [
+          "annotation_iou",
+          "annotation_label",
+          "annotation_attribute",
+          "annotation_overall",
+          "label_confusion",
+          "item_overall",
+          "user_overall",
+          "user_confusion"
+        ],
+        "type": "string"
+      },
+      "APIScore": {
+        "properties": {
+          "_id": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ObjectID"
+              }
+            ],
+            "nullable": true
+          },
+          "creator": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "entityId": {
+            "type": "string"
+          },
+          "value": {
+            "type": "number",
+            "format": "double"
+          },
+          "type": {
+            "$ref": "#/components/schemas/ScoreType"
+          },
+          "context": {
+            "properties": {
+              "relativeId": {
+                "type": "string",
+                "nullable": true
+              },
+              "relative": {
+                "type": "string",
+                "nullable": true
+              },
+              "modelId": {
+                "type": "string",
+                "nullable": true
+              },
+              "annotationId": {
+                "type": "string",
+                "nullable": true
+              },
+              "itemId": {
+                "type": "string",
+                "nullable": true
+              },
+              "assignmentId": {
+                "type": "string",
+                "nullable": true
+              },
+              "userId": {
+                "type": "string",
+                "nullable": true
+              },
+              "taskId": {
+                "type": "string",
+                "nullable": true
+              },
+              "datasetId": {
+                "type": "string",
+                "nullable": true
+              },
+              "projectId": {
+                "type": "string",
+                "nullable": true
+              }
+            },
+            "type": "object"
+          },
+          "id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "entityId",
+          "value",
+          "type",
+          "context",
+          "id",
+          "createdAt",
+          "updatedAt"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "Score": {
+        "properties": {
+          "_id": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ObjectID"
+              }
+            ],
+            "nullable": true
+          },
+          "creator": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "entityId": {
+            "type": "string"
+          },
+          "value": {
+            "type": "number",
+            "format": "double"
+          },
+          "type": {
+            "$ref": "#/components/schemas/ScoreType"
+          },
+          "context": {
+            "properties": {
+              "relativeId": {
+                "type": "string",
+                "nullable": true
+              },
+              "relative": {
+                "type": "string",
+                "nullable": true
+              },
+              "modelId": {
+                "type": "string",
+                "nullable": true
+              },
+              "annotationId": {
+                "type": "string",
+                "nullable": true
+              },
+              "itemId": {
+                "type": "string",
+                "nullable": true
+              },
+              "assignmentId": {
+                "type": "string",
+                "nullable": true
+              },
+              "userId": {
+                "type": "string",
+                "nullable": true
+              },
+              "taskId": {
+                "type": "string",
+                "nullable": true
+              },
+              "datasetId": {
+                "type": "string",
+                "nullable": true
+              },
+              "projectId": {
+                "type": "string",
+                "nullable": true
+              }
+            },
+            "type": "object"
+          }
+        },
+        "required": [
+          "entityId",
+          "value",
+          "type",
+          "context"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "ScoreParameters": {
+        "properties": {
+          "score": {
+            "properties": {
+              "context": {
+                "properties": {
+                  "userId": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "items": {
+                          "type": "string"
+                        },
+                        "type": "array"
+                      }
+                    ],
+                    "nullable": true
+                  },
+                  "assignmentId": {
+                    "type": "string",
+                    "nullable": true
+                  },
+                  "taskId": {
+                    "type": "string",
+                    "nullable": true
+                  }
+                },
+                "type": "object",
+                "nullable": true
+              },
+              "type": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ScoreType"
+                  }
+                ],
+                "nullable": true
+              }
+            },
+            "type": "object"
+          },
+          "options": {
+            "properties": {
+              "includeHistogramItems": {
+                "type": "boolean",
+                "nullable": true
+              }
+            },
+            "type": "object",
+            "nullable": true
+          }
+        },
+        "required": [
+          "score"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "DeleteTaskItemScoresPayload": {
+        "properties": {
+          "context": {
+            "properties": {
+              "relative": {
+                "type": "string",
+                "nullable": true
+              },
+              "userId": {
+                "type": "string",
+                "nullable": true
+              },
+              "itemId": {
+                "type": "string",
+                "nullable": true
+              },
+              "taskId": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "taskId"
+            ],
+            "type": "object"
+          },
+          "entityId": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "required": [
+          "context"
+        ],
+        "type": "object",
+        "additionalProperties": true
       },
       "APITaskSpec": {
         "properties": {
@@ -8177,33 +9672,6 @@
           "in progress"
         ],
         "type": "string"
-      },
-      "ItemStatus": {
-        "properties": {
-          "completed": {
-            "type": "number",
-            "format": "double"
-          },
-          "remaining": {
-            "type": "number",
-            "format": "double"
-          },
-          "actions": {
-            "properties": {},
-            "additionalProperties": {
-              "type": "number",
-              "format": "double"
-            },
-            "type": "object",
-            "nullable": true
-          }
-        },
-        "required": [
-          "completed",
-          "remaining"
-        ],
-        "type": "object",
-        "additionalProperties": true
       },
       "ItemAction": {
         "properties": {
@@ -9137,1533 +10605,6 @@
         "type": "object",
         "additionalProperties": true
       },
-      "APILabelV2": {
-        "properties": {
-          "tag": {
-            "type": "string"
-          },
-          "displayLabel": {
-            "type": "string"
-          },
-          "color": {
-            "type": "string"
-          },
-          "attributes": {
-            "items": {
-              "type": "string"
-            },
-            "type": "array",
-            "nullable": true
-          },
-          "displayData": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/APILabelDisplayData"
-              }
-            ],
-            "nullable": true
-          }
-        },
-        "required": [
-          "tag",
-          "displayLabel",
-          "color"
-        ],
-        "type": "object",
-        "additionalProperties": true
-      },
-      "APILabelTreeNodeV2": {
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "url": {
-            "type": "string"
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "updatedAt": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "updatedBy": {
-            "type": "string",
-            "nullable": true
-          },
-          "parent": {
-            "type": "string",
-            "nullable": true
-          },
-          "root": {
-            "type": "string"
-          },
-          "ontologyId": {
-            "type": "string"
-          },
-          "path": {
-            "type": "string"
-          },
-          "value": {
-            "$ref": "#/components/schemas/APILabelV2"
-          },
-          "hasChildren": {
-            "type": "boolean",
-            "nullable": true
-          },
-          "depth": {
-            "type": "number",
-            "format": "double"
-          },
-          "creator": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "id",
-          "url",
-          "parent",
-          "root",
-          "ontologyId",
-          "path",
-          "value",
-          "depth",
-          "creator"
-        ],
-        "type": "object",
-        "additionalProperties": true
-      },
-      "CursorPage_APILabelTreeNodeV2_": {
-        "properties": {
-          "totalItemsCount": {
-            "type": "number",
-            "format": "double"
-          },
-          "items": {
-            "items": {
-              "$ref": "#/components/schemas/APILabelTreeNodeV2"
-            },
-            "type": "array"
-          },
-          "totalPagesCount": {
-            "type": "number",
-            "format": "double"
-          },
-          "hasNextPage": {
-            "type": "boolean"
-          }
-        },
-        "required": [
-          "totalItemsCount",
-          "items",
-          "totalPagesCount",
-          "hasNextPage"
-        ],
-        "type": "object",
-        "additionalProperties": true
-      },
-      "FilterQueryInput": {
-        "properties": {
-          "context": {
-            "properties": {
-              "projects": {
-                "items": {
-                  "type": "string"
-                },
-                "type": "array",
-                "nullable": true
-              },
-              "datasets": {
-                "items": {
-                  "type": "string"
-                },
-                "type": "array",
-                "nullable": true
-              },
-              "projectIds": {
-                "items": {
-                  "type": "string"
-                },
-                "type": "array",
-                "nullable": true
-              }
-            },
-            "type": "object"
-          },
-          "page": {
-            "type": "number",
-            "format": "double"
-          },
-          "pageSize": {
-            "type": "number",
-            "format": "double"
-          },
-          "resource": {
-            "type": "string"
-          },
-          "filter": {
-            "$ref": "#/components/schemas/Dictionary"
-          },
-          "join": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Dictionary"
-              }
-            ],
-            "nullable": true
-          },
-          "update": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Dictionary"
-              }
-            ],
-            "nullable": true
-          },
-          "delete": {
-            "type": "boolean",
-            "nullable": true
-          },
-          "sort": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Dictionary"
-              }
-            ],
-            "nullable": true
-          },
-          "systemSpace": {
-            "type": "boolean",
-            "nullable": true
-          },
-          "references": {
-            "properties": {
-              "refs": {
-                "items": {
-                  "properties": {
-                    "id": {
-                      "type": "string"
-                    },
-                    "type": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "id",
-                    "type"
-                  ],
-                  "type": "object"
-                },
-                "type": "array"
-              },
-              "operation": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "refs",
-              "operation"
-            ],
-            "type": "object",
-            "nullable": true
-          }
-        },
-        "required": [
-          "context",
-          "page",
-          "pageSize",
-          "resource",
-          "filter"
-        ],
-        "type": "object",
-        "additionalProperties": true
-      },
-      "UpdateLabelNodePayload": {
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "tag": {
-            "type": "string",
-            "nullable": true
-          },
-          "displayLabel": {
-            "type": "string",
-            "nullable": true
-          },
-          "color": {
-            "type": "string",
-            "nullable": true
-          },
-          "system": {
-            "type": "boolean",
-            "nullable": true
-          },
-          "displayData": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/LabelDisplayData"
-              }
-            ],
-            "nullable": true
-          }
-        },
-        "required": [
-          "id"
-        ],
-        "type": "object",
-        "additionalProperties": true
-      },
-      "APIAttributeSection": {
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "url": {
-            "type": "string"
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "updatedAt": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "updatedBy": {
-            "type": "string",
-            "nullable": true
-          },
-          "ontologyId": {
-            "type": "string"
-          },
-          "scope": {
-            "$ref": "#/components/schemas/APILabelScopeV2"
-          },
-          "key": {
-            "type": "string"
-          },
-          "type": {
-            "$ref": "#/components/schemas/AttributeType"
-          },
-          "values": {
-            "items": {
-              "type": "string"
-            },
-            "type": "array",
-            "nullable": true
-          },
-          "range": {
-            "nullable": true
-          },
-          "creator": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "id",
-          "url",
-          "ontologyId",
-          "scope",
-          "key",
-          "type",
-          "creator"
-        ],
-        "type": "object",
-        "additionalProperties": true
-      },
-      "CreateAttributePayload": {
-        "properties": {
-          "key": {
-            "type": "string"
-          },
-          "type": {
-            "type": "string"
-          },
-          "scope": {
-            "properties": {
-              "labelIds": {
-                "items": {
-                  "type": "string"
-                },
-                "type": "array"
-              },
-              "subtrees": {
-                "items": {
-                  "type": "string"
-                },
-                "type": "array"
-              }
-            },
-            "required": [
-              "labelIds",
-              "subtrees"
-            ],
-            "type": "object",
-            "nullable": true
-          },
-          "values": {
-            "items": {
-              "type": "string"
-            },
-            "type": "array",
-            "nullable": true
-          },
-          "range": {
-            "nullable": true
-          }
-        },
-        "required": [
-          "key",
-          "type"
-        ],
-        "type": "object",
-        "additionalProperties": true
-      },
-      "CursorPage_APIAttributeSection_": {
-        "properties": {
-          "totalItemsCount": {
-            "type": "number",
-            "format": "double"
-          },
-          "items": {
-            "items": {
-              "$ref": "#/components/schemas/APIAttributeSection"
-            },
-            "type": "array"
-          },
-          "totalPagesCount": {
-            "type": "number",
-            "format": "double"
-          },
-          "hasNextPage": {
-            "type": "boolean"
-          }
-        },
-        "required": [
-          "totalItemsCount",
-          "items",
-          "totalPagesCount",
-          "hasNextPage"
-        ],
-        "type": "object",
-        "additionalProperties": true
-      },
-      "APIUpdateAttributePayload": {
-        "properties": {
-          "key": {
-            "type": "string",
-            "nullable": true
-          },
-          "scope": {
-            "properties": {
-              "labelIds": {
-                "items": {
-                  "type": "string"
-                },
-                "type": "array",
-                "nullable": true
-              },
-              "subtrees": {
-                "items": {
-                  "type": "string"
-                },
-                "type": "array",
-                "nullable": true
-              }
-            },
-            "type": "object",
-            "nullable": true
-          },
-          "values": {
-            "items": {
-              "type": "string"
-            },
-            "type": "array",
-            "nullable": true
-          },
-          "range": {
-            "nullable": true
-          }
-        },
-        "type": "object",
-        "additionalProperties": true
-      },
-      "APIStructure": {
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "url": {
-            "type": "string"
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "updatedAt": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "updatedBy": {
-            "type": "string",
-            "nullable": true
-          },
-          "order": {
-            "items": {
-              "type": "string"
-            },
-            "type": "array"
-          },
-          "arcs": {
-            "items": {
-              "items": {
-                "type": "string"
-              },
-              "type": "array"
-            },
-            "type": "array"
-          },
-          "name": {
-            "type": "string"
-          },
-          "ontologyId": {
-            "type": "string"
-          },
-          "creator": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "id",
-          "url",
-          "order",
-          "arcs",
-          "name",
-          "ontologyId",
-          "creator"
-        ],
-        "type": "object",
-        "additionalProperties": true
-      },
-      "CreateStructurePayload": {
-        "properties": {
-          "order": {
-            "items": {
-              "type": "string"
-            },
-            "type": "array"
-          },
-          "arcs": {
-            "items": {
-              "items": {
-                "type": "string"
-              },
-              "type": "array"
-            },
-            "type": "array"
-          },
-          "name": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "order",
-          "arcs",
-          "name"
-        ],
-        "type": "object",
-        "additionalProperties": true
-      },
-      "APIUpdateStructurePayload": {
-        "properties": {
-          "order": {
-            "items": {
-              "type": "string"
-            },
-            "type": "array",
-            "nullable": true
-          },
-          "arcs": {
-            "items": {
-              "items": {
-                "type": "string"
-              },
-              "type": "array"
-            },
-            "type": "array",
-            "nullable": true
-          },
-          "name": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "type": "object",
-        "additionalProperties": true
-      },
-      "CursorPage_APIStructure_": {
-        "properties": {
-          "totalItemsCount": {
-            "type": "number",
-            "format": "double"
-          },
-          "items": {
-            "items": {
-              "$ref": "#/components/schemas/APIStructure"
-            },
-            "type": "array"
-          },
-          "totalPagesCount": {
-            "type": "number",
-            "format": "double"
-          },
-          "hasNextPage": {
-            "type": "boolean"
-          }
-        },
-        "required": [
-          "totalItemsCount",
-          "items",
-          "totalPagesCount",
-          "hasNextPage"
-        ],
-        "type": "object",
-        "additionalProperties": true
-      },
-      "ScoreType": {
-        "enum": [
-          "annotation_iou",
-          "annotation_label",
-          "annotation_attribute",
-          "annotation_overall",
-          "label_confusion",
-          "item_overall",
-          "user_overall",
-          "user_confusion"
-        ],
-        "type": "string"
-      },
-      "APIScore": {
-        "properties": {
-          "_id": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/ObjectID"
-              }
-            ],
-            "nullable": true
-          },
-          "creator": {
-            "type": "string",
-            "nullable": true
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "updatedAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "entityId": {
-            "type": "string"
-          },
-          "value": {
-            "type": "number",
-            "format": "double"
-          },
-          "type": {
-            "$ref": "#/components/schemas/ScoreType"
-          },
-          "context": {
-            "properties": {
-              "relativeId": {
-                "type": "string",
-                "nullable": true
-              },
-              "relative": {
-                "type": "string",
-                "nullable": true
-              },
-              "modelId": {
-                "type": "string",
-                "nullable": true
-              },
-              "annotationId": {
-                "type": "string",
-                "nullable": true
-              },
-              "itemId": {
-                "type": "string",
-                "nullable": true
-              },
-              "assignmentId": {
-                "type": "string",
-                "nullable": true
-              },
-              "userId": {
-                "type": "string",
-                "nullable": true
-              },
-              "taskId": {
-                "type": "string",
-                "nullable": true
-              },
-              "datasetId": {
-                "type": "string",
-                "nullable": true
-              },
-              "projectId": {
-                "type": "string",
-                "nullable": true
-              }
-            },
-            "type": "object"
-          },
-          "id": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "entityId",
-          "value",
-          "type",
-          "context",
-          "id",
-          "createdAt",
-          "updatedAt"
-        ],
-        "type": "object",
-        "additionalProperties": true
-      },
-      "Score": {
-        "properties": {
-          "_id": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/ObjectID"
-              }
-            ],
-            "nullable": true
-          },
-          "creator": {
-            "type": "string",
-            "nullable": true
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "updatedAt": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "entityId": {
-            "type": "string"
-          },
-          "value": {
-            "type": "number",
-            "format": "double"
-          },
-          "type": {
-            "$ref": "#/components/schemas/ScoreType"
-          },
-          "context": {
-            "properties": {
-              "relativeId": {
-                "type": "string",
-                "nullable": true
-              },
-              "relative": {
-                "type": "string",
-                "nullable": true
-              },
-              "modelId": {
-                "type": "string",
-                "nullable": true
-              },
-              "annotationId": {
-                "type": "string",
-                "nullable": true
-              },
-              "itemId": {
-                "type": "string",
-                "nullable": true
-              },
-              "assignmentId": {
-                "type": "string",
-                "nullable": true
-              },
-              "userId": {
-                "type": "string",
-                "nullable": true
-              },
-              "taskId": {
-                "type": "string",
-                "nullable": true
-              },
-              "datasetId": {
-                "type": "string",
-                "nullable": true
-              },
-              "projectId": {
-                "type": "string",
-                "nullable": true
-              }
-            },
-            "type": "object"
-          }
-        },
-        "required": [
-          "entityId",
-          "value",
-          "type",
-          "context"
-        ],
-        "type": "object",
-        "additionalProperties": true
-      },
-      "ScoreParameters": {
-        "properties": {
-          "score": {
-            "properties": {
-              "context": {
-                "properties": {
-                  "userId": {
-                    "anyOf": [
-                      {
-                        "type": "string"
-                      },
-                      {
-                        "items": {
-                          "type": "string"
-                        },
-                        "type": "array"
-                      }
-                    ],
-                    "nullable": true
-                  },
-                  "assignmentId": {
-                    "type": "string",
-                    "nullable": true
-                  },
-                  "taskId": {
-                    "type": "string",
-                    "nullable": true
-                  }
-                },
-                "type": "object",
-                "nullable": true
-              },
-              "type": {
-                "allOf": [
-                  {
-                    "$ref": "#/components/schemas/ScoreType"
-                  }
-                ],
-                "nullable": true
-              }
-            },
-            "type": "object"
-          },
-          "options": {
-            "properties": {
-              "includeHistogramItems": {
-                "type": "boolean",
-                "nullable": true
-              }
-            },
-            "type": "object",
-            "nullable": true
-          }
-        },
-        "required": [
-          "score"
-        ],
-        "type": "object",
-        "additionalProperties": true
-      },
-      "DeleteTaskItemScoresPayload": {
-        "properties": {
-          "context": {
-            "properties": {
-              "relative": {
-                "type": "string",
-                "nullable": true
-              },
-              "userId": {
-                "type": "string",
-                "nullable": true
-              },
-              "itemId": {
-                "type": "string",
-                "nullable": true
-              },
-              "taskId": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "taskId"
-            ],
-            "type": "object"
-          },
-          "entityId": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "required": [
-          "context"
-        ],
-        "type": "object",
-        "additionalProperties": true
-      },
-      "AssignmentStatus": {
-        "enum": [
-          "todo",
-          "in progress",
-          "done",
-          "completed with issues"
-        ],
-        "type": "string"
-      },
-      "APIAssignment": {
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "url": {
-            "type": "string"
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "updatedAt": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "updatedBy": {
-            "type": "string",
-            "nullable": true
-          },
-          "name": {
-            "type": "string"
-          },
-          "annotator": {
-            "type": "string"
-          },
-          "status": {
-            "$ref": "#/components/schemas/AssignmentStatus"
-          },
-          "projectId": {
-            "type": "string"
-          },
-          "metadata": {
-            "$ref": "#/components/schemas/APIMetadata"
-          },
-          "totalItems": {
-            "type": "number",
-            "format": "double"
-          },
-          "itemStatus": {
-            "$ref": "#/components/schemas/ItemStatus"
-          },
-          "taskType": {
-            "type": "string"
-          },
-          "progress": {
-            "type": "number",
-            "format": "double"
-          },
-          "forReview": {
-            "type": "number",
-            "format": "double"
-          },
-          "issues": {
-            "type": "number",
-            "format": "double"
-          },
-          "inRedistributeProcess": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "removeItemsProcess": {
-            "properties": {
-              "count": {
-                "type": "number",
-                "format": "double"
-              },
-              "date": {
-                "type": "string",
-                "format": "date-time"
-              }
-            },
-            "required": [
-              "count",
-              "date"
-            ],
-            "type": "object",
-            "nullable": true
-          },
-          "redistributeProcess": {
-            "properties": {
-              "count": {
-                "type": "number",
-                "format": "double"
-              },
-              "date": {
-                "type": "string",
-                "format": "date-time"
-              }
-            },
-            "required": [
-              "count",
-              "date"
-            ],
-            "type": "object",
-            "nullable": true
-          },
-          "error": {
-            "type": "string",
-            "nullable": true
-          },
-          "priority": {
-            "type": "number",
-            "format": "double",
-            "nullable": true
-          }
-        },
-        "required": [
-          "id",
-          "url",
-          "name",
-          "annotator",
-          "status",
-          "projectId",
-          "metadata",
-          "totalItems",
-          "itemStatus",
-          "taskType",
-          "progress",
-          "forReview",
-          "issues"
-        ],
-        "type": "object",
-        "additionalProperties": true
-      },
-      "PartialAssignmentPayload": {
-        "properties": {
-          "name": {
-            "type": "string",
-            "nullable": true
-          },
-          "metadata": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Dictionary"
-              }
-            ],
-            "nullable": true
-          }
-        },
-        "type": "object",
-        "additionalProperties": true
-      },
-      "APIAssignmentCursor": {
-        "properties": {
-          "totalItemsCount": {
-            "type": "number",
-            "format": "double"
-          },
-          "items": {
-            "items": {
-              "$ref": "#/components/schemas/APIAssignment"
-            },
-            "type": "array"
-          },
-          "totalPagesCount": {
-            "type": "number",
-            "format": "double"
-          },
-          "hasNextPage": {
-            "type": "boolean"
-          }
-        },
-        "required": [
-          "totalItemsCount",
-          "items",
-          "totalPagesCount",
-          "hasNextPage"
-        ],
-        "type": "object",
-        "additionalProperties": true
-      },
-      "ReassignAssignmentPayload": {
-        "properties": {
-          "annotator": {
-            "type": "string"
-          },
-          "asynced": {
-            "type": "boolean",
-            "nullable": true
-          }
-        },
-        "required": [
-          "annotator"
-        ],
-        "type": "object",
-        "additionalProperties": true
-      },
-      "AssignmentWorkload": {
-        "properties": {
-          "assigneeId": {
-            "type": "string"
-          },
-          "load": {
-            "type": "number",
-            "format": "double"
-          }
-        },
-        "required": [
-          "assigneeId",
-          "load"
-        ],
-        "type": "object",
-        "additionalProperties": true
-      },
-      "RedistributeAssignmentPayload": {
-        "properties": {
-          "workload": {
-            "items": {
-              "$ref": "#/components/schemas/AssignmentWorkload"
-            },
-            "type": "array"
-          },
-          "selectNotAnnotatedOnly": {
-            "type": "boolean",
-            "nullable": true
-          },
-          "asynced": {
-            "type": "boolean",
-            "nullable": true
-          },
-          "isSudoCtx": {
-            "type": "boolean",
-            "nullable": true
-          },
-          "allowToSkipAssignments": {
-            "type": "boolean",
-            "nullable": true
-          },
-          "query": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "required": [
-          "workload"
-        ],
-        "type": "object",
-        "additionalProperties": true
-      },
-      "BatchAssignmentPayload": {
-        "properties": {
-          "assignmentId": {
-            "type": "string"
-          },
-          "asynced": {
-            "type": "boolean",
-            "nullable": true
-          }
-        },
-        "required": [
-          "assignmentId"
-        ],
-        "type": "object",
-        "additionalProperties": true
-      },
-      "AssignmentStatusPayload": {
-        "properties": {
-          "operation": {
-            "$ref": "#/components/schemas/ItemRefOperation"
-          },
-          "status": {
-            "type": "string",
-            "nullable": true
-          },
-          "returnLastStatus": {
-            "type": "boolean",
-            "nullable": true
-          },
-          "asynced": {
-            "type": "boolean",
-            "nullable": true
-          }
-        },
-        "required": [
-          "operation"
-        ],
-        "type": "object",
-        "additionalProperties": true
-      },
-      "AssignmentMetadata": {
-        "properties": {
-          "system": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Dictionary"
-              },
-              {
-                "properties": {
-                  "itemsAmountGoal": {
-                    "type": "number",
-                    "format": "double",
-                    "nullable": true
-                  },
-                  "markForDeletion": {
-                    "type": "boolean",
-                    "nullable": true
-                  },
-                  "archive": {
-                    "type": "boolean",
-                    "nullable": true
-                  },
-                  "active": {
-                    "type": "boolean",
-                    "nullable": true
-                  },
-                  "defaultAssignment": {
-                    "type": "boolean",
-                    "nullable": true
-                  },
-                  "consensusAssignment": {
-                    "type": "boolean",
-                    "nullable": true
-                  },
-                  "queueAssignment": {
-                    "type": "boolean",
-                    "nullable": true
-                  },
-                  "hidden": {
-                    "type": "boolean",
-                    "nullable": true
-                  },
-                  "type": {
-                    "type": "string",
-                    "enum": [
-                      "bucket"
-                    ],
-                    "nullable": true
-                  },
-                  "taskId": {
-                    "type": "string"
-                  },
-                  "dueDate": {
-                    "type": "number",
-                    "format": "double",
-                    "nullable": true
-                  },
-                  "datasetId": {
-                    "type": "string"
-                  }
-                },
-                "required": [
-                  "taskId",
-                  "datasetId"
-                ],
-                "type": "object"
-              }
-            ]
-          }
-        },
-        "required": [
-          "system"
-        ],
-        "type": "object",
-        "additionalProperties": true
-      },
-      "AssignmentContext": {
-        "properties": {
-          "org": {
-            "type": "string",
-            "nullable": true
-          },
-          "project": {
-            "type": "string"
-          },
-          "creator": {
-            "type": "string"
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "updatedAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "dataset": {
-            "type": "string"
-          },
-          "recipe": {
-            "type": "string"
-          },
-          "task": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "creator",
-          "createdAt",
-          "updatedAt",
-          "project",
-          "dataset",
-          "recipe",
-          "task"
-        ],
-        "type": "object",
-        "additionalProperties": true
-      },
-      "AuthZBlock_AssignmentContext_": {
-        "properties": {
-          "scope": {
-            "type": "string",
-            "nullable": true
-          },
-          "context": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Context"
-              },
-              {
-                "$ref": "#/components/schemas/AssignmentContext"
-              }
-            ]
-          },
-          "access": {
-            "items": {},
-            "type": "array",
-            "nullable": true
-          }
-        },
-        "required": [
-          "context"
-        ],
-        "type": "object",
-        "additionalProperties": true
-      },
-      "Partial_Assignment_": {
-        "properties": {
-          "_id": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/ObjectID"
-              }
-            ],
-            "nullable": true
-          },
-          "name": {
-            "type": "string",
-            "nullable": true
-          },
-          "annotator": {
-            "type": "string",
-            "nullable": true
-          },
-          "projectId": {
-            "type": "string",
-            "nullable": true
-          },
-          "metadata": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/AssignmentMetadata"
-              }
-            ],
-            "nullable": true
-          },
-          "totalItems": {
-            "type": "number",
-            "format": "double",
-            "nullable": true
-          },
-          "itemStatus": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/ItemStatus"
-              }
-            ],
-            "nullable": true
-          },
-          "taskType": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/TaskType"
-              }
-            ],
-            "nullable": true
-          },
-          "forReview": {
-            "type": "number",
-            "format": "double",
-            "nullable": true
-          },
-          "issues": {
-            "type": "number",
-            "format": "double",
-            "nullable": true
-          },
-          "inRedistributeProcess": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "redistributeProcess": {
-            "properties": {
-              "count": {
-                "type": "number",
-                "format": "double"
-              },
-              "date": {
-                "type": "string",
-                "format": "date-time"
-              }
-            },
-            "required": [
-              "count",
-              "date"
-            ],
-            "type": "object",
-            "nullable": true
-          },
-          "removeItemsProcess": {
-            "properties": {
-              "count": {
-                "type": "number",
-                "format": "double"
-              },
-              "date": {
-                "type": "string",
-                "format": "date-time"
-              }
-            },
-            "required": [
-              "count",
-              "date"
-            ],
-            "type": "object",
-            "nullable": true
-          },
-          "error": {
-            "type": "string",
-            "nullable": true
-          },
-          "authz": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/AuthZBlock_AssignmentContext_"
-              }
-            ],
-            "nullable": true
-          },
-          "priority": {
-            "type": "number",
-            "format": "double",
-            "nullable": true
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "updatedAt": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "updatedBy": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "type": "object",
-        "description": "Make all properties in T optional"
-      },
-      "Role": {
-        "enum": [
-          "owner",
-          "annotator",
-          "engineer",
-          "annotationManager",
-          "owner",
-          "annotator",
-          "engineer",
-          "annotationManager",
-          "owner",
-          "annotator",
-          "engineer",
-          "annotationManager"
-        ],
-        "type": "string"
-      },
-      "OrgRole": {
-        "enum": [
-          "owner",
-          "admin",
-          "member",
-          "worker",
-          "owner",
-          "admin",
-          "member",
-          "worker"
-        ],
-        "type": "string"
-      },
-      "RoleEntry": {
-        "properties": {
-          "role": {
-            "anyOf": [
-              {
-                "$ref": "#/components/schemas/Role"
-              },
-              {
-                "$ref": "#/components/schemas/OrgRole"
-              }
-            ]
-          },
-          "projectId": {
-            "type": "string"
-          },
-          "orgId": {
-            "type": "string"
-          },
-          "orgName": {
-            "type": "string"
-          },
-          "active": {
-            "type": "boolean"
-          }
-        },
-        "required": [
-          "role"
-        ],
-        "type": "object"
-      },
       "GroupCtx": {
         "properties": {
           "id": {
@@ -10938,6 +10879,23 @@
         ],
         "type": "object",
         "additionalProperties": true
+      },
+      "Role": {
+        "enum": [
+          "owner",
+          "annotator",
+          "engineer",
+          "annotationManager",
+          "owner",
+          "annotator",
+          "engineer",
+          "annotationManager",
+          "owner",
+          "annotator",
+          "engineer",
+          "annotationManager"
+        ],
+        "type": "string"
       },
       "APIGroup": {
         "properties": {
@@ -11429,6 +11387,137 @@
         ],
         "type": "object",
         "additionalProperties": true
+      },
+      "CreateAccountRequest": {
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "createdBy": {
+            "type": "string"
+          },
+          "org": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "createdBy",
+          "org"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "APIGoogleMarketplaceAccount": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "createdAt": {
+            "type": "number",
+            "format": "double"
+          },
+          "updatedAt": {
+            "type": "number",
+            "format": "double"
+          },
+          "userIdentity": {
+            "type": "string"
+          },
+          "approved": {
+            "type": "boolean"
+          },
+          "orgId": {
+            "type": "string"
+          },
+          "accountId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "userIdentity",
+          "approved",
+          "createdAt",
+          "updatedAt"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "EditAccountRequest": {
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "org": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "org"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "AlertTier": {
+        "enum": [
+          "early",
+          "preliminary",
+          "acute",
+          "enforcement",
+          "early",
+          "preliminary",
+          "acute",
+          "enforcement"
+        ],
+        "type": "string"
+      },
+      "OrgRole": {
+        "enum": [
+          "owner",
+          "admin",
+          "member",
+          "worker",
+          "owner",
+          "admin",
+          "member",
+          "worker"
+        ],
+        "type": "string"
+      },
+      "RoleEntry": {
+        "properties": {
+          "role": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Role"
+              },
+              {
+                "$ref": "#/components/schemas/OrgRole"
+              }
+            ]
+          },
+          "projectId": {
+            "type": "string"
+          },
+          "orgId": {
+            "type": "string"
+          },
+          "orgName": {
+            "type": "string"
+          },
+          "active": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "role"
+        ],
+        "type": "object"
       },
       "CreateBotPayload": {
         "properties": {
@@ -12728,94 +12817,6 @@
         "type": "object",
         "additionalProperties": true
       },
-      "CreateAccountRequest": {
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "createdBy": {
-            "type": "string"
-          },
-          "org": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "name",
-          "createdBy",
-          "org"
-        ],
-        "type": "object",
-        "additionalProperties": true
-      },
-      "APIGoogleMarketplaceAccount": {
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "url": {
-            "type": "string"
-          },
-          "createdAt": {
-            "type": "number",
-            "format": "double"
-          },
-          "updatedAt": {
-            "type": "number",
-            "format": "double"
-          },
-          "userIdentity": {
-            "type": "string"
-          },
-          "approved": {
-            "type": "boolean"
-          },
-          "orgId": {
-            "type": "string"
-          },
-          "accountId": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "id",
-          "userIdentity",
-          "approved",
-          "createdAt",
-          "updatedAt"
-        ],
-        "type": "object",
-        "additionalProperties": true
-      },
-      "EditAccountRequest": {
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "org": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "name",
-          "org"
-        ],
-        "type": "object",
-        "additionalProperties": true
-      },
-      "AlertTier": {
-        "enum": [
-          "early",
-          "preliminary",
-          "acute",
-          "enforcement",
-          "early",
-          "preliminary",
-          "acute",
-          "enforcement"
-        ],
-        "type": "string"
-      },
       "APILogin": {
         "properties": {
           "id": {
@@ -12910,14 +12911,14 @@
               "removeHook",
               "hasHook",
               "hasHooks",
-              "_attributes",
-              "where",
-              "orgId",
               "_creationAttributes",
-              "userId",
-              "orgRole",
+              "orgId",
+              "_attributes",
               "validate",
               "isNewRecord",
+              "where",
+              "userId",
+              "orgRole",
               "date",
               "userAgent",
               "dataValues",
@@ -12971,325 +12972,6 @@
           "orgId"
         ],
         "type": "object"
-      },
-      "PrecisionRecallInputRequest": {
-        "properties": {
-          "modelId": {
-            "type": "string",
-            "description": "The model that calculated on it"
-          },
-          "datasetId": {
-            "type": "string",
-            "description": "The dataset that calculated on it"
-          },
-          "iouThreshold": {
-            "type": "number",
-            "format": "double",
-            "description": "The iouThreshold of the calculation"
-          },
-          "metric": {
-            "type": "string",
-            "description": "The metric to calculation the confusion Matrix"
-          }
-        },
-        "required": [
-          "modelId",
-          "datasetId",
-          "iouThreshold"
-        ],
-        "type": "object",
-        "additionalProperties": true
-      },
-      "Error": {
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "message": {
-            "type": "string"
-          },
-          "stack": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "name",
-          "message"
-        ],
-        "type": "object",
-        "additionalProperties": true
-      },
-      "LineData": {
-        "properties": {
-          "y": {
-            "type": "number",
-            "format": "double"
-          },
-          "x": {
-            "type": "number",
-            "format": "double"
-          }
-        },
-        "required": [
-          "y",
-          "x"
-        ],
-        "type": "object"
-      },
-      "MatrixData": {
-        "properties": {
-          "matrix": {
-            "items": {
-              "items": {
-                "type": "number",
-                "format": "double"
-              },
-              "type": "array"
-            },
-            "type": "array"
-          }
-        },
-        "required": [
-          "matrix"
-        ],
-        "type": "object"
-      },
-      "SummaryData": {
-        "properties": {
-          "summary": {
-            "$ref": "#/components/schemas/Dictionary"
-          }
-        },
-        "required": [
-          "summary"
-        ],
-        "type": "object"
-      },
-      "MetricData": {
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/LineData"
-          },
-          {
-            "$ref": "#/components/schemas/MatrixData"
-          },
-          {
-            "$ref": "#/components/schemas/SummaryData"
-          }
-        ]
-      },
-      "MetricRequest": {
-        "properties": {
-          "modelId": {
-            "type": "string",
-            "description": "The model the metric was generated on"
-          },
-          "datasetId": {
-            "type": "string",
-            "description": "The dataset the metric was generated on"
-          },
-          "figure": {
-            "type": "string",
-            "description": "The figure of the metric"
-          },
-          "legend": {
-            "type": "string",
-            "description": "The legend of the metric"
-          },
-          "data": {
-            "$ref": "#/components/schemas/MetricData",
-            "description": "The metric data"
-          }
-        },
-        "required": [
-          "modelId",
-          "figure",
-          "data"
-        ],
-        "type": "object",
-        "additionalProperties": true
-      },
-      "MetricDataTypes": {
-        "enum": [
-          "line",
-          "matrix",
-          "summary"
-        ],
-        "type": "string"
-      },
-      "EntityContext": {
-        "properties": {
-          "project": {
-            "type": "string"
-          },
-          "creator": {
-            "type": "string"
-          },
-          "org": {
-            "type": "string"
-          }
-        },
-        "type": "object",
-        "additionalProperties": false
-      },
-      "APIMetric": {
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "url": {
-            "type": "string"
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "updatedAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "modelId": {
-            "type": "string",
-            "description": "The model the metric was generated on"
-          },
-          "datasetId": {
-            "type": "string",
-            "description": "The dataset the metric was generated on"
-          },
-          "figure": {
-            "type": "string",
-            "description": "The figure of the metric"
-          },
-          "legend": {
-            "type": "string",
-            "description": "The legend of the metric"
-          },
-          "data": {
-            "$ref": "#/components/schemas/MetricData",
-            "description": "The metric data"
-          },
-          "type": {
-            "$ref": "#/components/schemas/MetricDataTypes"
-          },
-          "context": {
-            "$ref": "#/components/schemas/EntityContext"
-          }
-        },
-        "required": [
-          "id",
-          "url",
-          "createdAt",
-          "updatedAt",
-          "modelId",
-          "datasetId",
-          "figure",
-          "data",
-          "type",
-          "context"
-        ],
-        "type": "object",
-        "additionalProperties": true
-      },
-      "CursorPageAPISetting": {
-        "properties": {
-          "totalItemsCount": {
-            "type": "number",
-            "format": "double"
-          },
-          "items": {
-            "items": {
-              "$ref": "#/components/schemas/APIMetric",
-              "anyOf": [
-                {
-                  "$ref": "#/components/schemas/APIFeatureFlag"
-                },
-                {
-                  "$ref": "#/components/schemas/APIUserSetting"
-                }
-              ]
-            },
-            "type": "array"
-          },
-          "totalPagesCount": {
-            "type": "number",
-            "format": "double"
-          },
-          "hasNextPage": {
-            "type": "boolean"
-          }
-        },
-        "required": [
-          "totalItemsCount",
-          "items",
-          "totalPagesCount",
-          "hasNextPage",
-          "totalItemsCount",
-          "items",
-          "totalPagesCount",
-          "hasNextPage"
-        ],
-        "type": "object",
-        "additionalProperties": true
-      },
-      "ModelOperationTypes": {
-        "enum": [
-          "train",
-          "predict",
-          "evaluate",
-          "deploy",
-          "embed",
-          "train",
-          "predict",
-          "evaluate",
-          "deploy",
-          "embed"
-        ],
-        "type": "string"
-      },
-      "QueryModel": {
-        "properties": {
-          "resource": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/QueryResource"
-              },
-              {
-                "$ref": "#/components/schemas/QueryResource"
-              }
-            ],
-            "nullable": true
-          },
-          "filter": {
-            "nullable": true
-          },
-          "sort": {
-            "nullable": true
-          },
-          "page": {
-            "type": "number",
-            "format": "double",
-            "nullable": true
-          },
-          "pageSize": {
-            "type": "number",
-            "format": "double",
-            "nullable": true
-          },
-          "type": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/ModelOperationTypes"
-              }
-            ],
-            "nullable": true
-          }
-        },
-        "required": [
-          "filter",
-          "filter"
-        ],
-        "type": "object",
-        "additionalProperties": true
       },
       "EntityScopeLevel": {
         "enum": [
@@ -13420,6 +13102,21 @@
         ],
         "type": "object",
         "additionalProperties": true
+      },
+      "EntityContext": {
+        "properties": {
+          "project": {
+            "type": "string"
+          },
+          "creator": {
+            "type": "string"
+          },
+          "org": {
+            "type": "string"
+          }
+        },
+        "type": "object",
+        "additionalProperties": false
       },
       "ModelOperationMetadata": {
         "properties": {
@@ -13862,6 +13559,47 @@
         "type": "object",
         "additionalProperties": true
       },
+      "CursorPageAPISetting": {
+        "properties": {
+          "totalItemsCount": {
+            "type": "number",
+            "format": "double"
+          },
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/APIModel",
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/APIFeatureFlag"
+                },
+                {
+                  "$ref": "#/components/schemas/APIUserSetting"
+                }
+              ]
+            },
+            "type": "array"
+          },
+          "totalPagesCount": {
+            "type": "number",
+            "format": "double"
+          },
+          "hasNextPage": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "totalItemsCount",
+          "items",
+          "totalPagesCount",
+          "hasNextPage",
+          "totalItemsCount",
+          "items",
+          "totalPagesCount",
+          "hasNextPage"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
       "CreateModelRequest": {
         "properties": {
           "name": {
@@ -14107,6 +13845,66 @@
             "nullable": true
           }
         },
+        "type": "object",
+        "additionalProperties": true
+      },
+      "ModelOperationTypes": {
+        "enum": [
+          "train",
+          "predict",
+          "evaluate",
+          "deploy",
+          "embed",
+          "train",
+          "predict",
+          "evaluate",
+          "deploy",
+          "embed"
+        ],
+        "type": "string"
+      },
+      "QueryModel": {
+        "properties": {
+          "resource": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/QueryResource"
+              },
+              {
+                "$ref": "#/components/schemas/QueryResource"
+              }
+            ],
+            "nullable": true
+          },
+          "filter": {
+            "nullable": true
+          },
+          "sort": {
+            "nullable": true
+          },
+          "page": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "pageSize": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "type": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ModelOperationTypes"
+              }
+            ],
+            "nullable": true
+          }
+        },
+        "required": [
+          "filter",
+          "filter"
+        ],
         "type": "object",
         "additionalProperties": true
       },
@@ -14816,6 +14614,143 @@
           ],
           "type": "object"
         }
+      },
+      "PrecisionRecallInputRequest": {
+        "properties": {
+          "modelId": {
+            "type": "string",
+            "description": "The model that calculated on it"
+          },
+          "datasetId": {
+            "type": "string",
+            "description": "The dataset that calculated on it"
+          },
+          "iouThreshold": {
+            "type": "number",
+            "format": "double",
+            "description": "The iouThreshold of the calculation"
+          },
+          "metric": {
+            "type": "string",
+            "description": "The metric to calculation the confusion Matrix"
+          }
+        },
+        "required": [
+          "modelId",
+          "datasetId",
+          "iouThreshold"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "Error": {
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "stack": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "message"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "LineData": {
+        "properties": {
+          "y": {
+            "type": "number",
+            "format": "double"
+          },
+          "x": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "required": [
+          "y",
+          "x"
+        ],
+        "type": "object"
+      },
+      "MatrixData": {
+        "properties": {
+          "matrix": {
+            "items": {
+              "items": {
+                "type": "number",
+                "format": "double"
+              },
+              "type": "array"
+            },
+            "type": "array"
+          }
+        },
+        "required": [
+          "matrix"
+        ],
+        "type": "object"
+      },
+      "SummaryData": {
+        "properties": {
+          "summary": {
+            "$ref": "#/components/schemas/Dictionary"
+          }
+        },
+        "required": [
+          "summary"
+        ],
+        "type": "object"
+      },
+      "MetricData": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/LineData"
+          },
+          {
+            "$ref": "#/components/schemas/MatrixData"
+          },
+          {
+            "$ref": "#/components/schemas/SummaryData"
+          }
+        ]
+      },
+      "MetricRequest": {
+        "properties": {
+          "modelId": {
+            "type": "string",
+            "description": "The model the metric was generated on"
+          },
+          "datasetId": {
+            "type": "string",
+            "description": "The dataset the metric was generated on"
+          },
+          "figure": {
+            "type": "string",
+            "description": "The figure of the metric"
+          },
+          "legend": {
+            "type": "string",
+            "description": "The legend of the metric"
+          },
+          "data": {
+            "$ref": "#/components/schemas/MetricData",
+            "description": "The metric data"
+          }
+        },
+        "required": [
+          "modelId",
+          "figure",
+          "data"
+        ],
+        "type": "object",
+        "additionalProperties": true
       },
       "PrivateRegistry": {
         "properties": {},
@@ -16743,6 +16678,10 @@
       },
       "DebugSession": {
         "properties": {
+          "serveDebugIngressCreated": {
+            "type": "boolean",
+            "description": "Server-only: set after first successful debug ingress create (ACTIVATE may poll frequently)"
+          },
           "time": {
             "type": "string",
             "format": "date-time"
@@ -22487,6 +22426,17 @@
           },
           "settings": {
             "$ref": "#/components/schemas/IComputeSettings"
+          },
+          "createdBy": {
+            "type": "string"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
           }
         },
         "required": [
@@ -24281,6 +24231,9 @@
           "name": {
             "type": "string"
           },
+          "displayName": {
+            "type": "string"
+          },
           "icon": {
             "properties": {
               "light": {
@@ -24469,6 +24422,10 @@
           "settings": {
             "$ref": "#/components/schemas/IComputeSettings"
           },
+          "createdBy": {
+            "type": "string",
+            "description": "User id or email of the user who created the compute"
+          },
           "defaultNamespace": {
             "type": "string"
           }
@@ -24535,6 +24492,10 @@
           },
           "settings": {
             "$ref": "#/components/schemas/IComputeSettings"
+          },
+          "createdBy": {
+            "type": "string",
+            "description": "User id or email of the user who created the compute"
           },
           "defaultNamespace": {
             "type": "string"
@@ -24845,51 +24806,21 @@
         "type": "object",
         "additionalProperties": false
       },
-      "MigrationSpec": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Dictionary"
+      "IVersion": {
+        "properties": {
+          "latestVersion": {
+            "type": "string"
           },
-          {
-            "properties": {
-              "report": {
-                "type": "boolean"
-              },
-              "fix": {
-                "type": "boolean"
-              }
-            },
-            "type": "object"
+          "latestForcedVersion": {
+            "type": "boolean"
           }
-        ]
-      },
-      "RemoveSettingTraceMigrationSpec": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/MigrationSpec"
-          },
-          {
-            "properties": {
-              "settingName": {
-                "anyOf": [
-                  {
-                    "type": "string"
-                  },
-                  {
-                    "items": {
-                      "type": "string"
-                    },
-                    "type": "array"
-                  }
-                ]
-              }
-            },
-            "required": [
-              "settingName"
-            ],
-            "type": "object"
-          }
-        ]
+        },
+        "required": [
+          "latestVersion",
+          "latestForcedVersion"
+        ],
+        "type": "object",
+        "additionalProperties": true
       },
       "SettingsValueTypes": {
         "enum": [
@@ -25581,21 +25512,51 @@
         "type": "object",
         "additionalProperties": true
       },
-      "IVersion": {
-        "properties": {
-          "latestVersion": {
-            "type": "string"
+      "MigrationSpec": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Dictionary"
           },
-          "latestForcedVersion": {
-            "type": "boolean"
+          {
+            "properties": {
+              "report": {
+                "type": "boolean"
+              },
+              "fix": {
+                "type": "boolean"
+              }
+            },
+            "type": "object"
           }
-        },
-        "required": [
-          "latestVersion",
-          "latestForcedVersion"
-        ],
-        "type": "object",
-        "additionalProperties": true
+        ]
+      },
+      "RemoveSettingTraceMigrationSpec": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/MigrationSpec"
+          },
+          {
+            "properties": {
+              "settingName": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "settingName"
+            ],
+            "type": "object"
+          }
+        ]
       },
       "UIHours": {
         "properties": {
@@ -27448,7 +27409,7 @@
                 "examples": {
                   "Example 1": {
                     "value": {
-                      "createdBy": "my@user.com",
+                      "createdBy": "user@example.com",
                       "name": "My New Account",
                       "org": "myOrgId"
                     }
@@ -41443,10 +41404,10 @@
                       "type": "azureblob",
                       "name": "My Azure Blob Integration",
                       "options": {
-                        "clientId": "someClientId",
-                        "secret": "someClientSecret",
-                        "key": "someKey",
-                        "tenantId": "someTenant"
+                        "clientId": "<client_id>",
+                        "secret": "<client_secret>",
+                        "key": "<storage_key>",
+                        "tenantId": "<tenant_id>"
                       }
                     }
                   }
@@ -41721,8 +41682,8 @@
                   "Example 1": {
                     "value": {
                       "emails": [
-                        "userToAdd@1.com",
-                        "userToAdd@2.com"
+                        "user1@example.com",
+                        "user2@example.com"
                       ],
                       "role": "member"
                     }
@@ -41795,7 +41756,7 @@
                 "examples": {
                   "Example 1": {
                     "value": {
-                      "email": "userEmail@test.com",
+                      "email": "user@example.com",
                       "role": "member"
                     }
                   }
@@ -43836,7 +43797,7 @@
                 "examples": {
                   "Example 1": {
                     "value": {
-                      "guestEmail": "some@guest.com",
+                      "guestEmail": "guest@example.com",
                       "name": "Great Company",
                       "type": "labeling",
                       "denyMembersManagement": false
@@ -44367,8 +44328,8 @@
                     "value": {
                       "role": "annotator",
                       "users": [
-                        "someUser@id.com",
-                        "someOtherUser@id.com"
+                        "user1@example.com",
+                        "user2@example.com"
                       ]
                     }
                   }
@@ -46598,13 +46559,60 @@
             "schema": {
               "type": "string"
             }
-          },
+          }
+        ]
+      }
+    },
+    "/services/{id}/integration-env": {
+      "get": {
+        "operationId": "_getServiceIntegrationEnv",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "env": {
+                      "items": {
+                        "properties": {
+                          "value": {
+                            "type": "string"
+                          },
+                          "key": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "value",
+                          "key"
+                        ],
+                        "type": "object"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "env"
+                  ],
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "description": "Returns only the env key-values for the integrations listed in service.integrations.\nCallable by service bot or sudo with Piper auth (direct).",
+        "tags": [
+          "Services"
+        ],
+        "security": [],
+        "parameters": [
           {
-            "in": "query",
-            "name": "getToken",
+            "in": "path",
+            "name": "id",
             "required": true,
             "schema": {
-              "type": "boolean"
+              "type": "string"
             }
           }
         ]

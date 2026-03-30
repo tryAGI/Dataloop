@@ -98,6 +98,12 @@ namespace Dataloop
         public global::Dataloop.IComputeSettings? Settings { get; set; }
 
         /// <summary>
+        /// User id or email of the user who created the compute
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("createdBy")]
+        public string? CreatedBy { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("defaultNamespace")]
@@ -127,6 +133,9 @@ namespace Dataloop
         /// <param name="metadata"></param>
         /// <param name="archived"></param>
         /// <param name="settings"></param>
+        /// <param name="createdBy">
+        /// User id or email of the user who created the compute
+        /// </param>
         /// <param name="defaultNamespace"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -145,6 +154,7 @@ namespace Dataloop
             global::Dataloop.ComputeMetadata? metadata,
             bool? archived,
             global::Dataloop.IComputeSettings? settings,
+            string? createdBy,
             string? defaultNamespace)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
@@ -160,6 +170,7 @@ namespace Dataloop
             this.Status = status;
             this.Archived = archived;
             this.Settings = settings;
+            this.CreatedBy = createdBy;
             this.DefaultNamespace = defaultNamespace;
         }
 

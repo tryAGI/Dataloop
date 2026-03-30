@@ -20,7 +20,7 @@ namespace Dataloop
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("items")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::Dataloop.APIMetric> Items { get; set; }
+        public required global::System.Collections.Generic.IList<global::Dataloop.APIModel> Items { get; set; }
 
         /// <summary>
         /// 
@@ -54,7 +54,7 @@ namespace Dataloop
 #endif
         public CursorPageAPISetting(
             double totalItemsCount,
-            global::System.Collections.Generic.IList<global::Dataloop.APIMetric> items,
+            global::System.Collections.Generic.IList<global::Dataloop.APIModel> items,
             double totalPagesCount,
             bool hasNextPage)
         {

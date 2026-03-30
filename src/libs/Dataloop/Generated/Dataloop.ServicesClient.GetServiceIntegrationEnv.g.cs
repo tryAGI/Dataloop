@@ -3,49 +3,47 @@
 
 namespace Dataloop
 {
-    public partial class ComputeClient
+    public partial class ServicesClient
     {
-        partial void PrepareRegisterComputeArguments(
+        partial void PrepareGetServiceIntegrationEnvArguments(
             global::System.Net.Http.HttpClient httpClient,
-            global::Dataloop.ICompute request);
-        partial void PrepareRegisterComputeRequest(
+            ref string id);
+        partial void PrepareGetServiceIntegrationEnvRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::Dataloop.ICompute request);
-        partial void ProcessRegisterComputeResponse(
+            string id);
+        partial void ProcessGetServiceIntegrationEnvResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessRegisterComputeResponseContent(
+        partial void ProcessGetServiceIntegrationEnvResponseContent(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
         /// <summary>
-        /// Add Driver Compute.
+        /// Returns only the env key-values for the integrations listed in service.integrations.<br/>
+        /// Callable by service bot or sudo with Piper auth (direct).
         /// </summary>
-        /// <param name="request"></param>
+        /// <param name="id"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Dataloop.APICompute> RegisterComputeAsync(
-
-            global::Dataloop.ICompute request,
+        public async global::System.Threading.Tasks.Task<global::Dataloop.GetServiceIntegrationEnvResponse> GetServiceIntegrationEnvAsync(
+            string id,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            request = request ?? throw new global::System.ArgumentNullException(nameof(request));
-
             PrepareArguments(
                 client: HttpClient);
-            PrepareRegisterComputeArguments(
+            PrepareGetServiceIntegrationEnvArguments(
                 httpClient: HttpClient,
-                request: request);
+                id: ref id);
 
             var __pathBuilder = new global::Dataloop.PathBuilder(
-                path: "/compute",
+                path: $"/services/{id}/integration-env",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
-                method: global::System.Net.Http.HttpMethod.Post,
+                method: global::System.Net.Http.HttpMethod.Get,
                 requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 #if NET6_0_OR_GREATER
             __httpRequest.Version = global::System.Net.HttpVersion.Version11;
@@ -67,20 +65,14 @@ namespace Dataloop
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
                 }
             }
-            var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
-            var __httpRequestContent = new global::System.Net.Http.StringContent(
-                content: __httpRequestContentBody,
-                encoding: global::System.Text.Encoding.UTF8,
-                mediaType: "application/json");
-            __httpRequest.Content = __httpRequestContent;
 
             PrepareRequest(
                 client: HttpClient,
                 request: __httpRequest);
-            PrepareRegisterComputeRequest(
+            PrepareGetServiceIntegrationEnvRequest(
                 httpClient: HttpClient,
                 httpRequestMessage: __httpRequest,
-                request: request);
+                id: id);
 
             using var __response = await HttpClient.SendAsync(
                 request: __httpRequest,
@@ -90,7 +82,7 @@ namespace Dataloop
             ProcessResponse(
                 client: HttpClient,
                 response: __response);
-            ProcessRegisterComputeResponse(
+            ProcessGetServiceIntegrationEnvResponse(
                 httpClient: HttpClient,
                 httpResponseMessage: __response);
 
@@ -106,7 +98,7 @@ namespace Dataloop
                     client: HttpClient,
                     response: __response,
                     content: ref __content);
-                ProcessRegisterComputeResponseContent(
+                ProcessGetServiceIntegrationEnvResponseContent(
                     httpClient: HttpClient,
                     httpResponseMessage: __response,
                     content: ref __content);
@@ -116,7 +108,7 @@ namespace Dataloop
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::Dataloop.APICompute.FromJson(__content, JsonSerializerContext) ??
+                        global::Dataloop.GetServiceIntegrationEnvResponse.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -147,7 +139,7 @@ namespace Dataloop
                     ).ConfigureAwait(false);
 
                     return
-                        await global::Dataloop.APICompute.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::Dataloop.GetServiceIntegrationEnvResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
@@ -178,71 +170,6 @@ namespace Dataloop
                     };
                 }
             }
-        }
-        /// <summary>
-        /// Add Driver Compute.
-        /// </summary>
-        /// <param name="id">
-        /// A class representation of the BSON ObjectId type.
-        /// </param>
-        /// <param name="name"></param>
-        /// <param name="context"></param>
-        /// <param name="sharedContexts"></param>
-        /// <param name="global"></param>
-        /// <param name="createdAt"></param>
-        /// <param name="updatedAt"></param>
-        /// <param name="orgIds"></param>
-        /// <param name="type"></param>
-        /// <param name="metadata"></param>
-        /// <param name="status"></param>
-        /// <param name="archived"></param>
-        /// <param name="settings"></param>
-        /// <param name="createdBy">
-        /// User id or email of the user who created the compute
-        /// </param>
-        /// <param name="defaultNamespace"></param>
-        /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Dataloop.APICompute> RegisterComputeAsync(
-            string id,
-            string name,
-            global::Dataloop.IComputeContext context,
-            global::System.Collections.Generic.IList<global::Dataloop.IComputeContext> sharedContexts,
-            global::System.DateTime createdAt,
-            global::System.DateTime updatedAt,
-            global::System.Collections.Generic.IList<string> orgIds,
-            global::Dataloop.EComputeStatus status,
-            bool? global = default,
-            global::Dataloop.EComputeType type = default,
-            global::Dataloop.ComputeMetadata? metadata = default,
-            bool? archived = default,
-            global::Dataloop.IComputeSettings? settings = default,
-            string? createdBy = default,
-            string? defaultNamespace = default,
-            global::System.Threading.CancellationToken cancellationToken = default)
-        {
-            var __request = new global::Dataloop.ICompute
-            {
-                Id = id,
-                Name = name,
-                Context = context,
-                SharedContexts = sharedContexts,
-                Global = global,
-                CreatedAt = createdAt,
-                UpdatedAt = updatedAt,
-                OrgIds = orgIds,
-                Type = type,
-                Metadata = metadata,
-                Status = status,
-                Archived = archived,
-                Settings = settings,
-                CreatedBy = createdBy,
-                DefaultNamespace = defaultNamespace,
-            };
-
-            return await RegisterComputeAsync(
-                request: __request,
-                cancellationToken: cancellationToken).ConfigureAwait(false);
         }
     }
 }
