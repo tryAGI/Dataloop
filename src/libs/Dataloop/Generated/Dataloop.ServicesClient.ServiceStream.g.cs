@@ -7,13 +7,11 @@ namespace Dataloop
     {
         partial void PrepareServiceStreamArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref string id,
-            ref bool getToken);
+            ref string id);
         partial void PrepareServiceStreamRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            string id,
-            bool getToken);
+            string id);
         partial void ProcessServiceStreamResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -27,27 +25,21 @@ namespace Dataloop
         /// Service debug stream
         /// </summary>
         /// <param name="id"></param>
-        /// <param name="getToken"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Dataloop.ServiceStreamResponse> ServiceStreamAsync(
             string id,
-            bool getToken,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
                 client: HttpClient);
             PrepareServiceStreamArguments(
                 httpClient: HttpClient,
-                id: ref id,
-                getToken: ref getToken);
+                id: ref id);
 
             var __pathBuilder = new global::Dataloop.PathBuilder(
                 path: $"/services/{id}/debug(*)?",
                 baseUri: HttpClient.BaseAddress); 
-            __pathBuilder
-                .AddRequiredParameter("getToken", getToken.ToString().ToLowerInvariant()) 
-                ; 
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -79,8 +71,7 @@ namespace Dataloop
             PrepareServiceStreamRequest(
                 httpClient: HttpClient,
                 httpRequestMessage: __httpRequest,
-                id: id,
-                getToken: getToken);
+                id: id);
 
             using var __response = await HttpClient.SendAsync(
                 request: __httpRequest,

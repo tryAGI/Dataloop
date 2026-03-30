@@ -32,6 +32,9 @@ namespace Dataloop
         /// <param name="status"></param>
         /// <param name="archived"></param>
         /// <param name="settings"></param>
+        /// <param name="createdBy">
+        /// User id or email of the user who created the compute
+        /// </param>
         /// <param name="defaultNamespace"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
@@ -49,6 +52,7 @@ namespace Dataloop
             global::Dataloop.ComputeMetadata? metadata = default,
             bool? archived = default,
             global::Dataloop.IComputeSettings? settings = default,
+            string? createdBy = default,
             string? defaultNamespace = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

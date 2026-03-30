@@ -89,6 +89,24 @@ namespace Dataloop
         public global::Dataloop.IComputeSettings? Settings { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("createdBy")]
+        public string? CreatedBy { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("createdAt")]
+        public global::System.DateTime? CreatedAt { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("updatedAt")]
+        public global::System.DateTime? UpdatedAt { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -109,6 +127,9 @@ namespace Dataloop
         /// <param name="cluster"></param>
         /// <param name="archived"></param>
         /// <param name="settings"></param>
+        /// <param name="createdBy"></param>
+        /// <param name="createdAt"></param>
+        /// <param name="updatedAt"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -124,7 +145,10 @@ namespace Dataloop
             bool? global,
             global::Dataloop.IComputeCluster? cluster,
             bool? archived,
-            global::Dataloop.IComputeSettings? settings)
+            global::Dataloop.IComputeSettings? settings,
+            string? createdBy,
+            global::System.DateTime? createdAt,
+            global::System.DateTime? updatedAt)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
@@ -138,6 +162,9 @@ namespace Dataloop
             this.Cluster = cluster;
             this.Archived = archived;
             this.Settings = settings;
+            this.CreatedBy = createdBy;
+            this.CreatedAt = createdAt;
+            this.UpdatedAt = updatedAt;
         }
 
         /// <summary>

@@ -9,6 +9,12 @@ namespace Dataloop
     public sealed partial class DebugSession
     {
         /// <summary>
+        /// Server-only: set after first successful debug ingress create (ACTIVATE may poll frequently)
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("serveDebugIngressCreated")]
+        public bool? ServeDebugIngressCreated { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("time")]
@@ -32,14 +38,19 @@ namespace Dataloop
         /// Initializes a new instance of the <see cref="DebugSession" /> class.
         /// </summary>
         /// <param name="status"></param>
+        /// <param name="serveDebugIngressCreated">
+        /// Server-only: set after first successful debug ingress create (ACTIVATE may poll frequently)
+        /// </param>
         /// <param name="time"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public DebugSession(
             global::Dataloop.EDebugOptionsStatus status,
+            bool? serveDebugIngressCreated,
             global::System.DateTime? time)
         {
+            this.ServeDebugIngressCreated = serveDebugIngressCreated;
             this.Time = time;
             this.Status = status;
         }
