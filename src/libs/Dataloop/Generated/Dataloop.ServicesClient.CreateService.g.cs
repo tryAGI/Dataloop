@@ -28,19 +28,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// service = package.services.deploy(service_name=package_name,<br/>
-        /// execution_timeout=3 * 60 * 60,<br/>
-        /// module_name=module.name,<br/>
-        /// runtime=dl.KubernetesRuntime(<br/>
-        /// concurrency=10,<br/>
-        /// pod_type=dl.InstanceCatalog.REGULAR_S,<br/>
-        /// autoscaler=dl.KubernetesRabbitmqAutoscaler(<br/>
-        /// min_replicas=1,<br/>
-        /// max_replicas=20,<br/>
-        /// queue_length=20<br/>
-        /// )<br/>
-        /// )<br/>
-        /// )<br/>
         /// # <br/>
         /// # Deploy service.<br/>
         /// # <br/>
@@ -68,10 +55,26 @@ namespace Dataloop
         /// # :param str on_reset: what happens on reset<br/>
         /// # :param bool force: optional - if true, terminate old replicas immediately<br/>
         /// # :param list secrets: list of the integrations ids<br/>
+        /// # :param list integrations: list of the integrations<br/>
+        /// # :param bool active: if true, activate the service<br/>
         /// # :param kwargs: list of additional arguments<br/>
         /// # :return: Service object<br/>
         /// # :rtype: dtlpy.entities.service.Service<br/>
         /// # <br/>
+        /// # <br/>
+        /// # service = package.services.deploy(service_name=package_name,<br/>
+        /// # execution_timeout=3 * 60 * 60,<br/>
+        /// # module_name=module.name,<br/>
+        /// # runtime=dl.KubernetesRuntime(<br/>
+        /// # concurrency=10,<br/>
+        /// # pod_type=dl.InstanceCatalog.REGULAR_S,<br/>
+        /// # autoscaler=dl.KubernetesRabbitmqAutoscaler(<br/>
+        /// # min_replicas=1,<br/>
+        /// # max_replicas=20,<br/>
+        /// # queue_length=20<br/>
+        /// # )<br/>
+        /// # )<br/>
+        /// # )<br/>
         /// # 
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.APIService> CreateServiceAsync(

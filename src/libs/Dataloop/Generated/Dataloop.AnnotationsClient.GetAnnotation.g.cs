@@ -28,7 +28,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// annotation = item.annotations.get(annotation_id='annotation_id')<br/>
         /// # <br/>
         /// # Get a single annotation.<br/>
         /// # <br/>
@@ -40,6 +39,8 @@ namespace Dataloop
         /// # :return: Annotation object or None<br/>
         /// # :rtype: dtlpy.entities.annotation.Annotation<br/>
         /// # <br/>
+        /// # <br/>
+        /// # annotation = item.annotations.get(annotation_id='annotation_id')<br/>
         /// # 
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.APIAnnotation> GetAnnotationAsync(

@@ -11,7 +11,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// service.triggers.delete(trigger_id='trigger_id')<br/>
         /// # <br/>
         /// # Delete Trigger object<br/>
         /// # <br/>
@@ -22,6 +21,8 @@ namespace Dataloop
         /// # :return: True is successful error if not<br/>
         /// # :rtype: bool<br/>
         /// # <br/>
+        /// # <br/>
+        /// # service.triggers.delete(trigger_id='trigger_id')<br/>
         /// # 
         /// </remarks>
         global::System.Threading.Tasks.Task DeleteTriggersAsync(

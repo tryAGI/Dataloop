@@ -28,7 +28,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// dataset.tasks.list(project_ids='project_ids',pages_size=100, page_offset=0)<br/>
         /// # <br/>
         /// # List all tasks.<br/>
         /// # <br/>
@@ -47,6 +46,8 @@ namespace Dataloop
         /// # :param dtlpy.entities.filters.Filters filters: dl.Filters entity to filters tasks using DQL<br/>
         /// # :return: List of Task objects<br/>
         /// # <br/>
+        /// # <br/>
+        /// # dataset.tasks.list(project_ids='project_ids',pages_size=100, page_offset=0)<br/>
         /// # 
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.CursorPageAny> QueryAnnotationTasksAsync(

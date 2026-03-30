@@ -11,8 +11,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// directory_tree = dataset.directory_tree<br/>
-        /// directory_tree = project.datasets.directory_tree(dataset='dataset_entity')<br/>
         /// # <br/>
         /// # Get dataset's directory tree.<br/>
         /// # <br/>
@@ -25,6 +23,9 @@ namespace Dataloop
         /// # :param str dataset_id: The Id of the dataset<br/>
         /// # :return: DirectoryTree<br/>
         /// # <br/>
+        /// # <br/>
+        /// # directory_tree = dataset.directory_tree<br/>
+        /// # directory_tree = project.datasets.directory_tree(dataset='dataset_entity')<br/>
         /// # 
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.DatasetDirectoryTree> GetDatasetDirectoryTreeAsync(

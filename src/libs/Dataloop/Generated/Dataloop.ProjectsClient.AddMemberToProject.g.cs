@@ -37,7 +37,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// user_json = dl.projects.add_member(project_id='project_id', email='user@dataloop.ai', role=dl.MemberRole.DEVELOPER)<br/>
         /// # <br/>
         /// # Add a member to the project.<br/>
         /// # <br/>
@@ -49,6 +48,8 @@ namespace Dataloop
         /// # :return: dict that represent the user<br/>
         /// # :rtype: dict<br/>
         /// # <br/>
+        /// # <br/>
+        /// # user_json = dl.projects.add_member(project_id='project_id', email='user@dataloop.ai', role=dl.MemberRole.DEVELOPER)<br/>
         /// # 
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<global::System.Collections.Generic.IList<global::Dataloop.ClientContributor>, object>> AddMemberToProjectAsync(

@@ -31,7 +31,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// service_logs = package.services.log(service='service_entity')<br/>
         /// # <br/>
         /// # Get service logs.<br/>
         /// # <br/>
@@ -57,6 +56,8 @@ namespace Dataloop
         /// # :return: ServiceLog entity<br/>
         /// # :rtype: ServiceLog<br/>
         /// # <br/>
+        /// # <br/>
+        /// # service_logs = package.services.log(service='service_entity')<br/>
         /// # 
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.ServiceLogsPage> GetLogsAsync(

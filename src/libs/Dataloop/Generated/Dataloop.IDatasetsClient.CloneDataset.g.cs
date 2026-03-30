@@ -12,11 +12,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// dataset = project.datasets.clone(dataset_id='dataset_id',<br/>
-        /// clone_name='dataset_clone_name',<br/>
-        /// with_metadata=True,<br/>
-        /// with_items_annotations=False,<br/>
-        /// with_task_annotations_status=False)<br/>
         /// # <br/>
         /// # Clone a dataset. Read more about cloning datatsets and items in our `documentation &lt;https://dataloop.ai/docs/clone-merge-dataset#cloned-dataset&gt;`_ and `SDK documentation &lt;https://developers.dataloop.ai/tutorials/data_management/data_versioning/chapter/&gt;`_.<br/>
         /// # <br/>
@@ -29,9 +24,16 @@ namespace Dataloop
         /// # :param bool with_metadata: true to clone with metadata<br/>
         /// # :param bool with_task_annotations_status: true to clone with task annotations' status<br/>
         /// # :param str dst_dataset_id: destination dataset id<br/>
+        /// # :param str target_directory: target directory<br/>
         /// # :return: dataset object<br/>
         /// # :rtype: dtlpy.entities.dataset.Dataset<br/>
         /// # <br/>
+        /// # <br/>
+        /// # dataset = project.datasets.clone(dataset_id='dataset_id',<br/>
+        /// # clone_name='dataset_clone_name',<br/>
+        /// # with_metadata=True,<br/>
+        /// # with_items_annotations=False,<br/>
+        /// # with_task_annotations_status=False)<br/>
         /// # 
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.APICommand> CloneDatasetAsync(

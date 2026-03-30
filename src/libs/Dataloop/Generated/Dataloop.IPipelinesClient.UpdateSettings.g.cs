@@ -12,7 +12,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// pipeline = project.pipelines.update_settings(pipeline='pipeline_entity', settings=dl.PipelineSettings(keep_triggers_active=True))<br/>
         /// # <br/>
         /// # Update pipeline settings.<br/>
         /// # <br/>
@@ -23,6 +22,8 @@ namespace Dataloop
         /// # :return: Pipeline object<br/>
         /// # :rtype: dtlpy.entities.pipeline.Pipeline<br/>
         /// # <br/>
+        /// # <br/>
+        /// # pipeline = project.pipelines.update_settings(pipeline='pipeline_entity', settings=dl.PipelineSettings(keep_triggers_active=True))<br/>
         /// # 
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.APIPipeline> UpdateSettingsAsync(

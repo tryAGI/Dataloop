@@ -28,7 +28,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// dataset = project.datasets.get(dataset_id='dataset_id')<br/>
         /// # <br/>
         /// # Get dataset by name or id.<br/>
         /// # <br/>
@@ -43,6 +42,8 @@ namespace Dataloop
         /// # :return: Dataset object<br/>
         /// # :rtype: dtlpy.entities.dataset.Dataset<br/>
         /// # <br/>
+        /// # <br/>
+        /// # dataset = project.datasets.get(dataset_id='dataset_id')<br/>
         /// # 
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.APIDataset> GetDatasetByIdAsync(

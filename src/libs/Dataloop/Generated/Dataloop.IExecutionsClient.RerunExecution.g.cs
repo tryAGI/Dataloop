@@ -12,7 +12,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// service.executions.rerun(execution='execution_entity')<br/>
         /// # <br/>
         /// # Rerun execution<br/>
         /// # <br/>
@@ -23,6 +22,8 @@ namespace Dataloop
         /// # :return: Execution object<br/>
         /// # :rtype: dtlpy.entities.execution.Execution<br/>
         /// # <br/>
+        /// # <br/>
+        /// # service.executions.rerun(execution='execution_entity')<br/>
         /// # 
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<global::Dataloop.APIExecution, global::Dataloop.PiperSettingsCommands>> RerunExecutionAsync(

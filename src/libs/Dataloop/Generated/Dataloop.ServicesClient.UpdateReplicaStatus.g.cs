@@ -31,7 +31,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// status_json = package.services.status(service_id='service_id')<br/>
         /// # <br/>
         /// # Get service status.<br/>
         /// # <br/>
@@ -44,6 +43,8 @@ namespace Dataloop
         /// # :return: status json<br/>
         /// # :rtype: dict<br/>
         /// # <br/>
+        /// # <br/>
+        /// # status_json = package.services.status(service_id='service_id')<br/>
         /// # 
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.APIReplicaStatusUpdate> UpdateReplicaStatusAsync(

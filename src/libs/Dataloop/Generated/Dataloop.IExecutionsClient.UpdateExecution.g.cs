@@ -12,7 +12,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// service.executions.update(execution='execution_entity')<br/>
         /// # <br/>
         /// # Update execution changes to platform<br/>
         /// # <br/>
@@ -22,6 +21,8 @@ namespace Dataloop
         /// # :return: Service execution object<br/>
         /// # :rtype: dtlpy.entities.execution.Execution<br/>
         /// # <br/>
+        /// # <br/>
+        /// # service.executions.update(execution='execution_entity')<br/>
         /// # 
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.APIExecution> UpdateExecutionAsync(

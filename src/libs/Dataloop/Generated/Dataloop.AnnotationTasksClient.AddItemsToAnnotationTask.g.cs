@@ -31,8 +31,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// dataset.tasks.add_items(task= 'task_entity',<br/>
-        /// items = [items])<br/>
         /// # <br/>
         /// # Add items to a Task.<br/>
         /// # <br/>
@@ -50,6 +48,9 @@ namespace Dataloop
         /// # :return: task entity<br/>
         /// # :rtype: dtlpy.entities.task.Task<br/>
         /// # <br/>
+        /// # <br/>
+        /// # dataset.tasks.add_items(task= 'task_entity',<br/>
+        /// # items = [items])<br/>
         /// # 
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<global::Dataloop.APITask, global::Dataloop.APICommand>> AddItemsToAnnotationTaskAsync(

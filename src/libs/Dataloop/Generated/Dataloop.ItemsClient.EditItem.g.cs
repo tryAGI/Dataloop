@@ -34,7 +34,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// dataset.items.update(item='item_entity')<br/>
         /// # <br/>
         /// # Update item metadata.<br/>
         /// # <br/>
@@ -50,6 +49,8 @@ namespace Dataloop
         /// # :return: Item object<br/>
         /// # :rtype: dtlpy.entities.item.Item<br/>
         /// # <br/>
+        /// # <br/>
+        /// # dataset.items.update(item='item_entity')<br/>
         /// # 
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<global::Dataloop.APIDatasetFileItem, global::Dataloop.APIDatasetDirectoryItem>> EditItemAsync(

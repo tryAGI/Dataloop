@@ -34,7 +34,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// service = package.services.update(service='service_entity')<br/>
         /// # <br/>
         /// # Update service changes to platform.<br/>
         /// # <br/>
@@ -45,6 +44,8 @@ namespace Dataloop
         /// # :return: Service entity<br/>
         /// # :rtype: dtlpy.entities.service.Service<br/>
         /// # <br/>
+        /// # <br/>
+        /// # service = package.services.update(service='service_entity')<br/>
         /// # 
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<global::Dataloop.APIService, string>> UpdateServiceAsync(

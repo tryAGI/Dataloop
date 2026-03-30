@@ -31,7 +31,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// assignment = task.assignments.reassign(assignee_ids='annotator1@dataloop.ai')<br/>
         /// # <br/>
         /// # Reassign an assignment.<br/>
         /// # <br/>
@@ -46,6 +45,8 @@ namespace Dataloop
         /// # :return: Assignment object<br/>
         /// # :rtype: dtlpy.entities.assignment.Assignment<br/>
         /// # <br/>
+        /// # <br/>
+        /// # assignment = task.assignments.reassign(assignee_ids='annotator1@dataloop.ai')<br/>
         /// # 
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<global::Dataloop.APICommand, global::Dataloop.APIAssignment>> ReassignAssignmentAsync(

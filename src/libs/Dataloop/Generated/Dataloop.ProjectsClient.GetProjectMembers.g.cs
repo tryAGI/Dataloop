@@ -28,7 +28,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// users_jsons_list = dl.projects.list_members(project_id='project_id', role=dl.MemberRole.DEVELOPER)<br/>
         /// # <br/>
         /// # Get a list of the project members.<br/>
         /// # <br/>
@@ -39,6 +38,8 @@ namespace Dataloop
         /// # :return: list of the project members<br/>
         /// # :rtype: list<br/>
         /// # <br/>
+        /// # <br/>
+        /// # users_jsons_list = dl.projects.list_members(project_id='project_id', role=dl.MemberRole.DEVELOPER)<br/>
         /// # 
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Dataloop.APIUser>> GetProjectMembersAsync(

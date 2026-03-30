@@ -12,7 +12,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// is_deleted = package.services.delete(service_id='service_id')<br/>
         /// # <br/>
         /// # Delete Service object<br/>
         /// # <br/>
@@ -20,11 +19,14 @@ namespace Dataloop
         /// # <br/>
         /// # You must provide at least ONE of the following params: service_id, service_name.<br/>
         /// # <br/>
+        /// # :param force:<br/>
         /// # :param str service_name: by name<br/>
         /// # :param str service_id: by id<br/>
         /// # :return: True<br/>
         /// # :rtype: bool<br/>
         /// # <br/>
+        /// # <br/>
+        /// # is_deleted = package.services.delete(service_id='service_id')<br/>
         /// # 
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.APICommand> DeleteServiceAsync(

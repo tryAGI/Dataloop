@@ -28,9 +28,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// dataset.tasks.create(task= 'task_entity',<br/>
-        /// due_date = datetime.datetime(day= 1, month= 1, year= 2029).timestamp(),<br/>
-        /// assignee_ids =[ 'annotator1@dataloop.ai', 'annotator2@dataloop.ai'])<br/>
         /// # <br/>
         /// # Create a new Task (Annotation or QA).<br/>
         /// # <br/>
@@ -62,10 +59,16 @@ namespace Dataloop
         /// # :param entities.ConsensusTaskType consensus_task_type: consensus_task_type of the task options in entities.ConsensusTaskType<br/>
         /// # :param int consensus_percentage: percentage of items to be copied to multiple annotators (consensus items)<br/>
         /// # :param int consensus_assignees: the number of different annotators per item (number of copies per item)<br/>
-        /// # :param bool scoring: create a scoring app in project<br/>
+        /// # :param bool scoring: create a scoring app in project. Note: Scoring is no longer applied by default for consensus tasks. Set scoring=True to enable it.<br/>
+        /// # :param bool enforce_video_conversion: Enforce WEBM conversion on video items for frame-accurate annotations. WEBM Conversion will be executed as a project service and incurs compute costs. Service compute resources can be set according to planned workload.<br/>
         /// # :return: Task object<br/>
         /// # :rtype: dtlpy.entities.task.Task<br/>
         /// # <br/>
+        /// # <br/>
+        /// # dataset.tasks.create(task= 'task_entity',<br/>
+        /// # due_date = datetime.datetime(day= 1, month= 1, year= 2029).timestamp(),<br/>
+        /// # assignee_ids =[ 'annotator1@dataloop.ai', 'annotator2@dataloop.ai'],<br/>
+        /// # available_actions=[dl.ItemAction("discard"), dl.ItemAction("to-check")])<br/>
         /// # 
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<global::Dataloop.APITask, global::Dataloop.APICommand>> CreateAnnotationTaskAsync(

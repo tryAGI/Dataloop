@@ -28,7 +28,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// success = project.datasets.sync(dataset_id='dataset_id')<br/>
         /// # <br/>
         /// # Sync dataset with external storage.<br/>
         /// # <br/>
@@ -39,6 +38,8 @@ namespace Dataloop
         /// # :return: True if success<br/>
         /// # :rtype: bool<br/>
         /// # <br/>
+        /// # <br/>
+        /// # success = project.datasets.sync(dataset_id='dataset_id')<br/>
         /// # 
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.APICommand> SyncDatasetAsync(

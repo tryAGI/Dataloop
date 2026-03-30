@@ -23,7 +23,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// dataset.items.delete(item_id='item_id')<br/>
         /// # <br/>
         /// # Delete item from platform.<br/>
         /// # <br/>
@@ -37,6 +36,8 @@ namespace Dataloop
         /// # :return: True if success<br/>
         /// # :rtype: bool<br/>
         /// # <br/>
+        /// # <br/>
+        /// # dataset.items.delete(item_id='item_id')<br/>
         /// # 
         /// </remarks>
         public async global::System.Threading.Tasks.Task RemoveItemAsync(

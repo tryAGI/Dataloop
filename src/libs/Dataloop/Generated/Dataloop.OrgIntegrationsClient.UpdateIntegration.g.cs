@@ -31,7 +31,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// project.integrations.update(integrations_id='integrations_id', new_options={roleArn: ""})<br/>
         /// # <br/>
         /// # Update the integration's name.<br/>
         /// # <br/>
@@ -41,6 +40,8 @@ namespace Dataloop
         /// # :param str integrations_id: integrations id<br/>
         /// # :param Integration integration: integration object<br/>
         /// # :param dict new_options: new value<br/>
+        /// # :param str organization_id: organization id<br/>
+        /// # :param bool reload_services: reload services associated with this integration<br/>
         /// # :return: Integration object<br/>
         /// # :rtype: dtlpy.entities.integration.Integration<br/>
         /// # <br/>
@@ -53,6 +54,8 @@ namespace Dataloop
         /// # aws-cross - {roleArn: ""}<br/>
         /// # gcp-cross - {"email: "", "resourceName": ""}<br/>
         /// # <br/>
+        /// # <br/>
+        /// # project.integrations.update(integrations_id='integrations_id', new_options={roleArn: ""})<br/>
         /// # 
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.APIIntegration> UpdateIntegrationAsync(

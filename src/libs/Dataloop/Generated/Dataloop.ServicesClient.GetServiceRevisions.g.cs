@@ -28,7 +28,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// service_revision = package.services.revisions(service_id='service_id')<br/>
         /// # <br/>
         /// # Get service revisions history.<br/>
         /// # <br/>
@@ -39,6 +38,8 @@ namespace Dataloop
         /// # :param dtlpy.entities.service.Service service: Service entity<br/>
         /// # :param str service_id: service id<br/>
         /// # <br/>
+        /// # <br/>
+        /// # service_revision = package.services.revisions(service_id='service_id')<br/>
         /// # 
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Dataloop.APIService>> GetServiceRevisionsAsync(

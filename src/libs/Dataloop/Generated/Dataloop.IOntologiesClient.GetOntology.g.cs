@@ -11,7 +11,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// recipe.ontologies.get(ontology_id='ontology_id')<br/>
         /// # <br/>
         /// # Get Ontology object to use in your code.<br/>
         /// # <br/>
@@ -21,6 +20,8 @@ namespace Dataloop
         /// # :return: Ontology object<br/>
         /// # :rtype: dtlpy.entities.ontology.Ontology<br/>
         /// # <br/>
+        /// # <br/>
+        /// # recipe.ontologies.get(ontology_id='ontology_id')<br/>
         /// # 
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<global::Dataloop.APIOntologyV2, global::Dataloop.APIOntology>> GetOntologyAsync(

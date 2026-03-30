@@ -12,9 +12,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// member_json = dl.organizations.update_member(email='user@domain.com',<br/>
-        /// organization_id='organization_id',<br/>
-        /// role=dl.MemberOrgRole.MEMBER)<br/>
         /// # <br/>
         /// # Update member role.<br/>
         /// # <br/>
@@ -30,6 +27,10 @@ namespace Dataloop
         /// # :return: json of the member fields<br/>
         /// # :rtype: dict<br/>
         /// # <br/>
+        /// # <br/>
+        /// # member_json = dl.organizations.update_member(email='user@domain.com',<br/>
+        /// # organization_id='organization_id',<br/>
+        /// # role=dl.MemberOrgRole.MEMBER)<br/>
         /// # 
         /// </remarks>
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Dataloop.APIUser>> PatchOrgMemberAsync(

@@ -31,8 +31,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// assignment = task.assignments.redistribute(workload=dl.Workload([dl.WorkloadUnit(assignee_id="annotator1@dataloop.ai", load=50),<br/>
-        /// dl.WorkloadUnit(assignee_id="annotator2@dataloop.ai", load=50)]))<br/>
         /// # <br/>
         /// # Redistribute an assignment.<br/>
         /// # <br/>
@@ -47,6 +45,9 @@ namespace Dataloop
         /// # :param bool wait: wait until redistribute assignment finish<br/>
         /// # :return: Assignment object<br/>
         /// # :rtype: dtlpy.entities.assignment.Assignment assignment<br/>
+        /// # <br/>
+        /// # assignment = task.assignments.redistribute(workload=dl.Workload([dl.WorkloadUnit(assignee_id="annotator1@dataloop.ai", load=50),<br/>
+        /// # dl.WorkloadUnit(assignee_id="annotator2@dataloop.ai", load=50)]))<br/>
         /// # 
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<global::Dataloop.APICommand, global::System.Collections.Generic.IList<global::Dataloop.APIAssignment>>> RedistributeAssignmentAsync(

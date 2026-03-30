@@ -12,7 +12,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// dataset.items.list(page_offset=0, page_size=100)<br/>
         /// # <br/>
         /// # List items in a dataset.<br/>
         /// # <br/>
@@ -24,6 +23,8 @@ namespace Dataloop
         /// # :return: Pages object<br/>
         /// # :rtype: dtlpy.entities.paged_entities.PagedEntities<br/>
         /// # <br/>
+        /// # <br/>
+        /// # dataset.items.list(page_offset=0, page_size=100)<br/>
         /// # 
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.CursorPageAPIAnnotationOrAPIDatasetOrAPIDatasetFileItemOrAPIDatasetDirectoryItem> QueryDatasetAsync(

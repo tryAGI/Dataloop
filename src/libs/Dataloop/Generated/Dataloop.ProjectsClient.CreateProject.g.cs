@@ -28,7 +28,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// project = dl.projects.create(project_name='project_name')<br/>
         /// # <br/>
         /// # Create a new project.<br/>
         /// # <br/>
@@ -39,6 +38,8 @@ namespace Dataloop
         /// # :return: Project object<br/>
         /// # :rtype: dtlpy.entities.project.Project<br/>
         /// # <br/>
+        /// # <br/>
+        /// # project = dl.projects.create(project_name='project_name')<br/>
         /// # 
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.APIProject> CreateProjectAsync(

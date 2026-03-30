@@ -31,7 +31,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// recipe.ontologies.delete(ontology='ontology_entity')<br/>
         /// # <br/>
         /// # Update the Ontology metadata.<br/>
         /// # <br/>
@@ -43,6 +42,7 @@ namespace Dataloop
         /// # :rtype: dtlpy.entities.ontology.Ontology<br/>
         /// # <br/>
         /// # <br/>
+        /// # recipe.ontologies.delete(ontology='ontology_entity')<br/>
         /// # 
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<global::Dataloop.APIOntologyV2, global::Dataloop.APIOntology>> UpdateOntologyAsync(

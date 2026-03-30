@@ -11,7 +11,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// recipe.ontologies.delete(ontology_id='ontology_id')<br/>
         /// # <br/>
         /// # Delete Ontology from the platform.<br/>
         /// # <br/>
@@ -21,6 +20,8 @@ namespace Dataloop
         /// # :return: True if success<br/>
         /// # :rtype: bool<br/>
         /// # <br/>
+        /// # <br/>
+        /// # recipe.ontologies.delete(ontology_id='ontology_id')<br/>
         /// # 
         /// </remarks>
         global::System.Threading.Tasks.Task DeleteOntologyAsync(

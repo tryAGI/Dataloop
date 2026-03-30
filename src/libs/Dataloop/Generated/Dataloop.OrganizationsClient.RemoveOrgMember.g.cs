@@ -26,10 +26,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// success = dl.organizations.delete_member(user_id='user_id',<br/>
-        /// organization_id='organization_id',<br/>
-        /// sure=True,<br/>
-        /// really=True)<br/>
         /// # <br/>
         /// # Delete member from the Organization.<br/>
         /// # <br/>
@@ -46,6 +42,11 @@ namespace Dataloop
         /// # :return: True if success and error if not<br/>
         /// # :rtype: bool<br/>
         /// # <br/>
+        /// # <br/>
+        /// # success = dl.organizations.delete_member(user_id='user_id',<br/>
+        /// # organization_id='organization_id',<br/>
+        /// # sure=True,<br/>
+        /// # really=True)<br/>
         /// # 
         /// </remarks>
         public async global::System.Threading.Tasks.Task RemoveOrgMemberAsync(

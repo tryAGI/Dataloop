@@ -31,7 +31,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// project.packages.get(package_id='package_id')<br/>
         /// # <br/>
         /// # Get Package object to use in your code.<br/>
         /// # <br/>
@@ -41,9 +40,12 @@ namespace Dataloop
         /// # :param str package_name: package name<br/>
         /// # :param bool checkout: set the package as a default package object (cookies)<br/>
         /// # :param fetch: optional - fetch entity from platform, default taken from cookie<br/>
+        /// # :param bool log_error: log error if package not found<br/>
         /// # :return: Package object<br/>
         /// # :rtype: dtlpy.entities.package.Package<br/>
         /// # <br/>
+        /// # <br/>
+        /// # project.packages.get(package_id='package_id')<br/>
         /// # 
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.APIPackage> GetPackageAsync(

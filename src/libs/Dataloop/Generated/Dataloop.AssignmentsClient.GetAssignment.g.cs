@@ -28,7 +28,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// assignment = task.assignments.get(assignment_id='assignment_id')<br/>
         /// # <br/>
         /// # Get Assignment object to use it in your code.<br/>
         /// # <br/>
@@ -37,6 +36,8 @@ namespace Dataloop
         /// # :return: Assignment object<br/>
         /// # :rtype: dtlpy.entities.assignment.Assignment<br/>
         /// # <br/>
+        /// # <br/>
+        /// # assignment = task.assignments.get(assignment_id='assignment_id')<br/>
         /// # 
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.APIAssignment> GetAssignmentAsync(

@@ -11,11 +11,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// success = project.datasets.merge(dataset_ids=['dataset_id1','dataset_id2'],<br/>
-        /// merge_name='dataset_merge_name',<br/>
-        /// with_metadata=True,<br/>
-        /// with_items_annotations=False,<br/>
-        /// with_task_annotations_status=False)<br/>
         /// # <br/>
         /// # Merge a dataset. See our `SDK docs &lt;https://developers.dataloop.ai/tutorials/data_management/data_versioning/chapter/&gt;`_ for more information.<br/>
         /// # <br/>
@@ -31,6 +26,12 @@ namespace Dataloop
         /// # :return: True if success<br/>
         /// # :rtype: bool<br/>
         /// # <br/>
+        /// # <br/>
+        /// # success = project.datasets.merge(dataset_ids=['dataset_id1','dataset_id2'],<br/>
+        /// # merge_name='dataset_merge_name',<br/>
+        /// # with_metadata=True,<br/>
+        /// # with_items_annotations=False,<br/>
+        /// # with_task_annotations_status=False)<br/>
         /// # 
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.APICommand> MergeDatasetsAsync(
