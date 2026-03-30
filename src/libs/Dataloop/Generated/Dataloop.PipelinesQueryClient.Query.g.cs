@@ -28,7 +28,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// pipeline_executions = pipeline.pipeline_executions.list()<br/>
         /// # <br/>
         /// # List project pipeline executions.<br/>
         /// # <br/>
@@ -38,6 +37,8 @@ namespace Dataloop
         /// # :return: Paged entity<br/>
         /// # :rtype: dtlpy.entities.paged_entities.PagedEntities<br/>
         /// # <br/>
+        /// # <br/>
+        /// # pipeline_executions = pipeline.pipeline_executions.list()<br/>
         /// # 
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.CursorPageT> QueryAsync(

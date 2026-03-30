@@ -12,17 +12,18 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// dataset.tasks.update(task='task_entity')<br/>
         /// # <br/>
         /// # Update a Task.<br/>
         /// # <br/>
         /// # **Prerequisites**: You must be in the role of an *owner* or *developer* or *annotation manager* who created that task.<br/>
         /// # <br/>
         /// # :param dtlpy.entities.task.Task task: the task object<br/>
-        /// # :param bool system_metadata: True, if you want to change metadata system<br/>
+        /// # :param bool system_metadata: DEPRECATED<br/>
         /// # :return: Task object<br/>
         /// # :rtype: dtlpy.entities.task.Task<br/>
         /// # <br/>
+        /// # <br/>
+        /// # dataset.tasks.update(task='task_entity')<br/>
         /// # 
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.APITask> UpdateAnnotationTaskAsync(

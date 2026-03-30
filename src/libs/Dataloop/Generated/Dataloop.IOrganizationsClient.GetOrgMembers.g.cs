@@ -11,8 +11,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// list_members = dl.organizations.list_members(organization='organization-entity',<br/>
-        /// role=dl.MemberOrgRole.MEMBER)<br/>
         /// # <br/>
         /// # List all organization members.<br/>
         /// # <br/>
@@ -27,6 +25,9 @@ namespace Dataloop
         /// # :return: projects list<br/>
         /// # :rtype: list<br/>
         /// # <br/>
+        /// # <br/>
+        /// # list_members = dl.organizations.list_members(organization='organization-entity',<br/>
+        /// # role=dl.MemberOrgRole.MEMBER)<br/>
         /// # 
         /// </remarks>
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Dataloop.APIUser>> GetOrgMembersAsync(

@@ -11,7 +11,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// success = project.pipelines.reset(pipeline='pipeline_entity')<br/>
         /// # <br/>
         /// # Reset pipeline counters.<br/>
         /// # <br/>
@@ -23,6 +22,8 @@ namespace Dataloop
         /// # :param bool stop_if_running: If the pipeline is installed it will stop the pipeline and reset the counters.<br/>
         /// # :return: bool<br/>
         /// # <br/>
+        /// # <br/>
+        /// # success = project.pipelines.reset(pipeline='pipeline_entity')<br/>
         /// # 
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.APIPipeline> ResetAsync(

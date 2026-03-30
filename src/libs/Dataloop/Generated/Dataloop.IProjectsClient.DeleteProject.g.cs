@@ -11,7 +11,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// is_deleted = dl.projects.delete(project_id='project_id', sure=True, really=True)<br/>
         /// # <br/>
         /// # Delete a project forever!<br/>
         /// # <br/>
@@ -24,6 +23,8 @@ namespace Dataloop
         /// # :return: True if success, error if not<br/>
         /// # :rtype: bool<br/>
         /// # <br/>
+        /// # <br/>
+        /// # is_deleted = dl.projects.delete(project_id='project_id', sure=True, really=True)<br/>
         /// # 
         /// </remarks>
         global::System.Threading.Tasks.Task DeleteProjectAsync(

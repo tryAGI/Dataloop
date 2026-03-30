@@ -12,7 +12,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// project.pipelines.install(pipeline='pipeline_entity')<br/>
         /// # <br/>
         /// # Install (start) a pipeline.<br/>
         /// # <br/>
@@ -22,6 +21,8 @@ namespace Dataloop
         /// # :param dtlpy.entities.pipeline.PipelineResumeOption resume_option: optional - resume pipeline method (what to do with existing cycles)<br/>
         /// # :return: Composition object<br/>
         /// # <br/>
+        /// # <br/>
+        /// # project.pipelines.install(pipeline='pipeline_entity')<br/>
         /// # 
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.APIPipeline> InstallAsync(

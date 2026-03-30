@@ -31,7 +31,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// project.pipelines.pause(pipeline='pipeline_entity')<br/>
         /// # <br/>
         /// # Pause a pipeline.<br/>
         /// # <br/>
@@ -41,6 +40,8 @@ namespace Dataloop
         /// # :param bool keep_triggers_active: Do we want the triggers to stay active and collect events<br/>
         /// # :return: Composition object<br/>
         /// # <br/>
+        /// # <br/>
+        /// # project.pipelines.pause(pipeline='pipeline_entity')<br/>
         /// # 
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.APIPipeline> UninstallAsync(

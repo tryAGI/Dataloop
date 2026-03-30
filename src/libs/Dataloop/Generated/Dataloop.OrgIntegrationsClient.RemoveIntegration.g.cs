@@ -31,18 +31,20 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// project.integrations.delete(integrations_id='integrations_id', sure=True, really=True)<br/>
         /// # <br/>
         /// # Delete integrations from the organization.<br/>
         /// # <br/>
         /// # **Prerequisites**: You must be an organization *owner* to delete an integration.<br/>
         /// # <br/>
+        /// # :param organization_id: organization id<br/>
         /// # :param str integrations_id: integrations id<br/>
         /// # :param bool sure: Are you sure you want to delete?<br/>
         /// # :param bool really: Really really sure?<br/>
         /// # :return: success<br/>
         /// # :rtype: bool<br/>
         /// # <br/>
+        /// # <br/>
+        /// # project.integrations.delete(integrations_id='integrations_id', sure=True, really=True)<br/>
         /// # 
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Dataloop.APIIntegration>> RemoveIntegrationAsync(

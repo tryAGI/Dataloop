@@ -31,7 +31,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// user_json = dl.projects.remove_member(project_id='project_id', email='user@dataloop.ai')<br/>
         /// # <br/>
         /// # Remove a member from the project.<br/>
         /// # <br/>
@@ -42,6 +41,8 @@ namespace Dataloop
         /// # :return: dict that represents the user<br/>
         /// # :rtype: dict<br/>
         /// # <br/>
+        /// # <br/>
+        /// # user_json = dl.projects.remove_member(project_id='project_id', email='user@dataloop.ai')<br/>
         /// # 
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Dataloop.ClientContributor>> RemoveMemberFromProjectAsync(

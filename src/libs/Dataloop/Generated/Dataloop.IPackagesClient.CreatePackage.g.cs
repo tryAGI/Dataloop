@@ -11,11 +11,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// project.packages.push(package_name='package_name',<br/>
-        /// modules=[module],<br/>
-        /// version='1.0.0',<br/>
-        /// src_path=os.getcwd()<br/>
-        /// )<br/>
         /// # <br/>
         /// # Push your local package to the UI.<br/>
         /// # <br/>
@@ -45,6 +40,12 @@ namespace Dataloop
         /// # :return: Package object<br/>
         /// # :rtype: dtlpy.entities.package.Package<br/>
         /// # <br/>
+        /// # <br/>
+        /// # project.packages.push(package_name='package_name',<br/>
+        /// # modules=[module],<br/>
+        /// # version='1.0.0',<br/>
+        /// # src_path=os.getcwd()<br/>
+        /// # )<br/>
         /// # 
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.APIPackage> CreatePackageAsync(

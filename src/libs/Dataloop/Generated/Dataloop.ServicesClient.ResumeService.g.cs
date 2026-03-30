@@ -31,7 +31,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// service_json = package.services.resume(service_id='service_id')<br/>
         /// # <br/>
         /// # Resume service.<br/>
         /// # <br/>
@@ -45,6 +44,8 @@ namespace Dataloop
         /// # :return: json of the service<br/>
         /// # :rtype: dict<br/>
         /// # <br/>
+        /// # <br/>
+        /// # service_json = package.services.resume(service_id='service_id')<br/>
         /// # 
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<global::Dataloop.APIService, string>> ResumeServiceAsync(

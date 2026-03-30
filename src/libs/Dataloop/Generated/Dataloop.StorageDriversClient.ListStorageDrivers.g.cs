@@ -31,7 +31,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// project.drivers.list()<br/>
         /// # <br/>
         /// # Get the project's drivers list.<br/>
         /// # <br/>
@@ -39,6 +38,9 @@ namespace Dataloop
         /// # <br/>
         /// # :return: List of Drivers objects<br/>
         /// # :rtype: list<br/>
+        /// # <br/>
+        /// # <br/>
+        /// # project.drivers.list()<br/>
         /// # <br/>
         /// # 
         /// </remarks>

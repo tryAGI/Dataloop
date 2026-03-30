@@ -13,7 +13,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// dataset = project.datasets.update(dataset='dataset_entity')<br/>
         /// # <br/>
         /// # Update dataset field.<br/>
         /// # <br/>
@@ -25,6 +24,8 @@ namespace Dataloop
         /// # :return: Dataset object<br/>
         /// # :rtype: dtlpy.entities.dataset.Dataset<br/>
         /// # <br/>
+        /// # <br/>
+        /// # dataset = project.datasets.update(dataset='dataset_entity')<br/>
         /// # 
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.APIDataset> PatchDatasetAsync(

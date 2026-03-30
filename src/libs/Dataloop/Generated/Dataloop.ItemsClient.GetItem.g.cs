@@ -28,7 +28,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// dataset.items.get(item_id='item_id')<br/>
         /// # <br/>
         /// # Get Item object<br/>
         /// # <br/>
@@ -41,6 +40,8 @@ namespace Dataloop
         /// # :return: Item object<br/>
         /// # :rtype: dtlpy.entities.item.Item<br/>
         /// # <br/>
+        /// # <br/>
+        /// # dataset.items.get(item_id='item_id')<br/>
         /// # 
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<global::Dataloop.APIDatasetFileItem, global::Dataloop.APIDatasetDirectoryItem>> GetItemAsync(

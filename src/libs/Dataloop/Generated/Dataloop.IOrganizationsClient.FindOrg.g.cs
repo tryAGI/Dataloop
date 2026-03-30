@@ -11,7 +11,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// org = dl.organizations.get(organization_id='organization_id')<br/>
         /// # <br/>
         /// # Get Organization object to be able to use it in your code.<br/>
         /// # <br/>
@@ -25,6 +24,8 @@ namespace Dataloop
         /// # :return: Organization object<br/>
         /// # :rtype: dtlpy.entities.organization.Organization<br/>
         /// # <br/>
+        /// # <br/>
+        /// # org = dl.organizations.get(organization_id='organization_id')<br/>
         /// # 
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.APIOrg> FindOrgAsync(

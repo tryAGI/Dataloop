@@ -28,7 +28,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// pipeline = project.pipelines.get(pipeline_id='pipeline_id')<br/>
         /// # <br/>
         /// # Get Pipeline object to use in your code.<br/>
         /// # <br/>
@@ -42,6 +41,8 @@ namespace Dataloop
         /// # :return: Pipeline object<br/>
         /// # :rtype: dtlpy.entities.pipeline.Pipeline<br/>
         /// # <br/>
+        /// # <br/>
+        /// # pipeline = project.pipelines.get(pipeline_id='pipeline_id')<br/>
         /// # 
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.APIPipeline> GetAsync(

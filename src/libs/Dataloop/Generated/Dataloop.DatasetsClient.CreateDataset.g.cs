@@ -28,7 +28,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// dataset = project.datasets.create(dataset_name='dataset_name', ontology_ids='ontology_ids')<br/>
         /// # <br/>
         /// # Create a new dataset<br/>
         /// # <br/>
@@ -47,6 +46,8 @@ namespace Dataloop
         /// # :return: Dataset object<br/>
         /// # :rtype: dtlpy.entities.dataset.Dataset<br/>
         /// # <br/>
+        /// # <br/>
+        /// # dataset = project.datasets.create(dataset_name='dataset_name', ontology_ids='ontology_ids')<br/>
         /// # 
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.APIDataset> CreateDatasetAsync(

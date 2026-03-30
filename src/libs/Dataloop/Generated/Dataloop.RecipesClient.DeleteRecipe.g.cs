@@ -26,7 +26,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// dataset.recipes.delete(recipe_id='recipe_id')<br/>
         /// # <br/>
         /// # Delete recipe from platform.<br/>
         /// # <br/>
@@ -37,6 +36,8 @@ namespace Dataloop
         /// # :return: True if success<br/>
         /// # :rtype: bool<br/>
         /// # <br/>
+        /// # <br/>
+        /// # dataset.recipes.delete(recipe_id='recipe_id')<br/>
         /// # 
         /// </remarks>
         public async global::System.Threading.Tasks.Task DeleteRecipeAsync(

@@ -12,7 +12,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// dataset.tasks.delete(task_id='task_id')<br/>
         /// # <br/>
         /// # Delete the Task.<br/>
         /// # <br/>
@@ -25,6 +24,8 @@ namespace Dataloop
         /// # :return: True is success<br/>
         /// # :rtype: bool<br/>
         /// # <br/>
+        /// # <br/>
+        /// # dataset.tasks.delete(task_id='task_id')<br/>
         /// # 
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<object, global::Dataloop.APICommand>> DeleteAnnotationTaskAsync(

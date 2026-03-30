@@ -11,7 +11,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// project = dl.projects.get(project_id='project_id')<br/>
         /// # <br/>
         /// # Get a Project object.<br/>
         /// # <br/>
@@ -27,6 +26,8 @@ namespace Dataloop
         /// # :return: Project object<br/>
         /// # :rtype: dtlpy.entities.project.Project<br/>
         /// # <br/>
+        /// # <br/>
+        /// # project = dl.projects.get(project_id='project_id')<br/>
         /// # 
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.APIProject> GetProjectAsync(

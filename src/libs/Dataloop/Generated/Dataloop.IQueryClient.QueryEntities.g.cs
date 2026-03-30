@@ -11,7 +11,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// service.executions.list()<br/>
         /// # <br/>
         /// # List service executions<br/>
         /// # <br/>
@@ -21,6 +20,8 @@ namespace Dataloop
         /// # :return: Paged entity<br/>
         /// # :rtype: dtlpy.entities.paged_entities.PagedEntities<br/>
         /// # <br/>
+        /// # <br/>
+        /// # service.executions.list()<br/>
         /// # 
         /// </remarks>
         global::System.Threading.Tasks.Task<string> QueryEntitiesAsync(

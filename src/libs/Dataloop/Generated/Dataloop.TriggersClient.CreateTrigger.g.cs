@@ -29,14 +29,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// service.triggers.create(name='triggername',<br/>
-        /// execution_mode=dl.TriggerExecutionMode.ONCE,<br/>
-        /// resource='Item',<br/>
-        /// actions='Created',<br/>
-        /// function_name='run',<br/>
-        /// filters={'$and': [{'hidden': False},<br/>
-        /// {'type': 'file'}]}<br/>
-        /// )<br/>
         /// # <br/>
         /// # Create a Trigger. Can create two types: a cron trigger or an event trigger.<br/>
         /// # Inputs are different for each type<br/>
@@ -72,6 +64,15 @@ namespace Dataloop
         /// # :return: Trigger entity<br/>
         /// # :rtype: dtlpy.entities.trigger.Trigger<br/>
         /// # <br/>
+        /// # <br/>
+        /// # service.triggers.create(name='triggername',<br/>
+        /// # execution_mode=dl.TriggerExecutionMode.ONCE,<br/>
+        /// # resource='Item',<br/>
+        /// # actions='Created',<br/>
+        /// # function_name='run',<br/>
+        /// # filters={'$and': [{'hidden': False},<br/>
+        /// # {'type': 'file'}]}<br/>
+        /// # )<br/>
         /// # 
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.APITrigger> CreateTriggerAsync(

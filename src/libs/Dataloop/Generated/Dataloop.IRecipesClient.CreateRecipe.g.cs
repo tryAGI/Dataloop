@@ -11,7 +11,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// dataset.recipes.create(recipe_name='My Recipe', labels=labels))<br/>
         /// # <br/>
         /// # Create a new Recipe.<br/>
         /// # Note: If the param ontology_ids is None, an ontology will be created first.<br/>
@@ -27,6 +26,8 @@ namespace Dataloop
         /// # :return: Recipe entity<br/>
         /// # :rtype: dtlpy.entities.recipe.Recipe<br/>
         /// # <br/>
+        /// # <br/>
+        /// # dataset.recipes.create(recipe_name='My Recipe', labels=labels))<br/>
         /// # 
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<global::Dataloop.APIRecipeV2, global::Dataloop.APIRecipe>> CreateRecipeAsync(

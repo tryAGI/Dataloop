@@ -27708,7 +27708,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nannotation = item.annotations.get(annotation_id='annotation_id')\n\n# \n# Get a single annotation.\n# \n# **Prerequisites**: You must have an item that has been annotated. You must have the role of an *owner* or\n# *developer* or be assigned a task that includes that item as an *annotation manager* or *annotator*.\n# \n# :param str annotation_id: The id of the annotation\n# :return: Annotation object or None\n# :return: Annotation object or None\n# :rtype: dtlpy.entities.annotation.Annotation\n# \n# "
+            "source": "\n# \n# Get a single annotation.\n# \n# **Prerequisites**: You must have an item that has been annotated. You must have the role of an *owner* or\n# *developer* or be assigned a task that includes that item as an *annotation manager* or *annotator*.\n# \n# :param str annotation_id: The id of the annotation\n# :return: Annotation object or None\n# :return: Annotation object or None\n# :rtype: dtlpy.entities.annotation.Annotation\n# \n# \n# annotation = item.annotations.get(annotation_id='annotation_id')\n# "
           }
         ]
       },
@@ -27738,7 +27738,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nis_deleted = item.annotations.delete(annotation_id='annotation_id')\n\n# \n# Remove an annotation from item.\n# \n# **Prerequisites**: You must have an item that has been annotated. You must have the role of an *owner* or\n# *developer* or be assigned a task that includes that item as an *annotation manager* or *annotator*.\n# \n# :param dtlpy.entities.annotation.Annotation annotation: Annotation object\n# :param str annotation_id: The id of the annotation\n# :param dtlpy.entities.filters.Filters filters: Filters entity or a dictionary containing filters parameters\n# :return: True/False\n# :rtype: bool\n# \n# "
+            "source": "\n# \n# Remove an annotation from item.\n# \n# **Prerequisites**: You must have an item that has been annotated. You must have the role of an *owner* or\n# *developer* or be assigned a task that includes that item as an *annotation manager* or *annotator*.\n# \n# :param dtlpy.entities.annotation.Annotation annotation: Annotation object\n# :param str annotation_id: The id of the annotation\n# :param dtlpy.entities.filters.Filters filters: Filters entity or a dictionary containing filters parameters\n# :return: True/False\n# :rtype: bool\n# \n# \n# is_deleted = item.annotations.delete(annotation_id='annotation_id')\n# "
           }
         ]
       },
@@ -27804,7 +27804,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nannotations = item.annotations.update(annotation='annotation')\n\n# \n# Update an existing annotation. For example, you may change the annotation's label and then use the update method.\n# \n# **Prerequisites**: You must have an item that has been annotated. You must have the role of an *owner* or\n# *developer* or be assigned a task that includes that item as an *annotation manager* or *annotator*.\n# \n# :param dtlpy.entities.annotation.Annotation annotations: Annotation object\n# :param bool system_metadata: bool - True, if you want to change metadata system\n# \n# :return: True if successful or error if unsuccessful\n# :rtype: bool\n# \n# "
+            "source": "\n# \n# Update an existing annotation. For example, you may change the annotation's label and then use the update method.\n# \n# **Prerequisites**: You must have an item that has been annotated. You must have the role of an *owner* or\n# *developer* or be assigned a task that includes that item as an *annotation manager* or *annotator*.\n# \n# :param dtlpy.entities.annotation.Annotation annotations: Annotation object\n# :param bool system_metadata: bool - True, if you want to change metadata system\n# \n# :return: True if successful or error if unsuccessful\n# :rtype: bool\n# \n# \n# annotations = item.annotations.update(annotation='annotation')\n# "
           }
         ]
       }
@@ -27885,7 +27885,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\ndataset.tasks.create(task= 'task_entity',\ndue_date = datetime.datetime(day= 1, month= 1, year= 2029).timestamp(),\nassignee_ids =[ 'annotator1@dataloop.ai', 'annotator2@dataloop.ai'])\n\n# \n# Create a new Task (Annotation or QA).\n# \n# **Prerequisites**: You must be in the role of an *owner*, *developer*, or *annotation manager* who has been assigned to be *owner* of the annotation task.\n# \n# :param str task_name: the name of the task\n# :param float due_date: date by which the task should be finished; for example, due_date=datetime.datetime(day=1, month=1, year=2029).timestamp()\n# :param list assignee_ids: list the task assignees (contributors) that should be working on the task. Provide a list of users' emails\n# :param List[WorkloadUnit] List[WorkloadUnit] workload: list of WorkloadUnit objects. Customize distribution (percentage) between the task assignees. For example: [dl.WorkloadUnit(annotator@hi.com, 80), dl.WorkloadUnit(annotator2@hi.com, 20)]\n# :param entities.Dataset dataset: dataset object, the dataset that refer to the task\n# :param str task_owner: task owner. Provide user email\n# :param str task_type: task type \"annotation\" or \"qa\"\n# :param str task_parent_id: optional if type is qa - parent annotation task id\n# :param str project_id: the Id of the project where task will be created\n# :param str recipe_id: recipe id for the task\n# :param list assignments_ids: assignments ids to the task\n# :param dict metadata: metadata for the task\n# :param entities.Filters filters: dl.Filters entity to filter items for the task\n# :param List[entities.Item] items: list of items (item Id or objects) to insert to the task\n# :param dict DQL query: filter items for the task\n# :param list available_actions: list of available actions (statuses) that will be available for the task items; The default statuses are: \"completed\" and \"discard\"\n# :param bool wait: wait until create task finish\n# :param entities.Filters check_if_exist: dl.Filters check if task exist according to filter\n# :param int limit: the limit items that the task can include\n# :param int  batch_size: Pulling batch size (items), use with pulling allocation method. Restrictions - Min 3, max 100\n# :param int max_batch_workload: max_batch_workload: Max items in assignment, use with pulling allocation method. Restrictions - Min batchSize + 2, max batchSize * 2\n# :param list allowed_assignees: list the task assignees (contributors) that should be working on the task. Provide a list of users' emails\n# :param entities.TaskPriority priority: priority of the task options in entities.TaskPriority\n# :param entities.ConsensusTaskType consensus_task_type: consensus_task_type of the task options in entities.ConsensusTaskType\n# :param int consensus_percentage: percentage of items to be copied to multiple annotators (consensus items)\n# :param int consensus_assignees: the number of different annotators per item (number of copies per item)\n# :param bool scoring: create a scoring app in project\n# :return: Task object\n# :rtype: dtlpy.entities.task.Task\n# \n# "
+            "source": "\n# \n# Create a new Task (Annotation or QA).\n# \n# **Prerequisites**: You must be in the role of an *owner*, *developer*, or *annotation manager* who has been assigned to be *owner* of the annotation task.\n# \n# :param str task_name: the name of the task\n# :param float due_date: date by which the task should be finished; for example, due_date=datetime.datetime(day=1, month=1, year=2029).timestamp()\n# :param list assignee_ids: list the task assignees (contributors) that should be working on the task. Provide a list of users' emails\n# :param List[WorkloadUnit] List[WorkloadUnit] workload: list of WorkloadUnit objects. Customize distribution (percentage) between the task assignees. For example: [dl.WorkloadUnit(annotator@hi.com, 80), dl.WorkloadUnit(annotator2@hi.com, 20)]\n# :param entities.Dataset dataset: dataset object, the dataset that refer to the task\n# :param str task_owner: task owner. Provide user email\n# :param str task_type: task type \"annotation\" or \"qa\"\n# :param str task_parent_id: optional if type is qa - parent annotation task id\n# :param str project_id: the Id of the project where task will be created\n# :param str recipe_id: recipe id for the task\n# :param list assignments_ids: assignments ids to the task\n# :param dict metadata: metadata for the task\n# :param entities.Filters filters: dl.Filters entity to filter items for the task\n# :param List[entities.Item] items: list of items (item Id or objects) to insert to the task\n# :param dict DQL query: filter items for the task\n# :param list available_actions: list of available actions (statuses) that will be available for the task items; The default statuses are: \"completed\" and \"discard\"\n# :param bool wait: wait until create task finish\n# :param entities.Filters check_if_exist: dl.Filters check if task exist according to filter\n# :param int limit: the limit items that the task can include\n# :param int  batch_size: Pulling batch size (items), use with pulling allocation method. Restrictions - Min 3, max 100\n# :param int max_batch_workload: max_batch_workload: Max items in assignment, use with pulling allocation method. Restrictions - Min batchSize + 2, max batchSize * 2\n# :param list allowed_assignees: list the task assignees (contributors) that should be working on the task. Provide a list of users' emails\n# :param entities.TaskPriority priority: priority of the task options in entities.TaskPriority\n# :param entities.ConsensusTaskType consensus_task_type: consensus_task_type of the task options in entities.ConsensusTaskType\n# :param int consensus_percentage: percentage of items to be copied to multiple annotators (consensus items)\n# :param int consensus_assignees: the number of different annotators per item (number of copies per item)\n# :param bool scoring: create a scoring app in project. Note: Scoring is no longer applied by default for consensus tasks. Set scoring=True to enable it.\n# :param bool enforce_video_conversion: Enforce WEBM conversion on video items for frame-accurate annotations. WEBM Conversion will be executed as a project service and incurs compute costs. Service compute resources can be set according to planned workload.\n# :return: Task object\n# :rtype: dtlpy.entities.task.Task\n# \n# \n# dataset.tasks.create(task= 'task_entity',\n# due_date = datetime.datetime(day= 1, month= 1, year= 2029).timestamp(),\n# assignee_ids =[ 'annotator1@dataloop.ai', 'annotator2@dataloop.ai'],\n# available_actions=[dl.ItemAction(\"discard\"), dl.ItemAction(\"to-check\")])\n# "
           }
         ]
       },
@@ -28238,7 +28238,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\ndataset.tasks.list(project_ids='project_ids',pages_size=100, page_offset=0)\n\n# \n# List all tasks.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer* or *annotation manager* who has been assigned the task.\n# \n# :param project_ids: search tasks by given list of project ids\n# :param str status: search tasks by a given task status\n# :param str task_name: search tasks by a given task name\n# :param int pages_size: pages size of the output generator\n# :param int page_offset: page offset of the output generator\n# :param dtlpy.entities.recipe.Recipe recipe: Search tasks that use a given recipe. Provide the required recipe object\n# :param str creator: search tasks created by a given creator (user email)\n# :param dtlpy.entities.assignment.Assignment recipe assignments: assignments object\n# :param double min_date: search all tasks created AFTER a given date, use a milliseconds format. For example: 1661780622008\n# :param double max_date: search all tasks created BEFORE a given date, use a milliseconds format. For example: 1661780622008\n# :param dtlpy.entities.filters.Filters filters: dl.Filters entity to filters tasks using DQL\n# :return: List of Task objects\n# \n# "
+            "source": "\n# \n# List all tasks.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer* or *annotation manager* who has been assigned the task.\n# \n# :param project_ids: search tasks by given list of project ids\n# :param str status: search tasks by a given task status\n# :param str task_name: search tasks by a given task name\n# :param int pages_size: pages size of the output generator\n# :param int page_offset: page offset of the output generator\n# :param dtlpy.entities.recipe.Recipe recipe: Search tasks that use a given recipe. Provide the required recipe object\n# :param str creator: search tasks created by a given creator (user email)\n# :param dtlpy.entities.assignment.Assignment recipe assignments: assignments object\n# :param double min_date: search all tasks created AFTER a given date, use a milliseconds format. For example: 1661780622008\n# :param double max_date: search all tasks created BEFORE a given date, use a milliseconds format. For example: 1661780622008\n# :param dtlpy.entities.filters.Filters filters: dl.Filters entity to filters tasks using DQL\n# :return: List of Task objects\n# \n# \n# dataset.tasks.list(project_ids='project_ids',pages_size=100, page_offset=0)\n# "
           }
         ]
       }
@@ -28289,7 +28289,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\ndataset.tasks.update(task='task_entity')\n\n# \n# Update a Task.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer* or *annotation manager* who created that task.\n# \n# :param dtlpy.entities.task.Task task: the task object\n# :param bool system_metadata: True, if you want to change metadata system\n# :return: Task object\n# :rtype: dtlpy.entities.task.Task\n# \n# "
+            "source": "\n# \n# Update a Task.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer* or *annotation manager* who created that task.\n# \n# :param dtlpy.entities.task.Task task: the task object\n# :param bool system_metadata: DEPRECATED\n# :return: Task object\n# :rtype: dtlpy.entities.task.Task\n# \n# \n# dataset.tasks.update(task='task_entity')\n# "
           }
         ]
       },
@@ -28332,7 +28332,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\ndataset.tasks.get(task_id='task_id')\n\n# \n# Get a Task object to use in your code.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer* or *annotation manager* who has been assigned the task.\n# \n# :param str task_name: optional - search by name\n# :param str task_id: optional - search by id\n# :return: task object\n# :rtype: dtlpy.entities.task.Task\n# \n# "
+            "source": "\n# \n# Get a Task object to use in your code.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer* or *annotation manager* who has been assigned the task.\n# \n# :param str task_name: optional - search by name\n# :param str task_id: optional - search by id\n# :return: task object\n# :rtype: dtlpy.entities.task.Task\n# \n# \n# dataset.tasks.get(task_id='task_id')\n# "
           }
         ]
       },
@@ -28384,7 +28384,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\ndataset.tasks.delete(task_id='task_id')\n\n# \n# Delete the Task.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer* or *annotation manager* who created that task.\n# \n# :param dtlpy.entities.task.Task task: the task object\n# :param str task_name: the name of the task\n# :param str task_id: the Id of the task\n# :param bool wait: wait until delete task finish\n# :return: True is success\n# :rtype: bool\n# \n# "
+            "source": "\n# \n# Delete the Task.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer* or *annotation manager* who created that task.\n# \n# :param dtlpy.entities.task.Task task: the task object\n# :param str task_name: the name of the task\n# :param str task_id: the Id of the task\n# :param bool wait: wait until delete task finish\n# :return: True is success\n# :rtype: bool\n# \n# \n# dataset.tasks.delete(task_id='task_id')\n# "
           }
         ]
       }
@@ -28441,7 +28441,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\ndataset.tasks.add_items(task= 'task_entity',\nitems = [items])\n\n# \n# Add items to a Task.\n# \n# **Prerequisites**: You must be in the role of an *owner*, *developer*, or *annotation manager* who has been assigned to be *owner* of the annotation task.\n# \n# :param dtlpy.entities.task.Task task: task object\n# :param str task_id: the Id of the task\n# :param dtlpy.entities.filters.Filters filters: Filters entity or a dictionary containing filters parameters\n# :param list items: list of items (item Ids or objects) to add to the task\n# :param list assignee_ids: list to assignee who works in the task\n# :param dict query: query to filter the items for the task\n# :param list workload: list of WorkloadUnit objects. Customize distribution (percentage) between the task assignees. For example: [dl.WorkloadUnit(annotator@hi.com, 80), dl.WorkloadUnit(annotator2@hi.com, 20)]\n# :param int limit: the limit items that task can include\n# :param bool wait: wait until add items will to finish\n# :return: task entity\n# :rtype: dtlpy.entities.task.Task\n# \n# "
+            "source": "\n# \n# Add items to a Task.\n# \n# **Prerequisites**: You must be in the role of an *owner*, *developer*, or *annotation manager* who has been assigned to be *owner* of the annotation task.\n# \n# :param dtlpy.entities.task.Task task: task object\n# :param str task_id: the Id of the task\n# :param dtlpy.entities.filters.Filters filters: Filters entity or a dictionary containing filters parameters\n# :param list items: list of items (item Ids or objects) to add to the task\n# :param list assignee_ids: list to assignee who works in the task\n# :param dict query: query to filter the items for the task\n# :param list workload: list of WorkloadUnit objects. Customize distribution (percentage) between the task assignees. For example: [dl.WorkloadUnit(annotator@hi.com, 80), dl.WorkloadUnit(annotator2@hi.com, 20)]\n# :param int limit: the limit items that task can include\n# :param bool wait: wait until add items will to finish\n# :return: task entity\n# :rtype: dtlpy.entities.task.Task\n# \n# \n# dataset.tasks.add_items(task= 'task_entity',\n# items = [items])\n# "
           }
         ]
       }
@@ -29595,7 +29595,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nassignment = task.assignments.update(assignment='assignment_entity', system_metadata=False)\n\n# \n# Update an assignment.\n# \n# **Prerequisites**: You must be in the role of an *owner*, *developer*, or *annotation manager* who has been assigned as *owner* of the annotation task.\n# \n# :param dtlpy.entities.assignment.Assignment assignment assignment: assignment entity\n# :param bool system_metadata: True, if you want to change metadata system\n# :return: Assignment object\n# :rtype: dtlpy.entities.assignment.Assignment assignment\n# \n# "
+            "source": "\n# \n# Update an assignment.\n# \n# **Prerequisites**: You must be in the role of an *owner*, *developer*, or *annotation manager* who has been assigned as *owner* of the annotation task.\n# \n# :param dtlpy.entities.assignment.Assignment assignment assignment: assignment entity\n# :param bool system_metadata: True, if you want to change metadata system\n# :return: Assignment object\n# :rtype: dtlpy.entities.assignment.Assignment assignment\n# \n# \n# assignment = task.assignments.update(assignment='assignment_entity', system_metadata=False)\n# "
           }
         ]
       },
@@ -29638,7 +29638,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nassignment = task.assignments.get(assignment_id='assignment_id')\n\n# \n# Get Assignment object to use it in your code.\n# \n# :param str assignment_name: optional - search by name\n# :param str assignment_id: optional - search by id\n# :return: Assignment object\n# :rtype: dtlpy.entities.assignment.Assignment\n# \n# "
+            "source": "\n# \n# Get Assignment object to use it in your code.\n# \n# :param str assignment_name: optional - search by name\n# :param str assignment_id: optional - search by id\n# :return: Assignment object\n# :rtype: dtlpy.entities.assignment.Assignment\n# \n# \n# assignment = task.assignments.get(assignment_id='assignment_id')\n# "
           }
         ]
       }
@@ -29972,7 +29972,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nassignment = task.assignments.reassign(assignee_ids='annotator1@dataloop.ai')\n\n# \n# Reassign an assignment.\n# \n# **Prerequisites**: You must be in the role of an *owner*, *developer*, or *annotation manager* who has been assigned as *owner* of the annotation task.\n# \n# :param str assignee_id: the email of the user that want to assign the assignment\n# :param dtlpy.entities.assignment.Assignment assignment: assignment object\n# :param assignment_id: the Id of the assignment\n# :param dtlpy.entities.task.Task task: task object\n# :param str task_id: the Id of the task that include the assignment\n# :param bool wait: wait until reassign assignment finish\n# :return: Assignment object\n# :rtype: dtlpy.entities.assignment.Assignment\n# \n# "
+            "source": "\n# \n# Reassign an assignment.\n# \n# **Prerequisites**: You must be in the role of an *owner*, *developer*, or *annotation manager* who has been assigned as *owner* of the annotation task.\n# \n# :param str assignee_id: the email of the user that want to assign the assignment\n# :param dtlpy.entities.assignment.Assignment assignment: assignment object\n# :param assignment_id: the Id of the assignment\n# :param dtlpy.entities.task.Task task: task object\n# :param str task_id: the Id of the task that include the assignment\n# :param bool wait: wait until reassign assignment finish\n# :return: Assignment object\n# :rtype: dtlpy.entities.assignment.Assignment\n# \n# \n# assignment = task.assignments.reassign(assignee_ids='annotator1@dataloop.ai')\n# "
           }
         ]
       },
@@ -30070,7 +30070,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nassignment = task.assignments.redistribute(workload=dl.Workload([dl.WorkloadUnit(assignee_id=\"annotator1@dataloop.ai\", load=50),\ndl.WorkloadUnit(assignee_id=\"annotator2@dataloop.ai\", load=50)]))\n\n# \n# Redistribute an assignment.\n# \n# **Prerequisites**: You must be in the role of an *owner*, *developer*, or *annotation manager* who has been assigned as *owner* of the annotation task.\n# \n# \n# :param dtlpy.entities.assignment.Workload workload: list of WorkloadUnit objects. Customize distribution (percentage) between the task assignees. For example: [dl.WorkloadUnit(annotator@hi.com, 80), dl.WorkloadUnit(annotator2@hi.com, 20)]\n# :param dtlpy.entities.assignment.Assignment assignment: assignment object\n# :param str assignment_id: the Id of the assignment\n# :param dtlpy.entities.task.Task task: the task object that include the assignment\n# :param str task_id: the Id of the task that include the assignment\n# :param bool wait: wait until redistribute assignment finish\n# :return: Assignment object\n# :rtype: dtlpy.entities.assignment.Assignment assignment\n# "
+            "source": "\n# \n# Redistribute an assignment.\n# \n# **Prerequisites**: You must be in the role of an *owner*, *developer*, or *annotation manager* who has been assigned as *owner* of the annotation task.\n# \n# \n# :param dtlpy.entities.assignment.Workload workload: list of WorkloadUnit objects. Customize distribution (percentage) between the task assignees. For example: [dl.WorkloadUnit(annotator@hi.com, 80), dl.WorkloadUnit(annotator2@hi.com, 20)]\n# :param dtlpy.entities.assignment.Assignment assignment: assignment object\n# :param str assignment_id: the Id of the assignment\n# :param dtlpy.entities.task.Task task: the task object that include the assignment\n# :param str task_id: the Id of the task that include the assignment\n# :param bool wait: wait until redistribute assignment finish\n# :return: Assignment object\n# :rtype: dtlpy.entities.assignment.Assignment assignment\n# \n# assignment = task.assignments.redistribute(workload=dl.Workload([dl.WorkloadUnit(assignee_id=\"annotator1@dataloop.ai\", load=50),\n# dl.WorkloadUnit(assignee_id=\"annotator2@dataloop.ai\", load=50)]))\n# "
           }
         ]
       }
@@ -31789,12 +31789,6 @@
               "type": "boolean"
             }
           }
-        ],
-        "x-codeSamples": [
-          {
-            "lang": "Python",
-            "source": "\ndatasets = project.datasets.list(name='name')\n\n# \n# List all datasets.\n# \n# **Prerequisites**: You must be an *owner* or *developer* to use this method.\n# \n# :param str name: list by name\n# :param str creator: list by creator\n# :return: List of datasets\n# :rtype: list\n# \n# "
-          }
         ]
       },
       "post": {
@@ -31851,7 +31845,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\ndataset = project.datasets.create(dataset_name='dataset_name', ontology_ids='ontology_ids')\n\n# \n# Create a new dataset\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*.\n# \n# :param str dataset_name: The Name of the dataset\n# :param list labels: dictionary of {tag: color} or list of label entities\n# :param list attributes: dataset's ontology's attributes\n# :param list ontology_ids: optional - dataset ontology\n# :param dtlpy.entities.driver.Driver driver: optional - storage driver Driver object or driver name\n# :param str driver_id: optional - driver id\n# :param bool checkout: set the dataset as a default dataset object (cookies)\n# :param ExpirationOptions expiration_options: dl.ExpirationOptions object that contain definitions for dataset like MaxItemDays\n# :param str index_driver: dl.IndexDriver, dataset driver version\n# :param str recipe_id: optional - recipe id\n# :return: Dataset object\n# :rtype: dtlpy.entities.dataset.Dataset\n# \n# "
+            "source": "\n# \n# Create a new dataset\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*.\n# \n# :param str dataset_name: The Name of the dataset\n# :param list labels: dictionary of {tag: color} or list of label entities\n# :param list attributes: dataset's ontology's attributes\n# :param list ontology_ids: optional - dataset ontology\n# :param dtlpy.entities.driver.Driver driver: optional - storage driver Driver object or driver name\n# :param str driver_id: optional - driver id\n# :param bool checkout: set the dataset as a default dataset object (cookies)\n# :param ExpirationOptions expiration_options: dl.ExpirationOptions object that contain definitions for dataset like MaxItemDays\n# :param str index_driver: dl.IndexDriver, dataset driver version\n# :param str recipe_id: optional - recipe id\n# :return: Dataset object\n# :rtype: dtlpy.entities.dataset.Dataset\n# \n# \n# dataset = project.datasets.create(dataset_name='dataset_name', ontology_ids='ontology_ids')\n# "
           }
         ]
       }
@@ -32161,7 +32155,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nsuccess = project.datasets.merge(dataset_ids=['dataset_id1','dataset_id2'],\nmerge_name='dataset_merge_name',\nwith_metadata=True,\nwith_items_annotations=False,\nwith_task_annotations_status=False)\n\n# \n# Merge a dataset. See our `SDK docs <https://developers.dataloop.ai/tutorials/data_management/data_versioning/chapter/>`_ for more information.\n# \n# **Prerequisites**: You must be an *owner* or *developer* to use this method.\n# \n# :param str merge_name: new dataset name\n# :param list dataset_ids: list id's of the datatsets you wish to merge\n# :param str project_ids: the project id that include the datasets\n# :param bool with_items_annotations: true to merge with items annotations\n# :param bool with_metadata: true to merge with metadata\n# :param bool with_task_annotations_status: true to merge with task annotations' status\n# :param bool wait: wait for the command to finish\n# :return: True if success\n# :rtype: bool\n# \n# "
+            "source": "\n# \n# Merge a dataset. See our `SDK docs <https://developers.dataloop.ai/tutorials/data_management/data_versioning/chapter/>`_ for more information.\n# \n# **Prerequisites**: You must be an *owner* or *developer* to use this method.\n# \n# :param str merge_name: new dataset name\n# :param list dataset_ids: list id's of the datatsets you wish to merge\n# :param str project_ids: the project id that include the datasets\n# :param bool with_items_annotations: true to merge with items annotations\n# :param bool with_metadata: true to merge with metadata\n# :param bool with_task_annotations_status: true to merge with task annotations' status\n# :param bool wait: wait for the command to finish\n# :return: True if success\n# :rtype: bool\n# \n# \n# success = project.datasets.merge(dataset_ids=['dataset_id1','dataset_id2'],\n# merge_name='dataset_merge_name',\n# with_metadata=True,\n# with_items_annotations=False,\n# with_task_annotations_status=False)\n# "
           }
         ]
       }
@@ -32212,7 +32206,13 @@
               }
             }
           }
-        }
+        },
+        "x-codeSamples": [
+          {
+            "lang": "Python",
+            "source": "# \n# List all datasets.\n# \n# **Prerequisites**: You must be an *owner* or *developer* to use this method.\n# \n# :param str name: list by name\n# :param str creator: list by\n# :param dtlpy.entities.filters.Filters filters: Filters entity containing filters parameters\n# :return: List of datasets\n# :rtype: list\n# \n# \n# filters = dl.Filters(resource='datasets')\n# filters.add(field='readonly', values=False)\n# datasets = project.datasets.list(filters=filters)\n# "
+          }
+        ]
       }
     },
     "/datasets/query/resolve": {
@@ -34111,7 +34111,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\ndataset = project.datasets.get(dataset_id='dataset_id')\n\n# \n# Get dataset by name or id.\n# \n# **Prerequisites**: You must be an *owner* or *developer* to use this method.\n# \n# You must provide at least ONE of the following params: dataset_id, dataset_name.\n# \n# :param str dataset_name: optional - search by name\n# :param str dataset_id: optional - search by id\n# :param bool checkout: set the dataset as a default dataset object (cookies)\n# :param bool fetch: optional - fetch entity from platform (True), default taken from cookie\n# :return: Dataset object\n# :rtype: dtlpy.entities.dataset.Dataset\n# \n# "
+            "source": "\n# \n# Get dataset by name or id.\n# \n# **Prerequisites**: You must be an *owner* or *developer* to use this method.\n# \n# You must provide at least ONE of the following params: dataset_id, dataset_name.\n# \n# :param str dataset_name: optional - search by name\n# :param str dataset_id: optional - search by id\n# :param bool checkout: set the dataset as a default dataset object (cookies)\n# :param bool fetch: optional - fetch entity from platform (True), default taken from cookie\n# :return: Dataset object\n# :rtype: dtlpy.entities.dataset.Dataset\n# \n# \n# dataset = project.datasets.get(dataset_id='dataset_id')\n# "
           }
         ]
       },
@@ -34169,7 +34169,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nis_deleted = project.datasets.delete(dataset_id='dataset_id', sure=True, really=True)\n\n:param str dataset_name: optional - search by name\n:param str dataset_id: optional - search by id\n:param bool sure: Are you sure you want to delete?\n:param bool really: Really really sure?\n:return: True is success\n:rtype: bool\n\n# \n# Delete a dataset forever!\n# \n# **Prerequisites**: You must be an *owner* or *developer* to use this method.\n# \n# "
+            "source": "\n# \n# Delete a dataset forever!\n# \n# **Prerequisites**: You must be an *owner* or *developer* to use this method.\n# \n# \n# is_deleted = project.datasets.delete(dataset_id='dataset_id', sure=True, really=True)\n# \n# :param str dataset_name: optional - search by name\n# :param str dataset_id: optional - search by id\n# :param bool sure: Are you sure you want to delete?\n# :param bool really: Really really sure?\n# :return: True is success\n# :rtype: bool\n# "
           }
         ]
       },
@@ -34227,7 +34227,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\ndataset = project.datasets.update(dataset='dataset_entity')\n\n# \n# Update dataset field.\n# \n# **Prerequisites**: You must be an *owner* or *developer* to use this method.\n# \n# :param dtlpy.entities.dataset.Dataset dataset: dataset object\n# :param bool system_metadata: True, if you want to change metadata system\n# :param dict patch: Specific patch request\n# :return: Dataset object\n# :rtype: dtlpy.entities.dataset.Dataset\n# \n# "
+            "source": "\n# \n# Update dataset field.\n# \n# **Prerequisites**: You must be an *owner* or *developer* to use this method.\n# \n# :param dtlpy.entities.dataset.Dataset dataset: dataset object\n# :param bool system_metadata: True, if you want to change metadata system\n# :param dict patch: Specific patch request\n# :return: Dataset object\n# :rtype: dtlpy.entities.dataset.Dataset\n# \n# \n# dataset = project.datasets.update(dataset='dataset_entity')\n# "
           }
         ]
       }
@@ -34617,7 +34617,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\ndataset = project.datasets.clone(dataset_id='dataset_id',\nclone_name='dataset_clone_name',\nwith_metadata=True,\nwith_items_annotations=False,\nwith_task_annotations_status=False)\n\n# \n# Clone a dataset. Read more about cloning datatsets and items in our `documentation <https://dataloop.ai/docs/clone-merge-dataset#cloned-dataset>`_ and `SDK documentation <https://developers.dataloop.ai/tutorials/data_management/data_versioning/chapter/>`_.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*.\n# \n# :param str dataset_id: id of the dataset you wish to clone\n# :param str clone_name: new dataset name\n# :param dtlpy.entities.filters.Filters filters: Filters entity or a query dict\n# :param bool with_items_annotations: true to clone with items annotations\n# :param bool with_metadata: true to clone with metadata\n# :param bool with_task_annotations_status: true to clone with task annotations' status\n# :param str dst_dataset_id: destination dataset id\n# :return: dataset object\n# :rtype: dtlpy.entities.dataset.Dataset\n# \n# "
+            "source": "\n# \n# Clone a dataset. Read more about cloning datatsets and items in our `documentation <https://dataloop.ai/docs/clone-merge-dataset#cloned-dataset>`_ and `SDK documentation <https://developers.dataloop.ai/tutorials/data_management/data_versioning/chapter/>`_.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*.\n# \n# :param str dataset_id: id of the dataset you wish to clone\n# :param str clone_name: new dataset name\n# :param dtlpy.entities.filters.Filters filters: Filters entity or a query dict\n# :param bool with_items_annotations: true to clone with items annotations\n# :param bool with_metadata: true to clone with metadata\n# :param bool with_task_annotations_status: true to clone with task annotations' status\n# :param str dst_dataset_id: destination dataset id\n# :param str target_directory: target directory\n# :return: dataset object\n# :rtype: dtlpy.entities.dataset.Dataset\n# \n# \n# dataset = project.datasets.clone(dataset_id='dataset_id',\n# clone_name='dataset_clone_name',\n# with_metadata=True,\n# with_items_annotations=False,\n# with_task_annotations_status=False)\n# "
           }
         ]
       }
@@ -34682,7 +34682,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "directory_tree = dataset.directory_tree\ndirectory_tree = project.datasets.directory_tree(dataset='dataset_entity')\n\n# \n# Get dataset's directory tree.\n# \n# **Prerequisites**: You must be an *owner* or *developer* to use this method.\n# \n# You must provide at least ONE of the following params: dataset, dataset_name, dataset_id.\n# \n# :param dtlpy.entities.dataset.Dataset dataset: dataset object\n# :param str dataset_name: The Name of the dataset\n# :param str dataset_id: The Id of the dataset\n# :return: DirectoryTree\n# \n# "
+            "source": "# \n# Get dataset's directory tree.\n# \n# **Prerequisites**: You must be an *owner* or *developer* to use this method.\n# \n# You must provide at least ONE of the following params: dataset, dataset_name, dataset_id.\n# \n# :param dtlpy.entities.dataset.Dataset dataset: dataset object\n# :param str dataset_name: The Name of the dataset\n# :param str dataset_id: The Id of the dataset\n# :return: DirectoryTree\n# \n# \n# directory_tree = dataset.directory_tree\n# directory_tree = project.datasets.directory_tree(dataset='dataset_entity')\n# "
           }
         ]
       }
@@ -34723,7 +34723,13 @@
               }
             }
           }
-        }
+        },
+        "x-codeSamples": [
+          {
+            "lang": "Python",
+            "source": "# \n# Export dataset items and annotations.\n# \n# **Prerequisites**: You must be an *owner* or *developer* to use this method.\n# \n# You must provide at least ONE of the following params: dataset, dataset_name, dataset_id.\n# \n# **Export Behavior by Parameter Combination:**\n# \n# The behavior of this method depends on the combination of `export_type` and `output_export_type`:\n# \n# **When export_type = ExportType.JSON:**\n# \n# - **output_export_type = OutputExportType.JSON (default when None):**\n# - Exports data in JSON format, split into subsets of max 500 items\n# - Downloads all subset JSON files and concatenates them into a single `result.json` file\n# - Returns the path to the concatenated JSON file\n# - Cleans up individual subset files after concatenation\n# \n# - **output_export_type = OutputExportType.ZIP:**\n# - Same as JSON export, but zips the final `result.json` file\n# - Returns the path to the zipped file (`result.json.zip`)\n# - Cleans up the unzipped JSON file after zipping\n# \n# - **output_export_type = OutputExportType.FOLDERS:**\n# - Exports data in JSON format, split into subsets of max 500 items\n# - Downloads all subset JSON files and creates individual JSON files for each item\n# - Creates a folder structure mirroring the remote dataset structure\n# - Returns the path to the base directory containing the folder structure\n# - Each item gets its own JSON file named after the original filename\n# \n# **When export_type = ExportType.ZIP:**\n# \n# - **output_export_type = OutputExportType.ZIP:**\n# - Exports data as a ZIP file containing the dataset\n# - Returns the downloaded ZIP item directly\n# - No additional processing or concatenation\n# \n# - **output_export_type = OutputExportType.JSON:**\n# - **NOT SUPPORTED** - Raises NotImplementedError\n# - Use export_type=ExportType.JSON instead for JSON output\n# \n# - **output_export_type = OutputExportType.FOLDERS:**\n# - **NOT SUPPORTED** - Raises NotImplementedError\n# - Use export_type=ExportType.JSON instead for folder output\n# \n# **When output_export_type = None (legacy behavior):**\n# - Defaults to OutputExportType.JSON\n# - Maintains backward compatibility with existing code\n# \n# :param dtlpy.entities.dataset.Dataset dataset: Dataset object\n# :param str dataset_name: The name of the dataset\n# :param str dataset_id: The ID of the dataset\n# :param str local_path: Local path to save the exported dataset\n# :param Union[dict, dtlpy.entities.filters.Filters] filters: Filters entity or a query dictionary\n# :param dtlpy.entities.filters.Filters annotation_filters: Filters entity to filter annotations for export\n# :param dtlpy.entities.filters.Filters feature_vector_filters: Filters entity to filter feature vectors for export\n# :param bool include_feature_vectors: Include item feature vectors in the export\n# :param bool include_annotations: Include item annotations in the export\n# :param bool dataset_lock: Make dataset readonly during the export\n# :param bool export_summary: Get Summary of the dataset export\n# :param int lock_timeout_sec: Timeout for locking the dataset during export in seconds\n# :param entities.ExportType export_type: Type of export ('json' or 'zip')\n# :param entities.OutputExportType output_export_type: Output format ('json', 'zip', or 'folders'). If None, defaults to 'json'\n# :param int timeout: Maximum time in seconds to wait for the export to complete\n# :return: Path to exported file/directory, or None if export result is empty\n# :rtype: Optional[str]\n# "
+          }
+        ]
       }
     },
     "/datasets/{id}/imports": {
@@ -34836,6 +34842,16 @@
         }
       }
     },
+    "/datasets/{id}/items/bulk-update-metadata": {
+      "post": {
+        "x-codeSamples": [
+          {
+            "lang": "Python",
+            "source": "# \n# Bulk update ML subset assignment for selected items.\n# If subset is None, remove subsets. Otherwise, assign the specified subset.\n# \n# :param str dataset_id: ID of the dataset\n# :param dict items_query: DQLResourceQuery (filters) for selecting items\n# :param str subset: 'train', 'validation', 'test' or None to remove all\n# :return: True if success\n# :rtype: bool\n# "
+          }
+        ]
+      }
+    },
     "/datasets/{id}/query": {
       "post": {
         "operationId": "Query Dataset",
@@ -34882,7 +34898,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\ndataset.items.list(page_offset=0, page_size=100)\n\n# \n# List items in a dataset.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*.\n# \n# :param dtlpy.entities.filters.Filters filters: Filters entity or a dictionary containing filters parameters\n# :param int page_offset: start page\n# :param int page_size: page size\n# :return: Pages object\n# :rtype: dtlpy.entities.paged_entities.PagedEntities\n# \n# "
+            "source": "\n# \n# List items in a dataset.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*.\n# \n# :param dtlpy.entities.filters.Filters filters: Filters entity or a dictionary containing filters parameters\n# :param int page_offset: start page\n# :param int page_size: page size\n# :return: Pages object\n# :rtype: dtlpy.entities.paged_entities.PagedEntities\n# \n# \n# dataset.items.list(page_offset=0, page_size=100)\n# "
           }
         ]
       }
@@ -35071,7 +35087,13 @@
               }
             }
           }
-        }
+        },
+        "x-codeSamples": [
+          {
+            "lang": "Python",
+            "source": "# \n# Split dataset items into ML subsets.\n# \n# :param str dataset_id: The ID of the dataset.\n# :param dict items_query: Query to select items.\n# :param dict ml_split_list: Dictionary with 'train', 'validation', 'test' keys and integer percentages.\n# :return: True if the split operation was successful.\n# :rtype: bool\n# :raises: PlatformException on failure and ValueError if percentages do not sum to 100 or invalid keys/values.\n# "
+          }
+        ]
       }
     },
     "/datasets/{id}/sync": {
@@ -35108,7 +35130,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nsuccess = project.datasets.sync(dataset_id='dataset_id')\n\n# \n# Sync dataset with external storage.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*.\n# \n# :param str dataset_id: The Id of the dataset to sync\n# :param bool wait: wait for the command to finish\n# :return: True if success\n# :rtype: bool\n# \n# "
+            "source": "\n# \n# Sync dataset with external storage.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*.\n# \n# :param str dataset_id: The Id of the dataset to sync\n# :param bool wait: wait for the command to finish\n# :return: True if success\n# :rtype: bool\n# \n# \n# success = project.datasets.sync(dataset_id='dataset_id')\n# "
           }
         ]
       }
@@ -35140,6 +35162,12 @@
             "schema": {
               "type": "string"
             }
+          }
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "Python",
+            "source": "\n# \n# Unlock dataset.\n# \n# **Prerequisites**: You must be an *owner* or *developer* to use this method.\n# \n# :param dtlpy.entities.dataset.Dataset dataset: dataset object\n# :return: Dataset object\n# :rtype: dtlpy.entities.dataset.Dataset\n# \n# \n# dataset = project.datasets.unlock(dataset='dataset_entity')\n# "
           }
         ]
       }
@@ -35189,7 +35217,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nproject.drivers.list()\n\n\n# \n# Get the project's drivers list.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*.\n# \n# :return: List of Drivers objects\n# :rtype: list\n# \n# "
+            "source": "\n# \n# Get the project's drivers list.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*.\n# \n# :return: List of Drivers objects\n# :rtype: list\n# \n# \n# project.drivers.list()\n# \n# "
           }
         ]
       },
@@ -35228,7 +35256,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nproject.drivers.create(name='driver_name',\ndriver_type=dl.ExternalStorage.S3,\nintegration_id='integration_id',\nbucket_name='bucket_name',\nproject_id='project_id',\nregion='ey-west-1')\n\n# \n# Create a storage driver.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*.\n# \n# :param str name: the driver name\n# :param ExternalStorage driver_type: dl.ExternalStorage (Enum). For all options run: list(dl.ExsternalStorage)\n# :param str integration_id: the integration id\n# :param str bucket_name: the external bucket name\n# :param IntegrationType integration_type: dl.IntegrationType (Enum). For all options run: list(dl.IntegrationType)\n# :param str project_id: project id\n# :param bool allow_external_delete: true to allow deleting files from external storage when files are deleted in your Dataloop storage\n# :param str region: relevant only for s3 - the bucket region\n# :param str storage_class: relevant only for s3\n# :param str path: Optional. By default path is the root folder. Path is case sensitive integration\n# :return: driver object\n# :rtype: dtlpy.entities.driver.Driver\n# \n# "
+            "source": "# \n# Create a driver on the platform using the provided payload.\n# \n# :param dict payload: The driver creation payload\n# :return: The created driver object\n# :rtype: dtlpy.entities.driver.Driver\n# :raises PlatformException: If the driver creation fails\n# "
           }
         ]
       }
@@ -35368,7 +35396,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nproject.drivers.get(driver_id='driver_id')\n\n# \n# Get a Driver object to use in your code.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*.\n# \n# You must provide at least ONE of the following params: driver_name, driver_id.\n# \n# :param str driver_name: optional - search by name\n# :param str driver_id: optional - search by id\n# :return: Driver object\n# :rtype: dtlpy.entities.driver.Driver\n# \n# "
+            "source": "\n# \n# Get a Driver object to use in your code.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*.\n# \n# You must provide at least ONE of the following params: driver_name, driver_id.\n# \n# :param str driver_name: optional - search by name\n# :param str driver_id: optional - search by id\n# :return: Driver object\n# :rtype: dtlpy.entities.driver.Driver\n# \n# \n# project.drivers.get(driver_id='driver_id')\n# "
           }
         ]
       },
@@ -35440,7 +35468,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nproject.drivers.delete(dataset_id='dataset_id', sure=True, really=True)\n\n:param str driver_name: optional - search by name\n:param str driver_id: optional - search by id\n:param bool sure: Are you sure you want to delete?\n:param bool really: Really really sure?\n:return: True if success\n:rtype: bool\n\n# \n# Delete a driver forever!\n# \n# **Prerequisites**: You must be an *owner* or *developer* to use this method.\n# \n# "
+            "source": "\n# \n# Delete a driver forever!\n# \n# **Prerequisites**: You must be an *owner* or *developer* to use this method.\n# \n# \n# project.drivers.delete(dataset_id='dataset_id', sure=True, really=True)\n# \n# :param str driver_name: optional - search by name\n# :param str driver_id: optional - search by id\n# :param bool sure: Are you sure you want to delete?\n# :param bool really: Really really sure?\n# :return: True if success\n# :rtype: bool\n# "
           }
         ]
       }
@@ -35704,7 +35732,13 @@
               }
             }
           }
-        }
+        },
+        "x-codeSamples": [
+          {
+            "lang": "Python",
+            "source": "\n# \n# rerun a executions on an existing service\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*. You must have a Filter.\n# \n# :param filters: Filters entity for a filtering before rerun\n# :param str service_id: service id to rerun on\n# :param bool wait: wait until create task finish\n# :return: rerun command\n# :rtype: dtlpy.entities.command.Command\n# \n# \n# command = service.executions.rerun_batch(\n# filters=dl.Filters(field='id', values=['executionId'], operator=dl.FiltersOperations.IN, resource=dl.FiltersResource.EXECUTION))\n# "
+          }
+        ]
       }
     },
     "/executions/workload": {
@@ -35793,7 +35827,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nservice.executions.rerun(execution='execution_entity')\n\n# \n# Rerun execution\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*. You must have a service.\n# \n# :param dtlpy.entities.execution.Execution execution:\n# :param bool sync: wait for the execution to finish\n# :return: Execution object\n# :rtype: dtlpy.entities.execution.Execution\n# \n# "
+            "source": "\n# \n# Rerun execution\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*. You must have a service.\n# \n# :param dtlpy.entities.execution.Execution execution:\n# :param bool sync: wait for the execution to finish\n# :return: Execution object\n# :rtype: dtlpy.entities.execution.Execution\n# \n# \n# service.executions.rerun(execution='execution_entity')\n# "
           }
         ]
       }
@@ -35841,7 +35875,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nservice.executions.get(execution_id='execution_id')\n\n# \n# Get Service execution object\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*. You must have a service.\n# \n# :param str execution_id: execution id\n# :param bool sync: if true, wait for the execution to finish\n# :return: Service execution object\n# :rtype: dtlpy.entities.execution.Execution\n# \n# "
+            "source": "\n# \n# Get Service execution object\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*. You must have a service.\n# \n# :param str execution_id: execution id\n# :param bool sync: if true, wait for the execution to finish\n# :return: Service execution object\n# :rtype: dtlpy.entities.execution.Execution\n# \n# \n# service.executions.get(execution_id='execution_id')\n# "
           }
         ]
       },
@@ -35888,7 +35922,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nservice.executions.update(execution='execution_entity')\n\n# \n# Update execution changes to platform\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*. You must have a service.\n# \n# :param dtlpy.entities.execution.Execution execution: execution entity\n# :return: Service execution object\n# :rtype: dtlpy.entities.execution.Execution\n# \n# "
+            "source": "\n# \n# Update execution changes to platform\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*. You must have a service.\n# \n# :param dtlpy.entities.execution.Execution execution: execution entity\n# :return: Service execution object\n# :rtype: dtlpy.entities.execution.Execution\n# \n# \n# service.executions.update(execution='execution_entity')\n# "
           }
         ]
       }
@@ -36108,7 +36142,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nservice.executions.terminate(execution='execution_entity')\n\n# \n# Terminate Execution\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*. You must have a service.\n# \n# :param dtlpy.entities.execution.Execution execution:\n# :return: execution object\n# :rtype: dtlpy.entities.execution.Execution\n# \n# "
+            "source": "\n# \n# Terminate Execution\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*. You must have a service.\n# \n# :param dtlpy.entities.execution.Execution execution:\n# :return: execution object\n# :rtype: dtlpy.entities.execution.Execution\n# \n# \n# service.executions.terminate(execution='execution_entity')\n# "
           }
         ]
       }
@@ -36198,7 +36232,17 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\ncommand = service.executions.create_batch(\nexecution_inputs=dl.FunctionIO(type=dl.PackageInputType.STRING, value='test', name='string'),\nfilters=dl.Filters(field='dir', values='/test'),\nfunction_name='run')\n\n# \n# Execute a function on an existing service\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*. You must have a service.\n# \n# :param str service_id: service id to execute on\n# :param filters: Filters entity for a filtering before execute\n# :param str function_name: function name to run\n# :param List[FunctionIO] or dict execution_inputs: input dictionary or list of FunctionIO entities\n# :param bool wait: wait until create task finish\n# :return: execution object\n# :rtype: dtlpy.entities.execution.Execution\n# \n# "
+            "source": "\n# \n# Execute a function on an existing service\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*. You must have a service.\n# \n# :param str service_id: service id to execute on\n# :param filters: Filters entity for a filtering before execute\n# :param str function_name: function name to run\n# :param List[FunctionIO] or dict execution_inputs: input dictionary or list of FunctionIO entities, that represent the extra inputs of the function\n# :param bool wait: wait until create task finish\n# :return: execution object\n# :rtype: dtlpy.entities.execution.Execution\n# \n# \n# command = service.executions.create_batch(\n# execution_inputs=dl.FunctionIO(type=dl.PackageInputType.STRING, value='test', name='string'),\n# filters=dl.Filters(field='dir', values='/test'),\n# function_name='run')\n# "
+          }
+        ]
+      }
+    },
+    "/features/set/{id}": {
+      "patch": {
+        "x-codeSamples": [
+          {
+            "lang": "Python",
+            "source": "\n# \n# Update a Feature Set\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*.\n# \n# :param dtlpy.entities.FeatureSet feature_set: FeatureSet object\n# :return: FeatureSet\n# :rtype: dtlpy.entities.FeatureSet\n# \n# \n# dl.feature_sets.update(feature_set='feature_set')\n# "
           }
         ]
       }
@@ -36255,7 +36299,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "# \n# Create a new Feature Set\n# \n# :param str name: the Feature name\n# :param int size: the length of a single vector in the set\n# :param str set_type: string of the feature type: 2d, 3d, modelFC, TSNE,PCA,FFT\n# :param entity_type: the entity that feature vector is linked to. Use the enum dl.FeatureEntityType\n# :param str project_id: the ID of the project where feature set will be created\n# :param str org_id: the ID of the org where feature set will be created\n# :return: Feature Set object\n# "
+            "source": "# \n# Create a new Feature Set\n# \n# :param str name: the Feature name\n# :param int size: the length of a single vector in the set\n# :param str set_type: string of the feature type: 2d, 3d, modelFC, TSNE,PCA,FFT\n# :param entity_type: the entity that feature vector is linked to. Use the enum dl.FeatureEntityType\n# :param str project_id: the ID of the project where feature set will be created\n# :param str model_id: the ID of the model that creates the vectors\n# :param str org_id: the ID of the org where feature set will be created\n# :return: Feature Set object\n# "
           }
         ]
       }
@@ -36585,7 +36629,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "# \n# Create a new Feature vector\n# \n# :param immutable value: actual vector - immutable (list of floats [1,2,3])\n# :param str project_id: the id of the project where feature will be created\n# :param str feature_set_id: ref to a featureSet this vector is a part of\n# :param str entity_id: id of the entity the featureVector is linked to (item.id, annotation.id etc)\n# :param str version: version of the featureSet generator\n# :param str parent_id: optional: parent FeatureSet id - used when FeatureVector is a subFeature\n# :param str org_id: the id of the org where featureVector will be created\n# :return: Feature vector:\n# "
+            "source": "# \n# Create a new Feature vector\n# \n# :param immutable value: actual vector - immutable (list of floats [1,2,3]) or list of lists of floats\n# :param str project_id: the id of the project where feature will be created\n# :param str feature_set_id: ref to a featureSet this vector is a part of\n# :param entity: the entity the featureVector is linked to (item, annotation, etc) or list of entities\n# :param str version: version of the featureSet generator\n# :param str parent_id: optional: parent FeatureSet id - used when FeatureVector is a subFeature\n# :param str org_id: the id of the org where featureVector will be created\n# :return: Feature vector:\n# "
           }
         ]
       }
@@ -37533,7 +37577,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\ndataset.items.get(item_id='item_id')\n\n# \n# Get Item object\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*.\n# \n# :param str filepath: optional - search by remote path\n# :param str item_id: optional - search by id\n# :param bool fetch: optional - fetch entity from platform, default taken from cookie\n# :param bool is_dir: True if you want to get an item from dir type\n# :return: Item object\n# :rtype: dtlpy.entities.item.Item\n# \n# "
+            "source": "\n# \n# Get Item object\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*.\n# \n# :param str filepath: optional - search by remote path\n# :param str item_id: optional - search by id\n# :param bool fetch: optional - fetch entity from platform, default taken from cookie\n# :param bool is_dir: True if you want to get an item from dir type\n# :return: Item object\n# :rtype: dtlpy.entities.item.Item\n# \n# \n# dataset.items.get(item_id='item_id')\n# "
           }
         ]
       },
@@ -37561,7 +37605,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\ndataset.items.delete(item_id='item_id')\n\n# \n# Delete item from platform.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*.\n# \n# You must provide at least ONE of the following params: item id, filename, filters.\n# \n# :param str filename: optional - search item by remote path\n# :param str item_id: optional - search item by id\n# :param dtlpy.entities.filters.Filters filters: optional - delete items by filter\n# :return: True if success\n# :rtype: bool\n# \n# "
+            "source": "\n# \n# Delete item from platform.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*.\n# \n# You must provide at least ONE of the following params: item id, filename, filters.\n# \n# :param str filename: optional - search item by remote path\n# :param str item_id: optional - search item by id\n# :param dtlpy.entities.filters.Filters filters: optional - delete items by filter\n# :return: True if success\n# :rtype: bool\n# \n# \n# dataset.items.delete(item_id='item_id')\n# "
           }
         ]
       },
@@ -37621,7 +37665,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\ndataset.items.update(item='item_entity')\n\n# \n# Update item metadata.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*.\n# \n# You must provide at least ONE of the following params: update_values, system_update_values.\n# \n# :param dtlpy.entities.item.Item item: Item object\n# :param dtlpy.entities.filters.Filters filters: optional update filtered items by given filter\n# :param update_values: optional field to be updated and new values\n# :param system_update_values: values in system metadata to be updated\n# :param bool system_metadata: True, if you want to update the metadata system\n# :return: Item object\n# :rtype: dtlpy.entities.item.Item\n# \n# "
+            "source": "\n# \n# Update item metadata.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*.\n# \n# You must provide at least ONE of the following params: update_values, system_update_values.\n# \n# :param dtlpy.entities.item.Item item: Item object\n# :param dtlpy.entities.filters.Filters filters: optional update filtered items by given filter\n# :param update_values: optional field to be updated and new values\n# :param system_update_values: values in system metadata to be updated\n# :param bool system_metadata: True, if you want to update the metadata system\n# :return: Item object\n# :rtype: dtlpy.entities.item.Item\n# \n# \n# dataset.items.update(item='item_entity')\n# "
           }
         ]
       }
@@ -37668,7 +37712,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\ndataset.items.clone(item_id='item_id',\ndst_dataset_id='dist_dataset_id',\nwith_metadata=True,\nwith_task_annotations_status=False,\nwith_annotations=False)\n\n# \n# Clone item. Read more about cloning datatsets and items in our `documentation <https://dataloop.ai/docs/clone-merge-dataset#cloned-dataset>`_ and `SDK documentation <https://developers.dataloop.ai/tutorials/data_management/data_versioning/chapter/>`_.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*.\n# \n# :param str item_id: item to clone\n# :param str dst_dataset_id: destination dataset id\n# :param str remote_filepath: complete filepath\n# :param dict metadata: new metadata to add\n# :param bool with_annotations: clone annotations\n# :param bool with_metadata: clone metadata\n# :param bool with_task_annotations_status: clone task annotations status\n# :param bool allow_many: `bool` if True, using multiple clones in single dataset is allowed, (default=False)\n# :param bool wait: wait for the command to finish\n# :return: Item object\n# :rtype: dtlpy.entities.item.Item\n# \n# "
+            "source": "\n# \n# Clone item. Read more about cloning datatsets and items in our `documentation <https://dataloop.ai/docs/clone-merge-dataset#cloned-dataset>`_ and `SDK documentation <https://developers.dataloop.ai/tutorials/data_management/data_versioning/chapter/>`_.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*.\n# \n# :param str item_id: item to clone\n# :param str dst_dataset_id: destination dataset id\n# :param str remote_filepath: complete filepath\n# :param dict metadata: new metadata to add\n# :param bool with_annotations: clone annotations\n# :param bool with_metadata: clone metadata\n# :param bool with_task_annotations_status: clone task annotations status\n# :param bool allow_many: `bool` if True, using multiple clones in single dataset is allowed, (default=False)\n# :param bool wait: wait for the command to finish\n# :return: Item object\n# :rtype: dtlpy.entities.item.Item\n# \n# \n# dataset.items.clone(item_id='item_id',\n# dst_dataset_id='dist_dataset_id',\n# with_metadata=True,\n# with_task_annotations_status=False,\n# with_annotations=False)\n# "
           }
         ]
       }
@@ -37975,7 +38019,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nannotations = item.annotations.upload(annotations='builder')\n\n# \n# Upload a new annotation/annotations. You must first create the annotation using the annotation *builder* method.\n# \n# **Prerequisites**: Any user can upload annotations.\n# \n# :param List[dtlpy.entities.annotation.Annotation] or dtlpy.entities.annotation.Annotation annotations: list or\n# single annotation of type Annotation\n# :return: list of annotation objects\n# :rtype: entities.AnnotationCollection\n# \n# "
+            "source": "\n# \n# Upload a new annotation/annotations. You must first create the annotation using the annotation *builder* method.\n# \n# **Prerequisites**: Any user can upload annotations.\n# \n# :param List[dtlpy.entities.annotation.Annotation] or dtlpy.entities.annotation.Annotation annotations: list or\n# single annotation of type Annotation\n# :param bool merge: optional - merge the new binary annotations with the existing annotations\n# :return: list of annotation objects\n# :rtype: entities.AnnotationCollection\n# \n# \n# annotations = item.annotations.upload(annotations='builder')\n# "
           }
         ]
       }
@@ -40026,7 +40070,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nrecipe.ontologies.create(labels='labels_entity',\ntitle='new_ontology',\nproject_ids='project_ids')\n\n# \n# Create a new ontology.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*.\n# \n# :param labels: recipe tags\n# :param str title: ontology title, name\n# :param list project_ids: recipe project/s\n# :param list attributes: recipe attributes\n# :return: Ontology object\n# :rtype: dtlpy.entities.ontology.Ontology\n# \n# "
+            "source": "\n# \n# Create a new ontology.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*.\n# \n# :param labels: recipe tags\n# :param str title: ontology title, name\n# :param list project_ids: recipe project/s\n# :param list attributes: recipe attributes\n# :return: Ontology object\n# :rtype: dtlpy.entities.ontology.Ontology\n# \n# \n# recipe.ontologies.create(labels='labels_entity',\n# title='new_ontology',\n# project_ids='project_ids')\n# "
           }
         ]
       },
@@ -40155,7 +40199,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nrecipe.ontologies.delete(ontology='ontology_entity')\n# \n# Update the Ontology metadata.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*.\n# \n# :param dtlpy.entities.ontology.Ontology ontology: Ontology object\n# :param bool system_metadata: bool - True, if you want to change metadata system\n# :return: Ontology object\n# :rtype: dtlpy.entities.ontology.Ontology\n# \n# \n# "
+            "source": "\n# \n# Update the Ontology metadata.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*.\n# \n# :param dtlpy.entities.ontology.Ontology ontology: Ontology object\n# :param bool system_metadata: bool - True, if you want to change metadata system\n# :return: Ontology object\n# :rtype: dtlpy.entities.ontology.Ontology\n# \n# \n# recipe.ontologies.delete(ontology='ontology_entity')\n# "
           }
         ]
       },
@@ -40205,7 +40249,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nrecipe.ontologies.get(ontology_id='ontology_id')\n\n# \n# Get Ontology object to use in your code.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*.\n# \n# :param str ontology_id: ontology id\n# :return: Ontology object\n# :rtype: dtlpy.entities.ontology.Ontology\n# \n# "
+            "source": "\n# \n# Get Ontology object to use in your code.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*.\n# \n# :param str ontology_id: ontology id\n# :return: Ontology object\n# :rtype: dtlpy.entities.ontology.Ontology\n# \n# \n# recipe.ontologies.get(ontology_id='ontology_id')\n# "
           }
         ]
       },
@@ -40235,7 +40279,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nrecipe.ontologies.delete(ontology_id='ontology_id')\n\n# \n# Delete Ontology from the platform.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*.\n# \n# :param ontology_id: ontology id\n# :return: True if success\n# :rtype: bool\n# \n# "
+            "source": "\n# \n# Delete Ontology from the platform.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*.\n# \n# :param ontology_id: ontology id\n# :return: True if success\n# :rtype: bool\n# \n# \n# recipe.ontologies.delete(ontology_id='ontology_id')\n# "
           }
         ]
       }
@@ -40923,7 +40967,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\norganizations = dl.organizations.list()\n\n# \n# Lists all the organizations in Dataloop.\n# \n# **Prerequisites**: You must be a **superuser** to use this method.\n# \n# :return: List of Organization objects\n# :rtype: list\n# \n# "
+            "source": "\n# \n# Lists all the organizations in Dataloop.\n# \n# **Prerequisites**: You must be a **superuser** to use this method.\n# \n# :return: List of Organization objects\n# :rtype: list\n# \n# \n# organizations = dl.organizations.list()\n# "
           }
         ]
       },
@@ -41020,7 +41064,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\norg = dl.organizations.get(organization_id='organization_id')\n\n# \n# Get Organization object to be able to use it in your code.\n# \n# **Prerequisites**: You must be a **superuser** to use this method.\n# \n# You must provide at least ONE of the following params: organization_name or organization_id.\n# \n# :param str organization_id: optional - search by id\n# :param str organization_name: optional - search by name\n# :param fetch: optional - fetch entity from platform, default taken from cookie\n# :return: Organization object\n# :rtype: dtlpy.entities.organization.Organization\n# \n# "
+            "source": "\n# \n# Get Organization object to be able to use it in your code.\n# \n# **Prerequisites**: You must be a **superuser** to use this method.\n# \n# You must provide at least ONE of the following params: organization_name or organization_id.\n# \n# :param str organization_id: optional - search by id\n# :param str organization_name: optional - search by name\n# :param fetch: optional - fetch entity from platform, default taken from cookie\n# :return: Organization object\n# :rtype: dtlpy.entities.organization.Organization\n# \n# \n# org = dl.organizations.get(organization_id='organization_id')\n# "
           }
         ]
       },
@@ -41379,7 +41423,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nproject.integrations.list(only_available=True)\n\n# \n# List all the organization's integrations with external storage.\n# \n# **Prerequisites**: You must be an *owner* in the organization.\n# \n# :param bool only_available: if True list only the available integrations.\n# :return: groups list\n# :rtype: list\n# \n# "
+            "source": "\n# \n# List all the organization's integrations with external storage.\n# \n# **Prerequisites**: You must be an *owner* in the organization.\n# \n# :param bool only_available: if True list only the available integrations.\n# :param str organization_id: organization id\n# :return: groups list\n# :rtype: list\n# \n# \n# project.integrations.list(only_available=True)\n# "
           }
         ]
       },
@@ -41463,7 +41507,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nproject.integrations.create(integrations_type=dl.IntegrationType.S3,\nname='S3ntegration',\noptions={key: \"Access key ID\", secret: \"Secret access key\"})\n\n# \n# Create an integration between an external storage and the organization.\n# \n# **Examples for options include**:\n# s3 - {key: \"\", secret: \"\"};\n# gcs - {key: \"\", secret: \"\", content: \"\"};\n# azureblob - {key: \"\", secret: \"\", clientId: \"\", tenantId: \"\"};\n# key_value - {key: \"\", value: \"\"}\n# aws-sts - {key: \"\", secret: \"\", roleArns: \"\"}\n# aws-cross - {}\n# gcp-cross - {}\n# \n# **Prerequisites**: You must be an *owner* in the organization.\n# \n# :param IntegrationType integrations_type: integrations type dl.IntegrationType\n# :param str name: integrations name\n# :param dict options: dict of storage secrets\n# :return: success\n# :rtype: bool\n# \n# "
+            "source": "\n# \n# Create an integration between an external storage and the organization.\n# \n# **Examples for options include**:\n# s3 - {key: \"\", secret: \"\"};\n# gcs - {key: \"\", secret: \"\", content: \"\"};\n# azureblob - {key: \"\", secret: \"\", clientId: \"\", tenantId: \"\"};\n# key_value - {key: \"\", value: \"\"}\n# aws-sts - {key: \"\", secret: \"\", roleArns: \"\"}\n# aws-cross - {}\n# gcp-cross - {}\n# gcp-workload-identity-federation - {\"secret\": \"\", \"content\": \"{}\", \"clientId\": \"\"}\n# private-registry (ECR) - can use generate_ecr_options to generate the options\n# private-registry (GAR) - use generate_gar_options to generate the options\n# private-registry (ACR) - use generate_azure_container_registry_options to generate the options\n# private-registry (DockerHub) - use generate_docker_hub_options to generate the options\n# \n# **Prerequisites**: You must be an *owner* in the organization.\n# \n# :param IntegrationType integrations_type: integrations type dl.IntegrationType\n# :param str name: integrations name\n# :param dict options: dict of storage secrets\n# :param dict metadata: metadata\n# :param str organization_id: organization id\n# :return: success\n# :rtype: bool\n# \n# \n# project.integrations.create(integrations_type=dl.IntegrationType.S3,\n# name='S3Integration',\n# options={key: \"Access key ID\", secret: \"Secret access key\"})\n# "
           }
         ]
       },
@@ -41522,7 +41566,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nproject.integrations.update(integrations_id='integrations_id', new_options={roleArn: \"\"})\n\n# \n# Update the integration's name.\n# \n# **Prerequisites**: You must be an *owner* in the organization.\n# \n# :param str new_name: new name\n# :param str integrations_id: integrations id\n# :param Integration integration: integration object\n# :param dict new_options: new value\n# :return: Integration object\n# :rtype: dtlpy.entities.integration.Integration\n# \n# **Examples for options include**:\n# s3 - {key: \"\", secret: \"\"};\n# gcs - {key: \"\", secret: \"\", content: \"\"};\n# azureblob - {key: \"\", secret: \"\", clientId: \"\", tenantId: \"\"};\n# key_value - {key: \"\", value: \"\"}\n# aws-sts - {key: \"\", secret: \"\", roleArns: \"\"}\n# aws-cross - {roleArn: \"\"}\n# gcp-cross - {\"email: \"\", \"resourceName\": \"\"}\n# \n# "
+            "source": "\n# \n# Update the integration's name.\n# \n# **Prerequisites**: You must be an *owner* in the organization.\n# \n# :param str new_name: new name\n# :param str integrations_id: integrations id\n# :param Integration integration: integration object\n# :param dict new_options: new value\n# :param str organization_id: organization id\n# :param bool reload_services: reload services associated with this integration\n# :return: Integration object\n# :rtype: dtlpy.entities.integration.Integration\n# \n# **Examples for options include**:\n# s3 - {key: \"\", secret: \"\"};\n# gcs - {key: \"\", secret: \"\", content: \"\"};\n# azureblob - {key: \"\", secret: \"\", clientId: \"\", tenantId: \"\"};\n# key_value - {key: \"\", value: \"\"}\n# aws-sts - {key: \"\", secret: \"\", roleArns: \"\"}\n# aws-cross - {roleArn: \"\"}\n# gcp-cross - {\"email: \"\", \"resourceName\": \"\"}\n# \n# \n# project.integrations.update(integrations_id='integrations_id', new_options={roleArn: \"\"})\n# "
           }
         ]
       }
@@ -41568,7 +41612,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nproject.integrations.get(integrations_id='integrations_id')\n\n# \n# Get organization integrations. Use this method to access your integration and be able to use it in your code.\n# \n# **Prerequisites**: You must be an *owner* in the organization.\n# \n# :param str integrations_id: integrations id\n# :return: Integration object\n# :rtype: dtlpy.entities.integration.Integration\n# \n# "
+            "source": "\n# \n# Get organization integrations. Use this method to access your integration and be able to use it in your code.\n# \n# **Prerequisites**: You must be an *owner* in the organization.\n# \n# :param str integrations_id: integrations id\n# :param str organization_id: organization id\n# :return: Integration object\n# :rtype: dtlpy.entities.integration.Integration\n# \n# \n# project.integrations.get(integrations_id='integrations_id')\n# "
           }
         ]
       },
@@ -41615,7 +41659,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nproject.integrations.delete(integrations_id='integrations_id', sure=True, really=True)\n\n# \n# Delete integrations from the organization.\n# \n# **Prerequisites**: You must be an organization *owner* to delete an integration.\n# \n# :param str integrations_id: integrations id\n# :param bool sure: Are you sure you want to delete?\n# :param bool really: Really really sure?\n# :return: success\n# :rtype: bool\n# \n# "
+            "source": "\n# \n# Delete integrations from the organization.\n# \n# **Prerequisites**: You must be an organization *owner* to delete an integration.\n# \n# :param organization_id: organization id\n# :param str integrations_id: integrations id\n# :param bool sure: Are you sure you want to delete?\n# :param bool really: Really really sure?\n# :return: success\n# :rtype: bool\n# \n# \n# project.integrations.delete(integrations_id='integrations_id', sure=True, really=True)\n# "
           }
         ]
       }
@@ -41656,7 +41700,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nlist_members = dl.organizations.list_members(organization='organization-entity',\nrole=dl.MemberOrgRole.MEMBER)\n\n# \n# List all organization members.\n# \n# **Prerequisites**: You must be an organization *owner* to use this method.\n# \n# You must provide at least ONE of the following params: organization_id, organization_name, or organization.\n# \n# :param entities.Organization organization: Organization object\n# :param str organization_id: Organization id\n# :param str organization_name: Organization name\n# :param entities.MemberOrgRole role: MemberOrgRole.ADMIN, MemberOrgRole.OWNER, MemberOrgRole.MEMBER, MemberOrgRole.WORKER\n# :return: projects list\n# :rtype: list\n# \n# "
+            "source": "\n# \n# List all organization members.\n# \n# **Prerequisites**: You must be an organization *owner* to use this method.\n# \n# You must provide at least ONE of the following params: organization_id, organization_name, or organization.\n# \n# :param entities.Organization organization: Organization object\n# :param str organization_id: Organization id\n# :param str organization_name: Organization name\n# :param entities.MemberOrgRole role: MemberOrgRole.ADMIN, MemberOrgRole.OWNER, MemberOrgRole.MEMBER, MemberOrgRole.WORKER\n# :return: projects list\n# :rtype: list\n# \n# \n# list_members = dl.organizations.list_members(organization='organization-entity',\n# role=dl.MemberOrgRole.MEMBER)\n# "
           }
         ]
       },
@@ -41731,7 +41775,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nsuccess = dl.organizations.add_member(email='user@domain.com',\norganization_id='organization_id',\nrole=dl.MemberOrgRole.MEMBER)\n\n# \n# Add members to your organization. Read about members and groups `here <https://dataloop.ai/docs/org-members-groups>`_.\n# \n# **Prerequisities**: To add members to an organization, you must be an *owner* in that organization.\n# \n# You must provide at least ONE of the following params: organization, organization_name, or organization_id.\n# \n# :param str email: the member's email\n# :param str role: MemberOrgRole.ADMIN, MemberOrgRole.OWNER, MemberOrgRole.MEMBER, MemberOrgRole.WORKER\n# :param str organization_id: Organization id\n# :param str organization_name: Organization name\n# :param entities.Organization organization: Organization object\n# :return: True if successful or error if unsuccessful\n# :rtype: bool\n# \n# "
+            "source": "\n# \n# Add members to your organization. Read about members and groups `here <https://dataloop.ai/docs/org-members-groups>`_.\n# \n# **Prerequisities**: To add members to an organization, you must be an *owner* in that organization.\n# \n# You must provide at least ONE of the following params: organization, organization_name, or organization_id.\n# \n# :param str email: the member's email\n# :param str role: MemberOrgRole.ADMIN, MemberOrgRole.OWNER, MemberOrgRole.MEMBER, MemberOrgRole.WORKER\n# :param str organization_id: Organization id\n# :param str organization_name: Organization name\n# :param entities.Organization organization: Organization object\n# :return: True if successful or error if unsuccessful\n# :rtype: bool\n# \n# \n# success = dl.organizations.add_member(email='user@domain.com',\n# organization_id='organization_id',\n# role=dl.MemberOrgRole.MEMBER)\n# "
           }
         ]
       },
@@ -41803,7 +41847,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nmember_json = dl.organizations.update_member(email='user@domain.com',\norganization_id='organization_id',\nrole=dl.MemberOrgRole.MEMBER)\n\n# \n# Update member role.\n# \n# **Prerequisites**: You must be an organization *owner* to update a member's role.\n# \n# You must provide at least ONE of the following params: organization, organization_name, or organization_id.\n# \n# :param str email: the member's email\n# :param str role: MemberOrgRole.ADMIN, MemberOrgRole.OWNER, MemberOrgRole.MEMBER, MemberOrgRole.WORKER\n# :param str organization_id: Organization id\n# :param str organization_name: Organization name\n# :param entities.Organization organization: Organization object\n# :return: json of the member fields\n# :rtype: dict\n# \n# "
+            "source": "\n# \n# Update member role.\n# \n# **Prerequisites**: You must be an organization *owner* to update a member's role.\n# \n# You must provide at least ONE of the following params: organization, organization_name, or organization_id.\n# \n# :param str email: the member's email\n# :param str role: MemberOrgRole.ADMIN, MemberOrgRole.OWNER, MemberOrgRole.MEMBER, MemberOrgRole.WORKER\n# :param str organization_id: Organization id\n# :param str organization_name: Organization name\n# :param entities.Organization organization: Organization object\n# :return: json of the member fields\n# :rtype: dict\n# \n# \n# member_json = dl.organizations.update_member(email='user@domain.com',\n# organization_id='organization_id',\n# role=dl.MemberOrgRole.MEMBER)\n# "
           }
         ]
       }
@@ -41842,7 +41886,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nsuccess = dl.organizations.delete_member(user_id='user_id',\norganization_id='organization_id',\nsure=True,\nreally=True)\n\n# \n# Delete member from the Organization.\n# \n# **Prerequisites**: Must be an organization *owner* to delete members.\n# \n# You must provide at least ONE of the following params: organization_id, organization_name, organization.\n# \n# :param str user_id: user id\n# :param str organization_id: Organization id\n# :param str organization_name: Organization name\n# :param entities.Organization organization: Organization object\n# :param bool sure: Are you sure you want to delete?\n# :param bool really: Really really sure?\n# :return: True if success and error if not\n# :rtype: bool\n# \n# "
+            "source": "\n# \n# Delete member from the Organization.\n# \n# **Prerequisites**: Must be an organization *owner* to delete members.\n# \n# You must provide at least ONE of the following params: organization_id, organization_name, organization.\n# \n# :param str user_id: user id\n# :param str organization_id: Organization id\n# :param str organization_name: Organization name\n# :param entities.Organization organization: Organization object\n# :param bool sure: Are you sure you want to delete?\n# :param bool really: Really really sure?\n# :return: True if success and error if not\n# :rtype: bool\n# \n# \n# success = dl.organizations.delete_member(user_id='user_id',\n# organization_id='organization_id',\n# sure=True,\n# really=True)\n# "
           }
         ]
       }
@@ -42129,7 +42173,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nproject.packages.push(package_name='package_name',\nmodules=[module],\nversion='1.0.0',\nsrc_path=os.getcwd()\n)\n\n# \n# Push your local package to the UI.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*.\n# \n# Project will be taken in the following hierarchy:\n# project(input) -> project_id(input) -> self.project(context) -> checked out\n# \n# :param dtlpy.entities.project.Project project: optional - project entity to deploy to. default from context or checked-out\n# :param str project_id: optional - project id to deploy to. default from context or checked-out\n# :param str package_name: package name\n# :param str src_path: path to package codebase\n# :param dtlpy.entities.codebase.Codebase codebase: codebase object\n# :param list modules: list of modules PackageModules of the package\n# :param bool is_global: is package is global or local\n# :param bool checkout: checkout package to local dir\n# :param str revision_increment: optional - str - version bumping method - major/minor/patch - default = None\n# :param str version: semver version f the package\n# :param bool ignore_sanity_check: NOT RECOMMENDED - skip code sanity check before pushing\n# :param bool service_update: optional - bool - update the service\n# :param dict service_config : Service object as dict. Contains the spec of the default service to create.\n# :param list slots: optional - list of slots PackageSlot of the package\n# :param list requirements: requirements - list of package requirements\n# :param str package_type: default 'faas', options: 'app', 'ml\n# :param dict metadata: dictionary of system and user metadata\n# \n# :return: Package object\n# :rtype: dtlpy.entities.package.Package\n# \n# "
+            "source": "\n# \n# Push your local package to the UI.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*.\n# \n# Project will be taken in the following hierarchy:\n# project(input) -> project_id(input) -> self.project(context) -> checked out\n# \n# :param dtlpy.entities.project.Project project: optional - project entity to deploy to. default from context or checked-out\n# :param str project_id: optional - project id to deploy to. default from context or checked-out\n# :param str package_name: package name\n# :param str src_path: path to package codebase\n# :param dtlpy.entities.codebase.Codebase codebase: codebase object\n# :param list modules: list of modules PackageModules of the package\n# :param bool is_global: is package is global or local\n# :param bool checkout: checkout package to local dir\n# :param str revision_increment: optional - str - version bumping method - major/minor/patch - default = None\n# :param str version: semver version f the package\n# :param bool ignore_sanity_check: NOT RECOMMENDED - skip code sanity check before pushing\n# :param bool service_update: optional - bool - update the service\n# :param dict service_config : Service object as dict. Contains the spec of the default service to create.\n# :param list slots: optional - list of slots PackageSlot of the package\n# :param list requirements: requirements - list of package requirements\n# :param str package_type: default 'faas', options: 'app', 'ml\n# :param dict metadata: dictionary of system and user metadata\n# \n# :return: Package object\n# :rtype: dtlpy.entities.package.Package\n# \n# \n# project.packages.push(package_name='package_name',\n# modules=[module],\n# version='1.0.0',\n# src_path=os.getcwd()\n# )\n# "
           }
         ]
       }
@@ -42156,12 +42200,6 @@
             "schema": {
               "type": "string"
             }
-          }
-        ],
-        "x-codeSamples": [
-          {
-            "lang": "Python",
-            "source": "\nproject.packages.delete(package_name='package_name')\n\n# \n# Delete a Package object.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*.\n# \n# :param dtlpy.entities.package.Package package: package entity\n# :param str package_id: package id\n# :param str package_name: package name\n# :return: True if success\n# :rtype: bool\n# \n# "
           }
         ]
       }
@@ -42209,7 +42247,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nproject.packages.get(package_id='package_id')\n\n# \n# Get Package object to use in your code.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*.\n# \n# :param str package_id: package id\n# :param str package_name: package name\n# :param bool checkout: set the package as a default package object (cookies)\n# :param fetch: optional - fetch entity from platform, default taken from cookie\n# :return: Package object\n# :rtype: dtlpy.entities.package.Package\n# \n# "
+            "source": "\n# \n# Get Package object to use in your code.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*.\n# \n# :param str package_id: package id\n# :param str package_name: package name\n# :param bool checkout: set the package as a default package object (cookies)\n# :param fetch: optional - fetch entity from platform, default taken from cookie\n# :param bool log_error: log error if package not found\n# :return: Package object\n# :rtype: dtlpy.entities.package.Package\n# \n# \n# project.packages.get(package_id='package_id')\n# "
           }
         ]
       },
@@ -42256,7 +42294,15 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nproject.packages.delete(package='package_entity')\n\n# \n# Update Package changes to the platform.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*.\n# \n# :param dtlpy.entities.package.Package package:\n# :param revision_increment: optional - str - version bumping method - major/minor/patch - default = None\n# :return: Package object\n# :rtype: dtlpy.entities.package.Package\n# \n# "
+            "source": "\n# \n# Update Package changes to the platform.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*.\n# \n# :param dtlpy.entities.package.Package package:\n# :param revision_increment: optional - str - version bumping method - major/minor/patch - default = None\n# :return: Package object\n# :rtype: dtlpy.entities.package.Package\n# \n# \n# project.packages.delete(package='package_entity')\n# "
+          }
+        ]
+      },
+      "delete": {
+        "x-codeSamples": [
+          {
+            "lang": "Python",
+            "source": "\n# \n# Delete a Package object.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*.\n# \n# :param dtlpy.entities.package.Package package: package entity\n# :param str package_id: package id\n# :param str package_name: package name\n# :return: True if success\n# :rtype: bool\n# \n# \n# project.packages.delete(package_name='package_name')\n# "
           }
         ]
       }
@@ -42298,7 +42344,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nproject.packages.revisions(package='package_entity')\n\n# \n# Get the package revision history.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*.\n# \n# :param dtlpy.entities.package.Package package: package entity\n# :param str package_id: package id\n# \n# "
+            "source": "\n# \n# Get the package revision history.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*.\n# \n# :param dtlpy.entities.package.Package package: package entity\n# :param str package_id: package id\n# \n# \n# project.packages.revisions(package='package_entity')\n# "
           }
         ]
       }
@@ -42337,7 +42383,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\npipeline = project.pipelines.create(name='pipeline_name')\n\n# \n# Create a new pipeline.\n# \n# **prerequisites**: You must be an *owner* or *developer* to use this method.\n# \n# :param str name: pipeline name\n# :param str project_id: project id\n# :param dict pipeline_json: json containing the pipeline fields\n# :return: Pipeline object\n# :rtype: dtlpy.entities.pipeline.Pipeline\n# \n# "
+            "source": "\n# \n# Create a new pipeline.\n# \n# **prerequisites**: You must be an *owner* or *developer* to use this method.\n# \n# :param str name: pipeline name\n# :param str project_id: project id\n# :param dict pipeline_json: json containing the pipeline fields\n# :return: Pipeline object\n# :rtype: dtlpy.entities.pipeline.Pipeline\n# \n# \n# pipeline = project.pipelines.create(name='pipeline_name')\n# "
           }
         ]
       },
@@ -42457,7 +42503,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\npipeline_executions = pipeline.pipeline_executions.list()\n\n# \n# List project pipeline executions.\n# \n# **prerequisites**: You must be an *owner* or *developer* to use this method.\n# \n# :param dtlpy.entities.filters.Filters filters: Filters entity or a dictionary containing filters parameters\n# :return: Paged entity\n# :rtype: dtlpy.entities.paged_entities.PagedEntities\n# \n# "
+            "source": "\n# \n# List project pipeline executions.\n# \n# **prerequisites**: You must be an *owner* or *developer* to use this method.\n# \n# :param dtlpy.entities.filters.Filters filters: Filters entity or a dictionary containing filters parameters\n# :return: Paged entity\n# :rtype: dtlpy.entities.paged_entities.PagedEntities\n# \n# \n# pipeline_executions = pipeline.pipeline_executions.list()\n# "
           }
         ]
       }
@@ -42707,12 +42753,22 @@
         ]
       }
     },
+    "/pipelines/validate": {
+      "post": {
+        "x-codeSamples": [
+          {
+            "lang": "Python",
+            "source": "\n# \n# Validate a pipeline configuration.\n# \n# **prerequisites**: You must be an *owner* or *developer* to use this method.\n# \n# :param dict pipeline_json: pipeline configuration as JSON dictionary\n# :return: Validation result\n# :rtype: dict\n# \n# \n# validation_result = project.pipelines.validate(pipeline_json={'name': 'my_pipeline', 'nodes': []})\n# "
+          }
+        ]
+      }
+    },
     "/pipelines/{id}/statistics": {
       "get": {
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\npipeline_stats = project.pipelines.stats(pipeline='pipeline_entity')\n\n# \n# Get pipeline counters.\n# \n# **prerequisites**: You must be an *owner* or *developer* to use this method.\n# \n# :param dtlpy.entities.pipeline.Pipeline pipeline: pipeline entity - optional\n# :param str pipeline_id: pipeline_id -  optional\n# :param str pipeline_name: pipeline_name -  optional\n# :return: PipelineStats\n# :rtype: dtlpy.entities.pipeline.PipelineStats\n# \n# "
+            "source": "\n# \n# Get pipeline counters.\n# \n# **prerequisites**: You must be an *owner* or *developer* to use this method.\n# \n# :param dtlpy.entities.pipeline.Pipeline pipeline: pipeline entity - optional\n# :param str pipeline_id: pipeline_id -  optional\n# :param str pipeline_name: pipeline_name -  optional\n# :return: PipelineStats\n# :rtype: dtlpy.entities.pipeline.PipelineStats\n# \n# \n# pipeline_stats = project.pipelines.stats(pipeline='pipeline_entity')\n# "
           }
         ]
       }
@@ -42751,7 +42807,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\npipeline = project.pipelines.get(pipeline_id='pipeline_id')\n\n# \n# Get Pipeline object to use in your code.\n# \n# **prerequisites**: You must be an *owner* or *developer* to use this method.\n# \n# You must provide at least ONE of the following params: pipeline_name, pipeline_id.\n# \n# :param str pipeline_id: pipeline id\n# :param str pipeline_name: pipeline name\n# :param fetch: optional - fetch entity from platform, default taken from cookie\n# :return: Pipeline object\n# :rtype: dtlpy.entities.pipeline.Pipeline\n# \n# "
+            "source": "\n# \n# Get Pipeline object to use in your code.\n# \n# **prerequisites**: You must be an *owner* or *developer* to use this method.\n# \n# You must provide at least ONE of the following params: pipeline_name, pipeline_id.\n# \n# :param str pipeline_id: pipeline id\n# :param str pipeline_name: pipeline name\n# :param fetch: optional - fetch entity from platform, default taken from cookie\n# :return: Pipeline object\n# :rtype: dtlpy.entities.pipeline.Pipeline\n# \n# \n# pipeline = project.pipelines.get(pipeline_id='pipeline_id')\n# "
           }
         ]
       },
@@ -42798,7 +42854,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\npipeline = project.pipelines.update(pipeline='pipeline_entity')\n\n# \n# Update pipeline changes to platform.\n# \n# **prerequisites**: You must be an *owner* or *developer* to use this method.\n# \n# :param dtlpy.entities.pipeline.Pipeline pipeline: pipeline entity\n# :return: Pipeline object\n# :rtype: dtlpy.entities.pipeline.Pipeline\n# \n# "
+            "source": "\n# \n# Update pipeline changes to platform.\n# \n# **prerequisites**: You must be an *owner* or *developer* to use this method.\n# \n# :param dtlpy.entities.pipeline.Pipeline pipeline: pipeline entity\n# :return: Pipeline object\n# :rtype: dtlpy.entities.pipeline.Pipeline\n# \n# \n# pipeline = project.pipelines.update(pipeline='pipeline_entity')\n# "
           }
         ]
       }
@@ -42854,7 +42910,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\ncommand = pipeline.pipeline_executions.create_batch(\nexecution_inputs=dl.FunctionIO(type=dl.PackageInputType.STRING, value='test', name='string'),\nfilters=dl.Filters(field='dir', values='/test'))\n\n# \n# Execute a pipeline and return the execute.\n# \n# **prerequisites**: You must be an *owner* or *developer* to use this method.\n# \n# :param pipeline_id: pipeline id\n# :param filters: Filters entity for a filtering before execute\n# :param execution_inputs: list of the dl.FunctionIO or dict of pipeline input - example {'item': 'item_id'}\n# :param bool wait: wait until create task finish\n# :return: entities.PipelineExecution object\n# :rtype: dtlpy.entities.pipeline_execution.PipelineExecution\n# \n# "
+            "source": "\n# \n# Create batch executions of a pipeline.\n# \n# **prerequisites**: You must be an *owner* or *developer* to use this method.\n# \n# :param pipeline_id: pipeline id\n# :param filters: Filters entity for a filtering before execute\n# :param execution_inputs: list of the dl.FunctionIO or dict of pipeline input - example {'item': 'item_id'}, that represent the extra inputs of the function\n# :param bool wait: wait until create task finish\n# :return: entities.PipelineExecution object\n# :rtype: dtlpy.entities.pipeline_execution.PipelineExecution\n# \n# \n# command = pipeline.pipeline_executions.create_batch(\n# execution_inputs=dl.FunctionIO(type=dl.PackageInputType.STRING, value='test', name='string'),\n# filters=dl.Filters(field='dir', values='/test'))\n# "
           }
         ]
       }
@@ -42964,7 +43020,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\npipeline.pipeline_executions.rerun(pipeline_id='pipeline_id', method=dl.CycleRerunMethod.START_FROM_BEGINNING)\n\n# \n# Get Pipeline Execution object\n# \n# **prerequisites**: You must be an *owner* or *developer* to use this method.\n# \n# :param str pipeline_id: pipeline id\n# :param str method: method to run\n# :param list start_nodes_ids: list of start nodes ids\n# :param filters: Filters entity for a filtering before execute\n# :param bool wait: wait until rerun finish\n# :return: True if success\n# :rtype: bool\n# \n# "
+            "source": "\n# \n# Get Pipeline Execution object\n# \n# **prerequisites**: You must be an *owner* or *developer* to use this method.\n# \n# :param str pipeline_id: pipeline id\n# :param str method: method to run\n# :param list start_nodes_ids: list of start nodes ids\n# :param filters: Filters entity for a filtering before execute\n# :param bool wait: wait until rerun finish\n# :return: True if success\n# :rtype: bool\n# \n# \n# pipeline.pipeline_executions.rerun(pipeline_id='pipeline_id', method=dl.CycleRerunMethod.START_FROM_BEGINNING)\n# "
           }
         ]
       }
@@ -43065,7 +43121,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nproject.pipelines.install(pipeline='pipeline_entity')\n\n# \n# Install (start) a pipeline.\n# \n# **prerequisites**: You must be an *owner* or *developer* to use this method.\n# \n# :param dtlpy.entities.pipeline.Pipeline pipeline: pipeline entity\n# :param dtlpy.entities.pipeline.PipelineResumeOption resume_option: optional - resume pipeline method (what to do with existing cycles)\n# :return: Composition object\n# \n# "
+            "source": "\n# \n# Install (start) a pipeline.\n# \n# **prerequisites**: You must be an *owner* or *developer* to use this method.\n# \n# :param dtlpy.entities.pipeline.Pipeline pipeline: pipeline entity\n# :param dtlpy.entities.pipeline.PipelineResumeOption resume_option: optional - resume pipeline method (what to do with existing cycles)\n# :return: Composition object\n# \n# \n# project.pipelines.install(pipeline='pipeline_entity')\n# "
           }
         ]
       }
@@ -43176,7 +43232,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nsuccess = project.pipelines.reset(pipeline='pipeline_entity')\n\n# \n# Reset pipeline counters.\n# \n# **prerequisites**: You must be an *owner* or *developer* to use this method.\n# \n# :param dtlpy.entities.pipeline.Pipeline pipeline: pipeline entity - optional\n# :param str pipeline_id: pipeline_id -  optional\n# :param str pipeline_name: pipeline_name -  optional\n# :param bool stop_if_running: If the pipeline is installed it will stop the pipeline and reset the counters.\n# :return: bool\n# \n# "
+            "source": "\n# \n# Reset pipeline counters.\n# \n# **prerequisites**: You must be an *owner* or *developer* to use this method.\n# \n# :param dtlpy.entities.pipeline.Pipeline pipeline: pipeline entity - optional\n# :param str pipeline_id: pipeline_id -  optional\n# :param str pipeline_name: pipeline_name -  optional\n# :param bool stop_if_running: If the pipeline is installed it will stop the pipeline and reset the counters.\n# :return: bool\n# \n# \n# success = project.pipelines.reset(pipeline='pipeline_entity')\n# "
           }
         ]
       }
@@ -43223,7 +43279,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\npipeline = project.pipelines.update_settings(pipeline='pipeline_entity', settings=dl.PipelineSettings(keep_triggers_active=True))\n\n# \n# Update pipeline settings.\n# \n# **prerequisites**: You must be an *owner* or *developer* to use this method.\n# \n# :param dtlpy.entities.pipeline.Pipeline pipeline: pipeline entity\n# :param dtlpy.entities.pipeline.PipelineSettings settings: settings entity\n# :return: Pipeline object\n# :rtype: dtlpy.entities.pipeline.Pipeline\n# \n# "
+            "source": "\n# \n# Update pipeline settings.\n# \n# **prerequisites**: You must be an *owner* or *developer* to use this method.\n# \n# :param dtlpy.entities.pipeline.Pipeline pipeline: pipeline entity\n# :param dtlpy.entities.pipeline.PipelineSettings settings: settings entity\n# :return: Pipeline object\n# :rtype: dtlpy.entities.pipeline.Pipeline\n# \n# \n# pipeline = project.pipelines.update_settings(pipeline='pipeline_entity', settings=dl.PipelineSettings(keep_triggers_active=True))\n# "
           }
         ]
       }
@@ -43373,7 +43429,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nproject.pipelines.pause(pipeline='pipeline_entity')\n\n# \n# Pause a pipeline.\n# \n# **prerequisites**: You must be an *owner* or *developer* to use this method.\n# \n# :param dtlpy.entities.pipeline.Pipeline pipeline: pipeline entity\n# :param bool keep_triggers_active: Do we want the triggers to stay active and collect events\n# :return: Composition object\n# \n# "
+            "source": "\n# \n# Pause a pipeline.\n# \n# **prerequisites**: You must be an *owner* or *developer* to use this method.\n# \n# :param dtlpy.entities.pipeline.Pipeline pipeline: pipeline entity\n# :param bool keep_triggers_active: Do we want the triggers to stay active and collect events\n# :return: Composition object\n# \n# \n# project.pipelines.pause(pipeline='pipeline_entity')\n# "
           }
         ]
       }
@@ -44053,7 +44109,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nprojects = dl.projects.list()\n\n# \n# Get the user's project list\n# \n# **Prerequisites**: You must be a **superuser** to list all users' projects.\n# \n# :return: List of Project objects\n# \n# "
+            "source": "\n# \n# Get the user's project list\n# \n# **Prerequisites**: You must be a **superuser** to list all users' projects.\n# \n# :return: List of Project objects\n# \n# \n# projects = dl.projects.list()\n# "
           }
         ]
       },
@@ -44097,7 +44153,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nproject = dl.projects.create(project_name='project_name')\n\n# \n# Create a new project.\n# \n# **Prerequisites**: Any user can create a project.\n# \n# :param str project_name: The Name of the project\n# :param bool checkout: set the project as a default project object (cookies)\n# :return: Project object\n# :rtype: dtlpy.entities.project.Project\n# \n# "
+            "source": "\n# \n# Create a new project.\n# \n# **Prerequisites**: Any user can create a project.\n# \n# :param str project_name: The Name of the project\n# :param bool checkout: set the project as a default project object (cookies)\n# :return: Project object\n# :rtype: dtlpy.entities.project.Project\n# \n# \n# project = dl.projects.create(project_name='project_name')\n# "
           }
         ]
       }
@@ -44135,7 +44191,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nproject = dl.projects.get(project_id='project_id')\n\n# \n# Get a Project object.\n# \n# **Prerequisites**: You must be in the role of an *owner* to get a project object.\n# \n# You must check out to a project or provide at least one of the following params: project_id, project_name\n# \n# :param str project_name: optional - search by name\n# :param str project_id: optional - search by id\n# :param bool checkout: set the project as a default project object (cookies)\n# :param bool fetch: optional - fetch entity from platform (True), default taken from cookie\n# :param bool log_error: optional - show the logs errors\n# :return: Project object\n# :rtype: dtlpy.entities.project.Project\n# \n# "
+            "source": "\n# \n# Get a Project object.\n# \n# **Prerequisites**: You must be in the role of an *owner* to get a project object.\n# \n# You must check out to a project or provide at least one of the following params: project_id, project_name\n# \n# :param str project_name: optional - search by name\n# :param str project_id: optional - search by id\n# :param bool checkout: set the project as a default project object (cookies)\n# :param bool fetch: optional - fetch entity from platform (True), default taken from cookie\n# :param bool log_error: optional - show the logs errors\n# :return: Project object\n# :rtype: dtlpy.entities.project.Project\n# \n# \n# project = dl.projects.get(project_id='project_id')\n# "
           }
         ]
       },
@@ -44196,7 +44252,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nproject = dl.projects.delete(project='project_entity')\n\n# \n# Update a project information (e.g., name, member roles, etc.).\n# \n# **Prerequisites**: You must be in the role of an *owner* to add a member to a project.\n# \n# :param dtlpy.entities.project.Project project: project object\n# :param bool system_metadata: optional - True, if you want to change metadata system\n# :return: Project object\n# :rtype: dtlpy.entities.project.Project\n# \n# "
+            "source": "\n# \n# Update a project information (e.g., name, member roles, etc.).\n# \n# **Prerequisites**: You must be in the role of an *owner* to add a member to a project.\n# \n# :param dtlpy.entities.project.Project project: project object\n# :param bool system_metadata: optional - True, if you want to change metadata system\n# :return: Project object\n# :rtype: dtlpy.entities.project.Project\n# \n# \n# project = dl.projects.delete(project='project_entity')\n# "
           }
         ]
       },
@@ -44225,7 +44281,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nis_deleted = dl.projects.delete(project_id='project_id', sure=True, really=True)\n\n# \n# Delete a project forever!\n# \n# **Prerequisites**: You must be in the role of an *owner* to delete a project.\n# \n# :param str project_name: optional - search by name\n# :param str project_id: optional - search by id\n# :param bool sure: Are you sure you want to delete?\n# :param bool really: Really really sure?\n# :return: True if success, error if not\n# :rtype: bool\n# \n# "
+            "source": "\n# \n# Delete a project forever!\n# \n# **Prerequisites**: You must be in the role of an *owner* to delete a project.\n# \n# :param str project_name: optional - search by name\n# :param str project_id: optional - search by id\n# :param bool sure: Are you sure you want to delete?\n# :param bool really: Really really sure?\n# :return: True if success, error if not\n# :rtype: bool\n# \n# \n# is_deleted = dl.projects.delete(project_id='project_id', sure=True, really=True)\n# "
           }
         ]
       }
@@ -44382,7 +44438,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nusers_jsons_list = dl.projects.list_members(project_id='project_id', role=dl.MemberRole.DEVELOPER)\n\n# \n# Get a list of the project members.\n# \n# **Prerequisites**: You must be in the role of an *owner* to list project members.\n# \n# :param dtlpy.entities.project.Project project: Project object\n# :param role: The required role for the user. Use the enum dl.MemberRole\n# :return: list of the project members\n# :rtype: list\n# \n# "
+            "source": "\n# \n# Get a list of the project members.\n# \n# **Prerequisites**: You must be in the role of an *owner* to list project members.\n# \n# :param dtlpy.entities.project.Project project: Project object\n# :param role: The required role for the user. Use the enum dl.MemberRole\n# :return: list of the project members\n# :rtype: list\n# \n# \n# users_jsons_list = dl.projects.list_members(project_id='project_id', role=dl.MemberRole.DEVELOPER)\n# "
           }
         ]
       }
@@ -44461,7 +44517,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nuser_json = dl.projects.add_member(project_id='project_id', email='user@dataloop.ai', role=dl.MemberRole.DEVELOPER)\n\n# \n# Add a member to the project.\n# \n# **Prerequisites**: You must be in the role of an *owner* to add a member to a project.\n# \n# :param str email: member email\n# :param str project_id: The Id of the project\n# :param role: The required role for the user. Use the enum dl.MemberRole\n# :return: dict that represent the user\n# :rtype: dict\n# \n# "
+            "source": "\n# \n# Add a member to the project.\n# \n# **Prerequisites**: You must be in the role of an *owner* to add a member to a project.\n# \n# :param str email: member email\n# :param str project_id: The Id of the project\n# :param role: The required role for the user. Use the enum dl.MemberRole\n# :return: dict that represent the user\n# :rtype: dict\n# \n# \n# user_json = dl.projects.add_member(project_id='project_id', email='user@dataloop.ai', role=dl.MemberRole.DEVELOPER)\n# "
           }
         ]
       },
@@ -44525,7 +44581,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nuser_json = = dl.projects.update_member(project_id='project_id', email='user@dataloop.ai', role=dl.MemberRole.DEVELOPER)\n\n# \n# Update member's information/details in the project.\n# \n# **Prerequisites**: You must be in the role of an *owner* to update a member.\n# \n# :param str email: member email\n# :param str project_id: The Id of the project\n# :param role: The required role for the user. Use the enum dl.MemberRole\n# :return: dict that represent the user\n# :rtype: dict\n# \n# "
+            "source": "\n# \n# Update member's information/details in the project.\n# \n# **Prerequisites**: You must be in the role of an *owner* to update a member.\n# \n# :param str email: member email\n# :param str project_id: The Id of the project\n# :param role: The required role for the user. Use the enum dl.MemberRole\n# :return: dict that represent the user\n# :rtype: dict\n# \n# \n# user_json = = dl.projects.update_member(project_id='project_id', email='user@dataloop.ai', role=dl.MemberRole.DEVELOPER)\n# "
           }
         ]
       },
@@ -44572,7 +44628,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nuser_json = dl.projects.remove_member(project_id='project_id', email='user@dataloop.ai')\n\n# \n# Remove a member from the project.\n# \n# **Prerequisites**: You must be in the role of an *owner* to delete a member from a project.\n# \n# :param str email: member email\n# :param str project_id: The Id of the project\n# :return: dict that represents the user\n# :rtype: dict\n# \n# "
+            "source": "\n# \n# Remove a member from the project.\n# \n# **Prerequisites**: You must be in the role of an *owner* to delete a member from a project.\n# \n# :param str email: member email\n# :param str project_id: The Id of the project\n# :return: dict that represents the user\n# :rtype: dict\n# \n# \n# user_json = dl.projects.remove_member(project_id='project_id', email='user@dataloop.ai')\n# "
           }
         ]
       }
@@ -44922,7 +44978,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nservice.executions.list()\n\n# \n# List service executions\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*. You must have a service.\n# \n# :param dtlpy.entities.filters.Filters filters: dl.Filters entity to filters items\n# :return: Paged entity\n# :rtype: dtlpy.entities.paged_entities.PagedEntities\n# \n# "
+            "source": "\n# \n# List service executions\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*. You must have a service.\n# \n# :param dtlpy.entities.filters.Filters filters: dl.Filters entity to filters items\n# :return: Paged entity\n# :rtype: dtlpy.entities.paged_entities.PagedEntities\n# \n# \n# service.executions.list()\n# "
           }
         ]
       }
@@ -44977,7 +45033,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\ndataset.recipes.create(recipe_name='My Recipe', labels=labels))\n\n# \n# Create a new Recipe.\n# Note: If the param ontology_ids is None, an ontology will be created first.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*.\n# \n# :param str project_ids: project ids\n# :param str or list ontology_ids: ontology ids\n# :param labels: labels\n# :param str recipe_name: recipe name\n# :param attributes: attributes\n# :param str annotation_instruction_file: file path or url of the recipe instruction\n# :return: Recipe entity\n# :rtype: dtlpy.entities.recipe.Recipe\n# \n# "
+            "source": "\n# \n# Create a new Recipe.\n# Note: If the param ontology_ids is None, an ontology will be created first.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*.\n# \n# :param str project_ids: project ids\n# :param str or list ontology_ids: ontology ids\n# :param labels: labels\n# :param str recipe_name: recipe name\n# :param attributes: attributes\n# :param str annotation_instruction_file: file path or url of the recipe instruction\n# :return: Recipe entity\n# :rtype: dtlpy.entities.recipe.Recipe\n# \n# \n# dataset.recipes.create(recipe_name='My Recipe', labels=labels))\n# "
           }
         ]
       },
@@ -45126,7 +45182,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\ndataset.recipes.update(recipe='recipe_entity')\n\n# \n# Update recipe.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*.\n# \n# :param dtlpy.entities.recipe.Recipe recipe: Recipe object\n# :param bool system_metadata: True, if you want to change metadata system\n# :return: Recipe object\n# :rtype: dtlpy.entities.recipe.Recipe\n# \n# "
+            "source": "\n# \n# Update recipe.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*.\n# \n# :param dtlpy.entities.recipe.Recipe recipe: Recipe object\n# :param bool system_metadata: True, if you want to change metadata system\n# :return: Recipe object\n# :rtype: dtlpy.entities.recipe.Recipe\n# \n# \n# dataset.recipes.update(recipe='recipe_entity')\n# "
           }
         ]
       },
@@ -45176,7 +45232,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\ndataset.recipes.get(recipe_id='recipe_id')\n\n# \n# Get a Recipe object to use in your code.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*.\n# \n# :param str recipe_id: recipe id\n# :return: Recipe object\n# :rtype: dtlpy.entities.recipe.Recipe\n# \n# "
+            "source": "\n# \n# Get a Recipe object to use in your code.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*.\n# \n# :param str recipe_id: recipe id\n# :return: Recipe object\n# :rtype: dtlpy.entities.recipe.Recipe\n# \n# \n# dataset.recipes.get(recipe_id='recipe_id')\n# "
           }
         ]
       },
@@ -45214,7 +45270,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\ndataset.recipes.delete(recipe_id='recipe_id')\n\n# \n# Delete recipe from platform.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*.\n# \n# :param str recipe_id: recipe id\n# :param bool force: force delete recipe\n# :return: True if success\n# :rtype: bool\n# \n# "
+            "source": "\n# \n# Delete recipe from platform.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*.\n# \n# :param str recipe_id: recipe id\n# :param bool force: force delete recipe\n# :return: True if success\n# :rtype: bool\n# \n# \n# dataset.recipes.delete(recipe_id='recipe_id')\n# "
           }
         ]
       }
@@ -45268,7 +45324,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\ndataset.recipes.clone(recipe_id='recipe_id')\n# \n# Clone recipe.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*.\n# \n# :param dtlpy.entities.recipe.Recipe recipe: Recipe object\n# :param str recipe_id: Recipe id\n# :param bool shallow: If True, link to existing ontology, clones all ontologies that are linked to the recipe as well\n# :return: Cloned ontology object\n# :rtype: dtlpy.entities.recipe.Recipe\n# \n# \n# "
+            "source": "\n# \n# Clone recipe.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*.\n# \n# :param dtlpy.entities.recipe.Recipe recipe: Recipe object\n# :param str recipe_id: Recipe id\n# :param bool shallow: If True, link to existing ontology, clones all ontologies that are linked to the recipe as well\n# :return: Cloned ontology object\n# :rtype: dtlpy.entities.recipe.Recipe\n# \n# \n# dataset.recipes.clone(recipe_id='recipe_id')\n# "
           }
         ]
       }
@@ -46005,7 +46061,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nservice = package.services.deploy(service_name=package_name,\nexecution_timeout=3 * 60 * 60,\nmodule_name=module.name,\nruntime=dl.KubernetesRuntime(\nconcurrency=10,\npod_type=dl.InstanceCatalog.REGULAR_S,\nautoscaler=dl.KubernetesRabbitmqAutoscaler(\nmin_replicas=1,\nmax_replicas=20,\nqueue_length=20\n)\n)\n)\n\n# \n# Deploy service.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*. You must have a package.\n# \n# :param str service_name: name\n# :param dtlpy.entities.package.Package package: package entity\n# :param str bot: bot email\n# :param str revision: package revision of version\n# :param init_input: config to run at startup\n# :param dict runtime: runtime resources\n# :param str pod_type: pod type dl.InstanceCatalog\n# :param str sdk_version:  - optional - string - sdk version\n# :param str agent_versions: - dictionary - - optional -versions of sdk\n# :param bool verify: if true, verify the inputs\n# :param bool checkout: if true, checkout (switch) to service\n# :param str module_name: module name\n# :param str project_id: project id\n# :param str driver_id: driver id\n# :param Callable func: function to deploy\n# :param bool run_execution_as_process: if true, run execution as process\n# :param int execution_timeout: execution timeout in seconds\n# :param int drain_time: drain time in seconds\n# :param int max_attempts: maximum execution retries in-case of a service reset\n# :param str on_reset: what happens on reset\n# :param bool force: optional - if true, terminate old replicas immediately\n# :param list secrets: list of the integrations ids\n# :param kwargs: list of additional arguments\n# :return: Service object\n# :rtype: dtlpy.entities.service.Service\n# \n# "
+            "source": "\n# \n# Deploy service.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*. You must have a package.\n# \n# :param str service_name: name\n# :param dtlpy.entities.package.Package package: package entity\n# :param str bot: bot email\n# :param str revision: package revision of version\n# :param init_input: config to run at startup\n# :param dict runtime: runtime resources\n# :param str pod_type: pod type dl.InstanceCatalog\n# :param str sdk_version:  - optional - string - sdk version\n# :param str agent_versions: - dictionary - - optional -versions of sdk\n# :param bool verify: if true, verify the inputs\n# :param bool checkout: if true, checkout (switch) to service\n# :param str module_name: module name\n# :param str project_id: project id\n# :param str driver_id: driver id\n# :param Callable func: function to deploy\n# :param bool run_execution_as_process: if true, run execution as process\n# :param int execution_timeout: execution timeout in seconds\n# :param int drain_time: drain time in seconds\n# :param int max_attempts: maximum execution retries in-case of a service reset\n# :param str on_reset: what happens on reset\n# :param bool force: optional - if true, terminate old replicas immediately\n# :param list secrets: list of the integrations ids\n# :param list integrations: list of the integrations\n# :param bool active: if true, activate the service\n# :param kwargs: list of additional arguments\n# :return: Service object\n# :rtype: dtlpy.entities.service.Service\n# \n# \n# service = package.services.deploy(service_name=package_name,\n# execution_timeout=3 * 60 * 60,\n# module_name=module.name,\n# runtime=dl.KubernetesRuntime(\n# concurrency=10,\n# pod_type=dl.InstanceCatalog.REGULAR_S,\n# autoscaler=dl.KubernetesRabbitmqAutoscaler(\n# min_replicas=1,\n# max_replicas=20,\n# queue_length=20\n# )\n# )\n# )\n# "
           }
         ]
       }
@@ -46222,7 +46278,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nservice_logs = package.services.log(service='service_entity')\n\n# \n# Get service logs.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*. You must have a package.\n# \n# :param dtlpy.entities.service.Service service: service object\n# :param int size: size\n# :param dict checkpoint: the information from the lst point checked in the service\n# :param str start: iso format time\n# :param str end: iso format time\n# :param bool follow: if true, keep stream future logs\n# :param str text: text\n# :param str execution_id: execution id\n# :param str function_name: function name\n# :param str replica_id: replica id\n# :param bool system: system\n# :param bool view: if true, print out all the logs\n# :param bool until_completed: wait until completed\n# :param str log_level: the log level to display dl.LoggingLevel\n# :param str model_id: model id\n# :param str model_operation: model operation action\n# :param str project_id: project id\n# :return: ServiceLog entity\n# :rtype: ServiceLog\n# \n# "
+            "source": "\n# \n# Get service logs.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*. You must have a package.\n# \n# :param dtlpy.entities.service.Service service: service object\n# :param int size: size\n# :param dict checkpoint: the information from the lst point checked in the service\n# :param str start: iso format time\n# :param str end: iso format time\n# :param bool follow: if true, keep stream future logs\n# :param str text: text\n# :param str execution_id: execution id\n# :param str function_name: function name\n# :param str replica_id: replica id\n# :param bool system: system\n# :param bool view: if true, print out all the logs\n# :param bool until_completed: wait until completed\n# :param str log_level: the log level to display dl.LoggingLevel\n# :param str model_id: model id\n# :param str model_operation: model operation action\n# :param str project_id: project id\n# :return: ServiceLog entity\n# :rtype: ServiceLog\n# \n# \n# service_logs = package.services.log(service='service_entity')\n# "
           }
         ]
       }
@@ -46339,7 +46395,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nservice = package.services.get(service_id='service_id')\n\n# \n# Get service to use in your code.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*. You must have a package.\n# \n# :param str service_name: optional - search by name\n# :param str service_id: optional - search by id\n# :param bool checkout: if true, checkout (switch) to service\n# :param fetch: optional - fetch entity from platform, default taken from cookie\n# :return: Service object\n# :rtype: dtlpy.entities.service.Service\n# \n# "
+            "source": "\n# \n# Get service to use in your code.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*. You must have a package.\n# \n# :param str service_name: optional - search by name\n# :param str service_id: optional - search by id\n# :param bool checkout: if true, checkout (switch) to service\n# :param fetch: optional - fetch entity from platform, default taken from cookie\n# :return: Service object\n# :rtype: dtlpy.entities.service.Service\n# \n# \n# service = package.services.get(service_id='service_id')\n# "
           }
         ]
       },
@@ -46402,7 +46458,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nservice = package.services.update(service='service_entity')\n\n# \n# Update service changes to platform.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*. You must have a package.\n# \n# :param dtlpy.entities.service.Service service: Service entity\n# :param bool force: optional - terminate old replicas immediately\n# :return: Service entity\n# :rtype: dtlpy.entities.service.Service\n# \n# "
+            "source": "\n# \n# Update service changes to platform.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*. You must have a package.\n# \n# :param dtlpy.entities.service.Service service: Service entity\n# :param bool force: optional - terminate old replicas immediately\n# :return: Service entity\n# :rtype: dtlpy.entities.service.Service\n# \n# \n# service = package.services.update(service='service_entity')\n# "
           }
         ]
       },
@@ -46447,7 +46503,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nis_deleted = package.services.delete(service_id='service_id')\n\n# \n# Delete Service object\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*. You must have a package.\n# \n# You must provide at least ONE of the following params: service_id, service_name.\n# \n# :param str service_name: by name\n# :param str service_id: by id\n# :return: True\n# :rtype: bool\n# \n# "
+            "source": "\n# \n# Delete Service object\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*. You must have a package.\n# \n# You must provide at least ONE of the following params: service_id, service_name.\n# \n# :param force:\n# :param str service_name: by name\n# :param str service_id: by id\n# :return: True\n# :rtype: bool\n# \n# \n# is_deleted = package.services.delete(service_id='service_id')\n# "
           }
         ]
       }
@@ -46761,7 +46817,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nservice_json = package.services.resume(service_id='service_id')\n\n# \n# Resume service.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*. You must have a package.\n# \n# You must provide at least ONE of the following params: service_id, service_name.\n# \n# :param str service_name: service name\n# :param str service_id: service id\n# :param bool force: optional - terminate old replicas immediately\n# :return: json of the service\n# :rtype: dict\n# \n# "
+            "source": "\n# \n# Resume service.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*. You must have a package.\n# \n# You must provide at least ONE of the following params: service_id, service_name.\n# \n# :param str service_name: service name\n# :param str service_id: service id\n# :param bool force: optional - terminate old replicas immediately\n# :return: json of the service\n# :rtype: dict\n# \n# \n# service_json = package.services.resume(service_id='service_id')\n# "
           }
         ]
       }
@@ -46803,7 +46859,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nservice_revision = package.services.revisions(service_id='service_id')\n\n# \n# Get service revisions history.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*. You must have a package.\n# \n# You must provide at leats ONE of the following params: service, service_id\n# \n# :param dtlpy.entities.service.Service service: Service entity\n# :param str service_id: service id\n# \n# "
+            "source": "\n# \n# Get service revisions history.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*. You must have a package.\n# \n# You must provide at leats ONE of the following params: service, service_id\n# \n# :param dtlpy.entities.service.Service service: Service entity\n# :param str service_id: service id\n# \n# \n# service_revision = package.services.revisions(service_id='service_id')\n# "
           }
         ]
       }
@@ -46903,7 +46959,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nstatus_json = package.services.status(service_id='service_id')\n\n# \n# Get service status.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*. You must have a package.\n# \n# You must provide at least ONE of the following params: service_id, service_name\n# \n# :param str service_name: service name\n# :param str service_id: service id\n# :return: status json\n# :rtype: dict\n# \n# "
+            "source": "\n# \n# Get service status.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*. You must have a package.\n# \n# You must provide at least ONE of the following params: service_id, service_name\n# \n# :param str service_name: service name\n# :param str service_id: service id\n# :return: status json\n# :rtype: dict\n# \n# \n# status_json = package.services.status(service_id='service_id')\n# "
           }
         ]
       },
@@ -46989,7 +47045,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nsuccess = package.services.pause(service_id='service_id')\n\n# \n# Pause service.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*. You must have a package.\n# \n# You must provide at least ONE of the following params: service_id, service_name\n# \n# :param str service_name: service name\n# :param str service_id: service id\n# :param bool force: optional - terminate old replicas immediately\n# :return: True if success\n# :rtype: bool\n# \n# "
+            "source": "\n# \n# Pause service.\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*. You must have a package.\n# \n# You must provide at least ONE of the following params: service_id, service_name\n# \n# :param str service_name: service name\n# :param str service_id: service id\n# :param bool force: optional - terminate old replicas immediately\n# :return: True if success\n# :rtype: bool\n# \n# \n# success = package.services.pause(service_id='service_id')\n# "
           }
         ]
       }
@@ -48401,7 +48457,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nservice.triggers.create(name='triggername',\nexecution_mode=dl.TriggerExecutionMode.ONCE,\nresource='Item',\nactions='Created',\nfunction_name='run',\nfilters={'$and': [{'hidden': False},\n{'type': 'file'}]}\n)\n\n# \n# Create a Trigger. Can create two types: a cron trigger or an event trigger.\n# Inputs are different for each type\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*. You must have a service.\n# \n# Inputs for all types:\n# \n# :param str service_id: Id of services to be triggered\n# :param str trigger_type: can be cron or event. use enum dl.TriggerType for the full list\n# :param str name: name of the trigger\n# :param str webhook_id: id for webhook to be called\n# :param str  function_name: the function name to be called when triggered (must be defined in the package)\n# :param str  project_id: project id where trigger will work\n# :param bool active: optional - True/False, default = True, if true trigger is active\n# \n# Inputs for event trigger:\n# :param dtlpy.entities.filters.Filters filters: optional - Item/Annotation metadata filters, default = none\n# :param str resource: optional - Dataset/Item/Annotation/ItemStatus, default = Item\n# :param str actions: optional - Created/Updated/Deleted, default = create\n# :param str execution_mode: how many times trigger should be activated; default is \"Once\". enum dl.TriggerExecutionMode\n# \n# Inputs for cron trigger:\n# :param start_at: iso format date string to start activating the cron trigger\n# :param end_at: iso format date string to end the cron activation\n# :param inputs: dictionary \"name\":\"val\" of inputs to the function\n# :param str cron: cron spec specifying when it should run. more information: https://en.wikipedia.org/wiki/Cron\n# :param str pipeline_id: Id of pipeline to be triggered\n# :param pipeline: pipeline entity to be triggered\n# :param str pipeline_node_id: Id of pipeline root node to be triggered\n# :param root_node_namespace: namespace of pipeline root node to be triggered\n# \n# :return: Trigger entity\n# :rtype: dtlpy.entities.trigger.Trigger\n# \n# "
+            "source": "\n# \n# Create a Trigger. Can create two types: a cron trigger or an event trigger.\n# Inputs are different for each type\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*. You must have a service.\n# \n# Inputs for all types:\n# \n# :param str service_id: Id of services to be triggered\n# :param str trigger_type: can be cron or event. use enum dl.TriggerType for the full list\n# :param str name: name of the trigger\n# :param str webhook_id: id for webhook to be called\n# :param str  function_name: the function name to be called when triggered (must be defined in the package)\n# :param str  project_id: project id where trigger will work\n# :param bool active: optional - True/False, default = True, if true trigger is active\n# \n# Inputs for event trigger:\n# :param dtlpy.entities.filters.Filters filters: optional - Item/Annotation metadata filters, default = none\n# :param str resource: optional - Dataset/Item/Annotation/ItemStatus, default = Item\n# :param str actions: optional - Created/Updated/Deleted, default = create\n# :param str execution_mode: how many times trigger should be activated; default is \"Once\". enum dl.TriggerExecutionMode\n# \n# Inputs for cron trigger:\n# :param start_at: iso format date string to start activating the cron trigger\n# :param end_at: iso format date string to end the cron activation\n# :param inputs: dictionary \"name\":\"val\" of inputs to the function\n# :param str cron: cron spec specifying when it should run. more information: https://en.wikipedia.org/wiki/Cron\n# :param str pipeline_id: Id of pipeline to be triggered\n# :param pipeline: pipeline entity to be triggered\n# :param str pipeline_node_id: Id of pipeline root node to be triggered\n# :param root_node_namespace: namespace of pipeline root node to be triggered\n# \n# :return: Trigger entity\n# :rtype: dtlpy.entities.trigger.Trigger\n# \n# \n# service.triggers.create(name='triggername',\n# execution_mode=dl.TriggerExecutionMode.ONCE,\n# resource='Item',\n# actions='Created',\n# function_name='run',\n# filters={'$and': [{'hidden': False},\n# {'type': 'file'}]}\n# )\n# "
           }
         ]
       }
@@ -48440,7 +48496,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nservice.triggers.get(trigger_id='trigger_id')\n\n# \n# Get Trigger object\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*. You must have a service.\n# \n# :param str trigger_id: trigger id\n# :param str  trigger_name: trigger name\n# :return: Trigger entity\n# :rtype: dtlpy.entities.trigger.Trigger\n# \n# "
+            "source": "\n# \n# Get Trigger object\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*. You must have a service.\n# \n# :param str trigger_id: trigger id\n# :param str  trigger_name: trigger name\n# :return: Trigger entity\n# :rtype: dtlpy.entities.trigger.Trigger\n# \n# \n# service.triggers.get(trigger_id='trigger_id')\n# "
           }
         ]
       },
@@ -48487,7 +48543,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nservice.triggers.update(trigger='trigger_entity')\n\n# \n# Update trigger\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*. You must have a service.\n# \n# :param dtlpy.entities.trigger.Trigger trigger: Trigger entity\n# :return: Trigger entity\n# :rtype: dtlpy.entities.trigger.Trigger\n# \n# "
+            "source": "\n# \n# Update trigger\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*. You must have a service.\n# \n# :param dtlpy.entities.trigger.Trigger trigger: Trigger entity\n# :return: Trigger entity\n# :rtype: dtlpy.entities.trigger.Trigger\n# \n# \n# service.triggers.update(trigger='trigger_entity')\n# "
           }
         ]
       },
@@ -48517,7 +48573,7 @@
         "x-codeSamples": [
           {
             "lang": "Python",
-            "source": "\nservice.triggers.delete(trigger_id='trigger_id')\n\n# \n# Delete Trigger object\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*. You must have a service.\n# \n# :param str trigger_id: trigger id\n# :param str trigger_name: trigger name\n# :return: True is successful error if not\n# :rtype: bool\n# \n# "
+            "source": "\n# \n# Delete Trigger object\n# \n# **Prerequisites**: You must be in the role of an *owner* or *developer*. You must have a service.\n# \n# :param str trigger_id: trigger id\n# :param str trigger_name: trigger name\n# :return: True is successful error if not\n# :rtype: bool\n# \n# \n# service.triggers.delete(trigger_id='trigger_id')\n# "
           }
         ]
       }

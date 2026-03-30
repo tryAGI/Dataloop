@@ -31,9 +31,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// success = dl.organizations.add_member(email='user@domain.com',<br/>
-        /// organization_id='organization_id',<br/>
-        /// role=dl.MemberOrgRole.MEMBER)<br/>
         /// # <br/>
         /// # Add members to your organization. Read about members and groups `here &lt;https://dataloop.ai/docs/org-members-groups&gt;`_.<br/>
         /// # <br/>
@@ -49,6 +46,10 @@ namespace Dataloop
         /// # :return: True if successful or error if unsuccessful<br/>
         /// # :rtype: bool<br/>
         /// # <br/>
+        /// # <br/>
+        /// # success = dl.organizations.add_member(email='user@domain.com',<br/>
+        /// # organization_id='organization_id',<br/>
+        /// # role=dl.MemberOrgRole.MEMBER)<br/>
         /// # 
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Dataloop.APIOrgUser>> AddOrgMembersAsync(

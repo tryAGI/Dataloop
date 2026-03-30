@@ -30,6 +30,18 @@ namespace Dataloop
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
+        /// <remarks>
+        /// # <br/>
+        /// # Split dataset items into ML subsets.<br/>
+        /// # <br/>
+        /// # :param str dataset_id: The ID of the dataset.<br/>
+        /// # :param dict items_query: Query to select items.<br/>
+        /// # :param dict ml_split_list: Dictionary with 'train', 'validation', 'test' keys and integer percentages.<br/>
+        /// # :return: True if the split operation was successful.<br/>
+        /// # :rtype: bool<br/>
+        /// # :raises: PlatformException on failure and ValueError if percentages do not sum to 100 or invalid keys/values.<br/>
+        /// # 
+        /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.APICommand> SplitMlOperationAsync(
             string id,
 

@@ -11,9 +11,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// recipe.ontologies.create(labels='labels_entity',<br/>
-        /// title='new_ontology',<br/>
-        /// project_ids='project_ids')<br/>
         /// # <br/>
         /// # Create a new ontology.<br/>
         /// # <br/>
@@ -26,6 +23,10 @@ namespace Dataloop
         /// # :return: Ontology object<br/>
         /// # :rtype: dtlpy.entities.ontology.Ontology<br/>
         /// # <br/>
+        /// # <br/>
+        /// # recipe.ontologies.create(labels='labels_entity',<br/>
+        /// # title='new_ontology',<br/>
+        /// # project_ids='project_ids')<br/>
         /// # 
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<global::Dataloop.APIOntologyV2, global::Dataloop.APIOntology>> CreateOntologyAsync(

@@ -11,7 +11,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// projects = dl.projects.list()<br/>
         /// # <br/>
         /// # Get the user's project list<br/>
         /// # <br/>
@@ -19,6 +18,8 @@ namespace Dataloop
         /// # <br/>
         /// # :return: List of Project objects<br/>
         /// # <br/>
+        /// # <br/>
+        /// # projects = dl.projects.list()<br/>
         /// # 
         /// </remarks>
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Dataloop.APIProject>> GetMyProjectsAsync(

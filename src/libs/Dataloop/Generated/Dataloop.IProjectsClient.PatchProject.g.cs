@@ -12,7 +12,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// project = dl.projects.delete(project='project_entity')<br/>
         /// # <br/>
         /// # Update a project information (e.g., name, member roles, etc.).<br/>
         /// # <br/>
@@ -23,6 +22,8 @@ namespace Dataloop
         /// # :return: Project object<br/>
         /// # :rtype: dtlpy.entities.project.Project<br/>
         /// # <br/>
+        /// # <br/>
+        /// # project = dl.projects.delete(project='project_entity')<br/>
         /// # 
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.APIProject> PatchProjectAsync(

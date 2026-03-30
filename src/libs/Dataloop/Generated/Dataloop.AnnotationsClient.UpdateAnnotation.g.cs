@@ -37,7 +37,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// annotations = item.annotations.update(annotation='annotation')<br/>
         /// # <br/>
         /// # Update an existing annotation. For example, you may change the annotation's label and then use the update method.<br/>
         /// # <br/>
@@ -50,6 +49,8 @@ namespace Dataloop
         /// # :return: True if successful or error if unsuccessful<br/>
         /// # :rtype: bool<br/>
         /// # <br/>
+        /// # <br/>
+        /// # annotations = item.annotations.update(annotation='annotation')<br/>
         /// # 
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.APIAnnotation> UpdateAnnotationAsync(

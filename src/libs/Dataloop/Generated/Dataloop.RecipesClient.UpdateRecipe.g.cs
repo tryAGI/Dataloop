@@ -31,7 +31,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// dataset.recipes.update(recipe='recipe_entity')<br/>
         /// # <br/>
         /// # Update recipe.<br/>
         /// # <br/>
@@ -42,6 +41,8 @@ namespace Dataloop
         /// # :return: Recipe object<br/>
         /// # :rtype: dtlpy.entities.recipe.Recipe<br/>
         /// # <br/>
+        /// # <br/>
+        /// # dataset.recipes.update(recipe='recipe_entity')<br/>
         /// # 
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<global::Dataloop.APIRecipeV2, global::Dataloop.APIRecipe>> UpdateRecipeAsync(

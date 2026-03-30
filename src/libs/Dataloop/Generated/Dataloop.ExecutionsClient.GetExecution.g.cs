@@ -31,7 +31,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// service.executions.get(execution_id='execution_id')<br/>
         /// # <br/>
         /// # Get Service execution object<br/>
         /// # <br/>
@@ -42,6 +41,8 @@ namespace Dataloop
         /// # :return: Service execution object<br/>
         /// # :rtype: dtlpy.entities.execution.Execution<br/>
         /// # <br/>
+        /// # <br/>
+        /// # service.executions.get(execution_id='execution_id')<br/>
         /// # 
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.APIExecution> GetExecutionAsync(

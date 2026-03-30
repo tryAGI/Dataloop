@@ -12,11 +12,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// dataset.items.clone(item_id='item_id',<br/>
-        /// dst_dataset_id='dist_dataset_id',<br/>
-        /// with_metadata=True,<br/>
-        /// with_task_annotations_status=False,<br/>
-        /// with_annotations=False)<br/>
         /// # <br/>
         /// # Clone item. Read more about cloning datatsets and items in our `documentation &lt;https://dataloop.ai/docs/clone-merge-dataset#cloned-dataset&gt;`_ and `SDK documentation &lt;https://developers.dataloop.ai/tutorials/data_management/data_versioning/chapter/&gt;`_.<br/>
         /// # <br/>
@@ -34,6 +29,12 @@ namespace Dataloop
         /// # :return: Item object<br/>
         /// # :rtype: dtlpy.entities.item.Item<br/>
         /// # <br/>
+        /// # <br/>
+        /// # dataset.items.clone(item_id='item_id',<br/>
+        /// # dst_dataset_id='dist_dataset_id',<br/>
+        /// # with_metadata=True,<br/>
+        /// # with_task_annotations_status=False,<br/>
+        /// # with_annotations=False)<br/>
         /// # 
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.APICommand> CloneItemAsync(

@@ -31,10 +31,10 @@ namespace Dataloop
         /// # <br/>
         /// # Create a new Feature vector<br/>
         /// # <br/>
-        /// # :param immutable value: actual vector - immutable (list of floats [1,2,3])<br/>
+        /// # :param immutable value: actual vector - immutable (list of floats [1,2,3]) or list of lists of floats<br/>
         /// # :param str project_id: the id of the project where feature will be created<br/>
         /// # :param str feature_set_id: ref to a featureSet this vector is a part of<br/>
-        /// # :param str entity_id: id of the entity the featureVector is linked to (item.id, annotation.id etc)<br/>
+        /// # :param entity: the entity the featureVector is linked to (item, annotation, etc) or list of entities<br/>
         /// # :param str version: version of the featureSet generator<br/>
         /// # :param str parent_id: optional: parent FeatureSet id - used when FeatureVector is a subFeature<br/>
         /// # :param str org_id: the id of the org where featureVector will be created<br/>

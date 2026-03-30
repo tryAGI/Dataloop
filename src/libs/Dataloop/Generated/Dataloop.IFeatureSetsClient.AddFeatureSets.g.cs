@@ -19,6 +19,7 @@ namespace Dataloop
         /// # :param str set_type: string of the feature type: 2d, 3d, modelFC, TSNE,PCA,FFT<br/>
         /// # :param entity_type: the entity that feature vector is linked to. Use the enum dl.FeatureEntityType<br/>
         /// # :param str project_id: the ID of the project where feature set will be created<br/>
+        /// # :param str model_id: the ID of the model that creates the vectors<br/>
         /// # :param str org_id: the ID of the org where feature set will be created<br/>
         /// # :return: Feature Set object<br/>
         /// # 

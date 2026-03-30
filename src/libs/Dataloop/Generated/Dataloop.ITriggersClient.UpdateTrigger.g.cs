@@ -12,7 +12,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// service.triggers.update(trigger='trigger_entity')<br/>
         /// # <br/>
         /// # Update trigger<br/>
         /// # <br/>
@@ -22,6 +21,8 @@ namespace Dataloop
         /// # :return: Trigger entity<br/>
         /// # :rtype: dtlpy.entities.trigger.Trigger<br/>
         /// # <br/>
+        /// # <br/>
+        /// # service.triggers.update(trigger='trigger_entity')<br/>
         /// # 
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.APITrigger> UpdateTriggerAsync(

@@ -12,7 +12,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// project.packages.delete(package='package_entity')<br/>
         /// # <br/>
         /// # Update Package changes to the platform.<br/>
         /// # <br/>
@@ -23,6 +22,8 @@ namespace Dataloop
         /// # :return: Package object<br/>
         /// # :rtype: dtlpy.entities.package.Package<br/>
         /// # <br/>
+        /// # <br/>
+        /// # project.packages.delete(package='package_entity')<br/>
         /// # 
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.APIPackage> UpdatePackageAsync(

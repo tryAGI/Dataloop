@@ -23,7 +23,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// is_deleted = item.annotations.delete(annotation_id='annotation_id')<br/>
         /// # <br/>
         /// # Remove an annotation from item.<br/>
         /// # <br/>
@@ -36,6 +35,8 @@ namespace Dataloop
         /// # :return: True/False<br/>
         /// # :rtype: bool<br/>
         /// # <br/>
+        /// # <br/>
+        /// # is_deleted = item.annotations.delete(annotation_id='annotation_id')<br/>
         /// # 
         /// </remarks>
         public async global::System.Threading.Tasks.Task DeleteAnnotationAsync(

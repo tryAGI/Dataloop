@@ -31,7 +31,6 @@ namespace Dataloop
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
-        /// service = package.services.get(service_id='service_id')<br/>
         /// # <br/>
         /// # Get service to use in your code.<br/>
         /// # <br/>
@@ -44,6 +43,8 @@ namespace Dataloop
         /// # :return: Service object<br/>
         /// # :rtype: dtlpy.entities.service.Service<br/>
         /// # <br/>
+        /// # <br/>
+        /// # service = package.services.get(service_id='service_id')<br/>
         /// # 
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.APIService> GetServiceAsync(
