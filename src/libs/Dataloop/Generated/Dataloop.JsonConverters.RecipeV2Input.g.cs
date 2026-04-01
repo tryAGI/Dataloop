@@ -137,13 +137,13 @@ namespace Dataloop.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.PickRecipeV2TitleOrProjectIdsOrOntology), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.PickRecipeV2TitleOrProjectIdsOrOntology?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.PickRecipeV2TitleOrProjectIdsOrOntology).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickTitleOrProjectIdsOntology, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickTitleOrProjectIdsOntology!, typeInfo);
             }
             else if (value.IsPartial)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.PartialRecipeV2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.PartialRecipeV2?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.PartialRecipeV2).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Partial, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Partial!, typeInfo);
             }
         }
     }
