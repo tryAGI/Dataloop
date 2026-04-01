@@ -157,19 +157,19 @@ namespace Dataloop.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.LineData), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.LineData?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.LineData).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Line, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Line!, typeInfo);
             }
             else if (value.IsMatrix)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.MatrixData), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.MatrixData?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.MatrixData).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Matrix, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Matrix!, typeInfo);
             }
             else if (value.IsSummary)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.SummaryData), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.SummaryData?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.SummaryData).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Summary, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Summary!, typeInfo);
             }
         }
     }
