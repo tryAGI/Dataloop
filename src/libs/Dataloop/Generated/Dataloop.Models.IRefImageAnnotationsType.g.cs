@@ -13,35 +13,35 @@ namespace Dataloop
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public object? Value1 { get; init; }
+        public object? IRefImageAnnotationsTypeVariant1 { get; init; }
 #else
-        public object? Value1 { get; }
+        public object? IRefImageAnnotationsTypeVariant1 { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value1))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(IRefImageAnnotationsTypeVariant1))]
 #endif
-        public bool IsValue1 => Value1 != null;
+        public bool IsIRefImageAnnotationsTypeVariant1 => IRefImageAnnotationsTypeVariant1 != null;
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Dataloop.IBaseRefAnnotationCoordinates? Value2 { get; init; }
+        public global::Dataloop.IBaseRefAnnotationCoordinates? BaseAnnotationCoordinates { get; init; }
 #else
-        public global::Dataloop.IBaseRefAnnotationCoordinates? Value2 { get; }
+        public global::Dataloop.IBaseRefAnnotationCoordinates? BaseAnnotationCoordinates { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value2))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(BaseAnnotationCoordinates))]
 #endif
-        public bool IsValue2 => Value2 != null;
+        public bool IsBaseAnnotationCoordinates => BaseAnnotationCoordinates != null;
         /// <summary>
         /// 
         /// </summary>
@@ -50,42 +50,42 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::Dataloop.IBaseRefAnnotationCoordinates?(IRefImageAnnotationsType @this) => @this.Value2;
+        public static implicit operator global::Dataloop.IBaseRefAnnotationCoordinates?(IRefImageAnnotationsType @this) => @this.BaseAnnotationCoordinates;
 
         /// <summary>
         /// 
         /// </summary>
         public IRefImageAnnotationsType(global::Dataloop.IBaseRefAnnotationCoordinates? value)
         {
-            Value2 = value;
+            BaseAnnotationCoordinates = value;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public IRefImageAnnotationsType(
-            object? value1,
-            global::Dataloop.IBaseRefAnnotationCoordinates? value2
+            object? iRefImageAnnotationsTypeVariant1,
+            global::Dataloop.IBaseRefAnnotationCoordinates? baseAnnotationCoordinates
             )
         {
-            Value1 = value1;
-            Value2 = value2;
+            IRefImageAnnotationsTypeVariant1 = iRefImageAnnotationsTypeVariant1;
+            BaseAnnotationCoordinates = baseAnnotationCoordinates;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public object? Object =>
-            Value2 as object ??
-            Value1 as object 
+            BaseAnnotationCoordinates as object ??
+            IRefImageAnnotationsTypeVariant1 as object 
             ;
 
         /// <summary>
         /// 
         /// </summary>
         public override string? ToString() =>
-            Value1?.ToString() ??
-            Value2?.ToString() 
+            IRefImageAnnotationsTypeVariant1?.ToString() ??
+            BaseAnnotationCoordinates?.ToString() 
             ;
 
         /// <summary>
@@ -93,15 +93,15 @@ namespace Dataloop
         /// </summary>
         public bool Validate()
         {
-            return IsValue1 && IsValue2;
+            return IsIRefImageAnnotationsTypeVariant1 && IsBaseAnnotationCoordinates;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<object?, TResult>? value1 = null,
-            global::System.Func<global::Dataloop.IBaseRefAnnotationCoordinates?, TResult>? value2 = null,
+            global::System.Func<object?, TResult>? iRefImageAnnotationsTypeVariant1 = null,
+            global::System.Func<global::Dataloop.IBaseRefAnnotationCoordinates?, TResult>? baseAnnotationCoordinates = null,
             bool validate = true)
         {
             if (validate)
@@ -109,13 +109,13 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsValue1 && value1 != null)
+            if (IsIRefImageAnnotationsTypeVariant1 && iRefImageAnnotationsTypeVariant1 != null)
             {
-                return value1(Value1!);
+                return iRefImageAnnotationsTypeVariant1(IRefImageAnnotationsTypeVariant1!);
             }
-            else if (IsValue2 && value2 != null)
+            else if (IsBaseAnnotationCoordinates && baseAnnotationCoordinates != null)
             {
-                return value2(Value2!);
+                return baseAnnotationCoordinates(BaseAnnotationCoordinates!);
             }
 
             return default(TResult);
@@ -125,8 +125,8 @@ namespace Dataloop
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<object?>? value1 = null,
-            global::System.Action<global::Dataloop.IBaseRefAnnotationCoordinates?>? value2 = null,
+            global::System.Action<object?>? iRefImageAnnotationsTypeVariant1 = null,
+            global::System.Action<global::Dataloop.IBaseRefAnnotationCoordinates?>? baseAnnotationCoordinates = null,
             bool validate = true)
         {
             if (validate)
@@ -134,13 +134,13 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsValue1)
+            if (IsIRefImageAnnotationsTypeVariant1)
             {
-                value1?.Invoke(Value1!);
+                iRefImageAnnotationsTypeVariant1?.Invoke(IRefImageAnnotationsTypeVariant1!);
             }
-            else if (IsValue2)
+            else if (IsBaseAnnotationCoordinates)
             {
-                value2?.Invoke(Value2!);
+                baseAnnotationCoordinates?.Invoke(BaseAnnotationCoordinates!);
             }
         }
 
@@ -151,9 +151,9 @@ namespace Dataloop
         {
             var fields = new object?[]
             {
-                Value1,
+                IRefImageAnnotationsTypeVariant1,
                 typeof(object),
-                Value2,
+                BaseAnnotationCoordinates,
                 typeof(global::Dataloop.IBaseRefAnnotationCoordinates),
             };
             const int offset = unchecked((int)2166136261);
@@ -171,8 +171,8 @@ namespace Dataloop
         public bool Equals(IRefImageAnnotationsType other)
         {
             return
-                global::System.Collections.Generic.EqualityComparer<object?>.Default.Equals(Value1, other.Value1) &&
-                global::System.Collections.Generic.EqualityComparer<global::Dataloop.IBaseRefAnnotationCoordinates?>.Default.Equals(Value2, other.Value2) 
+                global::System.Collections.Generic.EqualityComparer<object?>.Default.Equals(IRefImageAnnotationsTypeVariant1, other.IRefImageAnnotationsTypeVariant1) &&
+                global::System.Collections.Generic.EqualityComparer<global::Dataloop.IBaseRefAnnotationCoordinates?>.Default.Equals(BaseAnnotationCoordinates, other.BaseAnnotationCoordinates) 
                 ;
         }
 

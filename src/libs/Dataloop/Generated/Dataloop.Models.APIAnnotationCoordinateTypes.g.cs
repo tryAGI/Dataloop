@@ -13,222 +13,222 @@ namespace Dataloop
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Dataloop.Point? Value1 { get; init; }
+        public global::Dataloop.Point? Point { get; init; }
 #else
-        public global::Dataloop.Point? Value1 { get; }
+        public global::Dataloop.Point? Point { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value1))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Point))]
 #endif
-        public bool IsValue1 => Value1 != null;
+        public bool IsPoint => Point != null;
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::System.Collections.Generic.IList<global::Dataloop.Point>? Value2 { get; init; }
+        public global::System.Collections.Generic.IList<global::Dataloop.Point>? APIAnnotationCoordinateTypesVariant2 { get; init; }
 #else
-        public global::System.Collections.Generic.IList<global::Dataloop.Point>? Value2 { get; }
+        public global::System.Collections.Generic.IList<global::Dataloop.Point>? APIAnnotationCoordinateTypesVariant2 { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value2))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(APIAnnotationCoordinateTypesVariant2))]
 #endif
-        public bool IsValue2 => Value2 != null;
+        public bool IsAPIAnnotationCoordinateTypesVariant2 => APIAnnotationCoordinateTypesVariant2 != null;
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>? Value3 { get; init; }
+        public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>? APIAnnotationCoordinateTypesVariant3 { get; init; }
 #else
-        public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>? Value3 { get; }
+        public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>? APIAnnotationCoordinateTypesVariant3 { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value3))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(APIAnnotationCoordinateTypesVariant3))]
 #endif
-        public bool IsValue3 => Value3 != null;
+        public bool IsAPIAnnotationCoordinateTypesVariant3 => APIAnnotationCoordinateTypesVariant3 != null;
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Dataloop.APINoteAnnotationCoordinatesV1? Value4 { get; init; }
+        public global::Dataloop.APINoteAnnotationCoordinatesV1? NoteCoordinatesV1 { get; init; }
 #else
-        public global::Dataloop.APINoteAnnotationCoordinatesV1? Value4 { get; }
+        public global::Dataloop.APINoteAnnotationCoordinatesV1? NoteCoordinatesV1 { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value4))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(NoteCoordinatesV1))]
 #endif
-        public bool IsValue4 => Value4 != null;
+        public bool IsNoteCoordinatesV1 => NoteCoordinatesV1 != null;
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public string? Value5 { get; init; }
+        public string? APIAnnotationCoordinateTypesVariant5 { get; init; }
 #else
-        public string? Value5 { get; }
+        public string? APIAnnotationCoordinateTypesVariant5 { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value5))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(APIAnnotationCoordinateTypesVariant5))]
 #endif
-        public bool IsValue5 => Value5 != null;
+        public bool IsAPIAnnotationCoordinateTypesVariant5 => APIAnnotationCoordinateTypesVariant5 != null;
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Dataloop.PoseCoordinates? Value6 { get; init; }
+        public global::Dataloop.PoseCoordinates? PoseCoordinates { get; init; }
 #else
-        public global::Dataloop.PoseCoordinates? Value6 { get; }
+        public global::Dataloop.PoseCoordinates? PoseCoordinates { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value6))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(PoseCoordinates))]
 #endif
-        public bool IsValue6 => Value6 != null;
+        public bool IsPoseCoordinates => PoseCoordinates != null;
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>? Value7 { get; init; }
+        public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>? PolygonCoordinatesV1 { get; init; }
 #else
-        public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>? Value7 { get; }
+        public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>? PolygonCoordinatesV1 { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value7))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(PolygonCoordinatesV1))]
 #endif
-        public bool IsValue7 => Value7 != null;
+        public bool IsPolygonCoordinatesV1 => PolygonCoordinatesV1 != null;
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>? Value8 { get; init; }
+        public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>? PolylineCoordinatesV3 { get; init; }
 #else
-        public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>? Value8 { get; }
+        public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>? PolylineCoordinatesV3 { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value8))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(PolylineCoordinatesV3))]
 #endif
-        public bool IsValue8 => Value8 != null;
+        public bool IsPolylineCoordinatesV3 => PolylineCoordinatesV3 != null;
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Dataloop.EllipseCoordinatesV1? Value9 { get; init; }
+        public global::Dataloop.EllipseCoordinatesV1? EllipseCoordinatesV1 { get; init; }
 #else
-        public global::Dataloop.EllipseCoordinatesV1? Value9 { get; }
+        public global::Dataloop.EllipseCoordinatesV1? EllipseCoordinatesV1 { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value9))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(EllipseCoordinatesV1))]
 #endif
-        public bool IsValue9 => Value9 != null;
+        public bool IsEllipseCoordinatesV1 => EllipseCoordinatesV1 != null;
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Dataloop.CubeCoordinatesV1? Value10 { get; init; }
+        public global::Dataloop.CubeCoordinatesV1? CubeCoordinatesV1 { get; init; }
 #else
-        public global::Dataloop.CubeCoordinatesV1? Value10 { get; }
+        public global::Dataloop.CubeCoordinatesV1? CubeCoordinatesV1 { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value10))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(CubeCoordinatesV1))]
 #endif
-        public bool IsValue10 => Value10 != null;
+        public bool IsCubeCoordinatesV1 => CubeCoordinatesV1 != null;
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::System.Collections.Generic.IList<object>? Value11 { get; init; }
+        public global::System.Collections.Generic.IList<object>? BoxCoordinates { get; init; }
 #else
-        public global::System.Collections.Generic.IList<object>? Value11 { get; }
+        public global::System.Collections.Generic.IList<object>? BoxCoordinates { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value11))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(BoxCoordinates))]
 #endif
-        public bool IsValue11 => Value11 != null;
+        public bool IsBoxCoordinates => BoxCoordinates != null;
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Dataloop.ItemDescriptionCoordinates? Value12 { get; init; }
+        public global::Dataloop.ItemDescriptionCoordinates? ItemDescriptionCoordinates { get; init; }
 #else
-        public global::Dataloop.ItemDescriptionCoordinates? Value12 { get; }
+        public global::Dataloop.ItemDescriptionCoordinates? ItemDescriptionCoordinates { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value12))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ItemDescriptionCoordinates))]
 #endif
-        public bool IsValue12 => Value12 != null;
+        public bool IsItemDescriptionCoordinates => ItemDescriptionCoordinates != null;
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Dataloop.IRefImageAnnotationsType? Value13 { get; init; }
+        public global::Dataloop.IRefImageAnnotationsType? RefImageAnnotationsType { get; init; }
 #else
-        public global::Dataloop.IRefImageAnnotationsType? Value13 { get; }
+        public global::Dataloop.IRefImageAnnotationsType? RefImageAnnotationsType { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value13))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(RefImageAnnotationsType))]
 #endif
-        public bool IsValue13 => Value13 != null;
+        public bool IsRefImageAnnotationsType => RefImageAnnotationsType != null;
         /// <summary>
         /// 
         /// </summary>
@@ -237,14 +237,14 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::Dataloop.Point?(APIAnnotationCoordinateTypes @this) => @this.Value1;
+        public static implicit operator global::Dataloop.Point?(APIAnnotationCoordinateTypes @this) => @this.Point;
 
         /// <summary>
         /// 
         /// </summary>
         public APIAnnotationCoordinateTypes(global::Dataloop.Point? value)
         {
-            Value1 = value;
+            Point = value;
         }
 
         /// <summary>
@@ -255,14 +255,14 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::Dataloop.APINoteAnnotationCoordinatesV1?(APIAnnotationCoordinateTypes @this) => @this.Value4;
+        public static implicit operator global::Dataloop.APINoteAnnotationCoordinatesV1?(APIAnnotationCoordinateTypes @this) => @this.NoteCoordinatesV1;
 
         /// <summary>
         /// 
         /// </summary>
         public APIAnnotationCoordinateTypes(global::Dataloop.APINoteAnnotationCoordinatesV1? value)
         {
-            Value4 = value;
+            NoteCoordinatesV1 = value;
         }
 
         /// <summary>
@@ -273,14 +273,14 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator string?(APIAnnotationCoordinateTypes @this) => @this.Value5;
+        public static implicit operator string?(APIAnnotationCoordinateTypes @this) => @this.APIAnnotationCoordinateTypesVariant5;
 
         /// <summary>
         /// 
         /// </summary>
         public APIAnnotationCoordinateTypes(string? value)
         {
-            Value5 = value;
+            APIAnnotationCoordinateTypesVariant5 = value;
         }
 
         /// <summary>
@@ -291,14 +291,14 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::Dataloop.PoseCoordinates?(APIAnnotationCoordinateTypes @this) => @this.Value6;
+        public static implicit operator global::Dataloop.PoseCoordinates?(APIAnnotationCoordinateTypes @this) => @this.PoseCoordinates;
 
         /// <summary>
         /// 
         /// </summary>
         public APIAnnotationCoordinateTypes(global::Dataloop.PoseCoordinates? value)
         {
-            Value6 = value;
+            PoseCoordinates = value;
         }
 
         /// <summary>
@@ -309,14 +309,14 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::Dataloop.EllipseCoordinatesV1?(APIAnnotationCoordinateTypes @this) => @this.Value9;
+        public static implicit operator global::Dataloop.EllipseCoordinatesV1?(APIAnnotationCoordinateTypes @this) => @this.EllipseCoordinatesV1;
 
         /// <summary>
         /// 
         /// </summary>
         public APIAnnotationCoordinateTypes(global::Dataloop.EllipseCoordinatesV1? value)
         {
-            Value9 = value;
+            EllipseCoordinatesV1 = value;
         }
 
         /// <summary>
@@ -327,14 +327,14 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::Dataloop.CubeCoordinatesV1?(APIAnnotationCoordinateTypes @this) => @this.Value10;
+        public static implicit operator global::Dataloop.CubeCoordinatesV1?(APIAnnotationCoordinateTypes @this) => @this.CubeCoordinatesV1;
 
         /// <summary>
         /// 
         /// </summary>
         public APIAnnotationCoordinateTypes(global::Dataloop.CubeCoordinatesV1? value)
         {
-            Value10 = value;
+            CubeCoordinatesV1 = value;
         }
 
         /// <summary>
@@ -345,14 +345,14 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::Dataloop.ItemDescriptionCoordinates?(APIAnnotationCoordinateTypes @this) => @this.Value12;
+        public static implicit operator global::Dataloop.ItemDescriptionCoordinates?(APIAnnotationCoordinateTypes @this) => @this.ItemDescriptionCoordinates;
 
         /// <summary>
         /// 
         /// </summary>
         public APIAnnotationCoordinateTypes(global::Dataloop.ItemDescriptionCoordinates? value)
         {
-            Value12 = value;
+            ItemDescriptionCoordinates = value;
         }
 
         /// <summary>
@@ -363,86 +363,86 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::Dataloop.IRefImageAnnotationsType?(APIAnnotationCoordinateTypes @this) => @this.Value13;
+        public static implicit operator global::Dataloop.IRefImageAnnotationsType?(APIAnnotationCoordinateTypes @this) => @this.RefImageAnnotationsType;
 
         /// <summary>
         /// 
         /// </summary>
         public APIAnnotationCoordinateTypes(global::Dataloop.IRefImageAnnotationsType? value)
         {
-            Value13 = value;
+            RefImageAnnotationsType = value;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public APIAnnotationCoordinateTypes(
-            global::Dataloop.Point? value1,
-            global::System.Collections.Generic.IList<global::Dataloop.Point>? value2,
-            global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>? value3,
-            global::Dataloop.APINoteAnnotationCoordinatesV1? value4,
-            string? value5,
-            global::Dataloop.PoseCoordinates? value6,
-            global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>? value7,
-            global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>? value8,
-            global::Dataloop.EllipseCoordinatesV1? value9,
-            global::Dataloop.CubeCoordinatesV1? value10,
-            global::System.Collections.Generic.IList<object>? value11,
-            global::Dataloop.ItemDescriptionCoordinates? value12,
-            global::Dataloop.IRefImageAnnotationsType? value13
+            global::Dataloop.Point? point,
+            global::System.Collections.Generic.IList<global::Dataloop.Point>? aPIAnnotationCoordinateTypesVariant2,
+            global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>? aPIAnnotationCoordinateTypesVariant3,
+            global::Dataloop.APINoteAnnotationCoordinatesV1? noteCoordinatesV1,
+            string? aPIAnnotationCoordinateTypesVariant5,
+            global::Dataloop.PoseCoordinates? poseCoordinates,
+            global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>? polygonCoordinatesV1,
+            global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>? polylineCoordinatesV3,
+            global::Dataloop.EllipseCoordinatesV1? ellipseCoordinatesV1,
+            global::Dataloop.CubeCoordinatesV1? cubeCoordinatesV1,
+            global::System.Collections.Generic.IList<object>? boxCoordinates,
+            global::Dataloop.ItemDescriptionCoordinates? itemDescriptionCoordinates,
+            global::Dataloop.IRefImageAnnotationsType? refImageAnnotationsType
             )
         {
-            Value1 = value1;
-            Value2 = value2;
-            Value3 = value3;
-            Value4 = value4;
-            Value5 = value5;
-            Value6 = value6;
-            Value7 = value7;
-            Value8 = value8;
-            Value9 = value9;
-            Value10 = value10;
-            Value11 = value11;
-            Value12 = value12;
-            Value13 = value13;
+            Point = point;
+            APIAnnotationCoordinateTypesVariant2 = aPIAnnotationCoordinateTypesVariant2;
+            APIAnnotationCoordinateTypesVariant3 = aPIAnnotationCoordinateTypesVariant3;
+            NoteCoordinatesV1 = noteCoordinatesV1;
+            APIAnnotationCoordinateTypesVariant5 = aPIAnnotationCoordinateTypesVariant5;
+            PoseCoordinates = poseCoordinates;
+            PolygonCoordinatesV1 = polygonCoordinatesV1;
+            PolylineCoordinatesV3 = polylineCoordinatesV3;
+            EllipseCoordinatesV1 = ellipseCoordinatesV1;
+            CubeCoordinatesV1 = cubeCoordinatesV1;
+            BoxCoordinates = boxCoordinates;
+            ItemDescriptionCoordinates = itemDescriptionCoordinates;
+            RefImageAnnotationsType = refImageAnnotationsType;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public object? Object =>
-            Value13 as object ??
-            Value12 as object ??
-            Value11 as object ??
-            Value10 as object ??
-            Value9 as object ??
-            Value8 as object ??
-            Value7 as object ??
-            Value6 as object ??
-            Value5 as object ??
-            Value4 as object ??
-            Value3 as object ??
-            Value2 as object ??
-            Value1 as object 
+            RefImageAnnotationsType as object ??
+            ItemDescriptionCoordinates as object ??
+            BoxCoordinates as object ??
+            CubeCoordinatesV1 as object ??
+            EllipseCoordinatesV1 as object ??
+            PolylineCoordinatesV3 as object ??
+            PolygonCoordinatesV1 as object ??
+            PoseCoordinates as object ??
+            APIAnnotationCoordinateTypesVariant5 as object ??
+            NoteCoordinatesV1 as object ??
+            APIAnnotationCoordinateTypesVariant3 as object ??
+            APIAnnotationCoordinateTypesVariant2 as object ??
+            Point as object 
             ;
 
         /// <summary>
         /// 
         /// </summary>
         public override string? ToString() =>
-            Value1?.ToString() ??
-            Value2?.ToString() ??
-            Value3?.ToString() ??
-            Value4?.ToString() ??
-            Value5?.ToString() ??
-            Value6?.ToString() ??
-            Value7?.ToString() ??
-            Value8?.ToString() ??
-            Value9?.ToString() ??
-            Value10?.ToString() ??
-            Value11?.ToString() ??
-            Value12?.ToString() ??
-            Value13?.ToString() 
+            Point?.ToString() ??
+            APIAnnotationCoordinateTypesVariant2?.ToString() ??
+            APIAnnotationCoordinateTypesVariant3?.ToString() ??
+            NoteCoordinatesV1?.ToString() ??
+            APIAnnotationCoordinateTypesVariant5?.ToString() ??
+            PoseCoordinates?.ToString() ??
+            PolygonCoordinatesV1?.ToString() ??
+            PolylineCoordinatesV3?.ToString() ??
+            EllipseCoordinatesV1?.ToString() ??
+            CubeCoordinatesV1?.ToString() ??
+            BoxCoordinates?.ToString() ??
+            ItemDescriptionCoordinates?.ToString() ??
+            RefImageAnnotationsType?.ToString() 
             ;
 
         /// <summary>
@@ -450,26 +450,26 @@ namespace Dataloop
         /// </summary>
         public bool Validate()
         {
-            return IsValue1 || IsValue2 || IsValue3 || IsValue4 || IsValue5 || IsValue6 || IsValue7 || IsValue8 || IsValue9 || IsValue10 || IsValue11 || IsValue12 || IsValue13;
+            return IsPoint || IsAPIAnnotationCoordinateTypesVariant2 || IsAPIAnnotationCoordinateTypesVariant3 || IsNoteCoordinatesV1 || IsAPIAnnotationCoordinateTypesVariant5 || IsPoseCoordinates || IsPolygonCoordinatesV1 || IsPolylineCoordinatesV3 || IsEllipseCoordinatesV1 || IsCubeCoordinatesV1 || IsBoxCoordinates || IsItemDescriptionCoordinates || IsRefImageAnnotationsType;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Dataloop.Point?, TResult>? value1 = null,
-            global::System.Func<global::System.Collections.Generic.IList<global::Dataloop.Point>?, TResult>? value2 = null,
-            global::System.Func<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>?, TResult>? value3 = null,
-            global::System.Func<global::Dataloop.APINoteAnnotationCoordinatesV1?, TResult>? value4 = null,
-            global::System.Func<string?, TResult>? value5 = null,
-            global::System.Func<global::Dataloop.PoseCoordinates?, TResult>? value6 = null,
-            global::System.Func<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>?, TResult>? value7 = null,
-            global::System.Func<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>?, TResult>? value8 = null,
-            global::System.Func<global::Dataloop.EllipseCoordinatesV1?, TResult>? value9 = null,
-            global::System.Func<global::Dataloop.CubeCoordinatesV1?, TResult>? value10 = null,
-            global::System.Func<global::System.Collections.Generic.IList<object>?, TResult>? value11 = null,
-            global::System.Func<global::Dataloop.ItemDescriptionCoordinates?, TResult>? value12 = null,
-            global::System.Func<global::Dataloop.IRefImageAnnotationsType?, TResult>? value13 = null,
+            global::System.Func<global::Dataloop.Point?, TResult>? point = null,
+            global::System.Func<global::System.Collections.Generic.IList<global::Dataloop.Point>?, TResult>? aPIAnnotationCoordinateTypesVariant2 = null,
+            global::System.Func<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>?, TResult>? aPIAnnotationCoordinateTypesVariant3 = null,
+            global::System.Func<global::Dataloop.APINoteAnnotationCoordinatesV1?, TResult>? noteCoordinatesV1 = null,
+            global::System.Func<string?, TResult>? aPIAnnotationCoordinateTypesVariant5 = null,
+            global::System.Func<global::Dataloop.PoseCoordinates?, TResult>? poseCoordinates = null,
+            global::System.Func<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>?, TResult>? polygonCoordinatesV1 = null,
+            global::System.Func<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>?, TResult>? polylineCoordinatesV3 = null,
+            global::System.Func<global::Dataloop.EllipseCoordinatesV1?, TResult>? ellipseCoordinatesV1 = null,
+            global::System.Func<global::Dataloop.CubeCoordinatesV1?, TResult>? cubeCoordinatesV1 = null,
+            global::System.Func<global::System.Collections.Generic.IList<object>?, TResult>? boxCoordinates = null,
+            global::System.Func<global::Dataloop.ItemDescriptionCoordinates?, TResult>? itemDescriptionCoordinates = null,
+            global::System.Func<global::Dataloop.IRefImageAnnotationsType?, TResult>? refImageAnnotationsType = null,
             bool validate = true)
         {
             if (validate)
@@ -477,57 +477,57 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsValue1 && value1 != null)
+            if (IsPoint && point != null)
             {
-                return value1(Value1!);
+                return point(Point!);
             }
-            else if (IsValue2 && value2 != null)
+            else if (IsAPIAnnotationCoordinateTypesVariant2 && aPIAnnotationCoordinateTypesVariant2 != null)
             {
-                return value2(Value2!);
+                return aPIAnnotationCoordinateTypesVariant2(APIAnnotationCoordinateTypesVariant2!);
             }
-            else if (IsValue3 && value3 != null)
+            else if (IsAPIAnnotationCoordinateTypesVariant3 && aPIAnnotationCoordinateTypesVariant3 != null)
             {
-                return value3(Value3!);
+                return aPIAnnotationCoordinateTypesVariant3(APIAnnotationCoordinateTypesVariant3!);
             }
-            else if (IsValue4 && value4 != null)
+            else if (IsNoteCoordinatesV1 && noteCoordinatesV1 != null)
             {
-                return value4(Value4!);
+                return noteCoordinatesV1(NoteCoordinatesV1!);
             }
-            else if (IsValue5 && value5 != null)
+            else if (IsAPIAnnotationCoordinateTypesVariant5 && aPIAnnotationCoordinateTypesVariant5 != null)
             {
-                return value5(Value5!);
+                return aPIAnnotationCoordinateTypesVariant5(APIAnnotationCoordinateTypesVariant5!);
             }
-            else if (IsValue6 && value6 != null)
+            else if (IsPoseCoordinates && poseCoordinates != null)
             {
-                return value6(Value6!);
+                return poseCoordinates(PoseCoordinates!);
             }
-            else if (IsValue7 && value7 != null)
+            else if (IsPolygonCoordinatesV1 && polygonCoordinatesV1 != null)
             {
-                return value7(Value7!);
+                return polygonCoordinatesV1(PolygonCoordinatesV1!);
             }
-            else if (IsValue8 && value8 != null)
+            else if (IsPolylineCoordinatesV3 && polylineCoordinatesV3 != null)
             {
-                return value8(Value8!);
+                return polylineCoordinatesV3(PolylineCoordinatesV3!);
             }
-            else if (IsValue9 && value9 != null)
+            else if (IsEllipseCoordinatesV1 && ellipseCoordinatesV1 != null)
             {
-                return value9(Value9!);
+                return ellipseCoordinatesV1(EllipseCoordinatesV1!);
             }
-            else if (IsValue10 && value10 != null)
+            else if (IsCubeCoordinatesV1 && cubeCoordinatesV1 != null)
             {
-                return value10(Value10!);
+                return cubeCoordinatesV1(CubeCoordinatesV1!);
             }
-            else if (IsValue11 && value11 != null)
+            else if (IsBoxCoordinates && boxCoordinates != null)
             {
-                return value11(Value11!);
+                return boxCoordinates(BoxCoordinates!);
             }
-            else if (IsValue12 && value12 != null)
+            else if (IsItemDescriptionCoordinates && itemDescriptionCoordinates != null)
             {
-                return value12(Value12!);
+                return itemDescriptionCoordinates(ItemDescriptionCoordinates!);
             }
-            else if (IsValue13 && value13 != null)
+            else if (IsRefImageAnnotationsType && refImageAnnotationsType != null)
             {
-                return value13(Value13!);
+                return refImageAnnotationsType(RefImageAnnotationsType!);
             }
 
             return default(TResult);
@@ -537,19 +537,19 @@ namespace Dataloop
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Dataloop.Point?>? value1 = null,
-            global::System.Action<global::System.Collections.Generic.IList<global::Dataloop.Point>?>? value2 = null,
-            global::System.Action<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>?>? value3 = null,
-            global::System.Action<global::Dataloop.APINoteAnnotationCoordinatesV1?>? value4 = null,
-            global::System.Action<string?>? value5 = null,
-            global::System.Action<global::Dataloop.PoseCoordinates?>? value6 = null,
-            global::System.Action<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>?>? value7 = null,
-            global::System.Action<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>?>? value8 = null,
-            global::System.Action<global::Dataloop.EllipseCoordinatesV1?>? value9 = null,
-            global::System.Action<global::Dataloop.CubeCoordinatesV1?>? value10 = null,
-            global::System.Action<global::System.Collections.Generic.IList<object>?>? value11 = null,
-            global::System.Action<global::Dataloop.ItemDescriptionCoordinates?>? value12 = null,
-            global::System.Action<global::Dataloop.IRefImageAnnotationsType?>? value13 = null,
+            global::System.Action<global::Dataloop.Point?>? point = null,
+            global::System.Action<global::System.Collections.Generic.IList<global::Dataloop.Point>?>? aPIAnnotationCoordinateTypesVariant2 = null,
+            global::System.Action<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>?>? aPIAnnotationCoordinateTypesVariant3 = null,
+            global::System.Action<global::Dataloop.APINoteAnnotationCoordinatesV1?>? noteCoordinatesV1 = null,
+            global::System.Action<string?>? aPIAnnotationCoordinateTypesVariant5 = null,
+            global::System.Action<global::Dataloop.PoseCoordinates?>? poseCoordinates = null,
+            global::System.Action<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>?>? polygonCoordinatesV1 = null,
+            global::System.Action<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>?>? polylineCoordinatesV3 = null,
+            global::System.Action<global::Dataloop.EllipseCoordinatesV1?>? ellipseCoordinatesV1 = null,
+            global::System.Action<global::Dataloop.CubeCoordinatesV1?>? cubeCoordinatesV1 = null,
+            global::System.Action<global::System.Collections.Generic.IList<object>?>? boxCoordinates = null,
+            global::System.Action<global::Dataloop.ItemDescriptionCoordinates?>? itemDescriptionCoordinates = null,
+            global::System.Action<global::Dataloop.IRefImageAnnotationsType?>? refImageAnnotationsType = null,
             bool validate = true)
         {
             if (validate)
@@ -557,57 +557,57 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsValue1)
+            if (IsPoint)
             {
-                value1?.Invoke(Value1!);
+                point?.Invoke(Point!);
             }
-            else if (IsValue2)
+            else if (IsAPIAnnotationCoordinateTypesVariant2)
             {
-                value2?.Invoke(Value2!);
+                aPIAnnotationCoordinateTypesVariant2?.Invoke(APIAnnotationCoordinateTypesVariant2!);
             }
-            else if (IsValue3)
+            else if (IsAPIAnnotationCoordinateTypesVariant3)
             {
-                value3?.Invoke(Value3!);
+                aPIAnnotationCoordinateTypesVariant3?.Invoke(APIAnnotationCoordinateTypesVariant3!);
             }
-            else if (IsValue4)
+            else if (IsNoteCoordinatesV1)
             {
-                value4?.Invoke(Value4!);
+                noteCoordinatesV1?.Invoke(NoteCoordinatesV1!);
             }
-            else if (IsValue5)
+            else if (IsAPIAnnotationCoordinateTypesVariant5)
             {
-                value5?.Invoke(Value5!);
+                aPIAnnotationCoordinateTypesVariant5?.Invoke(APIAnnotationCoordinateTypesVariant5!);
             }
-            else if (IsValue6)
+            else if (IsPoseCoordinates)
             {
-                value6?.Invoke(Value6!);
+                poseCoordinates?.Invoke(PoseCoordinates!);
             }
-            else if (IsValue7)
+            else if (IsPolygonCoordinatesV1)
             {
-                value7?.Invoke(Value7!);
+                polygonCoordinatesV1?.Invoke(PolygonCoordinatesV1!);
             }
-            else if (IsValue8)
+            else if (IsPolylineCoordinatesV3)
             {
-                value8?.Invoke(Value8!);
+                polylineCoordinatesV3?.Invoke(PolylineCoordinatesV3!);
             }
-            else if (IsValue9)
+            else if (IsEllipseCoordinatesV1)
             {
-                value9?.Invoke(Value9!);
+                ellipseCoordinatesV1?.Invoke(EllipseCoordinatesV1!);
             }
-            else if (IsValue10)
+            else if (IsCubeCoordinatesV1)
             {
-                value10?.Invoke(Value10!);
+                cubeCoordinatesV1?.Invoke(CubeCoordinatesV1!);
             }
-            else if (IsValue11)
+            else if (IsBoxCoordinates)
             {
-                value11?.Invoke(Value11!);
+                boxCoordinates?.Invoke(BoxCoordinates!);
             }
-            else if (IsValue12)
+            else if (IsItemDescriptionCoordinates)
             {
-                value12?.Invoke(Value12!);
+                itemDescriptionCoordinates?.Invoke(ItemDescriptionCoordinates!);
             }
-            else if (IsValue13)
+            else if (IsRefImageAnnotationsType)
             {
-                value13?.Invoke(Value13!);
+                refImageAnnotationsType?.Invoke(RefImageAnnotationsType!);
             }
         }
 
@@ -618,31 +618,31 @@ namespace Dataloop
         {
             var fields = new object?[]
             {
-                Value1,
+                Point,
                 typeof(global::Dataloop.Point),
-                Value2,
+                APIAnnotationCoordinateTypesVariant2,
                 typeof(global::System.Collections.Generic.IList<global::Dataloop.Point>),
-                Value3,
+                APIAnnotationCoordinateTypesVariant3,
                 typeof(global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>),
-                Value4,
+                NoteCoordinatesV1,
                 typeof(global::Dataloop.APINoteAnnotationCoordinatesV1),
-                Value5,
+                APIAnnotationCoordinateTypesVariant5,
                 typeof(string),
-                Value6,
+                PoseCoordinates,
                 typeof(global::Dataloop.PoseCoordinates),
-                Value7,
+                PolygonCoordinatesV1,
                 typeof(global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>),
-                Value8,
+                PolylineCoordinatesV3,
                 typeof(global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>),
-                Value9,
+                EllipseCoordinatesV1,
                 typeof(global::Dataloop.EllipseCoordinatesV1),
-                Value10,
+                CubeCoordinatesV1,
                 typeof(global::Dataloop.CubeCoordinatesV1),
-                Value11,
+                BoxCoordinates,
                 typeof(global::System.Collections.Generic.IList<object>),
-                Value12,
+                ItemDescriptionCoordinates,
                 typeof(global::Dataloop.ItemDescriptionCoordinates),
-                Value13,
+                RefImageAnnotationsType,
                 typeof(global::Dataloop.IRefImageAnnotationsType),
             };
             const int offset = unchecked((int)2166136261);
@@ -660,19 +660,19 @@ namespace Dataloop
         public bool Equals(APIAnnotationCoordinateTypes other)
         {
             return
-                global::System.Collections.Generic.EqualityComparer<global::Dataloop.Point?>.Default.Equals(Value1, other.Value1) &&
-                global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<global::Dataloop.Point>?>.Default.Equals(Value2, other.Value2) &&
-                global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>?>.Default.Equals(Value3, other.Value3) &&
-                global::System.Collections.Generic.EqualityComparer<global::Dataloop.APINoteAnnotationCoordinatesV1?>.Default.Equals(Value4, other.Value4) &&
-                global::System.Collections.Generic.EqualityComparer<string?>.Default.Equals(Value5, other.Value5) &&
-                global::System.Collections.Generic.EqualityComparer<global::Dataloop.PoseCoordinates?>.Default.Equals(Value6, other.Value6) &&
-                global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>?>.Default.Equals(Value7, other.Value7) &&
-                global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>?>.Default.Equals(Value8, other.Value8) &&
-                global::System.Collections.Generic.EqualityComparer<global::Dataloop.EllipseCoordinatesV1?>.Default.Equals(Value9, other.Value9) &&
-                global::System.Collections.Generic.EqualityComparer<global::Dataloop.CubeCoordinatesV1?>.Default.Equals(Value10, other.Value10) &&
-                global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<object>?>.Default.Equals(Value11, other.Value11) &&
-                global::System.Collections.Generic.EqualityComparer<global::Dataloop.ItemDescriptionCoordinates?>.Default.Equals(Value12, other.Value12) &&
-                global::System.Collections.Generic.EqualityComparer<global::Dataloop.IRefImageAnnotationsType?>.Default.Equals(Value13, other.Value13) 
+                global::System.Collections.Generic.EqualityComparer<global::Dataloop.Point?>.Default.Equals(Point, other.Point) &&
+                global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<global::Dataloop.Point>?>.Default.Equals(APIAnnotationCoordinateTypesVariant2, other.APIAnnotationCoordinateTypesVariant2) &&
+                global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>?>.Default.Equals(APIAnnotationCoordinateTypesVariant3, other.APIAnnotationCoordinateTypesVariant3) &&
+                global::System.Collections.Generic.EqualityComparer<global::Dataloop.APINoteAnnotationCoordinatesV1?>.Default.Equals(NoteCoordinatesV1, other.NoteCoordinatesV1) &&
+                global::System.Collections.Generic.EqualityComparer<string?>.Default.Equals(APIAnnotationCoordinateTypesVariant5, other.APIAnnotationCoordinateTypesVariant5) &&
+                global::System.Collections.Generic.EqualityComparer<global::Dataloop.PoseCoordinates?>.Default.Equals(PoseCoordinates, other.PoseCoordinates) &&
+                global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>?>.Default.Equals(PolygonCoordinatesV1, other.PolygonCoordinatesV1) &&
+                global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>?>.Default.Equals(PolylineCoordinatesV3, other.PolylineCoordinatesV3) &&
+                global::System.Collections.Generic.EqualityComparer<global::Dataloop.EllipseCoordinatesV1?>.Default.Equals(EllipseCoordinatesV1, other.EllipseCoordinatesV1) &&
+                global::System.Collections.Generic.EqualityComparer<global::Dataloop.CubeCoordinatesV1?>.Default.Equals(CubeCoordinatesV1, other.CubeCoordinatesV1) &&
+                global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<object>?>.Default.Equals(BoxCoordinates, other.BoxCoordinates) &&
+                global::System.Collections.Generic.EqualityComparer<global::Dataloop.ItemDescriptionCoordinates?>.Default.Equals(ItemDescriptionCoordinates, other.ItemDescriptionCoordinates) &&
+                global::System.Collections.Generic.EqualityComparer<global::Dataloop.IRefImageAnnotationsType?>.Default.Equals(RefImageAnnotationsType, other.RefImageAnnotationsType) 
                 ;
         }
 

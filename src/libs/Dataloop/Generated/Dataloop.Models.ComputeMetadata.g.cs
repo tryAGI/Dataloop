@@ -13,35 +13,35 @@ namespace Dataloop
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Dataloop.Dictionary? Value1 { get; init; }
+        public global::Dataloop.Dictionary? Dictionary { get; init; }
 #else
-        public global::Dataloop.Dictionary? Value1 { get; }
+        public global::Dataloop.Dictionary? Dictionary { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value1))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Dictionary))]
 #endif
-        public bool IsValue1 => Value1 != null;
+        public bool IsDictionary => Dictionary != null;
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Dataloop.ComputeMetadataVariant2? Value2 { get; init; }
+        public global::Dataloop.ComputeMetadataVariant2? ComputeMetadataVariant2 { get; init; }
 #else
-        public global::Dataloop.ComputeMetadataVariant2? Value2 { get; }
+        public global::Dataloop.ComputeMetadataVariant2? ComputeMetadataVariant2 { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value2))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ComputeMetadataVariant2))]
 #endif
-        public bool IsValue2 => Value2 != null;
+        public bool IsComputeMetadataVariant2 => ComputeMetadataVariant2 != null;
         /// <summary>
         /// 
         /// </summary>
@@ -50,14 +50,14 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::Dataloop.Dictionary?(ComputeMetadata @this) => @this.Value1;
+        public static implicit operator global::Dataloop.Dictionary?(ComputeMetadata @this) => @this.Dictionary;
 
         /// <summary>
         /// 
         /// </summary>
         public ComputeMetadata(global::Dataloop.Dictionary? value)
         {
-            Value1 = value;
+            Dictionary = value;
         }
 
         /// <summary>
@@ -68,42 +68,42 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::Dataloop.ComputeMetadataVariant2?(ComputeMetadata @this) => @this.Value2;
+        public static implicit operator global::Dataloop.ComputeMetadataVariant2?(ComputeMetadata @this) => @this.ComputeMetadataVariant2;
 
         /// <summary>
         /// 
         /// </summary>
         public ComputeMetadata(global::Dataloop.ComputeMetadataVariant2? value)
         {
-            Value2 = value;
+            ComputeMetadataVariant2 = value;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public ComputeMetadata(
-            global::Dataloop.Dictionary? value1,
-            global::Dataloop.ComputeMetadataVariant2? value2
+            global::Dataloop.Dictionary? dictionary,
+            global::Dataloop.ComputeMetadataVariant2? computeMetadataVariant2
             )
         {
-            Value1 = value1;
-            Value2 = value2;
+            Dictionary = dictionary;
+            ComputeMetadataVariant2 = computeMetadataVariant2;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public object? Object =>
-            Value2 as object ??
-            Value1 as object 
+            ComputeMetadataVariant2 as object ??
+            Dictionary as object 
             ;
 
         /// <summary>
         /// 
         /// </summary>
         public override string? ToString() =>
-            Value1?.ToString() ??
-            Value2?.ToString() 
+            Dictionary?.ToString() ??
+            ComputeMetadataVariant2?.ToString() 
             ;
 
         /// <summary>
@@ -111,15 +111,15 @@ namespace Dataloop
         /// </summary>
         public bool Validate()
         {
-            return IsValue1 && IsValue2;
+            return IsDictionary && IsComputeMetadataVariant2;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Dataloop.Dictionary?, TResult>? value1 = null,
-            global::System.Func<global::Dataloop.ComputeMetadataVariant2?, TResult>? value2 = null,
+            global::System.Func<global::Dataloop.Dictionary?, TResult>? dictionary = null,
+            global::System.Func<global::Dataloop.ComputeMetadataVariant2?, TResult>? computeMetadataVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -127,13 +127,13 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsValue1 && value1 != null)
+            if (IsDictionary && dictionary != null)
             {
-                return value1(Value1!);
+                return dictionary(Dictionary!);
             }
-            else if (IsValue2 && value2 != null)
+            else if (IsComputeMetadataVariant2 && computeMetadataVariant2 != null)
             {
-                return value2(Value2!);
+                return computeMetadataVariant2(ComputeMetadataVariant2!);
             }
 
             return default(TResult);
@@ -143,8 +143,8 @@ namespace Dataloop
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Dataloop.Dictionary?>? value1 = null,
-            global::System.Action<global::Dataloop.ComputeMetadataVariant2?>? value2 = null,
+            global::System.Action<global::Dataloop.Dictionary?>? dictionary = null,
+            global::System.Action<global::Dataloop.ComputeMetadataVariant2?>? computeMetadataVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -152,13 +152,13 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsValue1)
+            if (IsDictionary)
             {
-                value1?.Invoke(Value1!);
+                dictionary?.Invoke(Dictionary!);
             }
-            else if (IsValue2)
+            else if (IsComputeMetadataVariant2)
             {
-                value2?.Invoke(Value2!);
+                computeMetadataVariant2?.Invoke(ComputeMetadataVariant2!);
             }
         }
 
@@ -169,9 +169,9 @@ namespace Dataloop
         {
             var fields = new object?[]
             {
-                Value1,
+                Dictionary,
                 typeof(global::Dataloop.Dictionary),
-                Value2,
+                ComputeMetadataVariant2,
                 typeof(global::Dataloop.ComputeMetadataVariant2),
             };
             const int offset = unchecked((int)2166136261);
@@ -189,8 +189,8 @@ namespace Dataloop
         public bool Equals(ComputeMetadata other)
         {
             return
-                global::System.Collections.Generic.EqualityComparer<global::Dataloop.Dictionary?>.Default.Equals(Value1, other.Value1) &&
-                global::System.Collections.Generic.EqualityComparer<global::Dataloop.ComputeMetadataVariant2?>.Default.Equals(Value2, other.Value2) 
+                global::System.Collections.Generic.EqualityComparer<global::Dataloop.Dictionary?>.Default.Equals(Dictionary, other.Dictionary) &&
+                global::System.Collections.Generic.EqualityComparer<global::Dataloop.ComputeMetadataVariant2?>.Default.Equals(ComputeMetadataVariant2, other.ComputeMetadataVariant2) 
                 ;
         }
 

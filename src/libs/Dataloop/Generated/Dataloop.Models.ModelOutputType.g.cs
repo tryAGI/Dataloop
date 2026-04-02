@@ -13,69 +13,69 @@ namespace Dataloop
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Dataloop.AnnotationType? Value1 { get; init; }
+        public global::Dataloop.AnnotationType? Annotation1 { get; init; }
 #else
-        public global::Dataloop.AnnotationType? Value1 { get; }
+        public global::Dataloop.AnnotationType? Annotation1 { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value1))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Annotation1))]
 #endif
-        public bool IsValue1 => Value1 != null;
+        public bool IsAnnotation1 => Annotation1 != null;
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Dataloop.ModelOutputTypeVariant2? Value2 { get; init; }
+        public global::Dataloop.ModelOutputTypeVariant2? ModelOutputTypeVariant2 { get; init; }
 #else
-        public global::Dataloop.ModelOutputTypeVariant2? Value2 { get; }
+        public global::Dataloop.ModelOutputTypeVariant2? ModelOutputTypeVariant2 { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value2))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ModelOutputTypeVariant2))]
 #endif
-        public bool IsValue2 => Value2 != null;
+        public bool IsModelOutputTypeVariant2 => ModelOutputTypeVariant2 != null;
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Dataloop.AnnotationType? Value3 { get; init; }
+        public global::Dataloop.AnnotationType? Annotation2 { get; init; }
 #else
-        public global::Dataloop.AnnotationType? Value3 { get; }
+        public global::Dataloop.AnnotationType? Annotation2 { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value3))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Annotation2))]
 #endif
-        public bool IsValue3 => Value3 != null;
+        public bool IsAnnotation2 => Annotation2 != null;
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Dataloop.ModelOutputTypeVariant4? Value4 { get; init; }
+        public global::Dataloop.ModelOutputTypeVariant4? ModelOutputTypeVariant4 { get; init; }
 #else
-        public global::Dataloop.ModelOutputTypeVariant4? Value4 { get; }
+        public global::Dataloop.ModelOutputTypeVariant4? ModelOutputTypeVariant4 { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value4))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ModelOutputTypeVariant4))]
 #endif
-        public bool IsValue4 => Value4 != null;
+        public bool IsModelOutputTypeVariant4 => ModelOutputTypeVariant4 != null;
         /// <summary>
         /// 
         /// </summary>
@@ -84,14 +84,14 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::Dataloop.AnnotationType?(ModelOutputType @this) => @this.Value1;
+        public static implicit operator global::Dataloop.AnnotationType?(ModelOutputType @this) => @this.Annotation1;
 
         /// <summary>
         /// 
         /// </summary>
         public ModelOutputType(global::Dataloop.AnnotationType? value)
         {
-            Value1 = value;
+            Annotation1 = value;
         }
 
         /// <summary>
@@ -102,14 +102,14 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::Dataloop.ModelOutputTypeVariant2?(ModelOutputType @this) => @this.Value2;
+        public static implicit operator global::Dataloop.ModelOutputTypeVariant2?(ModelOutputType @this) => @this.ModelOutputTypeVariant2;
 
         /// <summary>
         /// 
         /// </summary>
         public ModelOutputType(global::Dataloop.ModelOutputTypeVariant2? value)
         {
-            Value2 = value;
+            ModelOutputTypeVariant2 = value;
         }
 
         /// <summary>
@@ -120,50 +120,50 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::Dataloop.ModelOutputTypeVariant4?(ModelOutputType @this) => @this.Value4;
+        public static implicit operator global::Dataloop.ModelOutputTypeVariant4?(ModelOutputType @this) => @this.ModelOutputTypeVariant4;
 
         /// <summary>
         /// 
         /// </summary>
         public ModelOutputType(global::Dataloop.ModelOutputTypeVariant4? value)
         {
-            Value4 = value;
+            ModelOutputTypeVariant4 = value;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public ModelOutputType(
-            global::Dataloop.AnnotationType? value1,
-            global::Dataloop.ModelOutputTypeVariant2? value2,
-            global::Dataloop.AnnotationType? value3,
-            global::Dataloop.ModelOutputTypeVariant4? value4
+            global::Dataloop.AnnotationType? annotation1,
+            global::Dataloop.ModelOutputTypeVariant2? modelOutputTypeVariant2,
+            global::Dataloop.AnnotationType? annotation2,
+            global::Dataloop.ModelOutputTypeVariant4? modelOutputTypeVariant4
             )
         {
-            Value1 = value1;
-            Value2 = value2;
-            Value3 = value3;
-            Value4 = value4;
+            Annotation1 = annotation1;
+            ModelOutputTypeVariant2 = modelOutputTypeVariant2;
+            Annotation2 = annotation2;
+            ModelOutputTypeVariant4 = modelOutputTypeVariant4;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public object? Object =>
-            Value4 as object ??
-            Value3 as object ??
-            Value2 as object ??
-            Value1 as object 
+            ModelOutputTypeVariant4 as object ??
+            Annotation2 as object ??
+            ModelOutputTypeVariant2 as object ??
+            Annotation1 as object 
             ;
 
         /// <summary>
         /// 
         /// </summary>
         public override string? ToString() =>
-            Value1?.ToValueString() ??
-            Value2?.ToValueString() ??
-            Value3?.ToValueString() ??
-            Value4?.ToValueString() 
+            Annotation1?.ToValueString() ??
+            ModelOutputTypeVariant2?.ToValueString() ??
+            Annotation2?.ToValueString() ??
+            ModelOutputTypeVariant4?.ToValueString() 
             ;
 
         /// <summary>
@@ -171,17 +171,17 @@ namespace Dataloop
         /// </summary>
         public bool Validate()
         {
-            return IsValue1 || IsValue2 || IsValue3 || IsValue4;
+            return IsAnnotation1 || IsModelOutputTypeVariant2 || IsAnnotation2 || IsModelOutputTypeVariant4;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Dataloop.AnnotationType?, TResult>? value1 = null,
-            global::System.Func<global::Dataloop.ModelOutputTypeVariant2?, TResult>? value2 = null,
-            global::System.Func<global::Dataloop.AnnotationType?, TResult>? value3 = null,
-            global::System.Func<global::Dataloop.ModelOutputTypeVariant4?, TResult>? value4 = null,
+            global::System.Func<global::Dataloop.AnnotationType?, TResult>? annotation1 = null,
+            global::System.Func<global::Dataloop.ModelOutputTypeVariant2?, TResult>? modelOutputTypeVariant2 = null,
+            global::System.Func<global::Dataloop.AnnotationType?, TResult>? annotation2 = null,
+            global::System.Func<global::Dataloop.ModelOutputTypeVariant4?, TResult>? modelOutputTypeVariant4 = null,
             bool validate = true)
         {
             if (validate)
@@ -189,21 +189,21 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsValue1 && value1 != null)
+            if (IsAnnotation1 && annotation1 != null)
             {
-                return value1(Value1!);
+                return annotation1(Annotation1!);
             }
-            else if (IsValue2 && value2 != null)
+            else if (IsModelOutputTypeVariant2 && modelOutputTypeVariant2 != null)
             {
-                return value2(Value2!);
+                return modelOutputTypeVariant2(ModelOutputTypeVariant2!);
             }
-            else if (IsValue3 && value3 != null)
+            else if (IsAnnotation2 && annotation2 != null)
             {
-                return value3(Value3!);
+                return annotation2(Annotation2!);
             }
-            else if (IsValue4 && value4 != null)
+            else if (IsModelOutputTypeVariant4 && modelOutputTypeVariant4 != null)
             {
-                return value4(Value4!);
+                return modelOutputTypeVariant4(ModelOutputTypeVariant4!);
             }
 
             return default(TResult);
@@ -213,10 +213,10 @@ namespace Dataloop
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Dataloop.AnnotationType?>? value1 = null,
-            global::System.Action<global::Dataloop.ModelOutputTypeVariant2?>? value2 = null,
-            global::System.Action<global::Dataloop.AnnotationType?>? value3 = null,
-            global::System.Action<global::Dataloop.ModelOutputTypeVariant4?>? value4 = null,
+            global::System.Action<global::Dataloop.AnnotationType?>? annotation1 = null,
+            global::System.Action<global::Dataloop.ModelOutputTypeVariant2?>? modelOutputTypeVariant2 = null,
+            global::System.Action<global::Dataloop.AnnotationType?>? annotation2 = null,
+            global::System.Action<global::Dataloop.ModelOutputTypeVariant4?>? modelOutputTypeVariant4 = null,
             bool validate = true)
         {
             if (validate)
@@ -224,21 +224,21 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsValue1)
+            if (IsAnnotation1)
             {
-                value1?.Invoke(Value1!);
+                annotation1?.Invoke(Annotation1!);
             }
-            else if (IsValue2)
+            else if (IsModelOutputTypeVariant2)
             {
-                value2?.Invoke(Value2!);
+                modelOutputTypeVariant2?.Invoke(ModelOutputTypeVariant2!);
             }
-            else if (IsValue3)
+            else if (IsAnnotation2)
             {
-                value3?.Invoke(Value3!);
+                annotation2?.Invoke(Annotation2!);
             }
-            else if (IsValue4)
+            else if (IsModelOutputTypeVariant4)
             {
-                value4?.Invoke(Value4!);
+                modelOutputTypeVariant4?.Invoke(ModelOutputTypeVariant4!);
             }
         }
 
@@ -249,13 +249,13 @@ namespace Dataloop
         {
             var fields = new object?[]
             {
-                Value1,
+                Annotation1,
                 typeof(global::Dataloop.AnnotationType),
-                Value2,
+                ModelOutputTypeVariant2,
                 typeof(global::Dataloop.ModelOutputTypeVariant2),
-                Value3,
+                Annotation2,
                 typeof(global::Dataloop.AnnotationType),
-                Value4,
+                ModelOutputTypeVariant4,
                 typeof(global::Dataloop.ModelOutputTypeVariant4),
             };
             const int offset = unchecked((int)2166136261);
@@ -273,10 +273,10 @@ namespace Dataloop
         public bool Equals(ModelOutputType other)
         {
             return
-                global::System.Collections.Generic.EqualityComparer<global::Dataloop.AnnotationType?>.Default.Equals(Value1, other.Value1) &&
-                global::System.Collections.Generic.EqualityComparer<global::Dataloop.ModelOutputTypeVariant2?>.Default.Equals(Value2, other.Value2) &&
-                global::System.Collections.Generic.EqualityComparer<global::Dataloop.AnnotationType?>.Default.Equals(Value3, other.Value3) &&
-                global::System.Collections.Generic.EqualityComparer<global::Dataloop.ModelOutputTypeVariant4?>.Default.Equals(Value4, other.Value4) 
+                global::System.Collections.Generic.EqualityComparer<global::Dataloop.AnnotationType?>.Default.Equals(Annotation1, other.Annotation1) &&
+                global::System.Collections.Generic.EqualityComparer<global::Dataloop.ModelOutputTypeVariant2?>.Default.Equals(ModelOutputTypeVariant2, other.ModelOutputTypeVariant2) &&
+                global::System.Collections.Generic.EqualityComparer<global::Dataloop.AnnotationType?>.Default.Equals(Annotation2, other.Annotation2) &&
+                global::System.Collections.Generic.EqualityComparer<global::Dataloop.ModelOutputTypeVariant4?>.Default.Equals(ModelOutputTypeVariant4, other.ModelOutputTypeVariant4) 
                 ;
         }
 

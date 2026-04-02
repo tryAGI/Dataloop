@@ -13,52 +13,52 @@ namespace Dataloop
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::System.DateTime? Value1 { get; init; }
+        public global::System.DateTime? Time { get; init; }
 #else
-        public global::System.DateTime? Value1 { get; }
+        public global::System.DateTime? Time { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value1))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Time))]
 #endif
-        public bool IsValue1 => Value1 != null;
+        public bool IsTime => Time != null;
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public double? Value2 { get; init; }
+        public double? IDateVariant2 { get; init; }
 #else
-        public double? Value2 { get; }
+        public double? IDateVariant2 { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value2))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(IDateVariant2))]
 #endif
-        public bool IsValue2 => Value2 != null;
+        public bool IsIDateVariant2 => IDateVariant2 != null;
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public string? Value3 { get; init; }
+        public string? IDateVariant3 { get; init; }
 #else
-        public string? Value3 { get; }
+        public string? IDateVariant3 { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value3))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(IDateVariant3))]
 #endif
-        public bool IsValue3 => Value3 != null;
+        public bool IsIDateVariant3 => IDateVariant3 != null;
         /// <summary>
         /// 
         /// </summary>
@@ -67,14 +67,14 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::System.DateTime?(IDate @this) => @this.Value1;
+        public static implicit operator global::System.DateTime?(IDate @this) => @this.Time;
 
         /// <summary>
         /// 
         /// </summary>
         public IDate(global::System.DateTime? value)
         {
-            Value1 = value;
+            Time = value;
         }
 
         /// <summary>
@@ -85,14 +85,14 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator double?(IDate @this) => @this.Value2;
+        public static implicit operator double?(IDate @this) => @this.IDateVariant2;
 
         /// <summary>
         /// 
         /// </summary>
         public IDate(double? value)
         {
-            Value2 = value;
+            IDateVariant2 = value;
         }
 
         /// <summary>
@@ -103,46 +103,46 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator string?(IDate @this) => @this.Value3;
+        public static implicit operator string?(IDate @this) => @this.IDateVariant3;
 
         /// <summary>
         /// 
         /// </summary>
         public IDate(string? value)
         {
-            Value3 = value;
+            IDateVariant3 = value;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public IDate(
-            global::System.DateTime? value1,
-            double? value2,
-            string? value3
+            global::System.DateTime? time,
+            double? iDateVariant2,
+            string? iDateVariant3
             )
         {
-            Value1 = value1;
-            Value2 = value2;
-            Value3 = value3;
+            Time = time;
+            IDateVariant2 = iDateVariant2;
+            IDateVariant3 = iDateVariant3;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public object? Object =>
-            Value3 as object ??
-            Value2 as object ??
-            Value1 as object 
+            IDateVariant3 as object ??
+            IDateVariant2 as object ??
+            Time as object 
             ;
 
         /// <summary>
         /// 
         /// </summary>
         public override string? ToString() =>
-            Value1?.ToString() ??
-            Value2?.ToString() ??
-            Value3?.ToString() 
+            Time?.ToString() ??
+            IDateVariant2?.ToString() ??
+            IDateVariant3?.ToString() 
             ;
 
         /// <summary>
@@ -150,16 +150,16 @@ namespace Dataloop
         /// </summary>
         public bool Validate()
         {
-            return IsValue1 || IsValue2 || IsValue3;
+            return IsTime || IsIDateVariant2 || IsIDateVariant3;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::System.DateTime?, TResult>? value1 = null,
-            global::System.Func<double?, TResult>? value2 = null,
-            global::System.Func<string?, TResult>? value3 = null,
+            global::System.Func<global::System.DateTime?, TResult>? time = null,
+            global::System.Func<double?, TResult>? iDateVariant2 = null,
+            global::System.Func<string?, TResult>? iDateVariant3 = null,
             bool validate = true)
         {
             if (validate)
@@ -167,17 +167,17 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsValue1 && value1 != null)
+            if (IsTime && time != null)
             {
-                return value1(Value1!);
+                return time(Time!);
             }
-            else if (IsValue2 && value2 != null)
+            else if (IsIDateVariant2 && iDateVariant2 != null)
             {
-                return value2(Value2!);
+                return iDateVariant2(IDateVariant2!);
             }
-            else if (IsValue3 && value3 != null)
+            else if (IsIDateVariant3 && iDateVariant3 != null)
             {
-                return value3(Value3!);
+                return iDateVariant3(IDateVariant3!);
             }
 
             return default(TResult);
@@ -187,9 +187,9 @@ namespace Dataloop
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::System.DateTime?>? value1 = null,
-            global::System.Action<double?>? value2 = null,
-            global::System.Action<string?>? value3 = null,
+            global::System.Action<global::System.DateTime?>? time = null,
+            global::System.Action<double?>? iDateVariant2 = null,
+            global::System.Action<string?>? iDateVariant3 = null,
             bool validate = true)
         {
             if (validate)
@@ -197,17 +197,17 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsValue1)
+            if (IsTime)
             {
-                value1?.Invoke(Value1!);
+                time?.Invoke(Time!);
             }
-            else if (IsValue2)
+            else if (IsIDateVariant2)
             {
-                value2?.Invoke(Value2!);
+                iDateVariant2?.Invoke(IDateVariant2!);
             }
-            else if (IsValue3)
+            else if (IsIDateVariant3)
             {
-                value3?.Invoke(Value3!);
+                iDateVariant3?.Invoke(IDateVariant3!);
             }
         }
 
@@ -218,11 +218,11 @@ namespace Dataloop
         {
             var fields = new object?[]
             {
-                Value1,
+                Time,
                 typeof(global::System.DateTime),
-                Value2,
+                IDateVariant2,
                 typeof(double),
-                Value3,
+                IDateVariant3,
                 typeof(string),
             };
             const int offset = unchecked((int)2166136261);
@@ -240,9 +240,9 @@ namespace Dataloop
         public bool Equals(IDate other)
         {
             return
-                global::System.Collections.Generic.EqualityComparer<global::System.DateTime?>.Default.Equals(Value1, other.Value1) &&
-                global::System.Collections.Generic.EqualityComparer<double?>.Default.Equals(Value2, other.Value2) &&
-                global::System.Collections.Generic.EqualityComparer<string?>.Default.Equals(Value3, other.Value3) 
+                global::System.Collections.Generic.EqualityComparer<global::System.DateTime?>.Default.Equals(Time, other.Time) &&
+                global::System.Collections.Generic.EqualityComparer<double?>.Default.Equals(IDateVariant2, other.IDateVariant2) &&
+                global::System.Collections.Generic.EqualityComparer<string?>.Default.Equals(IDateVariant3, other.IDateVariant3) 
                 ;
         }
 

@@ -35,8 +35,8 @@ namespace Dataloop.JsonConverters
             if (__score0 > __bestScore) { __bestScore = __score0; __bestIndex = 0; }
             if (__score1 > __bestScore) { __bestScore = __score1; __bestIndex = 1; }
 
-            global::Dataloop.EntityReferenceMetadata? value1 = default;
-            global::Dataloop.AppMetadataVariant2? value2 = default;
+            global::Dataloop.EntityReferenceMetadata? entityReference = default;
+            global::Dataloop.AppMetadataVariant2? appMetadataVariant2 = default;
             if (__bestIndex >= 0)
             {
                 if (__bestIndex == 0)
@@ -45,7 +45,7 @@ namespace Dataloop.JsonConverters
                     {
                         var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.EntityReferenceMetadata), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.EntityReferenceMetadata> ??
                                        throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.EntityReferenceMetadata).Name}");
-                        value1 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        entityReference = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -60,7 +60,7 @@ namespace Dataloop.JsonConverters
                     {
                         var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.AppMetadataVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.AppMetadataVariant2> ??
                                        throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.AppMetadataVariant2).Name}");
-                        value2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        appMetadataVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -71,13 +71,13 @@ namespace Dataloop.JsonConverters
                 }
             }
 
-            if (value1 == null && value2 == null)
+            if (entityReference == null && appMetadataVariant2 == null)
             {
                 try
                 {
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.EntityReferenceMetadata), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.EntityReferenceMetadata> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.EntityReferenceMetadata).Name}");
-                    value1 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    entityReference = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -90,7 +90,7 @@ namespace Dataloop.JsonConverters
                 {
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.AppMetadataVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.AppMetadataVariant2> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.AppMetadataVariant2).Name}");
-                    value2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    appMetadataVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -101,9 +101,9 @@ namespace Dataloop.JsonConverters
             }
 
             var __value = new global::Dataloop.AppMetadata(
-                value1,
+                entityReference,
 
-                value2
+                appMetadataVariant2
                 );
 
             return __value;
@@ -118,17 +118,17 @@ namespace Dataloop.JsonConverters
             options = options ?? throw new global::System.ArgumentNullException(nameof(options));
             var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
 
-            if (value.IsValue1)
+            if (value.IsEntityReference)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.EntityReferenceMetadata), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.EntityReferenceMetadata?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.EntityReferenceMetadata).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value1!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.EntityReference!, typeInfo);
             }
-            else if (value.IsValue2)
+            else if (value.IsAppMetadataVariant2)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.AppMetadataVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.AppMetadataVariant2?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.AppMetadataVariant2).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value2!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.AppMetadataVariant2!, typeInfo);
             }
         }
     }

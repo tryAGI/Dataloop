@@ -13,35 +13,35 @@ namespace Dataloop
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Dataloop.MigrationSpec? Value1 { get; init; }
+        public global::Dataloop.MigrationSpec? MigrationSpec { get; init; }
 #else
-        public global::Dataloop.MigrationSpec? Value1 { get; }
+        public global::Dataloop.MigrationSpec? MigrationSpec { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value1))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(MigrationSpec))]
 #endif
-        public bool IsValue1 => Value1 != null;
+        public bool IsMigrationSpec => MigrationSpec != null;
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Dataloop.RemoveSettingTraceMigrationSpecVariant2? Value2 { get; init; }
+        public global::Dataloop.RemoveSettingTraceMigrationSpecVariant2? RemoveSettingTraceMigrationSpecVariant2 { get; init; }
 #else
-        public global::Dataloop.RemoveSettingTraceMigrationSpecVariant2? Value2 { get; }
+        public global::Dataloop.RemoveSettingTraceMigrationSpecVariant2? RemoveSettingTraceMigrationSpecVariant2 { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value2))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(RemoveSettingTraceMigrationSpecVariant2))]
 #endif
-        public bool IsValue2 => Value2 != null;
+        public bool IsRemoveSettingTraceMigrationSpecVariant2 => RemoveSettingTraceMigrationSpecVariant2 != null;
         /// <summary>
         /// 
         /// </summary>
@@ -50,14 +50,14 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::Dataloop.MigrationSpec?(RemoveSettingTraceMigrationSpec @this) => @this.Value1;
+        public static implicit operator global::Dataloop.MigrationSpec?(RemoveSettingTraceMigrationSpec @this) => @this.MigrationSpec;
 
         /// <summary>
         /// 
         /// </summary>
         public RemoveSettingTraceMigrationSpec(global::Dataloop.MigrationSpec? value)
         {
-            Value1 = value;
+            MigrationSpec = value;
         }
 
         /// <summary>
@@ -68,42 +68,42 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::Dataloop.RemoveSettingTraceMigrationSpecVariant2?(RemoveSettingTraceMigrationSpec @this) => @this.Value2;
+        public static implicit operator global::Dataloop.RemoveSettingTraceMigrationSpecVariant2?(RemoveSettingTraceMigrationSpec @this) => @this.RemoveSettingTraceMigrationSpecVariant2;
 
         /// <summary>
         /// 
         /// </summary>
         public RemoveSettingTraceMigrationSpec(global::Dataloop.RemoveSettingTraceMigrationSpecVariant2? value)
         {
-            Value2 = value;
+            RemoveSettingTraceMigrationSpecVariant2 = value;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public RemoveSettingTraceMigrationSpec(
-            global::Dataloop.MigrationSpec? value1,
-            global::Dataloop.RemoveSettingTraceMigrationSpecVariant2? value2
+            global::Dataloop.MigrationSpec? migrationSpec,
+            global::Dataloop.RemoveSettingTraceMigrationSpecVariant2? removeSettingTraceMigrationSpecVariant2
             )
         {
-            Value1 = value1;
-            Value2 = value2;
+            MigrationSpec = migrationSpec;
+            RemoveSettingTraceMigrationSpecVariant2 = removeSettingTraceMigrationSpecVariant2;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public object? Object =>
-            Value2 as object ??
-            Value1 as object 
+            RemoveSettingTraceMigrationSpecVariant2 as object ??
+            MigrationSpec as object 
             ;
 
         /// <summary>
         /// 
         /// </summary>
         public override string? ToString() =>
-            Value1?.ToString() ??
-            Value2?.ToString() 
+            MigrationSpec?.ToString() ??
+            RemoveSettingTraceMigrationSpecVariant2?.ToString() 
             ;
 
         /// <summary>
@@ -111,15 +111,15 @@ namespace Dataloop
         /// </summary>
         public bool Validate()
         {
-            return IsValue1 && IsValue2;
+            return IsMigrationSpec && IsRemoveSettingTraceMigrationSpecVariant2;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Dataloop.MigrationSpec?, TResult>? value1 = null,
-            global::System.Func<global::Dataloop.RemoveSettingTraceMigrationSpecVariant2?, TResult>? value2 = null,
+            global::System.Func<global::Dataloop.MigrationSpec?, TResult>? migrationSpec = null,
+            global::System.Func<global::Dataloop.RemoveSettingTraceMigrationSpecVariant2?, TResult>? removeSettingTraceMigrationSpecVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -127,13 +127,13 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsValue1 && value1 != null)
+            if (IsMigrationSpec && migrationSpec != null)
             {
-                return value1(Value1!);
+                return migrationSpec(MigrationSpec!);
             }
-            else if (IsValue2 && value2 != null)
+            else if (IsRemoveSettingTraceMigrationSpecVariant2 && removeSettingTraceMigrationSpecVariant2 != null)
             {
-                return value2(Value2!);
+                return removeSettingTraceMigrationSpecVariant2(RemoveSettingTraceMigrationSpecVariant2!);
             }
 
             return default(TResult);
@@ -143,8 +143,8 @@ namespace Dataloop
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Dataloop.MigrationSpec?>? value1 = null,
-            global::System.Action<global::Dataloop.RemoveSettingTraceMigrationSpecVariant2?>? value2 = null,
+            global::System.Action<global::Dataloop.MigrationSpec?>? migrationSpec = null,
+            global::System.Action<global::Dataloop.RemoveSettingTraceMigrationSpecVariant2?>? removeSettingTraceMigrationSpecVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -152,13 +152,13 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsValue1)
+            if (IsMigrationSpec)
             {
-                value1?.Invoke(Value1!);
+                migrationSpec?.Invoke(MigrationSpec!);
             }
-            else if (IsValue2)
+            else if (IsRemoveSettingTraceMigrationSpecVariant2)
             {
-                value2?.Invoke(Value2!);
+                removeSettingTraceMigrationSpecVariant2?.Invoke(RemoveSettingTraceMigrationSpecVariant2!);
             }
         }
 
@@ -169,9 +169,9 @@ namespace Dataloop
         {
             var fields = new object?[]
             {
-                Value1,
+                MigrationSpec,
                 typeof(global::Dataloop.MigrationSpec),
-                Value2,
+                RemoveSettingTraceMigrationSpecVariant2,
                 typeof(global::Dataloop.RemoveSettingTraceMigrationSpecVariant2),
             };
             const int offset = unchecked((int)2166136261);
@@ -189,8 +189,8 @@ namespace Dataloop
         public bool Equals(RemoveSettingTraceMigrationSpec other)
         {
             return
-                global::System.Collections.Generic.EqualityComparer<global::Dataloop.MigrationSpec?>.Default.Equals(Value1, other.Value1) &&
-                global::System.Collections.Generic.EqualityComparer<global::Dataloop.RemoveSettingTraceMigrationSpecVariant2?>.Default.Equals(Value2, other.Value2) 
+                global::System.Collections.Generic.EqualityComparer<global::Dataloop.MigrationSpec?>.Default.Equals(MigrationSpec, other.MigrationSpec) &&
+                global::System.Collections.Generic.EqualityComparer<global::Dataloop.RemoveSettingTraceMigrationSpecVariant2?>.Default.Equals(RemoveSettingTraceMigrationSpecVariant2, other.RemoveSettingTraceMigrationSpecVariant2) 
                 ;
         }
 
