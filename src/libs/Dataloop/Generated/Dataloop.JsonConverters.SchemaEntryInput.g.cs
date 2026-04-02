@@ -12,8 +12,7 @@ namespace Dataloop.JsonConverters
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
-            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
 
             using var __jsonDocument = global::System.Text.Json.JsonDocument.ParseValue(ref reader);
             var __rawJson = __jsonDocument.RootElement.GetRawText();
@@ -43,9 +42,7 @@ namespace Dataloop.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.SchemaEntryInputVariant1), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.SchemaEntryInputVariant1> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.SchemaEntryInputVariant1).Name}");
-                        schemaEntryInputVariant1 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        schemaEntryInputVariant1 = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.SchemaEntryInputVariant1>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -58,9 +55,7 @@ namespace Dataloop.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.AnyOf<global::Dataloop.SchemaEntryInputVariant2Variant1, global::Dataloop.SchemaEntryInputVariant2Variant2>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.AnyOf<global::Dataloop.SchemaEntryInputVariant2Variant1, global::Dataloop.SchemaEntryInputVariant2Variant2>> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.AnyOf<global::Dataloop.SchemaEntryInputVariant2Variant1, global::Dataloop.SchemaEntryInputVariant2Variant2>).Name}");
-                        schemaEntryInputVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        schemaEntryInputVariant2 = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.AnyOf<global::Dataloop.SchemaEntryInputVariant2Variant1, global::Dataloop.SchemaEntryInputVariant2Variant2>>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -75,9 +70,7 @@ namespace Dataloop.JsonConverters
             {
                 try
                 {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.SchemaEntryInputVariant1), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.SchemaEntryInputVariant1> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.SchemaEntryInputVariant1).Name}");
-                    schemaEntryInputVariant1 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    schemaEntryInputVariant1 = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.SchemaEntryInputVariant1>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -88,9 +81,7 @@ namespace Dataloop.JsonConverters
 
                 try
                 {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.AnyOf<global::Dataloop.SchemaEntryInputVariant2Variant1, global::Dataloop.SchemaEntryInputVariant2Variant2>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.AnyOf<global::Dataloop.SchemaEntryInputVariant2Variant1, global::Dataloop.SchemaEntryInputVariant2Variant2>> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.AnyOf<global::Dataloop.SchemaEntryInputVariant2Variant1, global::Dataloop.SchemaEntryInputVariant2Variant2>).Name}");
-                    schemaEntryInputVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    schemaEntryInputVariant2 = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.AnyOf<global::Dataloop.SchemaEntryInputVariant2Variant1, global::Dataloop.SchemaEntryInputVariant2Variant2>>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -115,20 +106,15 @@ namespace Dataloop.JsonConverters
             global::Dataloop.SchemaEntryInput value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
-            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
 
             if (value.IsSchemaEntryInputVariant1)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.SchemaEntryInputVariant1), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.SchemaEntryInputVariant1?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.SchemaEntryInputVariant1).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.SchemaEntryInputVariant1!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.SchemaEntryInputVariant1, typeof(global::Dataloop.SchemaEntryInputVariant1), options);
             }
             else if (value.IsSchemaEntryInputVariant2)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.AnyOf<global::Dataloop.SchemaEntryInputVariant2Variant1, global::Dataloop.SchemaEntryInputVariant2Variant2>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.AnyOf<global::Dataloop.SchemaEntryInputVariant2Variant1, global::Dataloop.SchemaEntryInputVariant2Variant2>> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.AnyOf<global::Dataloop.SchemaEntryInputVariant2Variant1, global::Dataloop.SchemaEntryInputVariant2Variant2>).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.SchemaEntryInputVariant2!.Value, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.SchemaEntryInputVariant2, typeof(global::Dataloop.AnyOf<global::Dataloop.SchemaEntryInputVariant2Variant1, global::Dataloop.SchemaEntryInputVariant2Variant2>), options);
             }
         }
     }

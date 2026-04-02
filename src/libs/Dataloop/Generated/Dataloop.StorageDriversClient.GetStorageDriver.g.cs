@@ -124,7 +124,7 @@ namespace Dataloop
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::Dataloop.APIDriverConfiguration.FromJson(__content, JsonSerializerContext) ??
+                        global::Dataloop.APIDriverConfiguration.FromJson(__content, JsonSerializerOptions) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -155,7 +155,7 @@ namespace Dataloop
                     ).ConfigureAwait(false);
 
                     return
-                        await global::Dataloop.APIDriverConfiguration.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::Dataloop.APIDriverConfiguration.FromJsonStreamAsync(__content, JsonSerializerOptions).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)

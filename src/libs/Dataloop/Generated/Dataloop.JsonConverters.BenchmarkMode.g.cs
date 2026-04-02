@@ -12,8 +12,7 @@ namespace Dataloop.JsonConverters
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
-            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
 
             using var __jsonDocument = global::System.Text.Json.JsonDocument.ParseValue(ref reader);
             var __rawJson = __jsonDocument.RootElement.GetRawText();
@@ -50,9 +49,7 @@ namespace Dataloop.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.OneByOneLatencyBenchmarkMode), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.OneByOneLatencyBenchmarkMode> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.OneByOneLatencyBenchmarkMode).Name}");
-                        oneByLatency = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        oneByLatency = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.OneByOneLatencyBenchmarkMode>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -65,9 +62,7 @@ namespace Dataloop.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.ProfilingBenchmarkMode), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.ProfilingBenchmarkMode> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.ProfilingBenchmarkMode).Name}");
-                        profiling = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        profiling = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.ProfilingBenchmarkMode>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -80,9 +75,7 @@ namespace Dataloop.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.ConcurrencyBenchmarkMode), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.ConcurrencyBenchmarkMode> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.ConcurrencyBenchmarkMode).Name}");
-                        concurrency = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        concurrency = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.ConcurrencyBenchmarkMode>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -97,9 +90,7 @@ namespace Dataloop.JsonConverters
             {
                 try
                 {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.OneByOneLatencyBenchmarkMode), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.OneByOneLatencyBenchmarkMode> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.OneByOneLatencyBenchmarkMode).Name}");
-                    oneByLatency = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    oneByLatency = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.OneByOneLatencyBenchmarkMode>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -110,9 +101,7 @@ namespace Dataloop.JsonConverters
 
                 try
                 {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.ProfilingBenchmarkMode), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.ProfilingBenchmarkMode> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.ProfilingBenchmarkMode).Name}");
-                    profiling = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    profiling = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.ProfilingBenchmarkMode>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -123,9 +112,7 @@ namespace Dataloop.JsonConverters
 
                 try
                 {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.ConcurrencyBenchmarkMode), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.ConcurrencyBenchmarkMode> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.ConcurrencyBenchmarkMode).Name}");
-                    concurrency = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    concurrency = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.ConcurrencyBenchmarkMode>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -152,26 +139,19 @@ namespace Dataloop.JsonConverters
             global::Dataloop.BenchmarkMode value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
-            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
 
             if (value.IsOneByLatency)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.OneByOneLatencyBenchmarkMode), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.OneByOneLatencyBenchmarkMode?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.OneByOneLatencyBenchmarkMode).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.OneByLatency!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.OneByLatency, typeof(global::Dataloop.OneByOneLatencyBenchmarkMode), options);
             }
             else if (value.IsProfiling)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.ProfilingBenchmarkMode), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.ProfilingBenchmarkMode?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.ProfilingBenchmarkMode).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Profiling!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Profiling, typeof(global::Dataloop.ProfilingBenchmarkMode), options);
             }
             else if (value.IsConcurrency)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.ConcurrencyBenchmarkMode), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.ConcurrencyBenchmarkMode?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.ConcurrencyBenchmarkMode).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Concurrency!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Concurrency, typeof(global::Dataloop.ConcurrencyBenchmarkMode), options);
             }
         }
     }
