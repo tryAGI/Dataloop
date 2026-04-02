@@ -12,8 +12,7 @@ namespace Dataloop.JsonConverters
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
-            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
 
             using var __jsonDocument = global::System.Text.Json.JsonDocument.ParseValue(ref reader);
             var __rawJson = __jsonDocument.RootElement.GetRawText();
@@ -55,9 +54,7 @@ namespace Dataloop.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.Dictionary), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.Dictionary> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.Dictionary).Name}");
-                        dictionary = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        dictionary = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.Dictionary>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -70,9 +67,7 @@ namespace Dataloop.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.ComputeMetadataVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.ComputeMetadataVariant2> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.ComputeMetadataVariant2).Name}");
-                        computeMetadataVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        computeMetadataVariant2 = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.ComputeMetadataVariant2>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -87,9 +82,7 @@ namespace Dataloop.JsonConverters
             {
                 try
                 {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.Dictionary), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.Dictionary> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.Dictionary).Name}");
-                    dictionary = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    dictionary = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.Dictionary>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -100,9 +93,7 @@ namespace Dataloop.JsonConverters
 
                 try
                 {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.ComputeMetadataVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.ComputeMetadataVariant2> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.ComputeMetadataVariant2).Name}");
-                    computeMetadataVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    computeMetadataVariant2 = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.ComputeMetadataVariant2>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -127,20 +118,15 @@ namespace Dataloop.JsonConverters
             global::Dataloop.ComputeMetadata value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
-            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
 
             if (value.IsDictionary)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.Dictionary), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.Dictionary?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.Dictionary).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Dictionary!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Dictionary, typeof(global::Dataloop.Dictionary), options);
             }
             else if (value.IsComputeMetadataVariant2)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.ComputeMetadataVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.ComputeMetadataVariant2?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.ComputeMetadataVariant2).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ComputeMetadataVariant2!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ComputeMetadataVariant2, typeof(global::Dataloop.ComputeMetadataVariant2), options);
             }
         }
     }

@@ -12,8 +12,7 @@ namespace Dataloop.JsonConverters
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
-            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
 
             using var __jsonDocument = global::System.Text.Json.JsonDocument.ParseValue(ref reader);
             var __rawJson = __jsonDocument.RootElement.GetRawText();
@@ -42,9 +41,7 @@ namespace Dataloop.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.MigrationSpec), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.MigrationSpec> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.MigrationSpec).Name}");
-                        migrationSpec = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        migrationSpec = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.MigrationSpec>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -57,9 +54,7 @@ namespace Dataloop.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.RemoveSettingTraceMigrationSpecVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.RemoveSettingTraceMigrationSpecVariant2> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.RemoveSettingTraceMigrationSpecVariant2).Name}");
-                        removeSettingTraceMigrationSpecVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        removeSettingTraceMigrationSpecVariant2 = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.RemoveSettingTraceMigrationSpecVariant2>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -74,9 +69,7 @@ namespace Dataloop.JsonConverters
             {
                 try
                 {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.MigrationSpec), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.MigrationSpec> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.MigrationSpec).Name}");
-                    migrationSpec = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    migrationSpec = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.MigrationSpec>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -87,9 +80,7 @@ namespace Dataloop.JsonConverters
 
                 try
                 {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.RemoveSettingTraceMigrationSpecVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.RemoveSettingTraceMigrationSpecVariant2> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.RemoveSettingTraceMigrationSpecVariant2).Name}");
-                    removeSettingTraceMigrationSpecVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    removeSettingTraceMigrationSpecVariant2 = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.RemoveSettingTraceMigrationSpecVariant2>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -114,20 +105,15 @@ namespace Dataloop.JsonConverters
             global::Dataloop.RemoveSettingTraceMigrationSpec value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
-            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
 
             if (value.IsMigrationSpec)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.MigrationSpec), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.MigrationSpec> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.MigrationSpec).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.MigrationSpec!.Value, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.MigrationSpec, typeof(global::Dataloop.MigrationSpec), options);
             }
             else if (value.IsRemoveSettingTraceMigrationSpecVariant2)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.RemoveSettingTraceMigrationSpecVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.RemoveSettingTraceMigrationSpecVariant2?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.RemoveSettingTraceMigrationSpecVariant2).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.RemoveSettingTraceMigrationSpecVariant2!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.RemoveSettingTraceMigrationSpecVariant2, typeof(global::Dataloop.RemoveSettingTraceMigrationSpecVariant2), options);
             }
         }
     }

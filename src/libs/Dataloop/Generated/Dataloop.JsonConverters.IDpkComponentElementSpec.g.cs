@@ -12,8 +12,7 @@ namespace Dataloop.JsonConverters
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
-            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
 
             using var __jsonDocument = global::System.Text.Json.JsonDocument.ParseValue(ref reader);
             var __rawJson = __jsonDocument.RootElement.GetRawText();
@@ -196,9 +195,7 @@ namespace Dataloop.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.IDpkComponentPanel), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.IDpkComponentPanel> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.IDpkComponentPanel).Name}");
-                        panel = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        panel = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.IDpkComponentPanel>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -211,9 +208,7 @@ namespace Dataloop.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.IDpkComponentModel), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.IDpkComponentModel> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.IDpkComponentModel).Name}");
-                        model = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        model = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.IDpkComponentModel>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -226,9 +221,7 @@ namespace Dataloop.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.IDpkComponentModule), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.IDpkComponentModule> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.IDpkComponentModule).Name}");
-                        module = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        module = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.IDpkComponentModule>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -241,9 +234,7 @@ namespace Dataloop.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.IDpkComponentTrigger), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.IDpkComponentTrigger> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.IDpkComponentTrigger).Name}");
-                        trigger = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        trigger = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.IDpkComponentTrigger>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -256,9 +247,7 @@ namespace Dataloop.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.IDpkComponentService), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.IDpkComponentService> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.IDpkComponentService).Name}");
-                        service = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        service = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.IDpkComponentService>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -271,9 +260,7 @@ namespace Dataloop.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.IDpkComponentToolbars), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.IDpkComponentToolbars> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.IDpkComponentToolbars).Name}");
-                        toolbars = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        toolbars = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.IDpkComponentToolbars>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -286,9 +273,7 @@ namespace Dataloop.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.IDpkChannel), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.IDpkChannel> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.IDpkChannel).Name}");
-                        channel = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        channel = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.IDpkChannel>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -301,9 +286,7 @@ namespace Dataloop.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.IDpkComputeConfigs), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.IDpkComputeConfigs> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.IDpkComputeConfigs).Name}");
-                        computeConfigs = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        computeConfigs = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.IDpkComputeConfigs>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -316,9 +299,7 @@ namespace Dataloop.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.IDpkPipelineNode), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.IDpkPipelineNode> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.IDpkPipelineNode).Name}");
-                        pipelineNode = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        pipelineNode = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.IDpkPipelineNode>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -331,9 +312,7 @@ namespace Dataloop.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.IDpkPipelineTemplate), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.IDpkPipelineTemplate> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.IDpkPipelineTemplate).Name}");
-                        pipelineTemplate = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        pipelineTemplate = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.IDpkPipelineTemplate>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -348,9 +327,7 @@ namespace Dataloop.JsonConverters
             {
                 try
                 {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.IDpkComponentPanel), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.IDpkComponentPanel> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.IDpkComponentPanel).Name}");
-                    panel = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    panel = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.IDpkComponentPanel>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -361,9 +338,7 @@ namespace Dataloop.JsonConverters
 
                 try
                 {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.IDpkComponentModel), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.IDpkComponentModel> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.IDpkComponentModel).Name}");
-                    model = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    model = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.IDpkComponentModel>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -374,9 +349,7 @@ namespace Dataloop.JsonConverters
 
                 try
                 {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.IDpkComponentModule), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.IDpkComponentModule> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.IDpkComponentModule).Name}");
-                    module = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    module = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.IDpkComponentModule>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -387,9 +360,7 @@ namespace Dataloop.JsonConverters
 
                 try
                 {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.IDpkComponentTrigger), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.IDpkComponentTrigger> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.IDpkComponentTrigger).Name}");
-                    trigger = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    trigger = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.IDpkComponentTrigger>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -400,9 +371,7 @@ namespace Dataloop.JsonConverters
 
                 try
                 {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.IDpkComponentService), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.IDpkComponentService> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.IDpkComponentService).Name}");
-                    service = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    service = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.IDpkComponentService>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -413,9 +382,7 @@ namespace Dataloop.JsonConverters
 
                 try
                 {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.IDpkComponentToolbars), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.IDpkComponentToolbars> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.IDpkComponentToolbars).Name}");
-                    toolbars = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    toolbars = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.IDpkComponentToolbars>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -426,9 +393,7 @@ namespace Dataloop.JsonConverters
 
                 try
                 {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.IDpkChannel), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.IDpkChannel> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.IDpkChannel).Name}");
-                    channel = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    channel = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.IDpkChannel>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -439,9 +404,7 @@ namespace Dataloop.JsonConverters
 
                 try
                 {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.IDpkComputeConfigs), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.IDpkComputeConfigs> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.IDpkComputeConfigs).Name}");
-                    computeConfigs = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    computeConfigs = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.IDpkComputeConfigs>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -452,9 +415,7 @@ namespace Dataloop.JsonConverters
 
                 try
                 {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.IDpkPipelineNode), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.IDpkPipelineNode> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.IDpkPipelineNode).Name}");
-                    pipelineNode = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    pipelineNode = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.IDpkPipelineNode>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -465,9 +426,7 @@ namespace Dataloop.JsonConverters
 
                 try
                 {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.IDpkPipelineTemplate), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.IDpkPipelineTemplate> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.IDpkPipelineTemplate).Name}");
-                    pipelineTemplate = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    pipelineTemplate = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.IDpkPipelineTemplate>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -508,68 +467,47 @@ namespace Dataloop.JsonConverters
             global::Dataloop.IDpkComponentElementSpec value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
-            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
 
             if (value.IsPanel)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.IDpkComponentPanel), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.IDpkComponentPanel?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.IDpkComponentPanel).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Panel!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Panel, typeof(global::Dataloop.IDpkComponentPanel), options);
             }
             else if (value.IsModel)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.IDpkComponentModel), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.IDpkComponentModel?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.IDpkComponentModel).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Model!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Model, typeof(global::Dataloop.IDpkComponentModel), options);
             }
             else if (value.IsModule)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.IDpkComponentModule), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.IDpkComponentModule?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.IDpkComponentModule).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Module!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Module, typeof(global::Dataloop.IDpkComponentModule), options);
             }
             else if (value.IsTrigger)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.IDpkComponentTrigger), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.IDpkComponentTrigger?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.IDpkComponentTrigger).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Trigger!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Trigger, typeof(global::Dataloop.IDpkComponentTrigger), options);
             }
             else if (value.IsService)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.IDpkComponentService), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.IDpkComponentService?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.IDpkComponentService).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Service!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Service, typeof(global::Dataloop.IDpkComponentService), options);
             }
             else if (value.IsToolbars)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.IDpkComponentToolbars), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.IDpkComponentToolbars?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.IDpkComponentToolbars).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Toolbars!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Toolbars, typeof(global::Dataloop.IDpkComponentToolbars), options);
             }
             else if (value.IsChannel)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.IDpkChannel), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.IDpkChannel?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.IDpkChannel).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Channel!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Channel, typeof(global::Dataloop.IDpkChannel), options);
             }
             else if (value.IsComputeConfigs)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.IDpkComputeConfigs), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.IDpkComputeConfigs?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.IDpkComputeConfigs).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ComputeConfigs!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ComputeConfigs, typeof(global::Dataloop.IDpkComputeConfigs), options);
             }
             else if (value.IsPipelineNode)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.IDpkPipelineNode), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.IDpkPipelineNode?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.IDpkPipelineNode).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PipelineNode!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PipelineNode, typeof(global::Dataloop.IDpkPipelineNode), options);
             }
             else if (value.IsPipelineTemplate)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.IDpkPipelineTemplate), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.IDpkPipelineTemplate?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.IDpkPipelineTemplate).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PipelineTemplate!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PipelineTemplate, typeof(global::Dataloop.IDpkPipelineTemplate), options);
             }
         }
     }

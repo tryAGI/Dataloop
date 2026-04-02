@@ -12,8 +12,7 @@ namespace Dataloop.JsonConverters
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
-            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
 
             using var __jsonDocument = global::System.Text.Json.JsonDocument.ParseValue(ref reader);
             var __rawJson = __jsonDocument.RootElement.GetRawText();
@@ -44,9 +43,7 @@ namespace Dataloop.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(object), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<object> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(object).Name}");
-                        iRefImageAnnotationsTypeVariant1 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        iRefImageAnnotationsTypeVariant1 = global::System.Text.Json.JsonSerializer.Deserialize<object>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -59,9 +56,7 @@ namespace Dataloop.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.IBaseRefAnnotationCoordinates), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.IBaseRefAnnotationCoordinates> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.IBaseRefAnnotationCoordinates).Name}");
-                        baseAnnotationCoordinates = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        baseAnnotationCoordinates = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.IBaseRefAnnotationCoordinates>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -76,9 +71,7 @@ namespace Dataloop.JsonConverters
             {
                 try
                 {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(object), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<object> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(object).Name}");
-                    iRefImageAnnotationsTypeVariant1 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    iRefImageAnnotationsTypeVariant1 = global::System.Text.Json.JsonSerializer.Deserialize<object>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -89,9 +82,7 @@ namespace Dataloop.JsonConverters
 
                 try
                 {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.IBaseRefAnnotationCoordinates), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.IBaseRefAnnotationCoordinates> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.IBaseRefAnnotationCoordinates).Name}");
-                    baseAnnotationCoordinates = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    baseAnnotationCoordinates = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.IBaseRefAnnotationCoordinates>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -116,20 +107,15 @@ namespace Dataloop.JsonConverters
             global::Dataloop.IRefImageAnnotationsType value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
-            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
 
             if (value.IsIRefImageAnnotationsTypeVariant1)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(object), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<object?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(object).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.IRefImageAnnotationsTypeVariant1!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.IRefImageAnnotationsTypeVariant1, typeof(object), options);
             }
             else if (value.IsBaseAnnotationCoordinates)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.IBaseRefAnnotationCoordinates), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.IBaseRefAnnotationCoordinates?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.IBaseRefAnnotationCoordinates).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.BaseAnnotationCoordinates!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.BaseAnnotationCoordinates, typeof(global::Dataloop.IBaseRefAnnotationCoordinates), options);
             }
         }
     }
