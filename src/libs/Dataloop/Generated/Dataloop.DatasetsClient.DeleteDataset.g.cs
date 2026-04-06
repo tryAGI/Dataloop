@@ -140,7 +140,7 @@ namespace Dataloop
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::System.Text.Json.JsonSerializer.Deserialize<double?>(__content, JsonSerializerOptions) ??
+                        (double?)global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(double?), JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -170,7 +170,7 @@ namespace Dataloop
                     ).ConfigureAwait(false);
 
                     return
-                        await global::System.Text.Json.JsonSerializer.DeserializeAsync<double?>(__content, JsonSerializerOptions).ConfigureAwait(false) ??
+                        (double?)await global::System.Text.Json.JsonSerializer.DeserializeAsync(__content, typeof(double?), JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)

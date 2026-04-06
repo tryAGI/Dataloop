@@ -12,7 +12,8 @@ namespace Dataloop.JsonConverters
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
+            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
 
             using var __jsonDocument = global::System.Text.Json.JsonDocument.ParseValue(ref reader);
             var __rawJson = __jsonDocument.RootElement.GetRawText();
@@ -43,7 +44,9 @@ namespace Dataloop.JsonConverters
                 {
                     try
                     {
-                        pickAPIDpkDependencies = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.PickAPIDpkDependencies>(__rawJson, options);
+                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.PickAPIDpkDependencies), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.PickAPIDpkDependencies> ??
+                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.PickAPIDpkDependencies).Name}");
+                        pickAPIDpkDependencies = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -56,7 +59,9 @@ namespace Dataloop.JsonConverters
                 {
                     try
                     {
-                        customInstallationVariant2 = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.CustomInstallationVariant2>(__rawJson, options);
+                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.CustomInstallationVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.CustomInstallationVariant2> ??
+                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.CustomInstallationVariant2).Name}");
+                        customInstallationVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -71,7 +76,9 @@ namespace Dataloop.JsonConverters
             {
                 try
                 {
-                    pickAPIDpkDependencies = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.PickAPIDpkDependencies>(__rawJson, options);
+                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.PickAPIDpkDependencies), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.PickAPIDpkDependencies> ??
+                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.PickAPIDpkDependencies).Name}");
+                    pickAPIDpkDependencies = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -82,7 +89,9 @@ namespace Dataloop.JsonConverters
 
                 try
                 {
-                    customInstallationVariant2 = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.CustomInstallationVariant2>(__rawJson, options);
+                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.CustomInstallationVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.CustomInstallationVariant2> ??
+                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.CustomInstallationVariant2).Name}");
+                    customInstallationVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -107,15 +116,20 @@ namespace Dataloop.JsonConverters
             global::Dataloop.CustomInstallation value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
+            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
 
             if (value.IsPickAPIDpkDependencies)
             {
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickAPIDpkDependencies, typeof(global::Dataloop.PickAPIDpkDependencies), options);
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.PickAPIDpkDependencies), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.PickAPIDpkDependencies?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.PickAPIDpkDependencies).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickAPIDpkDependencies!, typeInfo);
             }
             else if (value.IsCustomInstallationVariant2)
             {
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.CustomInstallationVariant2, typeof(global::Dataloop.CustomInstallationVariant2), options);
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.CustomInstallationVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.CustomInstallationVariant2?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.CustomInstallationVariant2).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.CustomInstallationVariant2!, typeInfo);
             }
         }
     }

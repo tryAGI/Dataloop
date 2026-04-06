@@ -12,7 +12,8 @@ namespace Dataloop.JsonConverters
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
+            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
 
 
             using var __jsonDocument = global::System.Text.Json.JsonDocument.ParseValue(ref reader);
@@ -27,9 +28,49 @@ namespace Dataloop.JsonConverters
             }
 
             var __score0 = 0;
+            {
+                var __ti = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.AnnotationType), options);
+                if (__ti != null && __ti.Kind == global::System.Text.Json.Serialization.Metadata.JsonTypeInfoKind.Object)
+                {
+                    foreach (var __prop in __ti.Properties)
+                    {
+                        if (__jsonProps.Contains(__prop.Name)) __score0++;
+                    }
+                }
+            }
             var __score1 = 0;
+            {
+                var __ti = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.ModelOutputTypeVariant2), options);
+                if (__ti != null && __ti.Kind == global::System.Text.Json.Serialization.Metadata.JsonTypeInfoKind.Object)
+                {
+                    foreach (var __prop in __ti.Properties)
+                    {
+                        if (__jsonProps.Contains(__prop.Name)) __score1++;
+                    }
+                }
+            }
             var __score2 = 0;
+            {
+                var __ti = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.AnnotationType), options);
+                if (__ti != null && __ti.Kind == global::System.Text.Json.Serialization.Metadata.JsonTypeInfoKind.Object)
+                {
+                    foreach (var __prop in __ti.Properties)
+                    {
+                        if (__jsonProps.Contains(__prop.Name)) __score2++;
+                    }
+                }
+            }
             var __score3 = 0;
+            {
+                var __ti = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.ModelOutputTypeVariant4), options);
+                if (__ti != null && __ti.Kind == global::System.Text.Json.Serialization.Metadata.JsonTypeInfoKind.Object)
+                {
+                    foreach (var __prop in __ti.Properties)
+                    {
+                        if (__jsonProps.Contains(__prop.Name)) __score3++;
+                    }
+                }
+            }
             var __bestScore = 0;
             var __bestIndex = -1;
             if (__score0 > __bestScore) { __bestScore = __score0; __bestIndex = 0; }
@@ -48,7 +89,9 @@ namespace Dataloop.JsonConverters
                     try
                     {
 
-                        annotation1 = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.AnnotationType>(__rawJson, options);
+                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.AnnotationType), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.AnnotationType> ??
+                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.AnnotationType).Name}");
+                        annotation1 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -63,7 +106,9 @@ namespace Dataloop.JsonConverters
                     try
                     {
 
-                        modelOutputTypeVariant2 = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.ModelOutputTypeVariant2>(__rawJson, options);
+                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.ModelOutputTypeVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.ModelOutputTypeVariant2> ??
+                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.ModelOutputTypeVariant2).Name}");
+                        modelOutputTypeVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -78,7 +123,9 @@ namespace Dataloop.JsonConverters
                     try
                     {
 
-                        annotation2 = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.AnnotationType>(__rawJson, options);
+                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.AnnotationType), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.AnnotationType> ??
+                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.AnnotationType).Name}");
+                        annotation2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -93,7 +140,9 @@ namespace Dataloop.JsonConverters
                     try
                     {
 
-                        modelOutputTypeVariant4 = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.ModelOutputTypeVariant4>(__rawJson, options);
+                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.ModelOutputTypeVariant4), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.ModelOutputTypeVariant4> ??
+                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.ModelOutputTypeVariant4).Name}");
+                        modelOutputTypeVariant4 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -109,7 +158,9 @@ namespace Dataloop.JsonConverters
                 try
                 {
 
-                    annotation1 = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.AnnotationType>(__rawJson, options);
+                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.AnnotationType), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.AnnotationType> ??
+                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.AnnotationType).Name}");
+                    annotation1 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -121,7 +172,9 @@ namespace Dataloop.JsonConverters
                 try
                 {
 
-                    modelOutputTypeVariant2 = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.ModelOutputTypeVariant2>(__rawJson, options);
+                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.ModelOutputTypeVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.ModelOutputTypeVariant2> ??
+                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.ModelOutputTypeVariant2).Name}");
+                    modelOutputTypeVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -133,7 +186,9 @@ namespace Dataloop.JsonConverters
                 try
                 {
 
-                    annotation2 = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.AnnotationType>(__rawJson, options);
+                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.AnnotationType), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.AnnotationType> ??
+                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.AnnotationType).Name}");
+                    annotation2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -145,7 +200,9 @@ namespace Dataloop.JsonConverters
                 try
                 {
 
-                    modelOutputTypeVariant4 = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.ModelOutputTypeVariant4>(__rawJson, options);
+                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.ModelOutputTypeVariant4), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.ModelOutputTypeVariant4> ??
+                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.ModelOutputTypeVariant4).Name}");
+                    modelOutputTypeVariant4 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -174,23 +231,32 @@ namespace Dataloop.JsonConverters
             global::Dataloop.ModelOutputType value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
+            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
 
             if (value.IsAnnotation1)
             {
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Annotation1, typeof(global::Dataloop.AnnotationType), options);
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.AnnotationType), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.AnnotationType> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.AnnotationType).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Annotation1!.Value, typeInfo);
             }
             else if (value.IsModelOutputTypeVariant2)
             {
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ModelOutputTypeVariant2, typeof(global::Dataloop.ModelOutputTypeVariant2), options);
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.ModelOutputTypeVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.ModelOutputTypeVariant2> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.ModelOutputTypeVariant2).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ModelOutputTypeVariant2!.Value, typeInfo);
             }
             else if (value.IsAnnotation2)
             {
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Annotation2, typeof(global::Dataloop.AnnotationType), options);
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.AnnotationType), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.AnnotationType> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.AnnotationType).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Annotation2!.Value, typeInfo);
             }
             else if (value.IsModelOutputTypeVariant4)
             {
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ModelOutputTypeVariant4, typeof(global::Dataloop.ModelOutputTypeVariant4), options);
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.ModelOutputTypeVariant4), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.ModelOutputTypeVariant4> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.ModelOutputTypeVariant4).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ModelOutputTypeVariant4!.Value, typeInfo);
             }
         }
     }

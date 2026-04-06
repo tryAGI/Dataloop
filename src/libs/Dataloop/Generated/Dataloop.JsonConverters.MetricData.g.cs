@@ -12,7 +12,8 @@ namespace Dataloop.JsonConverters
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
+            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
 
             using var __jsonDocument = global::System.Text.Json.JsonDocument.ParseValue(ref reader);
             var __rawJson = __jsonDocument.RootElement.GetRawText();
@@ -47,7 +48,9 @@ namespace Dataloop.JsonConverters
                 {
                     try
                     {
-                        line = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.LineData>(__rawJson, options);
+                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.LineData), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.LineData> ??
+                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.LineData).Name}");
+                        line = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -60,7 +63,9 @@ namespace Dataloop.JsonConverters
                 {
                     try
                     {
-                        matrix = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.MatrixData>(__rawJson, options);
+                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.MatrixData), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.MatrixData> ??
+                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.MatrixData).Name}");
+                        matrix = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -73,7 +78,9 @@ namespace Dataloop.JsonConverters
                 {
                     try
                     {
-                        summary = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.SummaryData>(__rawJson, options);
+                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.SummaryData), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.SummaryData> ??
+                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.SummaryData).Name}");
+                        summary = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -88,7 +95,9 @@ namespace Dataloop.JsonConverters
             {
                 try
                 {
-                    line = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.LineData>(__rawJson, options);
+                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.LineData), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.LineData> ??
+                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.LineData).Name}");
+                    line = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -99,7 +108,9 @@ namespace Dataloop.JsonConverters
 
                 try
                 {
-                    matrix = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.MatrixData>(__rawJson, options);
+                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.MatrixData), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.MatrixData> ??
+                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.MatrixData).Name}");
+                    matrix = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -110,7 +121,9 @@ namespace Dataloop.JsonConverters
 
                 try
                 {
-                    summary = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.SummaryData>(__rawJson, options);
+                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.SummaryData), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.SummaryData> ??
+                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.SummaryData).Name}");
+                    summary = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -137,19 +150,26 @@ namespace Dataloop.JsonConverters
             global::Dataloop.MetricData value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
+            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
 
             if (value.IsLine)
             {
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Line, typeof(global::Dataloop.LineData), options);
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.LineData), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.LineData?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.LineData).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Line!, typeInfo);
             }
             else if (value.IsMatrix)
             {
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Matrix, typeof(global::Dataloop.MatrixData), options);
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.MatrixData), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.MatrixData?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.MatrixData).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Matrix!, typeInfo);
             }
             else if (value.IsSummary)
             {
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Summary, typeof(global::Dataloop.SummaryData), options);
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.SummaryData), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.SummaryData?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.SummaryData).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Summary!, typeInfo);
             }
         }
     }

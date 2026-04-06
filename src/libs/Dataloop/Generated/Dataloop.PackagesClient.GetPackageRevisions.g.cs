@@ -120,7 +120,7 @@ namespace Dataloop
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::System.Text.Json.JsonSerializer.Deserialize<global::System.Collections.Generic.IList<global::Dataloop.APIPackage>?>(__content, JsonSerializerOptions) ??
+                        (global::System.Collections.Generic.IList<global::Dataloop.APIPackage>?)global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::Dataloop.APIPackage>), JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -150,7 +150,7 @@ namespace Dataloop
                     ).ConfigureAwait(false);
 
                     return
-                        await global::System.Text.Json.JsonSerializer.DeserializeAsync<global::System.Collections.Generic.IList<global::Dataloop.APIPackage>?>(__content, JsonSerializerOptions).ConfigureAwait(false) ??
+                        (global::System.Collections.Generic.IList<global::Dataloop.APIPackage>?)await global::System.Text.Json.JsonSerializer.DeserializeAsync(__content, typeof(global::System.Collections.Generic.IList<global::Dataloop.APIPackage>), JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
