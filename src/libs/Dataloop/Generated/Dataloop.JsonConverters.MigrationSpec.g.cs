@@ -12,7 +12,8 @@ namespace Dataloop.JsonConverters
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
+            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
 
             using var __jsonDocument = global::System.Text.Json.JsonDocument.ParseValue(ref reader);
             var __rawJson = __jsonDocument.RootElement.GetRawText();
@@ -42,7 +43,9 @@ namespace Dataloop.JsonConverters
                 {
                     try
                     {
-                        dictionary = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.Dictionary>(__rawJson, options);
+                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.Dictionary), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.Dictionary> ??
+                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.Dictionary).Name}");
+                        dictionary = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -55,7 +58,9 @@ namespace Dataloop.JsonConverters
                 {
                     try
                     {
-                        migrationSpecVariant2 = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.MigrationSpecVariant2>(__rawJson, options);
+                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.MigrationSpecVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.MigrationSpecVariant2> ??
+                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.MigrationSpecVariant2).Name}");
+                        migrationSpecVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -70,7 +75,9 @@ namespace Dataloop.JsonConverters
             {
                 try
                 {
-                    dictionary = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.Dictionary>(__rawJson, options);
+                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.Dictionary), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.Dictionary> ??
+                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.Dictionary).Name}");
+                    dictionary = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -81,7 +88,9 @@ namespace Dataloop.JsonConverters
 
                 try
                 {
-                    migrationSpecVariant2 = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.MigrationSpecVariant2>(__rawJson, options);
+                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.MigrationSpecVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.MigrationSpecVariant2> ??
+                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.MigrationSpecVariant2).Name}");
+                    migrationSpecVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -106,15 +115,20 @@ namespace Dataloop.JsonConverters
             global::Dataloop.MigrationSpec value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
+            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
 
             if (value.IsDictionary)
             {
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Dictionary, typeof(global::Dataloop.Dictionary), options);
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.Dictionary), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.Dictionary?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.Dictionary).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Dictionary!, typeInfo);
             }
             else if (value.IsMigrationSpecVariant2)
             {
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.MigrationSpecVariant2, typeof(global::Dataloop.MigrationSpecVariant2), options);
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.MigrationSpecVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.MigrationSpecVariant2?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.MigrationSpecVariant2).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.MigrationSpecVariant2!, typeInfo);
             }
         }
     }

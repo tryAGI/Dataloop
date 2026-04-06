@@ -12,7 +12,8 @@ namespace Dataloop.JsonConverters
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
+            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
 
             using var __jsonDocument = global::System.Text.Json.JsonDocument.ParseValue(ref reader);
             var __rawJson = __jsonDocument.RootElement.GetRawText();
@@ -57,7 +58,9 @@ namespace Dataloop.JsonConverters
                 {
                     try
                     {
-                        pickTitleOrProjectIdsOntology = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.PickRecipeV2TitleOrProjectIdsOrOntology>(__rawJson, options);
+                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.PickRecipeV2TitleOrProjectIdsOrOntology), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.PickRecipeV2TitleOrProjectIdsOrOntology> ??
+                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.PickRecipeV2TitleOrProjectIdsOrOntology).Name}");
+                        pickTitleOrProjectIdsOntology = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -70,7 +73,9 @@ namespace Dataloop.JsonConverters
                 {
                     try
                     {
-                        partial = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.PartialRecipeV2>(__rawJson, options);
+                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.PartialRecipeV2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.PartialRecipeV2> ??
+                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.PartialRecipeV2).Name}");
+                        partial = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -85,7 +90,9 @@ namespace Dataloop.JsonConverters
             {
                 try
                 {
-                    pickTitleOrProjectIdsOntology = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.PickRecipeV2TitleOrProjectIdsOrOntology>(__rawJson, options);
+                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.PickRecipeV2TitleOrProjectIdsOrOntology), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.PickRecipeV2TitleOrProjectIdsOrOntology> ??
+                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.PickRecipeV2TitleOrProjectIdsOrOntology).Name}");
+                    pickTitleOrProjectIdsOntology = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -96,7 +103,9 @@ namespace Dataloop.JsonConverters
 
                 try
                 {
-                    partial = global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.PartialRecipeV2>(__rawJson, options);
+                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.PartialRecipeV2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.PartialRecipeV2> ??
+                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.PartialRecipeV2).Name}");
+                    partial = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -121,15 +130,20 @@ namespace Dataloop.JsonConverters
             global::Dataloop.RecipeV2Input value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
+            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
 
             if (value.IsPickTitleOrProjectIdsOntology)
             {
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickTitleOrProjectIdsOntology, typeof(global::Dataloop.PickRecipeV2TitleOrProjectIdsOrOntology), options);
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.PickRecipeV2TitleOrProjectIdsOrOntology), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.PickRecipeV2TitleOrProjectIdsOrOntology?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.PickRecipeV2TitleOrProjectIdsOrOntology).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickTitleOrProjectIdsOntology!, typeInfo);
             }
             else if (value.IsPartial)
             {
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Partial, typeof(global::Dataloop.PartialRecipeV2), options);
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.PartialRecipeV2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.PartialRecipeV2?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.PartialRecipeV2).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Partial!, typeInfo);
             }
         }
     }
