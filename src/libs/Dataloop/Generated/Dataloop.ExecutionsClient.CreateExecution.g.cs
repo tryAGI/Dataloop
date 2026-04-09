@@ -5,6 +5,25 @@ namespace Dataloop
 {
     public partial class ExecutionsClient
     {
+
+
+        private static readonly global::Dataloop.EndPointSecurityRequirement s_CreateExecutionSecurityRequirement0 =
+            new global::Dataloop.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Dataloop.EndPointAuthorizationRequirement[]
+                {                    new global::Dataloop.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Dataloop.EndPointSecurityRequirement[] s_CreateExecutionSecurityRequirements =
+            new global::Dataloop.EndPointSecurityRequirement[]
+            {                s_CreateExecutionSecurityRequirement0,
+            };
         partial void PrepareCreateExecutionArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string serviceId,
@@ -71,12 +90,18 @@ namespace Dataloop
                 waitUntilExecutionIsFinished: ref waitUntilExecutionIsFinished,
                 request: request);
 
+
+            var __authorizations = global::Dataloop.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_CreateExecutionSecurityRequirements,
+                operationName: "CreateExecutionAsync");
+
             var __pathBuilder = new global::Dataloop.PathBuilder(
                 path: $"/executions/{serviceId}",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder
                 .AddRequiredParameter("waitUntilExecutionIsFinished", waitUntilExecutionIsFinished.ToString().ToLowerInvariant()) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Post,
@@ -86,7 +111,7 @@ namespace Dataloop
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

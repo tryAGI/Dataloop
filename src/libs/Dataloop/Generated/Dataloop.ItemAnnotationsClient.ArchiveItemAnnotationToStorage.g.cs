@@ -5,6 +5,25 @@ namespace Dataloop
 {
     public partial class ItemAnnotationsClient
     {
+
+
+        private static readonly global::Dataloop.EndPointSecurityRequirement s_ArchiveItemAnnotationToStorageSecurityRequirement0 =
+            new global::Dataloop.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Dataloop.EndPointAuthorizationRequirement[]
+                {                    new global::Dataloop.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Dataloop.EndPointSecurityRequirement[] s_ArchiveItemAnnotationToStorageSecurityRequirements =
+            new global::Dataloop.EndPointSecurityRequirement[]
+            {                s_ArchiveItemAnnotationToStorageSecurityRequirement0,
+            };
         partial void PrepareArchiveItemAnnotationToStorageArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string itemId,
@@ -45,9 +64,15 @@ namespace Dataloop
                 itemId: ref itemId,
                 request: request);
 
+
+            var __authorizations = global::Dataloop.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_ArchiveItemAnnotationToStorageSecurityRequirements,
+                operationName: "ArchiveItemAnnotationToStorageAsync");
+
             var __pathBuilder = new global::Dataloop.PathBuilder(
                 path: $"/items/{itemId}/annotations/archiveAnnotationLogs",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Post,
@@ -57,7 +82,7 @@ namespace Dataloop
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

@@ -5,6 +5,25 @@ namespace Dataloop
 {
     public partial class DatasetsClient
     {
+
+
+        private static readonly global::Dataloop.EndPointSecurityRequirement s_GetDatasetLabelAggregationSecurityRequirement0 =
+            new global::Dataloop.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Dataloop.EndPointAuthorizationRequirement[]
+                {                    new global::Dataloop.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Dataloop.EndPointSecurityRequirement[] s_GetDatasetLabelAggregationSecurityRequirements =
+            new global::Dataloop.EndPointSecurityRequirement[]
+            {                s_GetDatasetLabelAggregationSecurityRequirement0,
+            };
         partial void PrepareGetDatasetLabelAggregationArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string id,
@@ -47,13 +66,19 @@ namespace Dataloop
                 taskId: ref taskId,
                 assignmentId: ref assignmentId);
 
+
+            var __authorizations = global::Dataloop.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_GetDatasetLabelAggregationSecurityRequirements,
+                operationName: "GetDatasetLabelAggregationAsync");
+
             var __pathBuilder = new global::Dataloop.PathBuilder(
                 path: $"/datasets/{id}/annotations/labels",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder
                 .AddOptionalParameter("taskId", taskId)
                 .AddOptionalParameter("assignmentId", assignmentId) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -63,7 +88,7 @@ namespace Dataloop
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

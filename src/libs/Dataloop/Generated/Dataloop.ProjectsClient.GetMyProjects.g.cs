@@ -5,6 +5,25 @@ namespace Dataloop
 {
     public partial class ProjectsClient
     {
+
+
+        private static readonly global::Dataloop.EndPointSecurityRequirement s_GetMyProjectsSecurityRequirement0 =
+            new global::Dataloop.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Dataloop.EndPointAuthorizationRequirement[]
+                {                    new global::Dataloop.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Dataloop.EndPointSecurityRequirement[] s_GetMyProjectsSecurityRequirements =
+            new global::Dataloop.EndPointSecurityRequirement[]
+            {                s_GetMyProjectsSecurityRequirement0,
+            };
         partial void PrepareGetMyProjectsArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref bool? excludeContributors);
@@ -49,12 +68,18 @@ namespace Dataloop
                 httpClient: HttpClient,
                 excludeContributors: ref excludeContributors);
 
+
+            var __authorizations = global::Dataloop.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_GetMyProjectsSecurityRequirements,
+                operationName: "GetMyProjectsAsync");
+
             var __pathBuilder = new global::Dataloop.PathBuilder(
                 path: "/projects",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder
                 .AddOptionalParameter("excludeContributors", excludeContributors?.ToString().ToLowerInvariant()) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -64,7 +89,7 @@ namespace Dataloop
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

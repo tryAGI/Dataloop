@@ -5,6 +5,25 @@ namespace Dataloop
 {
     public partial class BillingClient
     {
+
+
+        private static readonly global::Dataloop.EndPointSecurityRequirement s_GetAccountApiCallsCsvSecurityRequirement0 =
+            new global::Dataloop.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Dataloop.EndPointAuthorizationRequirement[]
+                {                    new global::Dataloop.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Dataloop.EndPointSecurityRequirement[] s_GetAccountApiCallsCsvSecurityRequirements =
+            new global::Dataloop.EndPointSecurityRequirement[]
+            {                s_GetAccountApiCallsCsvSecurityRequirement0,
+            };
         partial void PrepareGetAccountApiCallsCsvArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string id,
@@ -52,6 +71,12 @@ namespace Dataloop
                 monthly: ref monthly,
                 skipSumming: ref skipSumming);
 
+
+            var __authorizations = global::Dataloop.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_GetAccountApiCallsCsvSecurityRequirements,
+                operationName: "GetAccountApiCallsCsvAsync");
+
             var __pathBuilder = new global::Dataloop.PathBuilder(
                 path: $"/billing/account/{id}/apicalls/csv",
                 baseUri: HttpClient.BaseAddress); 
@@ -60,7 +85,7 @@ namespace Dataloop
                 .AddRequiredParameter("endDate", endDate)
                 .AddOptionalParameter("monthly", monthly)
                 .AddOptionalParameter("skipSumming", skipSumming) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -70,7 +95,7 @@ namespace Dataloop
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

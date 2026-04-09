@@ -5,6 +5,25 @@ namespace Dataloop
 {
     public partial class AssignmentsClient
     {
+
+
+        private static readonly global::Dataloop.EndPointSecurityRequirement s_SetItemStatusSecurityRequirement0 =
+            new global::Dataloop.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Dataloop.EndPointAuthorizationRequirement[]
+                {                    new global::Dataloop.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Dataloop.EndPointSecurityRequirement[] s_SetItemStatusSecurityRequirements =
+            new global::Dataloop.EndPointSecurityRequirement[]
+            {                s_SetItemStatusSecurityRequirement0,
+            };
         partial void PrepareSetItemStatusArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string id,
@@ -50,9 +69,15 @@ namespace Dataloop
                 itemId: ref itemId,
                 request: request);
 
+
+            var __authorizations = global::Dataloop.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_SetItemStatusSecurityRequirements,
+                operationName: "SetItemStatusAsync");
+
             var __pathBuilder = new global::Dataloop.PathBuilder(
                 path: $"/assignments/{id}/items/{itemId}/status",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Post,
@@ -62,7 +87,7 @@ namespace Dataloop
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

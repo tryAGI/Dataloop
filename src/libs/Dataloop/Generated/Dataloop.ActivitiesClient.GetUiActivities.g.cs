@@ -5,6 +5,25 @@ namespace Dataloop
 {
     public partial class ActivitiesClient
     {
+
+
+        private static readonly global::Dataloop.EndPointSecurityRequirement s_GetUiActivitiesSecurityRequirement0 =
+            new global::Dataloop.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Dataloop.EndPointAuthorizationRequirement[]
+                {                    new global::Dataloop.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Dataloop.EndPointSecurityRequirement[] s_GetUiActivitiesSecurityRequirements =
+            new global::Dataloop.EndPointSecurityRequirement[]
+            {                s_GetUiActivitiesSecurityRequirement0,
+            };
         partial void PrepareGetUiActivitiesArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string projectId);
@@ -37,12 +56,18 @@ namespace Dataloop
                 httpClient: HttpClient,
                 projectId: ref projectId);
 
+
+            var __authorizations = global::Dataloop.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_GetUiActivitiesSecurityRequirements,
+                operationName: "GetUiActivitiesAsync");
+
             var __pathBuilder = new global::Dataloop.PathBuilder(
                 path: "/activities",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder
                 .AddRequiredParameter("projectId", projectId) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -52,7 +77,7 @@ namespace Dataloop
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")
