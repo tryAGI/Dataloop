@@ -6,6 +6,7 @@ namespace Dataloop
     public sealed partial class DataloopClient
     {
         /// <inheritdoc cref="DataloopClient(global::System.Net.Http.HttpClient?, global::System.Uri?, global::System.Collections.Generic.List{global::Dataloop.EndPointAuthorization}?, bool)"/>
+
         public DataloopClient(
             string apiKey,
             global::System.Net.Http.HttpClient? httpClient = null,

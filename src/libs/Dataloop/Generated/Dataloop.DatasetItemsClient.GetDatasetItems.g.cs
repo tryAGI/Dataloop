@@ -5,6 +5,25 @@ namespace Dataloop
 {
     public partial class DatasetItemsClient
     {
+
+
+        private static readonly global::Dataloop.EndPointSecurityRequirement s_GetDatasetItemsSecurityRequirement0 =
+            new global::Dataloop.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Dataloop.EndPointAuthorizationRequirement[]
+                {                    new global::Dataloop.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Dataloop.EndPointSecurityRequirement[] s_GetDatasetItemsSecurityRequirements =
+            new global::Dataloop.EndPointSecurityRequirement[]
+            {                s_GetDatasetItemsSecurityRequirement0,
+            };
         partial void PrepareGetDatasetItemsArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string datasetId,
@@ -57,6 +76,12 @@ namespace Dataloop
                 pageOffset: ref pageOffset,
                 pageSize: ref pageSize);
 
+
+            var __authorizations = global::Dataloop.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_GetDatasetItemsSecurityRequirements,
+                operationName: "GetDatasetItemsAsync");
+
             var __pathBuilder = new global::Dataloop.PathBuilder(
                 path: $"/datasets/{datasetId}/items",
                 baseUri: HttpClient.BaseAddress); 
@@ -65,7 +90,7 @@ namespace Dataloop
                 .AddOptionalParameter("sort", sort)
                 .AddOptionalParameter("pageOffset", pageOffset?.ToString())
                 .AddOptionalParameter("pageSize", pageSize?.ToString()) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -75,7 +100,7 @@ namespace Dataloop
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

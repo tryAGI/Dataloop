@@ -5,6 +5,25 @@ namespace Dataloop
 {
     public partial class DatasetsClient
     {
+
+
+        private static readonly global::Dataloop.EndPointSecurityRequirement s_DeleteDatasetSecurityRequirement0 =
+            new global::Dataloop.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Dataloop.EndPointAuthorizationRequirement[]
+                {                    new global::Dataloop.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Dataloop.EndPointSecurityRequirement[] s_DeleteDatasetSecurityRequirements =
+            new global::Dataloop.EndPointSecurityRequirement[]
+            {                s_DeleteDatasetSecurityRequirement0,
+            };
         partial void PrepareDeleteDatasetArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string id,
@@ -64,13 +83,19 @@ namespace Dataloop
                 force: ref force,
                 targetDeleteDate: ref targetDeleteDate);
 
+
+            var __authorizations = global::Dataloop.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_DeleteDatasetSecurityRequirements,
+                operationName: "DeleteDatasetAsync");
+
             var __pathBuilder = new global::Dataloop.PathBuilder(
                 path: $"/datasets/{id}",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder
                 .AddOptionalParameter("force", force?.ToString().ToLowerInvariant())
                 .AddOptionalParameter("targetDeleteDate", targetDeleteDate?.ToString("yyyy-MM-ddTHH:mm:ssZ")) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Delete,
@@ -80,7 +105,7 @@ namespace Dataloop
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

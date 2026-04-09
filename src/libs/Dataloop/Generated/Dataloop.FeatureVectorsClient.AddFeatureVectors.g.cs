@@ -5,6 +5,25 @@ namespace Dataloop
 {
     public partial class FeatureVectorsClient
     {
+
+
+        private static readonly global::Dataloop.EndPointSecurityRequirement s_AddFeatureVectorsSecurityRequirement0 =
+            new global::Dataloop.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Dataloop.EndPointAuthorizationRequirement[]
+                {                    new global::Dataloop.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Dataloop.EndPointSecurityRequirement[] s_AddFeatureVectorsSecurityRequirements =
+            new global::Dataloop.EndPointSecurityRequirement[]
+            {                s_AddFeatureVectorsSecurityRequirement0,
+            };
         partial void PrepareAddFeatureVectorsArguments(
             global::System.Net.Http.HttpClient httpClient,
             global::Dataloop.AnyOf<global::Dataloop.FeatureVector, global::System.Collections.Generic.IList<global::Dataloop.FeatureVector>> request);
@@ -52,9 +71,15 @@ namespace Dataloop
                 httpClient: HttpClient,
                 request: request);
 
+
+            var __authorizations = global::Dataloop.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_AddFeatureVectorsSecurityRequirements,
+                operationName: "AddFeatureVectorsAsync");
+
             var __pathBuilder = new global::Dataloop.PathBuilder(
                 path: "/features/vectors",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Post,
@@ -64,7 +89,7 @@ namespace Dataloop
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

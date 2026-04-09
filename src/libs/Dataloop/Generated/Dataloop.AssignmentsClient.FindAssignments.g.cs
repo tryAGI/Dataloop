@@ -5,6 +5,25 @@ namespace Dataloop
 {
     public partial class AssignmentsClient
     {
+
+
+        private static readonly global::Dataloop.EndPointSecurityRequirement s_FindAssignmentsSecurityRequirement0 =
+            new global::Dataloop.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Dataloop.EndPointAuthorizationRequirement[]
+                {                    new global::Dataloop.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Dataloop.EndPointSecurityRequirement[] s_FindAssignmentsSecurityRequirements =
+            new global::Dataloop.EndPointSecurityRequirement[]
+            {                s_FindAssignmentsSecurityRequirement0,
+            };
         partial void PrepareFindAssignmentsArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string? name,
@@ -77,6 +96,12 @@ namespace Dataloop
                 active: ref active,
                 archive: ref archive);
 
+
+            var __authorizations = global::Dataloop.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_FindAssignmentsSecurityRequirements,
+                operationName: "FindAssignmentsAsync");
+
             var __pathBuilder = new global::Dataloop.PathBuilder(
                 path: "/assignments",
                 baseUri: HttpClient.BaseAddress); 
@@ -90,7 +115,7 @@ namespace Dataloop
                 .AddOptionalParameter("taskId", taskId)
                 .AddOptionalParameter("active", active?.ToString().ToLowerInvariant())
                 .AddOptionalParameter("archive", archive?.ToString().ToLowerInvariant()) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -100,7 +125,7 @@ namespace Dataloop
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

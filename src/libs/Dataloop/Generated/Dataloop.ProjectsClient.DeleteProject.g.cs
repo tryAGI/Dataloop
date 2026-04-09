@@ -5,6 +5,25 @@ namespace Dataloop
 {
     public partial class ProjectsClient
     {
+
+
+        private static readonly global::Dataloop.EndPointSecurityRequirement s_DeleteProjectSecurityRequirement0 =
+            new global::Dataloop.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Dataloop.EndPointAuthorizationRequirement[]
+                {                    new global::Dataloop.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Dataloop.EndPointSecurityRequirement[] s_DeleteProjectSecurityRequirements =
+            new global::Dataloop.EndPointSecurityRequirement[]
+            {                s_DeleteProjectSecurityRequirement0,
+            };
         partial void PrepareDeleteProjectArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string projectId);
@@ -49,9 +68,15 @@ namespace Dataloop
                 httpClient: HttpClient,
                 projectId: ref projectId);
 
+
+            var __authorizations = global::Dataloop.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_DeleteProjectSecurityRequirements,
+                operationName: "DeleteProjectAsync");
+
             var __pathBuilder = new global::Dataloop.PathBuilder(
                 path: $"/projects/{projectId}",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Delete,
@@ -61,7 +86,7 @@ namespace Dataloop
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")
