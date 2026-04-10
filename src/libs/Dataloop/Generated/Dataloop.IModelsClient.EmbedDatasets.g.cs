@@ -12,12 +12,14 @@ namespace Dataloop
         /// </summary>
         /// <param name="id"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<global::Dataloop.APIModel, global::Dataloop.APICommand>> EmbedDatasetsAsync(
             string id,
 
             global::Dataloop.PartialAPIEmbedDatasetsSpec request,
+            global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Embed Datasets<br/>
@@ -29,6 +31,7 @@ namespace Dataloop
         /// <param name="datasetIds"></param>
         /// <param name="attachTrigger"></param>
         /// <param name="config"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<global::Dataloop.APIModel, global::Dataloop.APICommand>> EmbedDatasetsAsync(
@@ -36,6 +39,7 @@ namespace Dataloop
             global::System.Collections.Generic.IList<string>? datasetIds = default,
             bool? attachTrigger = default,
             global::Dataloop.PartialAPIEmbedDatasetsSpecConfig? config = default,
+            global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

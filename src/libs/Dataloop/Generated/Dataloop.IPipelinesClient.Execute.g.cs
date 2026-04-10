@@ -9,6 +9,7 @@ namespace Dataloop
         /// </summary>
         /// <param name="pipelineId"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
@@ -34,6 +35,7 @@ namespace Dataloop
             string pipelineId,
 
             global::Dataloop.ExecuteOptions request,
+            global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Execute a pipeline and return the pipeline execution as an object - or command in case batch is defined on the body.
@@ -41,12 +43,14 @@ namespace Dataloop
         /// <param name="pipelineId"></param>
         /// <param name="batch"></param>
         /// <param name="pipeline"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<global::Dataloop.APIPipelineState, global::Dataloop.APICommand>> ExecuteAsync(
             string pipelineId,
             global::Dataloop.ExecuteOptionsBatch batch,
             global::Dataloop.ExecutePipelinePayload pipeline,
+            global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

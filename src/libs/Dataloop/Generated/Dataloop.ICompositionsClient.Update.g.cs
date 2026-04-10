@@ -10,12 +10,14 @@ namespace Dataloop
         /// </summary>
         /// <param name="compositionId"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Dataloop.APIComposition> UpdateAsync(
             string compositionId,
 
             global::Dataloop.IPostComposition request,
+            global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Update existing composition.<br/>
@@ -46,6 +48,7 @@ namespace Dataloop
         /// <param name="name">
         /// The composition name
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Dataloop.APIComposition> UpdateAsync(
@@ -58,6 +61,7 @@ namespace Dataloop
             global::System.Collections.Generic.IList<global::Dataloop.ICompositionTask>? tasks = default,
             global::System.Collections.Generic.IList<global::Dataloop.ICompositionPackage>? packages = default,
             global::System.Collections.Generic.IList<global::Dataloop.ICompositionTrigger>? triggers = default,
+            global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

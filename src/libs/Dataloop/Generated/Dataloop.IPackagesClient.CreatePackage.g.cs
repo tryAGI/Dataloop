@@ -8,6 +8,7 @@ namespace Dataloop
         /// Create new package.
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
@@ -51,6 +52,7 @@ namespace Dataloop
         global::System.Threading.Tasks.Task<global::Dataloop.APIPackage> CreatePackageAsync(
 
             global::Dataloop.APIPackage request,
+            global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create new package.
@@ -74,6 +76,7 @@ namespace Dataloop
         /// <param name="requirements"></param>
         /// <param name="metadata"></param>
         /// <param name="panels"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Dataloop.APIPackage> CreatePackageAsync(
@@ -96,6 +99,7 @@ namespace Dataloop
             global::System.Collections.Generic.IList<global::Dataloop.PackageRequirement>? requirements = default,
             global::Dataloop.PackageMetadata? metadata = default,
             global::System.Collections.Generic.IList<global::Dataloop.Panel>? panels = default,
+            global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

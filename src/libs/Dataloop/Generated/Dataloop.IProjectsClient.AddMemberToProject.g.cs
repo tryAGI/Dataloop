@@ -11,6 +11,7 @@ namespace Dataloop
         /// <param name="userId"></param>
         /// <param name="allowUpdate"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
@@ -35,6 +36,7 @@ namespace Dataloop
 
             global::Dataloop.AddMemberPayload request,
             bool? allowUpdate = default,
+            global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Add a single member to a project
@@ -48,6 +50,7 @@ namespace Dataloop
         /// <param name="skipWelcomeEmail"></param>
         /// <param name="skipResponse"></param>
         /// <param name="role"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<global::System.Collections.Generic.IList<global::Dataloop.ClientContributor>, object>> AddMemberToProjectAsync(
@@ -60,6 +63,7 @@ namespace Dataloop
             bool? canAddGroups = default,
             bool? skipWelcomeEmail = default,
             bool? skipResponse = default,
+            global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

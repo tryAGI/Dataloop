@@ -8,6 +8,7 @@ namespace Dataloop
         /// Create a new dataset
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
@@ -36,6 +37,7 @@ namespace Dataloop
         global::System.Threading.Tasks.Task<global::Dataloop.APIDataset> CreateDatasetAsync(
 
             global::Dataloop.CreateDatasetRequest request,
+            global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create a new dataset
@@ -59,6 +61,7 @@ namespace Dataloop
         /// <param name="expirationOptions"></param>
         /// <param name="indexDriver"></param>
         /// <param name="metadata"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Dataloop.APIDataset> CreateDatasetAsync(
@@ -71,6 +74,7 @@ namespace Dataloop
             global::Dataloop.ExpirationOptions? expirationOptions = default,
             global::Dataloop.IndexDriver? indexDriver = default,
             global::Dataloop.DatasetMetadata? metadata = default,
+            global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

@@ -9,6 +9,7 @@ namespace Dataloop
         /// </summary>
         /// <param name="orgId"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
@@ -37,6 +38,7 @@ namespace Dataloop
             string orgId,
 
             global::Dataloop.AddOrgMembersRequest request,
+            global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Add a new member to an organization
@@ -44,12 +46,14 @@ namespace Dataloop
         /// <param name="orgId"></param>
         /// <param name="role"></param>
         /// <param name="emails"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Dataloop.APIOrgUser>> AddOrgMembersAsync(
             string orgId,
             global::Dataloop.OrgRole role,
             global::System.Collections.Generic.IList<string> emails,
+            global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

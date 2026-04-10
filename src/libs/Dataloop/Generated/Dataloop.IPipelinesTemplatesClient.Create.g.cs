@@ -8,11 +8,13 @@ namespace Dataloop
         /// 
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Dataloop.APIPipeline> CreateAsync(
 
             global::Dataloop.APIPipelineTemplate2 request,
+            global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// 
@@ -38,6 +40,7 @@ namespace Dataloop
         /// <param name="resetTimestamp"></param>
         /// <param name="template"></param>
         /// <param name="templateKind"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Dataloop.APIPipeline> CreateAsync(
@@ -62,6 +65,7 @@ namespace Dataloop
             global::System.DateTime? resetTimestamp = default,
             global::Dataloop.APIPipelineTemplateTemplate? template = default,
             global::Dataloop.TemplateKind? templateKind = default,
+            global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

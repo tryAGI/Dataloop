@@ -10,6 +10,7 @@ namespace Dataloop
         /// <param name="id"></param>
         /// <param name="force"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
@@ -32,6 +33,7 @@ namespace Dataloop
 
             global::Dataloop.APIServicePatch request,
             string? force = default,
+            global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Update service changes.
@@ -65,6 +67,7 @@ namespace Dataloop
         /// <param name="displayName"></param>
         /// <param name="app"></param>
         /// <param name="integrations"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<global::Dataloop.APIService, string>> UpdateServiceAsync(
@@ -97,6 +100,7 @@ namespace Dataloop
             string? displayName = default,
             global::Dataloop.IAppDefinition? app = default,
             global::System.Collections.Generic.IList<global::Dataloop.ServiceIntegration>? integrations = default,
+            global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

@@ -12,6 +12,7 @@ namespace Dataloop
         /// <param name="replace"></param>
         /// <param name="itemId"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Dataloop.APIAnnotation> UpdateItemAnnotationAsync(
@@ -21,6 +22,7 @@ namespace Dataloop
             global::Dataloop.UpdateAnnotationRequest request,
             bool? system = default,
             bool? replace = default,
+            global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Update an item's annotation
@@ -35,6 +37,7 @@ namespace Dataloop
         /// <param name="coordinates"></param>
         /// <param name="attributes"></param>
         /// <param name="metadata"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Dataloop.APIAnnotation> UpdateItemAnnotationAsync(
@@ -48,6 +51,7 @@ namespace Dataloop
             object? coordinates = default,
             global::System.Collections.Generic.IList<string>? attributes = default,
             global::Dataloop.APIMetadata? metadata = default,
+            global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

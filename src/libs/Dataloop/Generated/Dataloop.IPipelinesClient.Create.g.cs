@@ -8,6 +8,7 @@ namespace Dataloop
         /// Create a pipeline.
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
@@ -29,6 +30,7 @@ namespace Dataloop
         global::System.Threading.Tasks.Task<global::Dataloop.APIPipeline> CreateAsync(
 
             global::Dataloop.IPostPipeline request,
+            global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create a pipeline.
@@ -46,6 +48,7 @@ namespace Dataloop
         /// Array of integrations ids - each one will be added to the service deployment as an environment variable
         /// </param>
         /// <param name="variables"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Dataloop.APIPipeline> CreateAsync(
@@ -60,6 +63,7 @@ namespace Dataloop
             object? spec = default,
             string? compositionId = default,
             global::System.Collections.Generic.IList<global::Dataloop.PipelineVariable>? variables = default,
+            global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

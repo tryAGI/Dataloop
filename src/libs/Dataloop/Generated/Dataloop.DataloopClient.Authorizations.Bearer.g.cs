@@ -25,6 +25,7 @@ namespace Dataloop
             Authorizations.Add(new global::Dataloop.EndPointAuthorization
             {
                 Type = "Http",
+                SchemeId = "HttpBearer",
                 Location = "Header",
                 Name = "Bearer",
                 Value = apiKey,

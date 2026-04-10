@@ -9,6 +9,7 @@ namespace Dataloop
         /// </summary>
         /// <param name="orgId"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
@@ -49,6 +50,7 @@ namespace Dataloop
             string orgId,
 
             global::Dataloop.CreateIntegrationRequest request,
+            global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create a new Integration
@@ -58,6 +60,7 @@ namespace Dataloop
         /// <param name="options"></param>
         /// <param name="name"></param>
         /// <param name="type"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Dataloop.APIIntegration> CreateIntegrationAsync(
@@ -66,6 +69,7 @@ namespace Dataloop
             string name,
             global::Dataloop.IntegrationType2 type,
             global::Dataloop.IKeyValueMetadata? metadata = default,
+            global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }
