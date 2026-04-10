@@ -31,6 +31,9 @@ namespace Dataloop
 #if DEBUG
             = true;
 #endif
+
+        /// <inheritdoc/>
+        public global::Dataloop.AutoSDKClientOptions Options { get; }
         /// <summary>
         /// 
         /// </summary>
@@ -40,7 +43,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public APIKeysClient APIKeys => new APIKeysClient(HttpClient, authorizations: Authorizations)
+        public APIKeysClient APIKeys => new APIKeysClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -49,7 +52,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public AccountsClient Accounts => new AccountsClient(HttpClient, authorizations: Authorizations)
+        public AccountsClient Accounts => new AccountsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -58,7 +61,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public ActivitiesClient Activities => new ActivitiesClient(HttpClient, authorizations: Authorizations)
+        public ActivitiesClient Activities => new ActivitiesClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -67,7 +70,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public AnnotationLogsClient AnnotationLogs => new AnnotationLogsClient(HttpClient, authorizations: Authorizations)
+        public AnnotationLogsClient AnnotationLogs => new AnnotationLogsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -76,7 +79,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public AnnotationTasksClient AnnotationTasks => new AnnotationTasksClient(HttpClient, authorizations: Authorizations)
+        public AnnotationTasksClient AnnotationTasks => new AnnotationTasksClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -85,7 +88,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public AnnotationsClient Annotations => new AnnotationsClient(HttpClient, authorizations: Authorizations)
+        public AnnotationsClient Annotations => new AnnotationsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -94,7 +97,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public AppsClient Apps => new AppsClient(HttpClient, authorizations: Authorizations)
+        public AppsClient Apps => new AppsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -103,7 +106,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public AssignmentsClient Assignments => new AssignmentsClient(HttpClient, authorizations: Authorizations)
+        public AssignmentsClient Assignments => new AssignmentsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -112,7 +115,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public AuditClient Audit => new AuditClient(HttpClient, authorizations: Authorizations)
+        public AuditClient Audit => new AuditClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -121,7 +124,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public BillingClient Billing => new BillingClient(HttpClient, authorizations: Authorizations)
+        public BillingClient Billing => new BillingClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -130,7 +133,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public CompositionsClient Compositions => new CompositionsClient(HttpClient, authorizations: Authorizations)
+        public CompositionsClient Compositions => new CompositionsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -139,7 +142,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public ComputeClient Compute => new ComputeClient(HttpClient, authorizations: Authorizations)
+        public ComputeClient Compute => new ComputeClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -148,7 +151,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public DatasetItemAnnotationsClient DatasetItemAnnotations => new DatasetItemAnnotationsClient(HttpClient, authorizations: Authorizations)
+        public DatasetItemAnnotationsClient DatasetItemAnnotations => new DatasetItemAnnotationsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -157,7 +160,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public DatasetItemsClient DatasetItems => new DatasetItemsClient(HttpClient, authorizations: Authorizations)
+        public DatasetItemsClient DatasetItems => new DatasetItemsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -166,7 +169,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public DatasetStorageClient DatasetStorage => new DatasetStorageClient(HttpClient, authorizations: Authorizations)
+        public DatasetStorageClient DatasetStorage => new DatasetStorageClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -175,7 +178,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public DatasetsClient Datasets => new DatasetsClient(HttpClient, authorizations: Authorizations)
+        public DatasetsClient Datasets => new DatasetsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -184,7 +187,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public DpkClient Dpk => new DpkClient(HttpClient, authorizations: Authorizations)
+        public DpkClient Dpk => new DpkClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -193,7 +196,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public ExecutionsClient Executions => new ExecutionsClient(HttpClient, authorizations: Authorizations)
+        public ExecutionsClient Executions => new ExecutionsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -202,7 +205,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public FeatureSetsClient FeatureSets => new FeatureSetsClient(HttpClient, authorizations: Authorizations)
+        public FeatureSetsClient FeatureSets => new FeatureSetsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -211,7 +214,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public FeatureVectorsClient FeatureVectors => new FeatureVectorsClient(HttpClient, authorizations: Authorizations)
+        public FeatureVectorsClient FeatureVectors => new FeatureVectorsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -220,7 +223,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public GroupsClient Groups => new GroupsClient(HttpClient, authorizations: Authorizations)
+        public GroupsClient Groups => new GroupsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -229,7 +232,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public GuestsClient Guests => new GuestsClient(HttpClient, authorizations: Authorizations)
+        public GuestsClient Guests => new GuestsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -238,7 +241,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public InstanceCatalogClient InstanceCatalog => new InstanceCatalogClient(HttpClient, authorizations: Authorizations)
+        public InstanceCatalogClient InstanceCatalog => new InstanceCatalogClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -247,7 +250,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public IntegrationsClient Integrations => new IntegrationsClient(HttpClient, authorizations: Authorizations)
+        public IntegrationsClient Integrations => new IntegrationsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -256,7 +259,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public InvoicesClient Invoices => new InvoicesClient(HttpClient, authorizations: Authorizations)
+        public InvoicesClient Invoices => new InvoicesClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -265,7 +268,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public ItemAnnotationsClient ItemAnnotations => new ItemAnnotationsClient(HttpClient, authorizations: Authorizations)
+        public ItemAnnotationsClient ItemAnnotations => new ItemAnnotationsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -274,7 +277,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public ItemsClient Items => new ItemsClient(HttpClient, authorizations: Authorizations)
+        public ItemsClient Items => new ItemsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -283,7 +286,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public LabelsClient Labels => new LabelsClient(HttpClient, authorizations: Authorizations)
+        public LabelsClient Labels => new LabelsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -292,7 +295,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public ModelMetricsClient ModelMetrics => new ModelMetricsClient(HttpClient, authorizations: Authorizations)
+        public ModelMetricsClient ModelMetrics => new ModelMetricsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -301,7 +304,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public ModelsClient Models => new ModelsClient(HttpClient, authorizations: Authorizations)
+        public ModelsClient Models => new ModelsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -310,7 +313,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public OntologiesClient Ontologies => new OntologiesClient(HttpClient, authorizations: Authorizations)
+        public OntologiesClient Ontologies => new OntologiesClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -319,7 +322,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public OrgIntegrationsClient OrgIntegrations => new OrgIntegrationsClient(HttpClient, authorizations: Authorizations)
+        public OrgIntegrationsClient OrgIntegrations => new OrgIntegrationsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -328,7 +331,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public OrganizationsClient Organizations => new OrganizationsClient(HttpClient, authorizations: Authorizations)
+        public OrganizationsClient Organizations => new OrganizationsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -337,7 +340,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public PackagesClient Packages => new PackagesClient(HttpClient, authorizations: Authorizations)
+        public PackagesClient Packages => new PackagesClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -346,7 +349,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public PipelinesClient Pipelines => new PipelinesClient(HttpClient, authorizations: Authorizations)
+        public PipelinesClient Pipelines => new PipelinesClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -355,7 +358,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public PipelinesQueryClient PipelinesQuery => new PipelinesQueryClient(HttpClient, authorizations: Authorizations)
+        public PipelinesQueryClient PipelinesQuery => new PipelinesQueryClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -364,7 +367,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public PipelinesTemplatesClient PipelinesTemplates => new PipelinesTemplatesClient(HttpClient, authorizations: Authorizations)
+        public PipelinesTemplatesClient PipelinesTemplates => new PipelinesTemplatesClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -373,7 +376,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public PiperMiscClient PiperMisc => new PiperMiscClient(HttpClient, authorizations: Authorizations)
+        public PiperMiscClient PiperMisc => new PiperMiscClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -382,7 +385,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public PlansClient Plans => new PlansClient(HttpClient, authorizations: Authorizations)
+        public PlansClient Plans => new PlansClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -391,7 +394,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public ProjectsClient Projects => new ProjectsClient(HttpClient, authorizations: Authorizations)
+        public ProjectsClient Projects => new ProjectsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -400,7 +403,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public QueryClient Query => new QueryClient(HttpClient, authorizations: Authorizations)
+        public QueryClient Query => new QueryClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -409,7 +412,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public RecipesClient Recipes => new RecipesClient(HttpClient, authorizations: Authorizations)
+        public RecipesClient Recipes => new RecipesClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -418,7 +421,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public ScoresClient Scores => new ScoresClient(HttpClient, authorizations: Authorizations)
+        public ScoresClient Scores => new ScoresClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -427,7 +430,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public ServiceDriversClient ServiceDrivers => new ServiceDriversClient(HttpClient, authorizations: Authorizations)
+        public ServiceDriversClient ServiceDrivers => new ServiceDriversClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -436,7 +439,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public ServicesClient Services => new ServicesClient(HttpClient, authorizations: Authorizations)
+        public ServicesClient Services => new ServicesClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -445,7 +448,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public ServicesMetricClient ServicesMetric => new ServicesMetricClient(HttpClient, authorizations: Authorizations)
+        public ServicesMetricClient ServicesMetric => new ServicesMetricClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -454,7 +457,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public SettingsClient Settings => new SettingsClient(HttpClient, authorizations: Authorizations)
+        public SettingsClient Settings => new SettingsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -463,7 +466,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public StorageDriversClient StorageDrivers => new StorageDriversClient(HttpClient, authorizations: Authorizations)
+        public StorageDriversClient StorageDrivers => new StorageDriversClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -472,7 +475,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public StructuresClient Structures => new StructuresClient(HttpClient, authorizations: Authorizations)
+        public StructuresClient Structures => new StructuresClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -481,7 +484,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public SubscriptionsClient Subscriptions => new SubscriptionsClient(HttpClient, authorizations: Authorizations)
+        public SubscriptionsClient Subscriptions => new SubscriptionsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -490,7 +493,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public TasksClient Tasks => new TasksClient(HttpClient, authorizations: Authorizations)
+        public TasksClient Tasks => new TasksClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -499,7 +502,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public TriggerResourceInformationClient TriggerResourceInformation => new TriggerResourceInformationClient(HttpClient, authorizations: Authorizations)
+        public TriggerResourceInformationClient TriggerResourceInformation => new TriggerResourceInformationClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -508,7 +511,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public TriggersClient Triggers => new TriggersClient(HttpClient, authorizations: Authorizations)
+        public TriggersClient Triggers => new TriggersClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -517,7 +520,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public UsageClient Usage => new UsageClient(HttpClient, authorizations: Authorizations)
+        public UsageClient Usage => new UsageClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -526,7 +529,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public UsersClient Users => new UsersClient(HttpClient, authorizations: Authorizations)
+        public UsersClient Users => new UsersClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -535,7 +538,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public VersionClient Version => new VersionClient(HttpClient, authorizations: Authorizations)
+        public VersionClient Version => new VersionClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -544,7 +547,7 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public WebHooksClient WebHooks => new WebHooksClient(HttpClient, authorizations: Authorizations)
+        public WebHooksClient WebHooks => new WebHooksClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -563,11 +566,37 @@ namespace Dataloop
             global::System.Net.Http.HttpClient? httpClient = null,
             global::System.Uri? baseUri = null,
             global::System.Collections.Generic.List<global::Dataloop.EndPointAuthorization>? authorizations = null,
+            bool disposeHttpClient = true) : this(
+                httpClient,
+                baseUri,
+                authorizations,
+                options: null,
+                disposeHttpClient: disposeHttpClient)
+        {
+        }
+
+        /// <summary>
+        /// Creates a new instance of the DataloopClient.
+        /// If no httpClient is provided, a new one will be created.
+        /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
+        /// </summary>
+        /// <param name="httpClient">The HttpClient instance. If not provided, a new one will be created.</param>
+        /// <param name="baseUri">The base URL for the API. If not provided, the default baseUri from OpenAPI spec will be used.</param>
+        /// <param name="authorizations">The authorizations to use for the requests.</param>
+        /// <param name="options">Client-wide request defaults such as headers, query parameters, retries, and timeout.</param>
+        /// <param name="disposeHttpClient">Dispose the HttpClient when the instance is disposed. True by default.</param>
+        public DataloopClient(
+            global::System.Net.Http.HttpClient? httpClient = null,
+            global::System.Uri? baseUri = null,
+            global::System.Collections.Generic.List<global::Dataloop.EndPointAuthorization>? authorizations = null,
+            global::Dataloop.AutoSDKClientOptions? options = null,
             bool disposeHttpClient = true)
         {
+
             HttpClient = httpClient ?? new global::System.Net.Http.HttpClient();
             HttpClient.BaseAddress ??= baseUri ?? new global::System.Uri(DefaultBaseUrl);
             Authorizations = authorizations ?? new global::System.Collections.Generic.List<global::Dataloop.EndPointAuthorization>();
+            Options = options ?? new global::Dataloop.AutoSDKClientOptions();
             _disposeHttpClient = disposeHttpClient;
 
             Initialized(HttpClient);

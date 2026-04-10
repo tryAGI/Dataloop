@@ -9,6 +9,7 @@ namespace Dataloop
         /// </summary>
         /// <param name="pipelineId"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
@@ -30,6 +31,7 @@ namespace Dataloop
             string pipelineId,
 
             global::Dataloop.IPipelineSettings request,
+            global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// 
@@ -39,6 +41,7 @@ namespace Dataloop
         /// <param name="keepTriggersActive"></param>
         /// <param name="activeTriggerAskAgain"></param>
         /// <param name="lastUpdate"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Dataloop.APIPipeline> UpdateSettingsAsync(
@@ -47,6 +50,7 @@ namespace Dataloop
             global::Dataloop.ResumePipelineOption? defaultResumeOption = default,
             bool? keepTriggersActive = default,
             bool? activeTriggerAskAgain = default,
+            global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

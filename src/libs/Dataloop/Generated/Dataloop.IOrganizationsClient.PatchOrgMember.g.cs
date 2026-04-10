@@ -9,6 +9,7 @@ namespace Dataloop
         /// </summary>
         /// <param name="orgId"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
@@ -37,6 +38,7 @@ namespace Dataloop
             string orgId,
 
             global::Dataloop.PatchOrgMemberRequest request,
+            global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Change a member's role in an organization
@@ -45,6 +47,7 @@ namespace Dataloop
         /// <param name="defaultProjectRole"></param>
         /// <param name="role"></param>
         /// <param name="email"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Dataloop.APIUser>> PatchOrgMemberAsync(
@@ -52,6 +55,7 @@ namespace Dataloop
             global::Dataloop.OrgRole role,
             string email,
             global::Dataloop.Role? defaultProjectRole = default,
+            global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

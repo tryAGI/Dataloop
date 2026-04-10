@@ -10,6 +10,7 @@ namespace Dataloop
         /// <param name="serviceId"></param>
         /// <param name="waitUntilExecutionIsFinished"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         /// <remarks>
@@ -38,6 +39,7 @@ namespace Dataloop
             bool waitUntilExecutionIsFinished,
 
             global::Dataloop.CreateExecutionRequest request,
+            global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Execute a function on an existing service.
@@ -50,6 +52,7 @@ namespace Dataloop
         /// <param name="input"></param>
         /// <param name="functionName"></param>
         /// <param name="batch"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<global::Dataloop.APIExecution, global::Dataloop.APICommand>> CreateExecutionAsync(
@@ -61,6 +64,7 @@ namespace Dataloop
             global::Dataloop.ExecutionMode? mode = default,
             global::Dataloop.IPipelineExecution? pipeline = default,
             global::Dataloop.ExecuteOptionsBatch? batch = default,
+            global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

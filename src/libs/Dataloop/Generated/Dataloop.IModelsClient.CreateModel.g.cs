@@ -9,11 +9,13 @@ namespace Dataloop
         /// Supply the appropriate Create Request object in order to create a Model.
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Dataloop.APIModel> CreateModelAsync(
 
             global::Dataloop.CreateModelRequest request,
+            global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Creates a new Model.<br/>
@@ -71,6 +73,7 @@ namespace Dataloop
         /// The module name of the model
         /// </param>
         /// <param name="app"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Dataloop.APIModel> CreateModelAsync(
@@ -90,6 +93,7 @@ namespace Dataloop
             global::Dataloop.APIModelMetadata? metadata = default,
             string? moduleName = default,
             global::Dataloop.IAppDefinition? app = default,
+            global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

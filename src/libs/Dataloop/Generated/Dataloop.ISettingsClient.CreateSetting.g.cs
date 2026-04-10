@@ -9,11 +9,13 @@ namespace Dataloop
         /// Supply the appropriate Create Request object for either Feature flag or User setting.
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<global::Dataloop.APIFeatureFlag, global::Dataloop.APIUserSetting>> CreateSettingAsync(
 
             global::Dataloop.CreateSettingRequest request,
+            global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Creates a new Setting.<br/>
@@ -32,6 +34,7 @@ namespace Dataloop
         /// <param name="scope"></param>
         /// <param name="metadata"></param>
         /// <param name="settingType"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<global::Dataloop.APIFeatureFlag, global::Dataloop.APIUserSetting>> CreateSettingAsync(
@@ -42,6 +45,7 @@ namespace Dataloop
             object? defaultValue = default,
             object? value = default,
             global::Dataloop.Dictionary? metadata = default,
+            global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }
