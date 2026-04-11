@@ -12,29 +12,25 @@ namespace Dataloop
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("action")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Action { get; set; }
+        public string? Action { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::Dataloop.ItemStatusEventStatus Status { get; set; }
+        public global::Dataloop.ItemStatusEventStatus? Status { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("nodeId")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string NodeId { get; set; }
+        public string? NodeId { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("pipelineId")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string PipelineId { get; set; }
+        public string? PipelineId { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -53,15 +49,15 @@ namespace Dataloop
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public ItemStatusEvent(
-            string action,
-            global::Dataloop.ItemStatusEventStatus status,
-            string nodeId,
-            string pipelineId)
+            string? action,
+            global::Dataloop.ItemStatusEventStatus? status,
+            string? nodeId,
+            string? pipelineId)
         {
-            this.Action = action ?? throw new global::System.ArgumentNullException(nameof(action));
-            this.Status = status ?? throw new global::System.ArgumentNullException(nameof(status));
-            this.NodeId = nodeId ?? throw new global::System.ArgumentNullException(nameof(nodeId));
-            this.PipelineId = pipelineId ?? throw new global::System.ArgumentNullException(nameof(pipelineId));
+            this.Action = action;
+            this.Status = status;
+            this.NodeId = nodeId;
+            this.PipelineId = pipelineId;
         }
 
         /// <summary>
