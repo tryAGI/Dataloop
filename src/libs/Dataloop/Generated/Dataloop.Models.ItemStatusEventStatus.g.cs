@@ -12,31 +12,36 @@ namespace Dataloop
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("timestamp")]
-        public string? Timestamp { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Timestamp { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("creator")]
-        public string? Creator { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Creator { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
-        public string? Status { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Status { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("assignmentId")]
-        public string? AssignmentId { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string AssignmentId { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("taskId")]
-        public string? TaskId { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string TaskId { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -56,17 +61,17 @@ namespace Dataloop
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public ItemStatusEventStatus(
-            string? timestamp,
-            string? creator,
-            string? status,
-            string? assignmentId,
-            string? taskId)
+            string timestamp,
+            string creator,
+            string status,
+            string assignmentId,
+            string taskId)
         {
-            this.Timestamp = timestamp;
-            this.Creator = creator;
-            this.Status = status;
-            this.AssignmentId = assignmentId;
-            this.TaskId = taskId;
+            this.Timestamp = timestamp ?? throw new global::System.ArgumentNullException(nameof(timestamp));
+            this.Creator = creator ?? throw new global::System.ArgumentNullException(nameof(creator));
+            this.Status = status ?? throw new global::System.ArgumentNullException(nameof(status));
+            this.AssignmentId = assignmentId ?? throw new global::System.ArgumentNullException(nameof(assignmentId));
+            this.TaskId = taskId ?? throw new global::System.ArgumentNullException(nameof(taskId));
         }
 
         /// <summary>
