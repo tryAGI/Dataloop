@@ -19,9 +19,9 @@ namespace Dataloop
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dataloop.JsonConverters.ExecutionStatusNameJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dataloop.JsonConverters.ExecutionStatusJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::Dataloop.ExecutionStatusName Status { get; set; }
+        public required global::Dataloop.ExecutionStatus Status { get; set; }
 
         /// <summary>
         /// 
@@ -68,18 +68,6 @@ namespace Dataloop
         public string? ReplicaType { get; set; }
 
         /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("skipUpdate")]
-        public bool? SkipUpdate { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("hookResolved")]
-        public bool? HookResolved { get; set; }
-
-        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -97,23 +85,19 @@ namespace Dataloop
         /// <param name="action"></param>
         /// <param name="replicaId"></param>
         /// <param name="replicaType"></param>
-        /// <param name="skipUpdate"></param>
-        /// <param name="hookResolved"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public ExecutionStatusReport(
             global::System.DateTime timestamp,
-            global::Dataloop.ExecutionStatusName status,
+            global::Dataloop.ExecutionStatus status,
             string message,
             double percentComplete,
             global::Dataloop.Dictionary? error,
             global::Dataloop.Dictionary? output,
             string? action,
             string? replicaId,
-            string? replicaType,
-            bool? skipUpdate,
-            bool? hookResolved)
+            string? replicaType)
         {
             this.Timestamp = timestamp;
             this.Status = status;
@@ -124,8 +108,6 @@ namespace Dataloop
             this.Action = action;
             this.ReplicaId = replicaId;
             this.ReplicaType = replicaType;
-            this.SkipUpdate = skipUpdate;
-            this.HookResolved = hookResolved;
         }
 
         /// <summary>
