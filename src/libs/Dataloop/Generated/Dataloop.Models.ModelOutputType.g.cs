@@ -13,69 +13,35 @@ namespace Dataloop
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Dataloop.AnnotationType? Annotation1 { get; init; }
+        public global::Dataloop.AnnotationType? Annotation { get; init; }
 #else
-        public global::Dataloop.AnnotationType? Annotation1 { get; }
+        public global::Dataloop.AnnotationType? Annotation { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Annotation1))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Annotation))]
 #endif
-        public bool IsAnnotation1 => Annotation1 != null;
+        public bool IsAnnotation => Annotation != null;
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Dataloop.ModelOutputTypeVariant2? ModelOutputTypeVariant2 { get; init; }
+        public global::Dataloop.ModelOutputTypeEnum? Enum { get; init; }
 #else
-        public global::Dataloop.ModelOutputTypeVariant2? ModelOutputTypeVariant2 { get; }
+        public global::Dataloop.ModelOutputTypeEnum? Enum { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ModelOutputTypeVariant2))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Enum))]
 #endif
-        public bool IsModelOutputTypeVariant2 => ModelOutputTypeVariant2 != null;
-
-        /// <summary>
-        /// 
-        /// </summary>
-#if NET6_0_OR_GREATER
-        public global::Dataloop.AnnotationType? Annotation2 { get; init; }
-#else
-        public global::Dataloop.AnnotationType? Annotation2 { get; }
-#endif
-
-        /// <summary>
-        /// 
-        /// </summary>
-#if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Annotation2))]
-#endif
-        public bool IsAnnotation2 => Annotation2 != null;
-
-        /// <summary>
-        /// 
-        /// </summary>
-#if NET6_0_OR_GREATER
-        public global::Dataloop.ModelOutputTypeVariant4? ModelOutputTypeVariant4 { get; init; }
-#else
-        public global::Dataloop.ModelOutputTypeVariant4? ModelOutputTypeVariant4 { get; }
-#endif
-
-        /// <summary>
-        /// 
-        /// </summary>
-#if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ModelOutputTypeVariant4))]
-#endif
-        public bool IsModelOutputTypeVariant4 => ModelOutputTypeVariant4 != null;
+        public bool IsEnum => Enum != null;
         /// <summary>
         /// 
         /// </summary>
@@ -84,86 +50,60 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::Dataloop.AnnotationType?(ModelOutputType @this) => @this.Annotation1;
+        public static implicit operator global::Dataloop.AnnotationType?(ModelOutputType @this) => @this.Annotation;
 
         /// <summary>
         /// 
         /// </summary>
         public ModelOutputType(global::Dataloop.AnnotationType? value)
         {
-            Annotation1 = value;
+            Annotation = value;
         }
 
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator ModelOutputType(global::Dataloop.ModelOutputTypeVariant2 value) => new ModelOutputType((global::Dataloop.ModelOutputTypeVariant2?)value);
+        public static implicit operator ModelOutputType(global::Dataloop.ModelOutputTypeEnum value) => new ModelOutputType((global::Dataloop.ModelOutputTypeEnum?)value);
 
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::Dataloop.ModelOutputTypeVariant2?(ModelOutputType @this) => @this.ModelOutputTypeVariant2;
+        public static implicit operator global::Dataloop.ModelOutputTypeEnum?(ModelOutputType @this) => @this.Enum;
 
         /// <summary>
         /// 
         /// </summary>
-        public ModelOutputType(global::Dataloop.ModelOutputTypeVariant2? value)
+        public ModelOutputType(global::Dataloop.ModelOutputTypeEnum? value)
         {
-            ModelOutputTypeVariant2 = value;
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public static implicit operator ModelOutputType(global::Dataloop.ModelOutputTypeVariant4 value) => new ModelOutputType((global::Dataloop.ModelOutputTypeVariant4?)value);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public static implicit operator global::Dataloop.ModelOutputTypeVariant4?(ModelOutputType @this) => @this.ModelOutputTypeVariant4;
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public ModelOutputType(global::Dataloop.ModelOutputTypeVariant4? value)
-        {
-            ModelOutputTypeVariant4 = value;
+            Enum = value;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public ModelOutputType(
-            global::Dataloop.AnnotationType? annotation1,
-            global::Dataloop.ModelOutputTypeVariant2? modelOutputTypeVariant2,
-            global::Dataloop.AnnotationType? annotation2,
-            global::Dataloop.ModelOutputTypeVariant4? modelOutputTypeVariant4
+            global::Dataloop.AnnotationType? annotation,
+            global::Dataloop.ModelOutputTypeEnum? @enum
             )
         {
-            Annotation1 = annotation1;
-            ModelOutputTypeVariant2 = modelOutputTypeVariant2;
-            Annotation2 = annotation2;
-            ModelOutputTypeVariant4 = modelOutputTypeVariant4;
+            Annotation = annotation;
+            Enum = @enum;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public object? Object =>
-            ModelOutputTypeVariant4 as object ??
-            Annotation2 as object ??
-            ModelOutputTypeVariant2 as object ??
-            Annotation1 as object 
+            Enum as object ??
+            Annotation as object 
             ;
 
         /// <summary>
         /// 
         /// </summary>
         public override string? ToString() =>
-            Annotation1?.ToValueString() ??
-            ModelOutputTypeVariant2?.ToValueString() ??
-            Annotation2?.ToValueString() ??
-            ModelOutputTypeVariant4?.ToValueString() 
+            Annotation?.ToValueString() ??
+            Enum?.ToValueString() 
             ;
 
         /// <summary>
@@ -171,17 +111,15 @@ namespace Dataloop
         /// </summary>
         public bool Validate()
         {
-            return IsAnnotation1 || IsModelOutputTypeVariant2 || IsAnnotation2 || IsModelOutputTypeVariant4;
+            return IsAnnotation || IsEnum;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Dataloop.AnnotationType?, TResult>? annotation1 = null,
-            global::System.Func<global::Dataloop.ModelOutputTypeVariant2?, TResult>? modelOutputTypeVariant2 = null,
-            global::System.Func<global::Dataloop.AnnotationType?, TResult>? annotation2 = null,
-            global::System.Func<global::Dataloop.ModelOutputTypeVariant4?, TResult>? modelOutputTypeVariant4 = null,
+            global::System.Func<global::Dataloop.AnnotationType?, TResult>? annotation = null,
+            global::System.Func<global::Dataloop.ModelOutputTypeEnum?, TResult>? @enum = null,
             bool validate = true)
         {
             if (validate)
@@ -189,21 +127,13 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsAnnotation1 && annotation1 != null)
+            if (IsAnnotation && annotation != null)
             {
-                return annotation1(Annotation1!);
+                return annotation(Annotation!);
             }
-            else if (IsModelOutputTypeVariant2 && modelOutputTypeVariant2 != null)
+            else if (IsEnum && @enum != null)
             {
-                return modelOutputTypeVariant2(ModelOutputTypeVariant2!);
-            }
-            else if (IsAnnotation2 && annotation2 != null)
-            {
-                return annotation2(Annotation2!);
-            }
-            else if (IsModelOutputTypeVariant4 && modelOutputTypeVariant4 != null)
-            {
-                return modelOutputTypeVariant4(ModelOutputTypeVariant4!);
+                return @enum(Enum!);
             }
 
             return default(TResult);
@@ -213,10 +143,8 @@ namespace Dataloop
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Dataloop.AnnotationType?>? annotation1 = null,
-            global::System.Action<global::Dataloop.ModelOutputTypeVariant2?>? modelOutputTypeVariant2 = null,
-            global::System.Action<global::Dataloop.AnnotationType?>? annotation2 = null,
-            global::System.Action<global::Dataloop.ModelOutputTypeVariant4?>? modelOutputTypeVariant4 = null,
+            global::System.Action<global::Dataloop.AnnotationType?>? annotation = null,
+            global::System.Action<global::Dataloop.ModelOutputTypeEnum?>? @enum = null,
             bool validate = true)
         {
             if (validate)
@@ -224,21 +152,13 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsAnnotation1)
+            if (IsAnnotation)
             {
-                annotation1?.Invoke(Annotation1!);
+                annotation?.Invoke(Annotation!);
             }
-            else if (IsModelOutputTypeVariant2)
+            else if (IsEnum)
             {
-                modelOutputTypeVariant2?.Invoke(ModelOutputTypeVariant2!);
-            }
-            else if (IsAnnotation2)
-            {
-                annotation2?.Invoke(Annotation2!);
-            }
-            else if (IsModelOutputTypeVariant4)
-            {
-                modelOutputTypeVariant4?.Invoke(ModelOutputTypeVariant4!);
+                @enum?.Invoke(Enum!);
             }
         }
 
@@ -249,14 +169,10 @@ namespace Dataloop
         {
             var fields = new object?[]
             {
-                Annotation1,
+                Annotation,
                 typeof(global::Dataloop.AnnotationType),
-                ModelOutputTypeVariant2,
-                typeof(global::Dataloop.ModelOutputTypeVariant2),
-                Annotation2,
-                typeof(global::Dataloop.AnnotationType),
-                ModelOutputTypeVariant4,
-                typeof(global::Dataloop.ModelOutputTypeVariant4),
+                Enum,
+                typeof(global::Dataloop.ModelOutputTypeEnum),
             };
             const int offset = unchecked((int)2166136261);
             const int prime = 16777619;
@@ -273,10 +189,8 @@ namespace Dataloop
         public bool Equals(ModelOutputType other)
         {
             return
-                global::System.Collections.Generic.EqualityComparer<global::Dataloop.AnnotationType?>.Default.Equals(Annotation1, other.Annotation1) &&
-                global::System.Collections.Generic.EqualityComparer<global::Dataloop.ModelOutputTypeVariant2?>.Default.Equals(ModelOutputTypeVariant2, other.ModelOutputTypeVariant2) &&
-                global::System.Collections.Generic.EqualityComparer<global::Dataloop.AnnotationType?>.Default.Equals(Annotation2, other.Annotation2) &&
-                global::System.Collections.Generic.EqualityComparer<global::Dataloop.ModelOutputTypeVariant4?>.Default.Equals(ModelOutputTypeVariant4, other.ModelOutputTypeVariant4) 
+                global::System.Collections.Generic.EqualityComparer<global::Dataloop.AnnotationType?>.Default.Equals(Annotation, other.Annotation) &&
+                global::System.Collections.Generic.EqualityComparer<global::Dataloop.ModelOutputTypeEnum?>.Default.Equals(Enum, other.Enum) 
                 ;
         }
 

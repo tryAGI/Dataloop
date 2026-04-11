@@ -23,10 +23,6 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        InProgress,
-        /// <summary>
-        /// 
-        /// </summary>
         Open,
     }
 
@@ -45,7 +41,6 @@ namespace Dataloop
                 TaskStatus.Completed => "completed",
                 TaskStatus.CompletedWithIssues => "completed with issues",
                 TaskStatus.Dismissed => "dismissed",
-                TaskStatus.InProgress => "in progress",
                 TaskStatus.Open => "open",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -60,7 +55,6 @@ namespace Dataloop
                 "completed" => TaskStatus.Completed,
                 "completed with issues" => TaskStatus.CompletedWithIssues,
                 "dismissed" => TaskStatus.Dismissed,
-                "in progress" => TaskStatus.InProgress,
                 "open" => TaskStatus.Open,
                 _ => null,
             };
