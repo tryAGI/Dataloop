@@ -2352,3343 +2352,1327 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ModelOutputTypeVariant2? Type581 { get; set; }
+        public global::Dataloop.ModelOutputTypeEnum? Type581 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ModelOutputTypeVariant4? Type582 { get; set; }
+        public global::Dataloop.ArtifactType? Type582 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ArtifactType? Type583 { get; set; }
+        public global::Dataloop.ItemArtifact? Type583 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ItemArtifact? Type584 { get; set; }
+        public global::Dataloop.LocalArtifact? Type584 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.LocalArtifact? Type585 { get; set; }
+        public global::Dataloop.EntityContext? Type585 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.EntityContext? Type586 { get; set; }
+        public global::Dataloop.ModelOperationMetadata? Type586 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ModelOperationMetadata? Type587 { get; set; }
+        public global::Dataloop.APIModelMetadataSubsets? Type587 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.APIModelMetadataSubsets? Type588 { get; set; }
+        public global::Dataloop.APIModelMetadataAnnotationsSubsets? Type588 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.APIModelMetadataAnnotationsSubsets? Type589 { get; set; }
+        public global::Dataloop.ReferenceType? Type589 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ReferenceType? Type590 { get; set; }
+        public global::Dataloop.EntityReference? Type590 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.EntityReference? Type591 { get; set; }
+        public global::Dataloop.NodeMlType? Type591 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.NodeMlType? Type592 { get; set; }
+        public global::Dataloop.APIModelMetadataSystem? Type592 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.APIModelMetadataSystem? Type593 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.EntityReference>? Type593 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.EntityReference>? Type594 { get; set; }
+        public global::Dataloop.APIModelMetadataSystemMlType? Type594 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.APIModelMetadataSystemMlType? Type595 { get; set; }
+        public global::Dataloop.APIModelMetadataSystemCloneCommand? Type595 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.APIModelMetadataSystemCloneCommand? Type596 { get; set; }
+        public global::Dataloop.APIModelMetadataSystemEmbedDatasets? Type596 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.APIModelMetadataSystemEmbedDatasets? Type597 { get; set; }
+        public global::Dataloop.APIModelMetadataSystemReloadServices? Type597 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.APIModelMetadataSystemReloadServices? Type598 { get; set; }
+        public global::Dataloop.APIModelMetadata? Type598 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.APIModelMetadata? Type599 { get; set; }
+        public global::Dataloop.IAppDefinition? Type599 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.IAppDefinition? Type600 { get; set; }
+        public global::Dataloop.ModelStatusLog? Type600 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ModelStatusLog? Type601 { get; set; }
+        public global::Dataloop.APIModel? Type601 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.APIModel? Type602 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.AnyOf<global::Dataloop.ItemArtifact, global::Dataloop.LocalArtifact>>? Type602 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.AnyOf<global::Dataloop.ItemArtifact, global::Dataloop.LocalArtifact>>? Type603 { get; set; }
+        public global::Dataloop.AnyOf<global::Dataloop.ItemArtifact, global::Dataloop.LocalArtifact>? Type603 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.AnyOf<global::Dataloop.ItemArtifact, global::Dataloop.LocalArtifact>? Type604 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.ModelStatusLog>? Type604 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.ModelStatusLog>? Type605 { get; set; }
+        public global::Dataloop.CursorPageAPISetting? Type605 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.CursorPageAPISetting? Type606 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.APIModel>? Type606 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.APIModel>? Type607 { get; set; }
+        public global::Dataloop.CreateModelRequest? Type607 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.CreateModelRequest? Type608 { get; set; }
+        public global::Dataloop.PatchModelRequest? Type608 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.PatchModelRequest? Type609 { get; set; }
+        public global::Dataloop.ModelOperationTypes? Type609 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ModelOperationTypes? Type610 { get; set; }
+        public global::Dataloop.QueryModel? Type610 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.QueryModel? Type611 { get; set; }
+        public global::Dataloop.ExecutionStatus? Type611 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ExecutionStatus? Type612 { get; set; }
+        public global::Dataloop.ExecutionStatusReport? Type612 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ExecutionStatusReport? Type613 { get; set; }
+        public global::Dataloop.ExecutionPipelineStateReference? Type613 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ExecutionStatusName? Type614 { get; set; }
+        public global::Dataloop.ExecutionModel? Type614 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ExecutionPipelineStateReference? Type615 { get; set; }
+        public global::Dataloop.EventResourceType? Type615 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ExecutionModel? Type616 { get; set; }
+        public global::Dataloop.ItemStatusEvent? Type616 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.EventResourceType? Type617 { get; set; }
+        public global::Dataloop.ItemStatusEventStatus? Type617 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ItemStatusEvent? Type618 { get; set; }
+        public global::Dataloop.ExecutionEventContext? Type618 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ItemStatusEventStatus? Type619 { get; set; }
+        public global::Dataloop.IDate? Type619 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ExecutionEventContext? Type620 { get; set; }
+        public global::Dataloop.JssdkDictionary? Type620 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ResourceType? Type621 { get; set; }
+        public global::Dataloop.Execution? Type621 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.IDate? Type622 { get; set; }
+        public global::Dataloop.ExecutionFeedbackQueue? Type622 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.JssdkDictionary? Type623 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.ExecutionStatusReport>? Type623 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.Execution? Type624 { get; set; }
+        public global::Dataloop.PartialAPIEmbedDatasetsSpec? Type624 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ExecutionFeedbackQueue? Type625 { get; set; }
+        public global::Dataloop.PartialAPIEmbedDatasetsSpecConfig? Type625 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.ExecutionStatusReport>? Type626 { get; set; }
+        public global::Dataloop.PartialCreateModelRequest? Type626 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ExecutionPipeline? Type627 { get; set; }
+        public global::Dataloop.APICopyEnvironmentSpec? Type627 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.AuthZBlockExecutionContext? Type628 { get; set; }
+        public global::System.Collections.Generic.Dictionary<string, global::Dataloop.ModelJoinMap2>? Type628 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.ExecutionResource>? Type629 { get; set; }
+        public global::Dataloop.ModelJoinMap2? Type629 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ExecutionResource? Type630 { get; set; }
+        public global::Dataloop.PrecisionRecallInputRequest? Type630 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ExecutionMode? Type631 { get; set; }
+        public global::Dataloop.Error? Type631 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ExecutionSyncReplyTo? Type632 { get; set; }
+        public global::Dataloop.LineData? Type632 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ExecutionHook? Type633 { get; set; }
+        public global::Dataloop.MatrixData? Type633 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ExecutionPhase? Type634 { get; set; }
+        public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<double>>? Type634 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.OnResetAction? Type635 { get; set; }
+        public global::Dataloop.SummaryData? Type635 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.PartialAPIEmbedDatasetsSpec? Type636 { get; set; }
+        public global::Dataloop.MetricData? Type636 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.PartialAPIEmbedDatasetsSpecConfig? Type637 { get; set; }
+        public global::Dataloop.MetricRequest? Type637 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.PartialCreateModelRequest? Type638 { get; set; }
+        public global::Dataloop.IVersion? Type638 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.APICopyEnvironmentSpec? Type639 { get; set; }
+        public global::Dataloop.SettingsValueTypes? Type639 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.Dictionary<string, global::Dataloop.ModelJoinMap2>? Type640 { get; set; }
+        public global::Dataloop.PlatformEntityType? Type640 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ModelJoinMap2? Type641 { get; set; }
+        public global::Dataloop.SettingScope? Type641 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.PrecisionRecallInputRequest? Type642 { get; set; }
+        public global::Dataloop.AnyOf<global::Dataloop.PlatformEntityType?, global::Dataloop.SettingScopeType?>? Type642 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.Error? Type643 { get; set; }
+        public global::Dataloop.SettingScopeType? Type643 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.LineData? Type644 { get; set; }
+        public global::Dataloop.AnyOf<string, global::Dataloop.SettingScopeId?>? Type644 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.MatrixData? Type645 { get; set; }
+        public global::Dataloop.SettingScopeId? Type645 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<double>>? Type646 { get; set; }
+        public global::Dataloop.AnyOf<global::Dataloop.Role?, global::Dataloop.OrgRole?, global::Dataloop.SettingScopeRole?>? Type646 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.SummaryData? Type647 { get; set; }
+        public global::Dataloop.SettingScopeRole? Type647 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.MetricData? Type648 { get; set; }
+        public global::Dataloop.SettingsTypes? Type648 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.MetricRequest? Type649 { get; set; }
+        public global::Dataloop.APIFeatureFlag? Type649 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.PrivateRegistry? Type650 { get; set; }
+        public global::Dataloop.SettingsSectionNames? Type650 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ServiceDriver? Type651 { get; set; }
+        public global::Dataloop.APIUserSetting? Type651 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.AutoscalersDriverZombies? Type652 { get; set; }
+        public global::Dataloop.IUserContext? Type652 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.APIWebHook? Type653 { get; set; }
+        public global::Dataloop.ResolverPayload? Type653 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.WebHooksPage? Type654 { get; set; }
+        public global::Dataloop.CreateSettingRequest? Type654 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.APIWebHook>? Type655 { get; set; }
+        public global::Dataloop.CreateFeatureFlagRequest? Type655 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.CreateWebHookDTO? Type656 { get; set; }
+        public global::Dataloop.CreateUserSettingRequest? Type656 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.CreateWebHookDTOHttpMethod? Type657 { get; set; }
+        public global::Dataloop.PartialSettingScope? Type657 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.UpdateWebHookDTO? Type658 { get; set; }
+        public global::Dataloop.AnyOf<global::Dataloop.PlatformEntityType?, global::Dataloop.PartialSettingScopeType?>? Type658 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.UpdateWebHookDTOHttpMethod? Type659 { get; set; }
+        public global::Dataloop.PartialSettingScopeType? Type659 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ServiceRuntime? Type660 { get; set; }
+        public global::Dataloop.AnyOf<string, global::Dataloop.PartialSettingScopeId?>? Type660 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ServiceVersions? Type661 { get; set; }
+        public global::Dataloop.PartialSettingScopeId? Type661 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.Panel? Type662 { get; set; }
+        public global::Dataloop.AnyOf<global::Dataloop.Role?, global::Dataloop.OrgRole?, global::Dataloop.PartialSettingScopeRole?>? Type662 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.IServiceAppConfig? Type663 { get; set; }
+        public global::Dataloop.PartialSettingScopeRole? Type663 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ServiceType? Type664 { get; set; }
+        public global::Dataloop.PatchFeatureFlagRequest? Type664 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.CrashloopAction? Type665 { get; set; }
+        public global::Dataloop.PatchUserSettingRequest? Type665 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.CrashloopReason? Type666 { get; set; }
+        public global::Dataloop.CursorPageAPIUserSettingOrAPIFeatureFlag? Type666 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.Crashloop? Type667 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.AnyOf<global::Dataloop.APIUserSetting, global::Dataloop.APIFeatureFlag>>? Type667 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ServiceModeType? Type668 { get; set; }
+        public global::Dataloop.AnyOf<global::Dataloop.APIUserSetting, global::Dataloop.APIFeatureFlag>? Type668 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ServiceMode? Type669 { get; set; }
+        public global::Dataloop.MigrationSpec? Type669 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.SystemRefs? Type670 { get; set; }
+        public global::Dataloop.MigrationSpecVariant2? Type670 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ServiceMetadata? Type671 { get; set; }
+        public global::Dataloop.RemoveSettingTraceMigrationSpec? Type671 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.AllOf<global::Dataloop.ServiceMetadataUser, global::Dataloop.Dictionary>? Type672 { get; set; }
+        public global::Dataloop.RemoveSettingTraceMigrationSpecVariant2? Type672 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ServiceMetadataUser? Type673 { get; set; }
+        public global::Dataloop.UIHours? Type673 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ServiceMetadataMl? Type674 { get; set; }
+        public global::Dataloop.APICallResourceDescriptor? Type674 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.AllOf<global::Dataloop.ServiceMetadataSystem, global::Dataloop.SystemRefs, global::Dataloop.Dictionary>? Type675 { get; set; }
+        public global::Dataloop.APICallSourceDescriptor? Type675 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ServiceMetadataSystem? Type676 { get; set; }
+        public global::System.Collections.Generic.Dictionary<string, global::Dataloop.APICallResourceDescriptor>? Type676 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.IServiceGeneralSettings? Type677 { get; set; }
+        public global::Dataloop.APICallDescriptor? Type677 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ServiceIntegration? Type678 { get; set; }
+        public global::Dataloop.StorageModificationSourceDescriptor? Type678 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.APIService? Type679 { get; set; }
+        public global::Dataloop.StorageModificationDescriptor? Type679 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.Panel>? Type680 { get; set; }
+        public global::Dataloop.StorageDatasetDescriptor? Type680 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.ServiceIntegration>? Type681 { get; set; }
+        public global::Dataloop.StorageDescriptor? Type681 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.PackageResourceType? Type682 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.StorageDatasetDescriptor>? Type682 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ExecutionHookValueFrom? Type683 { get; set; }
+        public global::Dataloop.PodType? Type683 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ExecutionHookType? Type684 { get; set; }
+        public global::Dataloop.ServiceType? Type684 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.PackageIO? Type685 { get; set; }
+        public global::Dataloop.FaasUsageServiceInstanceDescriptor? Type685 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.PackageIOIntegration? Type686 { get; set; }
+        public global::Dataloop.FaasGlobalServiceDescriptor? Type686 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.UiBindingResource? Type687 { get; set; }
+        public global::Dataloop.FaasUsageDescriptor? Type687 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.UiBindingPanel? Type688 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.FaasUsageServiceInstanceDescriptor>? Type688 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.DisplayScope? Type689 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.FaasGlobalServiceDescriptor>? Type689 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ExecutionPostActionType? Type690 { get; set; }
+        public global::Dataloop.ItemsCount? Type690 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ExecutionPostAction? Type691 { get; set; }
+        public global::Dataloop.IngestedDatapointsDescriptor? Type691 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.DLFunctionDefaultInputSpec? Type692 { get; set; }
+        public global::Dataloop.APIUsageEntry? Type692 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.DLFunctionInputOptionsSpec? Type693 { get; set; }
+        public global::Dataloop.AlertStatus? Type693 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.DLFunction? Type694 { get; set; }
+        public global::Dataloop.APIAlert? Type694 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.PackageIO>? Type695 { get; set; }
+        public global::Dataloop.FieldSort? Type695 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.DisplayScope>? Type696 { get; set; }
+        public global::Dataloop.FieldSortField? Type696 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.DLFunctionDefaultInputSpec>? Type697 { get; set; }
+        public global::Dataloop.FieldSortDirection? Type697 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.DLFunctionInputOptionsSpec>? Type698 { get; set; }
+        public global::Dataloop.ResourceAuditEventType? Type698 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.IPipelineExecution? Type699 { get; set; }
+        public global::Dataloop.ResourceAuditLog? Type699 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.APIExecution? Type700 { get; set; }
+        public global::Dataloop.ResourceAuditLogCtx? Type700 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.APIExecutionSyncReplyTo? Type701 { get; set; }
+        public global::Dataloop.AuditLogsCursorPage? Type701 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.UiSlot? Type702 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.ResourceAuditLog>? Type702 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.Dictionary<string, global::Dataloop.ActivitiesDescriptor2>? Type703 { get; set; }
+        public global::Dataloop.Address? Type703 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ActivitiesDescriptor2? Type704 { get; set; }
+        public global::Dataloop.TaxType? Type704 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.Dictionary<string, global::Dataloop.ActivitiesDescriptorFunctions2>? Type705 { get; set; }
+        public global::Dataloop.TaxData? Type705 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ActivitiesDescriptorFunctions2? Type706 { get; set; }
+        public global::Dataloop.DBBillingAccount? Type706 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.APIExecution>? Type707 { get; set; }
+        public global::Dataloop.PartialBillingAccount? Type707 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.TriggerType? Type708 { get; set; }
+        public global::Dataloop.PartialBillingAccountTaxData? Type708 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.EntityReferenceMetadata? Type709 { get; set; }
+        public global::Dataloop.PaymentDriverType? Type709 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.APITrigger? Type710 { get; set; }
+        public global::Dataloop.DBPaymentDriverConfiguration? Type710 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.TriggersPage? Type711 { get; set; }
+        public global::Dataloop.CreditCard? Type711 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.APITrigger>? Type712 { get; set; }
+        public global::Dataloop.PaymentMethod? Type712 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.CreateTriggerRequest? Type713 { get; set; }
+        public global::Dataloop.ContactAddress? Type713 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.TriggerResourceInformationItem? Type714 { get; set; }
+        public global::Dataloop.ContactInfo? Type714 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.TriggerResourceInformationPage? Type715 { get; set; }
+        public global::Dataloop.LineItem? Type715 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.TriggerResourceInformationItem>? Type716 { get; set; }
+        public global::Dataloop.InvoiceStatus? Type716 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.TriggerResourceInformationQuery? Type717 { get; set; }
+        public global::Dataloop.Currency? Type717 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.AgentNotificationPayload? Type718 { get; set; }
+        public global::Dataloop.PaymentDetails? Type718 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.AgentNotificationPayloadAgentInfo? Type719 { get; set; }
+        public global::Dataloop.Invoice? Type719 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ECacheMode? Type720 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.ContactInfo>? Type720 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.FaaSCacheSize? Type721 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.LineItem>? Type721 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.FaaSCacheType? Type722 { get; set; }
+        public global::Dataloop.InvoiceBilledPeriod? Type722 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ICacheRunner? Type723 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.PaymentDetails>? Type723 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ICacheOptions? Type724 { get; set; }
+        public global::Dataloop.RangeOrFeatureTier? Type724 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ICacheOptionsOrg? Type725 { get; set; }
+        public global::Dataloop.RangeOrFeatureTierRange? Type725 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ServicesPage? Type726 { get; set; }
+        public global::Dataloop.OverQuota? Type726 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.APIService>? Type727 { get; set; }
+        public global::Dataloop.APIBillableResource? Type727 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.APIServicePatch? Type728 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.RangeOrFeatureTier>? Type728 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ServiceLogLevel? Type729 { get; set; }
+        public global::Dataloop.BillingScope? Type729 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ServiceLogEntry? Type730 { get; set; }
+        public global::Dataloop.SubscriptionInput? Type730 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ServiceLogsPage? Type731 { get; set; }
+        public global::Dataloop.EditSubscriptionInput? Type731 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.ServiceLogEntry>? Type732 { get; set; }
+        public global::Dataloop.RenewSubscriptionInput? Type732 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.LogsListDirection? Type733 { get; set; }
+        public global::Dataloop.CursorPageAPISubscription? Type733 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.LogQuery? Type734 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.APISubscription>? Type734 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ReplicaStatus? Type735 { get; set; }
+        public global::Dataloop.CustomSubscriptionInput? Type735 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.APIReplicaStatusUpdate? Type736 { get; set; }
+        public global::Dataloop.SubscriptionUpgradeInput? Type736 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ReplicaReason? Type737 { get; set; }
+        public global::Dataloop.SubscriptionExtensionInput? Type737 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ServiceRuntimeStatus? Type738 { get; set; }
+        public global::Dataloop.PaymentDriverTypes? Type738 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.APIServiceStatus? Type739 { get; set; }
+        public global::Dataloop.UsageLog? Type739 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.ServiceRuntimeStatus>? Type740 { get; set; }
+        public global::Dataloop.ResourceUsage? Type740 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.EDebugOptionsStatus? Type741 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.UsageLog>? Type741 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.DebugSession? Type742 { get; set; }
+        public global::Dataloop.UsageReport? Type742 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ReportType? Type743 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.ResourceUsage>? Type743 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.BaseReportMessage? Type744 { get; set; }
+        public global::Dataloop.UsageResourcesReport? Type744 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.IServiceScaler? Type745 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.BillingResourceKey>? Type745 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ServiceDriverType? Type746 { get; set; }
+        public global::Dataloop.AzureWebhookEvent? Type746 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.IComputeContext? Type747 { get; set; }
+        public global::Dataloop.AzureWebhookEventAction? Type747 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.DataloopPodType? Type748 { get; set; }
+        public global::Dataloop.AnyOf<string, global::Dataloop.AzureWebhookEventOperationRequestSource?>? Type748 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.DriverCondition? Type749 { get; set; }
+        public global::Dataloop.AzureWebhookEventOperationRequestSource? Type749 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.DriverToleration? Type750 { get; set; }
+        public global::Dataloop.AzureWebhookEventSubscription? Type750 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.DriverTolerationConditions? Type751 { get; set; }
+        public global::Dataloop.AzureWebhookEventSubscriptionTerm? Type751 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.DriverCondition>? Type752 { get; set; }
+        public global::Dataloop.AzureWebhookEventSubscriptionPurchaser? Type752 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.DriverNodeSelector? Type753 { get; set; }
+        public global::Dataloop.AzureWebhookEventSubscriptionBeneficiary? Type753 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.DriverNodeSelectorConditions? Type754 { get; set; }
+        public global::Dataloop.ArchiveAnnotationToStorageRequest? Type754 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.CacheRunner? Type755 { get; set; }
+        public global::Dataloop.RestoreArchivedAnnotationToDBRequest? Type755 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ComputeMetadata? Type756 { get; set; }
+        public global::Dataloop.GetProjectsActiveCountersRequest? Type756 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ComputeMetadataVariant2? Type757 { get; set; }
+        public global::Dataloop.GetCountersForProjectRequest? Type757 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ComputeMetadataVariant2ServeAgentGateway? Type758 { get; set; }
+        public global::Dataloop.CreateApiKeyRequest? Type758 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.DriverNodeSelector>? Type759 { get; set; }
+        public global::Dataloop.SetItemStatusBulkTaskRequest? Type759 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.DriverToleration>? Type760 { get; set; }
+        public global::Dataloop.SetItemStatusBulkAssignmentRequest? Type760 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.DataloopPodType>? Type761 { get; set; }
+        public global::Dataloop.GetAssignmentFieldsRequest? Type761 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.APIServiceDriver? Type762 { get; set; }
+        public global::Dataloop.QueryAuditLogsRequest? Type762 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.CompositionElementStatus? Type763 { get; set; }
+        public global::Dataloop.UpdateAlertRequest? Type763 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.APIServiceCompositionElement? Type764 { get; set; }
+        public global::Dataloop.ListAccountAlertsRequest? Type764 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.APIServiceCompositionElementState? Type765 { get; set; }
+        public global::Dataloop.SchemaCleanupRequest? Type765 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.CompositionStatus? Type766 { get; set; }
+        public global::Dataloop.GetDatasetsByProjectIdsRequest? Type766 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ICompositionError? Type767 { get; set; }
+        public global::Dataloop.ListExportHistoryRequest? Type767 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ICompositionErrorContext? Type768 { get; set; }
+        public global::Dataloop.ListExportHistoryRequestSortOrder? Type768 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.TriggerResourceType? Type769 { get; set; }
+        public global::Dataloop.ListExportHistoryRequestSortBy? Type769 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.TriggerActionType? Type770 { get; set; }
+        public global::Dataloop.AllOf<global::Dataloop.DQLResourceQuery, global::Dataloop.AnyOf<global::Dataloop.FilterQuery, global::Dataloop.UpdateQuery, global::Dataloop.DeleteQuery>?>? Type770 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.TriggerOperationType? Type771 { get; set; }
+        public global::Dataloop.AnyOf<global::Dataloop.FilterQuery, global::Dataloop.UpdateQuery, global::Dataloop.DeleteQuery>? Type771 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.TriggerOperation? Type772 { get; set; }
+        public global::Dataloop.QueryDatasetsRequest? Type772 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ICompositionTrigger? Type773 { get; set; }
+        public global::Dataloop.QueryDatasetsRequestTarget? Type773 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ICompositionTriggerSpec? Type774 { get; set; }
+        public global::Dataloop.AllOf<global::Dataloop.DQLResourceQuery, global::Dataloop.FilterQuery>? Type774 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.TriggerActionType>? Type775 { get; set; }
+        public global::Dataloop.RestoreDatasetRequest? Type775 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ECompositionPackageStatus? Type776 { get; set; }
+        public global::Dataloop.RemoveItemsByQueryRequest? Type776 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.PartialModule? Type777 { get; set; }
+        public global::Dataloop.BulkUpdateMetadataRequest? Type777 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.DLFunction>? Type778 { get; set; }
+        public global::Dataloop.BullkGenerateAnnotationThumbnailsRequest? Type778 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.PackageConfigType? Type779 { get; set; }
+        public global::Dataloop.BullkGenerateAnnotationThumbnailsRequestOptions? Type779 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.PackageRequirementOperator? Type780 { get; set; }
+        public global::Dataloop.CreateItemCollectionRequest? Type780 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.PackageRequirement? Type781 { get; set; }
+        public global::Dataloop.AddItemsToItemCollectionsRequest? Type781 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.CodebaseType? Type782 { get; set; }
+        public global::Dataloop.RemoveItemsFromItemCollectionsRequest? Type782 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.Codebase? Type783 { get; set; }
+        public global::Dataloop.RenameItemCollectionRequest? Type783 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ICompositionPackage? Type784 { get; set; }
+        public global::Dataloop.InvalidateAnnotationThumbnailsRequest? Type784 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ICompositionPackageState? Type785 { get; set; }
+        public global::Dataloop.AnyOf<global::Dataloop.MoveItemsRequest, global::System.Collections.Generic.IList<string>>? Type785 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.PackageRequirement>? Type786 { get; set; }
+        public global::Dataloop.MoveItemsRequest? Type786 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ICompositionTask? Type787 { get; set; }
+        public global::Dataloop.AnyOf<global::Dataloop.APIAnnotationRequest, global::System.Collections.Generic.IList<global::Dataloop.APIAnnotationRequest>>? Type787 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ICompositionTaskState? Type788 { get; set; }
+        public global::Dataloop.ArchiveDatasetItemAnnotationToStorageRequest? Type788 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ModelConfiguration? Type789 { get; set; }
+        public global::Dataloop.RestoreArchivedDatasetItemAnnotationToDBRequest? Type789 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.IModel? Type790 { get; set; }
+        public global::Dataloop.GetFilteredDatasetLabelAggregationRequest? Type790 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.Dictionary>? Type791 { get; set; }
+        public global::Dataloop.GetFilteredDatasetTypeAggregationRequest? Type791 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ICompositionElementState? Type792 { get; set; }
+        public global::Dataloop.AnyOf<global::System.Collections.Generic.IList<global::Dataloop.ImportItemRequest>, global::Dataloop.ImportItemsToDatasetRequest>? Type792 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ServiceConfig? Type793 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.ImportItemRequest>? Type793 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.APICompositionModel? Type794 { get; set; }
+        public global::Dataloop.ImportItemsToDatasetRequest? Type794 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ChannelType? Type795 { get; set; }
+        public global::Dataloop.SplitMlOperationRequest? Type795 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.CompositionChannelStatus? Type796 { get; set; }
+        public global::Dataloop.CheckStorageDriversIntegrationByIntegrationIdRequest? Type796 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.NotificationEntityContext? Type797 { get; set; }
+        public global::Dataloop.AnyOf<global::Dataloop.FeatureSet, global::System.Collections.Generic.IList<global::Dataloop.FeatureSet>>? Type797 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.FilterTarget? Type798 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.FeatureSet>? Type798 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.NotificationEventContext? Type799 { get; set; }
+        public global::Dataloop.AnyOf<global::Dataloop.FeatureVector, global::System.Collections.Generic.IList<global::Dataloop.FeatureVector>>? Type799 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ICompositionFilter? Type800 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.FeatureVector>? Type800 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ICompositionFilterState? Type801 { get; set; }
+        public global::Dataloop.AddGroupMemberRequest? Type801 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ICompositionChannel? Type802 { get; set; }
+        public global::Dataloop.UpdateGroupOwnerRequest? Type802 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ICompositionChannelMetadata? Type803 { get; set; }
+        public global::Dataloop.AddSubGroupRequest? Type803 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ICompositionChannelState? Type804 { get; set; }
+        public global::Dataloop.ArchiveItemAnnotationToStorageRequest? Type804 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.ICompositionFilter>? Type805 { get; set; }
+        public global::Dataloop.RestoreArchivedItemAnnotationToDBRequest? Type805 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.TemplateKind? Type806 { get; set; }
+        public global::Dataloop.AnyOf<global::Dataloop.MetricRequest, global::System.Collections.Generic.IList<global::Dataloop.MetricRequest>>? Type806 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.INodeConfig? Type807 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.MetricRequest>? Type807 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.INodeConfigPackage? Type808 { get; set; }
+        public global::Dataloop.GenerateModelMetricsReportRequest? Type808 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.NodeNamespace? Type809 { get; set; }
+        public global::Dataloop.ModelsExecutionsRequest? Type809 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.PortIO? Type810 { get; set; }
+        public global::Dataloop.ModelsServicesRequest? Type810 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.NodeType? Type811 { get; set; }
+        public global::Dataloop.AnyOf<global::Dataloop.PartialCreateModelRequest, global::Dataloop.APICopyEnvironmentSpec>? Type811 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.PipelineNodeDescriptor? Type812 { get; set; }
+        public global::Dataloop.DeployModelRequest? Type812 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.PortIO>? Type813 { get; set; }
+        public global::Dataloop.UpdateModelDeploymentRequest? Type813 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.PipelineNodeSource? Type814 { get; set; }
+        public global::Dataloop.ExtractItemFeaturesRequest? Type814 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.PipelineNodeTarget? Type815 { get; set; }
+        public global::Dataloop.ExtractItemFeaturesRequestConfig? Type815 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.PipelineConnection? Type816 { get; set; }
+        public global::Dataloop.ExtractItemFeaturesRequestInput? Type816 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.StartNodeType? Type817 { get; set; }
+        public global::Dataloop.EvaluateModelRequest? Type817 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ITriggerSpec? Type818 { get; set; }
+        public global::Dataloop.EvaluateModelRequestConfig? Type818 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ITriggerSpecSpec? Type819 { get; set; }
+        public global::Dataloop.EvaluateModelRequestInput? Type819 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.IStartNode? Type820 { get; set; }
+        public global::Dataloop.ModelPredictionRequest? Type820 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ResumePipelineOption? Type821 { get; set; }
+        public global::Dataloop.ModelPredictionRequestConfig? Type821 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.IPipelineSettings? Type822 { get; set; }
+        public global::Dataloop.ModelPredictionRequestInput? Type822 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.IPipelineSettingsLastUpdate? Type823 { get; set; }
+        public global::Dataloop.TrainModelRequest? Type823 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.PipelineVariable? Type824 { get; set; }
+        public global::Dataloop.AnyOf<global::Dataloop.CreateOntologyPayloadV2, global::Dataloop.CreateOntologyPayload>? Type824 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.PipelineFromTemplateState? Type825 { get; set; }
+        public global::Dataloop.DeleteAttributesRequest? Type825 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ICompositionPipelineTemplate? Type826 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.UpdateLabelNodePayload>? Type826 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.PipelineNodeDescriptor>? Type827 { get; set; }
+        public global::Dataloop.CreateOrgRequest? Type827 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.PipelineConnection>? Type828 { get; set; }
+        public global::Dataloop.PatchOrgRequest? Type828 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.IStartNode>? Type829 { get; set; }
+        public global::Dataloop.CreateIntegrationRequest? Type829 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.PipelineVariable>? Type830 { get; set; }
+        public global::Dataloop.AddOrgMembersRequest? Type830 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ICompositionPipelineTemplateTemplate? Type831 { get; set; }
+        public global::Dataloop.PatchOrgMemberRequest? Type831 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ICompositionPipelineTemplateState? Type832 { get; set; }
+        public global::Dataloop.UpdateOrgPlanRequest? Type832 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ICompositionDatasetState? Type833 { get; set; }
+        public global::Dataloop.QueryBillingMetricsRequest? Type833 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ICompositionDatasetStateDataset? Type834 { get; set; }
+        public global::Dataloop.UpdateProjectGuestRequest? Type834 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ICompositionDatasetStateDatasetIndexDriver? Type835 { get; set; }
+        public global::Dataloop.AddOrgToGuestRequest? Type835 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ICompositionDatasetStateDatasetShareLevel? Type836 { get; set; }
+        public global::Dataloop.PatchProjectRequest? Type836 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ICompositionDatasetStateDatasetExport? Type837 { get; set; }
+        public global::Dataloop.SetProjectAccountRequest? Type837 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.Dictionary<string, string>? Type838 { get; set; }
+        public global::Dataloop.AddOrgToProjectRequest? Type838 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.ICompositionDatasetStateDatasetAnnotation>? Type839 { get; set; }
+        public global::Dataloop.AddGroupRequest? Type839 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ICompositionDatasetStateDatasetAnnotation? Type840 { get; set; }
+        public global::Dataloop.UpdateGroupRequest? Type840 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.TextSearch? Type841 { get; set; }
+        public global::Dataloop.AnyOf<global::Dataloop.RecipeV2Input?, global::Dataloop.RecipeInput?>? Type841 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.MqDetails? Type842 { get; set; }
+        public global::Dataloop.AnyOf<global::Dataloop.PartialRecipePayloadV2, global::Dataloop.PartialRecipePayload>? Type842 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ServiceContext? Type843 { get; set; }
+        public global::Dataloop.CreateScoresRequest? Type843 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.AuthZBlockServiceContext? Type844 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.Score>? Type844 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.AllOf<global::Dataloop.Context, global::Dataloop.ServiceContext>? Type845 { get; set; }
+        public global::Dataloop.AnyOf<global::Dataloop.ResolverPayload, global::Dataloop.IUserContext>? Type845 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.PartialService? Type846 { get; set; }
+        public global::Dataloop.AnyOf<global::Dataloop.PatchFeatureFlagRequest, global::Dataloop.PatchUserSettingRequest>? Type846 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.DpkDatasetOntologyType? Type847 { get; set; }
+        public global::Dataloop.DeleteSettingRequest? Type847 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ICompositionDataset? Type848 { get; set; }
+        public global::Dataloop.GetProjectsActiveCountersRequest2? Type848 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ICompositionDatasetOntology? Type849 { get; set; }
+        public global::Dataloop.GetCountersForProjectRequest2? Type849 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ICompositionDatasetInvoke? Type850 { get; set; }
+        public global::Dataloop.UpdateUserOrgRequest? Type850 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.APIComposition? Type851 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.APIAccount>? Type851 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.APIServiceCompositionElement>? Type852 { get; set; }
+        public global::Dataloop.AnyOf<global::Dataloop.APITask, global::Dataloop.APICommand>? Type852 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.AnyOf<global::Dataloop.ICompositionError, string>? Type853 { get; set; }
+        public global::Dataloop.AnyOf<object, global::Dataloop.APICommand>? Type853 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.ICompositionTrigger>? Type854 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.TaskRelativeInput>? Type854 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.ICompositionPackage>? Type855 { get; set; }
+        public global::Dataloop.AnyOf<global::Dataloop.APICommand, global::Dataloop.APITask>? Type855 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.ICompositionTask>? Type856 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.APIApiKey>? Type856 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.APICompositionModel>? Type857 { get; set; }
+        public global::Dataloop.CreateApiKeyResponse? Type857 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.ICompositionChannel>? Type858 { get; set; }
+        public global::Dataloop.AnyOf<global::Dataloop.APICommand, global::System.Collections.Generic.IList<global::Dataloop.APIAssignment>>? Type858 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.ICompositionPipelineTemplate>? Type859 { get; set; }
+        public global::Dataloop.AnyOf<global::Dataloop.APICommand, global::Dataloop.APIAssignment>? Type859 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.ICompositionDataset>? Type860 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.APIUsageEntry>? Type860 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.APIPipeline? Type861 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.APIAlert>? Type861 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.APIPipelineTemplate? Type862 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.DBPaymentDriverConfiguration>? Type862 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ExecutionContext? Type863 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.PaymentMethod>? Type863 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.AllOf<global::Dataloop.Context, global::Dataloop.ExecutionContext>? Type864 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.APIDataset>? Type864 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.PartialExecution? Type865 { get; set; }
+        public global::Dataloop.GetDatasetsByProjectIdsResponse? Type865 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.AnyOf<string, double?>? Type866 { get; set; }
+        public global::Dataloop.ListExportHistoryResponse? Type866 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.PartialExecutionSyncReplyTo? Type867 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.APIExportHistory>? Type867 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ENodeStatus? Type868 { get; set; }
+        public global::Dataloop.AnyOf<global::Dataloop.APIDatasetFileItem, global::Dataloop.APIDatasetDirectoryItem>? Type868 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.IPipelineNodeState? Type869 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.APIAnnotation>? Type869 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.EPipelineStatus? Type870 { get; set; }
+        public global::Dataloop.AnyOf<global::Dataloop.APIAnnotation, global::System.Collections.Generic.IList<global::Dataloop.APIAnnotation>>? Type870 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.INodeTransitionError? Type871 { get; set; }
+        public global::Dataloop.AnyOf<string, double?>? Type871 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.APIPipelineState? Type872 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.AnyOf<global::Dataloop.APIDatasetFileItem, global::Dataloop.APIDatasetDirectoryItem>>? Type872 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.Dictionary<string, global::System.Collections.Generic.IList<global::Dataloop.PartialExecution>>? Type873 { get; set; }
+        public global::Dataloop.AnyOf<global::Dataloop.Dataset, global::Dataloop.APIDatasetSchema>? Type873 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.PartialExecution>? Type874 { get; set; }
+        public global::Dataloop.AnyOf<global::Dataloop.APICommand, string>? Type874 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.IPipelineNodeState>? Type875 { get; set; }
+        public global::Dataloop.AnyOf<global::Dataloop.APICommand, global::Dataloop.Dataset>? Type875 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.INodeTransitionError>? Type876 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.APIDriverConfiguration>? Type876 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.IPipelineState? Type877 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.AuthUserAttributes>? Type877 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.AnyOf<double?, global::System.Collections.Generic.Dictionary<string, double>>? Type878 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.Invoice>? Type878 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ResourceExecution? Type879 { get; set; }
+        public global::Dataloop.PublishModelMetricsResponse? Type879 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.EDpkScope? Type880 { get; set; }
+        public global::System.Collections.Generic.Dictionary<string, global::Dataloop.Error>? Type880 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.IDpkMetadata? Type881 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.Dictionary>? Type881 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.IDpkMetadataCommands? Type882 { get; set; }
+        public global::Dataloop.ModelsDatasetsCountResponse? Type882 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.IAppContext? Type883 { get; set; }
+        public global::Dataloop.AnyOf<global::Dataloop.APIModel, global::Dataloop.APICommand>? Type883 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.IDpkInitialContext? Type884 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.APIOrg>? Type884 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.IDpkComponentPanel? Type885 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.AnyOf<global::Dataloop.GetAvailableIntegrationsResponseItemVariant1, global::Dataloop.GetAvailableIntegrationsResponseItemVariant2>>? Type885 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.IDpkComponentPanelSupportedSlot>? Type886 { get; set; }
+        public global::Dataloop.AnyOf<global::Dataloop.GetAvailableIntegrationsResponseItemVariant1, global::Dataloop.GetAvailableIntegrationsResponseItemVariant2>? Type886 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.IDpkComponentPanelSupportedSlot? Type887 { get; set; }
+        public global::Dataloop.GetAvailableIntegrationsResponseItemVariant1? Type887 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.IDpkComponentModel? Type888 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.GetAvailableIntegrationsResponseItemVariant1Option>? Type888 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.IDpkComponentModelComputeConfigs? Type889 { get; set; }
+        public global::Dataloop.GetAvailableIntegrationsResponseItemVariant1Option? Type889 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.JsServiceVersions? Type890 { get; set; }
+        public global::Dataloop.GetAvailableIntegrationsResponseItemVariant2? Type890 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.IDpkComponentModule? Type891 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.GetAvailableIntegrationsResponseItemVariant2Option>? Type891 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.EComponentServiceOperation? Type892 { get; set; }
+        public global::Dataloop.GetAvailableIntegrationsResponseItemVariant2Option? Type892 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.IDpkComponentTrigger? Type893 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.APIOrgUser>? Type893 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.IDpkComponentTriggerSpec? Type894 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.Plan>? Type894 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.IDpkComponentService? Type895 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.APIBillableResource>? Type895 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.IDpkComponentToolbars? Type896 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.APIGuest>? Type896 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.FilterFrequencyType? Type897 { get; set; }
+        public global::Dataloop.AnyOf<global::System.Collections.Generic.IList<global::Dataloop.APIMembership>, object>? Type897 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.FilterFrequency? Type898 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.APIMembership>? Type898 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.IDpkFilter? Type899 { get; set; }
+        public global::Dataloop.AnyOf<global::System.Collections.Generic.IList<global::Dataloop.ClientContributor>, object>? Type899 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.IDpkChannel? Type900 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.ClientContributor>? Type900 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.IDpkChannelMetadata? Type901 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.APIScore>? Type901 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.IDpkFilter>? Type902 { get; set; }
+        public global::Dataloop.QueryConfusionResponse? Type902 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.IDpkComputeConfigs? Type903 { get; set; }
+        public global::Dataloop.GetTaskScoresResponse? Type903 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.InvokeType? Type904 { get; set; }
+        public global::Dataloop.GetTaskAnnotationScoresResponse? Type904 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.ToolbarInvoke? Type905 { get; set; }
+        public global::Dataloop.GetTaskItemScoresResponse? Type905 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.CustomNodeScope? Type906 { get; set; }
+        public global::Dataloop.AnyOf<global::Dataloop.APIFeatureFlag, global::Dataloop.APIUserSetting>? Type906 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.IInvoke? Type907 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.AnyOf<global::Dataloop.APIFeatureFlag, global::Dataloop.APIUserSetting>>? Type907 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.IPipelineNode? Type908 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.UsageReport>? Type908 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.IDpkPipelineTemplate? Type909 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dataloop.GetMyGroupProjectsResponseItem>? Type909 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.IDpkPipelineTemplateTemplate? Type910 { get; set; }
+        public global::Dataloop.GetMyGroupProjectsResponseItem? Type910 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dataloop.IDpkComponentDataset? Type911 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IDpkComponentDatasetOntology? Type912 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IDpkComponentDatasetInvoke? Type913 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IDpkComponentIntegrations? Type914 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.DpkComponents? Type915 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.IDpkComponentIntegrations>? Type916 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.IDpkComponentDataset>? Type917 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.IDpkPipelineTemplate>? Type918 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.IPipelineNode>? Type919 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.IDpkComputeConfigs>? Type920 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.IDpkChannel>? Type921 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.IDpkComponentToolbars>? Type922 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.IDpkComponentService>? Type923 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.IDpkComponentTrigger>? Type924 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.IDpkComponentModule>? Type925 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.IDpkComponentModel>? Type926 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.IDpkComponentPanel>? Type927 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.EComponentElementType? Type928 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IDpkPipelineNode? Type929 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IDpkComponentElementSpec? Type930 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IComponentElement? Type931 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.Dictionary<string, global::Dataloop.IComponentElement>? Type932 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IDpkDependency? Type933 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::Dataloop.DpkComponents, global::System.Collections.Generic.Dictionary<string, global::Dataloop.IComponentElement>>? Type934 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.IDpkDependency>? Type935 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.APIDpk? Type936 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.EAppScope? Type937 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.PartialAPIDpk? Type938 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.PickAPIDpkDependencies? Type939 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.CustomInstallation? Type940 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.CustomInstallationVariant2? Type941 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AppCommandsReference? Type942 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AppMetadata? Type943 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AppMetadataVariant2? Type944 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AppMetadataVariant2System? Type945 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IAppGeneralSettings? Type946 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.APIApp? Type947 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.EComputeType? Type948 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.EComputeStatus? Type949 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.EClusterProvider? Type950 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.Toleration? Type951 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.INodePoolDeploymentResources? Type952 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.INodePoolDeploymentResourcesRequests? Type953 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.INodePoolDeploymentResourcesLimits? Type954 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.INodePool? Type955 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.Toleration>? Type956 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.EComputePlugin? Type957 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IExternalMonitoringConfig? Type958 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IHpaControllerConfig? Type959 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.EStorageType? Type960 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IStorage? Type961 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IStorageDriverConfig? Type962 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.IStorage>? Type963 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.KubernetesServiceType? Type964 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.Dictionary<string, global::Dataloop.ComputePluginSpec2>? Type965 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.ComputePluginSpec2? Type966 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.ComputePluginSpecSpec? Type967 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.ComputePluginSpecSpecResources? Type968 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IComputePlugin? Type969 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::Dataloop.IExternalMonitoringConfig, global::Dataloop.IHpaControllerConfig, global::Dataloop.Dictionary, global::Dataloop.IStorageDriverConfig>? Type970 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IComputeAuthentication? Type971 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IComputeAuthenticationIntegration? Type972 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IClusterVolume? Type973 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IClusterVolumePersistentVolumeClaim? Type974 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IClusterVolumeHostPath? Type975 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IClusterVolumeConfigMap? Type976 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.IClusterVolumeConfigMapItem>? Type977 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IClusterVolumeConfigMapItem? Type978 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IClusterVolumeSecret? Type979 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.IClusterVolumeSecretItem>? Type980 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IClusterVolumeSecretItem? Type981 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IClusterVolumeNfs? Type982 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IDeploymentSecurityContext? Type983 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IClusterEnvironmentVariable? Type984 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IClusterEnvironmentVariableValueFrom? Type985 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IClusterEnvironmentVariableValueFromConfigMapKeyRef? Type986 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IClusterEnvironmentVariableValueFromSecretKeyRef? Type987 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IClusterEnvironmentVariableValueFromFieldRef? Type988 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IComputeRegistry? Type989 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IDeploymentConfiguration? Type990 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.IClusterVolume>? Type991 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.IClusterEnvironmentVariable>? Type992 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IDeploymentConfigurationDefaultResources? Type993 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IDeploymentConfigurationDefaultResourcesLimits? Type994 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IDeploymentConfigurationDefaultResourcesRequests? Type995 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IRunAiConfig? Type996 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IComputeCluster? Type997 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.INodePool>? Type998 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.IComputePlugin>? Type999 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.EComputeConsumptionMethod? Type1000 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IComputeSettings? Type1001 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.APICompute? Type1002 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.IComputeContext>? Type1003 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.CursorPageT? Type1004 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.APIComposition>? Type1005 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.APIPipeline>? Type1006 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.AnyOf<global::Dataloop.APIPipelineState, global::Dataloop.IPipelineState>>? Type1007 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::Dataloop.APIPipelineState, global::Dataloop.IPipelineState>? Type1008 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.ResourceExecution>? Type1009 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.APIDpk>? Type1010 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.APIApp>? Type1011 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.APICompute>? Type1012 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.APIServiceDriver>? Type1013 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.QueryString? Type1014 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.CursorPageAPIPipelineState? Type1015 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.APIPipelineState>? Type1016 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.CycleRerunMethod? Type1017 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IRerunCycleOptions? Type1018 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.JsExecuteOptionsBatchQuery? Type1019 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.JsExecuteOptionsBatchQueryContext? Type1020 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IExecuteOptionsBatch? Type1021 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IRerunCycleBatchOptions? Type1022 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.APIPipelineTemplate2? Type1023 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.APIPipelineTemplateTemplate? Type1024 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.CursorPageAPIPipelineTemplate? Type1025 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.APITemplateQuery? Type1026 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.QueryStringTemplate? Type1027 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.TemplateQuery? Type1028 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.ExecutionLogs? Type1029 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.PipelineExecutionLogs? Type1030 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.ExecutionLogs>? Type1031 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IPostPipeline? Type1032 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IPipelineExecutionCount? Type1033 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IExecutionCount? Type1034 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.INodeExecutionCount? Type1035 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.IExecutionCount>? Type1036 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IExecutionStatistics? Type1037 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.INodeExecutionStatistics? Type1038 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IPipelineStatistics? Type1039 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.IPipelineExecutionCount>? Type1040 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.INodeExecutionCount>? Type1041 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.INodeExecutionStatistics>? Type1042 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.ExecutePipelinePayload? Type1043 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.ExecuteOptionsBatchQuery? Type1044 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.ExecuteOptionsBatchQueryContext? Type1045 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.ExecuteOptionsBatch? Type1046 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.ExecuteOptions? Type1047 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.NodeDescriptor? Type1048 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.CompositionStatusDescriptor? Type1049 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.CursorPageAPIPipeline? Type1050 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.PipelineNodeCategory? Type1051 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.Module? Type1052 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.UiHook? Type1053 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.PiperUiSlot? Type1054 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.PackageType? Type1055 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.PackageMetadata? Type1056 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.APIPackage? Type1057 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.Module>? Type1058 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.UiHook>? Type1059 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.PiperUiSlot>? Type1060 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.PackagesPage? Type1061 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.APIPackage>? Type1062 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.JobMetadata? Type1063 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.JobRuntime? Type1064 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.JobStatusEnum? Type1065 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.JobStatus? Type1066 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.Job? Type1067 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.PartialJob? Type1068 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.ExecutionsPage? Type1069 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.ExecutionsOrderByType? Type1070 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.ExecutionsOrderByDirection? Type1071 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.CommandError? Type1072 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.CommandStatus? Type1073 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.CommandStatusHistoryEntry? Type1074 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.HttpContext? Type1075 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.CommandCtx? Type1076 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.ChildrenCommandsProgress? Type1077 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.CommandError>? Type1078 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.CommandsDomain? Type1079 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.PiperSettingsCommands? Type1080 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.CommandStatusHistoryEntry>? Type1081 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.PiperSettingsCommandsTrackingInfo? Type1082 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.PiperSettingsCommandsRetry? Type1083 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.APIExecutionPatch? Type1084 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.WorkloadParams? Type1085 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.APIPostDpk? Type1086 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.CursorPageAPIDpk? Type1087 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.DpkAttributeValueDefinition? Type1088 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.DpkAttributeValueDefinitionIcon? Type1089 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.DpkAttributeValueDefinitionColor? Type1090 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.DpkAttributesDefinition? Type1091 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.DpkAttributeValueDefinition>? Type1092 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.PreviewsComponentsPatch? Type1093 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.PreviewsComponentsPatchPipelineTemplate>? Type1094 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.PreviewsComponentsPatchPipelineTemplate? Type1095 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.APIPatchDpk? Type1096 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AgentCtx? Type1097 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.ICompute? Type1098 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.PartialICompute? Type1099 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IPostComposition? Type1100 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.CursorPageAPIComposition? Type1101 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.APIPostApp? Type1102 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.APIPatchApp? Type1103 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.PipelineType? Type1104 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.ITextSearch? Type1105 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IPipeline? Type1106 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IPipelineTemplate? Type1107 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IVersion? Type1108 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.SettingsValueTypes? Type1109 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.PlatformEntityType? Type1110 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.SettingScope? Type1111 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::Dataloop.PlatformEntityType?, global::Dataloop.SettingScopeType?>? Type1112 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.SettingScopeType? Type1113 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<string, global::Dataloop.SettingScopeId?>? Type1114 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.SettingScopeId? Type1115 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::Dataloop.Role?, global::Dataloop.OrgRole?, global::Dataloop.SettingScopeRole?>? Type1116 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.SettingScopeRole? Type1117 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.SettingsTypes? Type1118 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.APIFeatureFlag? Type1119 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.SettingsSectionNames? Type1120 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.APIUserSetting? Type1121 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IUserContext? Type1122 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.ResolverPayload? Type1123 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.CreateSettingRequest? Type1124 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.CreateFeatureFlagRequest? Type1125 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.CreateUserSettingRequest? Type1126 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.PartialSettingScope? Type1127 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::Dataloop.PlatformEntityType?, global::Dataloop.PartialSettingScopeType?>? Type1128 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.PartialSettingScopeType? Type1129 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<string, global::Dataloop.PartialSettingScopeId?>? Type1130 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.PartialSettingScopeId? Type1131 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::Dataloop.Role?, global::Dataloop.OrgRole?, global::Dataloop.PartialSettingScopeRole?>? Type1132 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.PartialSettingScopeRole? Type1133 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.PatchFeatureFlagRequest? Type1134 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.PatchUserSettingRequest? Type1135 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.CursorPageAPIUserSettingOrAPIFeatureFlag? Type1136 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.AnyOf<global::Dataloop.APIUserSetting, global::Dataloop.APIFeatureFlag>>? Type1137 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::Dataloop.APIUserSetting, global::Dataloop.APIFeatureFlag>? Type1138 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.MigrationSpec? Type1139 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.MigrationSpecVariant2? Type1140 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.RemoveSettingTraceMigrationSpec? Type1141 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.RemoveSettingTraceMigrationSpecVariant2? Type1142 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.UIHours? Type1143 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.APICallResourceDescriptor? Type1144 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.APICallSourceDescriptor? Type1145 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.Dictionary<string, global::Dataloop.APICallResourceDescriptor>? Type1146 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.APICallDescriptor? Type1147 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.StorageModificationSourceDescriptor? Type1148 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.StorageModificationDescriptor? Type1149 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.StorageDatasetDescriptor? Type1150 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.StorageDescriptor? Type1151 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.StorageDatasetDescriptor>? Type1152 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.PodType? Type1153 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.FaasUsageServiceInstanceDescriptor? Type1154 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.FaasGlobalServiceDescriptor? Type1155 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.FaasUsageDescriptor? Type1156 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.FaasUsageServiceInstanceDescriptor>? Type1157 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.FaasGlobalServiceDescriptor>? Type1158 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.ItemsCount? Type1159 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.IngestedDatapointsDescriptor? Type1160 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.APIUsageEntry? Type1161 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AlertStatus? Type1162 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.APIAlert? Type1163 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.FieldSort? Type1164 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.FieldSortField? Type1165 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.FieldSortDirection? Type1166 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.ResourceAuditEventType? Type1167 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.ResourceAuditLog? Type1168 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.ResourceAuditLogCtx? Type1169 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AuditLogsCursorPage? Type1170 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.ResourceAuditLog>? Type1171 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.Address? Type1172 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.TaxType? Type1173 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.TaxData? Type1174 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.DBBillingAccount? Type1175 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.PartialBillingAccount? Type1176 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.PartialBillingAccountTaxData? Type1177 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.PaymentDriverType? Type1178 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.DBPaymentDriverConfiguration? Type1179 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.CreditCard? Type1180 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.PaymentMethod? Type1181 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.ContactAddress? Type1182 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.ContactInfo? Type1183 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.LineItem? Type1184 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.InvoiceStatus? Type1185 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.Currency? Type1186 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.PaymentDetails? Type1187 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.Invoice? Type1188 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.ContactInfo>? Type1189 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.LineItem>? Type1190 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.InvoiceBilledPeriod? Type1191 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.PaymentDetails>? Type1192 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.RangeOrFeatureTier? Type1193 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.RangeOrFeatureTierRange? Type1194 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.OverQuota? Type1195 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.APIBillableResource? Type1196 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.RangeOrFeatureTier>? Type1197 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.BillingScope? Type1198 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.SubscriptionInput? Type1199 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.EditSubscriptionInput? Type1200 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.RenewSubscriptionInput? Type1201 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.CursorPageAPISubscription? Type1202 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.APISubscription>? Type1203 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.CustomSubscriptionInput? Type1204 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.SubscriptionUpgradeInput? Type1205 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.SubscriptionExtensionInput? Type1206 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.PaymentDriverTypes? Type1207 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.UsageLog? Type1208 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.ResourceUsage? Type1209 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.UsageLog>? Type1210 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.UsageReport? Type1211 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.ResourceUsage>? Type1212 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.UsageResourcesReport? Type1213 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.BillingResourceKey>? Type1214 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AzureWebhookEvent? Type1215 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AzureWebhookEventAction? Type1216 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<string, global::Dataloop.AzureWebhookEventOperationRequestSource?>? Type1217 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AzureWebhookEventOperationRequestSource? Type1218 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AzureWebhookEventSubscription? Type1219 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AzureWebhookEventSubscriptionTerm? Type1220 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AzureWebhookEventSubscriptionPurchaser? Type1221 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AzureWebhookEventSubscriptionBeneficiary? Type1222 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.ArchiveAnnotationToStorageRequest? Type1223 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.RestoreArchivedAnnotationToDBRequest? Type1224 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.GetProjectsActiveCountersRequest? Type1225 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.GetCountersForProjectRequest? Type1226 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.CreateApiKeyRequest? Type1227 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.ResolveTemplateRequest? Type1228 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.SetItemStatusBulkTaskRequest? Type1229 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.SetItemStatusBulkAssignmentRequest? Type1230 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.GetAssignmentFieldsRequest? Type1231 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.QueryAuditLogsRequest? Type1232 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.UpdateAlertRequest? Type1233 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.ListAccountAlertsRequest? Type1234 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.InstallRequest? Type1235 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.UninstallRequest? Type1236 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AllOf<global::Dataloop.PartialICompute, global::Dataloop.UpdateComputeRequest2>? Type1237 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.UpdateComputeRequest2? Type1238 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.SchemaCleanupRequest? Type1239 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.GetDatasetsByProjectIdsRequest? Type1240 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.ListExportHistoryRequest? Type1241 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.ListExportHistoryRequestSortOrder? Type1242 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.ListExportHistoryRequestSortBy? Type1243 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AllOf<global::Dataloop.DQLResourceQuery, global::Dataloop.AnyOf<global::Dataloop.FilterQuery, global::Dataloop.UpdateQuery, global::Dataloop.DeleteQuery>?>? Type1244 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::Dataloop.FilterQuery, global::Dataloop.UpdateQuery, global::Dataloop.DeleteQuery>? Type1245 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.QueryDatasetsRequest? Type1246 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.QueryDatasetsRequestTarget? Type1247 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AllOf<global::Dataloop.DQLResourceQuery, global::Dataloop.FilterQuery>? Type1248 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.RestoreDatasetRequest? Type1249 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.RemoveItemsByQueryRequest? Type1250 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.BulkUpdateMetadataRequest? Type1251 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.BullkGenerateAnnotationThumbnailsRequest? Type1252 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.BullkGenerateAnnotationThumbnailsRequestOptions? Type1253 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.CreateItemCollectionRequest? Type1254 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AddItemsToItemCollectionsRequest? Type1255 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.RemoveItemsFromItemCollectionsRequest? Type1256 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.RenameItemCollectionRequest? Type1257 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.InvalidateAnnotationThumbnailsRequest? Type1258 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::Dataloop.MoveItemsRequest, global::System.Collections.Generic.IList<string>>? Type1259 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.MoveItemsRequest? Type1260 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::Dataloop.APIAnnotationRequest, global::System.Collections.Generic.IList<global::Dataloop.APIAnnotationRequest>>? Type1261 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.ArchiveDatasetItemAnnotationToStorageRequest? Type1262 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.RestoreArchivedDatasetItemAnnotationToDBRequest? Type1263 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.GetFilteredDatasetLabelAggregationRequest? Type1264 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.GetFilteredDatasetTypeAggregationRequest? Type1265 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::System.Collections.Generic.IList<global::Dataloop.ImportItemRequest>, global::Dataloop.ImportItemsToDatasetRequest>? Type1266 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.ImportItemRequest>? Type1267 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.ImportItemsToDatasetRequest? Type1268 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.SplitMlOperationRequest? Type1269 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.CheckStorageDriversIntegrationByIntegrationIdRequest? Type1270 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.NackRequest? Type1271 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.PushProgressRequest? Type1272 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.CreateExecutionRequest? Type1273 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::Dataloop.FeatureSet, global::System.Collections.Generic.IList<global::Dataloop.FeatureSet>>? Type1274 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.FeatureSet>? Type1275 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::Dataloop.FeatureVector, global::System.Collections.Generic.IList<global::Dataloop.FeatureVector>>? Type1276 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.FeatureVector>? Type1277 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AddGroupMemberRequest? Type1278 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.UpdateGroupOwnerRequest? Type1279 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AddSubGroupRequest? Type1280 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.ArchiveItemAnnotationToStorageRequest? Type1281 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.RestoreArchivedItemAnnotationToDBRequest? Type1282 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::Dataloop.MetricRequest, global::System.Collections.Generic.IList<global::Dataloop.MetricRequest>>? Type1283 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.MetricRequest>? Type1284 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.GenerateModelMetricsReportRequest? Type1285 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.ModelsExecutionsRequest? Type1286 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.ModelsServicesRequest? Type1287 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::Dataloop.PartialCreateModelRequest, global::Dataloop.APICopyEnvironmentSpec>? Type1288 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.DeployModelRequest? Type1289 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.UpdateModelDeploymentRequest? Type1290 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.ExtractItemFeaturesRequest? Type1291 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.ExtractItemFeaturesRequestConfig? Type1292 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.ExtractItemFeaturesRequestInput? Type1293 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.EvaluateModelRequest? Type1294 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.EvaluateModelRequestConfig? Type1295 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.EvaluateModelRequestInput? Type1296 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.ModelPredictionRequest? Type1297 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.ModelPredictionRequestConfig? Type1298 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.ModelPredictionRequestInput? Type1299 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.TrainModelRequest? Type1300 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::Dataloop.CreateOntologyPayloadV2, global::Dataloop.CreateOntologyPayload>? Type1301 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.DeleteAttributesRequest? Type1302 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.UpdateLabelNodePayload>? Type1303 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.CreateOrgRequest? Type1304 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.PatchOrgRequest? Type1305 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.CreateIntegrationRequest? Type1306 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AddOrgMembersRequest? Type1307 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.PatchOrgMemberRequest? Type1308 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.UpdateOrgPlanRequest? Type1309 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.InstallRequest2? Type1310 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.UninstallRequest2? Type1311 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.LogsRequest? Type1312 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.QueryBillingMetricsRequest? Type1313 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.UpdateProjectGuestRequest? Type1314 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AddOrgToGuestRequest? Type1315 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.PatchProjectRequest? Type1316 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.SetProjectAccountRequest? Type1317 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AddOrgToProjectRequest? Type1318 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AddGroupRequest? Type1319 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.UpdateGroupRequest? Type1320 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.QueryEntitiesRequest? Type1321 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::Dataloop.RecipeV2Input?, global::Dataloop.RecipeInput?>? Type1322 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::Dataloop.PartialRecipePayloadV2, global::Dataloop.PartialRecipePayload>? Type1323 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.CreateScoresRequest? Type1324 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.Score>? Type1325 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.SetDefaultRequest? Type1326 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.GetGlobalServicesRequestItem>? Type1327 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.GetGlobalServicesRequestItem? Type1328 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.BaseReportMessage>? Type1329 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.RolloutServiceRequest? Type1330 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::Dataloop.ResolverPayload, global::Dataloop.IUserContext>? Type1331 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::Dataloop.PatchFeatureFlagRequest, global::Dataloop.PatchUserSettingRequest>? Type1332 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.DeleteSettingRequest? Type1333 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.GetProjectsActiveCountersRequest2? Type1334 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.GetCountersForProjectRequest2? Type1335 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.UpdateUserOrgRequest? Type1336 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.APIAccount>? Type1337 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::Dataloop.APITask, global::Dataloop.APICommand>? Type1338 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<object, global::Dataloop.APICommand>? Type1339 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.TaskRelativeInput>? Type1340 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::Dataloop.APICommand, global::Dataloop.APITask>? Type1341 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.APIApiKey>? Type1342 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.CreateApiKeyResponse? Type1343 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.DpkAttributesDefinition>? Type1344 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.UpdateResponse? Type1345 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::Dataloop.APIApp, object>? Type1346 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::Dataloop.APICommand, global::System.Collections.Generic.IList<global::Dataloop.APIAssignment>>? Type1347 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::Dataloop.APICommand, global::Dataloop.APIAssignment>? Type1348 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.APIUsageEntry>? Type1349 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.APIAlert>? Type1350 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.DBPaymentDriverConfiguration>? Type1351 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.PaymentMethod>? Type1352 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::Dataloop.APICommand, object>? Type1353 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.APIDataset>? Type1354 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.GetDatasetsByProjectIdsResponse? Type1355 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.ListExportHistoryResponse? Type1356 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.APIExportHistory>? Type1357 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::Dataloop.APIDatasetFileItem, global::Dataloop.APIDatasetDirectoryItem>? Type1358 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.APIAnnotation>? Type1359 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::Dataloop.APIAnnotation, global::System.Collections.Generic.IList<global::Dataloop.APIAnnotation>>? Type1360 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.AnyOf<global::Dataloop.APIDatasetFileItem, global::Dataloop.APIDatasetDirectoryItem>>? Type1361 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::Dataloop.Dataset, global::Dataloop.APIDatasetSchema>? Type1362 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::Dataloop.APICommand, string>? Type1363 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::Dataloop.APICommand, global::Dataloop.Dataset>? Type1364 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.APIDriverConfiguration>? Type1365 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::Dataloop.APIExecution, global::Dataloop.PiperSettingsCommands>? Type1366 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::Dataloop.APIExecution, global::Dataloop.APICommand>? Type1367 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.AuthUserAttributes>? Type1368 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.Invoice>? Type1369 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.PublishModelMetricsResponse? Type1370 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.Dictionary<string, global::Dataloop.Error>? Type1371 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.ModelsDatasetsCountResponse? Type1372 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::Dataloop.APIModel, global::Dataloop.APICommand>? Type1373 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.APIOrg>? Type1374 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.AnyOf<global::Dataloop.GetAvailableIntegrationsResponseItemVariant1, global::Dataloop.GetAvailableIntegrationsResponseItemVariant2>>? Type1375 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::Dataloop.GetAvailableIntegrationsResponseItemVariant1, global::Dataloop.GetAvailableIntegrationsResponseItemVariant2>? Type1376 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.GetAvailableIntegrationsResponseItemVariant1? Type1377 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.GetAvailableIntegrationsResponseItemVariant1Option>? Type1378 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.GetAvailableIntegrationsResponseItemVariant1Option? Type1379 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.GetAvailableIntegrationsResponseItemVariant2? Type1380 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.GetAvailableIntegrationsResponseItemVariant2Option>? Type1381 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.GetAvailableIntegrationsResponseItemVariant2Option? Type1382 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.APIOrgUser>? Type1383 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.QueryPipelineTableResponseItem>? Type1384 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.QueryPipelineTableResponseItem? Type1385 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.QueryPipelineTableResponseItemTemplate? Type1386 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::Dataloop.APIPipelineState, global::Dataloop.APICommand>? Type1387 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.TerminateResponse? Type1388 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.PipelineExecutionLogs>? Type1389 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.Plan>? Type1390 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.APIBillableResource>? Type1391 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.APIGuest>? Type1392 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::System.Collections.Generic.IList<global::Dataloop.APIMembership>, object>? Type1393 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.APIMembership>? Type1394 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::System.Collections.Generic.IList<global::Dataloop.ClientContributor>, object>? Type1395 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.ClientContributor>? Type1396 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.APIScore>? Type1397 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.QueryConfusionResponse? Type1398 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.GetTaskScoresResponse? Type1399 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.GetTaskAnnotationScoresResponse? Type1400 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.GetTaskItemScoresResponse? Type1401 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.GetGlobalServicesResponseItem>? Type1402 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.GetGlobalServicesResponseItem? Type1403 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.Dictionary<string, global::Dataloop.APIServiceStatus>? Type1404 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::Dataloop.APIService, string>? Type1405 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.ServiceStreamResponse? Type1406 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.GetServiceIntegrationEnvResponse? Type1407 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.GetServiceIntegrationEnvResponseEnvItem>? Type1408 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.GetServiceIntegrationEnvResponseEnvItem? Type1409 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::Dataloop.APIFeatureFlag, global::Dataloop.APIUserSetting>? Type1410 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.AnyOf<global::Dataloop.APIFeatureFlag, global::Dataloop.APIUserSetting>>? Type1411 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.UsageReport>? Type1412 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.GetMyGroupProjectsResponseItem>? Type1413 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.GetMyGroupProjectsResponseItem? Type1414 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::Dataloop.APIUser, object>? Type1415 { get; set; }
+        public global::Dataloop.AnyOf<global::Dataloop.APIUser, object>? Type911 { get; set; }
 
         /// <summary>
         /// 
@@ -6005,610 +3989,238 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.ExecutionResource>? ListType78 { get; set; }
+        public global::System.Collections.Generic.List<global::System.Collections.Generic.List<double>>? ListType78 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::System.Collections.Generic.List<double>>? ListType79 { get; set; }
+        public global::System.Collections.Generic.List<global::Dataloop.AnyOf<global::Dataloop.APIUserSetting, global::Dataloop.APIFeatureFlag>>? ListType79 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.APIWebHook>? ListType80 { get; set; }
+        public global::System.Collections.Generic.List<global::Dataloop.StorageDatasetDescriptor>? ListType80 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.Panel>? ListType81 { get; set; }
+        public global::System.Collections.Generic.List<global::Dataloop.FaasUsageServiceInstanceDescriptor>? ListType81 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.ServiceIntegration>? ListType82 { get; set; }
+        public global::System.Collections.Generic.List<global::Dataloop.FaasGlobalServiceDescriptor>? ListType82 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.PackageIO>? ListType83 { get; set; }
+        public global::System.Collections.Generic.List<global::Dataloop.ResourceAuditLog>? ListType83 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.DisplayScope>? ListType84 { get; set; }
+        public global::System.Collections.Generic.List<global::Dataloop.ContactInfo>? ListType84 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.DLFunctionDefaultInputSpec>? ListType85 { get; set; }
+        public global::System.Collections.Generic.List<global::Dataloop.LineItem>? ListType85 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.DLFunctionInputOptionsSpec>? ListType86 { get; set; }
+        public global::System.Collections.Generic.List<global::Dataloop.PaymentDetails>? ListType86 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.APIExecution>? ListType87 { get; set; }
+        public global::System.Collections.Generic.List<global::Dataloop.RangeOrFeatureTier>? ListType87 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.APITrigger>? ListType88 { get; set; }
+        public global::System.Collections.Generic.List<global::Dataloop.APISubscription>? ListType88 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.TriggerResourceInformationItem>? ListType89 { get; set; }
+        public global::System.Collections.Generic.List<global::Dataloop.UsageLog>? ListType89 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.APIService>? ListType90 { get; set; }
+        public global::System.Collections.Generic.List<global::Dataloop.ResourceUsage>? ListType90 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.ServiceLogEntry>? ListType91 { get; set; }
+        public global::System.Collections.Generic.List<global::Dataloop.BillingResourceKey>? ListType91 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.ServiceRuntimeStatus>? ListType92 { get; set; }
+        public global::Dataloop.AnyOf<global::Dataloop.MoveItemsRequest, global::System.Collections.Generic.List<string>>? ListType92 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.DriverCondition>? ListType93 { get; set; }
+        public global::Dataloop.AnyOf<global::Dataloop.APIAnnotationRequest, global::System.Collections.Generic.List<global::Dataloop.APIAnnotationRequest>>? ListType93 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.DriverNodeSelector>? ListType94 { get; set; }
+        public global::Dataloop.AnyOf<global::System.Collections.Generic.List<global::Dataloop.ImportItemRequest>, global::Dataloop.ImportItemsToDatasetRequest>? ListType94 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.DriverToleration>? ListType95 { get; set; }
+        public global::System.Collections.Generic.List<global::Dataloop.ImportItemRequest>? ListType95 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.DataloopPodType>? ListType96 { get; set; }
+        public global::Dataloop.AnyOf<global::Dataloop.FeatureSet, global::System.Collections.Generic.List<global::Dataloop.FeatureSet>>? ListType96 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.TriggerActionType>? ListType97 { get; set; }
+        public global::System.Collections.Generic.List<global::Dataloop.FeatureSet>? ListType97 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.DLFunction>? ListType98 { get; set; }
+        public global::Dataloop.AnyOf<global::Dataloop.FeatureVector, global::System.Collections.Generic.List<global::Dataloop.FeatureVector>>? ListType98 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.PackageRequirement>? ListType99 { get; set; }
+        public global::System.Collections.Generic.List<global::Dataloop.FeatureVector>? ListType99 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.Dictionary>? ListType100 { get; set; }
+        public global::Dataloop.AnyOf<global::Dataloop.MetricRequest, global::System.Collections.Generic.List<global::Dataloop.MetricRequest>>? ListType100 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.ICompositionFilter>? ListType101 { get; set; }
+        public global::System.Collections.Generic.List<global::Dataloop.MetricRequest>? ListType101 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.PortIO>? ListType102 { get; set; }
+        public global::System.Collections.Generic.List<global::Dataloop.UpdateLabelNodePayload>? ListType102 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.PipelineNodeDescriptor>? ListType103 { get; set; }
+        public global::System.Collections.Generic.List<global::Dataloop.Score>? ListType103 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.PipelineConnection>? ListType104 { get; set; }
+        public global::System.Collections.Generic.List<global::Dataloop.APIAccount>? ListType104 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.IStartNode>? ListType105 { get; set; }
+        public global::System.Collections.Generic.List<global::Dataloop.TaskRelativeInput>? ListType105 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.PipelineVariable>? ListType106 { get; set; }
+        public global::System.Collections.Generic.List<global::Dataloop.APIApiKey>? ListType106 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.ICompositionDatasetStateDatasetAnnotation>? ListType107 { get; set; }
+        public global::Dataloop.AnyOf<global::Dataloop.APICommand, global::System.Collections.Generic.List<global::Dataloop.APIAssignment>>? ListType107 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.APIServiceCompositionElement>? ListType108 { get; set; }
+        public global::System.Collections.Generic.List<global::Dataloop.APIUsageEntry>? ListType108 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.ICompositionTrigger>? ListType109 { get; set; }
+        public global::System.Collections.Generic.List<global::Dataloop.APIAlert>? ListType109 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.ICompositionPackage>? ListType110 { get; set; }
+        public global::System.Collections.Generic.List<global::Dataloop.DBPaymentDriverConfiguration>? ListType110 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.ICompositionTask>? ListType111 { get; set; }
+        public global::System.Collections.Generic.List<global::Dataloop.PaymentMethod>? ListType111 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.APICompositionModel>? ListType112 { get; set; }
+        public global::System.Collections.Generic.List<global::Dataloop.APIDataset>? ListType112 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.ICompositionChannel>? ListType113 { get; set; }
+        public global::System.Collections.Generic.List<global::Dataloop.APIExportHistory>? ListType113 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.ICompositionPipelineTemplate>? ListType114 { get; set; }
+        public global::System.Collections.Generic.List<global::Dataloop.APIAnnotation>? ListType114 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.ICompositionDataset>? ListType115 { get; set; }
+        public global::Dataloop.AnyOf<global::Dataloop.APIAnnotation, global::System.Collections.Generic.List<global::Dataloop.APIAnnotation>>? ListType115 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.Dictionary<string, global::System.Collections.Generic.List<global::Dataloop.PartialExecution>>? ListType116 { get; set; }
+        public global::System.Collections.Generic.List<global::Dataloop.AnyOf<global::Dataloop.APIDatasetFileItem, global::Dataloop.APIDatasetDirectoryItem>>? ListType116 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.PartialExecution>? ListType117 { get; set; }
+        public global::System.Collections.Generic.List<global::Dataloop.APIDriverConfiguration>? ListType117 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.IPipelineNodeState>? ListType118 { get; set; }
+        public global::System.Collections.Generic.List<global::Dataloop.AuthUserAttributes>? ListType118 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.INodeTransitionError>? ListType119 { get; set; }
+        public global::System.Collections.Generic.List<global::Dataloop.Invoice>? ListType119 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.IDpkComponentPanelSupportedSlot>? ListType120 { get; set; }
+        public global::System.Collections.Generic.List<global::Dataloop.Dictionary>? ListType120 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.IDpkFilter>? ListType121 { get; set; }
+        public global::System.Collections.Generic.List<global::Dataloop.APIOrg>? ListType121 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.IDpkComponentIntegrations>? ListType122 { get; set; }
+        public global::System.Collections.Generic.List<global::Dataloop.AnyOf<global::Dataloop.GetAvailableIntegrationsResponseItemVariant1, global::Dataloop.GetAvailableIntegrationsResponseItemVariant2>>? ListType122 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.IDpkComponentDataset>? ListType123 { get; set; }
+        public global::System.Collections.Generic.List<global::Dataloop.GetAvailableIntegrationsResponseItemVariant1Option>? ListType123 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.IDpkPipelineTemplate>? ListType124 { get; set; }
+        public global::System.Collections.Generic.List<global::Dataloop.GetAvailableIntegrationsResponseItemVariant2Option>? ListType124 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.IPipelineNode>? ListType125 { get; set; }
+        public global::System.Collections.Generic.List<global::Dataloop.APIOrgUser>? ListType125 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.IDpkComputeConfigs>? ListType126 { get; set; }
+        public global::System.Collections.Generic.List<global::Dataloop.Plan>? ListType126 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.IDpkChannel>? ListType127 { get; set; }
+        public global::System.Collections.Generic.List<global::Dataloop.APIBillableResource>? ListType127 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.IDpkComponentToolbars>? ListType128 { get; set; }
+        public global::System.Collections.Generic.List<global::Dataloop.APIGuest>? ListType128 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.IDpkComponentService>? ListType129 { get; set; }
+        public global::Dataloop.AnyOf<global::System.Collections.Generic.List<global::Dataloop.APIMembership>, object>? ListType129 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.IDpkComponentTrigger>? ListType130 { get; set; }
+        public global::System.Collections.Generic.List<global::Dataloop.APIMembership>? ListType130 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.IDpkComponentModule>? ListType131 { get; set; }
+        public global::Dataloop.AnyOf<global::System.Collections.Generic.List<global::Dataloop.ClientContributor>, object>? ListType131 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.IDpkComponentModel>? ListType132 { get; set; }
+        public global::System.Collections.Generic.List<global::Dataloop.ClientContributor>? ListType132 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.IDpkComponentPanel>? ListType133 { get; set; }
+        public global::System.Collections.Generic.List<global::Dataloop.APIScore>? ListType133 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.IDpkDependency>? ListType134 { get; set; }
+        public global::System.Collections.Generic.List<global::Dataloop.AnyOf<global::Dataloop.APIFeatureFlag, global::Dataloop.APIUserSetting>>? ListType134 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.Toleration>? ListType135 { get; set; }
+        public global::System.Collections.Generic.List<global::Dataloop.UsageReport>? ListType135 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.IStorage>? ListType136 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.IClusterVolumeConfigMapItem>? ListType137 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.IClusterVolumeSecretItem>? ListType138 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.IClusterVolume>? ListType139 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.IClusterEnvironmentVariable>? ListType140 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.INodePool>? ListType141 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.IComputePlugin>? ListType142 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.IComputeContext>? ListType143 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.APIComposition>? ListType144 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.APIPipeline>? ListType145 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.AnyOf<global::Dataloop.APIPipelineState, global::Dataloop.IPipelineState>>? ListType146 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.ResourceExecution>? ListType147 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.APIDpk>? ListType148 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.APIApp>? ListType149 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.APICompute>? ListType150 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.APIServiceDriver>? ListType151 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.APIPipelineState>? ListType152 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.ExecutionLogs>? ListType153 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.IExecutionCount>? ListType154 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.IPipelineExecutionCount>? ListType155 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.INodeExecutionCount>? ListType156 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.INodeExecutionStatistics>? ListType157 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.Module>? ListType158 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.UiHook>? ListType159 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.PiperUiSlot>? ListType160 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.APIPackage>? ListType161 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.CommandError>? ListType162 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.CommandStatusHistoryEntry>? ListType163 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.DpkAttributeValueDefinition>? ListType164 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.PreviewsComponentsPatchPipelineTemplate>? ListType165 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.AnyOf<global::Dataloop.APIUserSetting, global::Dataloop.APIFeatureFlag>>? ListType166 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.StorageDatasetDescriptor>? ListType167 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.FaasUsageServiceInstanceDescriptor>? ListType168 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.FaasGlobalServiceDescriptor>? ListType169 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.ResourceAuditLog>? ListType170 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.ContactInfo>? ListType171 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.LineItem>? ListType172 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.PaymentDetails>? ListType173 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.RangeOrFeatureTier>? ListType174 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.APISubscription>? ListType175 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.UsageLog>? ListType176 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.ResourceUsage>? ListType177 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.BillingResourceKey>? ListType178 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::Dataloop.MoveItemsRequest, global::System.Collections.Generic.List<string>>? ListType179 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::Dataloop.APIAnnotationRequest, global::System.Collections.Generic.List<global::Dataloop.APIAnnotationRequest>>? ListType180 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::System.Collections.Generic.List<global::Dataloop.ImportItemRequest>, global::Dataloop.ImportItemsToDatasetRequest>? ListType181 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.ImportItemRequest>? ListType182 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::Dataloop.FeatureSet, global::System.Collections.Generic.List<global::Dataloop.FeatureSet>>? ListType183 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.FeatureSet>? ListType184 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::Dataloop.FeatureVector, global::System.Collections.Generic.List<global::Dataloop.FeatureVector>>? ListType185 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.FeatureVector>? ListType186 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::Dataloop.MetricRequest, global::System.Collections.Generic.List<global::Dataloop.MetricRequest>>? ListType187 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.MetricRequest>? ListType188 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.UpdateLabelNodePayload>? ListType189 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.Score>? ListType190 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.GetGlobalServicesRequestItem>? ListType191 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.BaseReportMessage>? ListType192 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.APIAccount>? ListType193 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.TaskRelativeInput>? ListType194 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.APIApiKey>? ListType195 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.DpkAttributesDefinition>? ListType196 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::Dataloop.APICommand, global::System.Collections.Generic.List<global::Dataloop.APIAssignment>>? ListType197 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.APIUsageEntry>? ListType198 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.APIAlert>? ListType199 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.DBPaymentDriverConfiguration>? ListType200 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.PaymentMethod>? ListType201 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.APIDataset>? ListType202 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.APIExportHistory>? ListType203 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.APIAnnotation>? ListType204 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::Dataloop.APIAnnotation, global::System.Collections.Generic.List<global::Dataloop.APIAnnotation>>? ListType205 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.AnyOf<global::Dataloop.APIDatasetFileItem, global::Dataloop.APIDatasetDirectoryItem>>? ListType206 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.APIDriverConfiguration>? ListType207 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.AuthUserAttributes>? ListType208 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.Invoice>? ListType209 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.APIOrg>? ListType210 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.AnyOf<global::Dataloop.GetAvailableIntegrationsResponseItemVariant1, global::Dataloop.GetAvailableIntegrationsResponseItemVariant2>>? ListType211 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.GetAvailableIntegrationsResponseItemVariant1Option>? ListType212 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.GetAvailableIntegrationsResponseItemVariant2Option>? ListType213 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.APIOrgUser>? ListType214 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.QueryPipelineTableResponseItem>? ListType215 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.PipelineExecutionLogs>? ListType216 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.Plan>? ListType217 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.APIBillableResource>? ListType218 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.APIGuest>? ListType219 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::System.Collections.Generic.List<global::Dataloop.APIMembership>, object>? ListType220 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.APIMembership>? ListType221 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Dataloop.AnyOf<global::System.Collections.Generic.List<global::Dataloop.ClientContributor>, object>? ListType222 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.ClientContributor>? ListType223 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.APIScore>? ListType224 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.GetGlobalServicesResponseItem>? ListType225 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.GetServiceIntegrationEnvResponseEnvItem>? ListType226 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.AnyOf<global::Dataloop.APIFeatureFlag, global::Dataloop.APIUserSetting>>? ListType227 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.UsageReport>? ListType228 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Dataloop.GetMyGroupProjectsResponseItem>? ListType229 { get; set; }
+        public global::System.Collections.Generic.List<global::Dataloop.GetMyGroupProjectsResponseItem>? ListType136 { get; set; }
     }
 }
