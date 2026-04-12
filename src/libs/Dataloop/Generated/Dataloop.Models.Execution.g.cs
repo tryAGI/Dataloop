@@ -131,14 +131,14 @@ namespace Dataloop
         public string? FunctionName { get; set; }
 
         /// <summary>
-        /// A class representation of the BSON ObjectId type.
+        /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("serviceId")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string ServiceId { get; set; }
 
         /// <summary>
-        /// A class representation of the BSON ObjectId type.
+        /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("triggerId")]
         public string? TriggerId { get; set; }
@@ -150,7 +150,7 @@ namespace Dataloop
         public string? ServiceName { get; set; }
 
         /// <summary>
-        /// A class representation of the BSON ObjectId type.
+        /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("packageId")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -167,23 +167,21 @@ namespace Dataloop
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("packageRevision")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<double?, string>))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::Dataloop.AnyOf<double?, string> PackageRevision { get; set; }
+        public required double PackageRevision { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("serviceVersion")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<double?, string>))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::Dataloop.AnyOf<double?, string> ServiceVersion { get; set; }
+        public required double ServiceVersion { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("pipeline")]
-        public global::Dataloop.ExecutionPipeline? Pipeline { get; set; }
+        public global::Dataloop.ExecutionPipelineStateReference? Pipeline { get; set; }
 
         /// <summary>
         /// 
@@ -202,109 +200,6 @@ namespace Dataloop
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("eventContext")]
         public global::Dataloop.ExecutionEventContext? EventContext { get; set; }
-
-        /// <summary>
-        /// A class representation of the BSON ObjectId type.
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("_id")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Id2 { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("authz")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::Dataloop.AuthZBlockExecutionContext Authz { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("orgId")]
-        public string? OrgId { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("global")]
-        public bool? Global { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("resources")]
-        public global::System.Collections.Generic.IList<global::Dataloop.ExecutionResource>? Resources { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("mode")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dataloop.JsonConverters.ExecutionModeJsonConverter))]
-        public global::Dataloop.ExecutionMode? Mode { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("syncReplyTo")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::Dataloop.ExecutionSyncReplyTo SyncReplyTo { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("archiveService")]
-        public bool? ArchiveService { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("app")]
-        public global::Dataloop.IAppDefinition? App { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("driverId")]
-        public string? DriverId { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("hook")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::Dataloop.ExecutionHook Hook { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("timeoutSeconds")]
-        public double? TimeoutSeconds { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("deadline")]
-        public global::System.DateTime? Deadline { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("apiHandleTimeout")]
-        public global::System.DateTime? ApiHandleTimeout { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("phase")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dataloop.JsonConverters.ExecutionPhaseJsonConverter))]
-        public global::Dataloop.ExecutionPhase? Phase { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("onReset")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dataloop.JsonConverters.OnResetActionJsonConverter))]
-        public global::Dataloop.OnResetAction? OnReset { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -337,21 +232,11 @@ namespace Dataloop
         /// <param name="latestStatus"></param>
         /// <param name="duration"></param>
         /// <param name="projectId"></param>
-        /// <param name="serviceId">
-        /// A class representation of the BSON ObjectId type.
-        /// </param>
-        /// <param name="packageId">
-        /// A class representation of the BSON ObjectId type.
-        /// </param>
+        /// <param name="serviceId"></param>
+        /// <param name="packageId"></param>
         /// <param name="packageName"></param>
         /// <param name="packageRevision"></param>
         /// <param name="serviceVersion"></param>
-        /// <param name="id2">
-        /// A class representation of the BSON ObjectId type.
-        /// </param>
-        /// <param name="authz"></param>
-        /// <param name="syncReplyTo"></param>
-        /// <param name="hook"></param>
         /// <param name="clientId">
         /// A local identifier for the Entity, unique within the client.
         /// </param>
@@ -360,26 +245,12 @@ namespace Dataloop
         /// </param>
         /// <param name="output"></param>
         /// <param name="functionName"></param>
-        /// <param name="triggerId">
-        /// A class representation of the BSON ObjectId type.
-        /// </param>
+        /// <param name="triggerId"></param>
         /// <param name="serviceName"></param>
         /// <param name="pipeline"></param>
         /// <param name="moduleName"></param>
         /// <param name="model"></param>
         /// <param name="eventContext"></param>
-        /// <param name="orgId"></param>
-        /// <param name="global"></param>
-        /// <param name="resources"></param>
-        /// <param name="mode"></param>
-        /// <param name="archiveService"></param>
-        /// <param name="app"></param>
-        /// <param name="driverId"></param>
-        /// <param name="timeoutSeconds"></param>
-        /// <param name="deadline"></param>
-        /// <param name="apiHandleTimeout"></param>
-        /// <param name="phase"></param>
-        /// <param name="onReset"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -401,34 +272,18 @@ namespace Dataloop
             string serviceId,
             string packageId,
             string packageName,
-            global::Dataloop.AnyOf<double?, string> packageRevision,
-            global::Dataloop.AnyOf<double?, string> serviceVersion,
-            string id2,
-            global::Dataloop.AuthZBlockExecutionContext authz,
-            global::Dataloop.ExecutionSyncReplyTo syncReplyTo,
-            global::Dataloop.ExecutionHook hook,
+            double packageRevision,
+            double serviceVersion,
             string? clientId,
             string? updatedBy,
             global::Dataloop.Dictionary? output,
             string? functionName,
             string? triggerId,
             string? serviceName,
-            global::Dataloop.ExecutionPipeline? pipeline,
+            global::Dataloop.ExecutionPipelineStateReference? pipeline,
             string? moduleName,
             global::Dataloop.ExecutionModel? model,
-            global::Dataloop.ExecutionEventContext? eventContext,
-            string? orgId,
-            bool? global,
-            global::System.Collections.Generic.IList<global::Dataloop.ExecutionResource>? resources,
-            global::Dataloop.ExecutionMode? mode,
-            bool? archiveService,
-            global::Dataloop.IAppDefinition? app,
-            string? driverId,
-            double? timeoutSeconds,
-            global::System.DateTime? deadline,
-            global::System.DateTime? apiHandleTimeout,
-            global::Dataloop.ExecutionPhase? phase,
-            global::Dataloop.OnResetAction? onReset)
+            global::Dataloop.ExecutionEventContext? eventContext)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.ClientId = clientId;
@@ -459,22 +314,6 @@ namespace Dataloop
             this.ModuleName = moduleName;
             this.Model = model;
             this.EventContext = eventContext;
-            this.Id2 = id2 ?? throw new global::System.ArgumentNullException(nameof(id2));
-            this.Authz = authz ?? throw new global::System.ArgumentNullException(nameof(authz));
-            this.OrgId = orgId;
-            this.Global = global;
-            this.Resources = resources;
-            this.Mode = mode;
-            this.SyncReplyTo = syncReplyTo ?? throw new global::System.ArgumentNullException(nameof(syncReplyTo));
-            this.ArchiveService = archiveService;
-            this.App = app;
-            this.DriverId = driverId;
-            this.Hook = hook ?? throw new global::System.ArgumentNullException(nameof(hook));
-            this.TimeoutSeconds = timeoutSeconds;
-            this.Deadline = deadline;
-            this.ApiHandleTimeout = apiHandleTimeout;
-            this.Phase = phase;
-            this.OnReset = onReset;
         }
 
         /// <summary>
