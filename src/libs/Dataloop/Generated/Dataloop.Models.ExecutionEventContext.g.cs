@@ -12,14 +12,15 @@ namespace Dataloop
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("resource")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dataloop.JsonConverters.EventResourceTypeJsonConverter))]
-        public global::Dataloop.EventResourceType? Resource { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dataloop.JsonConverters.ResourceTypeJsonConverter))]
+        public global::Dataloop.ResourceType? Resource { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("source")]
-        public string? Source { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dataloop.JsonConverters.RequestSourceJsonConverter))]
+        public global::Dataloop.RequestSource? Source { get; set; }
 
         /// <summary>
         /// 
@@ -85,8 +86,8 @@ namespace Dataloop
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public ExecutionEventContext(
-            global::Dataloop.EventResourceType? resource,
-            string? source,
+            global::Dataloop.ResourceType? resource,
+            global::Dataloop.RequestSource? source,
             string? action,
             string? resourceId,
             string? userId,

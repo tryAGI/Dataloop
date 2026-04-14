@@ -58,6 +58,11 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public ActivitiesClient Activities { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public AnnotationLogsClient AnnotationLogs { get; }
 
         /// <summary>
@@ -73,6 +78,11 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public AppsClient Apps { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public AssignmentsClient Assignments { get; }
 
         /// <summary>
@@ -84,6 +94,16 @@ namespace Dataloop
         /// 
         /// </summary>
         public BillingClient Billing { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public CompositionsClient Compositions { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public ComputeClient Compute { get; }
 
         /// <summary>
         /// 
@@ -108,6 +128,16 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public DpkClient Dpk { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public ExecutionsClient Executions { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public FeatureSetsClient FeatureSets { get; }
 
         /// <summary>
@@ -124,6 +154,11 @@ namespace Dataloop
         /// 
         /// </summary>
         public GuestsClient Guests { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public InstanceCatalogClient InstanceCatalog { get; }
 
         /// <summary>
         /// 
@@ -178,6 +213,31 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public PackagesClient Packages { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public PipelinesClient Pipelines { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public PipelinesQueryClient PipelinesQuery { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public PipelinesTemplatesClient PipelinesTemplates { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public PiperMiscClient PiperMisc { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public PlansClient Plans { get; }
 
         /// <summary>
@@ -188,12 +248,32 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public QueryClient Query { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public RecipesClient Recipes { get; }
 
         /// <summary>
         /// 
         /// </summary>
         public ScoresClient Scores { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public ServiceDriversClient ServiceDrivers { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public ServicesClient Services { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public ServicesMetricClient ServicesMetric { get; }
 
         /// <summary>
         /// 
@@ -223,6 +303,16 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public TriggerResourceInformationClient TriggerResourceInformation { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public TriggersClient Triggers { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public UsageClient Usage { get; }
 
         /// <summary>
@@ -234,6 +324,11 @@ namespace Dataloop
         /// 
         /// </summary>
         public VersionClient Version { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public WebHooksClient WebHooks { get; }
 
     }
 }
