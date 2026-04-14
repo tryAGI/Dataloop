@@ -1,0 +1,122 @@
+
+#nullable enable
+
+namespace Dataloop
+{
+    /// <summary>
+    /// 
+    /// </summary>
+    public sealed partial class ExecutionContext
+    {
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("createdAt")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.DateTime CreatedAt { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("updatedAt")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.DateTime UpdatedAt { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("org")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Org { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("project")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Project { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("creator")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Creator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("package")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Package { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("service")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Service { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("pipeline")]
+        public string? Pipeline { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("trigger")]
+        public string? Trigger { get; set; }
+
+        /// <summary>
+        /// Additional properties that are not explicitly defined in the schema
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ExecutionContext" /> class.
+        /// </summary>
+        /// <param name="createdAt"></param>
+        /// <param name="updatedAt"></param>
+        /// <param name="org"></param>
+        /// <param name="project"></param>
+        /// <param name="creator"></param>
+        /// <param name="package"></param>
+        /// <param name="service"></param>
+        /// <param name="pipeline"></param>
+        /// <param name="trigger"></param>
+#if NET7_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
+        public ExecutionContext(
+            global::System.DateTime createdAt,
+            global::System.DateTime updatedAt,
+            string org,
+            string project,
+            string creator,
+            string package,
+            string service,
+            string? pipeline,
+            string? trigger)
+        {
+            this.CreatedAt = createdAt;
+            this.UpdatedAt = updatedAt;
+            this.Org = org ?? throw new global::System.ArgumentNullException(nameof(org));
+            this.Project = project ?? throw new global::System.ArgumentNullException(nameof(project));
+            this.Creator = creator ?? throw new global::System.ArgumentNullException(nameof(creator));
+            this.Package = package ?? throw new global::System.ArgumentNullException(nameof(package));
+            this.Service = service ?? throw new global::System.ArgumentNullException(nameof(service));
+            this.Pipeline = pipeline;
+            this.Trigger = trigger;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ExecutionContext" /> class.
+        /// </summary>
+        public ExecutionContext()
+        {
+        }
+    }
+}
