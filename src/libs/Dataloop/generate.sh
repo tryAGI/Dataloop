@@ -1,15 +1,31 @@
+set -euo pipefail
+
 dotnet tool install --global autosdk.cli --prerelease
-rm -rf Generated
-curl -o openapi.yaml https://gate.dataloop.ai/api/v1/swagger-file
+
+spec_tmp="$(mktemp)"
+trap 'rm -f "$spec_tmp"' EXIT
+
+curl \
+  --fail \
+  --location \
+  --show-error \
+  --retry 5 \
+  --retry-delay 10 \
+  --retry-all-errors \
+  --output "$spec_tmp" \
+  https://gate.dataloop.ai/api/v1/swagger-file
 
 # Fix spec issues:
 # 1. Remove bad default values from DatasetDeletionInformation date-time fields
 # 2. Change boolean request bodies to nullable (object wrapper) for compositions/pipelines uninstall
 # 3. Change CompositionStatus response from enum ref to inline string to avoid FromJson issue
-python3 -c "
+python3 - "$spec_tmp" openapi.yaml <<'PY'
 import json, sys
 
-with open('openapi.yaml', 'r') as f:
+input_path = sys.argv[1]
+output_path = sys.argv[2]
+
+with open(input_path, 'r') as f:
     spec = json.load(f)
 
 # Fix 1: Remove bad default values from DatasetDeletionInformation
@@ -47,12 +63,14 @@ for path_key in list(spec.get('paths', {}).keys()):
             for code, resp in responses.items():
                 content = resp.get('content', {}).get('application/json', {})
                 schema = content.get('schema', {})
-                if schema.get('\$ref', '').endswith('/CompositionStatus'):
+                if schema.get('$ref', '').endswith('/CompositionStatus'):
                     content['schema'] = {'type': 'string', 'description': 'Composition status'}
 
-with open('openapi.yaml', 'w') as f:
+with open(output_path, 'w') as f:
     json.dump(spec, f, indent=2)
-"
+PY
+
+rm -rf Generated
 
 autosdk generate openapi.yaml \
   --namespace Dataloop \
