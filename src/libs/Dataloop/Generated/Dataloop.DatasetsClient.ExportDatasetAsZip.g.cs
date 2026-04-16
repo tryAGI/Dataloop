@@ -59,9 +59,15 @@ namespace Dataloop
         /// # <br/>
         /// # You must provide at least ONE of the following params: dataset, dataset_name, dataset_id.<br/>
         /// # <br/>
-        /// # **Export Behavior by Parameter Combination:**<br/>
+        /// # **Export Versions:**<br/>
         /// # <br/>
-        /// # The behavior of this method depends on the combination of `export_type` and `output_export_type`:<br/>
+        /// # - **DatasetExportVersion.V1** (default): Legacy export API using item-based commands<br/>
+        /// # - **DatasetExportVersion.V3**: LanceDB-based export with partitioned NDJSON output and<br/>
+        /// # support for incremental (diff) exports<br/>
+        /// # <br/>
+        /// # **V1 Export Behavior (export_version=DatasetExportVersion.V1):**<br/>
+        /// # <br/>
+        /// # The behavior depends on the combination of `export_type` and `output_export_type`:<br/>
         /// # <br/>
         /// # **When export_type = ExportType.JSON:**<br/>
         /// # <br/>
@@ -69,56 +75,78 @@ namespace Dataloop
         /// # - Exports data in JSON format, split into subsets of max 500 items<br/>
         /// # - Downloads all subset JSON files and concatenates them into a single `result.json` file<br/>
         /// # - Returns the path to the concatenated JSON file<br/>
-        /// # - Cleans up individual subset files after concatenation<br/>
         /// # <br/>
         /// # - **output_export_type = OutputExportType.ZIP:**<br/>
         /// # - Same as JSON export, but zips the final `result.json` file<br/>
         /// # - Returns the path to the zipped file (`result.json.zip`)<br/>
-        /// # - Cleans up the unzipped JSON file after zipping<br/>
         /// # <br/>
         /// # - **output_export_type = OutputExportType.FOLDERS:**<br/>
-        /// # - Exports data in JSON format, split into subsets of max 500 items<br/>
-        /// # - Downloads all subset JSON files and creates individual JSON files for each item<br/>
         /// # - Creates a folder structure mirroring the remote dataset structure<br/>
-        /// # - Returns the path to the base directory containing the folder structure<br/>
         /// # - Each item gets its own JSON file named after the original filename<br/>
         /// # <br/>
         /// # **When export_type = ExportType.ZIP:**<br/>
-        /// # <br/>
-        /// # - **output_export_type = OutputExportType.ZIP:**<br/>
         /// # - Exports data as a ZIP file containing the dataset<br/>
         /// # - Returns the downloaded ZIP item directly<br/>
-        /// # - No additional processing or concatenation<br/>
         /// # <br/>
-        /// # - **output_export_type = OutputExportType.JSON:**<br/>
-        /// # - **NOT SUPPORTED** - Raises NotImplementedError<br/>
-        /// # - Use export_type=ExportType.JSON instead for JSON output<br/>
+        /// # **V3 Export Behavior (export_version=DatasetExportVersion.V3):**<br/>
         /// # <br/>
-        /// # - **output_export_type = OutputExportType.FOLDERS:**<br/>
-        /// # - **NOT SUPPORTED** - Raises NotImplementedError<br/>
-        /// # - Use export_type=ExportType.JSON instead for folder output<br/>
-        /// # <br/>
-        /// # **When output_export_type = None (legacy behavior):**<br/>
-        /// # - Defaults to OutputExportType.JSON<br/>
-        /// # - Maintains backward compatibility with existing code<br/>
+        /// # - **export_mode = ExportMode.FULL**: Exports all items matching filters (default)<br/>
+        /// # - **export_mode = ExportMode.DIFF**: Exports only items changed since `from_version`<br/>
+        /// # - Returns an ExportManifest object with partition info and downloaded file paths<br/>
         /// # <br/>
         /// # :param dtlpy.entities.dataset.Dataset dataset: Dataset object<br/>
         /// # :param str dataset_name: The name of the dataset<br/>
         /// # :param str dataset_id: The ID of the dataset<br/>
-        /// # :param str local_path: Local path to save the exported dataset<br/>
+        /// # :param str local_path: Local directory path to save the exported dataset. Must be a directory, not a file path.<br/>
         /// # :param Union[dict, dtlpy.entities.filters.Filters] filters: Filters entity or a query dictionary<br/>
-        /// # :param dtlpy.entities.filters.Filters annotation_filters: Filters entity to filter annotations for export<br/>
-        /// # :param dtlpy.entities.filters.Filters feature_vector_filters: Filters entity to filter feature vectors for export<br/>
-        /// # :param bool include_feature_vectors: Include item feature vectors in the export<br/>
-        /// # :param bool include_annotations: Include item annotations in the export<br/>
-        /// # :param bool dataset_lock: Make dataset readonly during the export<br/>
-        /// # :param bool export_summary: Get Summary of the dataset export<br/>
-        /// # :param int lock_timeout_sec: Timeout for locking the dataset during export in seconds<br/>
-        /// # :param entities.ExportType export_type: Type of export ('json' or 'zip')<br/>
-        /// # :param entities.OutputExportType output_export_type: Output format ('json', 'zip', or 'folders'). If None, defaults to 'json'<br/>
+        /// # :param dtlpy.entities.filters.Filters annotation_filters: Filters entity to filter annotations (V1 only)<br/>
+        /// # :param dtlpy.entities.filters.Filters feature_vector_filters: Filters entity to filter feature vectors (V1 only)<br/>
+        /// # :param bool include_feature_vectors: Include item feature vectors in the export (V1 only)<br/>
+        /// # :param bool include_annotations: Include item annotations in the export (V1 only)<br/>
+        /// # :param bool dataset_lock: Make dataset readonly during the export (V1 only)<br/>
+        /// # :param bool export_summary: Get Summary of the dataset export (V1 only)<br/>
+        /// # :param int lock_timeout_sec: Timeout for locking the dataset during export in seconds (V1 only)<br/>
+        /// # :param entities.ExportType export_type: Type of export ('json' or 'zip') (V1 only)<br/>
+        /// # :param entities.OutputExportType output_export_type: Output format ('json', 'zip', or 'folders') (V1 only)<br/>
         /// # :param int timeout: Maximum time in seconds to wait for the export to complete<br/>
-        /// # :return: Path to exported file/directory, or None if export result is empty<br/>
-        /// # :rtype: Optional[str]<br/>
+        /// # :param entities.DatasetExportVersion export_version: Export API version - V1 (legacy) or V3 (LanceDB)<br/>
+        /// # :param entities.ExportMode export_mode: Export mode for V3 - FULL or DIFF (V3 only)<br/>
+        /// # :param int from_version: Starting version for diff mode (V3 only). If not provided in DIFF mode,<br/>
+        /// # falls back to last_to_version from dataset metadata. If no previous export exists, falls back to FULL mode.<br/>
+        /// # :param int partition_count: Number of partitions, auto-calculated if None (V3 only)<br/>
+        /// # :param bool force: Force re-export even if cached (V3 only)<br/>
+        /// # :param int parallel_downloads: Number of concurrent partition downloads (V3 only)<br/>
+        /// # :return: For V1: Path to exported file/directory, or None if empty. For V3: ExportManifest object<br/>
+        /// # :rtype: Union[Optional[str], entities.ExportManifest]<br/>
+        /// # <br/>
+        /// # **Example - V1 Export (Legacy)**:<br/>
+        /// # <br/>
+        /// # # Default V1 export<br/>
+        /// # export_path = dataset.export(<br/>
+        /// # local_path='/path/to/export',<br/>
+        /// # export_type=dl.ExportType.JSON<br/>
+        /// # )<br/>
+        /// # <br/>
+        /// # **Example - V3 Export (LanceDB)**:<br/>
+        /// # <br/>
+        /// # # Full V3 export<br/>
+        /// # manifest = dataset.export(<br/>
+        /// # local_path='/path/to/export',<br/>
+        /// # export_version=dl.DatasetExportVersion.V3,<br/>
+        /// # export_mode=dl.ExportMode.FULL<br/>
+        /// # )<br/>
+        /// # print(f"Exported {manifest.total_records} records")<br/>
+        /// # <br/>
+        /// # **Example - V3 Diff Export (Incremental)**:<br/>
+        /// # <br/>
+        /// # # Incremental export - only changes since version 5<br/>
+        /// # manifest = dataset.export(<br/>
+        /// # export_version=dl.DatasetExportVersion.V3,<br/>
+        /// # export_mode=dl.ExportMode.DIFF,<br/>
+        /// # from_version=5<br/>
+        /// # )<br/>
+        /// # # Store to_version for next diff export<br/>
+        /// # next_from_version = manifest.to_version<br/>
         /// # 
         /// </remarks>
         public async global::System.Threading.Tasks.Task<string> ExportDatasetAsZipAsync(
