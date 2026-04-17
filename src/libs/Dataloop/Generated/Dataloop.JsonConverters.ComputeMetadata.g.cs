@@ -23,6 +23,14 @@ namespace Dataloop.JsonConverters
                 foreach (var __jsonProp in __jsonDocument.RootElement.EnumerateObject())
                 {
                     __jsonProps.Add(__jsonProp.Name);
+                    if (__jsonProp.Value.ValueKind == global::System.Text.Json.JsonValueKind.Object)
+                    {
+                        foreach (var __nestedJsonProp in __jsonProp.Value.EnumerateObject())
+                        {
+                            __jsonProps.Add(__jsonProp.Name + "." + __nestedJsonProp.Name);
+                        }
+                    }
+
                 }
             }
 
@@ -31,6 +39,12 @@ namespace Dataloop.JsonConverters
             if (__jsonProps.Contains("agentScriptUpdatedTime")) __score1++;
             if (__jsonProps.Contains("allowedInstances")) __score1++;
             if (__jsonProps.Contains("cacheRunner")) __score1++;
+            if (__jsonProps.Contains("cacheRunner.maxReplica")) __score1++;
+            if (__jsonProps.Contains("cacheRunner.minReplica")) __score1++;
+            if (__jsonProps.Contains("cacheRunner.numReplicas")) __score1++;
+            if (__jsonProps.Contains("cacheRunner.redisHost")) __score1++;
+            if (__jsonProps.Contains("cacheRunner.size")) __score1++;
+            if (__jsonProps.Contains("cacheRunner.type")) __score1++;
             if (__jsonProps.Contains("cacheRunnerFS")) __score1++;
             if (__jsonProps.Contains("filestoreServer")) __score1++;
             if (__jsonProps.Contains("nfsServer")) __score1++;

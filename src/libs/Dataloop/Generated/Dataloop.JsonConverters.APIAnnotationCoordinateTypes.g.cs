@@ -23,6 +23,14 @@ namespace Dataloop.JsonConverters
                 foreach (var __jsonProp in __jsonDocument.RootElement.EnumerateObject())
                 {
                     __jsonProps.Add(__jsonProp.Name);
+                    if (__jsonProp.Value.ValueKind == global::System.Text.Json.JsonValueKind.Object)
+                    {
+                        foreach (var __nestedJsonProp in __jsonProp.Value.EnumerateObject())
+                        {
+                            __jsonProps.Add(__jsonProp.Name + "." + __nestedJsonProp.Name);
+                        }
+                    }
+
                 }
             }
 
@@ -35,6 +43,11 @@ namespace Dataloop.JsonConverters
             var __score3 = 0;
             if (__jsonProps.Contains("box")) __score3++;
             if (__jsonProps.Contains("note")) __score3++;
+            if (__jsonProps.Contains("note.asignee")) __score3++;
+            if (__jsonProps.Contains("note.createTime")) __score3++;
+            if (__jsonProps.Contains("note.creator")) __score3++;
+            if (__jsonProps.Contains("note.messages")) __score3++;
+            if (__jsonProps.Contains("note.status")) __score3++;
             if (__jsonProps.Contains("updatedAt")) __score3++;
             if (__jsonProps.Contains("updatedBy")) __score3++;
             var __score4 = 0;
@@ -46,18 +59,45 @@ namespace Dataloop.JsonConverters
             var __score8 = 0;
             if (__jsonProps.Contains("angle")) __score8++;
             if (__jsonProps.Contains("center")) __score8++;
+            if (__jsonProps.Contains("center.x")) __score8++;
+            if (__jsonProps.Contains("center.y")) __score8++;
+            if (__jsonProps.Contains("center.z")) __score8++;
             if (__jsonProps.Contains("rx")) __score8++;
             if (__jsonProps.Contains("ry")) __score8++;
             var __score9 = 0;
             if (__jsonProps.Contains("angle")) __score9++;
             if (__jsonProps.Contains("back_bl")) __score9++;
+            if (__jsonProps.Contains("back_bl.x")) __score9++;
+            if (__jsonProps.Contains("back_bl.y")) __score9++;
+            if (__jsonProps.Contains("back_bl.z")) __score9++;
             if (__jsonProps.Contains("back_br")) __score9++;
+            if (__jsonProps.Contains("back_br.x")) __score9++;
+            if (__jsonProps.Contains("back_br.y")) __score9++;
+            if (__jsonProps.Contains("back_br.z")) __score9++;
             if (__jsonProps.Contains("back_tl")) __score9++;
+            if (__jsonProps.Contains("back_tl.x")) __score9++;
+            if (__jsonProps.Contains("back_tl.y")) __score9++;
+            if (__jsonProps.Contains("back_tl.z")) __score9++;
             if (__jsonProps.Contains("back_tr")) __score9++;
+            if (__jsonProps.Contains("back_tr.x")) __score9++;
+            if (__jsonProps.Contains("back_tr.y")) __score9++;
+            if (__jsonProps.Contains("back_tr.z")) __score9++;
             if (__jsonProps.Contains("front_bl")) __score9++;
+            if (__jsonProps.Contains("front_bl.x")) __score9++;
+            if (__jsonProps.Contains("front_bl.y")) __score9++;
+            if (__jsonProps.Contains("front_bl.z")) __score9++;
             if (__jsonProps.Contains("front_br")) __score9++;
+            if (__jsonProps.Contains("front_br.x")) __score9++;
+            if (__jsonProps.Contains("front_br.y")) __score9++;
+            if (__jsonProps.Contains("front_br.z")) __score9++;
             if (__jsonProps.Contains("front_tl")) __score9++;
+            if (__jsonProps.Contains("front_tl.x")) __score9++;
+            if (__jsonProps.Contains("front_tl.y")) __score9++;
+            if (__jsonProps.Contains("front_tl.z")) __score9++;
             if (__jsonProps.Contains("front_tr")) __score9++;
+            if (__jsonProps.Contains("front_tr.x")) __score9++;
+            if (__jsonProps.Contains("front_tr.y")) __score9++;
+            if (__jsonProps.Contains("front_tr.z")) __score9++;
             var __score10 = 0;
             var __score11 = 0;
             if (__jsonProps.Contains("text")) __score11++;
