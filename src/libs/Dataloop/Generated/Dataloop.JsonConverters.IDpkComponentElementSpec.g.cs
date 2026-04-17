@@ -23,6 +23,14 @@ namespace Dataloop.JsonConverters
                 foreach (var __jsonProp in __jsonDocument.RootElement.EnumerateObject())
                 {
                     __jsonProps.Add(__jsonProp.Name);
+                    if (__jsonProp.Value.ValueKind == global::System.Text.Json.JsonValueKind.Object)
+                    {
+                        foreach (var __nestedJsonProp in __jsonProp.Value.EnumerateObject())
+                        {
+                            __jsonProps.Add(__jsonProp.Name + "." + __nestedJsonProp.Name);
+                        }
+                    }
+
                 }
             }
 
@@ -40,10 +48,24 @@ namespace Dataloop.JsonConverters
             if (__jsonProps.Contains("supportedSlots")) __score0++;
             var __score1 = 0;
             if (__jsonProps.Contains("app")) __score1++;
+            if (__jsonProps.Contains("app.componentName")) __score1++;
+            if (__jsonProps.Contains("app.dpkId")) __score1++;
+            if (__jsonProps.Contains("app.dpkName")) __score1++;
+            if (__jsonProps.Contains("app.dpkVersion")) __score1++;
+            if (__jsonProps.Contains("app.id")) __score1++;
             if (__jsonProps.Contains("artifacts")) __score1++;
             if (__jsonProps.Contains("computeConfigs")) __score1++;
+            if (__jsonProps.Contains("computeConfigs.default")) __score1++;
+            if (__jsonProps.Contains("computeConfigs.embed")) __score1++;
+            if (__jsonProps.Contains("computeConfigs.evaluate")) __score1++;
+            if (__jsonProps.Contains("computeConfigs.predict")) __score1++;
+            if (__jsonProps.Contains("computeConfigs.train")) __score1++;
             if (__jsonProps.Contains("configuration")) __score1++;
+            if (__jsonProps.Contains("configuration.label_to_id_map")) __score1++;
             if (__jsonProps.Contains("context")) __score1++;
+            if (__jsonProps.Contains("context.creator")) __score1++;
+            if (__jsonProps.Contains("context.org")) __score1++;
+            if (__jsonProps.Contains("context.project")) __score1++;
             if (__jsonProps.Contains("datasetId")) __score1++;
             if (__jsonProps.Contains("description")) __score1++;
             if (__jsonProps.Contains("id")) __score1++;
@@ -62,6 +84,7 @@ namespace Dataloop.JsonConverters
             if (__jsonProps.Contains("className")) __score2++;
             if (__jsonProps.Contains("computeConfig")) __score2++;
             if (__jsonProps.Contains("config")) __score2++;
+            if (__jsonProps.Contains("config.isCustomServer")) __score2++;
             if (__jsonProps.Contains("entryPoint")) __score2++;
             if (__jsonProps.Contains("functions")) __score2++;
             if (__jsonProps.Contains("initInputs")) __score2++;
@@ -69,7 +92,56 @@ namespace Dataloop.JsonConverters
             if (__jsonProps.Contains("mandatory")) __score2++;
             if (__jsonProps.Contains("name")) __score2++;
             if (__jsonProps.Contains("serviceConfig")) __score2++;
+            if (__jsonProps.Contains("serviceConfig._id")) __score2++;
+            if (__jsonProps.Contains("serviceConfig.active")) __score2++;
+            if (__jsonProps.Contains("serviceConfig.app")) __score2++;
+            if (__jsonProps.Contains("serviceConfig.appId")) __score2++;
+            if (__jsonProps.Contains("serviceConfig.archive")) __score2++;
+            if (__jsonProps.Contains("serviceConfig.authz")) __score2++;
+            if (__jsonProps.Contains("serviceConfig.botUserName")) __score2++;
+            if (__jsonProps.Contains("serviceConfig.concurrencyUpdatedAt")) __score2++;
+            if (__jsonProps.Contains("serviceConfig.config")) __score2++;
+            if (__jsonProps.Contains("serviceConfig.crashloop")) __score2++;
+            if (__jsonProps.Contains("serviceConfig.createdAt")) __score2++;
+            if (__jsonProps.Contains("serviceConfig.creator")) __score2++;
+            if (__jsonProps.Contains("serviceConfig.displayName")) __score2++;
+            if (__jsonProps.Contains("serviceConfig.drainTime")) __score2++;
+            if (__jsonProps.Contains("serviceConfig.driverId")) __score2++;
+            if (__jsonProps.Contains("serviceConfig.executionTimeout")) __score2++;
+            if (__jsonProps.Contains("serviceConfig.global")) __score2++;
+            if (__jsonProps.Contains("serviceConfig.idInDriver")) __score2++;
+            if (__jsonProps.Contains("serviceConfig.initParams")) __score2++;
+            if (__jsonProps.Contains("serviceConfig.integrations")) __score2++;
+            if (__jsonProps.Contains("serviceConfig.maxAttempts")) __score2++;
+            if (__jsonProps.Contains("serviceConfig.metadata")) __score2++;
+            if (__jsonProps.Contains("serviceConfig.mode")) __score2++;
+            if (__jsonProps.Contains("serviceConfig.moduleName")) __score2++;
+            if (__jsonProps.Contains("serviceConfig.mq")) __score2++;
+            if (__jsonProps.Contains("serviceConfig.mqUsername")) __score2++;
+            if (__jsonProps.Contains("serviceConfig.name")) __score2++;
+            if (__jsonProps.Contains("serviceConfig.onReset")) __score2++;
+            if (__jsonProps.Contains("serviceConfig.orgId")) __score2++;
+            if (__jsonProps.Contains("serviceConfig.orgName")) __score2++;
+            if (__jsonProps.Contains("serviceConfig.packageId")) __score2++;
+            if (__jsonProps.Contains("serviceConfig.packageRevision")) __score2++;
+            if (__jsonProps.Contains("serviceConfig.panels")) __score2++;
+            if (__jsonProps.Contains("serviceConfig.projectId")) __score2++;
+            if (__jsonProps.Contains("serviceConfig.runExecutionAsProcess")) __score2++;
+            if (__jsonProps.Contains("serviceConfig.runtime")) __score2++;
+            if (__jsonProps.Contains("serviceConfig.secrets")) __score2++;
+            if (__jsonProps.Contains("serviceConfig.settings")) __score2++;
+            if (__jsonProps.Contains("serviceConfig.textSearch")) __score2++;
+            if (__jsonProps.Contains("serviceConfig.type")) __score2++;
+            if (__jsonProps.Contains("serviceConfig.updatedAt")) __score2++;
+            if (__jsonProps.Contains("serviceConfig.updatedBy")) __score2++;
+            if (__jsonProps.Contains("serviceConfig.useUserJwt")) __score2++;
+            if (__jsonProps.Contains("serviceConfig.version")) __score2++;
+            if (__jsonProps.Contains("serviceConfig.versions")) __score2++;
             if (__jsonProps.Contains("versions")) __score2++;
+            if (__jsonProps.Contains("versions.dtlpy")) __score2++;
+            if (__jsonProps.Contains("versions.proxy")) __score2++;
+            if (__jsonProps.Contains("versions.runner")) __score2++;
+            if (__jsonProps.Contains("versions.verify")) __score2++;
             var __score3 = 0;
             if (__jsonProps.Contains("global")) __score3++;
             if (__jsonProps.Contains("mandatory")) __score3++;
@@ -78,6 +150,15 @@ namespace Dataloop.JsonConverters
             if (__jsonProps.Contains("operation")) __score3++;
             if (__jsonProps.Contains("scope")) __score3++;
             if (__jsonProps.Contains("spec")) __score3++;
+            if (__jsonProps.Contains("spec.actions")) __score3++;
+            if (__jsonProps.Contains("spec.cron")) __score3++;
+            if (__jsonProps.Contains("spec.endAt")) __score3++;
+            if (__jsonProps.Contains("spec.executionMode")) __score3++;
+            if (__jsonProps.Contains("spec.filter")) __score3++;
+            if (__jsonProps.Contains("spec.input")) __score3++;
+            if (__jsonProps.Contains("spec.operation")) __score3++;
+            if (__jsonProps.Contains("spec.resource")) __score3++;
+            if (__jsonProps.Contains("spec.startAt")) __score3++;
             if (__jsonProps.Contains("type")) __score3++;
             var __score4 = 0;
             if (__jsonProps.Contains("app")) __score4++;
@@ -91,6 +172,9 @@ namespace Dataloop.JsonConverters
             if (__jsonProps.Contains("mandatory")) __score4++;
             if (__jsonProps.Contains("maxAttempts")) __score4++;
             if (__jsonProps.Contains("metadata")) __score4++;
+            if (__jsonProps.Contains("metadata.ml")) __score4++;
+            if (__jsonProps.Contains("metadata.system")) __score4++;
+            if (__jsonProps.Contains("metadata.user")) __score4++;
             if (__jsonProps.Contains("modelOperation")) __score4++;
             if (__jsonProps.Contains("moduleName")) __score4++;
             if (__jsonProps.Contains("name")) __score4++;
@@ -99,9 +183,15 @@ namespace Dataloop.JsonConverters
             if (__jsonProps.Contains("panelNames")) __score4++;
             if (__jsonProps.Contains("runExecutionAsProcess")) __score4++;
             if (__jsonProps.Contains("runtime")) __score4++;
+            if (__jsonProps.Contains("runtime.concurrency")) __score4++;
+            if (__jsonProps.Contains("runtime.singleAgent")) __score4++;
             if (__jsonProps.Contains("secrets")) __score4++;
             if (__jsonProps.Contains("useUserJwt")) __score4++;
             if (__jsonProps.Contains("versions")) __score4++;
+            if (__jsonProps.Contains("versions.dtlpy")) __score4++;
+            if (__jsonProps.Contains("versions.proxy")) __score4++;
+            if (__jsonProps.Contains("versions.runner")) __score4++;
+            if (__jsonProps.Contains("versions.verify")) __score4++;
             var __score5 = 0;
             if (__jsonProps.Contains("conditions")) __score5++;
             if (__jsonProps.Contains("displayName")) __score5++;
@@ -112,12 +202,18 @@ namespace Dataloop.JsonConverters
             if (__jsonProps.Contains("name")) __score5++;
             var __score6 = 0;
             if (__jsonProps.Contains("context")) __score6++;
+            if (__jsonProps.Contains("context.creator")) __score6++;
+            if (__jsonProps.Contains("context.org")) __score6++;
+            if (__jsonProps.Contains("context.project")) __score6++;
             if (__jsonProps.Contains("description")) __score6++;
             if (__jsonProps.Contains("filters")) __score6++;
             if (__jsonProps.Contains("global")) __score6++;
             if (__jsonProps.Contains("icon")) __score6++;
             if (__jsonProps.Contains("mandatory")) __score6++;
             if (__jsonProps.Contains("metadata")) __score6++;
+            if (__jsonProps.Contains("metadata.codebase")) __score6++;
+            if (__jsonProps.Contains("metadata.functionName")) __score6++;
+            if (__jsonProps.Contains("metadata.serviceName")) __score6++;
             if (__jsonProps.Contains("name")) __score6++;
             var __score7 = 0;
             if (__jsonProps.Contains("botUserName")) __score7++;
@@ -131,8 +227,14 @@ namespace Dataloop.JsonConverters
             if (__jsonProps.Contains("onReset")) __score7++;
             if (__jsonProps.Contains("runExecutionAsProcess")) __score7++;
             if (__jsonProps.Contains("runtime")) __score7++;
+            if (__jsonProps.Contains("runtime.concurrency")) __score7++;
+            if (__jsonProps.Contains("runtime.singleAgent")) __score7++;
             if (__jsonProps.Contains("useUserJwt")) __score7++;
             if (__jsonProps.Contains("versions")) __score7++;
+            if (__jsonProps.Contains("versions.dtlpy")) __score7++;
+            if (__jsonProps.Contains("versions.proxy")) __score7++;
+            if (__jsonProps.Contains("versions.runner")) __score7++;
+            if (__jsonProps.Contains("versions.verify")) __score7++;
             var __score8 = 0;
             if (__jsonProps.Contains("categories")) __score8++;
             if (__jsonProps.Contains("configuration")) __score8++;
@@ -140,6 +242,10 @@ namespace Dataloop.JsonConverters
             if (__jsonProps.Contains("displayName")) __score8++;
             if (__jsonProps.Contains("icon")) __score8++;
             if (__jsonProps.Contains("invoke")) __score8++;
+            if (__jsonProps.Contains("invoke.inputOptions")) __score8++;
+            if (__jsonProps.Contains("invoke.namespace")) __score8++;
+            if (__jsonProps.Contains("invoke.source")) __score8++;
+            if (__jsonProps.Contains("invoke.type")) __score8++;
             if (__jsonProps.Contains("mandatory")) __score8++;
             if (__jsonProps.Contains("name")) __score8++;
             if (__jsonProps.Contains("panel")) __score8++;
@@ -159,9 +265,15 @@ namespace Dataloop.JsonConverters
             if (__jsonProps.Contains("projectId")) __score9++;
             if (__jsonProps.Contains("resetTimestamp")) __score9++;
             if (__jsonProps.Contains("settings")) __score9++;
+            if (__jsonProps.Contains("settings.activeTriggerAskAgain")) __score9++;
+            if (__jsonProps.Contains("settings.defaultResumeOption")) __score9++;
+            if (__jsonProps.Contains("settings.keepTriggersActive")) __score9++;
+            if (__jsonProps.Contains("settings.lastUpdate")) __score9++;
             if (__jsonProps.Contains("startNodes")) __score9++;
             if (__jsonProps.Contains("status")) __score9++;
             if (__jsonProps.Contains("template")) __score9++;
+            if (__jsonProps.Contains("template.id")) __score9++;
+            if (__jsonProps.Contains("template.state")) __score9++;
             if (__jsonProps.Contains("templateKind")) __score9++;
             if (__jsonProps.Contains("updatedAt")) __score9++;
             if (__jsonProps.Contains("updatedBy")) __score9++;
