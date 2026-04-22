@@ -1362,6 +1362,7 @@
           "ref_image",
           "ref_semantic_3d",
           "gis",
+          "polygon",
           "class",
           "point",
           "line",
