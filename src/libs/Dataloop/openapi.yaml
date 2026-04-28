@@ -491,6 +491,13 @@
           "createdAt",
           "type",
           "progress",
+          "spec",
+          "id",
+          "url",
+          "status",
+          "createdAt",
+          "type",
+          "progress",
           "spec"
         ],
         "type": "object",
@@ -11462,6 +11469,10 @@
           "early",
           "preliminary",
           "acute",
+          "enforcement",
+          "early",
+          "preliminary",
+          "acute",
           "enforcement"
         ],
         "type": "string"
@@ -11983,12 +11994,93 @@
           "sso-integration",
           "mfa-integration",
           "ip-whitelist",
+          "vpc-deployment",
+          "annotation-tool-hours",
+          "data-points",
+          "ingested-data-points",
+          "api-calls",
+          "hosted-storage",
+          "system-compute",
+          "compute-cpu-regular-xs",
+          "compute-cpu-regular-s",
+          "compute-cpu-regular-m",
+          "compute-cpu-regular-l",
+          "compute-cpu-highmem-xs",
+          "compute-cpu-highmem-s",
+          "compute-cpu-highmem-m",
+          "compute-cpu-highmem-l",
+          "compute-gpu-k80-s",
+          "compute-gpu-k80-m",
+          "compute-gpu-a100-s",
+          "compute-gpu-a100-m",
+          "compute-gpu-t4",
+          "compute-gpu-t4-m",
+          "compute-gpu-a100-4g",
+          "compute-gpu-a100-4g-m",
+          "compute-budget",
+          "unlimited-seats",
+          "default-annotation-studios",
+          "lidar",
+          "auto-annotation-tools",
+          "ml-model-assisted-annotation",
+          "ai-video-tracker",
+          "data-bug-tracking",
+          "storage-integration",
+          "data-visualization",
+          "metadata-search",
+          "data-versioning",
+          "output-format-converters",
+          "workforce-management-tool",
+          "analytics-dashboard",
+          "advanced-analytics-history",
+          "multiple-workforces",
+          "sdk-access",
+          "api-access",
+          "data-pipeline-filters",
+          "human-tasks",
+          "faas",
+          "model-management",
+          "email-customer-support",
+          "knowledge-base",
+          "faq",
+          "instructional-video-library-access",
+          "ticket-based-troubleshooting",
+          "access-to-customer-success-representation-pool",
+          "debug-and-guide-via-tracking-sys",
+          "on-demand-calls",
+          "engineering-consulting",
+          "dedicated-customer-success",
+          "quarterly-customer-success-check-in",
+          "on-demand-customer-success-calls",
+          "monthly-customer-success-calls",
+          "weekly-customer-success-calls",
+          "developer-success-assistance",
+          "professional-services-or-developer-success-lead-onboarding",
+          "professional-services-custom-development",
+          "managed-labeling-service",
+          "professional-services",
+          "role-and-group-based-access-control",
+          "custom-project-dashboard",
+          "enterprise-support-sla",
+          "sso-integration",
+          "mfa-integration",
+          "ip-whitelist",
           "vpc-deployment"
         ],
         "type": "string"
       },
       "MetricGroup": {
         "enum": [
+          "Annotation tool studios",
+          "automation",
+          "Data QA tools",
+          "Data management",
+          "Workforce management",
+          "Data pipelines",
+          "Customer support",
+          "Customer care",
+          "Enterprise features",
+          "General",
           "Annotation tool studios",
           "automation",
           "Data QA tools",
@@ -12045,6 +12137,11 @@
           "name",
           "type",
           "description",
+          "icon",
+          "key",
+          "name",
+          "type",
+          "description",
           "icon"
         ],
         "type": "object",
@@ -12088,6 +12185,10 @@
           "key",
           "name",
           "description",
+          "resources",
+          "key",
+          "name",
+          "description",
           "resources"
         ],
         "type": "object",
@@ -12096,6 +12197,9 @@
       "BillingPeriod": {
         "type": "string",
         "enum": [
+          "monthly",
+          "annual",
+          "custom",
           "monthly",
           "annual",
           "custom"
@@ -12109,12 +12213,21 @@
           "blocked",
           "expired",
           "canceled",
+          "renewed",
+          "future",
+          "active",
+          "paused",
+          "blocked",
+          "expired",
+          "canceled",
           "renewed"
         ],
         "type": "string"
       },
       "ScopeType": {
         "enum": [
+          "org",
+          "project",
           "org",
           "project"
         ],
@@ -12123,35 +12236,44 @@
       "APISubscription": {
         "properties": {
           "id": {
-            "type": "string"
+            "type": "string",
+            "description": "Unique identifier for the subscription"
           },
           "url": {
-            "type": "string"
+            "type": "string",
+            "description": "Url for the subscription"
           },
           "plan": {
-            "$ref": "#/components/schemas/Plan"
+            "$ref": "#/components/schemas/Plan",
+            "description": "Plan detailing the resources allocated to the subscription"
           },
           "createdAt": {
             "type": "string",
-            "format": "date-time"
+            "format": "date-time",
+            "description": "Creation date"
           },
           "updatedAt": {
             "type": "string",
-            "format": "date-time"
+            "format": "date-time",
+            "description": "Latest update date"
           },
           "period": {
-            "$ref": "#/components/schemas/BillingPeriod"
+            "$ref": "#/components/schemas/BillingPeriod",
+            "description": "Subscription period"
           },
           "startTime": {
             "type": "string",
-            "format": "date-time"
+            "format": "date-time",
+            "description": "Subscription start time"
           },
           "endTime": {
             "type": "string",
-            "format": "date-time"
+            "format": "date-time",
+            "description": "Subscription expiration time"
           },
           "status": {
-            "$ref": "#/components/schemas/BillingStatus"
+            "$ref": "#/components/schemas/BillingStatus",
+            "description": "Current status"
           },
           "scope": {
             "properties": {
@@ -12164,18 +12286,24 @@
             },
             "required": [
               "entityId",
+              "type",
+              "entityId",
               "type"
             ],
-            "type": "object"
+            "type": "object",
+            "description": "Subscription scope type and id"
           },
           "accountId": {
-            "type": "string"
+            "type": "string",
+            "description": "DL account Id"
           },
           "autoRenewal": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Whether the subscription will auto renew when its current quota expires"
           },
           "addon": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Whether the subscription is an addon or not"
           },
           "paymentDriverId": {
             "type": "string"
@@ -12184,7 +12312,8 @@
             "type": "string"
           },
           "externalSubscriptionId": {
-            "type": "string"
+            "type": "string",
+            "description": "External subscription id"
           }
         },
         "required": [
@@ -12196,7 +12325,17 @@
           "startTime",
           "status",
           "scope",
-          "accountId"
+          "accountId",
+          "id",
+          "url",
+          "plan",
+          "createdAt",
+          "period",
+          "startTime",
+          "endTime",
+          "scope",
+          "accountId",
+          "status"
         ],
         "type": "object",
         "additionalProperties": true
@@ -14840,6 +14979,8 @@
       },
       "ServiceType": {
         "enum": [
+          "system",
+          "regular",
           "system",
           "regular"
         ],
@@ -25468,6 +25609,1797 @@
             "type": "object"
           }
         ]
+      },
+      "UIHours": {
+        "properties": {
+          "sum": {
+            "type": "number",
+            "format": "double"
+          },
+          "roles": {
+            "properties": {},
+            "additionalProperties": {
+              "type": "number",
+              "format": "double"
+            },
+            "type": "object"
+          }
+        },
+        "required": [
+          "sum",
+          "roles"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "APICallResourceDescriptor": {
+        "properties": {
+          "sum": {
+            "type": "number",
+            "format": "double"
+          },
+          "actions": {
+            "properties": {},
+            "additionalProperties": {
+              "type": "number",
+              "format": "double"
+            },
+            "type": "object"
+          }
+        },
+        "required": [
+          "sum",
+          "actions"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "APICallSourceDescriptor": {
+        "properties": {
+          "sum": {
+            "type": "number",
+            "format": "double"
+          },
+          "resources": {
+            "properties": {},
+            "additionalProperties": {
+              "$ref": "#/components/schemas/APICallResourceDescriptor"
+            },
+            "type": "object"
+          }
+        },
+        "required": [
+          "sum",
+          "resources"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "APICallDescriptor": {
+        "properties": {
+          "ui": {
+            "$ref": "#/components/schemas/APICallSourceDescriptor"
+          },
+          "sdk": {
+            "$ref": "#/components/schemas/APICallSourceDescriptor"
+          },
+          "system": {
+            "$ref": "#/components/schemas/APICallSourceDescriptor"
+          },
+          "other": {
+            "$ref": "#/components/schemas/APICallSourceDescriptor"
+          },
+          "sum": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "required": [
+          "ui",
+          "sdk",
+          "system",
+          "other",
+          "sum"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "StorageModificationSourceDescriptor": {
+        "properties": {
+          "added": {
+            "type": "number",
+            "format": "double"
+          },
+          "removed": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "required": [
+          "added",
+          "removed"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "StorageModificationDescriptor": {
+        "properties": {
+          "ui": {
+            "$ref": "#/components/schemas/StorageModificationSourceDescriptor"
+          },
+          "sdk": {
+            "$ref": "#/components/schemas/StorageModificationSourceDescriptor"
+          },
+          "system": {
+            "$ref": "#/components/schemas/StorageModificationSourceDescriptor"
+          },
+          "other": {
+            "$ref": "#/components/schemas/StorageModificationSourceDescriptor"
+          },
+          "unknown": {
+            "$ref": "#/components/schemas/StorageModificationSourceDescriptor"
+          },
+          "total": {
+            "$ref": "#/components/schemas/StorageModificationSourceDescriptor"
+          }
+        },
+        "required": [
+          "ui",
+          "sdk",
+          "system",
+          "other",
+          "total"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "StorageDatasetDescriptor": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "modified": {
+            "$ref": "#/components/schemas/StorageModificationDescriptor"
+          }
+        },
+        "required": [
+          "id",
+          "modified"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "StorageDescriptor": {
+        "properties": {
+          "totalModified": {
+            "$ref": "#/components/schemas/StorageModificationDescriptor"
+          },
+          "totalPersist": {
+            "type": "number",
+            "format": "double"
+          },
+          "datasets": {
+            "items": {
+              "$ref": "#/components/schemas/StorageDatasetDescriptor"
+            },
+            "type": "array"
+          }
+        },
+        "required": [
+          "totalModified",
+          "totalPersist",
+          "datasets"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "PodType": {
+        "enum": [
+          "regular-xs",
+          "regular-s",
+          "regular-m",
+          "regular-l",
+          "highmem-xs",
+          "highmem-s",
+          "highmem-m",
+          "highmem-l",
+          "gpu-k80-s",
+          "gpu-k80-m",
+          "gpu-t4",
+          "gpu-t4-m",
+          "gpu-a100-s",
+          "gpu-a100-m",
+          "gpu-a100-4g",
+          "gpu-a100-4g-m"
+        ],
+        "type": "string"
+      },
+      "FaasUsageServiceInstanceDescriptor": {
+        "properties": {
+          "serviceId": {
+            "type": "string"
+          },
+          "serviceName": {
+            "type": "string"
+          },
+          "instanceType": {
+            "$ref": "#/components/schemas/PodType"
+          },
+          "sum": {
+            "type": "number",
+            "format": "double"
+          },
+          "hours": {
+            "type": "number",
+            "format": "double"
+          },
+          "serviceType": {
+            "$ref": "#/components/schemas/ServiceType"
+          },
+          "driverId": {
+            "type": "string"
+          },
+          "cost": {
+            "type": "number",
+            "format": "double"
+          },
+          "preemptible": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "serviceId",
+          "serviceName",
+          "instanceType",
+          "sum",
+          "hours"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "FaasGlobalServiceDescriptor": {
+        "properties": {
+          "serviceId": {
+            "type": "string"
+          },
+          "serviceName": {
+            "type": "string"
+          },
+          "calls": {
+            "type": "number",
+            "format": "double"
+          },
+          "totalDuration": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "required": [
+          "serviceId",
+          "serviceName",
+          "calls",
+          "totalDuration"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "FaasUsageDescriptor": {
+        "properties": {
+          "services": {
+            "items": {
+              "$ref": "#/components/schemas/FaasUsageServiceInstanceDescriptor"
+            },
+            "type": "array"
+          },
+          "globalServices": {
+            "items": {
+              "$ref": "#/components/schemas/FaasGlobalServiceDescriptor"
+            },
+            "type": "array"
+          }
+        },
+        "required": [
+          "services"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "ItemsCount": {
+        "properties": {
+          "total": {
+            "type": "number",
+            "format": "double"
+          },
+          "totalAnnotated": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "required": [
+          "total",
+          "totalAnnotated"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "IngestedDatapointsDescriptor": {
+        "properties": {
+          "items": {
+            "type": "number",
+            "format": "double"
+          },
+          "annotations": {
+            "type": "number",
+            "format": "double"
+          },
+          "frames": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "type": "object",
+        "additionalProperties": true
+      },
+      "APIUsageEntry": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "project": {
+            "type": "string"
+          },
+          "projectName": {
+            "type": "string"
+          },
+          "org": {
+            "type": "string"
+          },
+          "orgName": {
+            "type": "string"
+          },
+          "account": {
+            "type": "string"
+          },
+          "accountName": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "uiHours": {
+            "$ref": "#/components/schemas/UIHours"
+          },
+          "apiCalls": {
+            "$ref": "#/components/schemas/APICallDescriptor"
+          },
+          "storage": {
+            "$ref": "#/components/schemas/StorageDescriptor"
+          },
+          "faasUsage": {
+            "$ref": "#/components/schemas/FaasUsageDescriptor"
+          },
+          "externalFaasUsage": {
+            "$ref": "#/components/schemas/FaasUsageDescriptor"
+          },
+          "items": {
+            "$ref": "#/components/schemas/ItemsCount"
+          },
+          "annotations": {
+            "type": "number",
+            "format": "double"
+          },
+          "keyframes": {
+            "type": "number",
+            "format": "double"
+          },
+          "ingestedDatapoints": {
+            "$ref": "#/components/schemas/IngestedDatapointsDescriptor"
+          }
+        },
+        "required": [
+          "id",
+          "url",
+          "project",
+          "date",
+          "uiHours",
+          "apiCalls",
+          "storage",
+          "items",
+          "annotations",
+          "keyframes",
+          "ingestedDatapoints"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "AlertStatus": {
+        "enum": [
+          "created",
+          "emailSent",
+          "acknowledged",
+          "closed"
+        ],
+        "type": "string"
+      },
+      "APIAlert": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string"
+          },
+          "status": {
+            "$ref": "#/components/schemas/AlertStatus"
+          },
+          "description": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {},
+          "accountId": {
+            "type": "string"
+          },
+          "tier": {
+            "$ref": "#/components/schemas/AlertTier"
+          }
+        },
+        "required": [
+          "id",
+          "url",
+          "code",
+          "status",
+          "description",
+          "date",
+          "accountId",
+          "tier"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "FieldSort": {
+        "properties": {
+          "field": {
+            "type": "string",
+            "enum": [
+              "date",
+              "id"
+            ]
+          },
+          "direction": {
+            "type": "string",
+            "enum": [
+              "asc",
+              "desc"
+            ]
+          }
+        },
+        "type": "object",
+        "additionalProperties": true
+      },
+      "ResourceAuditEventType": {
+        "type": "string",
+        "enum": [
+          "deleted",
+          "updated",
+          "created"
+        ]
+      },
+      "ResourceAuditLog": {
+        "properties": {
+          "_id": {
+            "type": "string"
+          },
+          "time": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "ctx": {
+            "properties": {
+              "projectName": {
+                "type": "string"
+              },
+              "org": {
+                "type": "string"
+              },
+              "project": {
+                "type": "string"
+              }
+            },
+            "type": "object"
+          },
+          "user": {
+            "type": "string"
+          },
+          "entityType": {
+            "type": "string"
+          },
+          "eventType": {
+            "$ref": "#/components/schemas/ResourceAuditEventType"
+          },
+          "entityId": {
+            "type": "string"
+          },
+          "entityName": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "_id",
+          "time",
+          "ctx",
+          "user",
+          "entityType",
+          "eventType",
+          "entityId"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "AuditLogsCursorPage": {
+        "properties": {
+          "totalItemsCount": {
+            "type": "number",
+            "format": "double"
+          },
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/ResourceAuditLog"
+            },
+            "type": "array"
+          },
+          "totalPagesCount": {
+            "type": "number",
+            "format": "double"
+          },
+          "hasNextPage": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "totalItemsCount",
+          "items",
+          "totalPagesCount",
+          "hasNextPage"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "Address": {
+        "properties": {
+          "line1": {
+            "type": "string"
+          },
+          "line2": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "postalCode": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "line1",
+          "country",
+          "city"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "TaxType": {
+        "enum": [
+          "ae_trn",
+          "au_abn",
+          "au_arn",
+          "br_cnpj",
+          "br_cpf",
+          "ca_bn",
+          "ca_gst_hst",
+          "ca_pst_bc",
+          "ca_pst_mb",
+          "ca_pst_sk",
+          "ca_qst",
+          "ch_vat",
+          "cl_tin",
+          "es_cif",
+          "eu_vat",
+          "gb_vat",
+          "ge_vat",
+          "hk_br",
+          "id_npwp",
+          "il_vat",
+          "in_gst",
+          "jp_cn",
+          "jp_rn",
+          "kr_brn",
+          "li_uid",
+          "mx_rfc",
+          "my_frp",
+          "my_itn",
+          "my_sst",
+          "no_vat",
+          "nz_gst",
+          "ru_inn",
+          "ru_kpp",
+          "sa_vat",
+          "sg_gst",
+          "sg_uen",
+          "th_vat",
+          "tw_vat",
+          "ua_vat",
+          "us_ein",
+          "za_vat"
+        ],
+        "type": "string"
+      },
+      "TaxData": {
+        "properties": {
+          "type": {
+            "$ref": "#/components/schemas/TaxType"
+          },
+          "value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "type",
+          "value"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "DBBillingAccount": {
+        "properties": {
+          "_id": {
+            "type": "string"
+          },
+          "companyName": {
+            "type": "string"
+          },
+          "companyPhone": {
+            "type": "string"
+          },
+          "billingContact": {
+            "type": "string"
+          },
+          "accountId": {
+            "type": "string"
+          },
+          "recipients": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "address": {
+            "$ref": "#/components/schemas/Address"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "taxData": {
+            "$ref": "#/components/schemas/TaxData"
+          },
+          "creator": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "_id",
+          "companyName",
+          "companyPhone",
+          "billingContact",
+          "accountId",
+          "recipients",
+          "address",
+          "createdAt",
+          "creator"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "PartialBillingAccount": {
+        "properties": {
+          "companyName": {
+            "type": "string"
+          },
+          "companyPhone": {
+            "type": "string"
+          },
+          "billingContact": {
+            "type": "string"
+          },
+          "accountId": {
+            "type": "string"
+          },
+          "recipients": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "address": {
+            "$ref": "#/components/schemas/Address"
+          },
+          "taxData": {
+            "properties": {
+              "value": {
+                "type": "string"
+              },
+              "type": {
+                "$ref": "#/components/schemas/TaxType"
+              }
+            },
+            "required": [
+              "value",
+              "type"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "accountId",
+          "address"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "PaymentDriverType": {
+        "type": "string",
+        "enum": [
+          "credits",
+          "stripe",
+          "azureMarketplace"
+        ],
+        "nullable": false
+      },
+      "DBPaymentDriverConfiguration": {
+        "properties": {
+          "_id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "billingAccountId": {
+            "type": "string"
+          },
+          "type": {
+            "$ref": "#/components/schemas/PaymentDriverType"
+          },
+          "creator": {
+            "type": "string"
+          },
+          "metadata": {}
+        },
+        "required": [
+          "_id",
+          "name",
+          "billingAccountId",
+          "type",
+          "creator"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "CreditCard": {
+        "properties": {
+          "brand": {
+            "type": "string",
+            "description": "Card brand. Can be `amex`, `diners`, `discover`, `jcb`, `mastercard`, `unionpay`, `visa`, or `unknown`."
+          },
+          "country": {
+            "type": "string",
+            "nullable": true,
+            "description": "Two-letter ISO code representing the country of the card. You could use this attribute to get a sense of the international breakdown of cards you've collected."
+          },
+          "description": {
+            "type": "string",
+            "nullable": true,
+            "description": "A high-level description of the type of cards issued in this range. (For internal use only and not typically available in standard API requests.)"
+          },
+          "exp_month": {
+            "type": "number",
+            "format": "double",
+            "description": "Two-digit number representing the card's expiration month."
+          },
+          "exp_year": {
+            "type": "number",
+            "format": "double",
+            "description": "Four-digit number representing the card's expiration year."
+          },
+          "fingerprint": {
+            "type": "string",
+            "nullable": true,
+            "description": "Uniquely identifies this particular card number. You can use this attribute to check whether two customers who've signed up with you are using the same card number, for example. For payment methods that tokenize card information (Apple Pay, Google Pay), the tokenized number might be provided instead of the underlying card number.\n\n*Starting May 1, 2021, card fingerprint in India for Connect will change to allow two fingerprints for the same card --- one for India and one for the rest of the world.*"
+          },
+          "funding": {
+            "type": "string",
+            "description": "Card funding type. Can be `credit`, `debit`, `prepaid`, or `unknown`."
+          },
+          "last4": {
+            "type": "string",
+            "description": "The last four digits of the card."
+          }
+        },
+        "required": [
+          "brand",
+          "country",
+          "exp_month",
+          "exp_year",
+          "funding",
+          "last4"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "PaymentMethod": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique identifier for the object."
+          },
+          "card": {
+            "$ref": "#/components/schemas/CreditCard"
+          },
+          "driverId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "ContactAddress": {
+        "properties": {
+          "line1": {
+            "type": "string"
+          },
+          "line2": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "postalCode": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "line1",
+          "country",
+          "city"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "ContactInfo": {
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "address": {
+            "$ref": "#/components/schemas/ContactAddress"
+          }
+        },
+        "required": [
+          "email",
+          "phone",
+          "address"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "LineItem": {
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "number",
+            "format": "double"
+          },
+          "price": {
+            "type": "number",
+            "format": "double"
+          },
+          "subscription": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "code",
+          "description",
+          "price",
+          "subscription"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "InvoiceStatus": {
+        "enum": [
+          "submitted",
+          "paid",
+          "partiallyPaid",
+          "debt",
+          "Failed Payment",
+          "refunded"
+        ],
+        "type": "string"
+      },
+      "Currency": {
+        "type": "string",
+        "enum": [
+          "USD",
+          "EUR",
+          "NIS"
+        ]
+      },
+      "PaymentDetails": {
+        "properties": {
+          "driverType": {
+            "type": "string"
+          },
+          "driverId": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "chargeDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "amount": {
+            "type": "number",
+            "format": "double"
+          },
+          "currency": {
+            "$ref": "#/components/schemas/Currency"
+          },
+          "last4": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "driverType",
+          "driverId",
+          "chargeDate",
+          "amount",
+          "currency"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "Invoice": {
+        "properties": {
+          "_id": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string",
+            "description": "Unique identifier for the invoice"
+          },
+          "account": {
+            "type": "string",
+            "description": "DL account ID"
+          },
+          "contacts": {
+            "items": {
+              "$ref": "#/components/schemas/ContactInfo"
+            },
+            "type": "array",
+            "description": "Detailed information about all of the invoice contacts"
+          },
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/LineItem"
+            },
+            "type": "array",
+            "description": "Detailing all the billable products included in the invoice"
+          },
+          "totalPrice": {
+            "type": "number",
+            "format": "double",
+            "description": "Total billed amount"
+          },
+          "billedPeriod": {
+            "properties": {
+              "endDate": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "startDate": {
+                "type": "string",
+                "format": "date-time"
+              }
+            },
+            "required": [
+              "endDate",
+              "startDate"
+            ],
+            "type": "object",
+            "description": "Date range of the resource usage"
+          },
+          "status": {
+            "$ref": "#/components/schemas/InvoiceStatus",
+            "description": "Current invoice status"
+          },
+          "payments": {
+            "items": {
+              "$ref": "#/components/schemas/PaymentDetails"
+            },
+            "type": "array",
+            "description": "All payments details"
+          },
+          "stripeInvoiceUrl": {
+            "type": "string",
+            "description": "When applicable, include a link to a pdf invoice hosted by Stripe"
+          },
+          "stripeInvoiceId": {
+            "type": "string",
+            "description": "When applicable, include the identifier of a Stripe invoice object"
+          },
+          "stripeInvoiceNumber": {
+            "type": "string",
+            "description": "When applicable, include the number of a Stripe invoice"
+          },
+          "pdfLocation": {
+            "type": "string",
+            "description": "When applicable, include the location in which the DL archive stores the Stripe invoice pdf"
+          },
+          "chargeInProgress": {
+            "type": "boolean",
+            "description": "Specifies whether a charge is currently in progress"
+          }
+        },
+        "required": [
+          "id",
+          "account",
+          "contacts",
+          "items",
+          "totalPrice",
+          "billedPeriod",
+          "status",
+          "payments"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "RangeOrFeatureTier": {
+        "properties": {
+          "price": {
+            "type": "number",
+            "format": "double"
+          },
+          "range": {
+            "properties": {
+              "higher": {
+                "type": "number",
+                "format": "double"
+              },
+              "lower": {
+                "type": "number",
+                "format": "double"
+              }
+            },
+            "required": [
+              "higher",
+              "lower"
+            ],
+            "type": "object"
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "price"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "OverQuota": {
+        "properties": {
+          "price": {
+            "type": "number",
+            "format": "double"
+          },
+          "limit": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "required": [
+          "price",
+          "limit"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "APIBillableResource": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "key": {
+            "$ref": "#/components/schemas/BillingResourceKey"
+          },
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "icon": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number",
+            "format": "double"
+          },
+          "amount": {
+            "type": "number",
+            "format": "double"
+          },
+          "unit": {
+            "type": "string"
+          },
+          "tiers": {
+            "items": {
+              "$ref": "#/components/schemas/RangeOrFeatureTier"
+            },
+            "type": "array"
+          },
+          "overQuota": {
+            "$ref": "#/components/schemas/OverQuota"
+          },
+          "displayedInInvoice": {
+            "type": "boolean"
+          },
+          "group": {
+            "type": "string"
+          },
+          "tier": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "url",
+          "key",
+          "name",
+          "type",
+          "description",
+          "icon"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "BillingScope": {
+        "properties": {
+          "type": {
+            "$ref": "#/components/schemas/ScopeType"
+          },
+          "entityId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "type",
+          "entityId"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "SubscriptionInput": {
+        "properties": {
+          "period": {
+            "$ref": "#/components/schemas/BillingPeriod"
+          },
+          "startDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "endDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "scope": {
+            "$ref": "#/components/schemas/BillingScope"
+          },
+          "autoRenewal": {
+            "type": "boolean"
+          },
+          "account": {
+            "type": "string"
+          },
+          "driverId": {
+            "type": "string"
+          },
+          "methodId": {
+            "type": "string"
+          },
+          "planKey": {
+            "type": "string"
+          },
+          "plan": {
+            "$ref": "#/components/schemas/Plan"
+          }
+        },
+        "required": [
+          "period",
+          "scope",
+          "autoRenewal",
+          "account"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "EditSubscriptionInput": {
+        "properties": {
+          "autoRenewal": {
+            "type": "boolean"
+          },
+          "paymentDriverId": {
+            "type": "string"
+          },
+          "paymentMethodId": {
+            "type": "string"
+          },
+          "externalSubscriptionId": {
+            "type": "string"
+          }
+        },
+        "type": "object",
+        "additionalProperties": true
+      },
+      "RenewSubscriptionInput": {
+        "properties": {
+          "chargeSubscription": {
+            "type": "boolean"
+          },
+          "force": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "chargeSubscription"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "CursorPage_APISubscription_": {
+        "properties": {
+          "totalItemsCount": {
+            "type": "number",
+            "format": "double"
+          },
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/APISubscription"
+            },
+            "type": "array"
+          },
+          "totalPagesCount": {
+            "type": "number",
+            "format": "double"
+          },
+          "hasNextPage": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "totalItemsCount",
+          "items",
+          "totalPagesCount",
+          "hasNextPage"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "CustomSubscriptionInput": {
+        "properties": {
+          "period": {
+            "$ref": "#/components/schemas/BillingPeriod"
+          },
+          "startDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "endDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "scope": {
+            "$ref": "#/components/schemas/BillingScope"
+          },
+          "autoRenewal": {
+            "type": "boolean"
+          },
+          "account": {
+            "type": "string"
+          },
+          "plan": {
+            "$ref": "#/components/schemas/Plan"
+          }
+        },
+        "required": [
+          "period",
+          "startDate",
+          "endDate",
+          "scope",
+          "autoRenewal",
+          "account",
+          "plan"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "SubscriptionUpgradeInput": {
+        "properties": {
+          "period": {
+            "$ref": "#/components/schemas/BillingPeriod"
+          },
+          "startDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "autoRenewal": {
+            "type": "boolean"
+          },
+          "planKey": {
+            "type": "string"
+          },
+          "paymentDriverId": {
+            "type": "string"
+          },
+          "paymentMethodId": {
+            "type": "string"
+          },
+          "driverId": {
+            "type": "string"
+          },
+          "methodId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "period",
+          "planKey"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "SubscriptionExtensionInput": {
+        "properties": {
+          "resource": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "number",
+            "format": "double"
+          },
+          "autoRenewal": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "resource",
+          "amount"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "PaymentDriverTypes": {
+        "enum": [
+          "credits",
+          "stripe",
+          "azureMarketplace",
+          "nop"
+        ],
+        "type": "string"
+      },
+      "UsageLog": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "usage": {
+            "type": "number",
+            "format": "double"
+          },
+          "project": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "date",
+          "usage",
+          "project"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "ResourceUsage": {
+        "properties": {
+          "key": {
+            "type": "string"
+          },
+          "used": {
+            "type": "number",
+            "format": "double"
+          },
+          "usageLog": {
+            "items": {
+              "$ref": "#/components/schemas/UsageLog"
+            },
+            "type": "array"
+          },
+          "dateDepleted": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "key",
+          "used",
+          "usageLog"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "UsageReport": {
+        "properties": {
+          "subscriptionId": {
+            "type": "string"
+          },
+          "plan": {
+            "$ref": "#/components/schemas/Plan"
+          },
+          "period": {
+            "$ref": "#/components/schemas/BillingPeriod"
+          },
+          "startDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "endDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "account": {
+            "type": "string"
+          },
+          "usage": {
+            "items": {
+              "$ref": "#/components/schemas/ResourceUsage"
+            },
+            "type": "array"
+          },
+          "autoRenewal": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "subscriptionId",
+          "plan",
+          "period",
+          "startDate",
+          "endDate",
+          "account",
+          "usage",
+          "autoRenewal"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "UsageResourcesReport": {
+        "properties": {
+          "planName": {
+            "type": "string"
+          },
+          "planKey": {
+            "type": "string"
+          },
+          "resources": {
+            "items": {
+              "$ref": "#/components/schemas/BillingResourceKey"
+            },
+            "type": "array"
+          }
+        },
+        "required": [
+          "planName",
+          "planKey",
+          "resources"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "AzureWebhookEvent": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "activityId": {
+            "type": "string"
+          },
+          "publisherId": {
+            "type": "string"
+          },
+          "offerId": {
+            "type": "string"
+          },
+          "planId": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "subscriptionId": {
+            "type": "string"
+          },
+          "timeStamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "action": {
+            "type": "string",
+            "enum": [
+              "ChangePlan",
+              "ChangeQuantity",
+              "Renew",
+              "Suspend",
+              "Unsubscribe",
+              "Reinstate"
+            ]
+          },
+          "status": {
+            "type": "string"
+          },
+          "operationRequestSource": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "string",
+                "enum": [
+                  "Azure"
+                ]
+              }
+            ],
+            "nullable": true
+          },
+          "subscription": {
+            "properties": {
+              "lastModified": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "created": {
+                "type": "string",
+                "format": "date-time",
+                "nullable": true
+              },
+              "autoRenew": {
+                "type": "boolean"
+              },
+              "term": {
+                "properties": {
+                  "chargeDuration": {
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "termUnit": {
+                    "type": "string"
+                  },
+                  "endDate": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "startDate": {
+                    "type": "string",
+                    "format": "date-time"
+                  }
+                },
+                "required": [
+                  "termUnit",
+                  "endDate",
+                  "startDate"
+                ],
+                "type": "object"
+              },
+              "saasSubscriptionStatus": {
+                "type": "string"
+              },
+              "sandboxType": {
+                "type": "string"
+              },
+              "isTest": {
+                "type": "boolean"
+              },
+              "isFreeTrial": {
+                "type": "boolean"
+              },
+              "sessionMode": {
+                "type": "string"
+              },
+              "allowedCustomerOperations": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "purchaser": {
+                "properties": {
+                  "puid": {
+                    "type": "string",
+                    "nullable": true
+                  },
+                  "tenantId": {
+                    "type": "string"
+                  },
+                  "objectId": {
+                    "type": "string"
+                  },
+                  "emailId": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "tenantId",
+                  "objectId",
+                  "emailId"
+                ],
+                "type": "object"
+              },
+              "beneficiary": {
+                "properties": {
+                  "puid": {
+                    "type": "string",
+                    "nullable": true
+                  },
+                  "tenantId": {
+                    "type": "string"
+                  },
+                  "objectId": {
+                    "type": "string"
+                  },
+                  "emailId": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "tenantId",
+                  "objectId",
+                  "emailId"
+                ],
+                "type": "object"
+              },
+              "quantity": {
+                "type": "number",
+                "format": "double",
+                "nullable": true
+              },
+              "planId": {
+                "type": "string"
+              },
+              "offerId": {
+                "type": "string"
+              },
+              "publisherId": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "lastModified",
+              "autoRenew",
+              "term",
+              "saasSubscriptionStatus",
+              "sandboxType",
+              "isTest",
+              "isFreeTrial",
+              "sessionMode",
+              "allowedCustomerOperations",
+              "purchaser",
+              "beneficiary",
+              "planId",
+              "offerId",
+              "publisherId",
+              "name",
+              "id"
+            ],
+            "type": "object"
+          },
+          "purchaseToken": {
+            "type": "string",
+            "nullable": true
+          },
+          "errorMessage": {
+            "type": "string",
+            "nullable": true
+          },
+          "errorStatusCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "operationRequestedSource": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "required": [
+          "id",
+          "activityId",
+          "publisherId",
+          "offerId",
+          "planId",
+          "subscriptionId",
+          "timeStamp",
+          "action",
+          "status",
+          "subscription"
+        ],
+        "type": "object",
+        "additionalProperties": true
       }
     },
     "securitySchemes": {
@@ -28152,6 +30084,1018 @@
           {
             "lang": "Python",
             "source": "\n# \n# Redistribute an assignment.\n# \n# **Prerequisites**: You must be in the role of an *owner*, *developer*, or *annotation manager* who has been assigned as *owner* of the annotation task.\n# \n# \n# :param dtlpy.entities.assignment.Workload workload: list of WorkloadUnit objects. Customize distribution (percentage) between the task assignees. For example: [dl.WorkloadUnit(annotator@hi.com, 80), dl.WorkloadUnit(annotator2@hi.com, 20)]\n# :param dtlpy.entities.assignment.Assignment assignment: assignment object\n# :param str assignment_id: the Id of the assignment\n# :param dtlpy.entities.task.Task task: the task object that include the assignment\n# :param str task_id: the Id of the task that include the assignment\n# :param bool wait: wait until redistribute assignment finish\n# :return: Assignment object\n# :rtype: dtlpy.entities.assignment.Assignment assignment\n# \n# assignment = task.assignments.redistribute(workload=dl.Workload([dl.WorkloadUnit(assignee_id=\"annotator1@dataloop.ai\", load=50),\n# dl.WorkloadUnit(assignee_id=\"annotator2@dataloop.ai\", load=50)]))\n# "
+          }
+        ]
+      }
+    },
+    "/audit/logs": {
+      "post": {
+        "operationId": "Query Audit Logs",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuditLogsCursorPage"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Audit"
+        ],
+        "security": [],
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "descending": {
+                    "type": "boolean"
+                  },
+                  "sortBy": {
+                    "type": "string"
+                  },
+                  "pageSize": {
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "page": {
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "toDate": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "fromDate": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "user": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "items": {
+                          "type": "string"
+                        },
+                        "type": "array"
+                      }
+                    ]
+                  },
+                  "action": {
+                    "type": "string"
+                  },
+                  "entityName": {
+                    "type": "string"
+                  },
+                  "entityType": {
+                    "type": "string"
+                  },
+                  "id": {
+                    "type": "string"
+                  },
+                  "orgId": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "orgId"
+                ],
+                "type": "object"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/audit/logs/csv": {
+      "get": {
+        "operationId": "Get Audit Logs CSV",
+        "responses": {
+          "204": {
+            "description": "No content"
+          }
+        },
+        "tags": [
+          "Audit"
+        ],
+        "security": [],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "orgId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "fromDate",
+            "required": true,
+            "schema": {
+              "format": "date-time",
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "toDate",
+            "required": true,
+            "schema": {
+              "format": "date-time",
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "entityType",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "entityName",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "entityId",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "action",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "user",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "sortBy",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "descending",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/billing": {
+      "get": {
+        "operationId": "List Usage Entries",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/APIUsageEntry"
+                  },
+                  "type": "array"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Billing"
+        ],
+        "security": [],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "project",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "startDate",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "endDate",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "monthly",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/billing/account/{account}/alerts/{id}": {
+      "get": {
+        "operationId": "Get Alert",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIAlert"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Billing"
+        ],
+        "security": [],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "account",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/billing/account/{account}/alerts/{id}/status": {
+      "patch": {
+        "operationId": "Update Alert",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIAlert"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Billing"
+        ],
+        "security": [],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "account",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "status": {
+                    "$ref": "#/components/schemas/AlertStatus"
+                  }
+                },
+                "required": [
+                  "status"
+                ],
+                "type": "object"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/billing/account/{id}": {
+      "get": {
+        "operationId": "List Usage Entries",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/APIUsageEntry"
+                  },
+                  "type": "array"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Billing"
+        ],
+        "security": [],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "startDate",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "endDate",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "monthly",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/billing/account/{id}/alerts/query": {
+      "post": {
+        "operationId": "ListAccountAlerts",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/APIAlert"
+                  },
+                  "type": "array"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Billing"
+        ],
+        "security": [],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "sort": {
+                    "$ref": "#/components/schemas/FieldSort"
+                  },
+                  "pageSize": {
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "page": {
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "tier": {
+                    "$ref": "#/components/schemas/AlertTier"
+                  },
+                  "code": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "$ref": "#/components/schemas/AlertStatus"
+                  },
+                  "orgId": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "items": {
+                          "type": "string"
+                        },
+                        "type": "array"
+                      }
+                    ]
+                  },
+                  "accountId": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "items": {
+                          "type": "string"
+                        },
+                        "type": "array"
+                      }
+                    ]
+                  },
+                  "subscriptionId": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "items": {
+                          "type": "string"
+                        },
+                        "type": "array"
+                      }
+                    ]
+                  },
+                  "_id": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "items": {
+                          "type": "string"
+                        },
+                        "type": "array"
+                      }
+                    ]
+                  }
+                },
+                "type": "object"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/billing/account/{id}/apicalls/csv": {
+      "get": {
+        "operationId": "Get Account API Calls CSV",
+        "responses": {
+          "204": {
+            "description": "No content"
+          }
+        },
+        "tags": [
+          "Billing"
+        ],
+        "security": [],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "startDate",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "endDate",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "monthly",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "skipSumming",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/billing/account/{id}/apicalls/json": {
+      "get": {
+        "operationId": "Get Account API Calls JSON",
+        "responses": {
+          "204": {
+            "description": "No content"
+          }
+        },
+        "tags": [
+          "Billing"
+        ],
+        "security": [],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "startDate",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "endDate",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "monthly",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/billing/account/{id}/csv": {
+      "get": {
+        "operationId": "List Usage CSV",
+        "responses": {
+          "204": {
+            "description": "No content"
+          }
+        },
+        "tags": [
+          "Billing"
+        ],
+        "security": [],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "startDate",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "endDate",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "monthly",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/billing/accounts": {
+      "post": {
+        "operationId": "Create Billing Account",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DBBillingAccount"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Billing"
+        ],
+        "security": [],
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PartialBillingAccount"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/billing/accounts/dl/{id}": {
+      "get": {
+        "operationId": "Get Billing Account By DLAccount",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DBBillingAccount"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Billing"
+        ],
+        "security": [],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/billing/accounts/{id}": {
+      "get": {
+        "operationId": "Get Billing Account",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DBBillingAccount"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Billing"
+        ],
+        "security": [],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "patch": {
+        "operationId": "Edit Billing Account",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DBBillingAccount"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Billing"
+        ],
+        "security": [],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PartialBillingAccount"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/billing/accounts/{id}/payments/drivers": {
+      "get": {
+        "operationId": "List Payment Drivers",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/DBPaymentDriverConfiguration"
+                  },
+                  "type": "array"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Billing"
+        ],
+        "security": [],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "format": "double",
+              "type": "number"
+            }
+          },
+          {
+            "in": "query",
+            "name": "pageSize",
+            "required": false,
+            "schema": {
+              "format": "double",
+              "type": "number"
+            }
+          }
+        ]
+      }
+    },
+    "/billing/accounts/{id}/payments/methods": {
+      "get": {
+        "operationId": "List Payment Methods",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/PaymentMethod"
+                  },
+                  "type": "array"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Billing"
+        ],
+        "security": [],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "format": "double",
+              "type": "number"
+            }
+          },
+          {
+            "in": "query",
+            "name": "pageSize",
+            "required": false,
+            "schema": {
+              "format": "double",
+              "type": "number"
+            }
+          }
+        ]
+      }
+    },
+    "/billing/accounts/{id}/payments/methods/{methodid}": {
+      "get": {
+        "operationId": "Get Payment Method",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaymentMethod"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Billing"
+        ],
+        "security": [],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "methodid",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "Delete Payment Method",
+        "responses": {
+          "204": {
+            "description": "No content"
+          }
+        },
+        "tags": [
+          "Billing"
+        ],
+        "security": [],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "methodid",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/billing/{id}": {
+      "get": {
+        "operationId": "Get Usage Entry",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIUsageEntry"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Billing"
+        ],
+        "security": [],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ]
       }
@@ -34464,6 +37408,149 @@
         ]
       }
     },
+    "/invoices": {
+      "get": {
+        "operationId": "List Account Invoices",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/Invoice"
+                  },
+                  "type": "array"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "tags": [
+          "Invoices"
+        ],
+        "security": [],
+        "parameters": [
+          {
+            "description": "DL account ID",
+            "in": "query",
+            "name": "account",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Invoice status, one of 'submitted', 'paid', 'partiallyPaid', 'debt', 'Failed Payment'",
+            "in": "query",
+            "name": "status",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Date string, format: 'YYYY-MM-DD'. '2022-06-30' will be June 30th 2022",
+            "in": "query",
+            "name": "fromDate",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Date string, format: 'YYYY-MM-DD'. '2022-06-30' will be June 30th 2022",
+            "in": "query",
+            "name": "toDate",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/invoices/{id}": {
+      "get": {
+        "operationId": "Get Invoice",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Invoice"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "description": "Retrieves the details of an invoice.\n\nSupply the unique invoice ID to fetch its details.",
+        "tags": [
+          "Invoices"
+        ],
+        "security": [],
+        "parameters": [
+          {
+            "description": "ID of the invoice to fetch",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/invoices/{id}/stream": {
+      "get": {
+        "operationId": "Stream Invoice Pdf",
+        "responses": {
+          "204": {
+            "description": "No content"
+          }
+        },
+        "tags": [
+          "Invoices"
+        ],
+        "security": [],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
     "/items/{id}": {
       "get": {
         "operationId": "Get Item",
@@ -40586,6 +43673,133 @@
         ]
       }
     },
+    "/plans": {
+      "get": {
+        "operationId": "List All Plans",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/Plan"
+                  },
+                  "type": "array"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Plans"
+        ],
+        "security": [],
+        "parameters": []
+      }
+    },
+    "/plans/store/metrics": {
+      "get": {
+        "operationId": "List All Plan Metrics",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/APIBillableResource"
+                  },
+                  "type": "array"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Plans"
+        ],
+        "security": [],
+        "parameters": []
+      }
+    },
+    "/plans/store/metrics/query": {
+      "post": {
+        "operationId": "Query Billing Metrics",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/APIBillableResource"
+                  },
+                  "type": "array"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Plans"
+        ],
+        "security": [],
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "keys": {
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  }
+                },
+                "required": [
+                  "keys"
+                ],
+                "type": "object"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/plans/{id}": {
+      "get": {
+        "operationId": "Get Plan",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Plan"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Plans"
+        ],
+        "security": [],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
     "/project/{projectId}/guests": {
       "get": {
         "operationId": "List project guests",
@@ -44249,6 +47463,102 @@
         }
       }
     },
+    "/subscriptions": {
+      "get": {
+        "operationId": "List Subscriptions",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CursorPage_APISubscription_"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Subscriptions"
+        ],
+        "security": [],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "org",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "pageOffset",
+            "required": false,
+            "schema": {
+              "format": "double",
+              "type": "number"
+            }
+          },
+          {
+            "in": "query",
+            "name": "pageSize",
+            "required": false,
+            "schema": {
+              "format": "double",
+              "type": "number"
+            }
+          },
+          {
+            "in": "query",
+            "name": "status",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/subscriptions/{id}": {
+      "get": {
+        "operationId": "Get Subscription",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APISubscription"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Subscriptions"
+        ],
+        "security": [],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
     "/tasks": {
       "post": {
         "operationId": "Create Task",
@@ -45349,6 +48659,143 @@
         ],
         "security": [],
         "parameters": []
+      }
+    },
+    "/usage/accounts/{id}": {
+      "get": {
+        "operationId": "Get Account Usage Report",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/UsageReport"
+                  },
+                  "type": "array"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Usage"
+        ],
+        "security": [],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "startDate",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "endDate",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/usage/accounts/{id}/resources": {
+      "get": {
+        "operationId": "Get Account Usage Resources Report",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UsageResourcesReport"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Usage"
+        ],
+        "security": [],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "startDate",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "endDate",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/usage/orgs/{id}": {
+      "get": {
+        "operationId": "Get Org Usage CSV",
+        "responses": {
+          "204": {
+            "description": "No content"
+          }
+        },
+        "tags": [
+          "Usage"
+        ],
+        "security": [],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "startDate",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "endDate",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       }
     },
     "/users/groupsProjects": {
