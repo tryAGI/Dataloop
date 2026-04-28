@@ -88,16 +88,6 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public AuditClient Audit { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public BillingClient Billing { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         public CompositionsClient Compositions { get; }
 
         /// <summary>
@@ -168,11 +158,6 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public InvoicesClient Invoices { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         public ItemAnnotationsClient ItemAnnotations { get; }
 
         /// <summary>
@@ -238,11 +223,6 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public PlansClient Plans { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         public ProjectsClient Projects { get; }
 
         /// <summary>
@@ -293,11 +273,6 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public SubscriptionsClient Subscriptions { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         public TasksClient Tasks { get; }
 
         /// <summary>
@@ -309,11 +284,6 @@ namespace Dataloop
         /// 
         /// </summary>
         public TriggersClient Triggers { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public UsageClient Usage { get; }
 
         /// <summary>
         /// 
