@@ -753,54 +753,6 @@ namespace Dataloop
 
             typeof(global::Dataloop.JsonConverters.PartialSettingScopeRoleNullableJsonConverter),
 
-            typeof(global::Dataloop.JsonConverters.PodTypeJsonConverter),
-
-            typeof(global::Dataloop.JsonConverters.PodTypeNullableJsonConverter),
-
-            typeof(global::Dataloop.JsonConverters.AlertStatusJsonConverter),
-
-            typeof(global::Dataloop.JsonConverters.AlertStatusNullableJsonConverter),
-
-            typeof(global::Dataloop.JsonConverters.FieldSortFieldJsonConverter),
-
-            typeof(global::Dataloop.JsonConverters.FieldSortFieldNullableJsonConverter),
-
-            typeof(global::Dataloop.JsonConverters.FieldSortDirectionJsonConverter),
-
-            typeof(global::Dataloop.JsonConverters.FieldSortDirectionNullableJsonConverter),
-
-            typeof(global::Dataloop.JsonConverters.ResourceAuditEventTypeJsonConverter),
-
-            typeof(global::Dataloop.JsonConverters.ResourceAuditEventTypeNullableJsonConverter),
-
-            typeof(global::Dataloop.JsonConverters.TaxTypeJsonConverter),
-
-            typeof(global::Dataloop.JsonConverters.TaxTypeNullableJsonConverter),
-
-            typeof(global::Dataloop.JsonConverters.PaymentDriverTypeJsonConverter),
-
-            typeof(global::Dataloop.JsonConverters.PaymentDriverTypeNullableJsonConverter),
-
-            typeof(global::Dataloop.JsonConverters.InvoiceStatusJsonConverter),
-
-            typeof(global::Dataloop.JsonConverters.InvoiceStatusNullableJsonConverter),
-
-            typeof(global::Dataloop.JsonConverters.CurrencyJsonConverter),
-
-            typeof(global::Dataloop.JsonConverters.CurrencyNullableJsonConverter),
-
-            typeof(global::Dataloop.JsonConverters.PaymentDriverTypesJsonConverter),
-
-            typeof(global::Dataloop.JsonConverters.PaymentDriverTypesNullableJsonConverter),
-
-            typeof(global::Dataloop.JsonConverters.AzureWebhookEventActionJsonConverter),
-
-            typeof(global::Dataloop.JsonConverters.AzureWebhookEventActionNullableJsonConverter),
-
-            typeof(global::Dataloop.JsonConverters.AzureWebhookEventOperationRequestSourceJsonConverter),
-
-            typeof(global::Dataloop.JsonConverters.AzureWebhookEventOperationRequestSourceNullableJsonConverter),
-
             typeof(global::Dataloop.JsonConverters.ListExportHistoryRequestSortOrderJsonConverter),
 
             typeof(global::Dataloop.JsonConverters.ListExportHistoryRequestSortOrderNullableJsonConverter),
@@ -1084,18 +1036,6 @@ namespace Dataloop
             typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.Role?, global::Dataloop.OrgRole?, global::Dataloop.PartialSettingScopeRole?>),
 
             typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUserSetting, global::Dataloop.APIFeatureFlag>),
-
-            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
-
-            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::Dataloop.AzureWebhookEventOperationRequestSource?>),
-
-            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
-
-            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
-
-            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
-
-            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
 
             typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
 
@@ -2398,86 +2338,6 @@ namespace Dataloop
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.MigrationSpecVariant2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.RemoveSettingTraceMigrationSpec), TypeInfoPropertyName = "RemoveSettingTraceMigrationSpec2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.RemoveSettingTraceMigrationSpecVariant2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.UIHours))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.APICallResourceDescriptor))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.APICallSourceDescriptor))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, global::Dataloop.APICallResourceDescriptor>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.APICallDescriptor))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.StorageModificationSourceDescriptor))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.StorageModificationDescriptor))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.StorageDatasetDescriptor))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.StorageDescriptor))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dataloop.StorageDatasetDescriptor>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.PodType), TypeInfoPropertyName = "PodType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.FaasUsageServiceInstanceDescriptor))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.FaasGlobalServiceDescriptor))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.FaasUsageDescriptor))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dataloop.FaasUsageServiceInstanceDescriptor>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dataloop.FaasGlobalServiceDescriptor>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.ItemsCount))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.IngestedDatapointsDescriptor))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.APIUsageEntry))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AlertStatus), TypeInfoPropertyName = "AlertStatus2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.APIAlert))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.FieldSort))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.FieldSortField), TypeInfoPropertyName = "FieldSortField2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.FieldSortDirection), TypeInfoPropertyName = "FieldSortDirection2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.ResourceAuditEventType), TypeInfoPropertyName = "ResourceAuditEventType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.ResourceAuditLog))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.ResourceAuditLogCtx))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AuditLogsCursorPage))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dataloop.ResourceAuditLog>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.Address))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.TaxType), TypeInfoPropertyName = "TaxType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.TaxData))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.DBBillingAccount))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.PartialBillingAccount))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.PartialBillingAccountTaxData))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.PaymentDriverType), TypeInfoPropertyName = "PaymentDriverType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.DBPaymentDriverConfiguration))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.CreditCard))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.PaymentMethod))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.ContactAddress))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.ContactInfo))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.LineItem))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.InvoiceStatus), TypeInfoPropertyName = "InvoiceStatus2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.Currency), TypeInfoPropertyName = "Currency2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.PaymentDetails))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.Invoice))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dataloop.ContactInfo>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dataloop.LineItem>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.InvoiceBilledPeriod))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dataloop.PaymentDetails>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.RangeOrFeatureTier))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.RangeOrFeatureTierRange))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.OverQuota))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.APIBillableResource))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dataloop.RangeOrFeatureTier>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.BillingScope))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.SubscriptionInput))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.EditSubscriptionInput))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.RenewSubscriptionInput))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.CursorPageAPISubscription))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dataloop.APISubscription>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.CustomSubscriptionInput))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.SubscriptionUpgradeInput))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.SubscriptionExtensionInput))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.PaymentDriverTypes), TypeInfoPropertyName = "PaymentDriverTypes2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.UsageLog))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.ResourceUsage))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dataloop.UsageLog>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.UsageReport))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dataloop.ResourceUsage>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.UsageResourcesReport))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dataloop.BillingResourceKey>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AzureWebhookEvent))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AzureWebhookEventAction), TypeInfoPropertyName = "AzureWebhookEventAction2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<string, global::Dataloop.AzureWebhookEventOperationRequestSource?>), TypeInfoPropertyName = "AnyOfStringAzureWebhookEventOperationRequestSource2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AzureWebhookEventOperationRequestSource), TypeInfoPropertyName = "AzureWebhookEventOperationRequestSource2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AzureWebhookEventSubscription))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AzureWebhookEventSubscriptionTerm))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AzureWebhookEventSubscriptionPurchaser))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AzureWebhookEventSubscriptionBeneficiary))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.ArchiveAnnotationToStorageRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.RestoreArchivedAnnotationToDBRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.GetProjectsActiveCountersRequest))]
@@ -2487,9 +2347,6 @@ namespace Dataloop
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.SetItemStatusBulkTaskRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.SetItemStatusBulkAssignmentRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.GetAssignmentFieldsRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.QueryAuditLogsRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.UpdateAlertRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.ListAccountAlertsRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.InstallRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.UninstallRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AllOf<global::Dataloop.PartialICompute, global::Dataloop.UpdateComputeRequest2>), TypeInfoPropertyName = "AllOfPartialIComputeUpdateComputeRequest22")]
@@ -2568,7 +2425,6 @@ namespace Dataloop
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.InstallRequest2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.UninstallRequest2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.LogsRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.QueryBillingMetricsRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.UpdateProjectGuestRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AddOrgToGuestRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.PatchProjectRequest))]
@@ -2604,10 +2460,6 @@ namespace Dataloop
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::Dataloop.APIApp, object>), TypeInfoPropertyName = "AnyOfAPIAppObject2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::Dataloop.APICommand, global::System.Collections.Generic.IList<global::Dataloop.APIAssignment>>), TypeInfoPropertyName = "AnyOfAPICommandIListAPIAssignment2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::Dataloop.APICommand, global::Dataloop.APIAssignment>), TypeInfoPropertyName = "AnyOfAPICommandAPIAssignment2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dataloop.APIUsageEntry>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dataloop.APIAlert>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dataloop.DBPaymentDriverConfiguration>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dataloop.PaymentMethod>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::Dataloop.APICommand, object>), TypeInfoPropertyName = "AnyOfAPICommandObject2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dataloop.APIDataset>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.GetDatasetsByProjectIdsResponse))]
@@ -2624,7 +2476,6 @@ namespace Dataloop
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::Dataloop.APIExecution, global::Dataloop.PiperSettingsCommands>), TypeInfoPropertyName = "AnyOfAPIExecutionPiperSettingsCommands2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::Dataloop.APIExecution, global::Dataloop.APICommand>), TypeInfoPropertyName = "AnyOfAPIExecutionAPICommand2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dataloop.AuthUserAttributes>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dataloop.Invoice>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.PublishModelMetricsResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, global::Dataloop.Error>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.ModelsDatasetsCountResponse))]
@@ -2645,8 +2496,6 @@ namespace Dataloop
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::Dataloop.APIPipelineState, global::Dataloop.APICommand>), TypeInfoPropertyName = "AnyOfAPIPipelineStateAPICommand2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.TerminateResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dataloop.PipelineExecutionLogs>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dataloop.Plan>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dataloop.APIBillableResource>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dataloop.APIGuest>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::System.Collections.Generic.IList<global::Dataloop.APIMembership>, object>), TypeInfoPropertyName = "AnyOfIListAPIMembershipObject2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dataloop.APIMembership>))]
@@ -2667,7 +2516,6 @@ namespace Dataloop
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.GetServiceIntegrationEnvResponseEnvItem))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::Dataloop.APIFeatureFlag, global::Dataloop.APIUserSetting>), TypeInfoPropertyName = "AnyOfAPIFeatureFlagAPIUserSetting2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dataloop.AnyOf<global::Dataloop.APIFeatureFlag, global::Dataloop.APIUserSetting>>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dataloop.UsageReport>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dataloop.GetMyGroupProjectsResponseItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.GetMyGroupProjectsResponseItem))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::Dataloop.APIUser, object>), TypeInfoPropertyName = "AnyOfAPIUserObject2")]
@@ -2839,18 +2687,6 @@ namespace Dataloop
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.DpkAttributeValueDefinition>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.PreviewsComponentsPatchPipelineTemplate>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.AnyOf<global::Dataloop.APIUserSetting, global::Dataloop.APIFeatureFlag>>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.StorageDatasetDescriptor>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.FaasUsageServiceInstanceDescriptor>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.FaasGlobalServiceDescriptor>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.ResourceAuditLog>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.ContactInfo>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.LineItem>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.PaymentDetails>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.RangeOrFeatureTier>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.APISubscription>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.UsageLog>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.ResourceUsage>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.BillingResourceKey>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::Dataloop.MoveItemsRequest, global::System.Collections.Generic.List<string>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::Dataloop.APIAnnotationRequest, global::System.Collections.Generic.List<global::Dataloop.APIAnnotationRequest>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::System.Collections.Generic.List<global::Dataloop.ImportItemRequest>, global::Dataloop.ImportItemsToDatasetRequest>))]
@@ -2870,10 +2706,6 @@ namespace Dataloop
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.APIApiKey>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.DpkAttributesDefinition>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::Dataloop.APICommand, global::System.Collections.Generic.List<global::Dataloop.APIAssignment>>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.APIUsageEntry>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.APIAlert>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.DBPaymentDriverConfiguration>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.PaymentMethod>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.APIDataset>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.APIExportHistory>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.APIAnnotation>))]
@@ -2881,7 +2713,6 @@ namespace Dataloop
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.AnyOf<global::Dataloop.APIDatasetFileItem, global::Dataloop.APIDatasetDirectoryItem>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.APIDriverConfiguration>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.AuthUserAttributes>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.Invoice>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.APIOrg>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.AnyOf<global::Dataloop.GetAvailableIntegrationsResponseItemVariant1, global::Dataloop.GetAvailableIntegrationsResponseItemVariant2>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.GetAvailableIntegrationsResponseItemVariant1Option>))]
@@ -2889,8 +2720,6 @@ namespace Dataloop
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.APIOrgUser>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.QueryPipelineTableResponseItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.PipelineExecutionLogs>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.Plan>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.APIBillableResource>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.APIGuest>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::System.Collections.Generic.List<global::Dataloop.APIMembership>, object>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.APIMembership>))]
@@ -2900,7 +2729,6 @@ namespace Dataloop
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.GetGlobalServicesResponseItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.GetServiceIntegrationEnvResponseEnvItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.AnyOf<global::Dataloop.APIFeatureFlag, global::Dataloop.APIUserSetting>>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.UsageReport>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.GetMyGroupProjectsResponseItem>))]
     public sealed partial class SourceGenerationContext : global::System.Text.Json.Serialization.JsonSerializerContext
     {
