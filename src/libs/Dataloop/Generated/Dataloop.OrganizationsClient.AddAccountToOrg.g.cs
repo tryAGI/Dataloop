@@ -129,8 +129,8 @@ namespace Dataloop
                 PrepareAddAccountToOrgRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    orgId: orgId,
-                    accountId: accountId);
+                    orgId: orgId!,
+                    accountId: accountId!);
 
                 return __httpRequest;
             }

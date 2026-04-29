@@ -147,8 +147,8 @@ namespace Dataloop
                 PrepareGetExecutionRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id,
-                    sync: sync);
+                    id: id!,
+                    sync: sync!);
 
                 return __httpRequest;
             }

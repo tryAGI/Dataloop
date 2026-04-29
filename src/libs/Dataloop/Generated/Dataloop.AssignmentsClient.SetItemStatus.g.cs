@@ -143,8 +143,8 @@ namespace Dataloop
                 PrepareSetItemStatusRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id,
-                    itemId: itemId,
+                    id: id!,
+                    itemId: itemId!,
                     request: request);
 
                 return __httpRequest;

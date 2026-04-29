@@ -150,7 +150,7 @@ namespace Dataloop
                 PrepareGetDatasetItemsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    datasetId: datasetId,
+                    datasetId: datasetId!,
                     query: query,
                     sort: sort,
                     pageOffset: pageOffset,

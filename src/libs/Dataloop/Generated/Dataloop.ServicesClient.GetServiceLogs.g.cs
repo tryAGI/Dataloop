@@ -146,8 +146,8 @@ namespace Dataloop
                 PrepareGetServiceLogsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id,
-                    verbose: verbose,
+                    id: id!,
+                    verbose: verbose!,
                     request: request);
 
                 return __httpRequest;

@@ -124,7 +124,7 @@ namespace Dataloop
                 PrepareGetApiKeyRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    keyId: keyId);
+                    keyId: keyId!);
 
                 return __httpRequest;
             }

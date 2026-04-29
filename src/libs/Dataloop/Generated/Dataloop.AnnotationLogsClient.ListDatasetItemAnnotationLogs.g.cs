@@ -129,8 +129,8 @@ namespace Dataloop
                 PrepareListDatasetItemAnnotationLogsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    itemId: itemId,
-                    datasetId: datasetId);
+                    itemId: itemId!,
+                    datasetId: datasetId!);
 
                 return __httpRequest;
             }

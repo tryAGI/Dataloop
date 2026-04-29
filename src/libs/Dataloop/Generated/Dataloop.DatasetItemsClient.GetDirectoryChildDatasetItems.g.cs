@@ -143,10 +143,10 @@ namespace Dataloop
                 PrepareGetDirectoryChildDatasetItemsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id,
+                    id: id!,
                     pageOffset: pageOffset,
                     pageSize: pageSize,
-                    datasetId: datasetId);
+                    datasetId: datasetId!);
 
                 return __httpRequest;
             }

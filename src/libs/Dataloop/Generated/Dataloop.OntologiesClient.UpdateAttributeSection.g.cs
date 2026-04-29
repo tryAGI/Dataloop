@@ -143,8 +143,8 @@ namespace Dataloop
                 PrepareUpdateAttributeSectionRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    attributeId: attributeId,
-                    id: id,
+                    attributeId: attributeId!,
+                    id: id!,
                     request: request);
 
                 return __httpRequest;

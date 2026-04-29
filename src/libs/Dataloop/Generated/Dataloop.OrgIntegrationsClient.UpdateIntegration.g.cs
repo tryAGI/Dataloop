@@ -166,7 +166,7 @@ namespace Dataloop
                 PrepareUpdateIntegrationRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    orgId: orgId,
+                    orgId: orgId!,
                     request: request);
 
                 return __httpRequest;

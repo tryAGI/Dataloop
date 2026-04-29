@@ -150,7 +150,7 @@ namespace Dataloop
                 PrepareGetPackageRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id,
+                    id: id!,
                     version: version);
 
                 return __httpRequest;

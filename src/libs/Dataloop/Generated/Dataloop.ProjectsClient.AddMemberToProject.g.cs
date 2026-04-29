@@ -167,8 +167,8 @@ namespace Dataloop
                 PrepareAddMemberToProjectRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    projectId: projectId,
-                    userId: userId,
+                    projectId: projectId!,
+                    userId: userId!,
                     allowUpdate: allowUpdate,
                     request: request);
 

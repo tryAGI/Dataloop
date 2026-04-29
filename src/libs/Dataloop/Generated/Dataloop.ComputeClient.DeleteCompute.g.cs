@@ -134,7 +134,7 @@ namespace Dataloop
                 PrepareDeleteComputeRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    computeId: computeId,
+                    computeId: computeId!,
                     skipDestroy: skipDestroy);
 
                 return __httpRequest;

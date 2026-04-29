@@ -146,8 +146,8 @@ namespace Dataloop
                 PrepareRemoveIntegrationRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    orgId: orgId,
-                    integrationId: integrationId);
+                    orgId: orgId!,
+                    integrationId: integrationId!);
 
                 return __httpRequest;
             }

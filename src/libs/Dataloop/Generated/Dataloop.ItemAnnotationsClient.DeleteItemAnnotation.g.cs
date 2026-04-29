@@ -124,8 +124,8 @@ namespace Dataloop
                 PrepareDeleteItemAnnotationRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    annotationId: annotationId,
-                    itemId: itemId);
+                    annotationId: annotationId!,
+                    itemId: itemId!);
 
                 return __httpRequest;
             }

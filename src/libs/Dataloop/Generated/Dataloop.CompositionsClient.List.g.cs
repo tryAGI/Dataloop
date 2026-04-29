@@ -146,10 +146,10 @@ namespace Dataloop
                 PrepareListRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    filter: filter,
-                    sort: sort,
-                    page: page,
-                    pageSize: pageSize);
+                    filter: filter!,
+                    sort: sort!,
+                    page: page!,
+                    pageSize: pageSize!);
 
                 return __httpRequest;
             }

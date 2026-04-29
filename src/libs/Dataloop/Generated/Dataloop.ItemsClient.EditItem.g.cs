@@ -166,7 +166,7 @@ namespace Dataloop
                 PrepareEditItemRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id,
+                    id: id!,
                     system: system,
                     request: request);
 

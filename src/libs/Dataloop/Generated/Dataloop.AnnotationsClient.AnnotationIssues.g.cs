@@ -124,7 +124,7 @@ namespace Dataloop
                 PrepareAnnotationIssuesRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    annotationId: annotationId);
+                    annotationId: annotationId!);
 
                 return __httpRequest;
             }

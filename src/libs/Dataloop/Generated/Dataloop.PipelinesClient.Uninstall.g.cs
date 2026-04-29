@@ -152,7 +152,7 @@ namespace Dataloop
                 PrepareUninstallRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    pipelineId: pipelineId,
+                    pipelineId: pipelineId!,
                     request: request);
 
                 return __httpRequest;

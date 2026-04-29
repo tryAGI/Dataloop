@@ -142,7 +142,7 @@ namespace Dataloop
                 PrepareGetTaskScoresRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    taskId: taskId,
+                    taskId: taskId!,
                     page: page,
                     pageSize: pageSize);
 

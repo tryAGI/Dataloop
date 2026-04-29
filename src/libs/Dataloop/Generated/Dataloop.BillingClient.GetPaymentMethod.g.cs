@@ -129,8 +129,8 @@ namespace Dataloop
                 PrepareGetPaymentMethodRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id,
-                    methodid: methodid);
+                    id: id!,
+                    methodid: methodid!);
 
                 return __httpRequest;
             }

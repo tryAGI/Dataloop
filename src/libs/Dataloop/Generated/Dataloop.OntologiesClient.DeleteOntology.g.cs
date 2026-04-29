@@ -133,7 +133,7 @@ namespace Dataloop
                 PrepareDeleteOntologyRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id);
+                    id: id!);
 
                 return __httpRequest;
             }

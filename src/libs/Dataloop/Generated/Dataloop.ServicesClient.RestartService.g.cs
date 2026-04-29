@@ -127,7 +127,7 @@ namespace Dataloop
                 PrepareRestartServiceRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id,
+                    id: id!,
                     replicaName: replicaName);
 
                 return __httpRequest;

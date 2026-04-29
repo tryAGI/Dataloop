@@ -136,7 +136,7 @@ namespace Dataloop
                 PrepareUpdateComputeRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    computeId: computeId,
+                    computeId: computeId!,
                     request: request);
 
                 return __httpRequest;

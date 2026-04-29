@@ -145,9 +145,9 @@ namespace Dataloop
                 PrepareGetAccountApiCallsCsvRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id,
-                    startDate: startDate,
-                    endDate: endDate,
+                    id: id!,
+                    startDate: startDate!,
+                    endDate: endDate!,
                     monthly: monthly,
                     skipSumming: skipSumming);
 

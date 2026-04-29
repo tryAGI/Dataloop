@@ -119,7 +119,7 @@ namespace Dataloop
                 PrepareDeletePackagesRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    ids: ids);
+                    ids: ids!);
 
                 return __httpRequest;
             }

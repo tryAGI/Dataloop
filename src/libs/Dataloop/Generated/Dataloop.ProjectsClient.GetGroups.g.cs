@@ -124,7 +124,7 @@ namespace Dataloop
                 PrepareGetGroupsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    projectId: projectId);
+                    projectId: projectId!);
 
                 return __httpRequest;
             }

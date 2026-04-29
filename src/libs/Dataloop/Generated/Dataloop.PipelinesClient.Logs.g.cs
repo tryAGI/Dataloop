@@ -138,7 +138,7 @@ namespace Dataloop
                 PrepareLogsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    piplineId: piplineId,
+                    piplineId: piplineId!,
                     request: request);
 
                 return __httpRequest;

@@ -124,8 +124,8 @@ namespace Dataloop
                 PrepareDeleteLabelRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id,
-                    ontologyId: ontologyId);
+                    id: id!,
+                    ontologyId: ontologyId!);
 
                 return __httpRequest;
             }

@@ -143,8 +143,8 @@ namespace Dataloop
                 PrepareCloneDatasetItemRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id,
-                    datasetId: datasetId,
+                    id: id!,
+                    datasetId: datasetId!,
                     request: request);
 
                 return __httpRequest;

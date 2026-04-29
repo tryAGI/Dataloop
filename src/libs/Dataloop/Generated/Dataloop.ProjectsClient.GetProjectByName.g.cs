@@ -124,7 +124,7 @@ namespace Dataloop
                 PrepareGetProjectByNameRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    projectName: projectName);
+                    projectName: projectName!);
 
                 return __httpRequest;
             }

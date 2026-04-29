@@ -143,8 +143,8 @@ namespace Dataloop
                 PrepareAddGroupRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    projectId: projectId,
-                    groupId: groupId,
+                    projectId: projectId!,
+                    groupId: groupId!,
                     request: request);
 
                 return __httpRequest;

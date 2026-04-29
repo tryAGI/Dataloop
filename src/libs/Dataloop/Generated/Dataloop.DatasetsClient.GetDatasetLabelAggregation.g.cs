@@ -138,7 +138,7 @@ namespace Dataloop
                 PrepareGetDatasetLabelAggregationRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id,
+                    id: id!,
                     taskId: taskId,
                     assignmentId: assignmentId);
 

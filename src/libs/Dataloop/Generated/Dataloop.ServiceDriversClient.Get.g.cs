@@ -134,7 +134,7 @@ namespace Dataloop
                 PrepareGetRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id,
+                    id: id!,
                     archived: archived);
 
                 return __httpRequest;

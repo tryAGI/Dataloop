@@ -138,7 +138,7 @@ namespace Dataloop
                 PrepareSetItemStatusBulkTaskRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    taskId: taskId,
+                    taskId: taskId!,
                     request: request);
 
                 return __httpRequest;

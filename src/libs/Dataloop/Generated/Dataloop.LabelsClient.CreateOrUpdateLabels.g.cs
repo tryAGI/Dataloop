@@ -138,7 +138,7 @@ namespace Dataloop
                 PrepareCreateOrUpdateLabelsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    ontologyId: ontologyId,
+                    ontologyId: ontologyId!,
                     request: request);
 
                 return __httpRequest;

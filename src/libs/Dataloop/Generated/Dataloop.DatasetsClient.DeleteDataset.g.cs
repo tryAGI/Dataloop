@@ -155,7 +155,7 @@ namespace Dataloop
                 PrepareDeleteDatasetRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id,
+                    id: id!,
                     force: force,
                     targetDeleteDate: targetDeleteDate);
 

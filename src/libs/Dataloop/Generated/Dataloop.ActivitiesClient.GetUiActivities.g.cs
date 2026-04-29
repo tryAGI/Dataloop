@@ -127,7 +127,7 @@ namespace Dataloop
                 PrepareGetUiActivitiesRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    projectId: projectId);
+                    projectId: projectId!);
 
                 return __httpRequest;
             }

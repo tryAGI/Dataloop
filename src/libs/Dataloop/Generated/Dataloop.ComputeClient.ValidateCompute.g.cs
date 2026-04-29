@@ -124,7 +124,7 @@ namespace Dataloop
                 PrepareValidateComputeRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    computeId: computeId);
+                    computeId: computeId!);
 
                 return __httpRequest;
             }

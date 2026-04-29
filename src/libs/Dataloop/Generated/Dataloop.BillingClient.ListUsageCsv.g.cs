@@ -139,10 +139,10 @@ namespace Dataloop
                 PrepareListUsageCsvRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id,
-                    startDate: startDate,
-                    endDate: endDate,
-                    monthly: monthly);
+                    id: id!,
+                    startDate: startDate!,
+                    endDate: endDate!,
+                    monthly: monthly!);
 
                 return __httpRequest;
             }

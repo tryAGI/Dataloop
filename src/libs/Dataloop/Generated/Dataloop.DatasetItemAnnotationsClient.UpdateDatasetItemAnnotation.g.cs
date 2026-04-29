@@ -162,11 +162,11 @@ namespace Dataloop
                 PrepareUpdateDatasetItemAnnotationRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    annotationId: annotationId,
+                    annotationId: annotationId!,
                     system: system,
                     replace: replace,
-                    datasetId: datasetId,
-                    itemId: itemId,
+                    datasetId: datasetId!,
+                    itemId: itemId!,
                     request: request);
 
                 return __httpRequest;

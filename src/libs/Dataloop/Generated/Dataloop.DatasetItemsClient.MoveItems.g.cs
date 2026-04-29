@@ -141,8 +141,8 @@ namespace Dataloop
                 PrepareMoveItemsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    datasetId: datasetId,
-                    id: id,
+                    datasetId: datasetId!,
+                    id: id!,
                     request: request);
 
                 return __httpRequest;

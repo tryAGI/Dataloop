@@ -151,9 +151,9 @@ namespace Dataloop
                 PrepareEditDatasetItemRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id,
+                    id: id!,
                     system: system,
-                    datasetId: datasetId,
+                    datasetId: datasetId!,
                     request: request);
 
                 return __httpRequest;

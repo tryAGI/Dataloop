@@ -138,7 +138,7 @@ namespace Dataloop
                 PrepareUpdateUserOrgRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    userId: userId,
+                    userId: userId!,
                     request: request);
 
                 return __httpRequest;

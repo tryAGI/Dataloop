@@ -133,7 +133,7 @@ namespace Dataloop
                 PrepareCreateItemRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    datasetId: datasetId,
+                    datasetId: datasetId!,
                     mode: mode);
 
                 return __httpRequest;

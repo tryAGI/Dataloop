@@ -143,8 +143,8 @@ namespace Dataloop
                 PrepareRenameItemCollectionRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    datasetId: datasetId,
-                    collectionName: collectionName,
+                    datasetId: datasetId!,
+                    collectionName: collectionName!,
                     request: request);
 
                 return __httpRequest;

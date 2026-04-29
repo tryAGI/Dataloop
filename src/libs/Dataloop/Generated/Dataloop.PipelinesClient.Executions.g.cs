@@ -154,7 +154,7 @@ namespace Dataloop
                     sort: sort,
                     page: page,
                     pageSize: pageSize,
-                    pipelineId: pipelineId);
+                    pipelineId: pipelineId!);
 
                 return __httpRequest;
             }

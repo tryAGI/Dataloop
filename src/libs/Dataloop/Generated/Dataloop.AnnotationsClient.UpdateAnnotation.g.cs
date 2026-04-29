@@ -169,7 +169,7 @@ namespace Dataloop
                 PrepareUpdateAnnotationRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    annotationId: annotationId,
+                    annotationId: annotationId!,
                     system: system,
                     replace: replace,
                     request: request);

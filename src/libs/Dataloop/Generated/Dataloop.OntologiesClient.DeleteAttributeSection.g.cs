@@ -124,8 +124,8 @@ namespace Dataloop
                 PrepareDeleteAttributeSectionRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    attributeId: attributeId,
-                    id: id);
+                    attributeId: attributeId!,
+                    id: id!);
 
                 return __httpRequest;
             }

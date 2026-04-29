@@ -157,7 +157,7 @@ namespace Dataloop
                 PrepareExecuteRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    pipelineId: pipelineId,
+                    pipelineId: pipelineId!,
                     request: request);
 
                 return __httpRequest;
