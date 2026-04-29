@@ -145,7 +145,7 @@ namespace Dataloop
                 PrepareListAccountInvoicesRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    account: account,
+                    account: account!,
                     status: status,
                     fromDate: fromDate,
                     toDate: toDate);

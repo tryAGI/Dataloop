@@ -124,8 +124,8 @@ namespace Dataloop
                 PrepareRemoveSubGroupRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    groupId: groupId,
-                    subGroupId: subGroupId);
+                    groupId: groupId!,
+                    subGroupId: subGroupId!);
 
                 return __httpRequest;
             }

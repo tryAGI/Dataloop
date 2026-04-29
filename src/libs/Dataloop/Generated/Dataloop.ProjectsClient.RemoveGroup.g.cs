@@ -124,8 +124,8 @@ namespace Dataloop
                 PrepareRemoveGroupRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    projectId: projectId,
-                    groupId: groupId);
+                    projectId: projectId!,
+                    groupId: groupId!);
 
                 return __httpRequest;
             }

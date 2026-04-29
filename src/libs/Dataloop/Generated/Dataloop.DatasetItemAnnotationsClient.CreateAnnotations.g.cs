@@ -141,8 +141,8 @@ namespace Dataloop
                 PrepareCreateAnnotationsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    datasetId: datasetId,
-                    itemId: itemId,
+                    datasetId: datasetId!,
+                    itemId: itemId!,
                     request: request);
 
                 return __httpRequest;

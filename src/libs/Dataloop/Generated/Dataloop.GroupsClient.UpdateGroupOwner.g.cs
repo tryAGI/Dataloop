@@ -138,7 +138,7 @@ namespace Dataloop
                 PrepareUpdateGroupOwnerRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    groupId: groupId,
+                    groupId: groupId!,
                     request: request);
 
                 return __httpRequest;

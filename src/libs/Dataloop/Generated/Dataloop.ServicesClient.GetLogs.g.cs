@@ -171,7 +171,7 @@ namespace Dataloop
                 PrepareGetLogsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    verbose: verbose,
+                    verbose: verbose!,
                     request: request);
 
                 return __httpRequest;

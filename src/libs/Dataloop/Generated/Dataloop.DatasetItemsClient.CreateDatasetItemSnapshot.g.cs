@@ -130,8 +130,8 @@ namespace Dataloop
                 PrepareCreateDatasetItemSnapshotRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id,
-                    datasetId: datasetId);
+                    id: id!,
+                    datasetId: datasetId!);
 
                 return __httpRequest;
             }

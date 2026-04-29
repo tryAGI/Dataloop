@@ -124,7 +124,7 @@ namespace Dataloop
                 PrepareValidateServiceNameRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    name: name);
+                    name: name!);
 
                 return __httpRequest;
             }

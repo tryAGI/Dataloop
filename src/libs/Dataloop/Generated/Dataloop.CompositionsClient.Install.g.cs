@@ -138,7 +138,7 @@ namespace Dataloop
                 PrepareInstallRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    compositionId: compositionId,
+                    compositionId: compositionId!,
                     request: request);
 
                 return __httpRequest;

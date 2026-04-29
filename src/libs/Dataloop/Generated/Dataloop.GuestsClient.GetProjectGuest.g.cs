@@ -129,8 +129,8 @@ namespace Dataloop
                 PrepareGetProjectGuestRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    projectId: projectId,
-                    guestId: guestId);
+                    projectId: projectId!,
+                    guestId: guestId!);
 
                 return __httpRequest;
             }

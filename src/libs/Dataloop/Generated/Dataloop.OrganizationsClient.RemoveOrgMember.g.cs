@@ -148,8 +148,8 @@ namespace Dataloop
                 PrepareRemoveOrgMemberRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    orgId: orgId,
-                    memberId: memberId);
+                    orgId: orgId!,
+                    memberId: memberId!);
 
                 return __httpRequest;
             }

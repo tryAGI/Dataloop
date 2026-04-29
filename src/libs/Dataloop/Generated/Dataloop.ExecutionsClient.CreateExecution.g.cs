@@ -167,8 +167,8 @@ namespace Dataloop
                 PrepareCreateExecutionRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    serviceId: serviceId,
-                    waitUntilExecutionIsFinished: waitUntilExecutionIsFinished,
+                    serviceId: serviceId!,
+                    waitUntilExecutionIsFinished: waitUntilExecutionIsFinished!,
                     request: request);
 
                 return __httpRequest;

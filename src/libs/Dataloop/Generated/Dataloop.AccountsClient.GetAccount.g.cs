@@ -124,7 +124,7 @@ namespace Dataloop
                 PrepareGetAccountRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    accountId: accountId);
+                    accountId: accountId!);
 
                 return __httpRequest;
             }

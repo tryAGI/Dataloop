@@ -156,13 +156,13 @@ namespace Dataloop
                 PrepareStreamDatasetItemThumbnailRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id,
+                    id: id!,
                     width: width,
                     height: height,
                     annotations: annotations,
                     annotationsV2: annotationsV2,
                     queryHash: queryHash,
-                    datasetId: datasetId);
+                    datasetId: datasetId!);
 
                 return __httpRequest;
             }

@@ -124,7 +124,7 @@ namespace Dataloop
                 PrepareTerminateRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    compositionId: compositionId);
+                    compositionId: compositionId!);
 
                 return __httpRequest;
             }

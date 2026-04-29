@@ -124,7 +124,7 @@ namespace Dataloop
                 PrepareGetItemCollectionsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    datasetId: datasetId);
+                    datasetId: datasetId!);
 
                 return __httpRequest;
             }

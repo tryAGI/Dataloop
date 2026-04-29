@@ -124,7 +124,7 @@ namespace Dataloop
                 PrepareTerminate2Request(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    pipelineId: pipelineId);
+                    pipelineId: pipelineId!);
 
                 return __httpRequest;
             }

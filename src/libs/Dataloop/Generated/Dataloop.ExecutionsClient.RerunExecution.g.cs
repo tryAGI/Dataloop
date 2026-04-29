@@ -147,8 +147,8 @@ namespace Dataloop
                 PrepareRerunExecutionRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    executionId: executionId,
-                    waitUntilExecutionIsFinished: waitUntilExecutionIsFinished);
+                    executionId: executionId!,
+                    waitUntilExecutionIsFinished: waitUntilExecutionIsFinished!);
 
                 return __httpRequest;
             }

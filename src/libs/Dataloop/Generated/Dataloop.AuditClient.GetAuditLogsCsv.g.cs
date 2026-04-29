@@ -182,9 +182,9 @@ namespace Dataloop
                 PrepareGetAuditLogsCsvRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    orgId: orgId,
-                    fromDate: fromDate,
-                    toDate: toDate,
+                    orgId: orgId!,
+                    fromDate: fromDate!,
+                    toDate: toDate!,
                     id: id,
                     entityType: entityType,
                     entityName: entityName,

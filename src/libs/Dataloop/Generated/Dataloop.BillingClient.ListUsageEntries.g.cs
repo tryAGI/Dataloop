@@ -145,9 +145,9 @@ namespace Dataloop
                 PrepareListUsageEntriesRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    project: project,
-                    startDate: startDate,
-                    endDate: endDate,
+                    project: project!,
+                    startDate: startDate!,
+                    endDate: endDate!,
                     monthly: monthly);
 
                 return __httpRequest;

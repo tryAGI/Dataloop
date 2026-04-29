@@ -129,8 +129,8 @@ namespace Dataloop
                 PrepareGetDatasetActionsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    projectId: projectId,
-                    datasetId: datasetId);
+                    projectId: projectId!,
+                    datasetId: datasetId!);
 
                 return __httpRequest;
             }

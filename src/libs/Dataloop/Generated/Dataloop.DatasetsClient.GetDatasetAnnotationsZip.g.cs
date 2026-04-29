@@ -129,7 +129,7 @@ namespace Dataloop
                 PrepareGetDatasetAnnotationsZipRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id,
+                    id: id!,
                     directory: directory);
 
                 return __httpRequest;

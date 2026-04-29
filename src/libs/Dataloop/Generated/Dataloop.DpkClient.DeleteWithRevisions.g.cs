@@ -119,7 +119,7 @@ namespace Dataloop
                 PrepareDeleteWithRevisionsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    name: name);
+                    name: name!);
 
                 return __httpRequest;
             }

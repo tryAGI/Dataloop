@@ -129,8 +129,8 @@ namespace Dataloop
                 PrepareGetNodeRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    pipelineId: pipelineId,
-                    nodeId: nodeId);
+                    pipelineId: pipelineId!,
+                    nodeId: nodeId!);
 
                 return __httpRequest;
             }

@@ -144,7 +144,7 @@ namespace Dataloop
                 PrepareGetOrgMembersRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    orgId: orgId);
+                    orgId: orgId!);
 
                 return __httpRequest;
             }

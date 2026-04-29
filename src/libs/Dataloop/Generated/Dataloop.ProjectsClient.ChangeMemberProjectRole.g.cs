@@ -159,8 +159,8 @@ namespace Dataloop
                 PrepareChangeMemberProjectRoleRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    projectId: projectId,
-                    userId: userId,
+                    projectId: projectId!,
+                    userId: userId!,
                     request: request);
 
                 return __httpRequest;

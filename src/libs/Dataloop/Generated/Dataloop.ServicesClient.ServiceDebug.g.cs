@@ -146,8 +146,8 @@ namespace Dataloop
                 PrepareServiceDebugRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id,
-                    force: force,
+                    id: id!,
+                    force: force!,
                     request: request);
 
                 return __httpRequest;

@@ -143,8 +143,8 @@ namespace Dataloop
                 PrepareAddOrgToGuestRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    guestId: guestId,
-                    projectId: projectId,
+                    guestId: guestId!,
+                    projectId: projectId!,
                     request: request);
 
                 return __httpRequest;

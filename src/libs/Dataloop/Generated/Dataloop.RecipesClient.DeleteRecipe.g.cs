@@ -142,7 +142,7 @@ namespace Dataloop
                 PrepareDeleteRecipeRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id,
+                    id: id!,
                     force: force);
 
                 return __httpRequest;

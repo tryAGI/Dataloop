@@ -138,7 +138,7 @@ namespace Dataloop
                 PrepareGetDirectoryChildItemsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id,
+                    id: id!,
                     pageOffset: pageOffset,
                     pageSize: pageSize);
 

@@ -151,7 +151,7 @@ namespace Dataloop
                 PrepareStreamItemThumbnailRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id,
+                    id: id!,
                     width: width,
                     height: height,
                     annotations: annotations,

@@ -132,7 +132,7 @@ namespace Dataloop
                 PrepareGetReassignAssignmentRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id,
+                    id: id!,
                     creator: creator);
 
                 return __httpRequest;

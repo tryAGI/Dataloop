@@ -137,7 +137,7 @@ namespace Dataloop
                 PrepareGetAssignmentRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id);
+                    id: id!);
 
                 return __httpRequest;
             }

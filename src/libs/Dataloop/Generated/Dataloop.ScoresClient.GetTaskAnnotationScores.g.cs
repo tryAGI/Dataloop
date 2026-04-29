@@ -147,8 +147,8 @@ namespace Dataloop
                 PrepareGetTaskAnnotationScoresRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    taskId: taskId,
-                    annotationId: annotationId,
+                    taskId: taskId!,
+                    annotationId: annotationId!,
                     page: page,
                     pageSize: pageSize);
 

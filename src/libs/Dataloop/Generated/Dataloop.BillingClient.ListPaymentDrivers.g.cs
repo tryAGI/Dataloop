@@ -138,7 +138,7 @@ namespace Dataloop
                 PrepareListPaymentDriversRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id,
+                    id: id!,
                     page: page,
                     pageSize: pageSize);
 

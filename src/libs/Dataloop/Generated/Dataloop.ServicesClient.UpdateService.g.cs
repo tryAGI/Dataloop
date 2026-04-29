@@ -161,7 +161,7 @@ namespace Dataloop
                 PrepareUpdateServiceRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id,
+                    id: id!,
                     force: force,
                     request: request);
 

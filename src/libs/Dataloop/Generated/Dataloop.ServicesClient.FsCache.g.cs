@@ -141,7 +141,7 @@ namespace Dataloop
                 PrepareFsCacheRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    mode: mode,
+                    mode: mode!,
                     request: request);
 
                 return __httpRequest;

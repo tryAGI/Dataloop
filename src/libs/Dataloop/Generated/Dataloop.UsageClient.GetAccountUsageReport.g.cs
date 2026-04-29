@@ -138,9 +138,9 @@ namespace Dataloop
                 PrepareGetAccountUsageReportRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id,
-                    startDate: startDate,
-                    endDate: endDate);
+                    id: id!,
+                    startDate: startDate!,
+                    endDate: endDate!);
 
                 return __httpRequest;
             }

@@ -124,7 +124,7 @@ namespace Dataloop
                 PrepareListItemAnnotationsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    itemId: itemId);
+                    itemId: itemId!);
 
                 return __httpRequest;
             }

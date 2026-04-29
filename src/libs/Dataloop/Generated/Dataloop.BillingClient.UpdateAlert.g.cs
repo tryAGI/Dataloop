@@ -143,8 +143,8 @@ namespace Dataloop
                 PrepareUpdateAlertRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    account: account,
-                    id: id,
+                    account: account!,
+                    id: id!,
                     request: request);
 
                 return __httpRequest;

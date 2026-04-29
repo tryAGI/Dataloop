@@ -143,8 +143,8 @@ namespace Dataloop
                 PrepareUpdateStructureRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id,
-                    ontologyId: ontologyId,
+                    id: id!,
+                    ontologyId: ontologyId!,
                     request: request);
 
                 return __httpRequest;

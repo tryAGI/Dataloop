@@ -160,7 +160,7 @@ namespace Dataloop
                 PreparePatchOrgMemberRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    orgId: orgId,
+                    orgId: orgId!,
                     request: request);
 
                 return __httpRequest;

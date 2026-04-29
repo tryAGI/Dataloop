@@ -129,8 +129,8 @@ namespace Dataloop
                 PrepareDeleteItemCollectionsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    datasetId: datasetId,
-                    collectionName: collectionName);
+                    datasetId: datasetId!,
+                    collectionName: collectionName!);
 
                 return __httpRequest;
             }

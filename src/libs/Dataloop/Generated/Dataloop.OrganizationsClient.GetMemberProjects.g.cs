@@ -139,8 +139,8 @@ namespace Dataloop
                 PrepareGetMemberProjectsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    orgId: orgId,
-                    userId: userId,
+                    orgId: orgId!,
+                    userId: userId!,
                     excludeContributors: excludeContributors);
 
                 return __httpRequest;

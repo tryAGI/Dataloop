@@ -139,7 +139,7 @@ namespace Dataloop
                 PrepareUpdateRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    compositionId: compositionId,
+                    compositionId: compositionId!,
                     request: request);
 
                 return __httpRequest;
