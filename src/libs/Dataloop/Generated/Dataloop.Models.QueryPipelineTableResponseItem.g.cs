@@ -11,6 +11,12 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("versionNumber")]
+        public double? VersionNumber { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("template")]
         public global::Dataloop.QueryPipelineTableResponseItemTemplate? Template { get; set; }
 
@@ -180,6 +186,7 @@ namespace Dataloop
         /// <param name="id"></param>
         /// <param name="pendingCycles"></param>
         /// <param name="lastExecutionTime"></param>
+        /// <param name="versionNumber"></param>
         /// <param name="template"></param>
         /// <param name="resetTimestamp"></param>
         /// <param name="variables"></param>
@@ -206,6 +213,7 @@ namespace Dataloop
             string id,
             object pendingCycles,
             object lastExecutionTime,
+            double? versionNumber,
             global::Dataloop.QueryPipelineTableResponseItemTemplate? template,
             global::System.DateTime? resetTimestamp,
             global::System.Collections.Generic.IList<global::Dataloop.PipelineVariable>? variables,
@@ -214,6 +222,7 @@ namespace Dataloop
             string? compositionId,
             string? updatedBy)
         {
+            this.VersionNumber = versionNumber;
             this.Template = template;
             this.ResetTimestamp = resetTimestamp;
             this.Variables = variables;
