@@ -32,7 +32,7 @@ namespace Dataloop
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dlTypes")]
-        public global::System.Collections.Generic.IList<global::Dataloop.DataloopPodType>? DlTypes { get; set; }
+        public global::System.Collections.Generic.IList<string>? DlTypes { get; set; }
 
         /// <summary>
         /// 
@@ -106,7 +106,7 @@ namespace Dataloop
             global::Dataloop.Dictionary nodeSelector,
             bool preemptible,
             bool? isMonitoringConfiguration,
-            global::System.Collections.Generic.IList<global::Dataloop.DataloopPodType>? dlTypes,
+            global::System.Collections.Generic.IList<string>? dlTypes,
             global::Dataloop.INodePoolDeploymentResources? deploymentResources,
             bool? runAiManaged)
         {
