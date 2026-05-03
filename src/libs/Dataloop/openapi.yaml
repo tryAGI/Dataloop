@@ -5508,6 +5508,50 @@
         "type": "object",
         "additionalProperties": true
       },
+      "UpdateDriversIntegrationResult": {
+        "properties": {
+          "totalRequested": {
+            "type": "number",
+            "format": "double"
+          },
+          "updated": {
+            "type": "number",
+            "format": "double"
+          },
+          "notFound": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "errors": {
+            "items": {
+              "properties": {
+                "error": {
+                  "type": "string"
+                },
+                "driverId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "error",
+                "driverId"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          }
+        },
+        "required": [
+          "totalRequested",
+          "updated",
+          "notFound",
+          "errors"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
       "APIFeatureSet": {
         "properties": {
           "id": {
@@ -10735,6 +10779,9 @@
           "previousLogin": {
             "type": "number",
             "format": "double"
+          },
+          "orgBot": {
+            "type": "boolean"
           }
         },
         "required": [
@@ -11690,6 +11737,9 @@
           },
           "via": {
             "type": "string"
+          },
+          "orgBot": {
+            "type": "boolean"
           }
         },
         "required": [
@@ -15037,6 +15087,13 @@
         "type": "object",
         "additionalProperties": false
       },
+      "EComputeConsumptionMethod": {
+        "enum": [
+          "MQ",
+          "API"
+        ],
+        "type": "string"
+      },
       "SystemRefs": {
         "properties": {
           "refs": {
@@ -15084,6 +15141,9 @@
             "allOf": [
               {
                 "properties": {
+                  "computeConsumptionMethod": {
+                    "$ref": "#/components/schemas/EComputeConsumptionMethod"
+                  },
                   "dynamicConcurrency": {
                     "type": "boolean"
                   },
@@ -15593,6 +15653,11 @@
           },
           "executionId": {
             "type": "string"
+          },
+          "versionNumber": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
           },
           "archived": {
             "type": "boolean"
@@ -18645,6 +18710,11 @@
             ],
             "type": "object"
           },
+          "versionNumber": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
           "templateKind": {
             "$ref": "#/components/schemas/TemplateKind"
           },
@@ -19389,6 +19459,11 @@
               "id"
             ],
             "type": "object"
+          },
+          "versionNumber": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
           }
         },
         "required": [
@@ -19779,6 +19854,11 @@
           "pipelineId": {
             "type": "string"
           },
+          "pipelineVersionNumber": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -19860,6 +19940,11 @@
         "properties": {
           "pipelineId": {
             "$ref": "#/components/schemas/ObjectID"
+          },
+          "pipelineVersionNumber": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
           },
           "_id": {
             "$ref": "#/components/schemas/ObjectID"
@@ -20911,6 +20996,11 @@
             ],
             "type": "object"
           },
+          "versionNumber": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
           "mandatory": {
             "type": "boolean"
           },
@@ -21776,7 +21866,7 @@
           },
           "dlTypes": {
             "items": {
-              "type": "string"
+              "$ref": "#/components/schemas/DataloopPodType"
             },
             "type": "array"
           },
@@ -22419,13 +22509,6 @@
         "type": "object",
         "additionalProperties": false
       },
-      "EComputeConsumptionMethod": {
-        "enum": [
-          "MQ",
-          "API"
-        ],
-        "type": "string"
-      },
       "IComputeSettings": {
         "properties": {
           "consumptionMethod": {
@@ -22815,6 +22898,11 @@
             ],
             "type": "object"
           },
+          "versionNumber": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
           "templateKind": {
             "$ref": "#/components/schemas/TemplateKind"
           }
@@ -23158,6 +23246,79 @@
         "required": [
           "pipelineExecutionCounters",
           "nodeExecutionsCounters"
+        ],
+        "type": "object",
+        "additionalProperties": false
+      },
+      "APIPipelineVersion": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "pipelineId": {
+            "type": "string"
+          },
+          "versionNumber": {
+            "type": "number",
+            "format": "double"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createdBy": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "snapshot": {
+            "$ref": "#/components/schemas/Dictionary"
+          },
+          "restoredFromVersionNumber": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          }
+        },
+        "required": [
+          "id",
+          "url",
+          "versionNumber",
+          "createdAt",
+          "snapshot"
+        ],
+        "type": "object",
+        "additionalProperties": false
+      },
+      "CursorPage_APIPipelineVersion_": {
+        "properties": {
+          "totalItemsCount": {
+            "type": "number",
+            "format": "double"
+          },
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/APIPipelineVersion"
+            },
+            "type": "array"
+          },
+          "totalPagesCount": {
+            "type": "number",
+            "format": "double"
+          },
+          "hasNextPage": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "totalItemsCount",
+          "items",
+          "totalPagesCount",
+          "hasNextPage"
         ],
         "type": "object",
         "additionalProperties": false
@@ -24138,6 +24299,11 @@
           "executionId": {
             "type": "string"
           },
+          "versionNumber": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
           "archived": {
             "type": "boolean"
           }
@@ -24836,6 +25002,11 @@
               "id"
             ],
             "type": "object"
+          },
+          "versionNumber": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
           }
         },
         "required": [
@@ -35307,6 +35478,60 @@
         ]
       }
     },
+    "/drivers/migrate-integration": {
+      "post": {
+        "operationId": "Migrate Drivers Integration",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateDriversIntegrationResult"
+                }
+              }
+            }
+          }
+        },
+        "description": "Update integrationId and integrationType for multiple drivers (Migration endpoint - requires sudo)",
+        "tags": [
+          "Storage Drivers"
+        ],
+        "security": [],
+        "parameters": [],
+        "requestBody": {
+          "description": "- driverIds array and new integration values",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "newIntegrationType": {
+                    "type": "string"
+                  },
+                  "newIntegrationId": {
+                    "type": "string"
+                  },
+                  "driverIds": {
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  }
+                },
+                "required": [
+                  "newIntegrationType",
+                  "newIntegrationId",
+                  "driverIds"
+                ],
+                "type": "object",
+                "description": "- driverIds array and new integration values"
+              }
+            }
+          }
+        }
+      }
+    },
     "/drivers/test": {
       "post": {
         "operationId": "Test Storage Driver",
@@ -36371,19 +36596,16 @@
                       "items": [
                         {
                           "id": "64e688839d86c82809beca38",
-                          "creator": "assaf@dataloop.ai",
                           "createdAt": "2021-08-25T22:00:00.000Z",
                           "type": "test type",
                           "entityType": "image",
                           "updatedAt": "2021-08-25T22:00:00.000Z",
-                          "updatedBy": "assaf@dataloop.ai",
                           "name": "feature set name",
                           "size": 1,
                           "url": "https://dev-gate.dataloop.ai/api/v1/features/vectors/64e688839d86c82809beca38",
                           "authz": {
                             "context": {
                               "createdAt": "2021-08-25T22:00:00.000Z",
-                              "creator": "assaf@dataloop.ai",
                               "org": "org-1",
                               "updatedAt": "2021-08-25T22:00:00.000Z"
                             }
@@ -36728,7 +36950,6 @@
                         {
                           "id": "64e688839d86c82809beca38",
                           "entityId": "entityTest",
-                          "creator": "assaf@dataloop.ai",
                           "createdAt": "2021-08-25T22:00:00.000Z",
                           "value": [
                             90
@@ -36739,7 +36960,6 @@
                           "authz": {
                             "context": {
                               "createdAt": "2021-08-25T22:00:00.000Z",
-                              "creator": "assaf@dataloop.ai",
                               "org": "org-1",
                               "updatedAt": "2021-08-25T22:00:00.000Z"
                             }
@@ -42532,6 +42752,10 @@
                 "schema": {
                   "items": {
                     "properties": {
+                      "versionNumber": {
+                        "type": "number",
+                        "format": "double"
+                      },
                       "template": {
                         "properties": {
                           "state": {
@@ -43489,6 +43713,136 @@
             }
           }
         }
+      }
+    },
+    "/pipelines/{pipelineId}/versions": {
+      "get": {
+        "operationId": "_listVersions",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CursorPage_APIPipelineVersion_"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "pipelines"
+        ],
+        "security": [],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "pipelineId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "default": 0,
+              "format": "double",
+              "type": "number"
+            }
+          },
+          {
+            "in": "query",
+            "name": "pageSize",
+            "required": false,
+            "schema": {
+              "format": "double",
+              "type": "number"
+            }
+          }
+        ]
+      }
+    },
+    "/pipelines/{pipelineId}/versions/{versionNumber}": {
+      "get": {
+        "operationId": "_getVersion",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIPipelineVersion"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "pipelines"
+        ],
+        "security": [],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "pipelineId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "versionNumber",
+            "required": true,
+            "schema": {
+              "format": "double",
+              "type": "number"
+            }
+          }
+        ]
+      }
+    },
+    "/pipelines/{pipelineId}/versions/{versionNumber}/restore": {
+      "post": {
+        "operationId": "_restoreVersion",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIPipeline"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "pipelines"
+        ],
+        "security": [],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "pipelineId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "versionNumber",
+            "required": true,
+            "schema": {
+              "format": "double",
+              "type": "number"
+            }
+          }
+        ]
       }
     },
     "/pipelines/{piplineId}/logs": {
