@@ -143,6 +143,12 @@ namespace Dataloop
         public global::Dataloop.APIPipelineTemplate? Template { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("versionNumber")]
+        public double? VersionNumber { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -171,6 +177,7 @@ namespace Dataloop
         /// <param name="variables"></param>
         /// <param name="resetTimestamp"></param>
         /// <param name="template"></param>
+        /// <param name="versionNumber"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -194,7 +201,8 @@ namespace Dataloop
             global::Dataloop.IPipelineSettings? settings,
             global::System.Collections.Generic.IList<global::Dataloop.PipelineVariable>? variables,
             global::System.DateTime? resetTimestamp,
-            global::Dataloop.APIPipelineTemplate? template)
+            global::Dataloop.APIPipelineTemplate? template,
+            double? versionNumber)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
@@ -216,6 +224,7 @@ namespace Dataloop
             this.Variables = variables;
             this.ResetTimestamp = resetTimestamp;
             this.Template = template;
+            this.VersionNumber = versionNumber;
         }
 
         /// <summary>
