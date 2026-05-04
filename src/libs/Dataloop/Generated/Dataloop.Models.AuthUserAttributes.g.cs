@@ -204,6 +204,12 @@ namespace Dataloop
         public string? Via { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("orgBot")]
+        public bool? OrgBot { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -242,6 +248,7 @@ namespace Dataloop
         /// <param name="superuser"></param>
         /// <param name="picture"></param>
         /// <param name="via"></param>
+        /// <param name="orgBot"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -275,7 +282,8 @@ namespace Dataloop
             global::Dataloop.Role? role,
             bool? superuser,
             string? picture,
-            string? via)
+            string? via,
+            bool? orgBot)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.Url = url;
@@ -307,6 +315,7 @@ namespace Dataloop
             this.Superuser = superuser;
             this.Picture = picture;
             this.Via = via;
+            this.OrgBot = orgBot;
         }
 
         /// <summary>
