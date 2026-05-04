@@ -11,6 +11,13 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("computeConsumptionMethod")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dataloop.JsonConverters.EComputeConsumptionMethodJsonConverter))]
+        public global::Dataloop.EComputeConsumptionMethod? ComputeConsumptionMethod { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dynamicConcurrency")]
         public bool? DynamicConcurrency { get; set; }
 
@@ -29,15 +36,18 @@ namespace Dataloop
         /// <summary>
         /// Initializes a new instance of the <see cref="ServiceMetadataSystem" /> class.
         /// </summary>
+        /// <param name="computeConsumptionMethod"></param>
         /// <param name="dynamicConcurrency"></param>
         /// <param name="fetchExecutionsFromApi"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public ServiceMetadataSystem(
+            global::Dataloop.EComputeConsumptionMethod? computeConsumptionMethod,
             bool? dynamicConcurrency,
             bool? fetchExecutionsFromApi)
         {
+            this.ComputeConsumptionMethod = computeConsumptionMethod;
             this.DynamicConcurrency = dynamicConcurrency;
             this.FetchExecutionsFromApi = fetchExecutionsFromApi;
         }
