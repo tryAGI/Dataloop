@@ -32,5 +32,33 @@ namespace Dataloop
             string userId,
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Remove a member from a project
+        /// </summary>
+        /// <param name="projectId"></param>
+        /// <param name="userId"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Dataloop.ApiException"></exception>
+        /// <remarks>
+        /// # <br/>
+        /// # Remove a member from the project.<br/>
+        /// # <br/>
+        /// # **Prerequisites**: You must be in the role of an *owner* to delete a member from a project.<br/>
+        /// # <br/>
+        /// # :param str email: member email<br/>
+        /// # :param str project_id: The Id of the project<br/>
+        /// # :return: dict that represents the user<br/>
+        /// # :rtype: dict<br/>
+        /// # <br/>
+        /// # <br/>
+        /// # user_json = dl.projects.remove_member(project_id='project_id', email='user@dataloop.ai')<br/>
+        /// # 
+        /// </remarks>
+        global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Dataloop.ClientContributor>>> RemoveMemberFromProjectAsResponseAsync(
+            string projectId,
+            string userId,
+            global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

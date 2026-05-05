@@ -37,6 +37,35 @@ namespace Dataloop
         /// Update an existing assignment
         /// </summary>
         /// <param name="id"></param>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Dataloop.ApiException"></exception>
+        /// <remarks>
+        /// # <br/>
+        /// # Update an assignment.<br/>
+        /// # <br/>
+        /// # **Prerequisites**: You must be in the role of an *owner*, *developer*, or *annotation manager* who has been assigned as *owner* of the annotation task.<br/>
+        /// # <br/>
+        /// # :param dtlpy.entities.assignment.Assignment assignment assignment: assignment entity<br/>
+        /// # :param bool system_metadata: True, if you want to change metadata system<br/>
+        /// # :return: Assignment object<br/>
+        /// # :rtype: dtlpy.entities.assignment.Assignment assignment<br/>
+        /// # <br/>
+        /// # <br/>
+        /// # assignment = task.assignments.update(assignment='assignment_entity', system_metadata=False)<br/>
+        /// # 
+        /// </remarks>
+        global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APIAssignment>> UpdateAssignmentAsResponseAsync(
+            string id,
+
+            global::Dataloop.PartialAssignmentPayload request,
+            global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Update an existing assignment
+        /// </summary>
+        /// <param name="id"></param>
         /// <param name="name"></param>
         /// <param name="metadata"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>

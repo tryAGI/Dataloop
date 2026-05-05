@@ -28,6 +28,23 @@ namespace Dataloop
         /// Also provide the a list of dataset IDs to embed
         /// </summary>
         /// <param name="id"></param>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Dataloop.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.AnyOf<global::Dataloop.APIModel, global::Dataloop.APICommand>>> EmbedDatasetsAsResponseAsync(
+            string id,
+
+            global::Dataloop.PartialAPIEmbedDatasetsSpec request,
+            global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Embed Datasets<br/>
+        /// this will run embed on the datasets<br/>
+        /// Provide the model ID of the Model to embed from<br/>
+        /// Also provide the a list of dataset IDs to embed
+        /// </summary>
+        /// <param name="id"></param>
         /// <param name="datasetIds"></param>
         /// <param name="attachTrigger"></param>
         /// <param name="config"></param>

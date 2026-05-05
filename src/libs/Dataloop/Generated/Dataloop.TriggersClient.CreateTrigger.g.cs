@@ -102,6 +102,76 @@ namespace Dataloop
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            var __response = await CreateTriggerAsResponseAsync(
+
+                request: request,
+                requestOptions: requestOptions,
+                cancellationToken: cancellationToken
+            ).ConfigureAwait(false);
+
+            return __response.Body;
+        }
+        /// <summary>
+        /// Create a Trigger. Can create two types: a cron trigger or an event trigger.<br/>
+        /// Inputs are different for each type
+        /// </summary>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Dataloop.ApiException"></exception>
+        /// <remarks>
+        /// # <br/>
+        /// # Create a Trigger. Can create two types: a cron trigger or an event trigger.<br/>
+        /// # Inputs are different for each type<br/>
+        /// # <br/>
+        /// # **Prerequisites**: You must be in the role of an *owner* or *developer*. You must have a service.<br/>
+        /// # <br/>
+        /// # Inputs for all types:<br/>
+        /// # <br/>
+        /// # :param str service_id: Id of services to be triggered<br/>
+        /// # :param str trigger_type: can be cron or event. use enum dl.TriggerType for the full list<br/>
+        /// # :param str name: name of the trigger<br/>
+        /// # :param str webhook_id: id for webhook to be called<br/>
+        /// # :param str  function_name: the function name to be called when triggered (must be defined in the package)<br/>
+        /// # :param str  project_id: project id where trigger will work<br/>
+        /// # :param bool active: optional - True/False, default = True, if true trigger is active<br/>
+        /// # <br/>
+        /// # Inputs for event trigger:<br/>
+        /// # :param dtlpy.entities.filters.Filters filters: optional - Item/Annotation metadata filters, default = none<br/>
+        /// # :param str resource: optional - Dataset/Item/Annotation/ItemStatus, default = Item<br/>
+        /// # :param str actions: optional - Created/Updated/Deleted, default = create<br/>
+        /// # :param str execution_mode: how many times trigger should be activated; default is "Once". enum dl.TriggerExecutionMode<br/>
+        /// # <br/>
+        /// # Inputs for cron trigger:<br/>
+        /// # :param start_at: iso format date string to start activating the cron trigger<br/>
+        /// # :param end_at: iso format date string to end the cron activation<br/>
+        /// # :param inputs: dictionary "name":"val" of inputs to the function<br/>
+        /// # :param str cron: cron spec specifying when it should run. more information: https://en.wikipedia.org/wiki/Cron<br/>
+        /// # :param str pipeline_id: Id of pipeline to be triggered<br/>
+        /// # :param pipeline: pipeline entity to be triggered<br/>
+        /// # :param str pipeline_node_id: Id of pipeline root node to be triggered<br/>
+        /// # :param root_node_namespace: namespace of pipeline root node to be triggered<br/>
+        /// # <br/>
+        /// # :return: Trigger entity<br/>
+        /// # :rtype: dtlpy.entities.trigger.Trigger<br/>
+        /// # <br/>
+        /// # <br/>
+        /// # service.triggers.create(name='triggername',<br/>
+        /// # execution_mode=dl.TriggerExecutionMode.ONCE,<br/>
+        /// # resource='Item',<br/>
+        /// # actions='Created',<br/>
+        /// # function_name='run',<br/>
+        /// # filters={'$and': [{'hidden': False},<br/>
+        /// # {'type': 'file'}]}<br/>
+        /// # )<br/>
+        /// # 
+        /// </remarks>
+        public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APITrigger>> CreateTriggerAsResponseAsync(
+
+            global::Dataloop.CreateTriggerRequest request,
+            global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
 
             PrepareArguments(
@@ -132,6 +202,7 @@ namespace Dataloop
 
             global::System.Net.Http.HttpRequestMessage __CreateHttpRequest()
             {
+
                             var __pathBuilder = new global::Dataloop.PathBuilder(
                                 path: "/triggers",
                                 baseUri: HttpClient.BaseAddress);
@@ -211,6 +282,8 @@ namespace Dataloop
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                     try
                     {
@@ -221,6 +294,11 @@ namespace Dataloop
                     }
                     catch (global::System.Net.Http.HttpRequestException __exception)
                     {
+                        var __retryDelay = global::Dataloop.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: null,
+                            attempt: __attempt);
                         var __willRetry = __attempt < __maxAttempts && !__effectiveCancellationToken.IsCancellationRequested;
                         await global::Dataloop.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
@@ -238,6 +316,8 @@ namespace Dataloop
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: __willRetry,
+                                retryDelay: __willRetry ? __retryDelay : (global::System.TimeSpan?)null,
+                                retryReason: "exception",
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         if (!__willRetry)
                         {
@@ -247,8 +327,7 @@ namespace Dataloop
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Dataloop.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -257,6 +336,11 @@ namespace Dataloop
                         __attempt < __maxAttempts &&
                         global::Dataloop.AutoSDKRequestOptionsSupport.ShouldRetryStatusCode(__response.StatusCode))
                     {
+                        var __retryDelay = global::Dataloop.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: __response,
+                            attempt: __attempt);
                         await global::Dataloop.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Dataloop.AutoSDKRequestOptionsSupport.CreateHookContext(
@@ -273,14 +357,15 @@ namespace Dataloop
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: true,
+                                retryDelay: __retryDelay,
+                                retryReason: "status:" + ((int)__response.StatusCode).ToString(global::System.Globalization.CultureInfo.InvariantCulture),
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         __response.Dispose();
                         __response = null;
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Dataloop.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -320,6 +405,8 @@ namespace Dataloop
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                 else
@@ -340,6 +427,8 @@ namespace Dataloop
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
 
@@ -364,9 +453,13 @@ namespace Dataloop
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    return
-                                        global::Dataloop.APITrigger.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::Dataloop.APITrigger.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+                                    return new global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APITrigger>(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Dataloop.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -394,9 +487,13 @@ namespace Dataloop
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    return
-                                        await global::Dataloop.APITrigger.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::Dataloop.APITrigger.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
+                                    return new global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APITrigger>(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Dataloop.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
