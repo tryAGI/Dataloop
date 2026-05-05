@@ -49,6 +49,26 @@ namespace Dataloop
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            await DeleteScoresAsResponseAsync(
+
+                request: request,
+                requestOptions: requestOptions,
+                cancellationToken: cancellationToken
+            ).ConfigureAwait(false);
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Dataloop.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse> DeleteScoresAsResponseAsync(
+
+            global::Dataloop.DeleteTaskItemScoresPayload request,
+            global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
 
             PrepareArguments(
@@ -79,6 +99,7 @@ namespace Dataloop
 
             global::System.Net.Http.HttpRequestMessage __CreateHttpRequest()
             {
+
                             var __pathBuilder = new global::Dataloop.PathBuilder(
                                 path: "/scores",
                                 baseUri: HttpClient.BaseAddress);
@@ -158,6 +179,8 @@ namespace Dataloop
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                     try
                     {
@@ -168,6 +191,11 @@ namespace Dataloop
                     }
                     catch (global::System.Net.Http.HttpRequestException __exception)
                     {
+                        var __retryDelay = global::Dataloop.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: null,
+                            attempt: __attempt);
                         var __willRetry = __attempt < __maxAttempts && !__effectiveCancellationToken.IsCancellationRequested;
                         await global::Dataloop.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
@@ -185,6 +213,8 @@ namespace Dataloop
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: __willRetry,
+                                retryDelay: __willRetry ? __retryDelay : (global::System.TimeSpan?)null,
+                                retryReason: "exception",
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         if (!__willRetry)
                         {
@@ -194,8 +224,7 @@ namespace Dataloop
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Dataloop.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -204,6 +233,11 @@ namespace Dataloop
                         __attempt < __maxAttempts &&
                         global::Dataloop.AutoSDKRequestOptionsSupport.ShouldRetryStatusCode(__response.StatusCode))
                     {
+                        var __retryDelay = global::Dataloop.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: __response,
+                            attempt: __attempt);
                         await global::Dataloop.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Dataloop.AutoSDKRequestOptionsSupport.CreateHookContext(
@@ -220,14 +254,15 @@ namespace Dataloop
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: true,
+                                retryDelay: __retryDelay,
+                                retryReason: "status:" + ((int)__response.StatusCode).ToString(global::System.Globalization.CultureInfo.InvariantCulture),
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         __response.Dispose();
                         __response = null;
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Dataloop.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -267,6 +302,8 @@ namespace Dataloop
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                 else
@@ -287,6 +324,8 @@ namespace Dataloop
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
 
@@ -307,6 +346,10 @@ namespace Dataloop
                                 {
                                     __response.EnsureSuccessStatusCode();
 
+                return new global::Dataloop.AutoSDKHttpResponse(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Dataloop.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -328,6 +371,10 @@ namespace Dataloop
                                 try
                                 {
                                     __response.EnsureSuccessStatusCode();
+                                    return new global::Dataloop.AutoSDKHttpResponse(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Dataloop.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri);
                                 }
                                 catch (global::System.Exception __ex)
                                 {

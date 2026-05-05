@@ -19,5 +19,20 @@ namespace Dataloop
             string? directory = default,
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Download a zip archive containing all annotations in the specified dataset<br/>
+        /// Directory structure is preserved in the zip archive<br/>
+        /// Each item will be represented by a json file containing it's annotations
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="directory"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Dataloop.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse> GetDatasetAnnotationsZipAsResponseAsync(
+            string id,
+            string? directory = default,
+            global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

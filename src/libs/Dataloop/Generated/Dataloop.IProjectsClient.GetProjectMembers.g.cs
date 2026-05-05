@@ -30,5 +30,31 @@ namespace Dataloop
             string projectId,
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Get project's members
+        /// </summary>
+        /// <param name="projectId"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Dataloop.ApiException"></exception>
+        /// <remarks>
+        /// # <br/>
+        /// # Get a list of the project members.<br/>
+        /// # <br/>
+        /// # **Prerequisites**: You must be in the role of an *owner* to list project members.<br/>
+        /// # <br/>
+        /// # :param dtlpy.entities.project.Project project: Project object<br/>
+        /// # :param role: The required role for the user. Use the enum dl.MemberRole<br/>
+        /// # :return: list of the project members<br/>
+        /// # :rtype: list<br/>
+        /// # <br/>
+        /// # <br/>
+        /// # users_jsons_list = dl.projects.list_members(project_id='project_id', role=dl.MemberRole.DEVELOPER)<br/>
+        /// # 
+        /// </remarks>
+        global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Dataloop.APIUser>>> GetProjectMembersAsResponseAsync(
+            string projectId,
+            global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
     }
 }
