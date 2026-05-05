@@ -3,11 +3,11 @@
 
 namespace Dataloop
 {
-    public partial class PipelinesTemplatesClient
+    public partial class PipelinesClient
     {
 
 
-        private static readonly global::Dataloop.EndPointSecurityRequirement s_CreateSecurityRequirement0 =
+        private static readonly global::Dataloop.EndPointSecurityRequirement s_GetVersionSecurityRequirement0 =
             new global::Dataloop.EndPointSecurityRequirement
             {
                 Authorizations = new global::Dataloop.EndPointAuthorizationRequirement[]
@@ -21,22 +21,24 @@ namespace Dataloop
                     },
                 },
             };
-        private static readonly global::Dataloop.EndPointSecurityRequirement[] s_CreateSecurityRequirements =
+        private static readonly global::Dataloop.EndPointSecurityRequirement[] s_GetVersionSecurityRequirements =
             new global::Dataloop.EndPointSecurityRequirement[]
-            {                s_CreateSecurityRequirement0,
+            {                s_GetVersionSecurityRequirement0,
             };
-        partial void PrepareCreateArguments(
+        partial void PrepareGetVersionArguments(
             global::System.Net.Http.HttpClient httpClient,
-            global::Dataloop.APIPipelineTemplate2 request);
-        partial void PrepareCreateRequest(
+            ref string pipelineId,
+            ref double versionNumber);
+        partial void PrepareGetVersionRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::Dataloop.APIPipelineTemplate2 request);
-        partial void ProcessCreateResponse(
+            string pipelineId,
+            double versionNumber);
+        partial void ProcessGetVersionResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessCreateResponseContent(
+        partial void ProcessGetVersionResponseContent(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
@@ -44,29 +46,29 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="request"></param>
+        /// <param name="pipelineId"></param>
+        /// <param name="versionNumber"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Dataloop.APIPipeline> CreateAsync(
-
-            global::Dataloop.APIPipelineTemplate2 request,
+        public async global::System.Threading.Tasks.Task<global::Dataloop.APIPipelineVersion> GetVersionAsync(
+            string pipelineId,
+            double versionNumber,
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            request = request ?? throw new global::System.ArgumentNullException(nameof(request));
-
             PrepareArguments(
                 client: HttpClient);
-            PrepareCreateArguments(
+            PrepareGetVersionArguments(
                 httpClient: HttpClient,
-                request: request);
+                pipelineId: ref pipelineId,
+                versionNumber: ref versionNumber);
 
 
             var __authorizations = global::Dataloop.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_CreateSecurityRequirements,
-                operationName: "CreateAsync");
+                securityRequirements: s_GetVersionSecurityRequirements,
+                operationName: "GetVersionAsync");
 
             using var __timeoutCancellationTokenSource = global::Dataloop.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -85,7 +87,7 @@ namespace Dataloop
             global::System.Net.Http.HttpRequestMessage __CreateHttpRequest()
             {
                             var __pathBuilder = new global::Dataloop.PathBuilder(
-                                path: "/pipelines/templates",
+                                path: $"/pipelines/{pipelineId}/versions/{versionNumber}",
                                 baseUri: HttpClient.BaseAddress);
                             var __path = __pathBuilder.ToString();
                 __path = global::Dataloop.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -93,7 +95,7 @@ namespace Dataloop
                     clientParameters: Options.QueryParameters,
                     requestParameters: requestOptions?.QueryParameters);
                 var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
-                    method: global::System.Net.Http.HttpMethod.Post,
+                    method: global::System.Net.Http.HttpMethod.Get,
                     requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 #if NET6_0_OR_GREATER
                 __httpRequest.Version = global::System.Net.HttpVersion.Version11;
@@ -116,12 +118,6 @@ namespace Dataloop
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
                 } 
             }
-                            var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
-                            var __httpRequestContent = new global::System.Net.Http.StringContent(
-                                content: __httpRequestContentBody,
-                                encoding: global::System.Text.Encoding.UTF8,
-                                mediaType: "application/json");
-                            __httpRequest.Content = __httpRequestContent;
                 global::Dataloop.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,
                     clientHeaders: Options.Headers,
@@ -130,10 +126,11 @@ namespace Dataloop
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareCreateRequest(
+                PrepareGetVersionRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    request: request);
+                    pipelineId: pipelineId!,
+                    versionNumber: versionNumber!);
 
                 return __httpRequest;
             }
@@ -150,10 +147,10 @@ namespace Dataloop
                     await global::Dataloop.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::Dataloop.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "Create",
-                                methodName: "CreateAsync",
-                                pathTemplate: "\"/pipelines/templates\"",
-                                httpMethod: "POST",
+                                operationId: "GetVersion",
+                                methodName: "GetVersionAsync",
+                                pathTemplate: "$\"/pipelines/{pipelineId}/versions/{versionNumber}\"",
+                                httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: null,
@@ -177,10 +174,10 @@ namespace Dataloop
                         await global::Dataloop.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Dataloop.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "Create",
-                                methodName: "CreateAsync",
-                                pathTemplate: "\"/pipelines/templates\"",
-                                httpMethod: "POST",
+                                operationId: "GetVersion",
+                                methodName: "GetVersionAsync",
+                                pathTemplate: "$\"/pipelines/{pipelineId}/versions/{versionNumber}\"",
+                                httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: null,
@@ -212,10 +209,10 @@ namespace Dataloop
                         await global::Dataloop.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Dataloop.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "Create",
-                                methodName: "CreateAsync",
-                                pathTemplate: "\"/pipelines/templates\"",
-                                httpMethod: "POST",
+                                operationId: "GetVersion",
+                                methodName: "GetVersionAsync",
+                                pathTemplate: "$\"/pipelines/{pipelineId}/versions/{versionNumber}\"",
+                                httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -251,7 +248,7 @@ namespace Dataloop
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessCreateResponse(
+                ProcessGetVersionResponse(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -259,10 +256,10 @@ namespace Dataloop
                     await global::Dataloop.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::Dataloop.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "Create",
-                                methodName: "CreateAsync",
-                                pathTemplate: "\"/pipelines/templates\"",
-                                httpMethod: "POST",
+                                operationId: "GetVersion",
+                                methodName: "GetVersionAsync",
+                                pathTemplate: "$\"/pipelines/{pipelineId}/versions/{versionNumber}\"",
+                                httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -279,10 +276,10 @@ namespace Dataloop
                     await global::Dataloop.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Dataloop.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "Create",
-                                methodName: "CreateAsync",
-                                pathTemplate: "\"/pipelines/templates\"",
-                                httpMethod: "POST",
+                                operationId: "GetVersion",
+                                methodName: "GetVersionAsync",
+                                pathTemplate: "$\"/pipelines/{pipelineId}/versions/{versionNumber}\"",
+                                httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -307,7 +304,7 @@ namespace Dataloop
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
-                                ProcessCreateResponseContent(
+                                ProcessGetVersionResponseContent(
                                     httpClient: HttpClient,
                                     httpResponseMessage: __response,
                                     content: ref __content);
@@ -317,7 +314,7 @@ namespace Dataloop
                                     __response.EnsureSuccessStatusCode();
 
                                     return
-                                        global::Dataloop.APIPipeline.FromJson(__content, JsonSerializerContext) ??
+                                        global::Dataloop.APIPipelineVersion.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                                 }
                                 catch (global::System.Exception __ex)
@@ -347,7 +344,7 @@ namespace Dataloop
                                     ).ConfigureAwait(false);
 
                                     return
-                                        await global::Dataloop.APIPipeline.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                        await global::Dataloop.APIPipelineVersion.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                                 }
                                 catch (global::System.Exception __ex)
@@ -385,91 +382,6 @@ namespace Dataloop
             {
                 __httpRequest?.Dispose();
             }
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="id"></param>
-        /// <param name="url"></param>
-        /// <param name="name"></param>
-        /// <param name="creator"></param>
-        /// <param name="createdAt"></param>
-        /// <param name="updatedAt"></param>
-        /// <param name="updatedBy"></param>
-        /// <param name="projectId"></param>
-        /// <param name="orgId"></param>
-        /// <param name="compositionId"></param>
-        /// <param name="nodes"></param>
-        /// <param name="connections"></param>
-        /// <param name="description"></param>
-        /// <param name="preview"></param>
-        /// <param name="startNodes"></param>
-        /// <param name="status"></param>
-        /// <param name="settings"></param>
-        /// <param name="variables"></param>
-        /// <param name="resetTimestamp"></param>
-        /// <param name="template"></param>
-        /// <param name="versionNumber"></param>
-        /// <param name="templateKind"></param>
-        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
-        /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Dataloop.APIPipeline> CreateAsync(
-            string id,
-            string url,
-            string name,
-            string creator,
-            global::System.DateTime createdAt,
-            global::System.DateTime updatedAt,
-            string projectId,
-            string orgId,
-            global::System.Collections.Generic.IList<global::Dataloop.PipelineNodeDescriptor> nodes,
-            global::System.Collections.Generic.IList<global::Dataloop.PipelineConnection> connections,
-            string description,
-            string preview,
-            global::Dataloop.CompositionStatus status,
-            string? updatedBy = default,
-            string? compositionId = default,
-            global::System.Collections.Generic.IList<global::Dataloop.IStartNode>? startNodes = default,
-            global::Dataloop.IPipelineSettings? settings = default,
-            global::System.Collections.Generic.IList<global::Dataloop.PipelineVariable>? variables = default,
-            global::System.DateTime? resetTimestamp = default,
-            global::Dataloop.APIPipelineTemplateTemplate? template = default,
-            double? versionNumber = default,
-            global::Dataloop.TemplateKind? templateKind = default,
-            global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
-            global::System.Threading.CancellationToken cancellationToken = default)
-        {
-            var __request = new global::Dataloop.APIPipelineTemplate2
-            {
-                Id = id,
-                Url = url,
-                Name = name,
-                Creator = creator,
-                CreatedAt = createdAt,
-                UpdatedAt = updatedAt,
-                UpdatedBy = updatedBy,
-                ProjectId = projectId,
-                OrgId = orgId,
-                CompositionId = compositionId,
-                Nodes = nodes,
-                Connections = connections,
-                Description = description,
-                Preview = preview,
-                StartNodes = startNodes,
-                Status = status,
-                Settings = settings,
-                Variables = variables,
-                ResetTimestamp = resetTimestamp,
-                Template = template,
-                VersionNumber = versionNumber,
-                TemplateKind = templateKind,
-            };
-
-            return await CreateAsync(
-                request: __request,
-                requestOptions: requestOptions,
-                cancellationToken: cancellationToken).ConfigureAwait(false);
         }
     }
 }
