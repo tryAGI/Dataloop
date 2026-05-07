@@ -449,6 +449,10 @@ namespace Dataloop
 
             typeof(global::Dataloop.JsonConverters.ServiceModeTypeNullableJsonConverter),
 
+            typeof(global::Dataloop.JsonConverters.EComputeConsumptionMethodJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EComputeConsumptionMethodNullableJsonConverter),
+
             typeof(global::Dataloop.JsonConverters.PackageResourceTypeJsonConverter),
 
             typeof(global::Dataloop.JsonConverters.PackageResourceTypeNullableJsonConverter),
@@ -676,10 +680,6 @@ namespace Dataloop
             typeof(global::Dataloop.JsonConverters.KubernetesServiceTypeJsonConverter),
 
             typeof(global::Dataloop.JsonConverters.KubernetesServiceTypeNullableJsonConverter),
-
-            typeof(global::Dataloop.JsonConverters.EComputeConsumptionMethodJsonConverter),
-
-            typeof(global::Dataloop.JsonConverters.EComputeConsumptionMethodNullableJsonConverter),
 
             typeof(global::Dataloop.JsonConverters.CycleRerunMethodJsonConverter),
 
@@ -1249,6 +1249,10 @@ namespace Dataloop
 
             typeof(global::Dataloop.JsonConverters.UnixTimestampJsonConverter),
         })]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::System.Collections.Generic.IList<global::Dataloop.APIComposition>, global::System.Collections.Generic.IList<global::Dataloop.APIPipeline>, global::System.Collections.Generic.IList<global::Dataloop.AnyOf<global::Dataloop.APIPipelineState, global::Dataloop.IPipelineState>>, global::System.Collections.Generic.IList<global::Dataloop.ResourceExecution>, global::System.Collections.Generic.IList<global::Dataloop.APIDpk>, global::System.Collections.Generic.IList<global::Dataloop.APIApp>, global::System.Collections.Generic.IList<global::Dataloop.APICompute>, global::System.Collections.Generic.IList<global::Dataloop.APIServiceDriver>>), TypeInfoPropertyName = "APIServiceDriver_0708f4328c68aea5")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::Dataloop.S3IntegrationConfig, global::Dataloop.GcsIntegrationConfig, global::Dataloop.AzureBlobIntegrationConfig, global::Dataloop.PickS3DriverPayloadExcludeKeyofS3DriverPayloadPath>?), TypeInfoPropertyName = "PickS3DriverPayloadExcludeKeyofS3DriverPayloadPath_9a6ecea9b7debc31")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::System.Collections.Generic.IList<global::Dataloop.APIComposition>, global::System.Collections.Generic.IList<global::Dataloop.APIPipeline>, global::System.Collections.Generic.IList<global::Dataloop.AnyOf<global::Dataloop.APIPipelineState, global::Dataloop.IPipelineState>>, global::System.Collections.Generic.IList<global::Dataloop.ResourceExecution>, global::System.Collections.Generic.IList<global::Dataloop.APIDpk>, global::System.Collections.Generic.IList<global::Dataloop.APIApp>, global::System.Collections.Generic.IList<global::Dataloop.APICompute>, global::System.Collections.Generic.IList<global::Dataloop.APIServiceDriver>>?), TypeInfoPropertyName = "APIServiceDriver_c0617c242689fb32")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::System.Collections.Generic.List<global::Dataloop.APIComposition>, global::System.Collections.Generic.List<global::Dataloop.APIPipeline>, global::System.Collections.Generic.List<global::Dataloop.AnyOf<global::Dataloop.APIPipelineState, global::Dataloop.IPipelineState>>, global::System.Collections.Generic.List<global::Dataloop.ResourceExecution>, global::System.Collections.Generic.List<global::Dataloop.APIDpk>, global::System.Collections.Generic.List<global::Dataloop.APIApp>, global::System.Collections.Generic.List<global::Dataloop.APICompute>, global::System.Collections.Generic.List<global::Dataloop.APIServiceDriver>>), TypeInfoPropertyName = "APIServiceDriver_ce74abc722e1be30")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.JsonSerializerContextTypes))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.ItemSpecType), TypeInfoPropertyName = "ItemSpecType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.RefType), TypeInfoPropertyName = "RefType2")]
@@ -1522,6 +1526,9 @@ namespace Dataloop
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.PartialAzureBlobDriverPayload))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.PartialDriverPayload))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::Dataloop.PartialS3DriverPayload, global::Dataloop.PartialGcsDriverPayload, global::Dataloop.PartialAzureBlobDriverPayload>), TypeInfoPropertyName = "AnyOfPartialS3DriverPayloadPartialGcsDriverPayloadPartialAzureBlobDriverPayload2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.UpdateDriversIntegrationResult))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dataloop.UpdateDriversIntegrationResultError>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.UpdateDriversIntegrationResultError))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.APIFeatureSet))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.CursorPageAPIFeatureSet))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dataloop.APIFeatureSet>))]
@@ -1742,6 +1749,1257 @@ namespace Dataloop
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.APIUser))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dataloop.GroupCtx>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::Dataloop.APIOrg, string>), TypeInfoPropertyName = "AnyOfAPIOrgString2")]
+    internal sealed partial class SourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
+    {
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
+        Converters = new global::System.Type[]
+        {
+            typeof(global::Dataloop.JsonConverters.ItemSpecTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ItemSpecTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.RefTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.RefTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ModalityTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ModalityTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.APIDatasetFileItemTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.APIDatasetFileItemTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.APIDatasetFileItemAnnotatedJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.APIDatasetFileItemAnnotatedNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.APIDatasetDirectoryItemTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.APIDatasetDirectoryItemTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DatasetIndexDriversJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DatasetIndexDriversNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ItemRefOperationJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ItemRefOperationNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.QueryResourceJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.QueryResourceNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ReferenceQueryOperationJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ReferenceQueryOperationNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PickDQLQueryExcludeKeyofDQLQueryIntersectOrExceptOrLimitOrSortOrSelectQueryEngineJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PickDQLQueryExcludeKeyofDQLQueryIntersectOrExceptOrLimitOrSortOrSelectQueryEngineNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.OrderByJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.OrderByNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DQLResourceQueryQueryEngineJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DQLResourceQueryQueryEngineNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AddItemModeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AddItemModeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SystemDatasetTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SystemDatasetTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AnnotationTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AnnotationTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.RefAnnotationsRefTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.RefAnnotationsRefTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.RequestSourceJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.RequestSourceNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.APIAnnotationEventDeletedJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.APIAnnotationEventDeletedNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.IndexDriverJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.IndexDriverNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.APIDatasetAccessLevelJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.APIDatasetAccessLevelNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DatasetScopeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DatasetScopeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CreateDatasetRequestDriverJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CreateDatasetRequestDriverNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CreateDatasetRequestAccessLevelJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CreateDatasetRequestAccessLevelNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DQLQueryQueryEngineJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DQLQueryQueryEngineNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExportTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExportTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExportDatasetOptionsExportVersionJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExportDatasetOptionsExportVersionNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExportStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExportStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExportErrorTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExportErrorTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.QueryResourceItemsJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.QueryResourceItemsNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.QueryResourceAnnotationsJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.QueryResourceAnnotationsNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.QueryResourceDatasetsJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.QueryResourceDatasetsNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AllowedTypesJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AllowedTypesNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.UnsearchableSchemaReasonsJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.UnsearchableSchemaReasonsNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SchemaModeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SchemaModeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DatasetItemTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DatasetItemTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AnnotationTypeBoxJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AnnotationTypeBoxNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AnnotationTypeClassJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AnnotationTypeClassNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AnnotationTypeBinaryJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AnnotationTypeBinaryNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.GenerationStrategyTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.GenerationStrategyTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.GeneratedDatasetTypesJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.GeneratedDatasetTypesNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.OneByOneLatencyBenchmarkModeTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.OneByOneLatencyBenchmarkModeTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ProfilingBenchmarkModeTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ProfilingBenchmarkModeTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ConcurrencyBenchmarkModeTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ConcurrencyBenchmarkModeTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.QueryTestCasesJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.QueryTestCasesNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.IndexingStrategyTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.IndexingStrategyTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.InferDatasetSchemaModeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.InferDatasetSchemaModeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.FeatureFlagsSetContextVariant1TypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.FeatureFlagsSetContextVariant1TypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.FeatureFlagsSetContextVariant2TypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.FeatureFlagsSetContextVariant2TypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DatasetAccessLevelJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DatasetAccessLevelNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DatasetSyncStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DatasetSyncStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DriverTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DriverTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.IntegrationTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.IntegrationTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.FeatureSetEntityTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.FeatureSetEntityTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.BenchmarkIngestionStrategyTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.BenchmarkIngestionStrategyTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.BenchmarkOptionsExportTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.BenchmarkOptionsExportTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SetTaskRefsBenchmarkInputOperationJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SetTaskRefsBenchmarkInputOperationNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DriverReadBenchmarkOperationInputScenarioDetailsJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DriverReadBenchmarkOperationInputScenarioDetailsNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DriverWriteBenchmarkOperationInputScenarioDetailsJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DriverWriteBenchmarkOperationInputScenarioDetailsNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AttributeTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AttributeTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.InstructionActionJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.InstructionActionNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.InstructionScopeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.InstructionScopeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CustomActionControlsJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CustomActionControlsNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.APICustomActionControlsJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.APICustomActionControlsNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AssignmentStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AssignmentStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AssignmentMetadataSystemTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AssignmentMetadataSystemTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TaskTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TaskTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ScoreTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ScoreTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TaskStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TaskStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.QualityTaskTypesJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.QualityTaskTypesNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.InstructionsDocumentModeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.InstructionsDocumentModeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TaskContributorsActionJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TaskContributorsActionNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.RoleJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.RoleNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.OrgPlansJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.OrgPlansNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AlertTierJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AlertTierNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.OrgRoleJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.OrgRoleNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DLEntityTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DLEntityTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.OrgSizeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.OrgSizeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.OrgIndustryJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.OrgIndustryNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.IntegrationType2JsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.IntegrationType2NullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.BillingResourceKeyJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.BillingResourceKeyNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.MetricGroupJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.MetricGroupNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.BillingPeriodJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.BillingPeriodNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.BillingStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.BillingStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ScopeTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ScopeTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.GuestTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.GuestTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.APIMembershipRoleJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.APIMembershipRoleNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.UserInterestTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.UserInterestTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ApiKeyTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ApiKeyTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.LoginsLogQueryOrderJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.LoginsLogQueryOrderNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.LoginsLogQueryOrderByJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.LoginsLogQueryOrderByNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EntityScopeLevelJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EntityScopeLevelNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ModelStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ModelStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ModelInputTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ModelInputTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ModelOutputTypeVariant2JsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ModelOutputTypeVariant2NullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ModelOutputTypeVariant4JsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ModelOutputTypeVariant4NullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ArtifactTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ArtifactTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ReferenceTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ReferenceTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.NodeMlTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.NodeMlTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ModelOperationTypesJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ModelOperationTypesNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EventResourceTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EventResourceTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CreateWebHookDTOHttpMethodJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CreateWebHookDTOHttpMethodNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.UpdateWebHookDTOHttpMethodJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.UpdateWebHookDTOHttpMethodNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.OnResetActionJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.OnResetActionNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ServiceTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ServiceTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CrashloopActionJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CrashloopActionNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CrashloopReasonJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CrashloopReasonNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ServiceModeTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ServiceModeTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EComputeConsumptionMethodJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EComputeConsumptionMethodNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PackageResourceTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PackageResourceTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionHookValueFromJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionHookValueFromNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionHookTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionHookTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.UiBindingResourceJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.UiBindingResourceNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.UiBindingPanelJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.UiBindingPanelNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionPostActionTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionPostActionTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionStatusNameJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionStatusNameNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ResourceTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ResourceTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TriggerTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TriggerTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ECacheModeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ECacheModeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.FaaSCacheSizeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.FaaSCacheSizeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.FaaSCacheTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.FaaSCacheTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ServiceLogLevelJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ServiceLogLevelNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.LogsListDirectionJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.LogsListDirectionNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ReplicaStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ReplicaStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ReplicaReasonJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ReplicaReasonNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EDebugOptionsStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EDebugOptionsStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ReportTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ReportTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ServiceDriverTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ServiceDriverTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DataloopPodTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DataloopPodTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ComputeMetadataVariant2ServeAgentGatewayJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ComputeMetadataVariant2ServeAgentGatewayNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CompositionElementStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CompositionElementStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CompositionStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CompositionStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TriggerResourceTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TriggerResourceTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TriggerActionTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TriggerActionTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionModeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionModeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TriggerOperationTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TriggerOperationTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ECompositionPackageStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ECompositionPackageStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PackageConfigTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PackageConfigTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PackageRequirementOperatorJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PackageRequirementOperatorNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CodebaseTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CodebaseTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ChannelTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ChannelTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CompositionChannelStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CompositionChannelStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TemplateKindJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TemplateKindNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.NodeTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.NodeTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.StartNodeTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.StartNodeTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ResumePipelineOptionJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ResumePipelineOptionNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PipelineFromTemplateStateJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PipelineFromTemplateStateNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ICompositionDatasetStateDatasetIndexDriverJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ICompositionDatasetStateDatasetIndexDriverNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ICompositionDatasetStateDatasetShareLevelJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ICompositionDatasetStateDatasetShareLevelNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DpkDatasetOntologyTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DpkDatasetOntologyTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionPhaseJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionPhaseNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ENodeStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ENodeStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EPipelineStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EPipelineStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EDpkScopeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EDpkScopeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EComponentServiceOperationJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EComponentServiceOperationNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.FilterFrequencyTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.FilterFrequencyTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.InvokeTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.InvokeTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CustomNodeScopeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CustomNodeScopeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EComponentElementTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EComponentElementTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EAppScopeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EAppScopeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EComputeTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EComputeTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EComputeStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EComputeStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EClusterProviderJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EClusterProviderNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EComputePluginJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EComputePluginNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EStorageTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EStorageTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.KubernetesServiceTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.KubernetesServiceTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CycleRerunMethodJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CycleRerunMethodNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PackageTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PackageTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.JobStatusEnumJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.JobStatusEnumNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionsOrderByTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionsOrderByTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionsOrderByDirectionJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionsOrderByDirectionNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CommandStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CommandStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CommandsDomainJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CommandsDomainNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PipelineTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PipelineTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SettingsValueTypesJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SettingsValueTypesNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PlatformEntityTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PlatformEntityTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SettingScopeTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SettingScopeTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SettingScopeIdJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SettingScopeIdNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SettingScopeRoleJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SettingScopeRoleNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SettingsTypesJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SettingsTypesNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SettingsSectionNamesJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SettingsSectionNamesNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PartialSettingScopeTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PartialSettingScopeTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PartialSettingScopeIdJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PartialSettingScopeIdNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PartialSettingScopeRoleJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PartialSettingScopeRoleNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PodTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PodTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AlertStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AlertStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.FieldSortFieldJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.FieldSortFieldNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.FieldSortDirectionJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.FieldSortDirectionNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ResourceAuditEventTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ResourceAuditEventTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TaxTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TaxTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PaymentDriverTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PaymentDriverTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.InvoiceStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.InvoiceStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CurrencyJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CurrencyNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PaymentDriverTypesJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PaymentDriverTypesNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AzureWebhookEventActionJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AzureWebhookEventActionNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AzureWebhookEventOperationRequestSourceJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AzureWebhookEventOperationRequestSourceNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ListExportHistoryRequestSortOrderJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ListExportHistoryRequestSortOrderNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ListExportHistoryRequestSortByJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ListExportHistoryRequestSortByNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.QueryDatasetsRequestTargetJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.QueryDatasetsRequestTargetNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.IRefImageAnnotationsTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.APIAnnotationCoordinateTypesJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.BenchmarkModeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SchemaEntryInputJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.RecipeV2InputJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.RecipeInputJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ModelOutputTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.IDateJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.MetricDataJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ComputeMetadataJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.IDpkComponentElementSpecJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CustomInstallationJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AppMetadataJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ComputePluginSpecJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.MigrationSpecJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.RemoveSettingTraceMigrationSpecJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<bool?, global::Dataloop.APIDatasetFileItemAnnotated?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::Dataloop.APIDatasetDirectoryItemExportZip>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.APIDatasetFileItem>, global::System.Collections.Generic.IList<global::Dataloop.APIDatasetDirectoryItem>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.OrderBy?, global::Dataloop.SortQuery>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.ResourceReferenceMetadata, global::Dataloop.PartialAny>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<bool?, global::Dataloop.S2SetupOptions>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<bool?, global::Dataloop.APIAnnotationEventDeleted?>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<string, global::Dataloop.SystemDatasetType?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIAnnotation, global::Dataloop.APIDataset, global::Dataloop.APIDatasetFileItem, global::Dataloop.APIDatasetDirectoryItem>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.QueryResourceItems?, global::Dataloop.QueryResourceAnnotations?, global::Dataloop.QueryResourceDatasets?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.QueryResourceItems?, global::Dataloop.QueryResourceAnnotations?, global::Dataloop.QueryResourceDatasets?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.QueryResourceItems?, global::Dataloop.QueryResourceAnnotations?, global::Dataloop.QueryResourceDatasets?>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.Context, global::Dataloop.ItemContext>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.MasterItemSpec, global::Dataloop.ClonedItemSpec>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.AnnotationTypeBox?, global::Dataloop.AnnotationTypeClass?, global::Dataloop.AnnotationTypeBinary?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.FeatureFlagsSetContextVariant1, global::Dataloop.FeatureFlagsSetContextVariant2>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.Context, global::Dataloop.DatasetContext>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.SchemaEntryInputVariant2Variant1, global::Dataloop.SchemaEntryInputVariant2Variant2>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.Context, global::Dataloop.DriverContext>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.EnvUserPasswordAuthentication, global::Dataloop.KeyFileAuthentication>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.EnvUserPasswordAuthentication, global::Dataloop.KeyFileAuthentication>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.EnvUserPasswordAuthentication, global::Dataloop.KeyFileAuthentication>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.EnvUserPasswordAuthentication, global::Dataloop.KeyFileAuthentication>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.S3IntegrationConfig, global::Dataloop.GcsIntegrationConfig, global::Dataloop.AzureBlobIntegrationConfig, global::Dataloop.PickS3DriverPayloadExcludeKeyofS3DriverPayloadPath>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.S3DriverPayload, global::Dataloop.GcsDriverPayload, global::Dataloop.AzureBlobDriverPayload, global::Dataloop.PickFilesystemDriverConfigurationMountPath>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.EnvUserPasswordAuthentication, global::Dataloop.KeyFileAuthentication>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.EnvUserPasswordAuthentication, global::Dataloop.KeyFileAuthentication>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.EnvUserPasswordAuthentication, global::Dataloop.KeyFileAuthentication>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.PartialS3DriverPayload, global::Dataloop.PartialGcsDriverPayload, global::Dataloop.PartialAzureBlobDriverPayload>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIOntologyV2, global::Dataloop.APIOntology>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.Context, global::Dataloop.RecipeV2Context>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.ToolInstructionOptions, global::Dataloop.Dictionary>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.Context, global::Dataloop.RecipeContext>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIRecipeV2, global::Dataloop.APIRecipe>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.Dictionary, global::Dataloop.AssignmentMetadataSystem>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.Context, global::Dataloop.AssignmentContext>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APITaskSpec, global::Dataloop.APISpawnTaskSpec>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.Dictionary, global::Dataloop.TaskMetadataSystem>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APITaskSpec, global::Dataloop.APISpawnTaskSpec>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APITaskSpec, global::Dataloop.APISpawnTaskSpec>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIOrg, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.APIUser>, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.APIGroup>, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIAccount, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.APIIntegration>, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIOrg, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.APIUser>, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.APIProject>, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIOrg, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.APIUser>, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.APIGroup>, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIOrg, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIAccount, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.APIProjectGuest>, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIProject, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIOrg, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIOrg, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIIntegration, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.Role?, global::Dataloop.OrgRole?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIOrg, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.OrgRole?, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIOrg, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.GuestType?, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIProject, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.Role?, string, global::Dataloop.APIMembershipRole?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<double?, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.ItemArtifact, global::Dataloop.LocalArtifact>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.ItemArtifact, global::Dataloop.LocalArtifact>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.ItemArtifact, global::Dataloop.LocalArtifact>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<double?, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<double?, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.ItemArtifact, global::Dataloop.LocalArtifact>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.ServiceMetadataUser, global::Dataloop.Dictionary>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.ServiceMetadataSystem, global::Dataloop.SystemRefs, global::Dataloop.Dictionary>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<double?, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<double?, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<double?, string>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.Context, global::Dataloop.ServiceContext>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.ICompositionError, string>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.Context, global::Dataloop.ExecutionContext>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, double?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, double?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<double?, global::System.Collections.Generic.Dictionary<string, double>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.DpkComponents, global::System.Collections.Generic.Dictionary<string, global::Dataloop.IComponentElement>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.DpkComponents, global::System.Collections.Generic.Dictionary<string, global::Dataloop.IComponentElement>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.DpkComponents, global::System.Collections.Generic.Dictionary<string, global::Dataloop.IComponentElement>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.IExternalMonitoringConfig, global::Dataloop.IHpaControllerConfig, global::Dataloop.Dictionary, global::Dataloop.IStorageDriverConfig, global::Dataloop.IComputeNfsPluginConfig>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.APIComposition>, global::System.Collections.Generic.IList<global::Dataloop.APIPipeline>, global::System.Collections.Generic.IList<global::Dataloop.AnyOf<global::Dataloop.APIPipelineState, global::Dataloop.IPipelineState>>, global::System.Collections.Generic.IList<global::Dataloop.ResourceExecution>, global::System.Collections.Generic.IList<global::Dataloop.APIDpk>, global::System.Collections.Generic.IList<global::Dataloop.APIApp>, global::System.Collections.Generic.IList<global::Dataloop.APICompute>, global::System.Collections.Generic.IList<global::Dataloop.APIServiceDriver>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIPipelineState, global::Dataloop.IPipelineState>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.DpkComponents, global::System.Collections.Generic.Dictionary<string, global::Dataloop.IComponentElement>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.PlatformEntityType?, global::Dataloop.SettingScopeType?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::Dataloop.SettingScopeId?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.Role?, global::Dataloop.OrgRole?, global::Dataloop.SettingScopeRole?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.PlatformEntityType?, global::Dataloop.PartialSettingScopeType?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::Dataloop.PartialSettingScopeId?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.Role?, global::Dataloop.OrgRole?, global::Dataloop.PartialSettingScopeRole?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUserSetting, global::Dataloop.APIFeatureFlag>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::Dataloop.AzureWebhookEventOperationRequestSource?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.PartialICompute, global::Dataloop.UpdateComputeRequest2>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.DQLResourceQuery, global::Dataloop.AnyOf<global::Dataloop.FilterQuery, global::Dataloop.UpdateQuery, global::Dataloop.DeleteQuery>?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.FilterQuery, global::Dataloop.UpdateQuery, global::Dataloop.DeleteQuery>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.DQLResourceQuery, global::Dataloop.FilterQuery>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.MoveItemsRequest, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIAnnotationRequest, global::System.Collections.Generic.IList<global::Dataloop.APIAnnotationRequest>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.ImportItemRequest>, global::Dataloop.ImportItemsToDatasetRequest>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.FeatureSet, global::System.Collections.Generic.IList<global::Dataloop.FeatureSet>>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.DQLResourceQuery, global::Dataloop.FilterQuery>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.FeatureVector, global::System.Collections.Generic.IList<global::Dataloop.FeatureVector>>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.DQLResourceQuery, global::Dataloop.FilterQuery>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIAnnotationRequest, global::System.Collections.Generic.IList<global::Dataloop.APIAnnotationRequest>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.MetricRequest, global::System.Collections.Generic.IList<global::Dataloop.MetricRequest>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.PartialCreateModelRequest, global::Dataloop.APICopyEnvironmentSpec>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.CreateOntologyPayloadV2, global::Dataloop.CreateOntologyPayload>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.RecipeV2Input?, global::Dataloop.RecipeInput?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.PartialRecipePayloadV2, global::Dataloop.PartialRecipePayload>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.ResolverPayload, global::Dataloop.IUserContext>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.PatchFeatureFlagRequest, global::Dataloop.PatchUserSettingRequest>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APITask, global::Dataloop.APICommand>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<object, global::Dataloop.APICommand>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APITask, global::Dataloop.APICommand>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APICommand, global::Dataloop.APITask>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIApp, object>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APICommand, global::System.Collections.Generic.IList<global::Dataloop.APIAssignment>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APICommand, global::Dataloop.APIAssignment>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APICommand, global::Dataloop.APIAssignment>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APICommand, global::System.Collections.Generic.IList<global::Dataloop.APIAssignment>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APICommand, object>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIDatasetFileItem, global::Dataloop.APIDatasetDirectoryItem>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIDatasetFileItem, global::Dataloop.APIDatasetDirectoryItem>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIDatasetFileItem, global::Dataloop.APIDatasetDirectoryItem>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIAnnotation, global::System.Collections.Generic.IList<global::Dataloop.APIAnnotation>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, double?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, double?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, double?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIDatasetFileItem, global::Dataloop.APIDatasetDirectoryItem>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.Dataset, global::Dataloop.APIDatasetSchema>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APICommand, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APICommand, global::Dataloop.Dataset>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIExecution, global::Dataloop.PiperSettingsCommands>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIExecution, global::Dataloop.APICommand>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIDatasetFileItem, global::Dataloop.APIDatasetDirectoryItem>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIDatasetFileItem, global::Dataloop.APIDatasetDirectoryItem>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIAnnotation, global::System.Collections.Generic.IList<global::Dataloop.APIAnnotation>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIModel, global::Dataloop.APICommand>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIModel, global::Dataloop.APICommand>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIOntologyV2, global::Dataloop.APIOntology>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIOntologyV2, global::Dataloop.APIOntology>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIOntologyV2, global::Dataloop.APIOntology>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.GetAvailableIntegrationsResponseItemVariant1, global::Dataloop.GetAvailableIntegrationsResponseItemVariant2>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIPipelineState, global::Dataloop.APICommand>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.APIMembership>, object>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.ClientContributor>, object>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIRecipeV2, global::Dataloop.APIRecipe>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIRecipeV2, global::Dataloop.APIRecipe>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIRecipeV2, global::Dataloop.APIRecipe>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIRecipeV2, global::Dataloop.APIRecipe>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIService, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIService, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIService, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIFeatureFlag, global::Dataloop.APIUserSetting>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIFeatureFlag, global::Dataloop.APIUserSetting>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIFeatureFlag, global::Dataloop.APIUserSetting>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIFeatureFlag, global::Dataloop.APIUserSetting>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APITask, global::Dataloop.APICommand>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<object, global::Dataloop.APICommand>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APITask, global::Dataloop.APICommand>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APICommand, global::Dataloop.APITask>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, object>),
+
+            typeof(global::Dataloop.JsonConverters.UnixTimestampJsonConverter),
+        })]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::System.Collections.Generic.IList<global::Dataloop.APIComposition>, global::System.Collections.Generic.IList<global::Dataloop.APIPipeline>, global::System.Collections.Generic.IList<global::Dataloop.AnyOf<global::Dataloop.APIPipelineState, global::Dataloop.IPipelineState>>, global::System.Collections.Generic.IList<global::Dataloop.ResourceExecution>, global::System.Collections.Generic.IList<global::Dataloop.APIDpk>, global::System.Collections.Generic.IList<global::Dataloop.APIApp>, global::System.Collections.Generic.IList<global::Dataloop.APICompute>, global::System.Collections.Generic.IList<global::Dataloop.APIServiceDriver>>), TypeInfoPropertyName = "APIServiceDriver_0708f4328c68aea5")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::Dataloop.S3IntegrationConfig, global::Dataloop.GcsIntegrationConfig, global::Dataloop.AzureBlobIntegrationConfig, global::Dataloop.PickS3DriverPayloadExcludeKeyofS3DriverPayloadPath>?), TypeInfoPropertyName = "PickS3DriverPayloadExcludeKeyofS3DriverPayloadPath_9a6ecea9b7debc31")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::System.Collections.Generic.IList<global::Dataloop.APIComposition>, global::System.Collections.Generic.IList<global::Dataloop.APIPipeline>, global::System.Collections.Generic.IList<global::Dataloop.AnyOf<global::Dataloop.APIPipelineState, global::Dataloop.IPipelineState>>, global::System.Collections.Generic.IList<global::Dataloop.ResourceExecution>, global::System.Collections.Generic.IList<global::Dataloop.APIDpk>, global::System.Collections.Generic.IList<global::Dataloop.APIApp>, global::System.Collections.Generic.IList<global::Dataloop.APICompute>, global::System.Collections.Generic.IList<global::Dataloop.APIServiceDriver>>?), TypeInfoPropertyName = "APIServiceDriver_c0617c242689fb32")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::System.Collections.Generic.List<global::Dataloop.APIComposition>, global::System.Collections.Generic.List<global::Dataloop.APIPipeline>, global::System.Collections.Generic.List<global::Dataloop.AnyOf<global::Dataloop.APIPipelineState, global::Dataloop.IPipelineState>>, global::System.Collections.Generic.List<global::Dataloop.ResourceExecution>, global::System.Collections.Generic.List<global::Dataloop.APIDpk>, global::System.Collections.Generic.List<global::Dataloop.APIApp>, global::System.Collections.Generic.List<global::Dataloop.APICompute>, global::System.Collections.Generic.List<global::Dataloop.APIServiceDriver>>), TypeInfoPropertyName = "APIServiceDriver_ce74abc722e1be30")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.APIOrg))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.APIUserGuest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.Role), TypeInfoPropertyName = "Role2")]
@@ -1921,6 +3179,7 @@ namespace Dataloop
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.Crashloop))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.ServiceModeType), TypeInfoPropertyName = "ServiceModeType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.ServiceMode))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.EComputeConsumptionMethod), TypeInfoPropertyName = "EComputeConsumptionMethod2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.SystemRefs))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.ServiceMetadata))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AllOf<global::Dataloop.ServiceMetadataUser, global::Dataloop.Dictionary>), TypeInfoPropertyName = "AllOfServiceMetadataUserDictionary2")]
@@ -2237,6 +3496,1257 @@ namespace Dataloop
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dataloop.IClusterVolumeSecretItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.IClusterVolumeSecretItem))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.IClusterVolumeNfs))]
+    internal sealed partial class SourceGenerationContextChunk1 : global::System.Text.Json.Serialization.JsonSerializerContext
+    {
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
+        Converters = new global::System.Type[]
+        {
+            typeof(global::Dataloop.JsonConverters.ItemSpecTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ItemSpecTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.RefTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.RefTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ModalityTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ModalityTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.APIDatasetFileItemTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.APIDatasetFileItemTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.APIDatasetFileItemAnnotatedJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.APIDatasetFileItemAnnotatedNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.APIDatasetDirectoryItemTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.APIDatasetDirectoryItemTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DatasetIndexDriversJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DatasetIndexDriversNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ItemRefOperationJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ItemRefOperationNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.QueryResourceJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.QueryResourceNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ReferenceQueryOperationJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ReferenceQueryOperationNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PickDQLQueryExcludeKeyofDQLQueryIntersectOrExceptOrLimitOrSortOrSelectQueryEngineJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PickDQLQueryExcludeKeyofDQLQueryIntersectOrExceptOrLimitOrSortOrSelectQueryEngineNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.OrderByJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.OrderByNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DQLResourceQueryQueryEngineJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DQLResourceQueryQueryEngineNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AddItemModeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AddItemModeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SystemDatasetTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SystemDatasetTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AnnotationTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AnnotationTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.RefAnnotationsRefTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.RefAnnotationsRefTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.RequestSourceJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.RequestSourceNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.APIAnnotationEventDeletedJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.APIAnnotationEventDeletedNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.IndexDriverJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.IndexDriverNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.APIDatasetAccessLevelJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.APIDatasetAccessLevelNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DatasetScopeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DatasetScopeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CreateDatasetRequestDriverJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CreateDatasetRequestDriverNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CreateDatasetRequestAccessLevelJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CreateDatasetRequestAccessLevelNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DQLQueryQueryEngineJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DQLQueryQueryEngineNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExportTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExportTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExportDatasetOptionsExportVersionJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExportDatasetOptionsExportVersionNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExportStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExportStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExportErrorTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExportErrorTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.QueryResourceItemsJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.QueryResourceItemsNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.QueryResourceAnnotationsJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.QueryResourceAnnotationsNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.QueryResourceDatasetsJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.QueryResourceDatasetsNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AllowedTypesJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AllowedTypesNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.UnsearchableSchemaReasonsJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.UnsearchableSchemaReasonsNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SchemaModeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SchemaModeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DatasetItemTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DatasetItemTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AnnotationTypeBoxJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AnnotationTypeBoxNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AnnotationTypeClassJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AnnotationTypeClassNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AnnotationTypeBinaryJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AnnotationTypeBinaryNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.GenerationStrategyTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.GenerationStrategyTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.GeneratedDatasetTypesJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.GeneratedDatasetTypesNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.OneByOneLatencyBenchmarkModeTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.OneByOneLatencyBenchmarkModeTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ProfilingBenchmarkModeTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ProfilingBenchmarkModeTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ConcurrencyBenchmarkModeTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ConcurrencyBenchmarkModeTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.QueryTestCasesJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.QueryTestCasesNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.IndexingStrategyTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.IndexingStrategyTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.InferDatasetSchemaModeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.InferDatasetSchemaModeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.FeatureFlagsSetContextVariant1TypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.FeatureFlagsSetContextVariant1TypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.FeatureFlagsSetContextVariant2TypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.FeatureFlagsSetContextVariant2TypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DatasetAccessLevelJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DatasetAccessLevelNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DatasetSyncStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DatasetSyncStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DriverTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DriverTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.IntegrationTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.IntegrationTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.FeatureSetEntityTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.FeatureSetEntityTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.BenchmarkIngestionStrategyTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.BenchmarkIngestionStrategyTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.BenchmarkOptionsExportTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.BenchmarkOptionsExportTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SetTaskRefsBenchmarkInputOperationJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SetTaskRefsBenchmarkInputOperationNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DriverReadBenchmarkOperationInputScenarioDetailsJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DriverReadBenchmarkOperationInputScenarioDetailsNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DriverWriteBenchmarkOperationInputScenarioDetailsJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DriverWriteBenchmarkOperationInputScenarioDetailsNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AttributeTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AttributeTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.InstructionActionJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.InstructionActionNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.InstructionScopeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.InstructionScopeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CustomActionControlsJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CustomActionControlsNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.APICustomActionControlsJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.APICustomActionControlsNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AssignmentStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AssignmentStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AssignmentMetadataSystemTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AssignmentMetadataSystemTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TaskTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TaskTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ScoreTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ScoreTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TaskStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TaskStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.QualityTaskTypesJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.QualityTaskTypesNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.InstructionsDocumentModeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.InstructionsDocumentModeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TaskContributorsActionJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TaskContributorsActionNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.RoleJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.RoleNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.OrgPlansJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.OrgPlansNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AlertTierJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AlertTierNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.OrgRoleJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.OrgRoleNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DLEntityTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DLEntityTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.OrgSizeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.OrgSizeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.OrgIndustryJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.OrgIndustryNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.IntegrationType2JsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.IntegrationType2NullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.BillingResourceKeyJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.BillingResourceKeyNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.MetricGroupJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.MetricGroupNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.BillingPeriodJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.BillingPeriodNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.BillingStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.BillingStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ScopeTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ScopeTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.GuestTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.GuestTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.APIMembershipRoleJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.APIMembershipRoleNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.UserInterestTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.UserInterestTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ApiKeyTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ApiKeyTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.LoginsLogQueryOrderJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.LoginsLogQueryOrderNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.LoginsLogQueryOrderByJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.LoginsLogQueryOrderByNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EntityScopeLevelJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EntityScopeLevelNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ModelStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ModelStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ModelInputTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ModelInputTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ModelOutputTypeVariant2JsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ModelOutputTypeVariant2NullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ModelOutputTypeVariant4JsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ModelOutputTypeVariant4NullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ArtifactTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ArtifactTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ReferenceTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ReferenceTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.NodeMlTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.NodeMlTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ModelOperationTypesJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ModelOperationTypesNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EventResourceTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EventResourceTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CreateWebHookDTOHttpMethodJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CreateWebHookDTOHttpMethodNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.UpdateWebHookDTOHttpMethodJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.UpdateWebHookDTOHttpMethodNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.OnResetActionJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.OnResetActionNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ServiceTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ServiceTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CrashloopActionJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CrashloopActionNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CrashloopReasonJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CrashloopReasonNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ServiceModeTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ServiceModeTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EComputeConsumptionMethodJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EComputeConsumptionMethodNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PackageResourceTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PackageResourceTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionHookValueFromJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionHookValueFromNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionHookTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionHookTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.UiBindingResourceJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.UiBindingResourceNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.UiBindingPanelJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.UiBindingPanelNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionPostActionTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionPostActionTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionStatusNameJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionStatusNameNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ResourceTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ResourceTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TriggerTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TriggerTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ECacheModeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ECacheModeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.FaaSCacheSizeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.FaaSCacheSizeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.FaaSCacheTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.FaaSCacheTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ServiceLogLevelJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ServiceLogLevelNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.LogsListDirectionJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.LogsListDirectionNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ReplicaStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ReplicaStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ReplicaReasonJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ReplicaReasonNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EDebugOptionsStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EDebugOptionsStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ReportTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ReportTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ServiceDriverTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ServiceDriverTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DataloopPodTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DataloopPodTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ComputeMetadataVariant2ServeAgentGatewayJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ComputeMetadataVariant2ServeAgentGatewayNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CompositionElementStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CompositionElementStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CompositionStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CompositionStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TriggerResourceTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TriggerResourceTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TriggerActionTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TriggerActionTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionModeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionModeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TriggerOperationTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TriggerOperationTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ECompositionPackageStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ECompositionPackageStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PackageConfigTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PackageConfigTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PackageRequirementOperatorJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PackageRequirementOperatorNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CodebaseTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CodebaseTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ChannelTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ChannelTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CompositionChannelStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CompositionChannelStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TemplateKindJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TemplateKindNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.NodeTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.NodeTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.StartNodeTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.StartNodeTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ResumePipelineOptionJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ResumePipelineOptionNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PipelineFromTemplateStateJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PipelineFromTemplateStateNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ICompositionDatasetStateDatasetIndexDriverJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ICompositionDatasetStateDatasetIndexDriverNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ICompositionDatasetStateDatasetShareLevelJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ICompositionDatasetStateDatasetShareLevelNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DpkDatasetOntologyTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DpkDatasetOntologyTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionPhaseJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionPhaseNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ENodeStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ENodeStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EPipelineStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EPipelineStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EDpkScopeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EDpkScopeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EComponentServiceOperationJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EComponentServiceOperationNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.FilterFrequencyTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.FilterFrequencyTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.InvokeTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.InvokeTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CustomNodeScopeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CustomNodeScopeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EComponentElementTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EComponentElementTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EAppScopeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EAppScopeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EComputeTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EComputeTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EComputeStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EComputeStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EClusterProviderJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EClusterProviderNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EComputePluginJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EComputePluginNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EStorageTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EStorageTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.KubernetesServiceTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.KubernetesServiceTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CycleRerunMethodJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CycleRerunMethodNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PackageTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PackageTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.JobStatusEnumJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.JobStatusEnumNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionsOrderByTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionsOrderByTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionsOrderByDirectionJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionsOrderByDirectionNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CommandStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CommandStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CommandsDomainJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CommandsDomainNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PipelineTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PipelineTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SettingsValueTypesJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SettingsValueTypesNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PlatformEntityTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PlatformEntityTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SettingScopeTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SettingScopeTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SettingScopeIdJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SettingScopeIdNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SettingScopeRoleJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SettingScopeRoleNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SettingsTypesJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SettingsTypesNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SettingsSectionNamesJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SettingsSectionNamesNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PartialSettingScopeTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PartialSettingScopeTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PartialSettingScopeIdJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PartialSettingScopeIdNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PartialSettingScopeRoleJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PartialSettingScopeRoleNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PodTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PodTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AlertStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AlertStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.FieldSortFieldJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.FieldSortFieldNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.FieldSortDirectionJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.FieldSortDirectionNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ResourceAuditEventTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ResourceAuditEventTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TaxTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TaxTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PaymentDriverTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PaymentDriverTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.InvoiceStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.InvoiceStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CurrencyJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CurrencyNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PaymentDriverTypesJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PaymentDriverTypesNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AzureWebhookEventActionJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AzureWebhookEventActionNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AzureWebhookEventOperationRequestSourceJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AzureWebhookEventOperationRequestSourceNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ListExportHistoryRequestSortOrderJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ListExportHistoryRequestSortOrderNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ListExportHistoryRequestSortByJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ListExportHistoryRequestSortByNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.QueryDatasetsRequestTargetJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.QueryDatasetsRequestTargetNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.IRefImageAnnotationsTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.APIAnnotationCoordinateTypesJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.BenchmarkModeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SchemaEntryInputJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.RecipeV2InputJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.RecipeInputJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ModelOutputTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.IDateJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.MetricDataJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ComputeMetadataJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.IDpkComponentElementSpecJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CustomInstallationJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AppMetadataJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ComputePluginSpecJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.MigrationSpecJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.RemoveSettingTraceMigrationSpecJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<bool?, global::Dataloop.APIDatasetFileItemAnnotated?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::Dataloop.APIDatasetDirectoryItemExportZip>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.APIDatasetFileItem>, global::System.Collections.Generic.IList<global::Dataloop.APIDatasetDirectoryItem>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.OrderBy?, global::Dataloop.SortQuery>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.ResourceReferenceMetadata, global::Dataloop.PartialAny>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<bool?, global::Dataloop.S2SetupOptions>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<bool?, global::Dataloop.APIAnnotationEventDeleted?>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<string, global::Dataloop.SystemDatasetType?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIAnnotation, global::Dataloop.APIDataset, global::Dataloop.APIDatasetFileItem, global::Dataloop.APIDatasetDirectoryItem>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.QueryResourceItems?, global::Dataloop.QueryResourceAnnotations?, global::Dataloop.QueryResourceDatasets?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.QueryResourceItems?, global::Dataloop.QueryResourceAnnotations?, global::Dataloop.QueryResourceDatasets?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.QueryResourceItems?, global::Dataloop.QueryResourceAnnotations?, global::Dataloop.QueryResourceDatasets?>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.Context, global::Dataloop.ItemContext>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.MasterItemSpec, global::Dataloop.ClonedItemSpec>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.AnnotationTypeBox?, global::Dataloop.AnnotationTypeClass?, global::Dataloop.AnnotationTypeBinary?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.FeatureFlagsSetContextVariant1, global::Dataloop.FeatureFlagsSetContextVariant2>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.Context, global::Dataloop.DatasetContext>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.SchemaEntryInputVariant2Variant1, global::Dataloop.SchemaEntryInputVariant2Variant2>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.Context, global::Dataloop.DriverContext>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.EnvUserPasswordAuthentication, global::Dataloop.KeyFileAuthentication>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.EnvUserPasswordAuthentication, global::Dataloop.KeyFileAuthentication>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.EnvUserPasswordAuthentication, global::Dataloop.KeyFileAuthentication>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.EnvUserPasswordAuthentication, global::Dataloop.KeyFileAuthentication>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.S3IntegrationConfig, global::Dataloop.GcsIntegrationConfig, global::Dataloop.AzureBlobIntegrationConfig, global::Dataloop.PickS3DriverPayloadExcludeKeyofS3DriverPayloadPath>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.S3DriverPayload, global::Dataloop.GcsDriverPayload, global::Dataloop.AzureBlobDriverPayload, global::Dataloop.PickFilesystemDriverConfigurationMountPath>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.EnvUserPasswordAuthentication, global::Dataloop.KeyFileAuthentication>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.EnvUserPasswordAuthentication, global::Dataloop.KeyFileAuthentication>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.EnvUserPasswordAuthentication, global::Dataloop.KeyFileAuthentication>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.PartialS3DriverPayload, global::Dataloop.PartialGcsDriverPayload, global::Dataloop.PartialAzureBlobDriverPayload>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIOntologyV2, global::Dataloop.APIOntology>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.Context, global::Dataloop.RecipeV2Context>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.ToolInstructionOptions, global::Dataloop.Dictionary>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.Context, global::Dataloop.RecipeContext>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIRecipeV2, global::Dataloop.APIRecipe>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.Dictionary, global::Dataloop.AssignmentMetadataSystem>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.Context, global::Dataloop.AssignmentContext>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APITaskSpec, global::Dataloop.APISpawnTaskSpec>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.Dictionary, global::Dataloop.TaskMetadataSystem>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APITaskSpec, global::Dataloop.APISpawnTaskSpec>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APITaskSpec, global::Dataloop.APISpawnTaskSpec>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIOrg, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.APIUser>, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.APIGroup>, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIAccount, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.APIIntegration>, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIOrg, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.APIUser>, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.APIProject>, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIOrg, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.APIUser>, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.APIGroup>, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIOrg, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIAccount, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.APIProjectGuest>, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIProject, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIOrg, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIOrg, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIIntegration, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.Role?, global::Dataloop.OrgRole?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIOrg, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.OrgRole?, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIOrg, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.GuestType?, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIProject, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.Role?, string, global::Dataloop.APIMembershipRole?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<double?, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.ItemArtifact, global::Dataloop.LocalArtifact>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.ItemArtifact, global::Dataloop.LocalArtifact>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.ItemArtifact, global::Dataloop.LocalArtifact>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<double?, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<double?, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.ItemArtifact, global::Dataloop.LocalArtifact>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.ServiceMetadataUser, global::Dataloop.Dictionary>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.ServiceMetadataSystem, global::Dataloop.SystemRefs, global::Dataloop.Dictionary>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<double?, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<double?, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<double?, string>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.Context, global::Dataloop.ServiceContext>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.ICompositionError, string>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.Context, global::Dataloop.ExecutionContext>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, double?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, double?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<double?, global::System.Collections.Generic.Dictionary<string, double>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.DpkComponents, global::System.Collections.Generic.Dictionary<string, global::Dataloop.IComponentElement>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.DpkComponents, global::System.Collections.Generic.Dictionary<string, global::Dataloop.IComponentElement>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.DpkComponents, global::System.Collections.Generic.Dictionary<string, global::Dataloop.IComponentElement>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.IExternalMonitoringConfig, global::Dataloop.IHpaControllerConfig, global::Dataloop.Dictionary, global::Dataloop.IStorageDriverConfig, global::Dataloop.IComputeNfsPluginConfig>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.APIComposition>, global::System.Collections.Generic.IList<global::Dataloop.APIPipeline>, global::System.Collections.Generic.IList<global::Dataloop.AnyOf<global::Dataloop.APIPipelineState, global::Dataloop.IPipelineState>>, global::System.Collections.Generic.IList<global::Dataloop.ResourceExecution>, global::System.Collections.Generic.IList<global::Dataloop.APIDpk>, global::System.Collections.Generic.IList<global::Dataloop.APIApp>, global::System.Collections.Generic.IList<global::Dataloop.APICompute>, global::System.Collections.Generic.IList<global::Dataloop.APIServiceDriver>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIPipelineState, global::Dataloop.IPipelineState>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.DpkComponents, global::System.Collections.Generic.Dictionary<string, global::Dataloop.IComponentElement>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.PlatformEntityType?, global::Dataloop.SettingScopeType?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::Dataloop.SettingScopeId?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.Role?, global::Dataloop.OrgRole?, global::Dataloop.SettingScopeRole?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.PlatformEntityType?, global::Dataloop.PartialSettingScopeType?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::Dataloop.PartialSettingScopeId?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.Role?, global::Dataloop.OrgRole?, global::Dataloop.PartialSettingScopeRole?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUserSetting, global::Dataloop.APIFeatureFlag>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::Dataloop.AzureWebhookEventOperationRequestSource?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.PartialICompute, global::Dataloop.UpdateComputeRequest2>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.DQLResourceQuery, global::Dataloop.AnyOf<global::Dataloop.FilterQuery, global::Dataloop.UpdateQuery, global::Dataloop.DeleteQuery>?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.FilterQuery, global::Dataloop.UpdateQuery, global::Dataloop.DeleteQuery>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.DQLResourceQuery, global::Dataloop.FilterQuery>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.MoveItemsRequest, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIAnnotationRequest, global::System.Collections.Generic.IList<global::Dataloop.APIAnnotationRequest>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.ImportItemRequest>, global::Dataloop.ImportItemsToDatasetRequest>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.FeatureSet, global::System.Collections.Generic.IList<global::Dataloop.FeatureSet>>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.DQLResourceQuery, global::Dataloop.FilterQuery>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.FeatureVector, global::System.Collections.Generic.IList<global::Dataloop.FeatureVector>>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.DQLResourceQuery, global::Dataloop.FilterQuery>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIAnnotationRequest, global::System.Collections.Generic.IList<global::Dataloop.APIAnnotationRequest>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.MetricRequest, global::System.Collections.Generic.IList<global::Dataloop.MetricRequest>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.PartialCreateModelRequest, global::Dataloop.APICopyEnvironmentSpec>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.CreateOntologyPayloadV2, global::Dataloop.CreateOntologyPayload>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.RecipeV2Input?, global::Dataloop.RecipeInput?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.PartialRecipePayloadV2, global::Dataloop.PartialRecipePayload>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.ResolverPayload, global::Dataloop.IUserContext>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.PatchFeatureFlagRequest, global::Dataloop.PatchUserSettingRequest>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APITask, global::Dataloop.APICommand>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<object, global::Dataloop.APICommand>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APITask, global::Dataloop.APICommand>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APICommand, global::Dataloop.APITask>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIApp, object>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APICommand, global::System.Collections.Generic.IList<global::Dataloop.APIAssignment>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APICommand, global::Dataloop.APIAssignment>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APICommand, global::Dataloop.APIAssignment>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APICommand, global::System.Collections.Generic.IList<global::Dataloop.APIAssignment>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APICommand, object>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIDatasetFileItem, global::Dataloop.APIDatasetDirectoryItem>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIDatasetFileItem, global::Dataloop.APIDatasetDirectoryItem>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIDatasetFileItem, global::Dataloop.APIDatasetDirectoryItem>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIAnnotation, global::System.Collections.Generic.IList<global::Dataloop.APIAnnotation>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, double?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, double?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, double?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIDatasetFileItem, global::Dataloop.APIDatasetDirectoryItem>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.Dataset, global::Dataloop.APIDatasetSchema>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APICommand, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APICommand, global::Dataloop.Dataset>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIExecution, global::Dataloop.PiperSettingsCommands>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIExecution, global::Dataloop.APICommand>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIDatasetFileItem, global::Dataloop.APIDatasetDirectoryItem>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIDatasetFileItem, global::Dataloop.APIDatasetDirectoryItem>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIAnnotation, global::System.Collections.Generic.IList<global::Dataloop.APIAnnotation>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIModel, global::Dataloop.APICommand>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIModel, global::Dataloop.APICommand>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIOntologyV2, global::Dataloop.APIOntology>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIOntologyV2, global::Dataloop.APIOntology>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIOntologyV2, global::Dataloop.APIOntology>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.GetAvailableIntegrationsResponseItemVariant1, global::Dataloop.GetAvailableIntegrationsResponseItemVariant2>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIPipelineState, global::Dataloop.APICommand>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.APIMembership>, object>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.ClientContributor>, object>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIRecipeV2, global::Dataloop.APIRecipe>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIRecipeV2, global::Dataloop.APIRecipe>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIRecipeV2, global::Dataloop.APIRecipe>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIRecipeV2, global::Dataloop.APIRecipe>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIService, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIService, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIService, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIFeatureFlag, global::Dataloop.APIUserSetting>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIFeatureFlag, global::Dataloop.APIUserSetting>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIFeatureFlag, global::Dataloop.APIUserSetting>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIFeatureFlag, global::Dataloop.APIUserSetting>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APITask, global::Dataloop.APICommand>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<object, global::Dataloop.APICommand>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APITask, global::Dataloop.APICommand>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APICommand, global::Dataloop.APITask>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, object>),
+
+            typeof(global::Dataloop.JsonConverters.UnixTimestampJsonConverter),
+        })]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::System.Collections.Generic.IList<global::Dataloop.APIComposition>, global::System.Collections.Generic.IList<global::Dataloop.APIPipeline>, global::System.Collections.Generic.IList<global::Dataloop.AnyOf<global::Dataloop.APIPipelineState, global::Dataloop.IPipelineState>>, global::System.Collections.Generic.IList<global::Dataloop.ResourceExecution>, global::System.Collections.Generic.IList<global::Dataloop.APIDpk>, global::System.Collections.Generic.IList<global::Dataloop.APIApp>, global::System.Collections.Generic.IList<global::Dataloop.APICompute>, global::System.Collections.Generic.IList<global::Dataloop.APIServiceDriver>>), TypeInfoPropertyName = "APIServiceDriver_0708f4328c68aea5")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::Dataloop.S3IntegrationConfig, global::Dataloop.GcsIntegrationConfig, global::Dataloop.AzureBlobIntegrationConfig, global::Dataloop.PickS3DriverPayloadExcludeKeyofS3DriverPayloadPath>?), TypeInfoPropertyName = "PickS3DriverPayloadExcludeKeyofS3DriverPayloadPath_9a6ecea9b7debc31")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::System.Collections.Generic.IList<global::Dataloop.APIComposition>, global::System.Collections.Generic.IList<global::Dataloop.APIPipeline>, global::System.Collections.Generic.IList<global::Dataloop.AnyOf<global::Dataloop.APIPipelineState, global::Dataloop.IPipelineState>>, global::System.Collections.Generic.IList<global::Dataloop.ResourceExecution>, global::System.Collections.Generic.IList<global::Dataloop.APIDpk>, global::System.Collections.Generic.IList<global::Dataloop.APIApp>, global::System.Collections.Generic.IList<global::Dataloop.APICompute>, global::System.Collections.Generic.IList<global::Dataloop.APIServiceDriver>>?), TypeInfoPropertyName = "APIServiceDriver_c0617c242689fb32")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::System.Collections.Generic.List<global::Dataloop.APIComposition>, global::System.Collections.Generic.List<global::Dataloop.APIPipeline>, global::System.Collections.Generic.List<global::Dataloop.AnyOf<global::Dataloop.APIPipelineState, global::Dataloop.IPipelineState>>, global::System.Collections.Generic.List<global::Dataloop.ResourceExecution>, global::System.Collections.Generic.List<global::Dataloop.APIDpk>, global::System.Collections.Generic.List<global::Dataloop.APIApp>, global::System.Collections.Generic.List<global::Dataloop.APICompute>, global::System.Collections.Generic.List<global::Dataloop.APIServiceDriver>>), TypeInfoPropertyName = "APIServiceDriver_ce74abc722e1be30")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.IDeploymentSecurityContext))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.IClusterEnvironmentVariable))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.IClusterEnvironmentVariableValueFrom))]
@@ -2254,12 +4764,10 @@ namespace Dataloop
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.IComputeCluster))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dataloop.INodePool>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dataloop.IComputePlugin>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.EComputeConsumptionMethod), TypeInfoPropertyName = "EComputeConsumptionMethod2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.IComputeSettings))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.APICompute))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dataloop.IComputeContext>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.CursorPageT))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::System.Collections.Generic.IList<global::Dataloop.APIComposition>, global::System.Collections.Generic.IList<global::Dataloop.APIPipeline>, global::System.Collections.Generic.IList<global::Dataloop.AnyOf<global::Dataloop.APIPipelineState, global::Dataloop.IPipelineState>>, global::System.Collections.Generic.IList<global::Dataloop.ResourceExecution>, global::System.Collections.Generic.IList<global::Dataloop.APIDpk>, global::System.Collections.Generic.IList<global::Dataloop.APIApp>, global::System.Collections.Generic.IList<global::Dataloop.APICompute>, global::System.Collections.Generic.IList<global::Dataloop.APIServiceDriver>>), TypeInfoPropertyName = "APIServiceDriver_0708f4328c68aea5")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dataloop.APIComposition>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dataloop.APIPipeline>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dataloop.AnyOf<global::Dataloop.APIPipelineState, global::Dataloop.IPipelineState>>))]
@@ -2298,6 +4806,9 @@ namespace Dataloop
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dataloop.IPipelineExecutionCount>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dataloop.INodeExecutionCount>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dataloop.INodeExecutionStatistics>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.APIPipelineVersion))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.CursorPageAPIPipelineVersion))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dataloop.APIPipelineVersion>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.ExecutePipelinePayload))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.ExecuteOptionsBatchQuery))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.ExecuteOptionsBatchQueryContext))]
@@ -2525,6 +5036,7 @@ namespace Dataloop
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dataloop.ImportItemRequest>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.ImportItemsToDatasetRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.SplitMlOperationRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.MigrateDriversIntegrationRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.CheckStorageDriversIntegrationByIntegrationIdRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.NackRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.PushProgressRequest))]
@@ -2696,6 +5208,7 @@ namespace Dataloop
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.AnyOf<global::Dataloop.AnnotationTypeBox?, global::Dataloop.AnnotationTypeClass?, global::Dataloop.AnnotationTypeBinary?>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.ITermConfiguration>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.SchemaEntryInput>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.UpdateDriversIntegrationResultError>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.APIFeatureSet>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.APIFeatureVector>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.AggregateProjectVectorsCountResultItem>))]
@@ -2730,6 +5243,1257 @@ namespace Dataloop
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.APITask>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.GroupCtx>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::System.Collections.Generic.List<global::Dataloop.APIUser>, global::System.Collections.Generic.List<string>>))]
+    internal sealed partial class SourceGenerationContextChunk2 : global::System.Text.Json.Serialization.JsonSerializerContext
+    {
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
+        Converters = new global::System.Type[]
+        {
+            typeof(global::Dataloop.JsonConverters.ItemSpecTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ItemSpecTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.RefTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.RefTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ModalityTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ModalityTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.APIDatasetFileItemTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.APIDatasetFileItemTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.APIDatasetFileItemAnnotatedJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.APIDatasetFileItemAnnotatedNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.APIDatasetDirectoryItemTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.APIDatasetDirectoryItemTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DatasetIndexDriversJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DatasetIndexDriversNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ItemRefOperationJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ItemRefOperationNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.QueryResourceJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.QueryResourceNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ReferenceQueryOperationJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ReferenceQueryOperationNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PickDQLQueryExcludeKeyofDQLQueryIntersectOrExceptOrLimitOrSortOrSelectQueryEngineJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PickDQLQueryExcludeKeyofDQLQueryIntersectOrExceptOrLimitOrSortOrSelectQueryEngineNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.OrderByJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.OrderByNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DQLResourceQueryQueryEngineJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DQLResourceQueryQueryEngineNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AddItemModeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AddItemModeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SystemDatasetTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SystemDatasetTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AnnotationTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AnnotationTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.RefAnnotationsRefTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.RefAnnotationsRefTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.RequestSourceJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.RequestSourceNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.APIAnnotationEventDeletedJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.APIAnnotationEventDeletedNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.IndexDriverJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.IndexDriverNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.APIDatasetAccessLevelJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.APIDatasetAccessLevelNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DatasetScopeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DatasetScopeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CreateDatasetRequestDriverJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CreateDatasetRequestDriverNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CreateDatasetRequestAccessLevelJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CreateDatasetRequestAccessLevelNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DQLQueryQueryEngineJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DQLQueryQueryEngineNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExportTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExportTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExportDatasetOptionsExportVersionJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExportDatasetOptionsExportVersionNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExportStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExportStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExportErrorTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExportErrorTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.QueryResourceItemsJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.QueryResourceItemsNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.QueryResourceAnnotationsJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.QueryResourceAnnotationsNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.QueryResourceDatasetsJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.QueryResourceDatasetsNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AllowedTypesJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AllowedTypesNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.UnsearchableSchemaReasonsJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.UnsearchableSchemaReasonsNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SchemaModeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SchemaModeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DatasetItemTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DatasetItemTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AnnotationTypeBoxJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AnnotationTypeBoxNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AnnotationTypeClassJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AnnotationTypeClassNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AnnotationTypeBinaryJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AnnotationTypeBinaryNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.GenerationStrategyTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.GenerationStrategyTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.GeneratedDatasetTypesJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.GeneratedDatasetTypesNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.OneByOneLatencyBenchmarkModeTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.OneByOneLatencyBenchmarkModeTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ProfilingBenchmarkModeTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ProfilingBenchmarkModeTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ConcurrencyBenchmarkModeTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ConcurrencyBenchmarkModeTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.QueryTestCasesJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.QueryTestCasesNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.IndexingStrategyTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.IndexingStrategyTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.InferDatasetSchemaModeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.InferDatasetSchemaModeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.FeatureFlagsSetContextVariant1TypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.FeatureFlagsSetContextVariant1TypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.FeatureFlagsSetContextVariant2TypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.FeatureFlagsSetContextVariant2TypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DatasetAccessLevelJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DatasetAccessLevelNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DatasetSyncStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DatasetSyncStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DriverTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DriverTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.IntegrationTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.IntegrationTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.FeatureSetEntityTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.FeatureSetEntityTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.BenchmarkIngestionStrategyTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.BenchmarkIngestionStrategyTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.BenchmarkOptionsExportTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.BenchmarkOptionsExportTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SetTaskRefsBenchmarkInputOperationJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SetTaskRefsBenchmarkInputOperationNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DriverReadBenchmarkOperationInputScenarioDetailsJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DriverReadBenchmarkOperationInputScenarioDetailsNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DriverWriteBenchmarkOperationInputScenarioDetailsJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DriverWriteBenchmarkOperationInputScenarioDetailsNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AttributeTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AttributeTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.InstructionActionJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.InstructionActionNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.InstructionScopeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.InstructionScopeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CustomActionControlsJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CustomActionControlsNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.APICustomActionControlsJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.APICustomActionControlsNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AssignmentStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AssignmentStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AssignmentMetadataSystemTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AssignmentMetadataSystemTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TaskTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TaskTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ScoreTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ScoreTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TaskStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TaskStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.QualityTaskTypesJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.QualityTaskTypesNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.InstructionsDocumentModeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.InstructionsDocumentModeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TaskContributorsActionJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TaskContributorsActionNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.RoleJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.RoleNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.OrgPlansJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.OrgPlansNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AlertTierJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AlertTierNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.OrgRoleJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.OrgRoleNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DLEntityTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DLEntityTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.OrgSizeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.OrgSizeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.OrgIndustryJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.OrgIndustryNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.IntegrationType2JsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.IntegrationType2NullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.BillingResourceKeyJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.BillingResourceKeyNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.MetricGroupJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.MetricGroupNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.BillingPeriodJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.BillingPeriodNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.BillingStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.BillingStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ScopeTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ScopeTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.GuestTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.GuestTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.APIMembershipRoleJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.APIMembershipRoleNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.UserInterestTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.UserInterestTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ApiKeyTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ApiKeyTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.LoginsLogQueryOrderJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.LoginsLogQueryOrderNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.LoginsLogQueryOrderByJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.LoginsLogQueryOrderByNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EntityScopeLevelJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EntityScopeLevelNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ModelStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ModelStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ModelInputTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ModelInputTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ModelOutputTypeVariant2JsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ModelOutputTypeVariant2NullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ModelOutputTypeVariant4JsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ModelOutputTypeVariant4NullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ArtifactTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ArtifactTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ReferenceTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ReferenceTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.NodeMlTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.NodeMlTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ModelOperationTypesJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ModelOperationTypesNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EventResourceTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EventResourceTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CreateWebHookDTOHttpMethodJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CreateWebHookDTOHttpMethodNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.UpdateWebHookDTOHttpMethodJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.UpdateWebHookDTOHttpMethodNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.OnResetActionJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.OnResetActionNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ServiceTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ServiceTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CrashloopActionJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CrashloopActionNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CrashloopReasonJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CrashloopReasonNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ServiceModeTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ServiceModeTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EComputeConsumptionMethodJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EComputeConsumptionMethodNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PackageResourceTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PackageResourceTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionHookValueFromJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionHookValueFromNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionHookTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionHookTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.UiBindingResourceJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.UiBindingResourceNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.UiBindingPanelJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.UiBindingPanelNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionPostActionTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionPostActionTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionStatusNameJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionStatusNameNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ResourceTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ResourceTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TriggerTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TriggerTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ECacheModeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ECacheModeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.FaaSCacheSizeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.FaaSCacheSizeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.FaaSCacheTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.FaaSCacheTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ServiceLogLevelJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ServiceLogLevelNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.LogsListDirectionJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.LogsListDirectionNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ReplicaStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ReplicaStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ReplicaReasonJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ReplicaReasonNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EDebugOptionsStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EDebugOptionsStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ReportTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ReportTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ServiceDriverTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ServiceDriverTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DataloopPodTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DataloopPodTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ComputeMetadataVariant2ServeAgentGatewayJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ComputeMetadataVariant2ServeAgentGatewayNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CompositionElementStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CompositionElementStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CompositionStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CompositionStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TriggerResourceTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TriggerResourceTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TriggerActionTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TriggerActionTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionModeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionModeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TriggerOperationTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TriggerOperationTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ECompositionPackageStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ECompositionPackageStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PackageConfigTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PackageConfigTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PackageRequirementOperatorJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PackageRequirementOperatorNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CodebaseTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CodebaseTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ChannelTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ChannelTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CompositionChannelStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CompositionChannelStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TemplateKindJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TemplateKindNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.NodeTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.NodeTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.StartNodeTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.StartNodeTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ResumePipelineOptionJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ResumePipelineOptionNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PipelineFromTemplateStateJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PipelineFromTemplateStateNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ICompositionDatasetStateDatasetIndexDriverJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ICompositionDatasetStateDatasetIndexDriverNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ICompositionDatasetStateDatasetShareLevelJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ICompositionDatasetStateDatasetShareLevelNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DpkDatasetOntologyTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.DpkDatasetOntologyTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionPhaseJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionPhaseNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ENodeStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ENodeStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EPipelineStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EPipelineStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EDpkScopeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EDpkScopeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EComponentServiceOperationJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EComponentServiceOperationNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.FilterFrequencyTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.FilterFrequencyTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.InvokeTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.InvokeTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CustomNodeScopeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CustomNodeScopeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EComponentElementTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EComponentElementTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EAppScopeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EAppScopeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EComputeTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EComputeTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EComputeStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EComputeStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EClusterProviderJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EClusterProviderNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EComputePluginJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EComputePluginNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EStorageTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.EStorageTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.KubernetesServiceTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.KubernetesServiceTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CycleRerunMethodJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CycleRerunMethodNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PackageTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PackageTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.JobStatusEnumJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.JobStatusEnumNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionsOrderByTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionsOrderByTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionsOrderByDirectionJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ExecutionsOrderByDirectionNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CommandStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CommandStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CommandsDomainJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CommandsDomainNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PipelineTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PipelineTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SettingsValueTypesJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SettingsValueTypesNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PlatformEntityTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PlatformEntityTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SettingScopeTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SettingScopeTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SettingScopeIdJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SettingScopeIdNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SettingScopeRoleJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SettingScopeRoleNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SettingsTypesJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SettingsTypesNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SettingsSectionNamesJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SettingsSectionNamesNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PartialSettingScopeTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PartialSettingScopeTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PartialSettingScopeIdJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PartialSettingScopeIdNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PartialSettingScopeRoleJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PartialSettingScopeRoleNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PodTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PodTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AlertStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AlertStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.FieldSortFieldJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.FieldSortFieldNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.FieldSortDirectionJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.FieldSortDirectionNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ResourceAuditEventTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ResourceAuditEventTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TaxTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.TaxTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PaymentDriverTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PaymentDriverTypeNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.InvoiceStatusJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.InvoiceStatusNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CurrencyJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CurrencyNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PaymentDriverTypesJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.PaymentDriverTypesNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AzureWebhookEventActionJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AzureWebhookEventActionNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AzureWebhookEventOperationRequestSourceJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AzureWebhookEventOperationRequestSourceNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ListExportHistoryRequestSortOrderJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ListExportHistoryRequestSortOrderNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ListExportHistoryRequestSortByJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ListExportHistoryRequestSortByNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.QueryDatasetsRequestTargetJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.QueryDatasetsRequestTargetNullableJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.IRefImageAnnotationsTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.APIAnnotationCoordinateTypesJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.BenchmarkModeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.SchemaEntryInputJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.RecipeV2InputJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.RecipeInputJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ModelOutputTypeJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.IDateJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.MetricDataJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ComputeMetadataJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.IDpkComponentElementSpecJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.CustomInstallationJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AppMetadataJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.ComputePluginSpecJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.MigrationSpecJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.RemoveSettingTraceMigrationSpecJsonConverter),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<bool?, global::Dataloop.APIDatasetFileItemAnnotated?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::Dataloop.APIDatasetDirectoryItemExportZip>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.APIDatasetFileItem>, global::System.Collections.Generic.IList<global::Dataloop.APIDatasetDirectoryItem>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.OrderBy?, global::Dataloop.SortQuery>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.ResourceReferenceMetadata, global::Dataloop.PartialAny>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<bool?, global::Dataloop.S2SetupOptions>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<bool?, global::Dataloop.APIAnnotationEventDeleted?>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<string, global::Dataloop.SystemDatasetType?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIAnnotation, global::Dataloop.APIDataset, global::Dataloop.APIDatasetFileItem, global::Dataloop.APIDatasetDirectoryItem>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.QueryResourceItems?, global::Dataloop.QueryResourceAnnotations?, global::Dataloop.QueryResourceDatasets?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.QueryResourceItems?, global::Dataloop.QueryResourceAnnotations?, global::Dataloop.QueryResourceDatasets?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.QueryResourceItems?, global::Dataloop.QueryResourceAnnotations?, global::Dataloop.QueryResourceDatasets?>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.Context, global::Dataloop.ItemContext>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.MasterItemSpec, global::Dataloop.ClonedItemSpec>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.AnnotationTypeBox?, global::Dataloop.AnnotationTypeClass?, global::Dataloop.AnnotationTypeBinary?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.FeatureFlagsSetContextVariant1, global::Dataloop.FeatureFlagsSetContextVariant2>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.Context, global::Dataloop.DatasetContext>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.SchemaEntryInputVariant2Variant1, global::Dataloop.SchemaEntryInputVariant2Variant2>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.Context, global::Dataloop.DriverContext>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.EnvUserPasswordAuthentication, global::Dataloop.KeyFileAuthentication>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.EnvUserPasswordAuthentication, global::Dataloop.KeyFileAuthentication>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.EnvUserPasswordAuthentication, global::Dataloop.KeyFileAuthentication>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.EnvUserPasswordAuthentication, global::Dataloop.KeyFileAuthentication>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.S3IntegrationConfig, global::Dataloop.GcsIntegrationConfig, global::Dataloop.AzureBlobIntegrationConfig, global::Dataloop.PickS3DriverPayloadExcludeKeyofS3DriverPayloadPath>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.S3DriverPayload, global::Dataloop.GcsDriverPayload, global::Dataloop.AzureBlobDriverPayload, global::Dataloop.PickFilesystemDriverConfigurationMountPath>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.EnvUserPasswordAuthentication, global::Dataloop.KeyFileAuthentication>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.EnvUserPasswordAuthentication, global::Dataloop.KeyFileAuthentication>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.EnvUserPasswordAuthentication, global::Dataloop.KeyFileAuthentication>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.PartialS3DriverPayload, global::Dataloop.PartialGcsDriverPayload, global::Dataloop.PartialAzureBlobDriverPayload>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIOntologyV2, global::Dataloop.APIOntology>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.Context, global::Dataloop.RecipeV2Context>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.ToolInstructionOptions, global::Dataloop.Dictionary>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.Context, global::Dataloop.RecipeContext>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIRecipeV2, global::Dataloop.APIRecipe>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.Dictionary, global::Dataloop.AssignmentMetadataSystem>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.Context, global::Dataloop.AssignmentContext>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APITaskSpec, global::Dataloop.APISpawnTaskSpec>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.Dictionary, global::Dataloop.TaskMetadataSystem>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APITaskSpec, global::Dataloop.APISpawnTaskSpec>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APITaskSpec, global::Dataloop.APISpawnTaskSpec>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIOrg, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.APIUser>, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.APIGroup>, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIAccount, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.APIIntegration>, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIOrg, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.APIUser>, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.APIProject>, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIOrg, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.APIUser>, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.APIGroup>, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIOrg, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIAccount, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.APIProjectGuest>, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIProject, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIOrg, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIOrg, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIIntegration, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.Role?, global::Dataloop.OrgRole?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIOrg, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.OrgRole?, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIOrg, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.GuestType?, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIProject, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.Role?, string, global::Dataloop.APIMembershipRole?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<double?, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.ItemArtifact, global::Dataloop.LocalArtifact>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.ItemArtifact, global::Dataloop.LocalArtifact>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.ItemArtifact, global::Dataloop.LocalArtifact>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<double?, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<double?, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.ItemArtifact, global::Dataloop.LocalArtifact>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.ServiceMetadataUser, global::Dataloop.Dictionary>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.ServiceMetadataSystem, global::Dataloop.SystemRefs, global::Dataloop.Dictionary>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<double?, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<double?, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<double?, string>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.Context, global::Dataloop.ServiceContext>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.ICompositionError, string>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.Context, global::Dataloop.ExecutionContext>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, double?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, double?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<double?, global::System.Collections.Generic.Dictionary<string, double>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.DpkComponents, global::System.Collections.Generic.Dictionary<string, global::Dataloop.IComponentElement>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.DpkComponents, global::System.Collections.Generic.Dictionary<string, global::Dataloop.IComponentElement>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.DpkComponents, global::System.Collections.Generic.Dictionary<string, global::Dataloop.IComponentElement>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.IExternalMonitoringConfig, global::Dataloop.IHpaControllerConfig, global::Dataloop.Dictionary, global::Dataloop.IStorageDriverConfig, global::Dataloop.IComputeNfsPluginConfig>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.APIComposition>, global::System.Collections.Generic.IList<global::Dataloop.APIPipeline>, global::System.Collections.Generic.IList<global::Dataloop.AnyOf<global::Dataloop.APIPipelineState, global::Dataloop.IPipelineState>>, global::System.Collections.Generic.IList<global::Dataloop.ResourceExecution>, global::System.Collections.Generic.IList<global::Dataloop.APIDpk>, global::System.Collections.Generic.IList<global::Dataloop.APIApp>, global::System.Collections.Generic.IList<global::Dataloop.APICompute>, global::System.Collections.Generic.IList<global::Dataloop.APIServiceDriver>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIPipelineState, global::Dataloop.IPipelineState>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.DpkComponents, global::System.Collections.Generic.Dictionary<string, global::Dataloop.IComponentElement>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.PlatformEntityType?, global::Dataloop.SettingScopeType?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::Dataloop.SettingScopeId?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.Role?, global::Dataloop.OrgRole?, global::Dataloop.SettingScopeRole?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.PlatformEntityType?, global::Dataloop.PartialSettingScopeType?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::Dataloop.PartialSettingScopeId?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.Role?, global::Dataloop.OrgRole?, global::Dataloop.PartialSettingScopeRole?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUserSetting, global::Dataloop.APIFeatureFlag>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::Dataloop.AzureWebhookEventOperationRequestSource?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.PartialICompute, global::Dataloop.UpdateComputeRequest2>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.DQLResourceQuery, global::Dataloop.AnyOf<global::Dataloop.FilterQuery, global::Dataloop.UpdateQuery, global::Dataloop.DeleteQuery>?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.FilterQuery, global::Dataloop.UpdateQuery, global::Dataloop.DeleteQuery>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.DQLResourceQuery, global::Dataloop.FilterQuery>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.MoveItemsRequest, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIAnnotationRequest, global::System.Collections.Generic.IList<global::Dataloop.APIAnnotationRequest>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.ImportItemRequest>, global::Dataloop.ImportItemsToDatasetRequest>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.FeatureSet, global::System.Collections.Generic.IList<global::Dataloop.FeatureSet>>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.DQLResourceQuery, global::Dataloop.FilterQuery>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.FeatureVector, global::System.Collections.Generic.IList<global::Dataloop.FeatureVector>>),
+
+            typeof(global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.DQLResourceQuery, global::Dataloop.FilterQuery>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIAnnotationRequest, global::System.Collections.Generic.IList<global::Dataloop.APIAnnotationRequest>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.MetricRequest, global::System.Collections.Generic.IList<global::Dataloop.MetricRequest>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.PartialCreateModelRequest, global::Dataloop.APICopyEnvironmentSpec>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.CreateOntologyPayloadV2, global::Dataloop.CreateOntologyPayload>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.RecipeV2Input?, global::Dataloop.RecipeInput?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.PartialRecipePayloadV2, global::Dataloop.PartialRecipePayload>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.ResolverPayload, global::Dataloop.IUserContext>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.PatchFeatureFlagRequest, global::Dataloop.PatchUserSettingRequest>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APITask, global::Dataloop.APICommand>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<object, global::Dataloop.APICommand>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APITask, global::Dataloop.APICommand>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APICommand, global::Dataloop.APITask>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIApp, object>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APICommand, global::System.Collections.Generic.IList<global::Dataloop.APIAssignment>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APICommand, global::Dataloop.APIAssignment>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APICommand, global::Dataloop.APIAssignment>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APICommand, global::System.Collections.Generic.IList<global::Dataloop.APIAssignment>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APICommand, object>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIDatasetFileItem, global::Dataloop.APIDatasetDirectoryItem>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIDatasetFileItem, global::Dataloop.APIDatasetDirectoryItem>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIDatasetFileItem, global::Dataloop.APIDatasetDirectoryItem>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIAnnotation, global::System.Collections.Generic.IList<global::Dataloop.APIAnnotation>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, double?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, double?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<string, double?>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIDatasetFileItem, global::Dataloop.APIDatasetDirectoryItem>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.Dataset, global::Dataloop.APIDatasetSchema>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APICommand, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APICommand, global::Dataloop.Dataset>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIExecution, global::Dataloop.PiperSettingsCommands>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIExecution, global::Dataloop.APICommand>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIDatasetFileItem, global::Dataloop.APIDatasetDirectoryItem>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIDatasetFileItem, global::Dataloop.APIDatasetDirectoryItem>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIAnnotation, global::System.Collections.Generic.IList<global::Dataloop.APIAnnotation>>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIModel, global::Dataloop.APICommand>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIModel, global::Dataloop.APICommand>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIOntologyV2, global::Dataloop.APIOntology>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIOntologyV2, global::Dataloop.APIOntology>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIOntologyV2, global::Dataloop.APIOntology>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.GetAvailableIntegrationsResponseItemVariant1, global::Dataloop.GetAvailableIntegrationsResponseItemVariant2>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIPipelineState, global::Dataloop.APICommand>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.APIMembership>, object>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.ClientContributor>, object>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIRecipeV2, global::Dataloop.APIRecipe>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIRecipeV2, global::Dataloop.APIRecipe>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIRecipeV2, global::Dataloop.APIRecipe>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIRecipeV2, global::Dataloop.APIRecipe>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIService, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIService, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIService, string>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIFeatureFlag, global::Dataloop.APIUserSetting>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIFeatureFlag, global::Dataloop.APIUserSetting>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIFeatureFlag, global::Dataloop.APIUserSetting>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIFeatureFlag, global::Dataloop.APIUserSetting>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APITask, global::Dataloop.APICommand>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<object, global::Dataloop.APICommand>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APITask, global::Dataloop.APICommand>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APICommand, global::Dataloop.APITask>),
+
+            typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, object>),
+
+            typeof(global::Dataloop.JsonConverters.UnixTimestampJsonConverter),
+        })]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::System.Collections.Generic.IList<global::Dataloop.APIComposition>, global::System.Collections.Generic.IList<global::Dataloop.APIPipeline>, global::System.Collections.Generic.IList<global::Dataloop.AnyOf<global::Dataloop.APIPipelineState, global::Dataloop.IPipelineState>>, global::System.Collections.Generic.IList<global::Dataloop.ResourceExecution>, global::System.Collections.Generic.IList<global::Dataloop.APIDpk>, global::System.Collections.Generic.IList<global::Dataloop.APIApp>, global::System.Collections.Generic.IList<global::Dataloop.APICompute>, global::System.Collections.Generic.IList<global::Dataloop.APIServiceDriver>>), TypeInfoPropertyName = "APIServiceDriver_0708f4328c68aea5")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::Dataloop.S3IntegrationConfig, global::Dataloop.GcsIntegrationConfig, global::Dataloop.AzureBlobIntegrationConfig, global::Dataloop.PickS3DriverPayloadExcludeKeyofS3DriverPayloadPath>?), TypeInfoPropertyName = "PickS3DriverPayloadExcludeKeyofS3DriverPayloadPath_9a6ecea9b7debc31")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::System.Collections.Generic.IList<global::Dataloop.APIComposition>, global::System.Collections.Generic.IList<global::Dataloop.APIPipeline>, global::System.Collections.Generic.IList<global::Dataloop.AnyOf<global::Dataloop.APIPipelineState, global::Dataloop.IPipelineState>>, global::System.Collections.Generic.IList<global::Dataloop.ResourceExecution>, global::System.Collections.Generic.IList<global::Dataloop.APIDpk>, global::System.Collections.Generic.IList<global::Dataloop.APIApp>, global::System.Collections.Generic.IList<global::Dataloop.APICompute>, global::System.Collections.Generic.IList<global::Dataloop.APIServiceDriver>>?), TypeInfoPropertyName = "APIServiceDriver_c0617c242689fb32")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::System.Collections.Generic.List<global::Dataloop.APIComposition>, global::System.Collections.Generic.List<global::Dataloop.APIPipeline>, global::System.Collections.Generic.List<global::Dataloop.AnyOf<global::Dataloop.APIPipelineState, global::Dataloop.IPipelineState>>, global::System.Collections.Generic.List<global::Dataloop.ResourceExecution>, global::System.Collections.Generic.List<global::Dataloop.APIDpk>, global::System.Collections.Generic.List<global::Dataloop.APIApp>, global::System.Collections.Generic.List<global::Dataloop.APICompute>, global::System.Collections.Generic.List<global::Dataloop.APIServiceDriver>>), TypeInfoPropertyName = "APIServiceDriver_ce74abc722e1be30")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.APIUser>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::System.Collections.Generic.List<global::Dataloop.APIGroup>, global::System.Collections.Generic.List<string>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.APIGroup>))]
@@ -2815,7 +6579,6 @@ namespace Dataloop
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.INodePool>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.IComputePlugin>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.IComputeContext>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::System.Collections.Generic.List<global::Dataloop.APIComposition>, global::System.Collections.Generic.List<global::Dataloop.APIPipeline>, global::System.Collections.Generic.List<global::Dataloop.AnyOf<global::Dataloop.APIPipelineState, global::Dataloop.IPipelineState>>, global::System.Collections.Generic.List<global::Dataloop.ResourceExecution>, global::System.Collections.Generic.List<global::Dataloop.APIDpk>, global::System.Collections.Generic.List<global::Dataloop.APIApp>, global::System.Collections.Generic.List<global::Dataloop.APICompute>, global::System.Collections.Generic.List<global::Dataloop.APIServiceDriver>>), TypeInfoPropertyName = "APIServiceDriver_ce74abc722e1be30")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.APIComposition>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.APIPipeline>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.AnyOf<global::Dataloop.APIPipelineState, global::Dataloop.IPipelineState>>))]
@@ -2830,6 +6593,7 @@ namespace Dataloop
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.IPipelineExecutionCount>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.INodeExecutionCount>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.INodeExecutionStatistics>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.APIPipelineVersion>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.Module>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.UiHook>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.PiperUiSlot>))]
@@ -2902,7 +6666,672 @@ namespace Dataloop
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.AnyOf<global::Dataloop.APIFeatureFlag, global::Dataloop.APIUserSetting>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.UsageReport>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.GetMyGroupProjectsResponseItem>))]
+    internal sealed partial class SourceGenerationContextChunk3 : global::System.Text.Json.Serialization.JsonSerializerContext
+    {
+    }
+    /// <summary>
+    /// 
+    /// </summary>
     public sealed partial class SourceGenerationContext : global::System.Text.Json.Serialization.JsonSerializerContext
     {
+        private static readonly global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver Resolver = global::System.Text.Json.Serialization.Metadata.JsonTypeInfoResolver.Combine(
+            SourceGenerationContextChunk0.Default,
+
+            SourceGenerationContextChunk1.Default,
+
+            SourceGenerationContextChunk2.Default,
+
+            SourceGenerationContextChunk3.Default
+            );
+
+        private static readonly global::System.Text.Json.JsonSerializerOptions DefaultOptions = CreateDefaultOptions();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static SourceGenerationContext Default { get; } = new(DefaultOptions);
+
+        private SourceGenerationContext(global::System.Text.Json.JsonSerializerOptions options)
+            : base(options)
+        {
+        }
+
+        /// <inheritdoc />
+        protected override global::System.Text.Json.JsonSerializerOptions? GeneratedSerializerOptions => DefaultOptions;
+
+        /// <inheritdoc />
+        public override global::System.Text.Json.Serialization.Metadata.JsonTypeInfo? GetTypeInfo(global::System.Type type)
+        {
+            return Resolver.GetTypeInfo(type, Options);
+        }
+
+        private static global::System.Text.Json.JsonSerializerOptions CreateDefaultOptions()
+        {
+            var options = new global::System.Text.Json.JsonSerializerOptions
+            {
+                DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
+                TypeInfoResolver = Resolver,
+            };
+            options.Converters.Add(new global::Dataloop.JsonConverters.ItemSpecTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ItemSpecTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.RefTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.RefTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ModalityTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ModalityTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.APIDatasetFileItemTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.APIDatasetFileItemTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.APIDatasetFileItemAnnotatedJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.APIDatasetFileItemAnnotatedNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.APIDatasetDirectoryItemTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.APIDatasetDirectoryItemTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.DatasetIndexDriversJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.DatasetIndexDriversNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ItemRefOperationJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ItemRefOperationNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.QueryResourceJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.QueryResourceNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ReferenceQueryOperationJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ReferenceQueryOperationNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.PickDQLQueryExcludeKeyofDQLQueryIntersectOrExceptOrLimitOrSortOrSelectQueryEngineJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.PickDQLQueryExcludeKeyofDQLQueryIntersectOrExceptOrLimitOrSortOrSelectQueryEngineNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.OrderByJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.OrderByNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.DQLResourceQueryQueryEngineJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.DQLResourceQueryQueryEngineNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AddItemModeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AddItemModeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.SystemDatasetTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.SystemDatasetTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnnotationTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnnotationTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.RefAnnotationsRefTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.RefAnnotationsRefTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.RequestSourceJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.RequestSourceNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.APIAnnotationEventDeletedJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.APIAnnotationEventDeletedNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.IndexDriverJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.IndexDriverNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.APIDatasetAccessLevelJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.APIDatasetAccessLevelNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.DatasetScopeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.DatasetScopeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.CreateDatasetRequestDriverJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.CreateDatasetRequestDriverNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.CreateDatasetRequestAccessLevelJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.CreateDatasetRequestAccessLevelNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.DQLQueryQueryEngineJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.DQLQueryQueryEngineNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ExportTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ExportTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ExportDatasetOptionsExportVersionJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ExportDatasetOptionsExportVersionNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ExportStatusJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ExportStatusNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ExportErrorTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ExportErrorTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.QueryResourceItemsJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.QueryResourceItemsNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.QueryResourceAnnotationsJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.QueryResourceAnnotationsNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.QueryResourceDatasetsJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.QueryResourceDatasetsNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AllowedTypesJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AllowedTypesNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.UnsearchableSchemaReasonsJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.UnsearchableSchemaReasonsNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.SchemaModeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.SchemaModeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.DatasetItemTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.DatasetItemTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnnotationTypeBoxJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnnotationTypeBoxNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnnotationTypeClassJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnnotationTypeClassNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnnotationTypeBinaryJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnnotationTypeBinaryNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.GenerationStrategyTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.GenerationStrategyTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.GeneratedDatasetTypesJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.GeneratedDatasetTypesNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.OneByOneLatencyBenchmarkModeTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.OneByOneLatencyBenchmarkModeTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ProfilingBenchmarkModeTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ProfilingBenchmarkModeTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ConcurrencyBenchmarkModeTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ConcurrencyBenchmarkModeTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.QueryTestCasesJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.QueryTestCasesNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.IndexingStrategyTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.IndexingStrategyTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.InferDatasetSchemaModeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.InferDatasetSchemaModeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.FeatureFlagsSetContextVariant1TypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.FeatureFlagsSetContextVariant1TypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.FeatureFlagsSetContextVariant2TypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.FeatureFlagsSetContextVariant2TypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.DatasetAccessLevelJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.DatasetAccessLevelNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.DatasetSyncStatusJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.DatasetSyncStatusNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.DriverTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.DriverTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.IntegrationTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.IntegrationTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.FeatureSetEntityTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.FeatureSetEntityTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.BenchmarkIngestionStrategyTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.BenchmarkIngestionStrategyTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.BenchmarkOptionsExportTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.BenchmarkOptionsExportTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.SetTaskRefsBenchmarkInputOperationJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.SetTaskRefsBenchmarkInputOperationNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.DriverReadBenchmarkOperationInputScenarioDetailsJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.DriverReadBenchmarkOperationInputScenarioDetailsNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.DriverWriteBenchmarkOperationInputScenarioDetailsJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.DriverWriteBenchmarkOperationInputScenarioDetailsNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AttributeTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AttributeTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.InstructionActionJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.InstructionActionNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.InstructionScopeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.InstructionScopeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.CustomActionControlsJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.CustomActionControlsNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.APICustomActionControlsJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.APICustomActionControlsNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AssignmentStatusJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AssignmentStatusNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AssignmentMetadataSystemTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AssignmentMetadataSystemTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.TaskTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.TaskTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ScoreTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ScoreTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.TaskStatusJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.TaskStatusNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.QualityTaskTypesJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.QualityTaskTypesNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.InstructionsDocumentModeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.InstructionsDocumentModeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.TaskContributorsActionJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.TaskContributorsActionNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.RoleJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.RoleNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.OrgPlansJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.OrgPlansNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AlertTierJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AlertTierNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.OrgRoleJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.OrgRoleNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.DLEntityTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.DLEntityTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.OrgSizeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.OrgSizeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.OrgIndustryJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.OrgIndustryNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.IntegrationType2JsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.IntegrationType2NullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.BillingResourceKeyJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.BillingResourceKeyNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.MetricGroupJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.MetricGroupNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.BillingPeriodJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.BillingPeriodNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.BillingStatusJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.BillingStatusNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ScopeTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ScopeTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.GuestTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.GuestTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.APIMembershipRoleJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.APIMembershipRoleNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.UserInterestTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.UserInterestTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ApiKeyTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ApiKeyTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.LoginsLogQueryOrderJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.LoginsLogQueryOrderNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.LoginsLogQueryOrderByJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.LoginsLogQueryOrderByNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.EntityScopeLevelJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.EntityScopeLevelNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ModelStatusJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ModelStatusNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ModelInputTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ModelInputTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ModelOutputTypeVariant2JsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ModelOutputTypeVariant2NullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ModelOutputTypeVariant4JsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ModelOutputTypeVariant4NullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ArtifactTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ArtifactTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ReferenceTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ReferenceTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.NodeMlTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.NodeMlTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ModelOperationTypesJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ModelOperationTypesNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ExecutionStatusJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ExecutionStatusNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.EventResourceTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.EventResourceTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.CreateWebHookDTOHttpMethodJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.CreateWebHookDTOHttpMethodNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.UpdateWebHookDTOHttpMethodJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.UpdateWebHookDTOHttpMethodNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.OnResetActionJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.OnResetActionNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ServiceTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ServiceTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.CrashloopActionJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.CrashloopActionNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.CrashloopReasonJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.CrashloopReasonNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ServiceModeTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ServiceModeTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.EComputeConsumptionMethodJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.EComputeConsumptionMethodNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.PackageResourceTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.PackageResourceTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ExecutionHookValueFromJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ExecutionHookValueFromNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ExecutionHookTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ExecutionHookTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.UiBindingResourceJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.UiBindingResourceNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.UiBindingPanelJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.UiBindingPanelNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ExecutionPostActionTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ExecutionPostActionTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ExecutionStatusNameJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ExecutionStatusNameNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ResourceTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ResourceTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.TriggerTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.TriggerTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ECacheModeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ECacheModeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.FaaSCacheSizeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.FaaSCacheSizeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.FaaSCacheTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.FaaSCacheTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ServiceLogLevelJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ServiceLogLevelNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.LogsListDirectionJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.LogsListDirectionNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ReplicaStatusJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ReplicaStatusNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ReplicaReasonJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ReplicaReasonNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.EDebugOptionsStatusJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.EDebugOptionsStatusNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ReportTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ReportTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ServiceDriverTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ServiceDriverTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.DataloopPodTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.DataloopPodTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ComputeMetadataVariant2ServeAgentGatewayJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ComputeMetadataVariant2ServeAgentGatewayNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.CompositionElementStatusJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.CompositionElementStatusNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.CompositionStatusJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.CompositionStatusNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.TriggerResourceTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.TriggerResourceTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.TriggerActionTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.TriggerActionTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ExecutionModeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ExecutionModeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.TriggerOperationTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.TriggerOperationTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ECompositionPackageStatusJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ECompositionPackageStatusNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.PackageConfigTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.PackageConfigTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.PackageRequirementOperatorJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.PackageRequirementOperatorNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.CodebaseTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.CodebaseTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ChannelTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ChannelTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.CompositionChannelStatusJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.CompositionChannelStatusNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.TemplateKindJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.TemplateKindNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.NodeTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.NodeTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.StartNodeTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.StartNodeTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ResumePipelineOptionJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ResumePipelineOptionNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.PipelineFromTemplateStateJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.PipelineFromTemplateStateNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ICompositionDatasetStateDatasetIndexDriverJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ICompositionDatasetStateDatasetIndexDriverNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ICompositionDatasetStateDatasetShareLevelJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ICompositionDatasetStateDatasetShareLevelNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.DpkDatasetOntologyTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.DpkDatasetOntologyTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ExecutionPhaseJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ExecutionPhaseNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ENodeStatusJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ENodeStatusNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.EPipelineStatusJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.EPipelineStatusNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.EDpkScopeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.EDpkScopeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.EComponentServiceOperationJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.EComponentServiceOperationNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.FilterFrequencyTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.FilterFrequencyTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.InvokeTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.InvokeTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.CustomNodeScopeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.CustomNodeScopeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.EComponentElementTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.EComponentElementTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.EAppScopeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.EAppScopeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.EComputeTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.EComputeTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.EComputeStatusJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.EComputeStatusNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.EClusterProviderJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.EClusterProviderNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.EComputePluginJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.EComputePluginNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.EStorageTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.EStorageTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.KubernetesServiceTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.KubernetesServiceTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.CycleRerunMethodJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.CycleRerunMethodNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.PackageTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.PackageTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.JobStatusEnumJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.JobStatusEnumNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ExecutionsOrderByTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ExecutionsOrderByTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ExecutionsOrderByDirectionJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ExecutionsOrderByDirectionNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.CommandStatusJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.CommandStatusNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.CommandsDomainJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.CommandsDomainNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.PipelineTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.PipelineTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.SettingsValueTypesJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.SettingsValueTypesNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.PlatformEntityTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.PlatformEntityTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.SettingScopeTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.SettingScopeTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.SettingScopeIdJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.SettingScopeIdNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.SettingScopeRoleJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.SettingScopeRoleNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.SettingsTypesJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.SettingsTypesNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.SettingsSectionNamesJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.SettingsSectionNamesNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.PartialSettingScopeTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.PartialSettingScopeTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.PartialSettingScopeIdJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.PartialSettingScopeIdNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.PartialSettingScopeRoleJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.PartialSettingScopeRoleNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.PodTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.PodTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AlertStatusJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AlertStatusNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.FieldSortFieldJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.FieldSortFieldNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.FieldSortDirectionJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.FieldSortDirectionNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ResourceAuditEventTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ResourceAuditEventTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.TaxTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.TaxTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.PaymentDriverTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.PaymentDriverTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.InvoiceStatusJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.InvoiceStatusNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.CurrencyJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.CurrencyNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.PaymentDriverTypesJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.PaymentDriverTypesNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AzureWebhookEventActionJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AzureWebhookEventActionNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AzureWebhookEventOperationRequestSourceJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AzureWebhookEventOperationRequestSourceNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ListExportHistoryRequestSortOrderJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ListExportHistoryRequestSortOrderNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ListExportHistoryRequestSortByJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ListExportHistoryRequestSortByNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.QueryDatasetsRequestTargetJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.QueryDatasetsRequestTargetNullableJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.IRefImageAnnotationsTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.APIAnnotationCoordinateTypesJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.BenchmarkModeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.SchemaEntryInputJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.RecipeV2InputJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.RecipeInputJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ModelOutputTypeJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.IDateJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.MetricDataJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ComputeMetadataJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.IDpkComponentElementSpecJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.CustomInstallationJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AppMetadataJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.ComputePluginSpecJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.MigrationSpecJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.RemoveSettingTraceMigrationSpecJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<bool?, global::Dataloop.APIDatasetFileItemAnnotated?>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::Dataloop.APIDatasetDirectoryItemExportZip>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.APIDatasetFileItem>, global::System.Collections.Generic.IList<global::Dataloop.APIDatasetDirectoryItem>>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.OrderBy?, global::Dataloop.SortQuery>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.ResourceReferenceMetadata, global::Dataloop.PartialAny>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<bool?, global::Dataloop.S2SetupOptions>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<bool?, global::Dataloop.APIAnnotationEventDeleted?>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AllOfJsonConverter<string, global::Dataloop.SystemDatasetType?>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIAnnotation, global::Dataloop.APIDataset, global::Dataloop.APIDatasetFileItem, global::Dataloop.APIDatasetDirectoryItem>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.QueryResourceItems?, global::Dataloop.QueryResourceAnnotations?, global::Dataloop.QueryResourceDatasets?>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.QueryResourceItems?, global::Dataloop.QueryResourceAnnotations?, global::Dataloop.QueryResourceDatasets?>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.QueryResourceItems?, global::Dataloop.QueryResourceAnnotations?, global::Dataloop.QueryResourceDatasets?>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.Context, global::Dataloop.ItemContext>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.MasterItemSpec, global::Dataloop.ClonedItemSpec>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.AnnotationTypeBox?, global::Dataloop.AnnotationTypeClass?, global::Dataloop.AnnotationTypeBinary?>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.FeatureFlagsSetContextVariant1, global::Dataloop.FeatureFlagsSetContextVariant2>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.Context, global::Dataloop.DatasetContext>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.SchemaEntryInputVariant2Variant1, global::Dataloop.SchemaEntryInputVariant2Variant2>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.Context, global::Dataloop.DriverContext>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.EnvUserPasswordAuthentication, global::Dataloop.KeyFileAuthentication>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.EnvUserPasswordAuthentication, global::Dataloop.KeyFileAuthentication>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.EnvUserPasswordAuthentication, global::Dataloop.KeyFileAuthentication>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.EnvUserPasswordAuthentication, global::Dataloop.KeyFileAuthentication>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.S3IntegrationConfig, global::Dataloop.GcsIntegrationConfig, global::Dataloop.AzureBlobIntegrationConfig, global::Dataloop.PickS3DriverPayloadExcludeKeyofS3DriverPayloadPath>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.S3DriverPayload, global::Dataloop.GcsDriverPayload, global::Dataloop.AzureBlobDriverPayload, global::Dataloop.PickFilesystemDriverConfigurationMountPath>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.EnvUserPasswordAuthentication, global::Dataloop.KeyFileAuthentication>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.EnvUserPasswordAuthentication, global::Dataloop.KeyFileAuthentication>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.EnvUserPasswordAuthentication, global::Dataloop.KeyFileAuthentication>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.PartialS3DriverPayload, global::Dataloop.PartialGcsDriverPayload, global::Dataloop.PartialAzureBlobDriverPayload>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIOntologyV2, global::Dataloop.APIOntology>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.Context, global::Dataloop.RecipeV2Context>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.ToolInstructionOptions, global::Dataloop.Dictionary>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.Context, global::Dataloop.RecipeContext>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIRecipeV2, global::Dataloop.APIRecipe>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.Dictionary, global::Dataloop.AssignmentMetadataSystem>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.Context, global::Dataloop.AssignmentContext>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APITaskSpec, global::Dataloop.APISpawnTaskSpec>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.Dictionary, global::Dataloop.TaskMetadataSystem>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APITaskSpec, global::Dataloop.APISpawnTaskSpec>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APITaskSpec, global::Dataloop.APISpawnTaskSpec>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIOrg, string>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.APIUser>, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.APIGroup>, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, string>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIAccount, string>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, string>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.APIIntegration>, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIOrg, string>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, string>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, string>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.APIUser>, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.APIProject>, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, string>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIOrg, string>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, string>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.APIUser>, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.APIGroup>, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, string>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIOrg, string>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIAccount, string>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.APIProjectGuest>, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIProject, string>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIOrg, string>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, string>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIOrg, string>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, string>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIIntegration, string>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.Role?, global::Dataloop.OrgRole?>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, string>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIOrg, string>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.OrgRole?, string>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIOrg, string>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.GuestType?, string>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, string>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIProject, string>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.Role?, string, global::Dataloop.APIMembershipRole?>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, string>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<double?, string>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.ItemArtifact, global::Dataloop.LocalArtifact>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.ItemArtifact, global::Dataloop.LocalArtifact>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.ItemArtifact, global::Dataloop.LocalArtifact>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<double?, string>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<double?, string>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.ItemArtifact, global::Dataloop.LocalArtifact>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.ServiceMetadataUser, global::Dataloop.Dictionary>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.ServiceMetadataSystem, global::Dataloop.SystemRefs, global::Dataloop.Dictionary>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<double?, string>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<double?, string>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<double?, string>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.Context, global::Dataloop.ServiceContext>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.ICompositionError, string>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.Context, global::Dataloop.ExecutionContext>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, double?>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, double?>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<double?, global::System.Collections.Generic.Dictionary<string, double>>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.DpkComponents, global::System.Collections.Generic.Dictionary<string, global::Dataloop.IComponentElement>>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.DpkComponents, global::System.Collections.Generic.Dictionary<string, global::Dataloop.IComponentElement>>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.DpkComponents, global::System.Collections.Generic.Dictionary<string, global::Dataloop.IComponentElement>>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.IExternalMonitoringConfig, global::Dataloop.IHpaControllerConfig, global::Dataloop.Dictionary, global::Dataloop.IStorageDriverConfig, global::Dataloop.IComputeNfsPluginConfig>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.APIComposition>, global::System.Collections.Generic.IList<global::Dataloop.APIPipeline>, global::System.Collections.Generic.IList<global::Dataloop.AnyOf<global::Dataloop.APIPipelineState, global::Dataloop.IPipelineState>>, global::System.Collections.Generic.IList<global::Dataloop.ResourceExecution>, global::System.Collections.Generic.IList<global::Dataloop.APIDpk>, global::System.Collections.Generic.IList<global::Dataloop.APIApp>, global::System.Collections.Generic.IList<global::Dataloop.APICompute>, global::System.Collections.Generic.IList<global::Dataloop.APIServiceDriver>>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIPipelineState, global::Dataloop.IPipelineState>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.DpkComponents, global::System.Collections.Generic.Dictionary<string, global::Dataloop.IComponentElement>>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.PlatformEntityType?, global::Dataloop.SettingScopeType?>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::Dataloop.SettingScopeId?>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.Role?, global::Dataloop.OrgRole?, global::Dataloop.SettingScopeRole?>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.PlatformEntityType?, global::Dataloop.PartialSettingScopeType?>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::Dataloop.PartialSettingScopeId?>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.Role?, global::Dataloop.OrgRole?, global::Dataloop.PartialSettingScopeRole?>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUserSetting, global::Dataloop.APIFeatureFlag>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::Dataloop.AzureWebhookEventOperationRequestSource?>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.PartialICompute, global::Dataloop.UpdateComputeRequest2>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.DQLResourceQuery, global::Dataloop.AnyOf<global::Dataloop.FilterQuery, global::Dataloop.UpdateQuery, global::Dataloop.DeleteQuery>?>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.FilterQuery, global::Dataloop.UpdateQuery, global::Dataloop.DeleteQuery>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.DQLResourceQuery, global::Dataloop.FilterQuery>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.MoveItemsRequest, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIAnnotationRequest, global::System.Collections.Generic.IList<global::Dataloop.APIAnnotationRequest>>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.ImportItemRequest>, global::Dataloop.ImportItemsToDatasetRequest>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.FeatureSet, global::System.Collections.Generic.IList<global::Dataloop.FeatureSet>>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.DQLResourceQuery, global::Dataloop.FilterQuery>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.FeatureVector, global::System.Collections.Generic.IList<global::Dataloop.FeatureVector>>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AllOfJsonConverter<global::Dataloop.DQLResourceQuery, global::Dataloop.FilterQuery>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIAnnotationRequest, global::System.Collections.Generic.IList<global::Dataloop.APIAnnotationRequest>>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.MetricRequest, global::System.Collections.Generic.IList<global::Dataloop.MetricRequest>>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.PartialCreateModelRequest, global::Dataloop.APICopyEnvironmentSpec>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.CreateOntologyPayloadV2, global::Dataloop.CreateOntologyPayload>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.RecipeV2Input?, global::Dataloop.RecipeInput?>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.PartialRecipePayloadV2, global::Dataloop.PartialRecipePayload>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.ResolverPayload, global::Dataloop.IUserContext>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.PatchFeatureFlagRequest, global::Dataloop.PatchUserSettingRequest>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APITask, global::Dataloop.APICommand>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<object, global::Dataloop.APICommand>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APITask, global::Dataloop.APICommand>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APICommand, global::Dataloop.APITask>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIApp, object>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APICommand, global::System.Collections.Generic.IList<global::Dataloop.APIAssignment>>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APICommand, global::Dataloop.APIAssignment>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APICommand, global::Dataloop.APIAssignment>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APICommand, global::System.Collections.Generic.IList<global::Dataloop.APIAssignment>>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APICommand, object>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIDatasetFileItem, global::Dataloop.APIDatasetDirectoryItem>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIDatasetFileItem, global::Dataloop.APIDatasetDirectoryItem>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIDatasetFileItem, global::Dataloop.APIDatasetDirectoryItem>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIAnnotation, global::System.Collections.Generic.IList<global::Dataloop.APIAnnotation>>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, double?>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, double?>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, double?>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIDatasetFileItem, global::Dataloop.APIDatasetDirectoryItem>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.Dataset, global::Dataloop.APIDatasetSchema>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APICommand, string>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APICommand, global::Dataloop.Dataset>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIExecution, global::Dataloop.PiperSettingsCommands>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIExecution, global::Dataloop.APICommand>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIDatasetFileItem, global::Dataloop.APIDatasetDirectoryItem>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIDatasetFileItem, global::Dataloop.APIDatasetDirectoryItem>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIAnnotation, global::System.Collections.Generic.IList<global::Dataloop.APIAnnotation>>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIModel, global::Dataloop.APICommand>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIModel, global::Dataloop.APICommand>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIOntologyV2, global::Dataloop.APIOntology>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIOntologyV2, global::Dataloop.APIOntology>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIOntologyV2, global::Dataloop.APIOntology>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.GetAvailableIntegrationsResponseItemVariant1, global::Dataloop.GetAvailableIntegrationsResponseItemVariant2>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIPipelineState, global::Dataloop.APICommand>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.APIMembership>, object>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::Dataloop.ClientContributor>, object>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIRecipeV2, global::Dataloop.APIRecipe>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIRecipeV2, global::Dataloop.APIRecipe>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIRecipeV2, global::Dataloop.APIRecipe>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIRecipeV2, global::Dataloop.APIRecipe>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIService, string>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIService, string>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIService, string>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIFeatureFlag, global::Dataloop.APIUserSetting>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIFeatureFlag, global::Dataloop.APIUserSetting>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIFeatureFlag, global::Dataloop.APIUserSetting>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIFeatureFlag, global::Dataloop.APIUserSetting>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APITask, global::Dataloop.APICommand>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<object, global::Dataloop.APICommand>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APITask, global::Dataloop.APICommand>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APICommand, global::Dataloop.APITask>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIUser, object>());
+            options.Converters.Add(new global::Dataloop.JsonConverters.UnixTimestampJsonConverter());
+
+            return options;
+        }
     }
 }
