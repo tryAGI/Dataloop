@@ -4,7 +4,7 @@
 namespace Dataloop
 {
     /// <summary>
-    /// Subscription scope type and id
+    /// 
     /// </summary>
     public sealed partial class APISubscriptionScope
     {
