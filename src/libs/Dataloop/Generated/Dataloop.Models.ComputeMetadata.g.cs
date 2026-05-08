@@ -29,6 +29,19 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickDictionary(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dataloop.Dictionary? value)
+        {
+            value = Dictionary;
+            return IsDictionary;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.ComputeMetadataVariant2? ComputeMetadataVariant2 { get; init; }
 #else
@@ -42,6 +55,19 @@ namespace Dataloop
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ComputeMetadataVariant2))]
 #endif
         public bool IsComputeMetadataVariant2 => ComputeMetadataVariant2 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickComputeMetadataVariant2(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dataloop.ComputeMetadataVariant2? value)
+        {
+            value = ComputeMetadataVariant2;
+            return IsComputeMetadataVariant2;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -118,8 +144,8 @@ namespace Dataloop
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Dataloop.Dictionary?, TResult>? dictionary = null,
-            global::System.Func<global::Dataloop.ComputeMetadataVariant2?, TResult>? computeMetadataVariant2 = null,
+            global::System.Func<global::Dataloop.Dictionary, TResult>? dictionary = null,
+            global::System.Func<global::Dataloop.ComputeMetadataVariant2, TResult>? computeMetadataVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -143,8 +169,32 @@ namespace Dataloop
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Dataloop.Dictionary?>? dictionary = null,
-            global::System.Action<global::Dataloop.ComputeMetadataVariant2?>? computeMetadataVariant2 = null,
+            global::System.Action<global::Dataloop.Dictionary>? dictionary = null,
+
+            global::System.Action<global::Dataloop.ComputeMetadataVariant2>? computeMetadataVariant2 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsDictionary)
+            {
+                dictionary?.Invoke(Dictionary!);
+            }
+            else if (IsComputeMetadataVariant2)
+            {
+                computeMetadataVariant2?.Invoke(ComputeMetadataVariant2!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Dataloop.Dictionary>? dictionary = null,
+            global::System.Action<global::Dataloop.ComputeMetadataVariant2>? computeMetadataVariant2 = null,
             bool validate = true)
         {
             if (validate)

@@ -29,6 +29,19 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickPanel(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dataloop.IDpkComponentPanel? value)
+        {
+            value = Panel;
+            return IsPanel;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.IDpkComponentModel? Model { get; init; }
 #else
@@ -42,6 +55,19 @@ namespace Dataloop
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Model))]
 #endif
         public bool IsModel => Model != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickModel(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dataloop.IDpkComponentModel? value)
+        {
+            value = Model;
+            return IsModel;
+        }
 
         /// <summary>
         /// 
@@ -63,6 +89,19 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickModule(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dataloop.IDpkComponentModule? value)
+        {
+            value = Module;
+            return IsModule;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.IDpkComponentTrigger? Trigger { get; init; }
 #else
@@ -76,6 +115,19 @@ namespace Dataloop
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Trigger))]
 #endif
         public bool IsTrigger => Trigger != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickTrigger(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dataloop.IDpkComponentTrigger? value)
+        {
+            value = Trigger;
+            return IsTrigger;
+        }
 
         /// <summary>
         /// 
@@ -97,6 +149,19 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickService(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dataloop.IDpkComponentService? value)
+        {
+            value = Service;
+            return IsService;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.IDpkComponentToolbars? Toolbars { get; init; }
 #else
@@ -110,6 +175,19 @@ namespace Dataloop
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Toolbars))]
 #endif
         public bool IsToolbars => Toolbars != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickToolbars(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dataloop.IDpkComponentToolbars? value)
+        {
+            value = Toolbars;
+            return IsToolbars;
+        }
 
         /// <summary>
         /// 
@@ -131,6 +209,19 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickChannel(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dataloop.IDpkChannel? value)
+        {
+            value = Channel;
+            return IsChannel;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.IDpkComputeConfigs? ComputeConfigs { get; init; }
 #else
@@ -144,6 +235,19 @@ namespace Dataloop
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ComputeConfigs))]
 #endif
         public bool IsComputeConfigs => ComputeConfigs != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickComputeConfigs(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dataloop.IDpkComputeConfigs? value)
+        {
+            value = ComputeConfigs;
+            return IsComputeConfigs;
+        }
 
         /// <summary>
         /// 
@@ -165,6 +269,19 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickPipelineNode(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dataloop.IDpkPipelineNode? value)
+        {
+            value = PipelineNode;
+            return IsPipelineNode;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.IDpkPipelineTemplate? PipelineTemplate { get; init; }
 #else
@@ -178,6 +295,19 @@ namespace Dataloop
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(PipelineTemplate))]
 #endif
         public bool IsPipelineTemplate => PipelineTemplate != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickPipelineTemplate(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dataloop.IDpkPipelineTemplate? value)
+        {
+            value = PipelineTemplate;
+            return IsPipelineTemplate;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -430,16 +560,16 @@ namespace Dataloop
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Dataloop.IDpkComponentPanel?, TResult>? panel = null,
-            global::System.Func<global::Dataloop.IDpkComponentModel?, TResult>? model = null,
-            global::System.Func<global::Dataloop.IDpkComponentModule?, TResult>? module = null,
-            global::System.Func<global::Dataloop.IDpkComponentTrigger?, TResult>? trigger = null,
-            global::System.Func<global::Dataloop.IDpkComponentService?, TResult>? service = null,
-            global::System.Func<global::Dataloop.IDpkComponentToolbars?, TResult>? toolbars = null,
-            global::System.Func<global::Dataloop.IDpkChannel?, TResult>? channel = null,
-            global::System.Func<global::Dataloop.IDpkComputeConfigs?, TResult>? computeConfigs = null,
-            global::System.Func<global::Dataloop.IDpkPipelineNode?, TResult>? pipelineNode = null,
-            global::System.Func<global::Dataloop.IDpkPipelineTemplate?, TResult>? pipelineTemplate = null,
+            global::System.Func<global::Dataloop.IDpkComponentPanel, TResult>? panel = null,
+            global::System.Func<global::Dataloop.IDpkComponentModel, TResult>? model = null,
+            global::System.Func<global::Dataloop.IDpkComponentModule, TResult>? module = null,
+            global::System.Func<global::Dataloop.IDpkComponentTrigger, TResult>? trigger = null,
+            global::System.Func<global::Dataloop.IDpkComponentService, TResult>? service = null,
+            global::System.Func<global::Dataloop.IDpkComponentToolbars, TResult>? toolbars = null,
+            global::System.Func<global::Dataloop.IDpkChannel, TResult>? channel = null,
+            global::System.Func<global::Dataloop.IDpkComputeConfigs, TResult>? computeConfigs = null,
+            global::System.Func<global::Dataloop.IDpkPipelineNode, TResult>? pipelineNode = null,
+            global::System.Func<global::Dataloop.IDpkPipelineTemplate, TResult>? pipelineTemplate = null,
             bool validate = true)
         {
             if (validate)
@@ -495,16 +625,88 @@ namespace Dataloop
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Dataloop.IDpkComponentPanel?>? panel = null,
-            global::System.Action<global::Dataloop.IDpkComponentModel?>? model = null,
-            global::System.Action<global::Dataloop.IDpkComponentModule?>? module = null,
-            global::System.Action<global::Dataloop.IDpkComponentTrigger?>? trigger = null,
-            global::System.Action<global::Dataloop.IDpkComponentService?>? service = null,
-            global::System.Action<global::Dataloop.IDpkComponentToolbars?>? toolbars = null,
-            global::System.Action<global::Dataloop.IDpkChannel?>? channel = null,
-            global::System.Action<global::Dataloop.IDpkComputeConfigs?>? computeConfigs = null,
-            global::System.Action<global::Dataloop.IDpkPipelineNode?>? pipelineNode = null,
-            global::System.Action<global::Dataloop.IDpkPipelineTemplate?>? pipelineTemplate = null,
+            global::System.Action<global::Dataloop.IDpkComponentPanel>? panel = null,
+
+            global::System.Action<global::Dataloop.IDpkComponentModel>? model = null,
+
+            global::System.Action<global::Dataloop.IDpkComponentModule>? module = null,
+
+            global::System.Action<global::Dataloop.IDpkComponentTrigger>? trigger = null,
+
+            global::System.Action<global::Dataloop.IDpkComponentService>? service = null,
+
+            global::System.Action<global::Dataloop.IDpkComponentToolbars>? toolbars = null,
+
+            global::System.Action<global::Dataloop.IDpkChannel>? channel = null,
+
+            global::System.Action<global::Dataloop.IDpkComputeConfigs>? computeConfigs = null,
+
+            global::System.Action<global::Dataloop.IDpkPipelineNode>? pipelineNode = null,
+
+            global::System.Action<global::Dataloop.IDpkPipelineTemplate>? pipelineTemplate = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsPanel)
+            {
+                panel?.Invoke(Panel!);
+            }
+            else if (IsModel)
+            {
+                model?.Invoke(Model!);
+            }
+            else if (IsModule)
+            {
+                module?.Invoke(Module!);
+            }
+            else if (IsTrigger)
+            {
+                trigger?.Invoke(Trigger!);
+            }
+            else if (IsService)
+            {
+                service?.Invoke(Service!);
+            }
+            else if (IsToolbars)
+            {
+                toolbars?.Invoke(Toolbars!);
+            }
+            else if (IsChannel)
+            {
+                channel?.Invoke(Channel!);
+            }
+            else if (IsComputeConfigs)
+            {
+                computeConfigs?.Invoke(ComputeConfigs!);
+            }
+            else if (IsPipelineNode)
+            {
+                pipelineNode?.Invoke(PipelineNode!);
+            }
+            else if (IsPipelineTemplate)
+            {
+                pipelineTemplate?.Invoke(PipelineTemplate!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Dataloop.IDpkComponentPanel>? panel = null,
+            global::System.Action<global::Dataloop.IDpkComponentModel>? model = null,
+            global::System.Action<global::Dataloop.IDpkComponentModule>? module = null,
+            global::System.Action<global::Dataloop.IDpkComponentTrigger>? trigger = null,
+            global::System.Action<global::Dataloop.IDpkComponentService>? service = null,
+            global::System.Action<global::Dataloop.IDpkComponentToolbars>? toolbars = null,
+            global::System.Action<global::Dataloop.IDpkChannel>? channel = null,
+            global::System.Action<global::Dataloop.IDpkComputeConfigs>? computeConfigs = null,
+            global::System.Action<global::Dataloop.IDpkPipelineNode>? pipelineNode = null,
+            global::System.Action<global::Dataloop.IDpkPipelineTemplate>? pipelineTemplate = null,
             bool validate = true)
         {
             if (validate)

@@ -29,6 +29,19 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickDictionary(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dataloop.Dictionary? value)
+        {
+            value = Dictionary;
+            return IsDictionary;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.MigrationSpecVariant2? MigrationSpecVariant2 { get; init; }
 #else
@@ -42,6 +55,19 @@ namespace Dataloop
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(MigrationSpecVariant2))]
 #endif
         public bool IsMigrationSpecVariant2 => MigrationSpecVariant2 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickMigrationSpecVariant2(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dataloop.MigrationSpecVariant2? value)
+        {
+            value = MigrationSpecVariant2;
+            return IsMigrationSpecVariant2;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -118,8 +144,8 @@ namespace Dataloop
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Dataloop.Dictionary?, TResult>? dictionary = null,
-            global::System.Func<global::Dataloop.MigrationSpecVariant2?, TResult>? migrationSpecVariant2 = null,
+            global::System.Func<global::Dataloop.Dictionary, TResult>? dictionary = null,
+            global::System.Func<global::Dataloop.MigrationSpecVariant2, TResult>? migrationSpecVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -143,8 +169,32 @@ namespace Dataloop
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Dataloop.Dictionary?>? dictionary = null,
-            global::System.Action<global::Dataloop.MigrationSpecVariant2?>? migrationSpecVariant2 = null,
+            global::System.Action<global::Dataloop.Dictionary>? dictionary = null,
+
+            global::System.Action<global::Dataloop.MigrationSpecVariant2>? migrationSpecVariant2 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsDictionary)
+            {
+                dictionary?.Invoke(Dictionary!);
+            }
+            else if (IsMigrationSpecVariant2)
+            {
+                migrationSpecVariant2?.Invoke(MigrationSpecVariant2!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Dataloop.Dictionary>? dictionary = null,
+            global::System.Action<global::Dataloop.MigrationSpecVariant2>? migrationSpecVariant2 = null,
             bool validate = true)
         {
             if (validate)

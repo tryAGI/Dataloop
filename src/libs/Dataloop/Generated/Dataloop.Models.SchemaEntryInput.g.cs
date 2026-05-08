@@ -29,6 +29,19 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickSchemaEntryInputVariant1(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dataloop.SchemaEntryInputVariant1? value)
+        {
+            value = SchemaEntryInputVariant1;
+            return IsSchemaEntryInputVariant1;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.AnyOf<global::Dataloop.SchemaEntryInputVariant2Variant1, global::Dataloop.SchemaEntryInputVariant2Variant2>? SchemaEntryInputVariant2 { get; init; }
 #else
@@ -42,6 +55,19 @@ namespace Dataloop
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(SchemaEntryInputVariant2))]
 #endif
         public bool IsSchemaEntryInputVariant2 => SchemaEntryInputVariant2 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickSchemaEntryInputVariant2(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dataloop.AnyOf<global::Dataloop.SchemaEntryInputVariant2Variant1, global::Dataloop.SchemaEntryInputVariant2Variant2>? value)
+        {
+            value = SchemaEntryInputVariant2;
+            return IsSchemaEntryInputVariant2;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -118,7 +144,7 @@ namespace Dataloop
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Dataloop.SchemaEntryInputVariant1?, TResult>? schemaEntryInputVariant1 = null,
+            global::System.Func<global::Dataloop.SchemaEntryInputVariant1, TResult>? schemaEntryInputVariant1 = null,
             global::System.Func<global::Dataloop.AnyOf<global::Dataloop.SchemaEntryInputVariant2Variant1, global::Dataloop.SchemaEntryInputVariant2Variant2>?, TResult>? schemaEntryInputVariant2 = null,
             bool validate = true)
         {
@@ -143,7 +169,31 @@ namespace Dataloop
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Dataloop.SchemaEntryInputVariant1?>? schemaEntryInputVariant1 = null,
+            global::System.Action<global::Dataloop.SchemaEntryInputVariant1>? schemaEntryInputVariant1 = null,
+
+            global::System.Action<global::Dataloop.AnyOf<global::Dataloop.SchemaEntryInputVariant2Variant1, global::Dataloop.SchemaEntryInputVariant2Variant2>?>? schemaEntryInputVariant2 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsSchemaEntryInputVariant1)
+            {
+                schemaEntryInputVariant1?.Invoke(SchemaEntryInputVariant1!);
+            }
+            else if (IsSchemaEntryInputVariant2)
+            {
+                schemaEntryInputVariant2?.Invoke(SchemaEntryInputVariant2!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Dataloop.SchemaEntryInputVariant1>? schemaEntryInputVariant1 = null,
             global::System.Action<global::Dataloop.AnyOf<global::Dataloop.SchemaEntryInputVariant2Variant1, global::Dataloop.SchemaEntryInputVariant2Variant2>?>? schemaEntryInputVariant2 = null,
             bool validate = true)
         {

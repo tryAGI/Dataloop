@@ -29,6 +29,19 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickEntityReference(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dataloop.EntityReferenceMetadata? value)
+        {
+            value = EntityReference;
+            return IsEntityReference;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.AppMetadataVariant2? AppMetadataVariant2 { get; init; }
 #else
@@ -42,6 +55,19 @@ namespace Dataloop
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(AppMetadataVariant2))]
 #endif
         public bool IsAppMetadataVariant2 => AppMetadataVariant2 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickAppMetadataVariant2(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dataloop.AppMetadataVariant2? value)
+        {
+            value = AppMetadataVariant2;
+            return IsAppMetadataVariant2;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -118,8 +144,8 @@ namespace Dataloop
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Dataloop.EntityReferenceMetadata?, TResult>? entityReference = null,
-            global::System.Func<global::Dataloop.AppMetadataVariant2?, TResult>? appMetadataVariant2 = null,
+            global::System.Func<global::Dataloop.EntityReferenceMetadata, TResult>? entityReference = null,
+            global::System.Func<global::Dataloop.AppMetadataVariant2, TResult>? appMetadataVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -143,8 +169,32 @@ namespace Dataloop
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Dataloop.EntityReferenceMetadata?>? entityReference = null,
-            global::System.Action<global::Dataloop.AppMetadataVariant2?>? appMetadataVariant2 = null,
+            global::System.Action<global::Dataloop.EntityReferenceMetadata>? entityReference = null,
+
+            global::System.Action<global::Dataloop.AppMetadataVariant2>? appMetadataVariant2 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsEntityReference)
+            {
+                entityReference?.Invoke(EntityReference!);
+            }
+            else if (IsAppMetadataVariant2)
+            {
+                appMetadataVariant2?.Invoke(AppMetadataVariant2!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Dataloop.EntityReferenceMetadata>? entityReference = null,
+            global::System.Action<global::Dataloop.AppMetadataVariant2>? appMetadataVariant2 = null,
             bool validate = true)
         {
             if (validate)
