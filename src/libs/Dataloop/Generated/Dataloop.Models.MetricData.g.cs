@@ -29,6 +29,19 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickLine(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dataloop.LineData? value)
+        {
+            value = Line;
+            return IsLine;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.MatrixData? Matrix { get; init; }
 #else
@@ -46,6 +59,19 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickMatrix(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dataloop.MatrixData? value)
+        {
+            value = Matrix;
+            return IsMatrix;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.SummaryData? Summary { get; init; }
 #else
@@ -59,6 +85,19 @@ namespace Dataloop
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Summary))]
 #endif
         public bool IsSummary => Summary != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickSummary(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dataloop.SummaryData? value)
+        {
+            value = Summary;
+            return IsSummary;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -157,9 +196,9 @@ namespace Dataloop
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Dataloop.LineData?, TResult>? line = null,
-            global::System.Func<global::Dataloop.MatrixData?, TResult>? matrix = null,
-            global::System.Func<global::Dataloop.SummaryData?, TResult>? summary = null,
+            global::System.Func<global::Dataloop.LineData, TResult>? line = null,
+            global::System.Func<global::Dataloop.MatrixData, TResult>? matrix = null,
+            global::System.Func<global::Dataloop.SummaryData, TResult>? summary = null,
             bool validate = true)
         {
             if (validate)
@@ -187,9 +226,39 @@ namespace Dataloop
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Dataloop.LineData?>? line = null,
-            global::System.Action<global::Dataloop.MatrixData?>? matrix = null,
-            global::System.Action<global::Dataloop.SummaryData?>? summary = null,
+            global::System.Action<global::Dataloop.LineData>? line = null,
+
+            global::System.Action<global::Dataloop.MatrixData>? matrix = null,
+
+            global::System.Action<global::Dataloop.SummaryData>? summary = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsLine)
+            {
+                line?.Invoke(Line!);
+            }
+            else if (IsMatrix)
+            {
+                matrix?.Invoke(Matrix!);
+            }
+            else if (IsSummary)
+            {
+                summary?.Invoke(Summary!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Dataloop.LineData>? line = null,
+            global::System.Action<global::Dataloop.MatrixData>? matrix = null,
+            global::System.Action<global::Dataloop.SummaryData>? summary = null,
             bool validate = true)
         {
             if (validate)

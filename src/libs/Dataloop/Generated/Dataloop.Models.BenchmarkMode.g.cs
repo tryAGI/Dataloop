@@ -29,6 +29,19 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickOneByLatency(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dataloop.OneByOneLatencyBenchmarkMode? value)
+        {
+            value = OneByLatency;
+            return IsOneByLatency;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.ProfilingBenchmarkMode? Profiling { get; init; }
 #else
@@ -46,6 +59,19 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickProfiling(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dataloop.ProfilingBenchmarkMode? value)
+        {
+            value = Profiling;
+            return IsProfiling;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.ConcurrencyBenchmarkMode? Concurrency { get; init; }
 #else
@@ -59,6 +85,19 @@ namespace Dataloop
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Concurrency))]
 #endif
         public bool IsConcurrency => Concurrency != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickConcurrency(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dataloop.ConcurrencyBenchmarkMode? value)
+        {
+            value = Concurrency;
+            return IsConcurrency;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -157,9 +196,9 @@ namespace Dataloop
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Dataloop.OneByOneLatencyBenchmarkMode?, TResult>? oneByLatency = null,
-            global::System.Func<global::Dataloop.ProfilingBenchmarkMode?, TResult>? profiling = null,
-            global::System.Func<global::Dataloop.ConcurrencyBenchmarkMode?, TResult>? concurrency = null,
+            global::System.Func<global::Dataloop.OneByOneLatencyBenchmarkMode, TResult>? oneByLatency = null,
+            global::System.Func<global::Dataloop.ProfilingBenchmarkMode, TResult>? profiling = null,
+            global::System.Func<global::Dataloop.ConcurrencyBenchmarkMode, TResult>? concurrency = null,
             bool validate = true)
         {
             if (validate)
@@ -187,9 +226,39 @@ namespace Dataloop
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Dataloop.OneByOneLatencyBenchmarkMode?>? oneByLatency = null,
-            global::System.Action<global::Dataloop.ProfilingBenchmarkMode?>? profiling = null,
-            global::System.Action<global::Dataloop.ConcurrencyBenchmarkMode?>? concurrency = null,
+            global::System.Action<global::Dataloop.OneByOneLatencyBenchmarkMode>? oneByLatency = null,
+
+            global::System.Action<global::Dataloop.ProfilingBenchmarkMode>? profiling = null,
+
+            global::System.Action<global::Dataloop.ConcurrencyBenchmarkMode>? concurrency = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsOneByLatency)
+            {
+                oneByLatency?.Invoke(OneByLatency!);
+            }
+            else if (IsProfiling)
+            {
+                profiling?.Invoke(Profiling!);
+            }
+            else if (IsConcurrency)
+            {
+                concurrency?.Invoke(Concurrency!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Dataloop.OneByOneLatencyBenchmarkMode>? oneByLatency = null,
+            global::System.Action<global::Dataloop.ProfilingBenchmarkMode>? profiling = null,
+            global::System.Action<global::Dataloop.ConcurrencyBenchmarkMode>? concurrency = null,
             bool validate = true)
         {
             if (validate)

@@ -29,6 +29,19 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickPickAPIDpkDependencies(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dataloop.PickAPIDpkDependencies? value)
+        {
+            value = PickAPIDpkDependencies;
+            return IsPickAPIDpkDependencies;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.CustomInstallationVariant2? CustomInstallationVariant2 { get; init; }
 #else
@@ -42,6 +55,19 @@ namespace Dataloop
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(CustomInstallationVariant2))]
 #endif
         public bool IsCustomInstallationVariant2 => CustomInstallationVariant2 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickCustomInstallationVariant2(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dataloop.CustomInstallationVariant2? value)
+        {
+            value = CustomInstallationVariant2;
+            return IsCustomInstallationVariant2;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -118,8 +144,8 @@ namespace Dataloop
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Dataloop.PickAPIDpkDependencies?, TResult>? pickAPIDpkDependencies = null,
-            global::System.Func<global::Dataloop.CustomInstallationVariant2?, TResult>? customInstallationVariant2 = null,
+            global::System.Func<global::Dataloop.PickAPIDpkDependencies, TResult>? pickAPIDpkDependencies = null,
+            global::System.Func<global::Dataloop.CustomInstallationVariant2, TResult>? customInstallationVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -143,8 +169,32 @@ namespace Dataloop
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Dataloop.PickAPIDpkDependencies?>? pickAPIDpkDependencies = null,
-            global::System.Action<global::Dataloop.CustomInstallationVariant2?>? customInstallationVariant2 = null,
+            global::System.Action<global::Dataloop.PickAPIDpkDependencies>? pickAPIDpkDependencies = null,
+
+            global::System.Action<global::Dataloop.CustomInstallationVariant2>? customInstallationVariant2 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsPickAPIDpkDependencies)
+            {
+                pickAPIDpkDependencies?.Invoke(PickAPIDpkDependencies!);
+            }
+            else if (IsCustomInstallationVariant2)
+            {
+                customInstallationVariant2?.Invoke(CustomInstallationVariant2!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Dataloop.PickAPIDpkDependencies>? pickAPIDpkDependencies = null,
+            global::System.Action<global::Dataloop.CustomInstallationVariant2>? customInstallationVariant2 = null,
             bool validate = true)
         {
             if (validate)
