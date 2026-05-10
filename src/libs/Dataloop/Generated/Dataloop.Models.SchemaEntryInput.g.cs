@@ -42,6 +42,13 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public global::Dataloop.SchemaEntryInputVariant1 PickSchemaEntryInputVariant1() => IsSchemaEntryInputVariant1
+            ? SchemaEntryInputVariant1!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'SchemaEntryInputVariant1' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.AnyOf<global::Dataloop.SchemaEntryInputVariant2Variant1, global::Dataloop.SchemaEntryInputVariant2Variant2>? SchemaEntryInputVariant2 { get; init; }
 #else
@@ -68,6 +75,13 @@ namespace Dataloop
             value = SchemaEntryInputVariant2;
             return IsSchemaEntryInputVariant2;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dataloop.AnyOf<global::Dataloop.SchemaEntryInputVariant2Variant1, global::Dataloop.SchemaEntryInputVariant2Variant2> PickSchemaEntryInputVariant2() => IsSchemaEntryInputVariant2
+            ? SchemaEntryInputVariant2!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'SchemaEntryInputVariant2' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -89,6 +103,11 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public static SchemaEntryInput FromSchemaEntryInputVariant1(global::Dataloop.SchemaEntryInputVariant1? value) => new SchemaEntryInput(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator SchemaEntryInput(global::Dataloop.AnyOf<global::Dataloop.SchemaEntryInputVariant2Variant1, global::Dataloop.SchemaEntryInputVariant2Variant2> value) => new SchemaEntryInput((global::Dataloop.AnyOf<global::Dataloop.SchemaEntryInputVariant2Variant1, global::Dataloop.SchemaEntryInputVariant2Variant2>?)value);
 
         /// <summary>
@@ -103,6 +122,11 @@ namespace Dataloop
         {
             SchemaEntryInputVariant2 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static SchemaEntryInput FromSchemaEntryInputVariant2(global::Dataloop.AnyOf<global::Dataloop.SchemaEntryInputVariant2Variant1, global::Dataloop.SchemaEntryInputVariant2Variant2>? value) => new SchemaEntryInput(value);
 
         /// <summary>
         /// 

@@ -42,6 +42,13 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public object PickIRefImageAnnotationsTypeVariant1() => IsIRefImageAnnotationsTypeVariant1
+            ? IRefImageAnnotationsTypeVariant1!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'IRefImageAnnotationsTypeVariant1' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.IBaseRefAnnotationCoordinates? BaseAnnotationCoordinates { get; init; }
 #else
@@ -68,6 +75,13 @@ namespace Dataloop
             value = BaseAnnotationCoordinates;
             return IsBaseAnnotationCoordinates;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dataloop.IBaseRefAnnotationCoordinates PickBaseAnnotationCoordinates() => IsBaseAnnotationCoordinates
+            ? BaseAnnotationCoordinates!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'BaseAnnotationCoordinates' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -85,6 +99,11 @@ namespace Dataloop
         {
             BaseAnnotationCoordinates = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static IRefImageAnnotationsType FromBaseAnnotationCoordinates(global::Dataloop.IBaseRefAnnotationCoordinates? value) => new IRefImageAnnotationsType(value);
 
         /// <summary>
         /// 

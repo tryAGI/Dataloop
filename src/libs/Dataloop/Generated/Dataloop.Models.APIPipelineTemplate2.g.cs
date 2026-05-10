@@ -145,12 +145,6 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("versionNumber")]
-        public double? VersionNumber { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("templateKind")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dataloop.JsonConverters.TemplateKindJsonConverter))]
         public global::Dataloop.TemplateKind? TemplateKind { get; set; }
@@ -184,7 +178,6 @@ namespace Dataloop
         /// <param name="variables"></param>
         /// <param name="resetTimestamp"></param>
         /// <param name="template"></param>
-        /// <param name="versionNumber"></param>
         /// <param name="templateKind"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -210,7 +203,6 @@ namespace Dataloop
             global::System.Collections.Generic.IList<global::Dataloop.PipelineVariable>? variables,
             global::System.DateTime? resetTimestamp,
             global::Dataloop.APIPipelineTemplateTemplate? template,
-            double? versionNumber,
             global::Dataloop.TemplateKind? templateKind)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
@@ -233,7 +225,6 @@ namespace Dataloop
             this.Variables = variables;
             this.ResetTimestamp = resetTimestamp;
             this.Template = template;
-            this.VersionNumber = versionNumber;
             this.TemplateKind = templateKind;
         }
 

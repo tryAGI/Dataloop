@@ -40,6 +40,13 @@ namespace Dataloop
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public global::Dataloop.PickRecipeV2TitleOrProjectIdsOrOntology PickPickTitleOrProjectIdsOntology() => IsPickTitleOrProjectIdsOntology
+            ? PickTitleOrProjectIdsOntology!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'PickTitleOrProjectIdsOntology' but the value was {ToString()}.");
+
+        /// <summary>
         /// Make all properties in T optional
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -68,6 +75,13 @@ namespace Dataloop
             value = Partial;
             return IsPartial;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dataloop.PartialRecipeV2 PickPartial() => IsPartial
+            ? Partial!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Partial' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -89,6 +103,11 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public static RecipeV2Input FromPickTitleOrProjectIdsOntology(global::Dataloop.PickRecipeV2TitleOrProjectIdsOrOntology? value) => new RecipeV2Input(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator RecipeV2Input(global::Dataloop.PartialRecipeV2 value) => new RecipeV2Input((global::Dataloop.PartialRecipeV2?)value);
 
         /// <summary>
@@ -103,6 +122,11 @@ namespace Dataloop
         {
             Partial = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static RecipeV2Input FromPartial(global::Dataloop.PartialRecipeV2? value) => new RecipeV2Input(value);
 
         /// <summary>
         /// 

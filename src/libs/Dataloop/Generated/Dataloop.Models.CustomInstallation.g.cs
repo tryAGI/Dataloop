@@ -42,6 +42,13 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public global::Dataloop.PickAPIDpkDependencies PickPickAPIDpkDependencies() => IsPickAPIDpkDependencies
+            ? PickAPIDpkDependencies!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'PickAPIDpkDependencies' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.CustomInstallationVariant2? CustomInstallationVariant2 { get; init; }
 #else
@@ -68,6 +75,13 @@ namespace Dataloop
             value = CustomInstallationVariant2;
             return IsCustomInstallationVariant2;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dataloop.CustomInstallationVariant2 PickCustomInstallationVariant2() => IsCustomInstallationVariant2
+            ? CustomInstallationVariant2!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'CustomInstallationVariant2' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -89,6 +103,11 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public static CustomInstallation FromPickAPIDpkDependencies(global::Dataloop.PickAPIDpkDependencies? value) => new CustomInstallation(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator CustomInstallation(global::Dataloop.CustomInstallationVariant2 value) => new CustomInstallation((global::Dataloop.CustomInstallationVariant2?)value);
 
         /// <summary>
@@ -103,6 +122,11 @@ namespace Dataloop
         {
             CustomInstallationVariant2 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static CustomInstallation FromCustomInstallationVariant2(global::Dataloop.CustomInstallationVariant2? value) => new CustomInstallation(value);
 
         /// <summary>
         /// 

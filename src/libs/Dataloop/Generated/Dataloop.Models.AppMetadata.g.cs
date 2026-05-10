@@ -42,6 +42,13 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public global::Dataloop.EntityReferenceMetadata PickEntityReference() => IsEntityReference
+            ? EntityReference!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'EntityReference' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.AppMetadataVariant2? AppMetadataVariant2 { get; init; }
 #else
@@ -68,6 +75,13 @@ namespace Dataloop
             value = AppMetadataVariant2;
             return IsAppMetadataVariant2;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dataloop.AppMetadataVariant2 PickAppMetadataVariant2() => IsAppMetadataVariant2
+            ? AppMetadataVariant2!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'AppMetadataVariant2' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -89,6 +103,11 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public static AppMetadata FromEntityReference(global::Dataloop.EntityReferenceMetadata? value) => new AppMetadata(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator AppMetadata(global::Dataloop.AppMetadataVariant2 value) => new AppMetadata((global::Dataloop.AppMetadataVariant2?)value);
 
         /// <summary>
@@ -103,6 +122,11 @@ namespace Dataloop
         {
             AppMetadataVariant2 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static AppMetadata FromAppMetadataVariant2(global::Dataloop.AppMetadataVariant2? value) => new AppMetadata(value);
 
         /// <summary>
         /// 

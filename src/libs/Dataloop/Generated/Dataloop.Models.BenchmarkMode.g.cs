@@ -42,6 +42,13 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public global::Dataloop.OneByOneLatencyBenchmarkMode PickOneByLatency() => IsOneByLatency
+            ? OneByLatency!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'OneByLatency' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.ProfilingBenchmarkMode? Profiling { get; init; }
 #else
@@ -72,6 +79,13 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public global::Dataloop.ProfilingBenchmarkMode PickProfiling() => IsProfiling
+            ? Profiling!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Profiling' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.ConcurrencyBenchmarkMode? Concurrency { get; init; }
 #else
@@ -98,6 +112,13 @@ namespace Dataloop
             value = Concurrency;
             return IsConcurrency;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dataloop.ConcurrencyBenchmarkMode PickConcurrency() => IsConcurrency
+            ? Concurrency!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Concurrency' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -115,6 +136,11 @@ namespace Dataloop
         {
             OneByLatency = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static BenchmarkMode FromOneByLatency(global::Dataloop.OneByOneLatencyBenchmarkMode? value) => new BenchmarkMode(value);
 
         /// <summary>
         /// 
@@ -137,6 +163,11 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public static BenchmarkMode FromProfiling(global::Dataloop.ProfilingBenchmarkMode? value) => new BenchmarkMode(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator BenchmarkMode(global::Dataloop.ConcurrencyBenchmarkMode value) => new BenchmarkMode((global::Dataloop.ConcurrencyBenchmarkMode?)value);
 
         /// <summary>
@@ -151,6 +182,11 @@ namespace Dataloop
         {
             Concurrency = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static BenchmarkMode FromConcurrency(global::Dataloop.ConcurrencyBenchmarkMode? value) => new BenchmarkMode(value);
 
         /// <summary>
         /// 

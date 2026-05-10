@@ -44,6 +44,13 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public global::System.Collections.Generic.Dictionary<string, global::Dataloop.ComputePluginResourceManifests2> PickResourceManifests() => IsResourceManifests
+            ? ResourceManifests!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ResourceManifests' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.ComputePluginSpecVariant2? ComputePluginSpecVariant2 { get; init; }
 #else
@@ -70,6 +77,13 @@ namespace Dataloop
             value = ComputePluginSpecVariant2;
             return IsComputePluginSpecVariant2;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dataloop.ComputePluginSpecVariant2 PickComputePluginSpecVariant2() => IsComputePluginSpecVariant2
+            ? ComputePluginSpecVariant2!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ComputePluginSpecVariant2' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -91,6 +105,11 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public static ComputePluginSpec FromResourceManifests(global::System.Collections.Generic.Dictionary<string, global::Dataloop.ComputePluginResourceManifests2>? value) => new ComputePluginSpec(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator ComputePluginSpec(global::Dataloop.ComputePluginSpecVariant2 value) => new ComputePluginSpec((global::Dataloop.ComputePluginSpecVariant2?)value);
 
         /// <summary>
@@ -105,6 +124,11 @@ namespace Dataloop
         {
             ComputePluginSpecVariant2 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static ComputePluginSpec FromComputePluginSpecVariant2(global::Dataloop.ComputePluginSpecVariant2? value) => new ComputePluginSpec(value);
 
         /// <summary>
         /// 

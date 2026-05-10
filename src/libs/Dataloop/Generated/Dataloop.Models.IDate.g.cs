@@ -42,6 +42,13 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public global::System.DateTime PickTime() => IsTime
+            ? Time!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Time' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public double? IDateVariant2 { get; init; }
 #else
@@ -72,6 +79,13 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public double PickIDateVariant2() => IsIDateVariant2
+            ? IDateVariant2!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'IDateVariant2' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public string? IDateVariant3 { get; init; }
 #else
@@ -98,6 +112,13 @@ namespace Dataloop
             value = IDateVariant3;
             return IsIDateVariant3;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string PickIDateVariant3() => IsIDateVariant3
+            ? IDateVariant3!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'IDateVariant3' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -115,6 +136,11 @@ namespace Dataloop
         {
             Time = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static IDate FromTime(global::System.DateTime? value) => new IDate(value);
 
         /// <summary>
         /// 
@@ -137,6 +163,11 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public static IDate FromIDateVariant2(double? value) => new IDate(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator IDate(string value) => new IDate((string?)value);
 
         /// <summary>
@@ -151,6 +182,11 @@ namespace Dataloop
         {
             IDateVariant3 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static IDate FromIDateVariant3(string? value) => new IDate(value);
 
         /// <summary>
         /// 

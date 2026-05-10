@@ -42,6 +42,13 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public global::Dataloop.LineData PickLine() => IsLine
+            ? Line!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Line' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.MatrixData? Matrix { get; init; }
 #else
@@ -72,6 +79,13 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public global::Dataloop.MatrixData PickMatrix() => IsMatrix
+            ? Matrix!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Matrix' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.SummaryData? Summary { get; init; }
 #else
@@ -98,6 +112,13 @@ namespace Dataloop
             value = Summary;
             return IsSummary;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dataloop.SummaryData PickSummary() => IsSummary
+            ? Summary!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Summary' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -115,6 +136,11 @@ namespace Dataloop
         {
             Line = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static MetricData FromLine(global::Dataloop.LineData? value) => new MetricData(value);
 
         /// <summary>
         /// 
@@ -137,6 +163,11 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public static MetricData FromMatrix(global::Dataloop.MatrixData? value) => new MetricData(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator MetricData(global::Dataloop.SummaryData value) => new MetricData((global::Dataloop.SummaryData?)value);
 
         /// <summary>
@@ -151,6 +182,11 @@ namespace Dataloop
         {
             Summary = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static MetricData FromSummary(global::Dataloop.SummaryData? value) => new MetricData(value);
 
         /// <summary>
         /// 
