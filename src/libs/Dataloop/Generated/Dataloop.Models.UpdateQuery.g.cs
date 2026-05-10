@@ -145,5 +145,6 @@ namespace Dataloop
         public UpdateQuery()
         {
         }
+
     }
 }

@@ -227,5 +227,6 @@ namespace Dataloop
         public TaskPayload()
         {
         }
+
     }
 }

@@ -80,5 +80,6 @@ namespace Dataloop
         public CoordinatesNote()
         {
         }
+
     }
 }

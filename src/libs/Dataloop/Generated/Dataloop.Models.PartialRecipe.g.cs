@@ -183,5 +183,6 @@ namespace Dataloop
         public PartialRecipe()
         {
         }
+
     }
 }

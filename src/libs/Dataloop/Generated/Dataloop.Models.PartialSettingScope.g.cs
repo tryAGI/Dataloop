@@ -88,5 +88,6 @@ namespace Dataloop
         public PartialSettingScope()
         {
         }
+
     }
 }

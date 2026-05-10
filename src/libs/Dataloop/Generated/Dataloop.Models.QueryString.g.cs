@@ -81,5 +81,6 @@ namespace Dataloop
         public QueryString()
         {
         }
+
     }
 }

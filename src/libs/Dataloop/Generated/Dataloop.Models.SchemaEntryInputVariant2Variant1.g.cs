@@ -50,5 +50,6 @@ namespace Dataloop
         public SchemaEntryInputVariant2Variant1()
         {
         }
+
     }
 }

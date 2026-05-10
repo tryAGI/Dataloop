@@ -231,5 +231,6 @@ namespace Dataloop
         public DQLResourceQuery()
         {
         }
+
     }
 }

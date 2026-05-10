@@ -70,5 +70,6 @@ namespace Dataloop
         public GetAvailableIntegrationsResponseItemVariant2()
         {
         }
+
     }
 }

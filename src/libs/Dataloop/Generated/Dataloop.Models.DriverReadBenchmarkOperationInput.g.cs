@@ -116,5 +116,6 @@ namespace Dataloop
         public DriverReadBenchmarkOperationInput()
         {
         }
+
     }
 }

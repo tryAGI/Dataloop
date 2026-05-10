@@ -77,5 +77,6 @@ namespace Dataloop
         public ICompositionElementState()
         {
         }
+
     }
 }

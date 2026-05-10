@@ -90,5 +90,6 @@ namespace Dataloop
         public APIOrgDomain()
         {
         }
+
     }
 }

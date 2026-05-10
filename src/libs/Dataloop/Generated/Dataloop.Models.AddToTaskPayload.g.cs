@@ -94,5 +94,6 @@ namespace Dataloop
         public AddToTaskPayload()
         {
         }
+
     }
 }
