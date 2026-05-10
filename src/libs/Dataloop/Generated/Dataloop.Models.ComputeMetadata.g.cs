@@ -42,6 +42,13 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public global::Dataloop.Dictionary PickDictionary() => IsDictionary
+            ? Dictionary!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Dictionary' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.ComputeMetadataVariant2? ComputeMetadataVariant2 { get; init; }
 #else
@@ -68,6 +75,13 @@ namespace Dataloop
             value = ComputeMetadataVariant2;
             return IsComputeMetadataVariant2;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dataloop.ComputeMetadataVariant2 PickComputeMetadataVariant2() => IsComputeMetadataVariant2
+            ? ComputeMetadataVariant2!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ComputeMetadataVariant2' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -89,6 +103,11 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public static ComputeMetadata FromDictionary(global::Dataloop.Dictionary? value) => new ComputeMetadata(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator ComputeMetadata(global::Dataloop.ComputeMetadataVariant2 value) => new ComputeMetadata((global::Dataloop.ComputeMetadataVariant2?)value);
 
         /// <summary>
@@ -103,6 +122,11 @@ namespace Dataloop
         {
             ComputeMetadataVariant2 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static ComputeMetadata FromComputeMetadataVariant2(global::Dataloop.ComputeMetadataVariant2? value) => new ComputeMetadata(value);
 
         /// <summary>
         /// 

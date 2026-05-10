@@ -42,6 +42,13 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public global::Dataloop.Dictionary PickDictionary() => IsDictionary
+            ? Dictionary!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Dictionary' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.MigrationSpecVariant2? MigrationSpecVariant2 { get; init; }
 #else
@@ -68,6 +75,13 @@ namespace Dataloop
             value = MigrationSpecVariant2;
             return IsMigrationSpecVariant2;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dataloop.MigrationSpecVariant2 PickMigrationSpecVariant2() => IsMigrationSpecVariant2
+            ? MigrationSpecVariant2!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'MigrationSpecVariant2' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -89,6 +103,11 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public static MigrationSpec FromDictionary(global::Dataloop.Dictionary? value) => new MigrationSpec(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator MigrationSpec(global::Dataloop.MigrationSpecVariant2 value) => new MigrationSpec((global::Dataloop.MigrationSpecVariant2?)value);
 
         /// <summary>
@@ -103,6 +122,11 @@ namespace Dataloop
         {
             MigrationSpecVariant2 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static MigrationSpec FromMigrationSpecVariant2(global::Dataloop.MigrationSpecVariant2? value) => new MigrationSpec(value);
 
         /// <summary>
         /// 

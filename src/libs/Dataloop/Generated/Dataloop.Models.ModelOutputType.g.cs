@@ -42,6 +42,13 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public global::Dataloop.AnnotationType PickAnnotation1() => IsAnnotation1
+            ? Annotation1!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Annotation1' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.ModelOutputTypeVariant2? ModelOutputTypeVariant2 { get; init; }
 #else
@@ -68,6 +75,13 @@ namespace Dataloop
             value = ModelOutputTypeVariant2;
             return IsModelOutputTypeVariant2;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dataloop.ModelOutputTypeVariant2 PickModelOutputTypeVariant2() => IsModelOutputTypeVariant2
+            ? ModelOutputTypeVariant2!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ModelOutputTypeVariant2' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -102,6 +116,13 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public global::Dataloop.AnnotationType PickAnnotation2() => IsAnnotation2
+            ? Annotation2!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Annotation2' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.ModelOutputTypeVariant4? ModelOutputTypeVariant4 { get; init; }
 #else
@@ -128,6 +149,13 @@ namespace Dataloop
             value = ModelOutputTypeVariant4;
             return IsModelOutputTypeVariant4;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dataloop.ModelOutputTypeVariant4 PickModelOutputTypeVariant4() => IsModelOutputTypeVariant4
+            ? ModelOutputTypeVariant4!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ModelOutputTypeVariant4' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -145,6 +173,11 @@ namespace Dataloop
         {
             Annotation1 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static ModelOutputType FromAnnotation1(global::Dataloop.AnnotationType? value) => new ModelOutputType(value);
 
         /// <summary>
         /// 
@@ -167,6 +200,11 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public static ModelOutputType FromModelOutputTypeVariant2(global::Dataloop.ModelOutputTypeVariant2? value) => new ModelOutputType(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator ModelOutputType(global::Dataloop.ModelOutputTypeVariant4 value) => new ModelOutputType((global::Dataloop.ModelOutputTypeVariant4?)value);
 
         /// <summary>
@@ -181,6 +219,11 @@ namespace Dataloop
         {
             ModelOutputTypeVariant4 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static ModelOutputType FromModelOutputTypeVariant4(global::Dataloop.ModelOutputTypeVariant4? value) => new ModelOutputType(value);
 
         /// <summary>
         /// 

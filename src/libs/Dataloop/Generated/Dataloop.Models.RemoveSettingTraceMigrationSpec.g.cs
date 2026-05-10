@@ -42,6 +42,13 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public global::Dataloop.MigrationSpec PickMigrationSpec() => IsMigrationSpec
+            ? MigrationSpec!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'MigrationSpec' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.RemoveSettingTraceMigrationSpecVariant2? RemoveSettingTraceMigrationSpecVariant2 { get; init; }
 #else
@@ -68,6 +75,13 @@ namespace Dataloop
             value = RemoveSettingTraceMigrationSpecVariant2;
             return IsRemoveSettingTraceMigrationSpecVariant2;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dataloop.RemoveSettingTraceMigrationSpecVariant2 PickRemoveSettingTraceMigrationSpecVariant2() => IsRemoveSettingTraceMigrationSpecVariant2
+            ? RemoveSettingTraceMigrationSpecVariant2!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'RemoveSettingTraceMigrationSpecVariant2' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -89,6 +103,11 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public static RemoveSettingTraceMigrationSpec FromMigrationSpec(global::Dataloop.MigrationSpec? value) => new RemoveSettingTraceMigrationSpec(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator RemoveSettingTraceMigrationSpec(global::Dataloop.RemoveSettingTraceMigrationSpecVariant2 value) => new RemoveSettingTraceMigrationSpec((global::Dataloop.RemoveSettingTraceMigrationSpecVariant2?)value);
 
         /// <summary>
@@ -103,6 +122,11 @@ namespace Dataloop
         {
             RemoveSettingTraceMigrationSpecVariant2 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static RemoveSettingTraceMigrationSpec FromRemoveSettingTraceMigrationSpecVariant2(global::Dataloop.RemoveSettingTraceMigrationSpecVariant2? value) => new RemoveSettingTraceMigrationSpec(value);
 
         /// <summary>
         /// 
