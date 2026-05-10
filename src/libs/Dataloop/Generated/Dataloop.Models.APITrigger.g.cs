@@ -139,5 +139,6 @@ namespace Dataloop
         public APITrigger()
         {
         }
+
     }
 }

@@ -152,5 +152,6 @@ namespace Dataloop
         public ServiceLogEntry()
         {
         }
+
     }
 }

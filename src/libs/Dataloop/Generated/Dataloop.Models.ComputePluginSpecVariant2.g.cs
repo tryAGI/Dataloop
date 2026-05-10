@@ -39,5 +39,6 @@ namespace Dataloop
         public ComputePluginSpecVariant2()
         {
         }
+
     }
 }

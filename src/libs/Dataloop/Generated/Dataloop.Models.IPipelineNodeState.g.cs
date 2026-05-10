@@ -112,5 +112,6 @@ namespace Dataloop
         public IPipelineNodeState()
         {
         }
+
     }
 }

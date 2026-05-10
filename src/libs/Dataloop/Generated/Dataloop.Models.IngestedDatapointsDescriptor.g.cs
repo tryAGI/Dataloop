@@ -57,5 +57,6 @@ namespace Dataloop
         public IngestedDatapointsDescriptor()
         {
         }
+
     }
 }

@@ -96,5 +96,6 @@ namespace Dataloop
         public ServiceRuntimeStatus()
         {
         }
+
     }
 }

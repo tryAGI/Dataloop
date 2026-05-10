@@ -60,5 +60,6 @@ namespace Dataloop
         public ModelStatusLog()
         {
         }
+
     }
 }

@@ -458,6 +458,7 @@ namespace Dataloop
         /// <param name="variables"></param>
         /// <param name="resetTimestamp"></param>
         /// <param name="template"></param>
+        /// <param name="versionNumber"></param>
         /// <param name="templateKind"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -483,6 +484,7 @@ namespace Dataloop
             global::System.Collections.Generic.IList<global::Dataloop.PipelineVariable>? variables = default,
             global::System.DateTime? resetTimestamp = default,
             global::Dataloop.APIPipelineTemplateTemplate? template = default,
+            double? versionNumber = default,
             global::Dataloop.TemplateKind? templateKind = default,
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -509,6 +511,7 @@ namespace Dataloop
                 Variables = variables,
                 ResetTimestamp = resetTimestamp,
                 Template = template,
+                VersionNumber = versionNumber,
                 TemplateKind = templateKind,
             };
 

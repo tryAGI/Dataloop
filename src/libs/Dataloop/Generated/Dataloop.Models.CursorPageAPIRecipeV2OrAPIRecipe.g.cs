@@ -70,5 +70,6 @@ namespace Dataloop
         public CursorPageAPIRecipeV2OrAPIRecipe()
         {
         }
+
     }
 }

@@ -95,5 +95,6 @@ namespace Dataloop
         public PartialBillingAccount()
         {
         }
+
     }
 }

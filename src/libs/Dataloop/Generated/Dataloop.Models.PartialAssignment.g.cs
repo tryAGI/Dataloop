@@ -202,5 +202,6 @@ namespace Dataloop
         public PartialAssignment()
         {
         }
+
     }
 }

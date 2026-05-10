@@ -100,5 +100,6 @@ namespace Dataloop
         public TriggerResourceInformationItem()
         {
         }
+
     }
 }

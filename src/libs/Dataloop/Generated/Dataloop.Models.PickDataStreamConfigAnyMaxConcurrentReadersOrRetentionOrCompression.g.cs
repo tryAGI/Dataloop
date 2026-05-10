@@ -65,5 +65,6 @@ namespace Dataloop
         public PickDataStreamConfigAnyMaxConcurrentReadersOrRetentionOrCompression()
         {
         }
+
     }
 }

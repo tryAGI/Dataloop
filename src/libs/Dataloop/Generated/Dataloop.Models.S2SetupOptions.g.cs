@@ -93,5 +93,6 @@ namespace Dataloop
         public S2SetupOptions()
         {
         }
+
     }
 }

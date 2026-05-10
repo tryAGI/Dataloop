@@ -198,5 +198,6 @@ namespace Dataloop
         public ComputeMetadataVariant2()
         {
         }
+
     }
 }

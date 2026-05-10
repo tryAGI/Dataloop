@@ -71,5 +71,6 @@ namespace Dataloop
         public APIReplicaStatusUpdate()
         {
         }
+
     }
 }

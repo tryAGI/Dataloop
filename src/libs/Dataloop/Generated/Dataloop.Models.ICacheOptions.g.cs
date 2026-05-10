@@ -58,5 +58,6 @@ namespace Dataloop
         public ICacheOptions()
         {
         }
+
     }
 }

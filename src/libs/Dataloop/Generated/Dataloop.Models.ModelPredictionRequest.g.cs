@@ -53,5 +53,6 @@ namespace Dataloop
         public ModelPredictionRequest()
         {
         }
+
     }
 }

@@ -140,5 +140,6 @@ namespace Dataloop
         public QueryAuditLogsRequest()
         {
         }
+
     }
 }

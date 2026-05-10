@@ -189,5 +189,6 @@ namespace Dataloop
         public Invoice()
         {
         }
+
     }
 }

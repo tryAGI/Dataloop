@@ -69,5 +69,6 @@ namespace Dataloop
         public AzureWebhookEventSubscriptionBeneficiary()
         {
         }
+
     }
 }
