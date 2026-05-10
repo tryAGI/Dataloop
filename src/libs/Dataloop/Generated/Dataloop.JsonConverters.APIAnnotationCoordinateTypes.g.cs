@@ -334,6 +334,7 @@ namespace Dataloop.JsonConverters
             {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.Point), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.Point> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.Point).Name}");
                     point = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -344,9 +345,13 @@ namespace Dataloop.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (point == null && aPIAnnotationCoordinateTypesVariant2 == null && aPIAnnotationCoordinateTypesVariant3 == null && noteCoordinatesV1 == null && aPIAnnotationCoordinateTypesVariant5 == null && poseCoordinates == null && polygonCoordinatesV1 == null && polylineCoordinatesV3 == null && ellipseCoordinatesV1 == null && cubeCoordinatesV1 == null && boxCoordinates == null && itemDescriptionCoordinates == null && refImageAnnotationsType == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::System.Collections.Generic.IList<global::Dataloop.Point>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::System.Collections.Generic.IList<global::Dataloop.Point>> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::System.Collections.Generic.IList<global::Dataloop.Point>).Name}");
                     aPIAnnotationCoordinateTypesVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -357,9 +362,13 @@ namespace Dataloop.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (point == null && aPIAnnotationCoordinateTypesVariant2 == null && aPIAnnotationCoordinateTypesVariant3 == null && noteCoordinatesV1 == null && aPIAnnotationCoordinateTypesVariant5 == null && poseCoordinates == null && polygonCoordinatesV1 == null && polylineCoordinatesV3 == null && ellipseCoordinatesV1 == null && cubeCoordinatesV1 == null && boxCoordinates == null && itemDescriptionCoordinates == null && refImageAnnotationsType == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>).Name}");
                     aPIAnnotationCoordinateTypesVariant3 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -370,9 +379,13 @@ namespace Dataloop.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (point == null && aPIAnnotationCoordinateTypesVariant2 == null && aPIAnnotationCoordinateTypesVariant3 == null && noteCoordinatesV1 == null && aPIAnnotationCoordinateTypesVariant5 == null && poseCoordinates == null && polygonCoordinatesV1 == null && polylineCoordinatesV3 == null && ellipseCoordinatesV1 == null && cubeCoordinatesV1 == null && boxCoordinates == null && itemDescriptionCoordinates == null && refImageAnnotationsType == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.APINoteAnnotationCoordinatesV1), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.APINoteAnnotationCoordinatesV1> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.APINoteAnnotationCoordinatesV1).Name}");
                     noteCoordinatesV1 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -383,9 +396,13 @@ namespace Dataloop.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (point == null && aPIAnnotationCoordinateTypesVariant2 == null && aPIAnnotationCoordinateTypesVariant3 == null && noteCoordinatesV1 == null && aPIAnnotationCoordinateTypesVariant5 == null && poseCoordinates == null && polygonCoordinatesV1 == null && polylineCoordinatesV3 == null && ellipseCoordinatesV1 == null && cubeCoordinatesV1 == null && boxCoordinates == null && itemDescriptionCoordinates == null && refImageAnnotationsType == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(string), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<string> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(string).Name}");
                     aPIAnnotationCoordinateTypesVariant5 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -396,9 +413,13 @@ namespace Dataloop.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (point == null && aPIAnnotationCoordinateTypesVariant2 == null && aPIAnnotationCoordinateTypesVariant3 == null && noteCoordinatesV1 == null && aPIAnnotationCoordinateTypesVariant5 == null && poseCoordinates == null && polygonCoordinatesV1 == null && polylineCoordinatesV3 == null && ellipseCoordinatesV1 == null && cubeCoordinatesV1 == null && boxCoordinates == null && itemDescriptionCoordinates == null && refImageAnnotationsType == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.PoseCoordinates), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.PoseCoordinates> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.PoseCoordinates).Name}");
                     poseCoordinates = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -409,9 +430,13 @@ namespace Dataloop.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (point == null && aPIAnnotationCoordinateTypesVariant2 == null && aPIAnnotationCoordinateTypesVariant3 == null && noteCoordinatesV1 == null && aPIAnnotationCoordinateTypesVariant5 == null && poseCoordinates == null && polygonCoordinatesV1 == null && polylineCoordinatesV3 == null && ellipseCoordinatesV1 == null && cubeCoordinatesV1 == null && boxCoordinates == null && itemDescriptionCoordinates == null && refImageAnnotationsType == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>).Name}");
                     polygonCoordinatesV1 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -422,9 +447,13 @@ namespace Dataloop.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (point == null && aPIAnnotationCoordinateTypesVariant2 == null && aPIAnnotationCoordinateTypesVariant3 == null && noteCoordinatesV1 == null && aPIAnnotationCoordinateTypesVariant5 == null && poseCoordinates == null && polygonCoordinatesV1 == null && polylineCoordinatesV3 == null && ellipseCoordinatesV1 == null && cubeCoordinatesV1 == null && boxCoordinates == null && itemDescriptionCoordinates == null && refImageAnnotationsType == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>).Name}");
                     polylineCoordinatesV3 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -435,9 +464,13 @@ namespace Dataloop.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (point == null && aPIAnnotationCoordinateTypesVariant2 == null && aPIAnnotationCoordinateTypesVariant3 == null && noteCoordinatesV1 == null && aPIAnnotationCoordinateTypesVariant5 == null && poseCoordinates == null && polygonCoordinatesV1 == null && polylineCoordinatesV3 == null && ellipseCoordinatesV1 == null && cubeCoordinatesV1 == null && boxCoordinates == null && itemDescriptionCoordinates == null && refImageAnnotationsType == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.EllipseCoordinatesV1), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.EllipseCoordinatesV1> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.EllipseCoordinatesV1).Name}");
                     ellipseCoordinatesV1 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -448,9 +481,13 @@ namespace Dataloop.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (point == null && aPIAnnotationCoordinateTypesVariant2 == null && aPIAnnotationCoordinateTypesVariant3 == null && noteCoordinatesV1 == null && aPIAnnotationCoordinateTypesVariant5 == null && poseCoordinates == null && polygonCoordinatesV1 == null && polylineCoordinatesV3 == null && ellipseCoordinatesV1 == null && cubeCoordinatesV1 == null && boxCoordinates == null && itemDescriptionCoordinates == null && refImageAnnotationsType == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.CubeCoordinatesV1), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.CubeCoordinatesV1> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.CubeCoordinatesV1).Name}");
                     cubeCoordinatesV1 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -461,9 +498,13 @@ namespace Dataloop.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (point == null && aPIAnnotationCoordinateTypesVariant2 == null && aPIAnnotationCoordinateTypesVariant3 == null && noteCoordinatesV1 == null && aPIAnnotationCoordinateTypesVariant5 == null && poseCoordinates == null && polygonCoordinatesV1 == null && polylineCoordinatesV3 == null && ellipseCoordinatesV1 == null && cubeCoordinatesV1 == null && boxCoordinates == null && itemDescriptionCoordinates == null && refImageAnnotationsType == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::System.Collections.Generic.IList<object>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::System.Collections.Generic.IList<object>> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::System.Collections.Generic.IList<object>).Name}");
                     boxCoordinates = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -474,9 +515,13 @@ namespace Dataloop.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (point == null && aPIAnnotationCoordinateTypesVariant2 == null && aPIAnnotationCoordinateTypesVariant3 == null && noteCoordinatesV1 == null && aPIAnnotationCoordinateTypesVariant5 == null && poseCoordinates == null && polygonCoordinatesV1 == null && polylineCoordinatesV3 == null && ellipseCoordinatesV1 == null && cubeCoordinatesV1 == null && boxCoordinates == null && itemDescriptionCoordinates == null && refImageAnnotationsType == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.ItemDescriptionCoordinates), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.ItemDescriptionCoordinates> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.ItemDescriptionCoordinates).Name}");
                     itemDescriptionCoordinates = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -487,9 +532,13 @@ namespace Dataloop.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (point == null && aPIAnnotationCoordinateTypesVariant2 == null && aPIAnnotationCoordinateTypesVariant3 == null && noteCoordinatesV1 == null && aPIAnnotationCoordinateTypesVariant5 == null && poseCoordinates == null && polygonCoordinatesV1 == null && polylineCoordinatesV3 == null && ellipseCoordinatesV1 == null && cubeCoordinatesV1 == null && boxCoordinates == null && itemDescriptionCoordinates == null && refImageAnnotationsType == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.IRefImageAnnotationsType), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.IRefImageAnnotationsType> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.IRefImageAnnotationsType).Name}");
                     refImageAnnotationsType = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);

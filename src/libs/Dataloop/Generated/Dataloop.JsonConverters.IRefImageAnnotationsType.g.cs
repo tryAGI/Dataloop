@@ -77,6 +77,7 @@ namespace Dataloop.JsonConverters
             {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(object), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<object> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(object).Name}");
                     iRefImageAnnotationsTypeVariant1 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -87,9 +88,13 @@ namespace Dataloop.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (iRefImageAnnotationsTypeVariant1 == null && baseAnnotationCoordinates == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.IBaseRefAnnotationCoordinates), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.IBaseRefAnnotationCoordinates> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.IBaseRefAnnotationCoordinates).Name}");
                     baseAnnotationCoordinates = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
