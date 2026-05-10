@@ -138,7 +138,10 @@ namespace Dataloop.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (time == null && iDateVariant2 == null && iDateVariant3 == null)
+            {
                 try
                 {
 
@@ -152,7 +155,10 @@ namespace Dataloop.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (time == null && iDateVariant2 == null && iDateVariant3 == null)
+            {
                 try
                 {
 

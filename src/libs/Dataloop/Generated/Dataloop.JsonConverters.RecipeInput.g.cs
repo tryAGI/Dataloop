@@ -103,6 +103,7 @@ namespace Dataloop.JsonConverters
             {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.PickRecipeTitleOrProjectIdsOrOntologyIds), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.PickRecipeTitleOrProjectIdsOrOntologyIds> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.PickRecipeTitleOrProjectIdsOrOntologyIds).Name}");
                     pickTitleOrProjectIdsOntology = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -113,9 +114,13 @@ namespace Dataloop.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (pickTitleOrProjectIdsOntology == null && partial == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.PartialRecipe), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.PartialRecipe> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.PartialRecipe).Name}");
                     partial = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);

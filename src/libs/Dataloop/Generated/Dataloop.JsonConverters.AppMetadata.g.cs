@@ -86,6 +86,7 @@ namespace Dataloop.JsonConverters
             {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.EntityReferenceMetadata), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.EntityReferenceMetadata> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.EntityReferenceMetadata).Name}");
                     entityReference = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -96,9 +97,13 @@ namespace Dataloop.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (entityReference == null && appMetadataVariant2 == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.AppMetadataVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.AppMetadataVariant2> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.AppMetadataVariant2).Name}");
                     appMetadataVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
