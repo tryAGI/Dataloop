@@ -32,12 +32,6 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("versionNumber")]
-        public double? VersionNumber { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("archived")]
         public bool? Archived { get; set; }
 
@@ -53,7 +47,6 @@ namespace Dataloop
         /// <param name="id"></param>
         /// <param name="nodeId"></param>
         /// <param name="executionId"></param>
-        /// <param name="versionNumber"></param>
         /// <param name="archived"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -62,13 +55,11 @@ namespace Dataloop
             string id,
             string nodeId,
             string executionId,
-            double? versionNumber,
             bool? archived)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.NodeId = nodeId ?? throw new global::System.ArgumentNullException(nameof(nodeId));
             this.ExecutionId = executionId ?? throw new global::System.ArgumentNullException(nameof(executionId));
-            this.VersionNumber = versionNumber;
             this.Archived = archived;
         }
 
