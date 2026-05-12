@@ -177,6 +177,12 @@ namespace Dataloop
         public global::Dataloop.IPipelineTemplate? Template { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("versionNumber")]
+        public double? VersionNumber { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -212,6 +218,7 @@ namespace Dataloop
         /// <param name="settings"></param>
         /// <param name="variables"></param>
         /// <param name="template"></param>
+        /// <param name="versionNumber"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -240,7 +247,8 @@ namespace Dataloop
             global::Dataloop.ITextSearch? textSearch,
             global::Dataloop.IPipelineSettings? settings,
             global::System.Collections.Generic.IList<global::Dataloop.PipelineVariable>? variables,
-            global::Dataloop.IPipelineTemplate? template)
+            global::Dataloop.IPipelineTemplate? template,
+            double? versionNumber)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
@@ -267,6 +275,7 @@ namespace Dataloop
             this.Settings = settings;
             this.Variables = variables;
             this.Template = template;
+            this.VersionNumber = versionNumber;
         }
 
         /// <summary>
