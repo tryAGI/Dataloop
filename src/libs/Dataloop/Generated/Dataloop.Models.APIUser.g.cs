@@ -177,6 +177,12 @@ namespace Dataloop
         public double? PreviousLogin { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("orgBot")]
+        public bool? OrgBot { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -211,6 +217,7 @@ namespace Dataloop
         /// <param name="denyMembersManagement"></param>
         /// <param name="defaultProjectRole"></param>
         /// <param name="previousLogin"></param>
+        /// <param name="orgBot"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -240,7 +247,8 @@ namespace Dataloop
             global::Dataloop.APIUserGuest? guest,
             bool? denyMembersManagement,
             global::Dataloop.Role? defaultProjectRole,
-            double? previousLogin)
+            double? previousLogin,
+            bool? orgBot)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.Url = url;
@@ -268,6 +276,7 @@ namespace Dataloop
             this.DenyMembersManagement = denyMembersManagement;
             this.DefaultProjectRole = defaultProjectRole;
             this.PreviousLogin = previousLogin;
+            this.OrgBot = orgBot;
         }
 
         /// <summary>
