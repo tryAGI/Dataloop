@@ -16,12 +16,6 @@ namespace Dataloop
         public required string PipelineId { get; set; }
 
         /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("pipelineVersionNumber")]
-        public double? PipelineVersionNumber { get; set; }
-
-        /// <summary>
         /// A class representation of the BSON ObjectId type.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("_id")]
@@ -146,7 +140,6 @@ namespace Dataloop
         /// <param name="executions"></param>
         /// <param name="nodes"></param>
         /// <param name="maxAttempts"></param>
-        /// <param name="pipelineVersionNumber"></param>
         /// <param name="projectId"></param>
         /// <param name="creator"></param>
         /// <param name="countInProgress"></param>
@@ -168,7 +161,6 @@ namespace Dataloop
             global::Dataloop.Dictionary executions,
             global::System.Collections.Generic.IList<global::Dataloop.IPipelineNodeState> nodes,
             double maxAttempts,
-            double? pipelineVersionNumber,
             string? projectId,
             string? creator,
             double? countInProgress,
@@ -180,7 +172,6 @@ namespace Dataloop
             bool? testMode)
         {
             this.PipelineId = pipelineId ?? throw new global::System.ArgumentNullException(nameof(pipelineId));
-            this.PipelineVersionNumber = pipelineVersionNumber;
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;

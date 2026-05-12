@@ -279,7 +279,6 @@ namespace Dataloop.JsonConverters
             if (__jsonProps.Contains("updatedBy")) __score9++;
             if (__jsonProps.Contains("url")) __score9++;
             if (__jsonProps.Contains("variables")) __score9++;
-            if (__jsonProps.Contains("versionNumber")) __score9++;
             var __bestScore = 0;
             var __bestIndex = -1;
             if (__score0 > __bestScore) { __bestScore = __score0; __bestIndex = 0; }
