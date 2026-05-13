@@ -6,7 +6,7 @@ namespace Dataloop
     /// <summary>
     /// 
     /// </summary>
-    public sealed partial class CursorPageAPIPipelineVersion
+    public sealed partial class CursorPagePipelineVersionListItem
     {
         /// <summary>
         /// 
@@ -20,7 +20,7 @@ namespace Dataloop
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("items")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::Dataloop.APIPipelineVersion> Items { get; set; }
+        public required global::System.Collections.Generic.IList<global::Dataloop.PipelineVersionListItem> Items { get; set; }
 
         /// <summary>
         /// 
@@ -43,7 +43,7 @@ namespace Dataloop
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="CursorPageAPIPipelineVersion" /> class.
+        /// Initializes a new instance of the <see cref="CursorPagePipelineVersionListItem" /> class.
         /// </summary>
         /// <param name="totalItemsCount"></param>
         /// <param name="items"></param>
@@ -52,9 +52,9 @@ namespace Dataloop
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
-        public CursorPageAPIPipelineVersion(
+        public CursorPagePipelineVersionListItem(
             double totalItemsCount,
-            global::System.Collections.Generic.IList<global::Dataloop.APIPipelineVersion> items,
+            global::System.Collections.Generic.IList<global::Dataloop.PipelineVersionListItem> items,
             double totalPagesCount,
             bool hasNextPage)
         {
@@ -65,9 +65,9 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="CursorPageAPIPipelineVersion" /> class.
+        /// Initializes a new instance of the <see cref="CursorPagePipelineVersionListItem" /> class.
         /// </summary>
-        public CursorPageAPIPipelineVersion()
+        public CursorPagePipelineVersionListItem()
         {
         }
 
