@@ -3,11 +3,11 @@
 
 namespace Dataloop
 {
-    public partial class PipelinesClient
+    public partial class OrganizationsClient
     {
 
 
-        private static readonly global::Dataloop.EndPointSecurityRequirement s_ListVersionsSecurityRequirement0 =
+        private static readonly global::Dataloop.EndPointSecurityRequirement s_CreateOrgBotSecurityRequirement0 =
             new global::Dataloop.EndPointSecurityRequirement
             {
                 Authorizations = new global::Dataloop.EndPointAuthorizationRequirement[]
@@ -21,52 +21,49 @@ namespace Dataloop
                     },
                 },
             };
-        private static readonly global::Dataloop.EndPointSecurityRequirement[] s_ListVersionsSecurityRequirements =
+        private static readonly global::Dataloop.EndPointSecurityRequirement[] s_CreateOrgBotSecurityRequirements =
             new global::Dataloop.EndPointSecurityRequirement[]
-            {                s_ListVersionsSecurityRequirement0,
+            {                s_CreateOrgBotSecurityRequirement0,
             };
-        partial void PrepareListVersionsArguments(
+        partial void PrepareCreateOrgBotArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref string pipelineId,
-            ref double? page,
-            ref double? pageSize);
-        partial void PrepareListVersionsRequest(
+            ref string orgId,
+            global::Dataloop.CreateOrgBotRequest request);
+        partial void PrepareCreateOrgBotRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            string pipelineId,
-            double? page,
-            double? pageSize);
-        partial void ProcessListVersionsResponse(
+            string orgId,
+            global::Dataloop.CreateOrgBotRequest request);
+        partial void ProcessCreateOrgBotResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessListVersionsResponseContent(
+        partial void ProcessCreateOrgBotResponseContent(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
         /// <summary>
-        /// 
+        /// Create a cross-project Developer bot for an organization.<br/>
+        /// The bot becomes a Member at the org level and a Developer in every project of the org<br/>
+        /// (existing and future).
         /// </summary>
-        /// <param name="pipelineId"></param>
-        /// <param name="page">
-        /// Default Value: 0
-        /// </param>
-        /// <param name="pageSize"></param>
+        /// <param name="orgId"></param>
+        /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Dataloop.CursorPagePipelineVersionListItem> ListVersionsAsync(
-            string pipelineId,
-            double? page = default,
-            double? pageSize = default,
+        public async global::System.Threading.Tasks.Task<global::Dataloop.APIUser> CreateOrgBotAsync(
+            string orgId,
+
+            global::Dataloop.CreateOrgBotRequest request,
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __response = await ListVersionsAsResponseAsync(
-                pipelineId: pipelineId,
-                page: page,
-                pageSize: pageSize,
+            var __response = await CreateOrgBotAsResponseAsync(
+                orgId: orgId,
+
+                request: request,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -74,36 +71,36 @@ namespace Dataloop
             return __response.Body;
         }
         /// <summary>
-        /// 
+        /// Create a cross-project Developer bot for an organization.<br/>
+        /// The bot becomes a Member at the org level and a Developer in every project of the org<br/>
+        /// (existing and future).
         /// </summary>
-        /// <param name="pipelineId"></param>
-        /// <param name="page">
-        /// Default Value: 0
-        /// </param>
-        /// <param name="pageSize"></param>
+        /// <param name="orgId"></param>
+        /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.CursorPagePipelineVersionListItem>> ListVersionsAsResponseAsync(
-            string pipelineId,
-            double? page = default,
-            double? pageSize = default,
+        public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APIUser>> CreateOrgBotAsResponseAsync(
+            string orgId,
+
+            global::Dataloop.CreateOrgBotRequest request,
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            request = request ?? throw new global::System.ArgumentNullException(nameof(request));
+
             PrepareArguments(
                 client: HttpClient);
-            PrepareListVersionsArguments(
+            PrepareCreateOrgBotArguments(
                 httpClient: HttpClient,
-                pipelineId: ref pipelineId,
-                page: ref page,
-                pageSize: ref pageSize);
+                orgId: ref orgId,
+                request: request);
 
 
             var __authorizations = global::Dataloop.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_ListVersionsSecurityRequirements,
-                operationName: "ListVersionsAsync");
+                securityRequirements: s_CreateOrgBotSecurityRequirements,
+                operationName: "CreateOrgBotAsync");
 
             using var __timeoutCancellationTokenSource = global::Dataloop.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -123,19 +120,15 @@ namespace Dataloop
             {
 
                             var __pathBuilder = new global::Dataloop.PathBuilder(
-                                path: $"/pipelines/{pipelineId}/versions",
+                                path: $"/orgs/{orgId}/bots",
                                 baseUri: HttpClient.BaseAddress);
-                            __pathBuilder
-                                .AddOptionalParameter("page", page?.ToString())
-                                .AddOptionalParameter("pageSize", pageSize?.ToString())
-                                ;
                             var __path = __pathBuilder.ToString();
                 __path = global::Dataloop.AutoSDKRequestOptionsSupport.AppendQueryParameters(
                     path: __path,
                     clientParameters: Options.QueryParameters,
                     requestParameters: requestOptions?.QueryParameters);
                 var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
-                    method: global::System.Net.Http.HttpMethod.Get,
+                    method: global::System.Net.Http.HttpMethod.Post,
                     requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 #if NET6_0_OR_GREATER
                 __httpRequest.Version = global::System.Net.HttpVersion.Version11;
@@ -158,6 +151,12 @@ namespace Dataloop
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
                 } 
             }
+                            var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
+                            var __httpRequestContent = new global::System.Net.Http.StringContent(
+                                content: __httpRequestContentBody,
+                                encoding: global::System.Text.Encoding.UTF8,
+                                mediaType: "application/json");
+                            __httpRequest.Content = __httpRequestContent;
                 global::Dataloop.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,
                     clientHeaders: Options.Headers,
@@ -166,12 +165,11 @@ namespace Dataloop
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareListVersionsRequest(
+                PrepareCreateOrgBotRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    pipelineId: pipelineId!,
-                    page: page,
-                    pageSize: pageSize);
+                    orgId: orgId!,
+                    request: request);
 
                 return __httpRequest;
             }
@@ -188,10 +186,10 @@ namespace Dataloop
                     await global::Dataloop.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::Dataloop.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "ListVersions",
-                                methodName: "ListVersionsAsync",
-                                pathTemplate: "$\"/pipelines/{pipelineId}/versions\"",
-                                httpMethod: "GET",
+                                operationId: "CreateOrgBot",
+                                methodName: "CreateOrgBotAsync",
+                                pathTemplate: "$\"/orgs/{orgId}/bots\"",
+                                httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: null,
@@ -222,10 +220,10 @@ namespace Dataloop
                         await global::Dataloop.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Dataloop.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "ListVersions",
-                                methodName: "ListVersionsAsync",
-                                pathTemplate: "$\"/pipelines/{pipelineId}/versions\"",
-                                httpMethod: "GET",
+                                operationId: "CreateOrgBot",
+                                methodName: "CreateOrgBotAsync",
+                                pathTemplate: "$\"/orgs/{orgId}/bots\"",
+                                httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: null,
@@ -263,10 +261,10 @@ namespace Dataloop
                         await global::Dataloop.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Dataloop.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "ListVersions",
-                                methodName: "ListVersionsAsync",
-                                pathTemplate: "$\"/pipelines/{pipelineId}/versions\"",
-                                httpMethod: "GET",
+                                operationId: "CreateOrgBot",
+                                methodName: "CreateOrgBotAsync",
+                                pathTemplate: "$\"/orgs/{orgId}/bots\"",
+                                httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -303,7 +301,7 @@ namespace Dataloop
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessListVersionsResponse(
+                ProcessCreateOrgBotResponse(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -311,10 +309,10 @@ namespace Dataloop
                     await global::Dataloop.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::Dataloop.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "ListVersions",
-                                methodName: "ListVersionsAsync",
-                                pathTemplate: "$\"/pipelines/{pipelineId}/versions\"",
-                                httpMethod: "GET",
+                                operationId: "CreateOrgBot",
+                                methodName: "CreateOrgBotAsync",
+                                pathTemplate: "$\"/orgs/{orgId}/bots\"",
+                                httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -333,10 +331,10 @@ namespace Dataloop
                     await global::Dataloop.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Dataloop.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "ListVersions",
-                                methodName: "ListVersionsAsync",
-                                pathTemplate: "$\"/pipelines/{pipelineId}/versions\"",
-                                httpMethod: "GET",
+                                operationId: "CreateOrgBot",
+                                methodName: "CreateOrgBotAsync",
+                                pathTemplate: "$\"/orgs/{orgId}/bots\"",
+                                httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -363,7 +361,7 @@ namespace Dataloop
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
-                                ProcessListVersionsResponseContent(
+                                ProcessCreateOrgBotResponseContent(
                                     httpClient: HttpClient,
                                     httpResponseMessage: __response,
                                     content: ref __content);
@@ -372,9 +370,9 @@ namespace Dataloop
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::Dataloop.CursorPagePipelineVersionListItem.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::Dataloop.APIUser.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::Dataloop.AutoSDKHttpResponse<global::Dataloop.CursorPagePipelineVersionListItem>(
+                                    return new global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APIUser>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Dataloop.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -406,9 +404,9 @@ namespace Dataloop
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = await global::Dataloop.CursorPagePipelineVersionListItem.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::Dataloop.APIUser.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::Dataloop.AutoSDKHttpResponse<global::Dataloop.CursorPagePipelineVersionListItem>(
+                                    return new global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APIUser>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Dataloop.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -449,6 +447,33 @@ namespace Dataloop
             {
                 __httpRequest?.Dispose();
             }
+        }
+        /// <summary>
+        /// Create a cross-project Developer bot for an organization.<br/>
+        /// The bot becomes a Member at the org level and a Developer in every project of the org<br/>
+        /// (existing and future).
+        /// </summary>
+        /// <param name="orgId"></param>
+        /// <param name="name"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::System.InvalidOperationException"></exception>
+        public async global::System.Threading.Tasks.Task<global::Dataloop.APIUser> CreateOrgBotAsync(
+            string orgId,
+            string? name = default,
+            global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
+            var __request = new global::Dataloop.CreateOrgBotRequest
+            {
+                Name = name,
+            };
+
+            return await CreateOrgBotAsync(
+                orgId: orgId,
+                request: __request,
+                requestOptions: requestOptions,
+                cancellationToken: cancellationToken).ConfigureAwait(false);
         }
     }
 }

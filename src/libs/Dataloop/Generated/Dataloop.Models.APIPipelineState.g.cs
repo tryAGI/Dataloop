@@ -32,8 +32,8 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("pipelineVersionNumber")]
-        public double? PipelineVersionNumber { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("pipelineVersion")]
+        public double? PipelineVersion { get; set; }
 
         /// <summary>
         /// 
@@ -132,7 +132,7 @@ namespace Dataloop
         /// <param name="nodes"></param>
         /// <param name="status"></param>
         /// <param name="maxAttempts"></param>
-        /// <param name="pipelineVersionNumber"></param>
+        /// <param name="pipelineVersion"></param>
         /// <param name="projectId"></param>
         /// <param name="creator"></param>
         /// <param name="transitionErrors"></param>
@@ -152,7 +152,7 @@ namespace Dataloop
             global::System.Collections.Generic.IList<global::Dataloop.IPipelineNodeState> nodes,
             global::Dataloop.EPipelineStatus status,
             double maxAttempts,
-            double? pipelineVersionNumber,
+            double? pipelineVersion,
             string? projectId,
             string? creator,
             global::System.Collections.Generic.IList<global::Dataloop.INodeTransitionError>? transitionErrors,
@@ -163,7 +163,7 @@ namespace Dataloop
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
             this.PipelineId = pipelineId ?? throw new global::System.ArgumentNullException(nameof(pipelineId));
-            this.PipelineVersionNumber = pipelineVersionNumber;
+            this.PipelineVersion = pipelineVersion;
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
             this.ProjectId = projectId;
