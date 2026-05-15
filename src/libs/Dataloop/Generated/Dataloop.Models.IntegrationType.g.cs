@@ -52,10 +52,6 @@ namespace Dataloop
         /// 
         /// </summary>
         S3,
-        /// <summary>
-        /// 
-        /// </summary>
-        S3Api,
     }
 
     /// <summary>
@@ -81,7 +77,6 @@ namespace Dataloop
                 IntegrationType.Mongo => "mongo",
                 IntegrationType.PrivateRegistry => "private-registry",
                 IntegrationType.S3 => "s3",
-                IntegrationType.S3Api => "s3-api",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -103,7 +98,6 @@ namespace Dataloop
                 "mongo" => IntegrationType.Mongo,
                 "private-registry" => IntegrationType.PrivateRegistry,
                 "s3" => IntegrationType.S3,
-                "s3-api" => IntegrationType.S3Api,
                 _ => null,
             };
         }
