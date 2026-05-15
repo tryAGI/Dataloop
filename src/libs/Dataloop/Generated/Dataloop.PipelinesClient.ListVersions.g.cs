@@ -56,7 +56,7 @@ namespace Dataloop
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Dataloop.CursorPagePipelineVersionListItem> ListVersionsAsync(
+        public async global::System.Threading.Tasks.Task<global::Dataloop.CursorPageAPIPipelineVersion> ListVersionsAsync(
             string pipelineId,
             double? page = default,
             double? pageSize = default,
@@ -84,7 +84,7 @@ namespace Dataloop
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dataloop.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.CursorPagePipelineVersionListItem>> ListVersionsAsResponseAsync(
+        public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.CursorPageAPIPipelineVersion>> ListVersionsAsResponseAsync(
             string pipelineId,
             double? page = default,
             double? pageSize = default,
@@ -372,9 +372,9 @@ namespace Dataloop
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::Dataloop.CursorPagePipelineVersionListItem.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::Dataloop.CursorPageAPIPipelineVersion.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::Dataloop.AutoSDKHttpResponse<global::Dataloop.CursorPagePipelineVersionListItem>(
+                                    return new global::Dataloop.AutoSDKHttpResponse<global::Dataloop.CursorPageAPIPipelineVersion>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Dataloop.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -406,9 +406,9 @@ namespace Dataloop
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = await global::Dataloop.CursorPagePipelineVersionListItem.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::Dataloop.CursorPageAPIPipelineVersion.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::Dataloop.AutoSDKHttpResponse<global::Dataloop.CursorPagePipelineVersionListItem>(
+                                    return new global::Dataloop.AutoSDKHttpResponse<global::Dataloop.CursorPageAPIPipelineVersion>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Dataloop.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
