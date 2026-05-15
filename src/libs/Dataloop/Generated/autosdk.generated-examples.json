@@ -409,17 +409,6 @@
     },
     {
       "Order": 38,
-      "Title": "Create a cross-project Developer bot for an organization.\nThe bot becomes a Member at the org level and a Developer in every project of the org\n(existing and future).",
-      "Slug": "create-org-bot",
-      "Description": "Create a cross-project Developer bot for an organization.\nThe bot becomes a Member at the org level and a Developer in every project of the org\n(existing and future).",
-      "Language": "http",
-      "Code": "### Create a cross-project Developer bot for an organization.\nThe bot becomes a Member at the org level and a Developer in every project of the org\n(existing and future).\n# @name Create org bot\nPOST {{host}}/orgs/{{orgId}}/bots\nAuthorization: Bearer {{token}}\nContent-Type: application/json\nAccept: application/json\n\n{\n  \u0022name\u0022: \u0022string\u0022\n}\n\n## Responses\n# 200\n# Description: Ok\n# Content-Type: application/json",
-      "Format": "http",
-      "OperationId": "Create org bot",
-      "Setup": null
-    },
-    {
-      "Order": 39,
       "Title": "Change an organization\u0027s name",
       "Slug": "patch-org",
       "Description": "Change an organization\u0027s name",
@@ -430,7 +419,7 @@
       "Setup": null
     },
     {
-      "Order": 40,
+      "Order": 39,
       "Title": "Change a member\u0027s role in an organization",
       "Slug": "patch-org-member",
       "Description": "Change a member\u0027s role in an organization",
@@ -441,7 +430,7 @@
       "Setup": null
     },
     {
-      "Order": 41,
+      "Order": 40,
       "Title": "Add a group to a project with a given role",
       "Slug": "add-group",
       "Description": "Add a group to a project with a given role",
@@ -452,7 +441,7 @@
       "Setup": null
     },
     {
-      "Order": 42,
+      "Order": 41,
       "Title": "Add a single member to a project",
       "Slug": "add-member-to-project",
       "Description": "Add a single member to a project",
@@ -463,7 +452,7 @@
       "Setup": null
     },
     {
-      "Order": 43,
+      "Order": 42,
       "Title": "add multiple members to a project with a given role",
       "Slug": "add-members-to-project",
       "Description": "add multiple members to a project with a given role",
@@ -474,7 +463,7 @@
       "Setup": null
     },
     {
-      "Order": 44,
+      "Order": 43,
       "Title": "add or update a project\u0027s organization",
       "Slug": "add-org-to-project",
       "Description": "add or update a project\u0027s organization",
@@ -485,7 +474,7 @@
       "Setup": null
     },
     {
-      "Order": 45,
+      "Order": 44,
       "Title": "Change a member\u0027s role in a project",
       "Slug": "change-member-project-role",
       "Description": "Change a member\u0027s role in a project",
@@ -496,7 +485,7 @@
       "Setup": null
     },
     {
-      "Order": 46,
+      "Order": 45,
       "Title": "Creates a new project",
       "Slug": "create-project",
       "Description": "Creates a new project",
@@ -507,7 +496,7 @@
       "Setup": null
     },
     {
-      "Order": 47,
+      "Order": 46,
       "Title": "Change a project\u0027s name",
       "Slug": "patch-project",
       "Description": "Change a project\u0027s name",
@@ -518,7 +507,7 @@
       "Setup": null
     },
     {
-      "Order": 48,
+      "Order": 47,
       "Title": "Add an account to a project",
       "Slug": "set-project-account",
       "Description": "Add an account to a project",
@@ -529,7 +518,7 @@
       "Setup": null
     },
     {
-      "Order": 49,
+      "Order": 48,
       "Title": "Change a groups role in a project",
       "Slug": "update-group",
       "Description": "Change a groups role in a project",
@@ -540,7 +529,7 @@
       "Setup": null
     },
     {
-      "Order": 50,
+      "Order": 49,
       "Title": "POST /users/me",
       "Slug": "update-my-details",
       "Description": "Generated from OpenAPI examples.",
@@ -551,7 +540,7 @@
       "Setup": null
     },
     {
-      "Order": 51,
+      "Order": 50,
       "Title": "Change or add org to user",
       "Slug": "update-user-org",
       "Description": "Change or add org to user",
