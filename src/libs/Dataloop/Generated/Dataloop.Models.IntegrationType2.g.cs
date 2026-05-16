@@ -44,6 +44,10 @@ namespace Dataloop
         /// 
         /// </summary>
         S3,
+        /// <summary>
+        /// 
+        /// </summary>
+        S3Api,
     }
 
     /// <summary>
@@ -67,6 +71,7 @@ namespace Dataloop
                 IntegrationType2.KeyValue => "key_value",
                 IntegrationType2.PrivateRegistry => "private-registry",
                 IntegrationType2.S3 => "s3",
+                IntegrationType2.S3Api => "s3-api",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -86,6 +91,7 @@ namespace Dataloop
                 "key_value" => IntegrationType2.KeyValue,
                 "private-registry" => IntegrationType2.PrivateRegistry,
                 "s3" => IntegrationType2.S3,
+                "s3-api" => IntegrationType2.S3Api,
                 _ => null,
             };
         }
