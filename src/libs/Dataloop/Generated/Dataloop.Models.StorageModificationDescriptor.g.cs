@@ -89,5 +89,6 @@ namespace Dataloop
         public StorageModificationDescriptor()
         {
         }
+
     }
 }

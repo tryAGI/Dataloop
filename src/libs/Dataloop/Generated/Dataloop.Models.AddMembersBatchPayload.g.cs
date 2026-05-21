@@ -97,5 +97,6 @@ namespace Dataloop
         public AddMembersBatchPayload()
         {
         }
+
     }
 }

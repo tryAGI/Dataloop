@@ -75,6 +75,7 @@ namespace Dataloop.JsonConverters
             {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.MigrationSpec), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.MigrationSpec> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.MigrationSpec).Name}");
                     migrationSpec = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -85,9 +86,13 @@ namespace Dataloop.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (migrationSpec == null && removeSettingTraceMigrationSpecVariant2 == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.RemoveSettingTraceMigrationSpecVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.RemoveSettingTraceMigrationSpecVariant2> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.RemoveSettingTraceMigrationSpecVariant2).Name}");
                     removeSettingTraceMigrationSpecVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);

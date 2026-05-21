@@ -120,5 +120,6 @@ namespace Dataloop
         public RecordCollectionKeysBoolean()
         {
         }
+
     }
 }

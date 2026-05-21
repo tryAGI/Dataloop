@@ -29,6 +29,26 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickIRefImageAnnotationsTypeVariant1(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out object? value)
+        {
+            value = IRefImageAnnotationsTypeVariant1;
+            return IsIRefImageAnnotationsTypeVariant1;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public object PickIRefImageAnnotationsTypeVariant1() => IsIRefImageAnnotationsTypeVariant1
+            ? IRefImageAnnotationsTypeVariant1!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'IRefImageAnnotationsTypeVariant1' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.IBaseRefAnnotationCoordinates? BaseAnnotationCoordinates { get; init; }
 #else
@@ -42,6 +62,26 @@ namespace Dataloop
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(BaseAnnotationCoordinates))]
 #endif
         public bool IsBaseAnnotationCoordinates => BaseAnnotationCoordinates != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickBaseAnnotationCoordinates(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dataloop.IBaseRefAnnotationCoordinates? value)
+        {
+            value = BaseAnnotationCoordinates;
+            return IsBaseAnnotationCoordinates;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dataloop.IBaseRefAnnotationCoordinates PickBaseAnnotationCoordinates() => IsBaseAnnotationCoordinates
+            ? BaseAnnotationCoordinates!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'BaseAnnotationCoordinates' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -59,6 +99,11 @@ namespace Dataloop
         {
             BaseAnnotationCoordinates = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static IRefImageAnnotationsType FromBaseAnnotationCoordinates(global::Dataloop.IBaseRefAnnotationCoordinates? value) => new IRefImageAnnotationsType(value);
 
         /// <summary>
         /// 
@@ -100,8 +145,8 @@ namespace Dataloop
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<object?, TResult>? iRefImageAnnotationsTypeVariant1 = null,
-            global::System.Func<global::Dataloop.IBaseRefAnnotationCoordinates?, TResult>? baseAnnotationCoordinates = null,
+            global::System.Func<object, TResult>? iRefImageAnnotationsTypeVariant1 = null,
+            global::System.Func<global::Dataloop.IBaseRefAnnotationCoordinates, TResult>? baseAnnotationCoordinates = null,
             bool validate = true)
         {
             if (validate)
@@ -125,8 +170,32 @@ namespace Dataloop
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<object?>? iRefImageAnnotationsTypeVariant1 = null,
-            global::System.Action<global::Dataloop.IBaseRefAnnotationCoordinates?>? baseAnnotationCoordinates = null,
+            global::System.Action<object>? iRefImageAnnotationsTypeVariant1 = null,
+
+            global::System.Action<global::Dataloop.IBaseRefAnnotationCoordinates>? baseAnnotationCoordinates = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsIRefImageAnnotationsTypeVariant1)
+            {
+                iRefImageAnnotationsTypeVariant1?.Invoke(IRefImageAnnotationsTypeVariant1!);
+            }
+            else if (IsBaseAnnotationCoordinates)
+            {
+                baseAnnotationCoordinates?.Invoke(BaseAnnotationCoordinates!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<object>? iRefImageAnnotationsTypeVariant1 = null,
+            global::System.Action<global::Dataloop.IBaseRefAnnotationCoordinates>? baseAnnotationCoordinates = null,
             bool validate = true)
         {
             if (validate)

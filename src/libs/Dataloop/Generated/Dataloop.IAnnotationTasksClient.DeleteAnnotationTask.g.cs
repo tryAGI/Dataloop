@@ -39,6 +39,37 @@ namespace Dataloop
         /// Delete a task
         /// </summary>
         /// <param name="id"></param>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Dataloop.ApiException"></exception>
+        /// <remarks>
+        /// # <br/>
+        /// # Delete the Task.<br/>
+        /// # <br/>
+        /// # **Prerequisites**: You must be in the role of an *owner* or *developer* or *annotation manager* who created that task.<br/>
+        /// # <br/>
+        /// # :param dtlpy.entities.task.Task task: the task object<br/>
+        /// # :param str task_name: the name of the task<br/>
+        /// # :param str task_id: the Id of the task<br/>
+        /// # :param bool wait: wait until delete task finish<br/>
+        /// # :return: True is success<br/>
+        /// # :rtype: bool<br/>
+        /// # <br/>
+        /// # <br/>
+        /// # dataset.tasks.delete(task_id='task_id')<br/>
+        /// # 
+        /// </remarks>
+        global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.AnyOf<object, global::Dataloop.APICommand>>> DeleteAnnotationTaskAsResponseAsync(
+            string id,
+
+            global::Dataloop.DeleteTaskPayload request,
+            global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Delete a task
+        /// </summary>
+        /// <param name="id"></param>
         /// <param name="asynced"></param>
         /// <param name="deleteWithPipeline"></param>
         /// <param name="emptyOnly"></param>

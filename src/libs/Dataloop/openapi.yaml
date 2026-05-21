@@ -1386,7 +1386,8 @@
           "text",
           "ref_image",
           "ref_semantic_3d",
-          "gis"
+          "gis",
+          "polygon"
         ],
         "type": "string"
       },
@@ -4844,6 +4845,7 @@
           "mongo",
           "gcs",
           "s3",
+          "s3-api",
           "azureblob",
           "fs",
           "aws-sts",
@@ -5504,6 +5506,50 @@
         },
         "required": [
           "payload"
+        ],
+        "type": "object",
+        "additionalProperties": true
+      },
+      "UpdateDriversIntegrationResult": {
+        "properties": {
+          "totalRequested": {
+            "type": "number",
+            "format": "double"
+          },
+          "updated": {
+            "type": "number",
+            "format": "double"
+          },
+          "notFound": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "errors": {
+            "items": {
+              "properties": {
+                "error": {
+                  "type": "string"
+                },
+                "driverId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "error",
+                "driverId"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          }
+        },
+        "required": [
+          "totalRequested",
+          "updated",
+          "notFound",
+          "errors"
         ],
         "type": "object",
         "additionalProperties": true
@@ -10735,6 +10781,9 @@
           "previousLogin": {
             "type": "number",
             "format": "double"
+          },
+          "orgBot": {
+            "type": "boolean"
           }
         },
         "required": [
@@ -11690,6 +11739,9 @@
           },
           "via": {
             "type": "string"
+          },
+          "orgBot": {
+            "type": "boolean"
           }
         },
         "required": [
@@ -11843,6 +11895,7 @@
       "INTEGRATION_TYPE": {
         "enum": [
           "s3",
+          "s3-api",
           "aws-sts",
           "aws-cross",
           "gcp-cross",
@@ -15037,6 +15090,13 @@
         "type": "object",
         "additionalProperties": false
       },
+      "EComputeConsumptionMethod": {
+        "enum": [
+          "MQ",
+          "API"
+        ],
+        "type": "string"
+      },
       "SystemRefs": {
         "properties": {
           "refs": {
@@ -15084,6 +15144,9 @@
             "allOf": [
               {
                 "properties": {
+                  "computeConsumptionMethod": {
+                    "$ref": "#/components/schemas/EComputeConsumptionMethod"
+                  },
                   "dynamicConcurrency": {
                     "type": "boolean"
                   },
@@ -15593,6 +15656,11 @@
           },
           "executionId": {
             "type": "string"
+          },
+          "versionNumber": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
           },
           "archived": {
             "type": "boolean"
@@ -18645,6 +18713,11 @@
             ],
             "type": "object"
           },
+          "versionNumber": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
           "templateKind": {
             "$ref": "#/components/schemas/TemplateKind"
           },
@@ -19389,6 +19462,11 @@
               "id"
             ],
             "type": "object"
+          },
+          "versionNumber": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
           }
         },
         "required": [
@@ -19779,6 +19857,11 @@
           "pipelineId": {
             "type": "string"
           },
+          "pipelineVersion": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -19860,6 +19943,11 @@
         "properties": {
           "pipelineId": {
             "$ref": "#/components/schemas/ObjectID"
+          },
+          "pipelineVersionNumber": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
           },
           "_id": {
             "$ref": "#/components/schemas/ObjectID"
@@ -20911,6 +20999,11 @@
             ],
             "type": "object"
           },
+          "versionNumber": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
           "mandatory": {
             "type": "boolean"
           },
@@ -21776,7 +21869,7 @@
           },
           "dlTypes": {
             "items": {
-              "type": "string"
+              "$ref": "#/components/schemas/DataloopPodType"
             },
             "type": "array"
           },
@@ -22288,6 +22381,13 @@
           "internalRequestsUrl": {
             "type": "string"
           },
+          "podTemplateImagePullSecretNames": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "description": "When ServiceAccount imagePullSecrets cannot be updated (e.g. RBAC), persisted so deploys merge these onto pod templates."
+          },
           "defaultResources": {
             "properties": {
               "limits": {
@@ -22418,13 +22518,6 @@
         ],
         "type": "object",
         "additionalProperties": false
-      },
-      "EComputeConsumptionMethod": {
-        "enum": [
-          "MQ",
-          "API"
-        ],
-        "type": "string"
       },
       "IComputeSettings": {
         "properties": {
@@ -22815,6 +22908,11 @@
             ],
             "type": "object"
           },
+          "versionNumber": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
           "templateKind": {
             "$ref": "#/components/schemas/TemplateKind"
           }
@@ -23158,6 +23256,233 @@
         "required": [
           "pipelineExecutionCounters",
           "nodeExecutionsCounters"
+        ],
+        "type": "object",
+        "additionalProperties": false
+      },
+      "PipelineType": {
+        "enum": [
+          "regular",
+          "template"
+        ],
+        "type": "string"
+      },
+      "ITextSearch": {
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "projectName": {
+            "type": "string"
+          },
+          "orgName": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "projectName",
+          "orgName"
+        ],
+        "type": "object",
+        "additionalProperties": false
+      },
+      "Partial_IPipeline_": {
+        "properties": {
+          "_id": {
+            "$ref": "#/components/schemas/ObjectId"
+          },
+          "name": {
+            "type": "string"
+          },
+          "creator": {
+            "type": "string"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedBy": {
+            "type": "string"
+          },
+          "type": {
+            "$ref": "#/components/schemas/PipelineType"
+          },
+          "orgId": {
+            "type": "string"
+          },
+          "projectId": {
+            "type": "string"
+          },
+          "terminated": {
+            "type": "boolean"
+          },
+          "startNodes": {
+            "items": {
+              "$ref": "#/components/schemas/IStartNode"
+            },
+            "type": "array"
+          },
+          "spec": {},
+          "compositionId": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "preview": {
+            "type": "string"
+          },
+          "nodes": {
+            "items": {
+              "$ref": "#/components/schemas/PipelineNodeDescriptor"
+            },
+            "type": "array"
+          },
+          "connections": {
+            "items": {
+              "$ref": "#/components/schemas/PipelineConnection"
+            },
+            "type": "array"
+          },
+          "templateKind": {
+            "$ref": "#/components/schemas/TemplateKind"
+          },
+          "maxAttempts": {
+            "type": "number",
+            "format": "double"
+          },
+          "resetTimestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "textSearch": {
+            "$ref": "#/components/schemas/ITextSearch"
+          },
+          "status": {
+            "$ref": "#/components/schemas/CompositionStatus"
+          },
+          "settings": {
+            "$ref": "#/components/schemas/IPipelineSettings"
+          },
+          "variables": {
+            "items": {
+              "$ref": "#/components/schemas/PipelineVariable"
+            },
+            "type": "array"
+          },
+          "template": {
+            "properties": {
+              "state": {
+                "$ref": "#/components/schemas/PipelineFromTemplateState"
+              },
+              "id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "state",
+              "id"
+            ],
+            "type": "object"
+          },
+          "versionNumber": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "type": "object",
+        "description": "Make all properties in T optional"
+      },
+      "PipelineVersionListItem": {
+        "properties": {
+          "version": {
+            "type": "number",
+            "format": "double"
+          },
+          "snapshot": {
+            "$ref": "#/components/schemas/Partial_IPipeline_"
+          }
+        },
+        "required": [
+          "version",
+          "snapshot"
+        ],
+        "type": "object"
+      },
+      "CursorPage_PipelineVersionListItem_": {
+        "properties": {
+          "totalItemsCount": {
+            "type": "number",
+            "format": "double"
+          },
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/PipelineVersionListItem"
+            },
+            "type": "array"
+          },
+          "totalPagesCount": {
+            "type": "number",
+            "format": "double"
+          },
+          "hasNextPage": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "totalItemsCount",
+          "items",
+          "totalPagesCount",
+          "hasNextPage"
+        ],
+        "type": "object",
+        "additionalProperties": false
+      },
+      "APIPipelineVersion": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "pipelineId": {
+            "type": "string"
+          },
+          "versionNumber": {
+            "type": "number",
+            "format": "double"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createdBy": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "snapshot": {
+            "$ref": "#/components/schemas/Dictionary"
+          },
+          "restoredFromVersionNumber": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          }
+        },
+        "required": [
+          "id",
+          "url",
+          "versionNumber",
+          "createdAt",
+          "snapshot"
         ],
         "type": "object",
         "additionalProperties": false
@@ -24138,6 +24463,11 @@
           "executionId": {
             "type": "string"
           },
+          "versionNumber": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
           "archived": {
             "type": "boolean"
           }
@@ -24707,33 +25037,6 @@
         "type": "object",
         "additionalProperties": false
       },
-      "PipelineType": {
-        "enum": [
-          "regular",
-          "template"
-        ],
-        "type": "string"
-      },
-      "ITextSearch": {
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "projectName": {
-            "type": "string"
-          },
-          "orgName": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "name",
-          "projectName",
-          "orgName"
-        ],
-        "type": "object",
-        "additionalProperties": false
-      },
       "IPipeline": {
         "properties": {
           "_id": {
@@ -24836,6 +25139,11 @@
               "id"
             ],
             "type": "object"
+          },
+          "versionNumber": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
           }
         },
         "required": [
@@ -35307,6 +35615,60 @@
         ]
       }
     },
+    "/drivers/migrate-integration": {
+      "post": {
+        "operationId": "Migrate Drivers Integration",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateDriversIntegrationResult"
+                }
+              }
+            }
+          }
+        },
+        "description": "Update integrationId and integrationType for multiple drivers (Migration endpoint - requires sudo)",
+        "tags": [
+          "Storage Drivers"
+        ],
+        "security": [],
+        "parameters": [],
+        "requestBody": {
+          "description": "- driverIds array and new integration values",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "newIntegrationType": {
+                    "type": "string"
+                  },
+                  "newIntegrationId": {
+                    "type": "string"
+                  },
+                  "driverIds": {
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  }
+                },
+                "required": [
+                  "newIntegrationType",
+                  "newIntegrationId",
+                  "driverIds"
+                ],
+                "type": "object",
+                "description": "- driverIds array and new integration values"
+              }
+            }
+          }
+        }
+      }
+    },
     "/drivers/test": {
       "post": {
         "operationId": "Test Storage Driver",
@@ -36371,19 +36733,16 @@
                       "items": [
                         {
                           "id": "64e688839d86c82809beca38",
-                          "creator": "assaf@dataloop.ai",
                           "createdAt": "2021-08-25T22:00:00.000Z",
                           "type": "test type",
                           "entityType": "image",
                           "updatedAt": "2021-08-25T22:00:00.000Z",
-                          "updatedBy": "assaf@dataloop.ai",
                           "name": "feature set name",
                           "size": 1,
                           "url": "https://dev-gate.dataloop.ai/api/v1/features/vectors/64e688839d86c82809beca38",
                           "authz": {
                             "context": {
                               "createdAt": "2021-08-25T22:00:00.000Z",
-                              "creator": "assaf@dataloop.ai",
                               "org": "org-1",
                               "updatedAt": "2021-08-25T22:00:00.000Z"
                             }
@@ -36728,7 +37087,6 @@
                         {
                           "id": "64e688839d86c82809beca38",
                           "entityId": "entityTest",
-                          "creator": "assaf@dataloop.ai",
                           "createdAt": "2021-08-25T22:00:00.000Z",
                           "value": [
                             90
@@ -36739,7 +37097,6 @@
                           "authz": {
                             "context": {
                               "createdAt": "2021-08-25T22:00:00.000Z",
-                              "creator": "assaf@dataloop.ai",
                               "org": "org-1",
                               "updatedAt": "2021-08-25T22:00:00.000Z"
                             }
@@ -41365,6 +41722,93 @@
         "parameters": []
       }
     },
+    "/orgs/{orgId}/bots": {
+      "post": {
+        "operationId": "Create org bot",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIUser"
+                },
+                "examples": {
+                  "Example 1": {
+                    "value": {
+                      "name": "org-botman"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "description": "Create a cross-project Developer bot for an organization.\nThe bot becomes a Member at the org level and a Developer in every project of the org\n(existing and future).",
+        "tags": [
+          "Organizations"
+        ],
+        "security": [],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "orgId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  }
+                },
+                "type": "object"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/orgs/{orgId}/bots/{botId}": {
+      "delete": {
+        "operationId": "Delete org bot",
+        "responses": {
+          "204": {
+            "description": "No content"
+          }
+        },
+        "description": "Delete a cross-project Developer bot from an organization.\nRemoves the bot from the org, all org projects, vault and identity providers.",
+        "tags": [
+          "Organizations"
+        ],
+        "security": [],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "orgId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "botId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
     "/orgs/{orgId}/groups": {
       "get": {
         "operationId": "Get org groups",
@@ -42532,6 +42976,10 @@
                 "schema": {
                   "items": {
                     "properties": {
+                      "versionNumber": {
+                        "type": "number",
+                        "format": "double"
+                      },
                       "template": {
                         "properties": {
                           "state": {
@@ -43489,6 +43937,136 @@
             }
           }
         }
+      }
+    },
+    "/pipelines/{pipelineId}/versions": {
+      "get": {
+        "operationId": "_listVersions",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CursorPage_PipelineVersionListItem_"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "pipelines"
+        ],
+        "security": [],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "pipelineId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "default": 0,
+              "format": "double",
+              "type": "number"
+            }
+          },
+          {
+            "in": "query",
+            "name": "pageSize",
+            "required": false,
+            "schema": {
+              "format": "double",
+              "type": "number"
+            }
+          }
+        ]
+      }
+    },
+    "/pipelines/{pipelineId}/versions/{versionNumber}": {
+      "get": {
+        "operationId": "_getVersion",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIPipelineVersion"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "pipelines"
+        ],
+        "security": [],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "pipelineId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "versionNumber",
+            "required": true,
+            "schema": {
+              "format": "double",
+              "type": "number"
+            }
+          }
+        ]
+      }
+    },
+    "/pipelines/{pipelineId}/versions/{versionNumber}/restore": {
+      "post": {
+        "operationId": "_restoreVersion",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIPipeline"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "pipelines"
+        ],
+        "security": [],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "pipelineId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "versionNumber",
+            "required": true,
+            "schema": {
+              "format": "double",
+              "type": "number"
+            }
+          }
+        ]
       }
     },
     "/pipelines/{piplineId}/logs": {

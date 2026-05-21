@@ -38,6 +38,36 @@ namespace Dataloop
         /// Detailed information about DQL can be found at https://dataloop.ai/docs/dql
         /// </summary>
         /// <param name="id"></param>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Dataloop.ApiException"></exception>
+        /// <remarks>
+        /// # <br/>
+        /// # List items in a dataset.<br/>
+        /// # <br/>
+        /// # **Prerequisites**: You must be in the role of an *owner* or *developer*.<br/>
+        /// # <br/>
+        /// # :param dtlpy.entities.filters.Filters filters: Filters entity or a dictionary containing filters parameters<br/>
+        /// # :param int page_offset: start page<br/>
+        /// # :param int page_size: page size<br/>
+        /// # :return: Pages object<br/>
+        /// # :rtype: dtlpy.entities.paged_entities.PagedEntities<br/>
+        /// # <br/>
+        /// # <br/>
+        /// # dataset.items.list(page_offset=0, page_size=100)<br/>
+        /// # 
+        /// </remarks>
+        global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.CursorPageAPIAnnotationOrAPIDatasetOrAPIDatasetFileItemOrAPIDatasetDirectoryItem>> QueryDatasetAsResponseAsync(
+            string id,
+
+            global::Dataloop.DQLResourceQuery request,
+            global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Detailed information about DQL can be found at https://dataloop.ai/docs/dql
+        /// </summary>
+        /// <param name="id"></param>
         /// <param name="filter"></param>
         /// <param name="limit"></param>
         /// <param name="join"></param>

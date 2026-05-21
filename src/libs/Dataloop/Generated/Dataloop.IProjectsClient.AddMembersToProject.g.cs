@@ -22,6 +22,20 @@ namespace Dataloop
         /// add multiple members to a project with a given role
         /// </summary>
         /// <param name="projectId"></param>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Dataloop.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.AnyOf<global::System.Collections.Generic.IList<global::Dataloop.APIMembership>, object>>> AddMembersToProjectAsResponseAsync(
+            string projectId,
+
+            global::Dataloop.AddMembersBatchPayload request,
+            global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// add multiple members to a project with a given role
+        /// </summary>
+        /// <param name="projectId"></param>
         /// <param name="interest"></param>
         /// <param name="via"></param>
         /// <param name="denyMembersManagement"></param>

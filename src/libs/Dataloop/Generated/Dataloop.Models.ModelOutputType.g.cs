@@ -29,6 +29,26 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickAnnotation1(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dataloop.AnnotationType? value)
+        {
+            value = Annotation1;
+            return IsAnnotation1;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dataloop.AnnotationType PickAnnotation1() => IsAnnotation1
+            ? Annotation1!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Annotation1' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.ModelOutputTypeVariant2? ModelOutputTypeVariant2 { get; init; }
 #else
@@ -42,6 +62,26 @@ namespace Dataloop
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ModelOutputTypeVariant2))]
 #endif
         public bool IsModelOutputTypeVariant2 => ModelOutputTypeVariant2 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickModelOutputTypeVariant2(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dataloop.ModelOutputTypeVariant2? value)
+        {
+            value = ModelOutputTypeVariant2;
+            return IsModelOutputTypeVariant2;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dataloop.ModelOutputTypeVariant2 PickModelOutputTypeVariant2() => IsModelOutputTypeVariant2
+            ? ModelOutputTypeVariant2!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ModelOutputTypeVariant2' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -63,6 +103,26 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickAnnotation2(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dataloop.AnnotationType? value)
+        {
+            value = Annotation2;
+            return IsAnnotation2;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dataloop.AnnotationType PickAnnotation2() => IsAnnotation2
+            ? Annotation2!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Annotation2' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.ModelOutputTypeVariant4? ModelOutputTypeVariant4 { get; init; }
 #else
@@ -76,6 +136,26 @@ namespace Dataloop
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ModelOutputTypeVariant4))]
 #endif
         public bool IsModelOutputTypeVariant4 => ModelOutputTypeVariant4 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickModelOutputTypeVariant4(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dataloop.ModelOutputTypeVariant4? value)
+        {
+            value = ModelOutputTypeVariant4;
+            return IsModelOutputTypeVariant4;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dataloop.ModelOutputTypeVariant4 PickModelOutputTypeVariant4() => IsModelOutputTypeVariant4
+            ? ModelOutputTypeVariant4!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ModelOutputTypeVariant4' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -93,6 +173,11 @@ namespace Dataloop
         {
             Annotation1 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static ModelOutputType FromAnnotation1(global::Dataloop.AnnotationType? value) => new ModelOutputType(value);
 
         /// <summary>
         /// 
@@ -115,6 +200,11 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public static ModelOutputType FromModelOutputTypeVariant2(global::Dataloop.ModelOutputTypeVariant2? value) => new ModelOutputType(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator ModelOutputType(global::Dataloop.ModelOutputTypeVariant4 value) => new ModelOutputType((global::Dataloop.ModelOutputTypeVariant4?)value);
 
         /// <summary>
@@ -129,6 +219,11 @@ namespace Dataloop
         {
             ModelOutputTypeVariant4 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static ModelOutputType FromModelOutputTypeVariant4(global::Dataloop.ModelOutputTypeVariant4? value) => new ModelOutputType(value);
 
         /// <summary>
         /// 
@@ -213,6 +308,42 @@ namespace Dataloop
         /// 
         /// </summary>
         public void Match(
+            global::System.Action<global::Dataloop.AnnotationType?>? annotation1 = null,
+
+            global::System.Action<global::Dataloop.ModelOutputTypeVariant2?>? modelOutputTypeVariant2 = null,
+
+            global::System.Action<global::Dataloop.AnnotationType?>? annotation2 = null,
+
+            global::System.Action<global::Dataloop.ModelOutputTypeVariant4?>? modelOutputTypeVariant4 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsAnnotation1)
+            {
+                annotation1?.Invoke(Annotation1!);
+            }
+            else if (IsModelOutputTypeVariant2)
+            {
+                modelOutputTypeVariant2?.Invoke(ModelOutputTypeVariant2!);
+            }
+            else if (IsAnnotation2)
+            {
+                annotation2?.Invoke(Annotation2!);
+            }
+            else if (IsModelOutputTypeVariant4)
+            {
+                modelOutputTypeVariant4?.Invoke(ModelOutputTypeVariant4!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
             global::System.Action<global::Dataloop.AnnotationType?>? annotation1 = null,
             global::System.Action<global::Dataloop.ModelOutputTypeVariant2?>? modelOutputTypeVariant2 = null,
             global::System.Action<global::Dataloop.AnnotationType?>? annotation2 = null,

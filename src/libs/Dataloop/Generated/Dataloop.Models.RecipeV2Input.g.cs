@@ -27,6 +27,26 @@ namespace Dataloop
         public bool IsPickTitleOrProjectIdsOntology => PickTitleOrProjectIdsOntology != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickPickTitleOrProjectIdsOntology(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dataloop.PickRecipeV2TitleOrProjectIdsOrOntology? value)
+        {
+            value = PickTitleOrProjectIdsOntology;
+            return IsPickTitleOrProjectIdsOntology;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dataloop.PickRecipeV2TitleOrProjectIdsOrOntology PickPickTitleOrProjectIdsOntology() => IsPickTitleOrProjectIdsOntology
+            ? PickTitleOrProjectIdsOntology!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'PickTitleOrProjectIdsOntology' but the value was {ToString()}.");
+
+        /// <summary>
         /// Make all properties in T optional
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -42,6 +62,26 @@ namespace Dataloop
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Partial))]
 #endif
         public bool IsPartial => Partial != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickPartial(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dataloop.PartialRecipeV2? value)
+        {
+            value = Partial;
+            return IsPartial;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dataloop.PartialRecipeV2 PickPartial() => IsPartial
+            ? Partial!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Partial' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -63,6 +103,11 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public static RecipeV2Input FromPickTitleOrProjectIdsOntology(global::Dataloop.PickRecipeV2TitleOrProjectIdsOrOntology? value) => new RecipeV2Input(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator RecipeV2Input(global::Dataloop.PartialRecipeV2 value) => new RecipeV2Input((global::Dataloop.PartialRecipeV2?)value);
 
         /// <summary>
@@ -77,6 +122,11 @@ namespace Dataloop
         {
             Partial = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static RecipeV2Input FromPartial(global::Dataloop.PartialRecipeV2? value) => new RecipeV2Input(value);
 
         /// <summary>
         /// 
@@ -118,8 +168,8 @@ namespace Dataloop
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Dataloop.PickRecipeV2TitleOrProjectIdsOrOntology?, TResult>? pickTitleOrProjectIdsOntology = null,
-            global::System.Func<global::Dataloop.PartialRecipeV2?, TResult>? partial = null,
+            global::System.Func<global::Dataloop.PickRecipeV2TitleOrProjectIdsOrOntology, TResult>? pickTitleOrProjectIdsOntology = null,
+            global::System.Func<global::Dataloop.PartialRecipeV2, TResult>? partial = null,
             bool validate = true)
         {
             if (validate)
@@ -143,8 +193,32 @@ namespace Dataloop
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Dataloop.PickRecipeV2TitleOrProjectIdsOrOntology?>? pickTitleOrProjectIdsOntology = null,
-            global::System.Action<global::Dataloop.PartialRecipeV2?>? partial = null,
+            global::System.Action<global::Dataloop.PickRecipeV2TitleOrProjectIdsOrOntology>? pickTitleOrProjectIdsOntology = null,
+
+            global::System.Action<global::Dataloop.PartialRecipeV2>? partial = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsPickTitleOrProjectIdsOntology)
+            {
+                pickTitleOrProjectIdsOntology?.Invoke(PickTitleOrProjectIdsOntology!);
+            }
+            else if (IsPartial)
+            {
+                partial?.Invoke(Partial!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Dataloop.PickRecipeV2TitleOrProjectIdsOrOntology>? pickTitleOrProjectIdsOntology = null,
+            global::System.Action<global::Dataloop.PartialRecipeV2>? partial = null,
             bool validate = true)
         {
             if (validate)

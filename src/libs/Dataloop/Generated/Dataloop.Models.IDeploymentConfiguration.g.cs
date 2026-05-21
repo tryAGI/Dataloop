@@ -45,6 +45,12 @@ namespace Dataloop
         public string? InternalRequestsUrl { get; set; }
 
         /// <summary>
+        /// When ServiceAccount imagePullSecrets cannot be updated (e.g. RBAC), persisted so deploys merge these onto pod templates.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("podTemplateImagePullSecretNames")]
+        public global::System.Collections.Generic.IList<string>? PodTemplateImagePullSecretNames { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("defaultResources")]
@@ -65,6 +71,9 @@ namespace Dataloop
         /// <param name="registry"></param>
         /// <param name="serviceAccountName"></param>
         /// <param name="internalRequestsUrl"></param>
+        /// <param name="podTemplateImagePullSecretNames">
+        /// When ServiceAccount imagePullSecrets cannot be updated (e.g. RBAC), persisted so deploys merge these onto pod templates.
+        /// </param>
         /// <param name="defaultResources"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -76,6 +85,7 @@ namespace Dataloop
             global::Dataloop.IComputeRegistry? registry,
             string? serviceAccountName,
             string? internalRequestsUrl,
+            global::System.Collections.Generic.IList<string>? podTemplateImagePullSecretNames,
             global::Dataloop.IDeploymentConfigurationDefaultResources? defaultResources)
         {
             this.Volumes = volumes;
@@ -84,6 +94,7 @@ namespace Dataloop
             this.Registry = registry;
             this.ServiceAccountName = serviceAccountName;
             this.InternalRequestsUrl = internalRequestsUrl;
+            this.PodTemplateImagePullSecretNames = podTemplateImagePullSecretNames;
             this.DefaultResources = defaultResources;
         }
 
@@ -93,5 +104,6 @@ namespace Dataloop
         public IDeploymentConfiguration()
         {
         }
+
     }
 }

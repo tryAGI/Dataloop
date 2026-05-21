@@ -28,5 +28,29 @@ namespace Dataloop
             string id,
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Get a specific assignment
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Dataloop.ApiException"></exception>
+        /// <remarks>
+        /// # <br/>
+        /// # Get Assignment object to use it in your code.<br/>
+        /// # <br/>
+        /// # :param str assignment_name: optional - search by name<br/>
+        /// # :param str assignment_id: optional - search by id<br/>
+        /// # :return: Assignment object<br/>
+        /// # :rtype: dtlpy.entities.assignment.Assignment<br/>
+        /// # <br/>
+        /// # <br/>
+        /// # assignment = task.assignments.get(assignment_id='assignment_id')<br/>
+        /// # 
+        /// </remarks>
+        global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APIAssignment>> GetAssignmentAsResponseAsync(
+            string id,
+            global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

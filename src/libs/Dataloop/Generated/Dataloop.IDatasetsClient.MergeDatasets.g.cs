@@ -43,6 +43,42 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Dataloop.ApiException"></exception>
+        /// <remarks>
+        /// # <br/>
+        /// # Merge a dataset. See our `SDK docs &lt;https://developers.dataloop.ai/tutorials/data_management/data_versioning/chapter/&gt;`_ for more information.<br/>
+        /// # <br/>
+        /// # **Prerequisites**: You must be an *owner* or *developer* to use this method.<br/>
+        /// # <br/>
+        /// # :param str merge_name: new dataset name<br/>
+        /// # :param list dataset_ids: list id's of the datatsets you wish to merge<br/>
+        /// # :param str project_ids: the project id that include the datasets<br/>
+        /// # :param bool with_items_annotations: true to merge with items annotations<br/>
+        /// # :param bool with_metadata: true to merge with metadata<br/>
+        /// # :param bool with_task_annotations_status: true to merge with task annotations' status<br/>
+        /// # :param bool wait: wait for the command to finish<br/>
+        /// # :return: True if success<br/>
+        /// # :rtype: bool<br/>
+        /// # <br/>
+        /// # <br/>
+        /// # success = project.datasets.merge(dataset_ids=['dataset_id1','dataset_id2'],<br/>
+        /// # merge_name='dataset_merge_name',<br/>
+        /// # with_metadata=True,<br/>
+        /// # with_items_annotations=False,<br/>
+        /// # with_task_annotations_status=False)<br/>
+        /// # 
+        /// </remarks>
+        global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APICommand>> MergeDatasetsAsResponseAsync(
+
+            global::Dataloop.MergeDatasetsRequest request,
+            global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// 
+        /// </summary>
         /// <param name="name">
         /// Dataset name
         /// </param>

@@ -52,5 +52,6 @@ namespace Dataloop
         public ResolverPayload()
         {
         }
+
     }
 }

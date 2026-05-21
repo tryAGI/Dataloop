@@ -78,5 +78,6 @@ namespace Dataloop
         public ITriggerSpec()
         {
         }
+
     }
 }

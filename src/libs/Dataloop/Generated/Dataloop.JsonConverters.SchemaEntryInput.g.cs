@@ -76,6 +76,7 @@ namespace Dataloop.JsonConverters
             {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.SchemaEntryInputVariant1), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.SchemaEntryInputVariant1> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.SchemaEntryInputVariant1).Name}");
                     schemaEntryInputVariant1 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -86,9 +87,13 @@ namespace Dataloop.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (schemaEntryInputVariant1 == null && schemaEntryInputVariant2 == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.AnyOf<global::Dataloop.SchemaEntryInputVariant2Variant1, global::Dataloop.SchemaEntryInputVariant2Variant2>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.AnyOf<global::Dataloop.SchemaEntryInputVariant2Variant1, global::Dataloop.SchemaEntryInputVariant2Variant2>> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.AnyOf<global::Dataloop.SchemaEntryInputVariant2Variant1, global::Dataloop.SchemaEntryInputVariant2Variant2>).Name}");
                     schemaEntryInputVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);

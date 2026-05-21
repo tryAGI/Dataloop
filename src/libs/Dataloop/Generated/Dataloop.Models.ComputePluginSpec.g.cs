@@ -31,6 +31,26 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickResourceManifests(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::System.Collections.Generic.Dictionary<string, global::Dataloop.ComputePluginResourceManifests2>? value)
+        {
+            value = ResourceManifests;
+            return IsResourceManifests;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::System.Collections.Generic.Dictionary<string, global::Dataloop.ComputePluginResourceManifests2> PickResourceManifests() => IsResourceManifests
+            ? ResourceManifests!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ResourceManifests' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.ComputePluginSpecVariant2? ComputePluginSpecVariant2 { get; init; }
 #else
@@ -44,6 +64,26 @@ namespace Dataloop
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ComputePluginSpecVariant2))]
 #endif
         public bool IsComputePluginSpecVariant2 => ComputePluginSpecVariant2 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickComputePluginSpecVariant2(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dataloop.ComputePluginSpecVariant2? value)
+        {
+            value = ComputePluginSpecVariant2;
+            return IsComputePluginSpecVariant2;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dataloop.ComputePluginSpecVariant2 PickComputePluginSpecVariant2() => IsComputePluginSpecVariant2
+            ? ComputePluginSpecVariant2!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ComputePluginSpecVariant2' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -65,6 +105,11 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public static ComputePluginSpec FromResourceManifests(global::System.Collections.Generic.Dictionary<string, global::Dataloop.ComputePluginResourceManifests2>? value) => new ComputePluginSpec(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator ComputePluginSpec(global::Dataloop.ComputePluginSpecVariant2 value) => new ComputePluginSpec((global::Dataloop.ComputePluginSpecVariant2?)value);
 
         /// <summary>
@@ -79,6 +124,11 @@ namespace Dataloop
         {
             ComputePluginSpecVariant2 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static ComputePluginSpec FromComputePluginSpecVariant2(global::Dataloop.ComputePluginSpecVariant2? value) => new ComputePluginSpec(value);
 
         /// <summary>
         /// 
@@ -120,8 +170,8 @@ namespace Dataloop
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::System.Collections.Generic.Dictionary<string, global::Dataloop.ComputePluginResourceManifests2>?, TResult>? resourceManifests = null,
-            global::System.Func<global::Dataloop.ComputePluginSpecVariant2?, TResult>? computePluginSpecVariant2 = null,
+            global::System.Func<global::System.Collections.Generic.Dictionary<string, global::Dataloop.ComputePluginResourceManifests2>, TResult>? resourceManifests = null,
+            global::System.Func<global::Dataloop.ComputePluginSpecVariant2, TResult>? computePluginSpecVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -145,8 +195,32 @@ namespace Dataloop
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::System.Collections.Generic.Dictionary<string, global::Dataloop.ComputePluginResourceManifests2>?>? resourceManifests = null,
-            global::System.Action<global::Dataloop.ComputePluginSpecVariant2?>? computePluginSpecVariant2 = null,
+            global::System.Action<global::System.Collections.Generic.Dictionary<string, global::Dataloop.ComputePluginResourceManifests2>>? resourceManifests = null,
+
+            global::System.Action<global::Dataloop.ComputePluginSpecVariant2>? computePluginSpecVariant2 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsResourceManifests)
+            {
+                resourceManifests?.Invoke(ResourceManifests!);
+            }
+            else if (IsComputePluginSpecVariant2)
+            {
+                computePluginSpecVariant2?.Invoke(ComputePluginSpecVariant2!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::System.Collections.Generic.Dictionary<string, global::Dataloop.ComputePluginResourceManifests2>>? resourceManifests = null,
+            global::System.Action<global::Dataloop.ComputePluginSpecVariant2>? computePluginSpecVariant2 = null,
             bool validate = true)
         {
             if (validate)

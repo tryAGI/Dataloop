@@ -84,6 +84,57 @@ namespace Dataloop
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            var __response = await CloneItemAsResponseAsync(
+                id: id,
+
+                request: request,
+                requestOptions: requestOptions,
+                cancellationToken: cancellationToken
+            ).ConfigureAwait(false);
+
+            return __response.Body;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Dataloop.ApiException"></exception>
+        /// <remarks>
+        /// # <br/>
+        /// # Clone item. Read more about cloning datatsets and items in our `documentation &lt;https://dataloop.ai/docs/clone-merge-dataset#cloned-dataset&gt;`_ and `SDK documentation &lt;https://developers.dataloop.ai/tutorials/data_management/data_versioning/chapter/&gt;`_.<br/>
+        /// # <br/>
+        /// # **Prerequisites**: You must be in the role of an *owner* or *developer*.<br/>
+        /// # <br/>
+        /// # :param str item_id: item to clone<br/>
+        /// # :param str dst_dataset_id: destination dataset id<br/>
+        /// # :param str remote_filepath: complete filepath<br/>
+        /// # :param dict metadata: new metadata to add<br/>
+        /// # :param bool with_annotations: clone annotations<br/>
+        /// # :param bool with_metadata: clone metadata<br/>
+        /// # :param bool with_task_annotations_status: clone task annotations status<br/>
+        /// # :param bool allow_many: `bool` if True, using multiple clones in single dataset is allowed, (default=False)<br/>
+        /// # :param bool wait: wait for the command to finish<br/>
+        /// # :return: Item object<br/>
+        /// # :rtype: dtlpy.entities.item.Item<br/>
+        /// # <br/>
+        /// # <br/>
+        /// # dataset.items.clone(item_id='item_id',<br/>
+        /// # dst_dataset_id='dist_dataset_id',<br/>
+        /// # with_metadata=True,<br/>
+        /// # with_task_annotations_status=False,<br/>
+        /// # with_annotations=False)<br/>
+        /// # 
+        /// </remarks>
+        public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APICommand>> CloneItemAsResponseAsync(
+            string id,
+
+            global::Dataloop.ItemCloneRequest request,
+            global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
 
             PrepareArguments(
@@ -115,6 +166,7 @@ namespace Dataloop
 
             global::System.Net.Http.HttpRequestMessage __CreateHttpRequest()
             {
+
                             var __pathBuilder = new global::Dataloop.PathBuilder(
                                 path: $"/items/{id}/clone",
                                 baseUri: HttpClient.BaseAddress);
@@ -195,6 +247,8 @@ namespace Dataloop
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                     try
                     {
@@ -205,6 +259,11 @@ namespace Dataloop
                     }
                     catch (global::System.Net.Http.HttpRequestException __exception)
                     {
+                        var __retryDelay = global::Dataloop.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: null,
+                            attempt: __attempt);
                         var __willRetry = __attempt < __maxAttempts && !__effectiveCancellationToken.IsCancellationRequested;
                         await global::Dataloop.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
@@ -222,6 +281,8 @@ namespace Dataloop
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: __willRetry,
+                                retryDelay: __willRetry ? __retryDelay : (global::System.TimeSpan?)null,
+                                retryReason: "exception",
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         if (!__willRetry)
                         {
@@ -231,8 +292,7 @@ namespace Dataloop
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Dataloop.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -241,6 +301,11 @@ namespace Dataloop
                         __attempt < __maxAttempts &&
                         global::Dataloop.AutoSDKRequestOptionsSupport.ShouldRetryStatusCode(__response.StatusCode))
                     {
+                        var __retryDelay = global::Dataloop.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: __response,
+                            attempt: __attempt);
                         await global::Dataloop.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Dataloop.AutoSDKRequestOptionsSupport.CreateHookContext(
@@ -257,14 +322,15 @@ namespace Dataloop
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: true,
+                                retryDelay: __retryDelay,
+                                retryReason: "status:" + ((int)__response.StatusCode).ToString(global::System.Globalization.CultureInfo.InvariantCulture),
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         __response.Dispose();
                         __response = null;
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Dataloop.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -304,6 +370,8 @@ namespace Dataloop
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                 else
@@ -324,6 +392,8 @@ namespace Dataloop
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
 
@@ -348,9 +418,13 @@ namespace Dataloop
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    return
-                                        global::Dataloop.APICommand.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::Dataloop.APICommand.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+                                    return new global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APICommand>(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Dataloop.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -378,9 +452,13 @@ namespace Dataloop
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    return
-                                        await global::Dataloop.APICommand.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::Dataloop.APICommand.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
+                                    return new global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APICommand>(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Dataloop.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {

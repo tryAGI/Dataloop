@@ -146,5 +146,6 @@ namespace Dataloop
         public PipelineNodeDescriptor()
         {
         }
+
     }
 }

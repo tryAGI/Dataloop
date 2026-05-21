@@ -135,5 +135,6 @@ namespace Dataloop
         public DeleteQuery()
         {
         }
+
     }
 }

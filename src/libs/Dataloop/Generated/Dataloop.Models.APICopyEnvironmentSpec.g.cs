@@ -117,5 +117,6 @@ namespace Dataloop
         public APICopyEnvironmentSpec()
         {
         }
+
     }
 }

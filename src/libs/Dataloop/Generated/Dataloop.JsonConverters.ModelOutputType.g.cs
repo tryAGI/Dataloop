@@ -168,7 +168,10 @@ namespace Dataloop.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (annotation1 == null && modelOutputTypeVariant2 == null && annotation2 == null && modelOutputTypeVariant4 == null)
+            {
                 try
                 {
 
@@ -182,7 +185,10 @@ namespace Dataloop.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (annotation1 == null && modelOutputTypeVariant2 == null && annotation2 == null && modelOutputTypeVariant4 == null)
+            {
                 try
                 {
 
@@ -196,7 +202,10 @@ namespace Dataloop.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (annotation1 == null && modelOutputTypeVariant2 == null && annotation2 == null && modelOutputTypeVariant4 == null)
+            {
                 try
                 {
 

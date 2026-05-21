@@ -104,6 +104,7 @@ namespace Dataloop.JsonConverters
             {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.Dictionary), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.Dictionary> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.Dictionary).Name}");
                     dictionary = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -114,9 +115,13 @@ namespace Dataloop.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (dictionary == null && computeMetadataVariant2 == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.ComputeMetadataVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.ComputeMetadataVariant2> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.ComputeMetadataVariant2).Name}");
                     computeMetadataVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);

@@ -29,6 +29,26 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickTime(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::System.DateTime? value)
+        {
+            value = Time;
+            return IsTime;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::System.DateTime PickTime() => IsTime
+            ? Time!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Time' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public double? IDateVariant2 { get; init; }
 #else
@@ -46,6 +66,26 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickIDateVariant2(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out double? value)
+        {
+            value = IDateVariant2;
+            return IsIDateVariant2;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public double PickIDateVariant2() => IsIDateVariant2
+            ? IDateVariant2!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'IDateVariant2' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public string? IDateVariant3 { get; init; }
 #else
@@ -59,6 +99,26 @@ namespace Dataloop
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(IDateVariant3))]
 #endif
         public bool IsIDateVariant3 => IDateVariant3 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickIDateVariant3(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out string? value)
+        {
+            value = IDateVariant3;
+            return IsIDateVariant3;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string PickIDateVariant3() => IsIDateVariant3
+            ? IDateVariant3!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'IDateVariant3' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -76,6 +136,11 @@ namespace Dataloop
         {
             Time = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static IDate FromTime(global::System.DateTime? value) => new IDate(value);
 
         /// <summary>
         /// 
@@ -98,6 +163,11 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        public static IDate FromIDateVariant2(double? value) => new IDate(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator IDate(string value) => new IDate((string?)value);
 
         /// <summary>
@@ -112,6 +182,11 @@ namespace Dataloop
         {
             IDateVariant3 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static IDate FromIDateVariant3(string? value) => new IDate(value);
 
         /// <summary>
         /// 
@@ -159,7 +234,7 @@ namespace Dataloop
         public TResult? Match<TResult>(
             global::System.Func<global::System.DateTime?, TResult>? time = null,
             global::System.Func<double?, TResult>? iDateVariant2 = null,
-            global::System.Func<string?, TResult>? iDateVariant3 = null,
+            global::System.Func<string, TResult>? iDateVariant3 = null,
             bool validate = true)
         {
             if (validate)
@@ -188,8 +263,38 @@ namespace Dataloop
         /// </summary>
         public void Match(
             global::System.Action<global::System.DateTime?>? time = null,
+
             global::System.Action<double?>? iDateVariant2 = null,
-            global::System.Action<string?>? iDateVariant3 = null,
+
+            global::System.Action<string>? iDateVariant3 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsTime)
+            {
+                time?.Invoke(Time!);
+            }
+            else if (IsIDateVariant2)
+            {
+                iDateVariant2?.Invoke(IDateVariant2!);
+            }
+            else if (IsIDateVariant3)
+            {
+                iDateVariant3?.Invoke(IDateVariant3!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::System.DateTime?>? time = null,
+            global::System.Action<double?>? iDateVariant2 = null,
+            global::System.Action<string>? iDateVariant3 = null,
             bool validate = true)
         {
             if (validate)

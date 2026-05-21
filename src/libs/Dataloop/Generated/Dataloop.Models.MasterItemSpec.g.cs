@@ -41,5 +41,6 @@ namespace Dataloop
         public MasterItemSpec()
         {
         }
+
     }
 }

@@ -96,6 +96,7 @@ namespace Dataloop.JsonConverters
             {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.LineData), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.LineData> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.LineData).Name}");
                     line = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -106,9 +107,13 @@ namespace Dataloop.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (line == null && matrix == null && summary == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.MatrixData), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.MatrixData> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.MatrixData).Name}");
                     matrix = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -119,9 +124,13 @@ namespace Dataloop.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (line == null && matrix == null && summary == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.SummaryData), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.SummaryData> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.SummaryData).Name}");
                     summary = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
