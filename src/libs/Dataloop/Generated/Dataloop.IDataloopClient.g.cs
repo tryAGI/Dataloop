@@ -278,11 +278,6 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        public SettingsClient Settings { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         public StorageDriversClient StorageDrivers { get; }
 
         /// <summary>
@@ -319,11 +314,6 @@ namespace Dataloop
         /// 
         /// </summary>
         public UsersClient Users { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public VersionClient Version { get; }
 
         /// <summary>
         /// 
