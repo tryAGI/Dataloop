@@ -103,10 +103,6 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        Settings,
-        /// <summary>
-        /// 
-        /// </summary>
         Tasks,
         /// <summary>
         /// 
@@ -149,7 +145,6 @@ namespace Dataloop
                 QueryResource.ServiceDrivers => "serviceDrivers",
                 QueryResource.Services => "services",
                 QueryResource.Setting => "setting",
-                QueryResource.Settings => "settings",
                 QueryResource.Tasks => "tasks",
                 QueryResource.Triggers => "triggers",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
@@ -185,7 +180,6 @@ namespace Dataloop
                 "serviceDrivers" => QueryResource.ServiceDrivers,
                 "services" => QueryResource.Services,
                 "setting" => QueryResource.Setting,
-                "settings" => QueryResource.Settings,
                 "tasks" => QueryResource.Tasks,
                 "triggers" => QueryResource.Triggers,
                 _ => null,
