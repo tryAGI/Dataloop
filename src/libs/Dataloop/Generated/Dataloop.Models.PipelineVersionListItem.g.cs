@@ -11,6 +11,19 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("createdBy")]
+        public string? CreatedBy { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("createdAt")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.DateTime CreatedAt { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("version")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double Version { get; set; }
@@ -31,17 +44,23 @@ namespace Dataloop
         /// <summary>
         /// Initializes a new instance of the <see cref="PipelineVersionListItem" /> class.
         /// </summary>
+        /// <param name="createdAt"></param>
         /// <param name="version"></param>
         /// <param name="snapshot">
         /// Make all properties in T optional
         /// </param>
+        /// <param name="createdBy"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public PipelineVersionListItem(
+            global::System.DateTime createdAt,
             double version,
-            global::Dataloop.PartialIPipeline snapshot)
+            global::Dataloop.PartialIPipeline snapshot,
+            string? createdBy)
         {
+            this.CreatedBy = createdBy;
+            this.CreatedAt = createdAt;
             this.Version = version;
             this.Snapshot = snapshot ?? throw new global::System.ArgumentNullException(nameof(snapshot));
         }
