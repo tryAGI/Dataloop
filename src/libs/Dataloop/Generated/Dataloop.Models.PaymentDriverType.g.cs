@@ -19,10 +19,6 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
-        Nop,
-        /// <summary>
-        /// 
-        /// </summary>
         Stripe,
     }
 
@@ -40,7 +36,6 @@ namespace Dataloop
             {
                 PaymentDriverType.AzureMarketplace => "azureMarketplace",
                 PaymentDriverType.Credits => "credits",
-                PaymentDriverType.Nop => "nop",
                 PaymentDriverType.Stripe => "stripe",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -54,7 +49,6 @@ namespace Dataloop
             {
                 "azureMarketplace" => PaymentDriverType.AzureMarketplace,
                 "credits" => PaymentDriverType.Credits,
-                "nop" => PaymentDriverType.Nop,
                 "stripe" => PaymentDriverType.Stripe,
                 _ => null,
             };

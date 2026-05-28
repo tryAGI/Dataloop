@@ -33,9 +33,9 @@ namespace Dataloop
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dataloop.JsonConverters.DBPaymentDriverConfigurationTypeJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dataloop.JsonConverters.PaymentDriverTypeJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::Dataloop.DBPaymentDriverConfigurationType Type { get; set; }
+        public required global::Dataloop.PaymentDriverType Type { get; set; }
 
         /// <summary>
         /// 
@@ -72,7 +72,7 @@ namespace Dataloop
             string id,
             string name,
             string billingAccountId,
-            global::Dataloop.DBPaymentDriverConfigurationType type,
+            global::Dataloop.PaymentDriverType type,
             string creator,
             object? metadata)
         {
