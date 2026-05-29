@@ -6,7 +6,7 @@ namespace Dataloop
     /// <summary>
     /// 
     /// </summary>
-    public enum PaymentDriverType
+    public enum DBPaymentDriverConfigurationType
     {
         /// <summary>
         /// 
@@ -29,33 +29,33 @@ namespace Dataloop
     /// <summary>
     /// Enum extensions to do fast conversions without the reflection.
     /// </summary>
-    public static class PaymentDriverTypeExtensions
+    public static class DBPaymentDriverConfigurationTypeExtensions
     {
         /// <summary>
         /// Converts an enum to a string.
         /// </summary>
-        public static string ToValueString(this PaymentDriverType value)
+        public static string ToValueString(this DBPaymentDriverConfigurationType value)
         {
             return value switch
             {
-                PaymentDriverType.AzureMarketplace => "azureMarketplace",
-                PaymentDriverType.Credits => "credits",
-                PaymentDriverType.Nop => "nop",
-                PaymentDriverType.Stripe => "stripe",
+                DBPaymentDriverConfigurationType.AzureMarketplace => "azureMarketplace",
+                DBPaymentDriverConfigurationType.Credits => "credits",
+                DBPaymentDriverConfigurationType.Nop => "nop",
+                DBPaymentDriverConfigurationType.Stripe => "stripe",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
         /// <summary>
         /// Converts an string to a enum.
         /// </summary>
-        public static PaymentDriverType? ToEnum(string value)
+        public static DBPaymentDriverConfigurationType? ToEnum(string value)
         {
             return value switch
             {
-                "azureMarketplace" => PaymentDriverType.AzureMarketplace,
-                "credits" => PaymentDriverType.Credits,
-                "nop" => PaymentDriverType.Nop,
-                "stripe" => PaymentDriverType.Stripe,
+                "azureMarketplace" => DBPaymentDriverConfigurationType.AzureMarketplace,
+                "credits" => DBPaymentDriverConfigurationType.Credits,
+                "nop" => DBPaymentDriverConfigurationType.Nop,
+                "stripe" => DBPaymentDriverConfigurationType.Stripe,
                 _ => null,
             };
         }
