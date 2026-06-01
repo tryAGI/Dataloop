@@ -17010,6 +17010,10 @@
               "serveAgentInternalLoadBalancer": {
                 "type": "boolean"
               },
+              "serveAgentProxyEndpoint": {
+                "type": "string",
+                "description": "When set, all ingress-related traffic on the services cluster is routed through this proxy endpoint\ninstead of the serveAgentEndpoint. Used for environments (e.g. FORD HPC) where a local proxy\nis needed to bypass Kong. If not set, serveAgentEndpoint is used as the ingress target as today."
+              },
               "serveAgentDNS": {
                 "type": "string"
               },

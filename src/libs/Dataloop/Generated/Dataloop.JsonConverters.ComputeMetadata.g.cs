@@ -57,6 +57,7 @@ namespace Dataloop.JsonConverters
             if (__jsonProps.Contains("serveAgentInternalLoadBalancerAllowGlobalAccess")) __score1++;
             if (__jsonProps.Contains("serveAgentLoadBalancerSourceRanges")) __score1++;
             if (__jsonProps.Contains("serveAgentLoadBalancerSubnetIds")) __score1++;
+            if (__jsonProps.Contains("serveAgentProxyEndpoint")) __score1++;
             if (__jsonProps.Contains("serveAgentServiceType")) __score1++;
             if (__jsonProps.Contains("tolerations")) __score1++;
             var __bestScore = 0;
