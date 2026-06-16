@@ -49,6 +49,14 @@ namespace Dataloop
         public bool? ServeAgentInternalLoadBalancer { get; set; }
 
         /// <summary>
+        /// When set, all ingress-related traffic on the services cluster is routed through this proxy endpoint<br/>
+        /// instead of the serveAgentEndpoint. Used for environments (e.g. FORD HPC) where a local proxy<br/>
+        /// is needed to bypass Kong. If not set, serveAgentEndpoint is used as the ingress target as today.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("serveAgentProxyEndpoint")]
+        public string? ServeAgentProxyEndpoint { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("serveAgentDNS")]
@@ -140,6 +148,11 @@ namespace Dataloop
         /// AWS: comma-separated public subnet IDs so the NLB is internet-facing when nodes are in private subnets
         /// </param>
         /// <param name="serveAgentInternalLoadBalancer"></param>
+        /// <param name="serveAgentProxyEndpoint">
+        /// When set, all ingress-related traffic on the services cluster is routed through this proxy endpoint<br/>
+        /// instead of the serveAgentEndpoint. Used for environments (e.g. FORD HPC) where a local proxy<br/>
+        /// is needed to bypass Kong. If not set, serveAgentEndpoint is used as the ingress target as today.
+        /// </param>
         /// <param name="serveAgentDNS"></param>
         /// <param name="cacheRunnerFS"></param>
         /// <param name="filestoreServer"></param>
@@ -161,6 +174,7 @@ namespace Dataloop
             bool? serveAgentInternalLoadBalancerAllowGlobalAccess,
             global::System.Collections.Generic.IList<string>? serveAgentLoadBalancerSubnetIds,
             bool? serveAgentInternalLoadBalancer,
+            string? serveAgentProxyEndpoint,
             string? serveAgentDNS,
             string? cacheRunnerFS,
             string? filestoreServer,
@@ -179,6 +193,7 @@ namespace Dataloop
             this.ServeAgentInternalLoadBalancerAllowGlobalAccess = serveAgentInternalLoadBalancerAllowGlobalAccess;
             this.ServeAgentLoadBalancerSubnetIds = serveAgentLoadBalancerSubnetIds;
             this.ServeAgentInternalLoadBalancer = serveAgentInternalLoadBalancer;
+            this.ServeAgentProxyEndpoint = serveAgentProxyEndpoint;
             this.ServeAgentDNS = serveAgentDNS;
             this.CacheRunnerFS = cacheRunnerFS;
             this.FilestoreServer = filestoreServer;
