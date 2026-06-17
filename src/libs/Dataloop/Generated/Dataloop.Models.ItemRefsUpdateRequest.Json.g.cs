@@ -17,6 +17,14 @@ namespace Dataloop
         }
 
         /// <summary>
+        /// Serializes the current instance to a JSON string using the generated default JsonSerializerContext.
+        /// </summary>
+        public string ToJson()
+        {
+            return ToJson(global::Dataloop.SourceGenerationContext.Default);
+        }
+
+        /// <summary>
         /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
         /// </summary>
 #if NET8_0_OR_GREATER
@@ -26,6 +34,11 @@ namespace Dataloop
         public string ToJson(
             global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
         {
+            if (jsonSerializerOptions is null)
+            {
+                return ToJson(global::Dataloop.SourceGenerationContext.Default);
+            }
+
             return global::System.Text.Json.JsonSerializer.Serialize(
                 this,
                 jsonSerializerOptions);
@@ -45,6 +58,17 @@ namespace Dataloop
         }
 
         /// <summary>
+        /// Deserializes a JSON string using the generated default JsonSerializerContext.
+        /// </summary>
+        public static global::Dataloop.ItemRefsUpdateRequest? FromJson(
+            string json)
+        {
+            return FromJson(
+                json,
+                global::Dataloop.SourceGenerationContext.Default);
+        }
+
+        /// <summary>
         /// Deserializes a JSON string using the provided JsonSerializerOptions.
         /// </summary>
 #if NET8_0_OR_GREATER
@@ -55,6 +79,13 @@ namespace Dataloop
             string json,
             global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
         {
+            if (jsonSerializerOptions is null)
+            {
+                return FromJson(
+                    json,
+                    global::Dataloop.SourceGenerationContext.Default);
+            }
+
             return global::System.Text.Json.JsonSerializer.Deserialize<global::Dataloop.ItemRefsUpdateRequest>(
                 json,
                 jsonSerializerOptions);
@@ -74,6 +105,17 @@ namespace Dataloop
         }
 
         /// <summary>
+        /// Deserializes a JSON stream using the generated default JsonSerializerContext.
+        /// </summary>
+        public static global::System.Threading.Tasks.ValueTask<global::Dataloop.ItemRefsUpdateRequest?> FromJsonStreamAsync(
+            global::System.IO.Stream jsonStream)
+        {
+            return FromJsonStreamAsync(
+                jsonStream,
+                global::Dataloop.SourceGenerationContext.Default);
+        }
+
+        /// <summary>
         /// Deserializes a JSON stream using the provided JsonSerializerOptions.
         /// </summary>
 #if NET8_0_OR_GREATER
@@ -84,6 +126,13 @@ namespace Dataloop
             global::System.IO.Stream jsonStream,
             global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
         {
+            if (jsonSerializerOptions is null)
+            {
+                return FromJsonStreamAsync(
+                    jsonStream,
+                    global::Dataloop.SourceGenerationContext.Default);
+            }
+
             return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::Dataloop.ItemRefsUpdateRequest?>(
                 jsonStream,
                 jsonSerializerOptions);
