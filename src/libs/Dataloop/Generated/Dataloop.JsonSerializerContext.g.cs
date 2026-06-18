@@ -829,6 +829,8 @@ namespace Dataloop
 
             typeof(global::Dataloop.JsonConverters.RecipeInputJsonConverter),
 
+            typeof(global::Dataloop.JsonConverters.IntegrationTypeMetadataJsonConverter),
+
             typeof(global::Dataloop.JsonConverters.ModelOutputTypeJsonConverter),
 
             typeof(global::Dataloop.JsonConverters.IDateJsonConverter),
@@ -2580,6 +2582,8 @@ namespace Dataloop
 
             typeof(global::Dataloop.JsonConverters.RecipeInputJsonConverter),
 
+            typeof(global::Dataloop.JsonConverters.IntegrationTypeMetadataJsonConverter),
+
             typeof(global::Dataloop.JsonConverters.ModelOutputTypeJsonConverter),
 
             typeof(global::Dataloop.JsonConverters.IDateJsonConverter),
@@ -3054,6 +3058,8 @@ namespace Dataloop
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.APIOrgDomain))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.IntegrationType2), TypeInfoPropertyName = "IntegrationType22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.IKeyValueMetadata))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.IS3ApiMetadata))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.IntegrationTypeMetadata), TypeInfoPropertyName = "IntegrationTypeMetadata2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.IntegrationMetadataBody))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.IntegrationBody))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dataloop.IntegrationMetadataBody>))]
@@ -3502,8 +3508,6 @@ namespace Dataloop
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.IClusterVolumeConfigMapItem))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.IClusterVolumeSecret))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dataloop.IClusterVolumeSecretItem>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.IClusterVolumeSecretItem))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.IClusterVolumeNfs))]
     internal sealed partial class SourceGenerationContextChunk1 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -4331,6 +4335,8 @@ namespace Dataloop
 
             typeof(global::Dataloop.JsonConverters.RecipeInputJsonConverter),
 
+            typeof(global::Dataloop.JsonConverters.IntegrationTypeMetadataJsonConverter),
+
             typeof(global::Dataloop.JsonConverters.ModelOutputTypeJsonConverter),
 
             typeof(global::Dataloop.JsonConverters.IDateJsonConverter),
@@ -4759,6 +4765,8 @@ namespace Dataloop
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::Dataloop.S3IntegrationConfig, global::Dataloop.GcsIntegrationConfig, global::Dataloop.AzureBlobIntegrationConfig, global::Dataloop.PickS3DriverPayloadExcludeKeyofS3DriverPayloadPath>?), TypeInfoPropertyName = "PickS3DriverPayloadExcludeKeyofS3DriverPayloadPath_9a6ecea9b7debc31")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::System.Collections.Generic.IList<global::Dataloop.APIComposition>, global::System.Collections.Generic.IList<global::Dataloop.APIPipeline>, global::System.Collections.Generic.IList<global::Dataloop.AnyOf<global::Dataloop.APIPipelineState, global::Dataloop.IPipelineState>>, global::System.Collections.Generic.IList<global::Dataloop.ResourceExecution>, global::System.Collections.Generic.IList<global::Dataloop.APIDpk>, global::System.Collections.Generic.IList<global::Dataloop.APIApp>, global::System.Collections.Generic.IList<global::Dataloop.APICompute>, global::System.Collections.Generic.IList<global::Dataloop.APIServiceDriver>>?), TypeInfoPropertyName = "APIServiceDriver_c0617c242689fb32")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::System.Collections.Generic.List<global::Dataloop.APIComposition>, global::System.Collections.Generic.List<global::Dataloop.APIPipeline>, global::System.Collections.Generic.List<global::Dataloop.AnyOf<global::Dataloop.APIPipelineState, global::Dataloop.IPipelineState>>, global::System.Collections.Generic.List<global::Dataloop.ResourceExecution>, global::System.Collections.Generic.List<global::Dataloop.APIDpk>, global::System.Collections.Generic.List<global::Dataloop.APIApp>, global::System.Collections.Generic.List<global::Dataloop.APICompute>, global::System.Collections.Generic.List<global::Dataloop.APIServiceDriver>>), TypeInfoPropertyName = "APIServiceDriver_ce74abc722e1be30")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.IClusterVolumeSecretItem))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.IClusterVolumeNfs))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.IDeploymentSecurityContext))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.IClusterEnvironmentVariable))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.IClusterEnvironmentVariableValueFrom))]
@@ -5253,8 +5261,6 @@ namespace Dataloop
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.AnyOf<global::Dataloop.APIRecipeV2, global::Dataloop.APIRecipe>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.APIAssignment>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.AssignmentWorkload>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.APILabelTreeNodeV2>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.FilterQueryInputReferencesRef>))]
     internal sealed partial class SourceGenerationContextChunk2 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -6082,6 +6088,8 @@ namespace Dataloop
 
             typeof(global::Dataloop.JsonConverters.RecipeInputJsonConverter),
 
+            typeof(global::Dataloop.JsonConverters.IntegrationTypeMetadataJsonConverter),
+
             typeof(global::Dataloop.JsonConverters.ModelOutputTypeJsonConverter),
 
             typeof(global::Dataloop.JsonConverters.IDateJsonConverter),
@@ -6510,6 +6518,8 @@ namespace Dataloop
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::Dataloop.S3IntegrationConfig, global::Dataloop.GcsIntegrationConfig, global::Dataloop.AzureBlobIntegrationConfig, global::Dataloop.PickS3DriverPayloadExcludeKeyofS3DriverPayloadPath>?), TypeInfoPropertyName = "PickS3DriverPayloadExcludeKeyofS3DriverPayloadPath_9a6ecea9b7debc31")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::System.Collections.Generic.IList<global::Dataloop.APIComposition>, global::System.Collections.Generic.IList<global::Dataloop.APIPipeline>, global::System.Collections.Generic.IList<global::Dataloop.AnyOf<global::Dataloop.APIPipelineState, global::Dataloop.IPipelineState>>, global::System.Collections.Generic.IList<global::Dataloop.ResourceExecution>, global::System.Collections.Generic.IList<global::Dataloop.APIDpk>, global::System.Collections.Generic.IList<global::Dataloop.APIApp>, global::System.Collections.Generic.IList<global::Dataloop.APICompute>, global::System.Collections.Generic.IList<global::Dataloop.APIServiceDriver>>?), TypeInfoPropertyName = "APIServiceDriver_c0617c242689fb32")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::System.Collections.Generic.List<global::Dataloop.APIComposition>, global::System.Collections.Generic.List<global::Dataloop.APIPipeline>, global::System.Collections.Generic.List<global::Dataloop.AnyOf<global::Dataloop.APIPipelineState, global::Dataloop.IPipelineState>>, global::System.Collections.Generic.List<global::Dataloop.ResourceExecution>, global::System.Collections.Generic.List<global::Dataloop.APIDpk>, global::System.Collections.Generic.List<global::Dataloop.APIApp>, global::System.Collections.Generic.List<global::Dataloop.APICompute>, global::System.Collections.Generic.List<global::Dataloop.APIServiceDriver>>), TypeInfoPropertyName = "APIServiceDriver_ce74abc722e1be30")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.APILabelTreeNodeV2>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.FilterQueryInputReferencesRef>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.APIAttributeSection>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::System.Collections.Generic.List<string>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.APIStructure>))]
@@ -7146,6 +7156,7 @@ namespace Dataloop
             options.Converters.Add(new global::Dataloop.JsonConverters.SchemaEntryInputJsonConverter());
             options.Converters.Add(new global::Dataloop.JsonConverters.RecipeV2InputJsonConverter());
             options.Converters.Add(new global::Dataloop.JsonConverters.RecipeInputJsonConverter());
+            options.Converters.Add(new global::Dataloop.JsonConverters.IntegrationTypeMetadataJsonConverter());
             options.Converters.Add(new global::Dataloop.JsonConverters.ModelOutputTypeJsonConverter());
             options.Converters.Add(new global::Dataloop.JsonConverters.IDateJsonConverter());
             options.Converters.Add(new global::Dataloop.JsonConverters.MetricDataJsonConverter());

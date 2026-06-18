@@ -55,6 +55,10 @@ namespace Dataloop
         /// <summary>
         /// 
         /// </summary>
+        FeatureVectors,
+        /// <summary>
+        /// 
+        /// </summary>
         Groups,
         /// <summary>
         /// 
@@ -157,6 +161,7 @@ namespace Dataloop
                 ResourceType.Dpk => "dpk",
                 ResourceType.Drivers => "drivers",
                 ResourceType.Executions => "executions",
+                ResourceType.FeatureVectors => "feature_vectors",
                 ResourceType.Groups => "groups",
                 ResourceType.Integrations => "integrations",
                 ResourceType.Items => "items",
@@ -198,6 +203,7 @@ namespace Dataloop
                 "dpk" => ResourceType.Dpk,
                 "drivers" => ResourceType.Drivers,
                 "executions" => ResourceType.Executions,
+                "feature_vectors" => ResourceType.FeatureVectors,
                 "groups" => ResourceType.Groups,
                 "integrations" => ResourceType.Integrations,
                 "items" => ResourceType.Items,

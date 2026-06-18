@@ -116,7 +116,7 @@ namespace Dataloop
             global::Dataloop.Dictionary options,
             string name,
             global::Dataloop.IntegrationType2 type,
-            global::Dataloop.IKeyValueMetadata? metadata = default,
+            global::Dataloop.IntegrationTypeMetadata? metadata = default,
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
