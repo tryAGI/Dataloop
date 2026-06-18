@@ -11919,8 +11919,27 @@
         "type": "object",
         "additionalProperties": true
       },
+      "IS3ApiMetadata": {
+        "properties": {
+          "endpoint": {
+            "type": "string"
+          },
+          "region": {
+            "type": "string"
+          }
+        },
+        "type": "object",
+        "additionalProperties": true
+      },
       "IntegrationTypeMetadata": {
-        "$ref": "#/components/schemas/IKeyValueMetadata"
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/IKeyValueMetadata"
+          },
+          {
+            "$ref": "#/components/schemas/IS3ApiMetadata"
+          }
+        ]
       },
       "IntegrationMetadataBody": {
         "properties": {
@@ -15706,7 +15725,8 @@
           "subscriptions",
           "accounts",
           "drivers",
-          "annotations.status"
+          "annotations.status",
+          "feature_vectors"
         ],
         "type": "string"
       },

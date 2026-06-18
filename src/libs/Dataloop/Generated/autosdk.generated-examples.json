@@ -358,7 +358,7 @@
       "Slug": "create-integration",
       "Description": "Create a new Integration",
       "Language": "http",
-      "Code": "### Create a new Integration\n# @name Create integration\nPOST {{host}}/orgs/{{orgId}}/integrations\nAuthorization: Bearer {{token}}\nContent-Type: application/json\nAccept: application/json\n\n{\n  \u0022metadata\u0022: {\n    \u0022ref\u0022: \u0022string\u0022,\n    \u0022provider\u0022: \u0022string\u0022\n  },\n  \u0022options\u0022: {},\n  \u0022name\u0022: \u0022string\u0022,\n  \u0022type\u0022: \u0022s3\u0022\n}\n\n## Responses\n# 200\n# Description: Ok\n# Content-Type: application/json",
+      "Code": "### Create a new Integration\n# @name Create integration\nPOST {{host}}/orgs/{{orgId}}/integrations\nAuthorization: Bearer {{token}}\nContent-Type: application/json\nAccept: application/json\n\n{\n  \u0022metadata\u0022: {},\n  \u0022options\u0022: {},\n  \u0022name\u0022: \u0022string\u0022,\n  \u0022type\u0022: \u0022s3\u0022\n}\n\n## Responses\n# 200\n# Description: Ok\n# Content-Type: application/json",
       "Format": "http",
       "OperationId": "Create integration",
       "Setup": null
