@@ -12,7 +12,8 @@ namespace Dataloop
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("metadata")]
-        public global::Dataloop.IKeyValueMetadata? Metadata { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dataloop.JsonConverters.IntegrationTypeMetadataJsonConverter))]
+        public global::Dataloop.IntegrationTypeMetadata? Metadata { get; set; }
 
         /// <summary>
         /// 
@@ -56,7 +57,7 @@ namespace Dataloop
             global::Dataloop.Dictionary options,
             string name,
             global::Dataloop.IntegrationType2 type,
-            global::Dataloop.IKeyValueMetadata? metadata)
+            global::Dataloop.IntegrationTypeMetadata? metadata)
         {
             this.Metadata = metadata;
             this.Options = options ?? throw new global::System.ArgumentNullException(nameof(options));
