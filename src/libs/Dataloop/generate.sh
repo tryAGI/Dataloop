@@ -16,15 +16,20 @@ install_autosdk_cli
 spec_tmp="$(mktemp)"
 trap 'rm -f "$spec_tmp"' EXIT
 
-fetch_spec \
-  --fail \
-  --location \
-  --show-error \
-  --retry 5 \
-  --retry-delay 10 \
-  --retry-all-errors \
-  --output "$spec_tmp" \
-  https://gate.dataloop.ai/api/v1/swagger-file
+fetch_args=(--output "$spec_tmp")
+if [ -n "${DATALOOP_API_KEY:-}" ]; then
+  fetch_args+=(--header "Authorization: Bearer $DATALOOP_API_KEY")
+fi
+
+if ! fetch_spec "${fetch_args[@]}" https://gate.dataloop.ai/api/v1/swagger-file; then
+  if [ ! -s openapi.yaml ]; then
+    echo "Unable to fetch Dataloop OpenAPI spec and no committed openapi.yaml fallback exists." >&2
+    exit 1
+  fi
+
+  echo "Unable to fetch latest Dataloop OpenAPI spec; falling back to committed openapi.yaml." >&2
+  cp openapi.yaml "$spec_tmp"
+fi
 
 # Fix spec issues:
 # 1. Remove bad default values from DatasetDeletionInformation date-time fields
