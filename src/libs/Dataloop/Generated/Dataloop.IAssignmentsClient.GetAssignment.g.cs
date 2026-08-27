@@ -22,7 +22,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # assignment = task.assignments.get(assignment_id='assignment_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.APIAssignment> GetAssignmentAsync(
             string id,
@@ -46,7 +46,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # assignment = task.assignments.get(assignment_id='assignment_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APIAssignment>> GetAssignmentAsResponseAsync(
             string id,

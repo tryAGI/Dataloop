@@ -4,31 +4,31 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class IPipelineSettings
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("defaultResumeOption")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dataloop.JsonConverters.ResumePipelineOptionJsonConverter))]
         public global::Dataloop.ResumePipelineOption? DefaultResumeOption { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("keepTriggersActive")]
         public bool? KeepTriggersActive { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("activeTriggerAskAgain")]
         public bool? ActiveTriggerAskAgain { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("lastUpdate")]
         [global::System.Text.Json.Serialization.JsonRequired]

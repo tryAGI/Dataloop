@@ -4,60 +4,60 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum QueryTestCases
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FiveTermsJoinOneTerm,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FiveTermsJoinThreeTerms,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FiveTermsJoinTwoTerms,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BaseLine,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FiveTermSortingOneIndexedField,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FiveTerms,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OneTerm,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OneTermSortingOneCustomField,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OneTermSortingOneIndexedField,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OneTermSortingThreeCustomFields,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OneTermSortingTwoCustomFields,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TenTerms,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TwentyTerms,
     }

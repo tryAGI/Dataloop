@@ -4,24 +4,24 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum TriggerOperationType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Function,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pipeline,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Rabbitmq,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Webhook,
     }

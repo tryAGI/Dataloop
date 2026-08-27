@@ -4,20 +4,20 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CycleRerunMethod
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         StartFromBeginning,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         StartFromFailedExecutions,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         StartFromNodes,
     }

@@ -4,16 +4,16 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum FieldSortField
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Date,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Id,
     }

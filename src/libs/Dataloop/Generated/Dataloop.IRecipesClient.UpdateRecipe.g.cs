@@ -25,7 +25,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # dataset.recipes.update(recipe='recipe_entity')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<global::Dataloop.APIRecipeV2, global::Dataloop.APIRecipe>> UpdateRecipeAsync(
             string id,
@@ -54,7 +54,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # dataset.recipes.update(recipe='recipe_entity')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.AnyOf<global::Dataloop.APIRecipeV2, global::Dataloop.APIRecipe>>> UpdateRecipeAsResponseAsync(
             string id,

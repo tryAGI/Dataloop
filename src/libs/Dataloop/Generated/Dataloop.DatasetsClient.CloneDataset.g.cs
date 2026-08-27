@@ -44,7 +44,7 @@ namespace Dataloop
             ref string content);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="id"></param>
         /// <param name="request"></param>
@@ -74,7 +74,7 @@ namespace Dataloop
         /// # with_metadata=True,<br/>
         /// # with_items_annotations=False,<br/>
         /// # with_task_annotations_status=False)<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.APICommand> CloneDatasetAsync(
             string id,
@@ -94,7 +94,7 @@ namespace Dataloop
             return __response.Body;
         }
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="id"></param>
         /// <param name="request"></param>
@@ -124,7 +124,7 @@ namespace Dataloop
         /// # with_metadata=True,<br/>
         /// # with_items_annotations=False,<br/>
         /// # with_task_annotations_status=False)<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APICommand>> CloneDatasetAsResponseAsync(
             string id,
@@ -195,7 +195,7 @@ namespace Dataloop
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                             var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
                             var __httpRequestContent = new global::System.Net.Http.StringContent(
@@ -394,7 +394,7 @@ namespace Dataloop
                                 retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
-                            // 
+                            //
                             if ((int)__response.StatusCode == 400)
                             {
                                 string? __content_400 = null;
@@ -523,7 +523,7 @@ namespace Dataloop
             }
         }
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="id"></param>
         /// <param name="name">

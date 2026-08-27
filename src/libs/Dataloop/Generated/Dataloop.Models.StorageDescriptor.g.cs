@@ -4,26 +4,26 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class StorageDescriptor
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("totalModified")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Dataloop.StorageModificationDescriptor TotalModified { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("totalPersist")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double TotalPersist { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("datasets")]
         [global::System.Text.Json.Serialization.JsonRequired]

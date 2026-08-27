@@ -4,32 +4,32 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CompositionElementStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Attached,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Failed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Installed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pause,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Resume,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Uninstalled,
     }

@@ -4,24 +4,24 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ModalityType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Overlay,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Preview,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Related,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Replace,
     }

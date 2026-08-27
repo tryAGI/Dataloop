@@ -24,7 +24,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # pipeline = project.pipelines.update(pipeline='pipeline_entity')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.APIPipeline> UpdateAsync(
             string pipelineId,
@@ -52,7 +52,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # pipeline = project.pipelines.update(pipeline='pipeline_entity')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APIPipeline>> UpdateAsResponseAsync(
             string pipelineId,

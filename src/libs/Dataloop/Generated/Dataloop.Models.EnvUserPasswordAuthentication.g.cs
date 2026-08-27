@@ -9,14 +9,14 @@ namespace Dataloop
     public sealed partial class EnvUserPasswordAuthentication
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("username")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Username { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("password")]
         [global::System.Text.Json.Serialization.JsonRequired]

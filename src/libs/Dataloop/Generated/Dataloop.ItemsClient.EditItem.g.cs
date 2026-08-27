@@ -46,7 +46,7 @@ namespace Dataloop
             ref string content);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="id"></param>
         /// <param name="system"></param>
@@ -72,7 +72,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # dataset.items.update(item='item_entity')<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<global::Dataloop.APIDatasetFileItem, global::Dataloop.APIDatasetDirectoryItem>> EditItemAsync(
             string id,
@@ -94,7 +94,7 @@ namespace Dataloop
             return __response.Body;
         }
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="id"></param>
         /// <param name="system"></param>
@@ -120,7 +120,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # dataset.items.update(item='item_entity')<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.AnyOf<global::Dataloop.APIDatasetFileItem, global::Dataloop.APIDatasetDirectoryItem>>> EditItemAsResponseAsync(
             string id,
@@ -196,7 +196,7 @@ namespace Dataloop
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                             var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
                             var __httpRequestContent = new global::System.Net.Http.StringContent(
@@ -493,7 +493,7 @@ namespace Dataloop
             }
         }
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="id"></param>
         /// <param name="system"></param>

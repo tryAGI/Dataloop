@@ -4,16 +4,16 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum OrderBy
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ascending,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Descending,
     }

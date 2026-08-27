@@ -4,7 +4,7 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class SplitMlOperationRequest
     {
@@ -16,7 +16,7 @@ namespace Dataloop
         public required global::Dataloop.RecordMLSplitListKeysNumber MLSplitList { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("itemsQuery")]
         [global::System.Text.Json.Serialization.JsonRequired]

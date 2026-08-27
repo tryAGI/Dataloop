@@ -4,56 +4,56 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CompositionStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Activated,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ActiveTest,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Created,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Deactivated,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Failure,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Initializing,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Installed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Reconfiguring,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Terminated,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Terminating,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Uninstalled,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Updating,
     }

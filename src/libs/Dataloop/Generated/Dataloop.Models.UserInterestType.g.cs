@@ -4,44 +4,44 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum UserInterestType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AILeadership,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Annotation,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AnnotationManager,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DataEngineer,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DataManagement,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DataScience,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MlDeveloper,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pipelines,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SoftwareDeveloper,
     }

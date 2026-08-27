@@ -4,32 +4,32 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum AzureWebhookEventAction
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ChangePlan,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ChangeQuantity,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Reinstate,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Renew,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Suspend,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Unsubscribe,
     }

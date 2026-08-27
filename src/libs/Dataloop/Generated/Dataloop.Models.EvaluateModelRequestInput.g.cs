@@ -9,13 +9,13 @@ namespace Dataloop
     public sealed partial class EvaluateModelRequestInput
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("datasetQuery")]
         public global::Dataloop.Dictionary? DatasetQuery { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("datasetId")]
         public string? DatasetId { get; set; }

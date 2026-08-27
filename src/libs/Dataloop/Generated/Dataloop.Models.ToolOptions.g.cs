@@ -4,19 +4,19 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ToolOptions
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("labelScope")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Dataloop.LabelScopeV2 LabelScope { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("options")]
         public global::Dataloop.Dictionary? Options { get; set; }

@@ -4,12 +4,12 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GenerateDatasetOptionsAnnotationsMetadata
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sizeDistribution")]
         public global::System.Collections.Generic.Dictionary<string, double>? SizeDistribution { get; set; }

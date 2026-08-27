@@ -34,7 +34,7 @@ namespace Dataloop
         /// # organization_id='organization_id',<br/>
         /// # sure=True,<br/>
         /// # really=True)<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task RemoveOrgMemberAsync(
             string orgId,
@@ -71,7 +71,7 @@ namespace Dataloop
         /// # organization_id='organization_id',<br/>
         /// # sure=True,<br/>
         /// # really=True)<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse> RemoveOrgMemberAsResponseAsync(
             string orgId,

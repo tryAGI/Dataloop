@@ -9,14 +9,14 @@ namespace Dataloop
     public sealed partial class UpdateModelDeploymentRequest
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("deploymentConfig")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Dataloop.Dictionary DeploymentConfig { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("deploymentType")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dataloop.JsonConverters.ModelOperationTypesJsonConverter))]

@@ -4,39 +4,39 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class IDpkComponentModelComputeConfigs
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("default")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Default { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("embed")]
         public string? Embed { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("evaluate")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Evaluate { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("predict")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Predict { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("train")]
         [global::System.Text.Json.Serialization.JsonRequired]

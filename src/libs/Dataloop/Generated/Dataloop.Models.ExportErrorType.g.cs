@@ -4,16 +4,16 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ExportErrorType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cmd,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Timeout,
     }

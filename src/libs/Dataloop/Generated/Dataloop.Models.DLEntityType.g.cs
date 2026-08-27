@@ -4,84 +4,84 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum DLEntityType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Account,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Annotation,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Assignment,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Dataset,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Execution,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Group,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Item,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Member,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Model,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ontology,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Org,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Package,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Plan,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Project,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Qouta,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Recipe,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Service,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Subscription,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Task,
     }

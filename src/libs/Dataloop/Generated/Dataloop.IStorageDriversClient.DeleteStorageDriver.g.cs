@@ -27,7 +27,7 @@ namespace Dataloop
         /// # :param bool really: Really really sure?<br/>
         /// # :return: True if success<br/>
         /// # :rtype: bool<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task DeleteStorageDriverAsync(
             string id,
@@ -56,7 +56,7 @@ namespace Dataloop
         /// # :param bool really: Really really sure?<br/>
         /// # :return: True if success<br/>
         /// # :rtype: bool<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse> DeleteStorageDriverAsResponseAsync(
             string id,

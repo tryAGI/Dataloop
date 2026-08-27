@@ -4,20 +4,20 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum QualityTaskTypes
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Consensus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Honeypot,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Qualification,
     }

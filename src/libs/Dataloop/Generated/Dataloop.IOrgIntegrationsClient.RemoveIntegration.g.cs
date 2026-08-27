@@ -27,7 +27,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # project.integrations.delete(integrations_id='integrations_id', sure=True, really=True)<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Dataloop.APIIntegration>> RemoveIntegrationAsync(
             string orgId,
@@ -57,7 +57,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # project.integrations.delete(integrations_id='integrations_id', sure=True, really=True)<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Dataloop.APIIntegration>>> RemoveIntegrationAsResponseAsync(
             string orgId,

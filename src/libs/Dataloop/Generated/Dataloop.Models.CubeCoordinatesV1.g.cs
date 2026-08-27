@@ -4,68 +4,68 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CubeCoordinatesV1
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("front_bl")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Dataloop.Point FrontBl { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("front_br")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Dataloop.Point FrontBr { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("front_tl")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Dataloop.Point FrontTl { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("front_tr")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Dataloop.Point FrontTr { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("back_bl")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Dataloop.Point BackBl { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("back_br")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Dataloop.Point BackBr { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("back_tl")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Dataloop.Point BackTl { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("back_tr")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Dataloop.Point BackTr { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("angle")]
         public double? Angle { get; set; }

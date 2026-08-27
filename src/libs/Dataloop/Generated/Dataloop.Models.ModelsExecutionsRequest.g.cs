@@ -9,13 +9,13 @@ namespace Dataloop
     public sealed partial class ModelsExecutionsRequest
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("joinFilter")]
         public global::Dataloop.Dictionary? JoinFilter { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("query")]
         [global::System.Text.Json.Serialization.JsonRequired]

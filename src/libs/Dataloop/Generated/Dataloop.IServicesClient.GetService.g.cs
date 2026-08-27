@@ -27,7 +27,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # service = package.services.get(service_id='service_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.APIService> GetServiceAsync(
             string id,
@@ -57,7 +57,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # service = package.services.get(service_id='service_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APIService>> GetServiceAsResponseAsync(
             string id,

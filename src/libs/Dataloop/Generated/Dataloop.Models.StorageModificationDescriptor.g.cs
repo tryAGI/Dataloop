@@ -4,46 +4,46 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class StorageModificationDescriptor
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("ui")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Dataloop.StorageModificationSourceDescriptor Ui { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sdk")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Dataloop.StorageModificationSourceDescriptor Sdk { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("system")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Dataloop.StorageModificationSourceDescriptor System { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("other")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Dataloop.StorageModificationSourceDescriptor Other { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("unknown")]
         public global::Dataloop.StorageModificationSourceDescriptor? Unknown { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("total")]
         [global::System.Text.Json.Serialization.JsonRequired]

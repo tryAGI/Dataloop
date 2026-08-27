@@ -26,7 +26,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # dataset.items.list(page_offset=0, page_size=100)<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.CursorPageAPIAnnotationOrAPIDatasetOrAPIDatasetFileItemOrAPIDatasetDirectoryItem> QueryDatasetAsync(
             string id,
@@ -56,7 +56,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # dataset.items.list(page_offset=0, page_size=100)<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.CursorPageAPIAnnotationOrAPIDatasetOrAPIDatasetFileItemOrAPIDatasetDirectoryItem>> QueryDatasetAsResponseAsync(
             string id,

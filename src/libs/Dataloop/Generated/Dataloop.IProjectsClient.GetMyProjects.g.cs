@@ -21,7 +21,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # projects = dl.projects.list()<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Dataloop.APIProject>> GetMyProjectsAsync(
             bool? excludeContributors = default,
@@ -44,7 +44,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # projects = dl.projects.list()<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Dataloop.APIProject>>> GetMyProjectsAsResponseAsync(
             bool? excludeContributors = default,

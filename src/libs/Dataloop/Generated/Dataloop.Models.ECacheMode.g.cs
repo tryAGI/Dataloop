@@ -4,24 +4,24 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ECacheMode
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Apply,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApplyFilestore,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Destroy,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Get,
     }

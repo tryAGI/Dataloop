@@ -32,7 +32,7 @@ namespace Dataloop
         /// # member_json = dl.organizations.update_member(email='user@domain.com',<br/>
         /// # organization_id='organization_id',<br/>
         /// # role=dl.MemberOrgRole.MEMBER)<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Dataloop.APIUser>> PatchOrgMemberAsync(
             string orgId,
@@ -68,7 +68,7 @@ namespace Dataloop
         /// # member_json = dl.organizations.update_member(email='user@domain.com',<br/>
         /// # organization_id='organization_id',<br/>
         /// # role=dl.MemberOrgRole.MEMBER)<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Dataloop.APIUser>>> PatchOrgMemberAsResponseAsync(
             string orgId,

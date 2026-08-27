@@ -4,129 +4,129 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class AzureWebhookEventSubscription
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("lastModified")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.DateTime LastModified { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("created")]
         public global::System.DateTime? Created { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("autoRenew")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool AutoRenew { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("term")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Dataloop.AzureWebhookEventSubscriptionTerm Term { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("saasSubscriptionStatus")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string SaasSubscriptionStatus { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sandboxType")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string SandboxType { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("isTest")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool IsTest { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("isFreeTrial")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool IsFreeTrial { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sessionMode")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string SessionMode { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("allowedCustomerOperations")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Collections.Generic.IList<string> AllowedCustomerOperations { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("purchaser")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Dataloop.AzureWebhookEventSubscriptionPurchaser Purchaser { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("beneficiary")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Dataloop.AzureWebhookEventSubscriptionBeneficiary Beneficiary { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("quantity")]
         public double? Quantity { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("planId")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string PlanId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("offerId")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string OfferId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("publisherId")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string PublisherId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Name { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]

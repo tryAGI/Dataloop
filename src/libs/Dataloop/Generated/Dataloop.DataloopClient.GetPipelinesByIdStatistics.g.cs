@@ -37,7 +37,7 @@ namespace Dataloop
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="id"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -57,7 +57,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # pipeline_stats = project.pipelines.stats(pipeline='pipeline_entity')<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task GetPipelinesByIdStatisticsAsync(
             string id,
@@ -71,7 +71,7 @@ namespace Dataloop
             ).ConfigureAwait(false);
         }
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="id"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -91,7 +91,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # pipeline_stats = project.pipelines.stats(pipeline='pipeline_entity')<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse> GetPipelinesByIdStatisticsAsResponseAsync(
             string id,
@@ -157,7 +157,7 @@ namespace Dataloop
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                 global::Dataloop.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,

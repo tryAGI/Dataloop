@@ -4,152 +4,152 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum LoginsLogQueryOrderBy
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Attributes,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CreationAttributes,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Model,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AddHook,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Changed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DataValues,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Date,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Decrement,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Destroy,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Equals,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EqualsOneOf,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Get,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GetDataValue,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HasHook,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HasHooks,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Id,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Increment,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         IsNewRecord,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         IsSoftDeleted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgId,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgRole,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Previous,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Reload,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RemoveHook,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Restore,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Save,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sequelize,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Set,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SetAttributes,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SetDataValue,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ToJSON,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Update,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UserAgent,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UserId,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Validate,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Where,
     }

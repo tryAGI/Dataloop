@@ -4,172 +4,172 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum TaxType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AeTrn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AuAbn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AuArn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BrCnpj,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BrCpf,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CaBn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CaGstHst,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CaPstBc,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CaPstMb,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CaPstSk,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CaQst,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ChVat,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ClTin,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EsCif,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EuVat,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GbVat,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GeVat,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HkBr,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         IdNpwp,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         IlVat,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         InGst,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         JpCn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         JpRn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         KrBrn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LiUid,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MxRfc,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MyFrp,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MyItn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MySst,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NoVat,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NzGst,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RuInn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RuKpp,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SaVat,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SgGst,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SgUen,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ThVat,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TwVat,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UaVat,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UsEin,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ZaVat,
     }

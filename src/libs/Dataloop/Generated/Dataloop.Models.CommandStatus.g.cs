@@ -4,56 +4,56 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CommandStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Aborted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Canceled,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CleaningUp,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Created,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Failed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Finalizing,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         InProgress,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MakingChildren,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OnError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Success,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Timeout,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         WaitingChildren,
     }

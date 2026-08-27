@@ -4,148 +4,148 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PackageResourceType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Annotation,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AnnotationArray,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Assignment,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssignmentArray,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Boolean,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BooleanArray,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Dataset,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DatasetArray,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Execution,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ExecutionArray,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Float,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FloatArray,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Integer,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         IntegerArray,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Item,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ItemArray,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Json,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         JsonArray,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Model,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ModelArray,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Number,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NumberArray,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Package,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PackageArray,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Project,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ProjectArray,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Recipe,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RecipeArray,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Service,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ServiceArray,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         String,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         StringArray,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Task,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TaskArray,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VectorArray,
     }

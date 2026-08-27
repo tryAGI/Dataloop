@@ -4,20 +4,20 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum DpkDatasetOntologyType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Import,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Installed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Platform,
     }

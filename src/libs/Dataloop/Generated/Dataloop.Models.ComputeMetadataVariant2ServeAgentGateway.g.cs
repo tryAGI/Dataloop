@@ -10,11 +10,11 @@ namespace Dataloop
     public enum ComputeMetadataVariant2ServeAgentGateway
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Direct,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NginxGateway,
     }

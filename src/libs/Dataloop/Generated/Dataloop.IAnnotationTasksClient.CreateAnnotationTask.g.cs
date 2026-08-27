@@ -53,7 +53,7 @@ namespace Dataloop
         /// # due_date = datetime.datetime(day= 1, month= 1, year= 2029).timestamp(),<br/>
         /// # assignee_ids =[ 'annotator1@dataloop.ai', 'annotator2@dataloop.ai'],<br/>
         /// # available_actions=[dl.ItemAction("discard"), dl.ItemAction("to-check")])<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<global::Dataloop.APITask, global::Dataloop.APICommand>> CreateAnnotationTaskAsync(
 
@@ -109,7 +109,7 @@ namespace Dataloop
         /// # due_date = datetime.datetime(day= 1, month= 1, year= 2029).timestamp(),<br/>
         /// # assignee_ids =[ 'annotator1@dataloop.ai', 'annotator2@dataloop.ai'],<br/>
         /// # available_actions=[dl.ItemAction("discard"), dl.ItemAction("to-check")])<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.AnyOf<global::Dataloop.APITask, global::Dataloop.APICommand>>> CreateAnnotationTaskAsResponseAsync(
 

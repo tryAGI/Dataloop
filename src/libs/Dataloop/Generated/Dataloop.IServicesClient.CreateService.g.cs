@@ -59,7 +59,7 @@ namespace Dataloop
         /// # )<br/>
         /// # )<br/>
         /// # )<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.APIService> CreateServiceAsync(
 
@@ -121,7 +121,7 @@ namespace Dataloop
         /// # )<br/>
         /// # )<br/>
         /// # )<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APIService>> CreateServiceAsResponseAsync(
 

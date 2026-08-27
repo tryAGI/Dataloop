@@ -4,19 +4,19 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class APIReplicaStatusUpdate
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("replicaId")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string ReplicaId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dataloop.JsonConverters.ReplicaStatusJsonConverter))]
@@ -24,14 +24,14 @@ namespace Dataloop
         public required global::Dataloop.ReplicaStatus Status { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("numRestarts")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double NumRestarts { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("uptime")]
         [global::System.Text.Json.Serialization.JsonRequired]

@@ -4,33 +4,33 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class EllipseCoordinatesV1
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("center")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Dataloop.Point Center { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("rx")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double Rx { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("ry")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double Ry { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("angle")]
         public double? Angle { get; set; }

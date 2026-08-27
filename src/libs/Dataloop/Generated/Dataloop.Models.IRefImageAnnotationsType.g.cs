@@ -5,12 +5,12 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct IRefImageAnnotationsType : global::System.IEquatable<IRefImageAnnotationsType>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public object? IRefImageAnnotationsTypeVariant1 { get; init; }
@@ -19,7 +19,7 @@ namespace Dataloop
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(IRefImageAnnotationsTypeVariant1))]
@@ -27,7 +27,7 @@ namespace Dataloop
         public bool IsIRefImageAnnotationsTypeVariant1 => IRefImageAnnotationsTypeVariant1 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickIRefImageAnnotationsTypeVariant1(
 #if NET6_0_OR_GREATER
@@ -40,14 +40,14 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object PickIRefImageAnnotationsTypeVariant1() => IsIRefImageAnnotationsTypeVariant1
             ? IRefImageAnnotationsTypeVariant1!
             : throw new global::System.InvalidOperationException($"Expected union variant 'IRefImageAnnotationsTypeVariant1' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.IBaseRefAnnotationCoordinates? BaseAnnotationCoordinates { get; init; }
@@ -56,7 +56,7 @@ namespace Dataloop
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(BaseAnnotationCoordinates))]
@@ -64,7 +64,7 @@ namespace Dataloop
         public bool IsBaseAnnotationCoordinates => BaseAnnotationCoordinates != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickBaseAnnotationCoordinates(
 #if NET6_0_OR_GREATER
@@ -77,23 +77,23 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Dataloop.IBaseRefAnnotationCoordinates PickBaseAnnotationCoordinates() => IsBaseAnnotationCoordinates
             ? BaseAnnotationCoordinates!
             : throw new global::System.InvalidOperationException($"Expected union variant 'BaseAnnotationCoordinates' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator IRefImageAnnotationsType(global::Dataloop.IBaseRefAnnotationCoordinates value) => new IRefImageAnnotationsType((global::Dataloop.IBaseRefAnnotationCoordinates?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Dataloop.IBaseRefAnnotationCoordinates?(IRefImageAnnotationsType @this) => @this.BaseAnnotationCoordinates;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public IRefImageAnnotationsType(global::Dataloop.IBaseRefAnnotationCoordinates? value)
         {
@@ -101,12 +101,12 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static IRefImageAnnotationsType FromBaseAnnotationCoordinates(global::Dataloop.IBaseRefAnnotationCoordinates? value) => new IRefImageAnnotationsType(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public IRefImageAnnotationsType(
             object? iRefImageAnnotationsTypeVariant1,
@@ -118,23 +118,23 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             BaseAnnotationCoordinates as object ??
-            IRefImageAnnotationsTypeVariant1 as object 
+            IRefImageAnnotationsTypeVariant1 as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             IRefImageAnnotationsTypeVariant1?.ToString() ??
-            BaseAnnotationCoordinates?.ToString() 
+            BaseAnnotationCoordinates?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -142,7 +142,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<object, TResult>? iRefImageAnnotationsTypeVariant1 = null,
@@ -167,7 +167,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<object>? iRefImageAnnotationsTypeVariant1 = null,
@@ -191,7 +191,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<object>? iRefImageAnnotationsTypeVariant1 = null,
@@ -214,7 +214,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -235,18 +235,18 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(IRefImageAnnotationsType other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<object?>.Default.Equals(IRefImageAnnotationsTypeVariant1, other.IRefImageAnnotationsTypeVariant1) &&
-                global::System.Collections.Generic.EqualityComparer<global::Dataloop.IBaseRefAnnotationCoordinates?>.Default.Equals(BaseAnnotationCoordinates, other.BaseAnnotationCoordinates) 
+                global::System.Collections.Generic.EqualityComparer<global::Dataloop.IBaseRefAnnotationCoordinates?>.Default.Equals(BaseAnnotationCoordinates, other.BaseAnnotationCoordinates)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(IRefImageAnnotationsType obj1, IRefImageAnnotationsType obj2)
         {
@@ -254,7 +254,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(IRefImageAnnotationsType obj1, IRefImageAnnotationsType obj2)
         {
@@ -262,7 +262,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

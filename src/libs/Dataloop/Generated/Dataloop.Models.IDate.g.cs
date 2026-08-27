@@ -5,12 +5,12 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct IDate : global::System.IEquatable<IDate>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::System.DateTime? Time { get; init; }
@@ -19,7 +19,7 @@ namespace Dataloop
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Time))]
@@ -27,7 +27,7 @@ namespace Dataloop
         public bool IsTime => Time != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickTime(
 #if NET6_0_OR_GREATER
@@ -40,14 +40,14 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::System.DateTime PickTime() => IsTime
             ? Time!.Value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Time' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public double? IDateVariant2 { get; init; }
@@ -56,7 +56,7 @@ namespace Dataloop
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(IDateVariant2))]
@@ -64,7 +64,7 @@ namespace Dataloop
         public bool IsIDateVariant2 => IDateVariant2 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickIDateVariant2(
 #if NET6_0_OR_GREATER
@@ -77,14 +77,14 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public double PickIDateVariant2() => IsIDateVariant2
             ? IDateVariant2!.Value
             : throw new global::System.InvalidOperationException($"Expected union variant 'IDateVariant2' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public string? IDateVariant3 { get; init; }
@@ -93,7 +93,7 @@ namespace Dataloop
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(IDateVariant3))]
@@ -101,7 +101,7 @@ namespace Dataloop
         public bool IsIDateVariant3 => IDateVariant3 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickIDateVariant3(
 #if NET6_0_OR_GREATER
@@ -114,23 +114,23 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public string PickIDateVariant3() => IsIDateVariant3
             ? IDateVariant3!
             : throw new global::System.InvalidOperationException($"Expected union variant 'IDateVariant3' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator IDate(global::System.DateTime value) => new IDate((global::System.DateTime?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::System.DateTime?(IDate @this) => @this.Time;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public IDate(global::System.DateTime? value)
         {
@@ -138,22 +138,22 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static IDate FromTime(global::System.DateTime? value) => new IDate(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator IDate(double value) => new IDate((double?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator double?(IDate @this) => @this.IDateVariant2;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public IDate(double? value)
         {
@@ -161,22 +161,22 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static IDate FromIDateVariant2(double? value) => new IDate(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator IDate(string value) => new IDate((string?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator string?(IDate @this) => @this.IDateVariant3;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public IDate(string? value)
         {
@@ -184,12 +184,12 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static IDate FromIDateVariant3(string? value) => new IDate(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public IDate(
             global::System.DateTime? time,
@@ -203,25 +203,25 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             IDateVariant3 as object ??
             IDateVariant2 as object ??
-            Time as object 
+            Time as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             Time?.ToString() ??
             IDateVariant2?.ToString() ??
-            IDateVariant3?.ToString() 
+            IDateVariant3?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -229,7 +229,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::System.DateTime?, TResult>? time = null,
@@ -259,7 +259,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::System.DateTime?>? time = null,
@@ -289,7 +289,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::System.DateTime?>? time = null,
@@ -317,7 +317,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -340,19 +340,19 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(IDate other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::System.DateTime?>.Default.Equals(Time, other.Time) &&
                 global::System.Collections.Generic.EqualityComparer<double?>.Default.Equals(IDateVariant2, other.IDateVariant2) &&
-                global::System.Collections.Generic.EqualityComparer<string?>.Default.Equals(IDateVariant3, other.IDateVariant3) 
+                global::System.Collections.Generic.EqualityComparer<string?>.Default.Equals(IDateVariant3, other.IDateVariant3)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(IDate obj1, IDate obj2)
         {
@@ -360,7 +360,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(IDate obj1, IDate obj2)
         {
@@ -368,7 +368,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

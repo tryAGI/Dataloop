@@ -4,16 +4,16 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ExecutionMode
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Always,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Once,
     }

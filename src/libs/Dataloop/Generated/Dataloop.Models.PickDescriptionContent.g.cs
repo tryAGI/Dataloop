@@ -9,7 +9,7 @@ namespace Dataloop
     public sealed partial class PickDescriptionContent
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("content")]
         [global::System.Text.Json.Serialization.JsonRequired]

@@ -4,7 +4,7 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GenerateDatasetOptions
     {
@@ -29,34 +29,34 @@ namespace Dataloop
         public required double ItemsCount { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dirsCount")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double DirsCount { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("maxDirDepth")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double MaxDirDepth { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("metadata")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Dataloop.GenerateDatasetOptionsMetadata Metadata { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("annotations")]
         public global::Dataloop.GenerateDatasetOptionsAnnotations? Annotations { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("outputStream")]
         public global::Dataloop.GenerateDatasetOptionsOutputStream? OutputStream { get; set; }

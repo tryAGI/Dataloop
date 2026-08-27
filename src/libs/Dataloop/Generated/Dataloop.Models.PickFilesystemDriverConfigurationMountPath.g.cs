@@ -9,7 +9,7 @@ namespace Dataloop
     public sealed partial class PickFilesystemDriverConfigurationMountPath
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("mountPath")]
         [global::System.Text.Json.Serialization.JsonRequired]

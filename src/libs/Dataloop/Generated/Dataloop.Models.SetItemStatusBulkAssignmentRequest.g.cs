@@ -9,14 +9,14 @@ namespace Dataloop
     public sealed partial class SetItemStatusBulkAssignmentRequest
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("statusPayload")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Dataloop.AssignmentStatusPayload StatusPayload { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("itemIds")]
         [global::System.Text.Json.Serialization.JsonRequired]

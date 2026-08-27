@@ -28,7 +28,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # project.packages.get(package_id='package_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.APIPackage> GetPackageAsync(
             string id,
@@ -59,7 +59,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # project.packages.get(package_id='package_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APIPackage>> GetPackageAsResponseAsync(
             string id,

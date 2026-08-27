@@ -4,12 +4,12 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class BenchmarkOptions
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("exportType")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dataloop.JsonConverters.BenchmarkOptionsExportTypeJsonConverter))]
@@ -17,14 +17,14 @@ namespace Dataloop
         public required global::Dataloop.BenchmarkOptionsExportType ExportType { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("bulkSize")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double BulkSize { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("childCommands")]
         [global::System.Text.Json.Serialization.JsonRequired]

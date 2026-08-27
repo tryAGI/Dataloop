@@ -4,32 +4,32 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class AzureWebhookEventSubscriptionTerm
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("chargeDuration")]
         public double? ChargeDuration { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("termUnit")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string TermUnit { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("endDate")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.DateTime EndDate { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("startDate")]
         [global::System.Text.Json.Serialization.JsonRequired]

@@ -44,7 +44,7 @@ namespace Dataloop
             ref string content);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="id"></param>
         /// <param name="request"></param>
@@ -75,7 +75,7 @@ namespace Dataloop
         /// # with_metadata=True,<br/>
         /// # with_task_annotations_status=False,<br/>
         /// # with_annotations=False)<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.APICommand> CloneItemAsync(
             string id,
@@ -95,7 +95,7 @@ namespace Dataloop
             return __response.Body;
         }
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="id"></param>
         /// <param name="request"></param>
@@ -126,7 +126,7 @@ namespace Dataloop
         /// # with_metadata=True,<br/>
         /// # with_task_annotations_status=False,<br/>
         /// # with_annotations=False)<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APICommand>> CloneItemAsResponseAsync(
             string id,
@@ -197,7 +197,7 @@ namespace Dataloop
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                             var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
                             var __httpRequestContent = new global::System.Net.Http.StringContent(
@@ -493,7 +493,7 @@ namespace Dataloop
             }
         }
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="id"></param>
         /// <param name="targetDatasetId">

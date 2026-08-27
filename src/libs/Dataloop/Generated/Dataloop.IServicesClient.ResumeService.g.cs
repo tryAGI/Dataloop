@@ -28,7 +28,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # service_json = package.services.resume(service_id='service_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<global::Dataloop.APIService, string>> ResumeServiceAsync(
             string id,
@@ -59,7 +59,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # service_json = package.services.resume(service_id='service_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.AnyOf<global::Dataloop.APIService, string>>> ResumeServiceAsResponseAsync(
             string id,

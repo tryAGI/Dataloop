@@ -26,7 +26,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # service = package.services.update(service='service_entity')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<global::Dataloop.APIService, string>> UpdateServiceAsync(
             string id,
@@ -57,7 +57,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # service = package.services.update(service='service_entity')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.AnyOf<global::Dataloop.APIService, string>>> UpdateServiceAsResponseAsync(
             string id,

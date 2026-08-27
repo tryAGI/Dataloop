@@ -55,7 +55,7 @@ namespace Dataloop
         /// # :param str feature_set_id: feature set id to delete<br/>
         /// # :return: success<br/>
         /// # :rtype: bool<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<string> DeleteFeatureSetAsync(
             string id,
@@ -84,7 +84,7 @@ namespace Dataloop
         /// # :param str feature_set_id: feature set id to delete<br/>
         /// # :return: success<br/>
         /// # :rtype: bool<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<string>> DeleteFeatureSetAsResponseAsync(
             string id,
@@ -150,7 +150,7 @@ namespace Dataloop
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                 global::Dataloop.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,

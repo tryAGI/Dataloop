@@ -28,7 +28,7 @@ namespace Dataloop
         /// # recipe.ontologies.create(labels='labels_entity',<br/>
         /// # title='new_ontology',<br/>
         /// # project_ids='project_ids')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<global::Dataloop.APIOntologyV2, global::Dataloop.APIOntology>> CreateOntologyAsync(
 
@@ -59,7 +59,7 @@ namespace Dataloop
         /// # recipe.ontologies.create(labels='labels_entity',<br/>
         /// # title='new_ontology',<br/>
         /// # project_ids='project_ids')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.AnyOf<global::Dataloop.APIOntologyV2, global::Dataloop.APIOntology>>> CreateOntologyAsResponseAsync(
 

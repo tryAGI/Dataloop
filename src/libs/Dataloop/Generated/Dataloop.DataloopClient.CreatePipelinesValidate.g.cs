@@ -35,7 +35,7 @@ namespace Dataloop
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -52,7 +52,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # validation_result = project.pipelines.validate(pipeline_json={'name': 'my_pipeline', 'nodes': []})<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task CreatePipelinesValidateAsync(
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
@@ -64,7 +64,7 @@ namespace Dataloop
             ).ConfigureAwait(false);
         }
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -81,7 +81,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # validation_result = project.pipelines.validate(pipeline_json={'name': 'my_pipeline', 'nodes': []})<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse> CreatePipelinesValidateAsResponseAsync(
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
@@ -145,7 +145,7 @@ namespace Dataloop
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                 global::Dataloop.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,

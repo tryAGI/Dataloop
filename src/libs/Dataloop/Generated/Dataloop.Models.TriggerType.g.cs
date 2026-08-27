@@ -4,16 +4,16 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum TriggerType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cron,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Event,
     }

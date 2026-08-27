@@ -5,7 +5,7 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct RecipeV2Input : global::System.IEquatable<RecipeV2Input>
     {
@@ -19,7 +19,7 @@ namespace Dataloop
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(PickTitleOrProjectIdsOntology))]
@@ -27,7 +27,7 @@ namespace Dataloop
         public bool IsPickTitleOrProjectIdsOntology => PickTitleOrProjectIdsOntology != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickPickTitleOrProjectIdsOntology(
 #if NET6_0_OR_GREATER
@@ -40,7 +40,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Dataloop.PickRecipeV2TitleOrProjectIdsOrOntology PickPickTitleOrProjectIdsOntology() => IsPickTitleOrProjectIdsOntology
             ? PickTitleOrProjectIdsOntology!
@@ -56,7 +56,7 @@ namespace Dataloop
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Partial))]
@@ -64,7 +64,7 @@ namespace Dataloop
         public bool IsPartial => Partial != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickPartial(
 #if NET6_0_OR_GREATER
@@ -77,23 +77,23 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Dataloop.PartialRecipeV2 PickPartial() => IsPartial
             ? Partial!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Partial' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator RecipeV2Input(global::Dataloop.PickRecipeV2TitleOrProjectIdsOrOntology value) => new RecipeV2Input((global::Dataloop.PickRecipeV2TitleOrProjectIdsOrOntology?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Dataloop.PickRecipeV2TitleOrProjectIdsOrOntology?(RecipeV2Input @this) => @this.PickTitleOrProjectIdsOntology;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public RecipeV2Input(global::Dataloop.PickRecipeV2TitleOrProjectIdsOrOntology? value)
         {
@@ -101,22 +101,22 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static RecipeV2Input FromPickTitleOrProjectIdsOntology(global::Dataloop.PickRecipeV2TitleOrProjectIdsOrOntology? value) => new RecipeV2Input(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator RecipeV2Input(global::Dataloop.PartialRecipeV2 value) => new RecipeV2Input((global::Dataloop.PartialRecipeV2?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Dataloop.PartialRecipeV2?(RecipeV2Input @this) => @this.Partial;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public RecipeV2Input(global::Dataloop.PartialRecipeV2? value)
         {
@@ -124,12 +124,12 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static RecipeV2Input FromPartial(global::Dataloop.PartialRecipeV2? value) => new RecipeV2Input(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public RecipeV2Input(
             global::Dataloop.PickRecipeV2TitleOrProjectIdsOrOntology? pickTitleOrProjectIdsOntology,
@@ -141,23 +141,23 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             Partial as object ??
-            PickTitleOrProjectIdsOntology as object 
+            PickTitleOrProjectIdsOntology as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             PickTitleOrProjectIdsOntology?.ToString() ??
-            Partial?.ToString() 
+            Partial?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -165,7 +165,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Dataloop.PickRecipeV2TitleOrProjectIdsOrOntology, TResult>? pickTitleOrProjectIdsOntology = null,
@@ -190,7 +190,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Dataloop.PickRecipeV2TitleOrProjectIdsOrOntology>? pickTitleOrProjectIdsOntology = null,
@@ -214,7 +214,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Dataloop.PickRecipeV2TitleOrProjectIdsOrOntology>? pickTitleOrProjectIdsOntology = null,
@@ -237,7 +237,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -258,18 +258,18 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(RecipeV2Input other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Dataloop.PickRecipeV2TitleOrProjectIdsOrOntology?>.Default.Equals(PickTitleOrProjectIdsOntology, other.PickTitleOrProjectIdsOntology) &&
-                global::System.Collections.Generic.EqualityComparer<global::Dataloop.PartialRecipeV2?>.Default.Equals(Partial, other.Partial) 
+                global::System.Collections.Generic.EqualityComparer<global::Dataloop.PartialRecipeV2?>.Default.Equals(Partial, other.Partial)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(RecipeV2Input obj1, RecipeV2Input obj2)
         {
@@ -277,7 +277,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(RecipeV2Input obj1, RecipeV2Input obj2)
         {
@@ -285,7 +285,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

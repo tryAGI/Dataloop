@@ -26,7 +26,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # is_deleted = item.annotations.delete(annotation_id='annotation_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task DeleteAnnotationAsync(
             string annotationId,
@@ -54,7 +54,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # is_deleted = item.annotations.delete(annotation_id='annotation_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse> DeleteAnnotationAsResponseAsync(
             string annotationId,

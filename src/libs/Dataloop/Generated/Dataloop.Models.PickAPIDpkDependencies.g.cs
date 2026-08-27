@@ -9,7 +9,7 @@ namespace Dataloop
     public sealed partial class PickAPIDpkDependencies
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dependencies")]
         public global::System.Collections.Generic.IList<global::Dataloop.IDpkDependency>? Dependencies { get; set; }

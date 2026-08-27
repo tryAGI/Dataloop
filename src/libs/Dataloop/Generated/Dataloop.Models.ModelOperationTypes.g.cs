@@ -4,28 +4,28 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ModelOperationTypes
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Deploy,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Embed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Evaluate,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Predict,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Train,
     }

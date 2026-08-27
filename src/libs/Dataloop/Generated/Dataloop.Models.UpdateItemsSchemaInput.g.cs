@@ -4,24 +4,24 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class UpdateItemsSchemaInput
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("schemaKeys")]
         public global::Dataloop.UpdateItemsSchemaInputSchemaKeys? SchemaKeys { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("unsearchablePaths")]
         public global::Dataloop.UpdateItemsSchemaInputUnsearchablePaths? UnsearchablePaths { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("indexingOptions")]
         public global::Dataloop.UpdateItemsSchemaInputIndexingOptions? IndexingOptions { get; set; }

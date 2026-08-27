@@ -4,20 +4,20 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum KubernetesServiceType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ClusterIP,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LoadBalancer,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NodePort,
     }

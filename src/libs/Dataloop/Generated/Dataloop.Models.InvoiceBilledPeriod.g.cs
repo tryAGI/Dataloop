@@ -9,14 +9,14 @@ namespace Dataloop
     public sealed partial class InvoiceBilledPeriod
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("endDate")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.DateTime EndDate { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("startDate")]
         [global::System.Text.Json.Serialization.JsonRequired]

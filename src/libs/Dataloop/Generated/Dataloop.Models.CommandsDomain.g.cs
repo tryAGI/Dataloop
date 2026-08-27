@@ -4,32 +4,32 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CommandsDomain
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Billing,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Data,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Faas,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ModelManagement,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Settings,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Workflows,
     }

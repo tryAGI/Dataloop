@@ -22,7 +22,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # project.packages.revisions(package='package_entity')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Dataloop.APIPackage>> GetPackageRevisionsAsync(
             string id,
@@ -46,7 +46,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # project.packages.revisions(package='package_entity')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Dataloop.APIPackage>>> GetPackageRevisionsAsResponseAsync(
             string id,

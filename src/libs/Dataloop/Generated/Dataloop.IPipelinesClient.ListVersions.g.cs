@@ -5,7 +5,7 @@ namespace Dataloop
     public partial interface IPipelinesClient
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="pipelineId"></param>
         /// <param name="page">
@@ -22,7 +22,7 @@ namespace Dataloop
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="pipelineId"></param>
         /// <param name="page">

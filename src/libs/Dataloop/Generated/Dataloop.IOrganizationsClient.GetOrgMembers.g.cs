@@ -29,7 +29,7 @@ namespace Dataloop
         /// # <br/>
         /// # list_members = dl.organizations.list_members(organization='organization-entity',<br/>
         /// # role=dl.MemberOrgRole.MEMBER)<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Dataloop.APIUser>> GetOrgMembersAsync(
             string orgId,
@@ -60,7 +60,7 @@ namespace Dataloop
         /// # <br/>
         /// # list_members = dl.organizations.list_members(organization='organization-entity',<br/>
         /// # role=dl.MemberOrgRole.MEMBER)<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Dataloop.APIUser>>> GetOrgMembersAsResponseAsync(
             string orgId,

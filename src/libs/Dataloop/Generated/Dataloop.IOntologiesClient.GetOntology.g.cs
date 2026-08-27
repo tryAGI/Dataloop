@@ -23,7 +23,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # recipe.ontologies.get(ontology_id='ontology_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<global::Dataloop.APIOntologyV2, global::Dataloop.APIOntology>> GetOntologyAsync(
             string id,
@@ -48,7 +48,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # recipe.ontologies.get(ontology_id='ontology_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.AnyOf<global::Dataloop.APIOntologyV2, global::Dataloop.APIOntology>>> GetOntologyAsResponseAsync(
             string id,

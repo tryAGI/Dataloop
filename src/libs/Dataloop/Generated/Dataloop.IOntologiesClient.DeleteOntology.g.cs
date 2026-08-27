@@ -23,7 +23,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # recipe.ontologies.delete(ontology_id='ontology_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task DeleteOntologyAsync(
             string id,
@@ -48,7 +48,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # recipe.ontologies.delete(ontology_id='ontology_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse> DeleteOntologyAsResponseAsync(
             string id,

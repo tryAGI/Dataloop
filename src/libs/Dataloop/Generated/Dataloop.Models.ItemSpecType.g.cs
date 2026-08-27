@@ -4,16 +4,16 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ItemSpecType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ClonedItemSpec,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MasterItemSpec,
     }

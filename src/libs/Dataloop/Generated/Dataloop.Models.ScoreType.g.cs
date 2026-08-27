@@ -4,40 +4,40 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ScoreType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AnnotationAttribute,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AnnotationIou,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AnnotationLabel,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AnnotationOverall,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ItemOverall,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LabelConfusion,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UserConfusion,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UserOverall,
     }

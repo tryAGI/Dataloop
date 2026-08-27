@@ -72,7 +72,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # annotations = item.annotations.update(annotation='annotation')<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.APIAnnotation> UpdateAnnotationAsync(
             string annotationId,
@@ -120,7 +120,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # annotations = item.annotations.update(annotation='annotation')<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APIAnnotation>> UpdateAnnotationAsResponseAsync(
             string annotationId,
@@ -199,7 +199,7 @@ namespace Dataloop
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                             var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
                             var __httpRequestContent = new global::System.Net.Http.StringContent(

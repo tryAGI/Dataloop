@@ -4,18 +4,18 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class UpdateItemsSchemaInputSchemaKeys
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("remove")]
         public global::System.Collections.Generic.IList<string>? Remove { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("add")]
         public global::System.Collections.Generic.IList<global::Dataloop.SchemaEntryInput>? Add { get; set; }

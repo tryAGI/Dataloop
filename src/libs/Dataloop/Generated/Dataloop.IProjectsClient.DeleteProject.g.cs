@@ -26,7 +26,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # is_deleted = dl.projects.delete(project_id='project_id', sure=True, really=True)<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task DeleteProjectAsync(
             string projectId,
@@ -54,7 +54,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # is_deleted = dl.projects.delete(project_id='project_id', sure=True, really=True)<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse> DeleteProjectAsResponseAsync(
             string projectId,

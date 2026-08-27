@@ -4,20 +4,20 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum APICustomActionControls
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Button,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Checkbox,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Radio,
     }

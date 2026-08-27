@@ -9,14 +9,14 @@ namespace Dataloop
     public sealed partial class GenerateDatasetOptionsTopics
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("annotations")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Annotations { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("items")]
         [global::System.Text.Json.Serialization.JsonRequired]

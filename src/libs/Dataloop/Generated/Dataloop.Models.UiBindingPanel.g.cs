@@ -4,24 +4,24 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum UiBindingPanel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         All,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Browser,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Studio,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Table,
     }

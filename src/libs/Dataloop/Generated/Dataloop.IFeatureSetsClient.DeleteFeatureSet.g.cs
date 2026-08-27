@@ -18,7 +18,7 @@ namespace Dataloop
         /// # :param str feature_set_id: feature set id to delete<br/>
         /// # :return: success<br/>
         /// # :rtype: bool<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<string> DeleteFeatureSetAsync(
             string id,
@@ -38,7 +38,7 @@ namespace Dataloop
         /// # :param str feature_set_id: feature set id to delete<br/>
         /// # :return: success<br/>
         /// # :rtype: bool<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<string>> DeleteFeatureSetAsResponseAsync(
             string id,

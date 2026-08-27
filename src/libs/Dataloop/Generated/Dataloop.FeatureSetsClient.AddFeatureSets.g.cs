@@ -60,7 +60,7 @@ namespace Dataloop
         /// # :param str model_id: the ID of the model that creates the vectors<br/>
         /// # :param str org_id: the ID of the org where feature set will be created<br/>
         /// # :return: Feature Set object<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Dataloop.APIFeatureSet>> AddFeatureSetsAsync(
 
@@ -96,7 +96,7 @@ namespace Dataloop
         /// # :param str model_id: the ID of the model that creates the vectors<br/>
         /// # :param str org_id: the ID of the org where feature set will be created<br/>
         /// # :return: Feature Set object<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Dataloop.APIFeatureSet>>> AddFeatureSetsAsResponseAsync(
 
@@ -163,7 +163,7 @@ namespace Dataloop
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                             var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
                             var __httpRequestContent = new global::System.Net.Http.StringContent(
@@ -361,7 +361,7 @@ namespace Dataloop
                                 retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
-                            // 
+                            //
                             if ((int)__response.StatusCode == 400)
                             {
                                 string? __content_400 = null;

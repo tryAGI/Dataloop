@@ -4,7 +4,7 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GenerateDatasetOptionsOutputStream
     {
@@ -15,7 +15,7 @@ namespace Dataloop
         public global::Dataloop.PickDataStreamConfigAnyMaxConcurrentReadersOrRetentionOrCompression? Config { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("recreate")]
         public bool? Recreate { get; set; }

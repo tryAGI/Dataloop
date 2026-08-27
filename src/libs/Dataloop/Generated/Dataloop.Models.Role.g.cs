@@ -4,24 +4,24 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum Role
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AnnotationManager,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Annotator,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Engineer,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Owner,
     }

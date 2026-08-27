@@ -4,7 +4,7 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ComputeMetadataVariant2
     {
@@ -24,7 +24,7 @@ namespace Dataloop
         public global::System.Collections.Generic.IList<string>? ServeAgentLoadBalancerSourceRanges { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("serveAgentServiceType")]
         public string? ServeAgentServiceType { get; set; }
@@ -43,7 +43,7 @@ namespace Dataloop
         public global::System.Collections.Generic.IList<string>? ServeAgentLoadBalancerSubnetIds { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("serveAgentInternalLoadBalancer")]
         public bool? ServeAgentInternalLoadBalancer { get; set; }
@@ -57,67 +57,67 @@ namespace Dataloop
         public string? ServeAgentProxyEndpoint { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("serveAgentDNS")]
         public string? ServeAgentDNS { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("cacheRunnerFS")]
         public string? CacheRunnerFS { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("filestoreServer")]
         public string? FilestoreServer { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("cacheRunner")]
         public global::Dataloop.CacheRunner? CacheRunner { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("nfsServer")]
         public string? NfsServer { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("agentScriptUpdatedTime")]
         public string? AgentScriptUpdatedTime { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("nodeSelector")]
         public global::System.Collections.Generic.IList<global::Dataloop.DriverNodeSelector>? NodeSelector { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("tolerations")]
         public global::System.Collections.Generic.IList<global::Dataloop.DriverToleration>? Tolerations { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("allowedInstances")]
         public global::System.Collections.Generic.IList<global::Dataloop.DataloopPodType>? AllowedInstances { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("serveAgentIP")]
         public string? ServeAgentIP { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("serveAgentEndpoint")]
         public string? ServeAgentEndpoint { get; set; }

@@ -28,7 +28,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # success = package.services.pause(service_id='service_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<global::Dataloop.APIService, string>> StopServiceAsync(
             string id,
@@ -59,7 +59,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # success = package.services.pause(service_id='service_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.AnyOf<global::Dataloop.APIService, string>>> StopServiceAsResponseAsync(
             string id,

@@ -5,7 +5,7 @@ namespace Dataloop
     public partial interface IBillingClient
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="account"></param>
         /// <param name="id"></param>
@@ -21,7 +21,7 @@ namespace Dataloop
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="account"></param>
         /// <param name="id"></param>
@@ -37,7 +37,7 @@ namespace Dataloop
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="account"></param>
         /// <param name="id"></param>

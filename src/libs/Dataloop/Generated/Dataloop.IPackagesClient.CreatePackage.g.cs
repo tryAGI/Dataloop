@@ -47,7 +47,7 @@ namespace Dataloop
         /// # version='1.0.0',<br/>
         /// # src_path=os.getcwd()<br/>
         /// # )<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.APIPackage> CreatePackageAsync(
 
@@ -97,7 +97,7 @@ namespace Dataloop
         /// # version='1.0.0',<br/>
         /// # src_path=os.getcwd()<br/>
         /// # )<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APIPackage>> CreatePackageAsResponseAsync(
 

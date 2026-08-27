@@ -4,48 +4,48 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum IntegrationType2
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AwsCross,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AwsSts,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Azureblob,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GcpCross,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GcpWorkloadIdentityFederation,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gcs,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         KeyValue,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PrivateRegistry,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         S3,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         S3Api,
     }

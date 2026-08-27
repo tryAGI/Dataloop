@@ -4,24 +4,24 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class IClusterEnvironmentVariableValueFrom
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("configMapKeyRef")]
         public global::Dataloop.IClusterEnvironmentVariableValueFromConfigMapKeyRef? ConfigMapKeyRef { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("secretKeyRef")]
         public global::Dataloop.IClusterEnvironmentVariableValueFromSecretKeyRef? SecretKeyRef { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("fieldRef")]
         public global::Dataloop.IClusterEnvironmentVariableValueFromFieldRef? FieldRef { get; set; }

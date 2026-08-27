@@ -4,84 +4,84 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ReplicaReason
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Completed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ContainerCannotRun,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ContainerCreating,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CrashLoopBackOff,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CreateContainerConfigError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CreateContainerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DeadlineExceeded,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ErrImagePull,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Error,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Evicted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ImagePullBackOff,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         InvalidImageName,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NodeAffinity,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NodeLost,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OOMKilled,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pending,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Shutdown,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UnexpectedAdmissionError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Unschedulable,
     }

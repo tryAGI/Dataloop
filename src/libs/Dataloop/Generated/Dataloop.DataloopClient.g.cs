@@ -38,7 +38,7 @@ namespace Dataloop
         internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext> JsonSerializerContextProvider { get; set; } = new(() => global::Dataloop.SourceGenerationContext.Default);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext
         {
@@ -48,7 +48,7 @@ namespace Dataloop
 
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public APIKeysClient APIKeys => new APIKeysClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -57,7 +57,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AccountsClient Accounts => new AccountsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -66,7 +66,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ActivitiesClient Activities => new ActivitiesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -75,7 +75,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AnnotationLogsClient AnnotationLogs => new AnnotationLogsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -84,7 +84,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AnnotationTasksClient AnnotationTasks => new AnnotationTasksClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -93,7 +93,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AnnotationsClient Annotations => new AnnotationsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -102,7 +102,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AppsClient Apps => new AppsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -111,7 +111,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AssignmentsClient Assignments => new AssignmentsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -120,7 +120,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AuditClient Audit => new AuditClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -129,7 +129,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public BillingClient Billing => new BillingClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -138,7 +138,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public CompositionsClient Compositions => new CompositionsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -147,7 +147,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ComputeClient Compute => new ComputeClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -156,7 +156,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public DatasetItemAnnotationsClient DatasetItemAnnotations => new DatasetItemAnnotationsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -165,7 +165,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public DatasetItemsClient DatasetItems => new DatasetItemsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -174,7 +174,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public DatasetStorageClient DatasetStorage => new DatasetStorageClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -183,7 +183,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public DatasetsClient Datasets => new DatasetsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -192,7 +192,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public DpkClient Dpk => new DpkClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -201,7 +201,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ExecutionsClient Executions => new ExecutionsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -210,7 +210,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public FeatureSetsClient FeatureSets => new FeatureSetsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -219,7 +219,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public FeatureVectorsClient FeatureVectors => new FeatureVectorsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -228,7 +228,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public GroupsClient Groups => new GroupsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -237,7 +237,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public GuestsClient Guests => new GuestsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -246,7 +246,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public InstanceCatalogClient InstanceCatalog => new InstanceCatalogClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -255,7 +255,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public IntegrationsClient Integrations => new IntegrationsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -264,7 +264,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public InvoicesClient Invoices => new InvoicesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -273,7 +273,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ItemAnnotationsClient ItemAnnotations => new ItemAnnotationsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -282,7 +282,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ItemsClient Items => new ItemsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -291,7 +291,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public LabelsClient Labels => new LabelsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -300,7 +300,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ModelMetricsClient ModelMetrics => new ModelMetricsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -309,7 +309,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ModelsClient Models => new ModelsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -318,7 +318,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public OntologiesClient Ontologies => new OntologiesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -327,7 +327,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public OrgIntegrationsClient OrgIntegrations => new OrgIntegrationsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -336,7 +336,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public OrganizationsClient Organizations => new OrganizationsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -345,7 +345,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public PackagesClient Packages => new PackagesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -354,7 +354,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public PipelinesClient Pipelines => new PipelinesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -363,7 +363,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public PipelinesQueryClient PipelinesQuery => new PipelinesQueryClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -372,7 +372,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public PipelinesTemplatesClient PipelinesTemplates => new PipelinesTemplatesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -381,7 +381,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public PiperMiscClient PiperMisc => new PiperMiscClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -390,7 +390,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public PlansClient Plans => new PlansClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -399,7 +399,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ProjectsClient Projects => new ProjectsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -408,7 +408,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public QueryClient Query => new QueryClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -417,7 +417,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public RecipesClient Recipes => new RecipesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -426,7 +426,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ScoresClient Scores => new ScoresClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -435,7 +435,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ServiceDriversClient ServiceDrivers => new ServiceDriversClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -444,7 +444,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ServicesClient Services => new ServicesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -453,7 +453,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ServicesMetricClient ServicesMetric => new ServicesMetricClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -462,7 +462,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public SettingsClient Settings => new SettingsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -471,7 +471,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public StorageDriversClient StorageDrivers => new StorageDriversClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -480,7 +480,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public StructuresClient Structures => new StructuresClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -489,7 +489,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public SubscriptionsClient Subscriptions => new SubscriptionsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -498,7 +498,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TasksClient Tasks => new TasksClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -507,7 +507,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TriggerResourceInformationClient TriggerResourceInformation => new TriggerResourceInformationClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -516,7 +516,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TriggersClient Triggers => new TriggersClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -525,7 +525,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public UsageClient Usage => new UsageClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -534,7 +534,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public UsersClient Users => new UsersClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -543,7 +543,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public VersionClient Version => new VersionClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -552,7 +552,7 @@ namespace Dataloop
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public WebHooksClient WebHooks => new WebHooksClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {

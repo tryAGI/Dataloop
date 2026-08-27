@@ -4,84 +4,84 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class APIModelMetadataSystem
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("archived")]
         public bool? Archived { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("ontologyId")]
         public string? OntologyId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("train")]
         public global::Dataloop.ModelOperationMetadata? Train { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("predict")]
         public global::Dataloop.ModelOperationMetadata? Predict { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("evaluate")]
         public global::Dataloop.ModelOperationMetadata? Evaluate { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("deploy")]
         public global::Dataloop.ModelOperationMetadata? Deploy { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("subsets")]
         public global::Dataloop.APIModelMetadataSubsets? Subsets { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("annotationsSubsets")]
         public global::Dataloop.APIModelMetadataAnnotationsSubsets? AnnotationsSubsets { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("refs")]
         public global::System.Collections.Generic.IList<global::Dataloop.EntityReference>? Refs { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("mlType")]
         public global::Dataloop.APIModelMetadataSystemMlType? MlType { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("cloneCommand")]
         public global::Dataloop.APIModelMetadataSystemCloneCommand? CloneCommand { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("embedDatasets")]
         public global::Dataloop.APIModelMetadataSystemEmbedDatasets? EmbedDatasets { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("reloadServices")]
         public global::Dataloop.APIModelMetadataSystemReloadServices? ReloadServices { get; set; }

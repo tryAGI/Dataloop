@@ -5,12 +5,12 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct MetricData : global::System.IEquatable<MetricData>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.LineData? Line { get; init; }
@@ -19,7 +19,7 @@ namespace Dataloop
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Line))]
@@ -27,7 +27,7 @@ namespace Dataloop
         public bool IsLine => Line != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickLine(
 #if NET6_0_OR_GREATER
@@ -40,14 +40,14 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Dataloop.LineData PickLine() => IsLine
             ? Line!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Line' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.MatrixData? Matrix { get; init; }
@@ -56,7 +56,7 @@ namespace Dataloop
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Matrix))]
@@ -64,7 +64,7 @@ namespace Dataloop
         public bool IsMatrix => Matrix != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickMatrix(
 #if NET6_0_OR_GREATER
@@ -77,14 +77,14 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Dataloop.MatrixData PickMatrix() => IsMatrix
             ? Matrix!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Matrix' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.SummaryData? Summary { get; init; }
@@ -93,7 +93,7 @@ namespace Dataloop
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Summary))]
@@ -101,7 +101,7 @@ namespace Dataloop
         public bool IsSummary => Summary != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickSummary(
 #if NET6_0_OR_GREATER
@@ -114,23 +114,23 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Dataloop.SummaryData PickSummary() => IsSummary
             ? Summary!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Summary' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator MetricData(global::Dataloop.LineData value) => new MetricData((global::Dataloop.LineData?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Dataloop.LineData?(MetricData @this) => @this.Line;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public MetricData(global::Dataloop.LineData? value)
         {
@@ -138,22 +138,22 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static MetricData FromLine(global::Dataloop.LineData? value) => new MetricData(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator MetricData(global::Dataloop.MatrixData value) => new MetricData((global::Dataloop.MatrixData?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Dataloop.MatrixData?(MetricData @this) => @this.Matrix;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public MetricData(global::Dataloop.MatrixData? value)
         {
@@ -161,22 +161,22 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static MetricData FromMatrix(global::Dataloop.MatrixData? value) => new MetricData(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator MetricData(global::Dataloop.SummaryData value) => new MetricData((global::Dataloop.SummaryData?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Dataloop.SummaryData?(MetricData @this) => @this.Summary;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public MetricData(global::Dataloop.SummaryData? value)
         {
@@ -184,12 +184,12 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static MetricData FromSummary(global::Dataloop.SummaryData? value) => new MetricData(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public MetricData(
             global::Dataloop.LineData? line,
@@ -203,25 +203,25 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             Summary as object ??
             Matrix as object ??
-            Line as object 
+            Line as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             Line?.ToString() ??
             Matrix?.ToString() ??
-            Summary?.ToString() 
+            Summary?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -229,7 +229,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Dataloop.LineData, TResult>? line = null,
@@ -259,7 +259,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Dataloop.LineData>? line = null,
@@ -289,7 +289,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Dataloop.LineData>? line = null,
@@ -317,7 +317,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -340,19 +340,19 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(MetricData other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Dataloop.LineData?>.Default.Equals(Line, other.Line) &&
                 global::System.Collections.Generic.EqualityComparer<global::Dataloop.MatrixData?>.Default.Equals(Matrix, other.Matrix) &&
-                global::System.Collections.Generic.EqualityComparer<global::Dataloop.SummaryData?>.Default.Equals(Summary, other.Summary) 
+                global::System.Collections.Generic.EqualityComparer<global::Dataloop.SummaryData?>.Default.Equals(Summary, other.Summary)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(MetricData obj1, MetricData obj2)
         {
@@ -360,7 +360,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(MetricData obj1, MetricData obj2)
         {
@@ -368,7 +368,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

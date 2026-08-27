@@ -4,42 +4,42 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class IDeploymentConfiguration
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("volumes")]
         public global::System.Collections.Generic.IList<global::Dataloop.IClusterVolume>? Volumes { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("securityContext")]
         public global::Dataloop.IDeploymentSecurityContext? SecurityContext { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("environmentVariables")]
         public global::System.Collections.Generic.IList<global::Dataloop.IClusterEnvironmentVariable>? EnvironmentVariables { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("registry")]
         public global::Dataloop.IComputeRegistry? Registry { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("serviceAccountName")]
         public string? ServiceAccountName { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("internalRequestsUrl")]
         public string? InternalRequestsUrl { get; set; }
@@ -51,7 +51,7 @@ namespace Dataloop
         public global::System.Collections.Generic.IList<string>? PodTemplateImagePullSecretNames { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("defaultResources")]
         public global::Dataloop.IDeploymentConfigurationDefaultResources? DefaultResources { get; set; }

@@ -4,20 +4,20 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PackageType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         App,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Faas,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ml,
     }

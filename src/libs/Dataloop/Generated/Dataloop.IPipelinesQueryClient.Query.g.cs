@@ -5,7 +5,7 @@ namespace Dataloop
     public partial interface IPipelinesQueryClient
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -23,7 +23,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # pipeline_executions = pipeline.pipeline_executions.list()<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.CursorPageT> QueryAsync(
 
@@ -31,7 +31,7 @@ namespace Dataloop
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -49,7 +49,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # pipeline_executions = pipeline.pipeline_executions.list()<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.CursorPageT>> QueryAsResponseAsync(
 
@@ -57,7 +57,7 @@ namespace Dataloop
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="pageSize"></param>
         /// <param name="page"></param>

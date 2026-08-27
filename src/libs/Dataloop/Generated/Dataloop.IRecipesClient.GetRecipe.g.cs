@@ -23,7 +23,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # dataset.recipes.get(recipe_id='recipe_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<global::Dataloop.APIRecipeV2, global::Dataloop.APIRecipe>> GetRecipeAsync(
             string id,
@@ -48,7 +48,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # dataset.recipes.get(recipe_id='recipe_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.AnyOf<global::Dataloop.APIRecipeV2, global::Dataloop.APIRecipe>>> GetRecipeAsResponseAsync(
             string id,

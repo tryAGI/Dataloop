@@ -5,7 +5,7 @@ namespace Dataloop
     public partial interface ILabelsClient
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="ontologyId"></param>
         /// <param name="request"></param>
@@ -19,7 +19,7 @@ namespace Dataloop
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="ontologyId"></param>
         /// <param name="request"></param>
@@ -33,7 +33,7 @@ namespace Dataloop
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="ontologyId"></param>
         /// <param name="context"></param>

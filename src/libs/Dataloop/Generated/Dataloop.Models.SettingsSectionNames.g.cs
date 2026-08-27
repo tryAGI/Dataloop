@@ -4,32 +4,32 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum SettingsSectionNames
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Account,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Applications,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Contact,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Platform,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sdk,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Studio,
     }

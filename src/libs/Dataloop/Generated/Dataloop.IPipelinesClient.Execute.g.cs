@@ -29,7 +29,7 @@ namespace Dataloop
         /// # command = pipeline.pipeline_executions.create_batch(<br/>
         /// # execution_inputs=dl.FunctionIO(type=dl.PackageInputType.STRING, value='test', name='string'),<br/>
         /// # filters=dl.Filters(field='dir', values='/test'))<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<global::Dataloop.APIPipelineState, global::Dataloop.APICommand>> ExecuteAsync(
             string pipelineId,
@@ -62,7 +62,7 @@ namespace Dataloop
         /// # command = pipeline.pipeline_executions.create_batch(<br/>
         /// # execution_inputs=dl.FunctionIO(type=dl.PackageInputType.STRING, value='test', name='string'),<br/>
         /// # filters=dl.Filters(field='dir', values='/test'))<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.AnyOf<global::Dataloop.APIPipelineState, global::Dataloop.APICommand>>> ExecuteAsResponseAsync(
             string pipelineId,

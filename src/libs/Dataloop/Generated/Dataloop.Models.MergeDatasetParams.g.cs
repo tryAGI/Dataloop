@@ -4,19 +4,19 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class MergeDatasetParams
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("withItemsAnnotations")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool WithItemsAnnotations { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("withMetadata")]
         [global::System.Text.Json.Serialization.JsonRequired]

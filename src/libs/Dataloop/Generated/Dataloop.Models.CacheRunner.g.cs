@@ -4,26 +4,26 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CacheRunner
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("redisHost")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string RedisHost { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("numReplicas")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double NumReplicas { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("size")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dataloop.JsonConverters.FaaSCacheSizeJsonConverter))]
@@ -31,7 +31,7 @@ namespace Dataloop
         public required global::Dataloop.FaaSCacheSize Size { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dataloop.JsonConverters.FaaSCacheTypeJsonConverter))]
@@ -39,14 +39,14 @@ namespace Dataloop
         public required global::Dataloop.FaaSCacheType Type { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("minReplica")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double MinReplica { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("maxReplica")]
         [global::System.Text.Json.Serialization.JsonRequired]

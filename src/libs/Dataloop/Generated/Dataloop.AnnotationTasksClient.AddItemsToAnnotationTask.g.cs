@@ -72,7 +72,7 @@ namespace Dataloop
         /// # <br/>
         /// # dataset.tasks.add_items(task= 'task_entity',<br/>
         /// # items = [items])<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<global::Dataloop.APITask, global::Dataloop.APICommand>> AddItemsToAnnotationTaskAsync(
             string id,
@@ -120,7 +120,7 @@ namespace Dataloop
         /// # <br/>
         /// # dataset.tasks.add_items(task= 'task_entity',<br/>
         /// # items = [items])<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.AnyOf<global::Dataloop.APITask, global::Dataloop.APICommand>>> AddItemsToAnnotationTaskAsResponseAsync(
             string id,
@@ -191,7 +191,7 @@ namespace Dataloop
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                             var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
                             var __httpRequestContent = new global::System.Net.Http.StringContent(

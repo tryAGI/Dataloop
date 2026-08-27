@@ -4,16 +4,16 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ExecutionHookValueFrom
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Command,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Execution,
     }

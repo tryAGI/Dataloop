@@ -4,24 +4,24 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum AlertStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Acknowledged,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Closed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Created,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EmailSent,
     }

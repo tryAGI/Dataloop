@@ -4,32 +4,32 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum InvoiceStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FailedPayment,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Debt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Paid,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PartiallyPaid,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Refunded,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Submitted,
     }

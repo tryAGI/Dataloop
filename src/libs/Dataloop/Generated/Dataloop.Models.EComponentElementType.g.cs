@@ -4,48 +4,48 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum EComponentElementType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Channel,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ComputeConfig,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Model,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Module,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Panel,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineNode,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineTemplate,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Service,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Toolbar,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Trigger,
     }

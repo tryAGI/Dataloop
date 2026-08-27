@@ -55,7 +55,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # recipe.ontologies.delete(ontology_id='ontology_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task DeleteOntologyAsync(
             string id,
@@ -87,7 +87,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # recipe.ontologies.delete(ontology_id='ontology_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse> DeleteOntologyAsResponseAsync(
             string id,
@@ -153,7 +153,7 @@ namespace Dataloop
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                 global::Dataloop.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,

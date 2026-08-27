@@ -57,7 +57,7 @@ namespace Dataloop
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="orgId"></param>
         /// <param name="fromDate"></param>
@@ -105,7 +105,7 @@ namespace Dataloop
             ).ConfigureAwait(false);
         }
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="orgId"></param>
         /// <param name="fromDate"></param>
@@ -218,7 +218,7 @@ namespace Dataloop
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                 global::Dataloop.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,

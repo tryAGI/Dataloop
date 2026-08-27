@@ -28,7 +28,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # user_json = dl.projects.add_member(project_id='project_id', email='user@dataloop.ai', role=dl.MemberRole.DEVELOPER)<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<global::System.Collections.Generic.IList<global::Dataloop.ClientContributor>, object>> AddMemberToProjectAsync(
             string projectId,
@@ -62,7 +62,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # user_json = dl.projects.add_member(project_id='project_id', email='user@dataloop.ai', role=dl.MemberRole.DEVELOPER)<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.AnyOf<global::System.Collections.Generic.IList<global::Dataloop.ClientContributor>, object>>> AddMemberToProjectAsResponseAsync(
             string projectId,

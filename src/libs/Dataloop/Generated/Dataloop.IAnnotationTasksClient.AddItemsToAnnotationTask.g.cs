@@ -33,7 +33,7 @@ namespace Dataloop
         /// # <br/>
         /// # dataset.tasks.add_items(task= 'task_entity',<br/>
         /// # items = [items])<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<global::Dataloop.APITask, global::Dataloop.APICommand>> AddItemsToAnnotationTaskAsync(
             string id,
@@ -70,7 +70,7 @@ namespace Dataloop
         /// # <br/>
         /// # dataset.tasks.add_items(task= 'task_entity',<br/>
         /// # items = [items])<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.AnyOf<global::Dataloop.APITask, global::Dataloop.APICommand>>> AddItemsToAnnotationTaskAsResponseAsync(
             string id,

@@ -63,7 +63,7 @@ namespace Dataloop
         /// # <br/>
         /// # command = service.executions.rerun_batch(<br/>
         /// # filters=dl.Filters(field='id', values=['executionId'], operator=dl.FiltersOperations.IN, resource=dl.FiltersResource.EXECUTION))<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.APICommand> RerunExecutionQueryAsync(
 
@@ -102,7 +102,7 @@ namespace Dataloop
         /// # <br/>
         /// # command = service.executions.rerun_batch(<br/>
         /// # filters=dl.Filters(field='id', values=['executionId'], operator=dl.FiltersOperations.IN, resource=dl.FiltersResource.EXECUTION))<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APICommand>> RerunExecutionQueryAsResponseAsync(
 
@@ -171,7 +171,7 @@ namespace Dataloop
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                             var __httpRequestContentBody = global::System.Text.Json.JsonSerializer.Serialize(request, request.GetType(), JsonSerializerContext);
                             var __httpRequestContent = new global::System.Net.Http.StringContent(

@@ -4,16 +4,16 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum OrgPlans
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Freemium,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Premium,
     }

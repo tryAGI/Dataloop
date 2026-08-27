@@ -4,16 +4,16 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum InstructionScope
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Detail,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Image,
     }

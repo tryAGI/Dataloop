@@ -11,43 +11,43 @@ namespace Dataloop
     public sealed partial class ExportDatasetOptions
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("includeItemVectors")]
         public bool? IncludeItemVectors { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("includeAnnotationVectors")]
         public bool? IncludeAnnotationVectors { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("itemsVectorQuery")]
         public global::Dataloop.DQLResourceQuery? ItemsVectorQuery { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("annotationsVectorQuery")]
         public global::Dataloop.DQLResourceQuery? AnnotationsVectorQuery { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("itemsQuery")]
         public global::Dataloop.DQLResourceQuery? ItemsQuery { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("annotationsQuery")]
         public global::Dataloop.DQLResourceQuery? AnnotationsQuery { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("featureSetsQuery")]
         public global::Dataloop.DQLResourceQuery? FeatureSetsQuery { get; set; }
@@ -66,7 +66,7 @@ namespace Dataloop
         public global::Dataloop.ExportDatasetOptionsExportVersion? ExportVersion { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("exportType")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dataloop.JsonConverters.ExportTypeJsonConverter))]

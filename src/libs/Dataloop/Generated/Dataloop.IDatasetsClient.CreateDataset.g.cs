@@ -32,7 +32,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # dataset = project.datasets.create(dataset_name='dataset_name', ontology_ids='ontology_ids')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.APIDataset> CreateDatasetAsync(
 
@@ -67,7 +67,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # dataset = project.datasets.create(dataset_name='dataset_name', ontology_ids='ontology_ids')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APIDataset>> CreateDatasetAsResponseAsync(
 

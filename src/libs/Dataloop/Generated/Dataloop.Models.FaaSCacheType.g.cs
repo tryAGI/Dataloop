@@ -4,16 +4,16 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum FaaSCacheType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ssd,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Standard,
     }

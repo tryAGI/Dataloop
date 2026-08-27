@@ -9,13 +9,13 @@ namespace Dataloop
     public sealed partial class PartialMsNumberbytes3Anumber
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("ms")]
         public double? Ms { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("bytes")]
         public double? Bytes { get; set; }

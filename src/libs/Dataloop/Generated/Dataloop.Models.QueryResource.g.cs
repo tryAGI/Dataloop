@@ -4,112 +4,112 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum QueryResource
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Annotations,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Apps,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Assignments,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Composition,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Compute,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Datasets,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Directory,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Dpks,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Executions,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FeatureSets,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FeatureVectors,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Items,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Labels,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Metrics,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Models,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Packages,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pipeline,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineState,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineTemplate,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResourceExecution,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ServiceDrivers,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Services,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Setting,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Settings,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tasks,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Triggers,
     }

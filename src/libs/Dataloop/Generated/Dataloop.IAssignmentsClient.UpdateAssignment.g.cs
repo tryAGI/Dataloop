@@ -25,7 +25,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # assignment = task.assignments.update(assignment='assignment_entity', system_metadata=False)<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.APIAssignment> UpdateAssignmentAsync(
             string id,
@@ -54,7 +54,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # assignment = task.assignments.update(assignment='assignment_entity', system_metadata=False)<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APIAssignment>> UpdateAssignmentAsResponseAsync(
             string id,

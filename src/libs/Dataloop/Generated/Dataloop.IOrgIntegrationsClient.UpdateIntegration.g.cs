@@ -38,7 +38,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # project.integrations.update(integrations_id='integrations_id', new_options={roleArn: ""})<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.APIIntegration> UpdateIntegrationAsync(
             string orgId,
@@ -80,7 +80,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # project.integrations.update(integrations_id='integrations_id', new_options={roleArn: ""})<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APIIntegration>> UpdateIntegrationAsResponseAsync(
             string orgId,

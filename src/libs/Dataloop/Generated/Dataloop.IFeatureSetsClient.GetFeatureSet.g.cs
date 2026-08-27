@@ -18,7 +18,7 @@ namespace Dataloop
         /// # :param str feature_set_name: name of the feature set<br/>
         /// # :param str feature_set_id: id of the feature set<br/>
         /// # :return: Feature object<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.APIFeatureSet> GetFeatureSetAsync(
             string id,
@@ -38,7 +38,7 @@ namespace Dataloop
         /// # :param str feature_set_name: name of the feature set<br/>
         /// # :param str feature_set_id: id of the feature set<br/>
         /// # :return: Feature object<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APIFeatureSet>> GetFeatureSetAsResponseAsync(
             string id,

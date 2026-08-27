@@ -4,48 +4,48 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum NodeType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Api,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Code,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Custom,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Function,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Merge,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ml,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Split,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Storage,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Task,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UpdateVariable,
     }

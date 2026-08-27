@@ -73,7 +73,7 @@ namespace Dataloop
         /// # execution_inputs=dl.FunctionIO(type=dl.PackageInputType.STRING, value='test', name='string'),<br/>
         /// # filters=dl.Filters(field='dir', values='/test'),<br/>
         /// # function_name='run')<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<global::Dataloop.APIExecution, global::Dataloop.APICommand>> CreateExecutionAsync(
             string serviceId,
@@ -122,7 +122,7 @@ namespace Dataloop
         /// # execution_inputs=dl.FunctionIO(type=dl.PackageInputType.STRING, value='test', name='string'),<br/>
         /// # filters=dl.Filters(field='dir', values='/test'),<br/>
         /// # function_name='run')<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.AnyOf<global::Dataloop.APIExecution, global::Dataloop.APICommand>>> CreateExecutionAsResponseAsync(
             string serviceId,
@@ -198,7 +198,7 @@ namespace Dataloop
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                             var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
                             var __httpRequestContent = new global::System.Net.Http.StringContent(

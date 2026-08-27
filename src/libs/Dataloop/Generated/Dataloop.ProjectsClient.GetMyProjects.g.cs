@@ -58,7 +58,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # projects = dl.projects.list()<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Dataloop.APIProject>> GetMyProjectsAsync(
             bool? excludeContributors = default,
@@ -90,7 +90,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # projects = dl.projects.list()<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Dataloop.APIProject>>> GetMyProjectsAsResponseAsync(
             bool? excludeContributors = default,
@@ -159,7 +159,7 @@ namespace Dataloop
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                 global::Dataloop.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,

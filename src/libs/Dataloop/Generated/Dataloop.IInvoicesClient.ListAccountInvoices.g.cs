@@ -5,7 +5,7 @@ namespace Dataloop
     public partial interface IInvoicesClient
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="account"></param>
         /// <param name="status"></param>
@@ -22,7 +22,7 @@ namespace Dataloop
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="account"></param>
         /// <param name="status"></param>

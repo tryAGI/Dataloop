@@ -4,40 +4,40 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class BootstrapSetupInput
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("createMongoIndexes")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool CreateMongoIndexes { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("createDefaultStorageDrivers")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool CreateDefaultStorageDrivers { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("setupCloneQueues")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool SetupCloneQueues { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("setupDefaultFeatureFlags")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool SetupDefaultFeatureFlags { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("setupS2")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<bool?, global::Dataloop.S2SetupOptions>))]

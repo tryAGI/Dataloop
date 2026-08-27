@@ -4,48 +4,48 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum MetricGroup
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AnnotationToolStudios,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CustomerCare,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CustomerSupport,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DataQaTools,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DataManagement,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DataPipelines,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnterpriseFeatures,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         General,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         WorkforceManagement,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Automation,
     }

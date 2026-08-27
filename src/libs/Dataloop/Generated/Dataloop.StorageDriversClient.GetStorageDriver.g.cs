@@ -63,7 +63,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # project.drivers.get(driver_id='driver_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.APIDriverConfiguration> GetStorageDriverAsync(
             string id,
@@ -100,7 +100,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # project.drivers.get(driver_id='driver_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APIDriverConfiguration>> GetStorageDriverAsResponseAsync(
             string id,
@@ -166,7 +166,7 @@ namespace Dataloop
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                 global::Dataloop.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,

@@ -66,7 +66,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # service = package.services.get(service_id='service_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.APIService> GetServiceAsync(
             string id,
@@ -106,7 +106,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # service = package.services.get(service_id='service_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APIService>> GetServiceAsResponseAsync(
             string id,
@@ -177,7 +177,7 @@ namespace Dataloop
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                 global::Dataloop.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,

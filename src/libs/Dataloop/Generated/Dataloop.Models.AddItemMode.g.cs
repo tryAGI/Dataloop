@@ -4,16 +4,16 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum AddItemMode
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Overwrite,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Skip,
     }

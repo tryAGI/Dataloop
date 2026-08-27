@@ -4,56 +4,56 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum DriverType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AzureDatalakeGen2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Azureblob,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Fs,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FsExternal,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gcs,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         InternalGcs,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Invalid,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mongo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Noop,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Proxy,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         S3,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         S3customerInternal,
     }

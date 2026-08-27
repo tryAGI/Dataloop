@@ -9,19 +9,19 @@ namespace Dataloop
     public sealed partial class PartialAPIEmbedDatasetsSpec
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("datasetIds")]
         public global::System.Collections.Generic.IList<string>? DatasetIds { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("attachTrigger")]
         public bool? AttachTrigger { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("config")]
         public global::Dataloop.PartialAPIEmbedDatasetsSpecConfig? Config { get; set; }

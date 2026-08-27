@@ -4,16 +4,16 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum InferDatasetSchemaMode
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Report,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Update,
     }

@@ -66,7 +66,7 @@ namespace Dataloop
         /// # <br/>
         /// # list_members = dl.organizations.list_members(organization='organization-entity',<br/>
         /// # role=dl.MemberOrgRole.MEMBER)<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Dataloop.APIUser>> GetOrgMembersAsync(
             string orgId,
@@ -106,7 +106,7 @@ namespace Dataloop
         /// # <br/>
         /// # list_members = dl.organizations.list_members(organization='organization-entity',<br/>
         /// # role=dl.MemberOrgRole.MEMBER)<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Dataloop.APIUser>>> GetOrgMembersAsResponseAsync(
             string orgId,
@@ -172,7 +172,7 @@ namespace Dataloop
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                 global::Dataloop.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,

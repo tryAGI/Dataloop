@@ -9,19 +9,19 @@ namespace Dataloop
     public sealed partial class RecordMLSplitListKeysBoolean
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("train")]
         public bool? Train { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("test")]
         public bool? Test { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("validation")]
         public bool? Validation { get; set; }

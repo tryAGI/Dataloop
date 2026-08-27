@@ -4,33 +4,33 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class PipelineConnection
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("src")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Dataloop.PipelineNodeSource Src { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("tgt")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Dataloop.PipelineNodeTarget Tgt { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("condition")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Condition { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("action")]
         public string? Action { get; set; }

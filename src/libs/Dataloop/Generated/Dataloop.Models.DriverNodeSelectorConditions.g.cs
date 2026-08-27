@@ -4,18 +4,18 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class DriverNodeSelectorConditions
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("and")]
         public global::System.Collections.Generic.IList<global::Dataloop.DriverCondition>? And { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("or")]
         public global::System.Collections.Generic.IList<global::Dataloop.DriverCondition>? Or { get; set; }

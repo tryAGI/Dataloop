@@ -4,28 +4,28 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ServiceLogLevel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Critical,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Debug,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Error,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Info,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Warning,
     }

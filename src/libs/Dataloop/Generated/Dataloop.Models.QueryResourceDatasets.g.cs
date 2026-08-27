@@ -4,12 +4,12 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum QueryResourceDatasets
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Datasets,
     }

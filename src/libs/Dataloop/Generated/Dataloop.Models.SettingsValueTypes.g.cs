@@ -4,36 +4,36 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum SettingsValueTypes
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Array,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Boolean,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MultiSelect,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Number,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Object,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Select,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         String,
     }

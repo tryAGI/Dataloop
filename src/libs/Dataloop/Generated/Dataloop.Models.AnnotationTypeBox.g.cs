@@ -4,12 +4,12 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum AnnotationTypeBox
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Box,
     }

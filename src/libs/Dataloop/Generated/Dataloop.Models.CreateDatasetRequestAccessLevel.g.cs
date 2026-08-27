@@ -9,11 +9,11 @@ namespace Dataloop
     public enum CreateDatasetRequestAccessLevel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Private,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Project,
     }
