@@ -4,37 +4,37 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateLabelPayloadV1
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("tag")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Tag { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("displayLabel")]
         public string? DisplayLabel { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("color")]
         public string? Color { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("attributes")]
         public global::System.Collections.Generic.IList<string>? Attributes { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("displayData")]
         public global::Dataloop.LabelDisplayData? DisplayData { get; set; }

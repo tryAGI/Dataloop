@@ -4,12 +4,12 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ICompositionPackageState
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dataloop.JsonConverters.ECompositionPackageStatusJsonConverter))]

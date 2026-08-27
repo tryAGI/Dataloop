@@ -4,16 +4,16 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum SettingsTypes
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FeatureFlag,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UserSettings,
     }

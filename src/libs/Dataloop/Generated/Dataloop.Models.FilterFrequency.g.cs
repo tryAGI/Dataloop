@@ -4,19 +4,19 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class FilterFrequency
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dataloop.JsonConverters.FilterFrequencyTypeJsonConverter))]
         public global::Dataloop.FilterFrequencyType Type { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("value")]
         [global::System.Text.Json.Serialization.JsonRequired]

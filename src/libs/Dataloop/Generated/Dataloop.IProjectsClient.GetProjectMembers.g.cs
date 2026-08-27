@@ -24,7 +24,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # users_jsons_list = dl.projects.list_members(project_id='project_id', role=dl.MemberRole.DEVELOPER)<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Dataloop.APIUser>> GetProjectMembersAsync(
             string projectId,
@@ -50,7 +50,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # users_jsons_list = dl.projects.list_members(project_id='project_id', role=dl.MemberRole.DEVELOPER)<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Dataloop.APIUser>>> GetProjectMembersAsResponseAsync(
             string projectId,

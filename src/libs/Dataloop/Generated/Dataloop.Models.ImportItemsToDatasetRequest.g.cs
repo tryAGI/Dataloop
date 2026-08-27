@@ -4,19 +4,19 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ImportItemsToDatasetRequest
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("imports")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Collections.Generic.IList<global::Dataloop.ImportItemRequest> Imports { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("forceRescan")]
         public bool? ForceRescan { get; set; }

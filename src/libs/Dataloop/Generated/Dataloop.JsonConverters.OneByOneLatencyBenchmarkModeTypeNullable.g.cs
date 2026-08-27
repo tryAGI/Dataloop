@@ -20,7 +20,7 @@ namespace Dataloop.JsonConverters
                     {
                         return global::Dataloop.OneByOneLatencyBenchmarkModeTypeExtensions.ToEnum(stringValue);
                     }
-                    
+
                     break;
                 }
                 case global::System.Text.Json.JsonTokenType.Number:

@@ -4,20 +4,20 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum InvokeType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Function,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Panel,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Script,
     }

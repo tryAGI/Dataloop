@@ -4,16 +4,16 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ServiceModeType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Debug,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Regular,
     }

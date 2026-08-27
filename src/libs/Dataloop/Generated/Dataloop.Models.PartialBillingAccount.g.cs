@@ -4,50 +4,50 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class PartialBillingAccount
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("companyName")]
         public string? CompanyName { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("companyPhone")]
         public string? CompanyPhone { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("billingContact")]
         public string? BillingContact { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("accountId")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string AccountId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("recipients")]
         public global::System.Collections.Generic.IList<string>? Recipients { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("address")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Dataloop.Address Address { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("taxData")]
         public global::Dataloop.PartialBillingAccountTaxData? TaxData { get; set; }

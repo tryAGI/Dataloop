@@ -4,16 +4,16 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum FeatureFlagsSetContextVariant1Type
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Org,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Project,
     }

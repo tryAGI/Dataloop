@@ -4,12 +4,12 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CleanDatasetsDataSpec
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("indexDriver")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dataloop.JsonConverters.DatasetIndexDriversJsonConverter))]
@@ -17,7 +17,7 @@ namespace Dataloop
         public required global::Dataloop.DatasetIndexDrivers IndexDriver { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("datasetsQuery")]
         [global::System.Text.Json.Serialization.JsonRequired]

@@ -4,12 +4,12 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class UpdateContributorsPayload
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("action")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dataloop.JsonConverters.TaskContributorsActionJsonConverter))]
@@ -17,13 +17,13 @@ namespace Dataloop
         public required global::Dataloop.TaskContributorsAction Action { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("assignees")]
         public global::System.Collections.Generic.IList<string>? Assignees { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("groups")]
         public global::System.Collections.Generic.IList<string>? Groups { get; set; }

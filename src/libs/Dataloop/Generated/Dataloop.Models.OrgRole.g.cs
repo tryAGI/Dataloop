@@ -4,24 +4,24 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum OrgRole
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Admin,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Member,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Owner,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Worker,
     }

@@ -4,18 +4,18 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class IClusterVolumeSecret
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("items")]
         public global::System.Collections.Generic.IList<global::Dataloop.IClusterVolumeSecretItem>? Items { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("secretName")]
         [global::System.Text.Json.Serialization.JsonRequired]

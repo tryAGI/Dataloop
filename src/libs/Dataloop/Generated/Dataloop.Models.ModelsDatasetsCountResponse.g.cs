@@ -4,12 +4,12 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ModelsDatasetsCountResponse
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("datasetsCount")]
         [global::System.Text.Json.Serialization.JsonRequired]

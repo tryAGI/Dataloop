@@ -5,7 +5,7 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct CustomInstallation : global::System.IEquatable<CustomInstallation>
     {
@@ -19,7 +19,7 @@ namespace Dataloop
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(PickAPIDpkDependencies))]
@@ -27,7 +27,7 @@ namespace Dataloop
         public bool IsPickAPIDpkDependencies => PickAPIDpkDependencies != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickPickAPIDpkDependencies(
 #if NET6_0_OR_GREATER
@@ -40,14 +40,14 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Dataloop.PickAPIDpkDependencies PickPickAPIDpkDependencies() => IsPickAPIDpkDependencies
             ? PickAPIDpkDependencies!
             : throw new global::System.InvalidOperationException($"Expected union variant 'PickAPIDpkDependencies' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.CustomInstallationVariant2? CustomInstallationVariant2 { get; init; }
@@ -56,7 +56,7 @@ namespace Dataloop
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(CustomInstallationVariant2))]
@@ -64,7 +64,7 @@ namespace Dataloop
         public bool IsCustomInstallationVariant2 => CustomInstallationVariant2 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickCustomInstallationVariant2(
 #if NET6_0_OR_GREATER
@@ -77,23 +77,23 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Dataloop.CustomInstallationVariant2 PickCustomInstallationVariant2() => IsCustomInstallationVariant2
             ? CustomInstallationVariant2!
             : throw new global::System.InvalidOperationException($"Expected union variant 'CustomInstallationVariant2' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator CustomInstallation(global::Dataloop.PickAPIDpkDependencies value) => new CustomInstallation((global::Dataloop.PickAPIDpkDependencies?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Dataloop.PickAPIDpkDependencies?(CustomInstallation @this) => @this.PickAPIDpkDependencies;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public CustomInstallation(global::Dataloop.PickAPIDpkDependencies? value)
         {
@@ -101,22 +101,22 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static CustomInstallation FromPickAPIDpkDependencies(global::Dataloop.PickAPIDpkDependencies? value) => new CustomInstallation(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator CustomInstallation(global::Dataloop.CustomInstallationVariant2 value) => new CustomInstallation((global::Dataloop.CustomInstallationVariant2?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Dataloop.CustomInstallationVariant2?(CustomInstallation @this) => @this.CustomInstallationVariant2;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public CustomInstallation(global::Dataloop.CustomInstallationVariant2? value)
         {
@@ -124,12 +124,12 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static CustomInstallation FromCustomInstallationVariant2(global::Dataloop.CustomInstallationVariant2? value) => new CustomInstallation(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public CustomInstallation(
             global::Dataloop.PickAPIDpkDependencies? pickAPIDpkDependencies,
@@ -141,23 +141,23 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             CustomInstallationVariant2 as object ??
-            PickAPIDpkDependencies as object 
+            PickAPIDpkDependencies as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             PickAPIDpkDependencies?.ToString() ??
-            CustomInstallationVariant2?.ToString() 
+            CustomInstallationVariant2?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -165,7 +165,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Dataloop.PickAPIDpkDependencies, TResult>? pickAPIDpkDependencies = null,
@@ -190,7 +190,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Dataloop.PickAPIDpkDependencies>? pickAPIDpkDependencies = null,
@@ -214,7 +214,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Dataloop.PickAPIDpkDependencies>? pickAPIDpkDependencies = null,
@@ -237,7 +237,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -258,18 +258,18 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(CustomInstallation other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Dataloop.PickAPIDpkDependencies?>.Default.Equals(PickAPIDpkDependencies, other.PickAPIDpkDependencies) &&
-                global::System.Collections.Generic.EqualityComparer<global::Dataloop.CustomInstallationVariant2?>.Default.Equals(CustomInstallationVariant2, other.CustomInstallationVariant2) 
+                global::System.Collections.Generic.EqualityComparer<global::Dataloop.CustomInstallationVariant2?>.Default.Equals(CustomInstallationVariant2, other.CustomInstallationVariant2)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(CustomInstallation obj1, CustomInstallation obj2)
         {
@@ -277,7 +277,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(CustomInstallation obj1, CustomInstallation obj2)
         {
@@ -285,7 +285,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

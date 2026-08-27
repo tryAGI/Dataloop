@@ -4,16 +4,16 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum SchemaMode
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Inference,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Manual,
     }

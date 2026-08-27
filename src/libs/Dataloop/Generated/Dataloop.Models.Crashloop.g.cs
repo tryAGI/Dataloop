@@ -4,26 +4,26 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class Crashloop
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("time")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.DateTime Time { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("action")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dataloop.JsonConverters.CrashloopActionJsonConverter))]
         public global::Dataloop.CrashloopAction Action { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("reason")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dataloop.JsonConverters.CrashloopReasonJsonConverter))]

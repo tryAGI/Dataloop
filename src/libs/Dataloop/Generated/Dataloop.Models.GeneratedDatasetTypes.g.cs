@@ -4,88 +4,88 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GeneratedDatasetTypes
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x100kBench,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         M1,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         M10,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         M1NoComp,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         M2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         M25,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         M25ProductionDist,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         M4,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         M5ProductionDist,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         M6,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BigJSON1,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BigJSON2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ManyKeys1,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ManyKeys2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ManyKeys3,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Simple1,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Simple2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Simple3,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Simple4,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Simple5,
     }

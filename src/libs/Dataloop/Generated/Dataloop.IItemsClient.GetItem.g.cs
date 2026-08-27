@@ -5,7 +5,7 @@ namespace Dataloop
     public partial interface IItemsClient
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="id"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -26,14 +26,14 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # dataset.items.get(item_id='item_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<global::Dataloop.APIDatasetFileItem, global::Dataloop.APIDatasetDirectoryItem>> GetItemAsync(
             string id,
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="id"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -54,7 +54,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # dataset.items.get(item_id='item_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.AnyOf<global::Dataloop.APIDatasetFileItem, global::Dataloop.APIDatasetDirectoryItem>>> GetItemAsResponseAsync(
             string id,

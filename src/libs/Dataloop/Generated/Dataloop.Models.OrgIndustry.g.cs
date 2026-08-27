@@ -4,40 +4,40 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum OrgIndustry
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AerialImagery,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Agriculture,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Automotive,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Media,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Medical,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Other,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Retail,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sports,
     }

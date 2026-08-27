@@ -28,7 +28,7 @@ namespace Dataloop
         /// # :param bool really: Really really sure?<br/>
         /// # :return: True is success<br/>
         /// # :rtype: bool<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<double> DeleteDatasetAsync(
             string id,
@@ -60,7 +60,7 @@ namespace Dataloop
         /// # :param bool really: Really really sure?<br/>
         /// # :return: True is success<br/>
         /// # :rtype: bool<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<double>> DeleteDatasetAsResponseAsync(
             string id,

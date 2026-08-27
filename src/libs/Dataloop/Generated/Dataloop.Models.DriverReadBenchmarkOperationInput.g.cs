@@ -4,12 +4,12 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class DriverReadBenchmarkOperationInput
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("scenarioDetails")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dataloop.JsonConverters.DriverReadBenchmarkOperationInputScenarioDetailsJsonConverter))]
@@ -17,51 +17,51 @@ namespace Dataloop
         public required global::Dataloop.DriverReadBenchmarkOperationInputScenarioDetails ScenarioDetails { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("addingItemsInParallel")]
         public double? AddingItemsInParallel { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("itemsNumber")]
         public double? ItemsNumber { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("concurrency")]
         public double? Concurrency { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("consumersAmount")]
         public double? ConsumersAmount { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("waitUntilCompletion")]
         public bool? WaitUntilCompletion { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("projectId")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string ProjectId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("datasetWithItemsToStreamId")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string DatasetWithItemsToStreamId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("driverId")]
         [global::System.Text.Json.Serialization.JsonRequired]

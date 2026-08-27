@@ -25,7 +25,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # service.triggers.get(trigger_id='trigger_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.APITrigger> GetTriggerAsync(
             string id,
@@ -52,7 +52,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # service.triggers.get(trigger_id='trigger_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APITrigger>> GetTriggerAsResponseAsync(
             string id,

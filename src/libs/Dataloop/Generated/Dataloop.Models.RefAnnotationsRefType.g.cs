@@ -4,16 +4,16 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum RefAnnotationsRefType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Id,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Url,
     }

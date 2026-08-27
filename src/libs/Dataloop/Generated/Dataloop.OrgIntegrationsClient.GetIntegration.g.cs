@@ -64,7 +64,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # project.integrations.get(integrations_id='integrations_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.APIIntegration> GetIntegrationAsync(
             string orgId,
@@ -102,7 +102,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # project.integrations.get(integrations_id='integrations_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APIIntegration>> GetIntegrationAsResponseAsync(
             string orgId,
@@ -170,7 +170,7 @@ namespace Dataloop
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                 global::Dataloop.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,

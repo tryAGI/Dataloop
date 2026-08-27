@@ -44,7 +44,7 @@ namespace Dataloop
             ref string content);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="pipelineId"></param>
         /// <param name="request"></param>
@@ -67,7 +67,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # pipeline.pipeline_executions.rerun(pipeline_id='pipeline_id', method=dl.CycleRerunMethod.START_FROM_BEGINNING)<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.APICommand> RerunAsync(
             string pipelineId,
@@ -87,7 +87,7 @@ namespace Dataloop
             return __response.Body;
         }
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="pipelineId"></param>
         /// <param name="request"></param>
@@ -110,7 +110,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # pipeline.pipeline_executions.rerun(pipeline_id='pipeline_id', method=dl.CycleRerunMethod.START_FROM_BEGINNING)<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APICommand>> RerunAsResponseAsync(
             string pipelineId,
@@ -181,7 +181,7 @@ namespace Dataloop
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                             var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
                             var __httpRequestContent = new global::System.Net.Http.StringContent(
@@ -477,7 +477,7 @@ namespace Dataloop
             }
         }
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="pipelineId"></param>
         /// <param name="pipeline"></param>

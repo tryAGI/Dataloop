@@ -4,20 +4,20 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum AllowedTypes
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Boolean,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Number,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         String,
     }

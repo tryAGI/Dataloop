@@ -4,26 +4,26 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class UsageResourcesReport
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("planName")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string PlanName { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("planKey")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string PlanKey { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("resources")]
         [global::System.Text.Json.Serialization.JsonRequired]

@@ -27,7 +27,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # dataset.tasks.delete(task_id='task_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<object, global::Dataloop.APICommand>> DeleteAnnotationTaskAsync(
             string id,
@@ -58,7 +58,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # dataset.tasks.delete(task_id='task_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.AnyOf<object, global::Dataloop.APICommand>>> DeleteAnnotationTaskAsResponseAsync(
             string id,

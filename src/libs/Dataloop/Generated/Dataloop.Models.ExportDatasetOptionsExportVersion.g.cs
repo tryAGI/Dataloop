@@ -9,11 +9,11 @@ namespace Dataloop
     public enum ExportDatasetOptionsExportVersion
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         V1,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         V2,
     }

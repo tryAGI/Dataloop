@@ -9,7 +9,7 @@ namespace Dataloop
     public enum DatasetSyncStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Failed,
     }

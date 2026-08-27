@@ -4,19 +4,19 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ClassifyFilteredItems
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("query")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Dataloop.ClassifyFilteredItemsQuery Query { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("annotation")]
         [global::System.Text.Json.Serialization.JsonRequired]

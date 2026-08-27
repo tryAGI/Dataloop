@@ -4,16 +4,16 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum TaskContributorsAction
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Add,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Remove,
     }

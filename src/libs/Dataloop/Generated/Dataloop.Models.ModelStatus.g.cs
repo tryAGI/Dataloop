@@ -4,40 +4,40 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ModelStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cloning,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Created,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Deployed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Failed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pending,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PreTrained,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Trained,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Training,
     }

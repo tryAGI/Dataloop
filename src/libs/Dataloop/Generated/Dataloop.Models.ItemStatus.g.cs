@@ -4,26 +4,26 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ItemStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("completed")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double Completed { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("remaining")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double Remaining { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("actions")]
         public global::System.Collections.Generic.Dictionary<string, double>? Actions { get; set; }

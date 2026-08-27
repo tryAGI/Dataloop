@@ -4,16 +4,16 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum UnsearchableSchemaReasons
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Manual,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PathContainsArray,
     }

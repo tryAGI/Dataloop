@@ -4,19 +4,19 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CustomActionTarget
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("labelId")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string LabelId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("ontologyId")]
         [global::System.Text.Json.Serialization.JsonRequired]

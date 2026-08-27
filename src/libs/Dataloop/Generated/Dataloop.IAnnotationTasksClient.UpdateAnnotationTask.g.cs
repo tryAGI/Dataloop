@@ -25,7 +25,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # dataset.tasks.update(task='task_entity')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.APITask> UpdateAnnotationTaskAsync(
             string id,
@@ -54,7 +54,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # dataset.tasks.update(task='task_entity')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APITask>> UpdateAnnotationTaskAsResponseAsync(
             string id,

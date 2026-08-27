@@ -4,20 +4,20 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CustomActionControls
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Button,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Checkbox,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Radio,
     }

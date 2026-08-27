@@ -4,16 +4,16 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum APIDatasetFileItemType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Dir,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         File,
     }

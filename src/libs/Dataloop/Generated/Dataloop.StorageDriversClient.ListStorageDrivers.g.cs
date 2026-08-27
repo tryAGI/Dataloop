@@ -63,7 +63,7 @@ namespace Dataloop
         /// # <br/>
         /// # project.drivers.list()<br/>
         /// # <br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Dataloop.APIDriverConfiguration>> ListStorageDriversAsync(
             string? projectId = default,
@@ -100,7 +100,7 @@ namespace Dataloop
         /// # <br/>
         /// # project.drivers.list()<br/>
         /// # <br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Dataloop.APIDriverConfiguration>>> ListStorageDriversAsResponseAsync(
             string? projectId = default,
@@ -172,7 +172,7 @@ namespace Dataloop
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                 global::Dataloop.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,

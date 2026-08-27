@@ -4,33 +4,33 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ChildrenCommandsProgress
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("success")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double Success { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("failed")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double Failed { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("aborted")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double Aborted { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("errors")]
         public global::System.Collections.Generic.IList<global::Dataloop.CommandError>? Errors { get; set; }

@@ -4,33 +4,33 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class IComputeCluster
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Name { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("endpoint")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Endpoint { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("kubernetesVersion")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string KubernetesVersion { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("provider")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dataloop.JsonConverters.EClusterProviderJsonConverter))]
@@ -38,34 +38,34 @@ namespace Dataloop
         public required global::Dataloop.EClusterProvider Provider { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("nodePools")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Collections.Generic.IList<global::Dataloop.INodePool> NodePools { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("metadata")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Dataloop.Dictionary Metadata { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("plugins")]
         public global::System.Collections.Generic.IList<global::Dataloop.IComputePlugin>? Plugins { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("authentication")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Dataloop.IComputeAuthentication Authentication { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("deploymentConfiguration")]
         public global::Dataloop.IDeploymentConfiguration? DeploymentConfiguration { get; set; }

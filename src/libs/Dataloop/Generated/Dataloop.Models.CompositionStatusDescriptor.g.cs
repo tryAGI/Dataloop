@@ -4,33 +4,33 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CompositionStatusDescriptor
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("running")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double Running { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("failed")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double Failed { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("pending")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double Pending { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("standBy")]
         [global::System.Text.Json.Serialization.JsonRequired]

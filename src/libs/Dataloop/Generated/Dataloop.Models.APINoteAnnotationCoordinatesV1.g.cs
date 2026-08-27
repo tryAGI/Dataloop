@@ -4,32 +4,32 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class APINoteAnnotationCoordinatesV1
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("box")]
         public global::System.Collections.Generic.IList<object>? Box { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("note")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Dataloop.CoordinatesNote Note { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("updatedAt")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.DateTime UpdatedAt { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("updatedBy")]
         [global::System.Text.Json.Serialization.JsonRequired]

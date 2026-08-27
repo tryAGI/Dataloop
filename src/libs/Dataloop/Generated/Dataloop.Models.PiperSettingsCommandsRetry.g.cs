@@ -4,25 +4,25 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class PiperSettingsCommandsRetry
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("nonRetryableError")]
         public bool? NonRetryableError { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("attempts")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double Attempts { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("maxRetries")]
         [global::System.Text.Json.Serialization.JsonRequired]

@@ -4,12 +4,12 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GenerateDatasetOptionsAnnotations
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("metadata")]
         public global::Dataloop.GenerateDatasetOptionsAnnotationsMetadata? Metadata { get; set; }
@@ -22,7 +22,7 @@ namespace Dataloop
         public required double Labels { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("annotationsAttributesOptionsCount")]
         public double? AnnotationsAttributesOptionsCount { get; set; }

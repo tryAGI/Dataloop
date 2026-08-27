@@ -4,26 +4,26 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class BullkGenerateAnnotationThumbnailsRequestOptions
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("opacity")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double Opacity { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("width")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double Width { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("height")]
         [global::System.Text.Json.Serialization.JsonRequired]

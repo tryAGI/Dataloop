@@ -4,12 +4,12 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum FeatureFlagsSetContextVariant2Type
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Default,
     }

@@ -66,7 +66,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # project = dl.projects.get(project_id='project_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.APIProject> GetProjectAsync(
             string projectId,
@@ -106,7 +106,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # project = dl.projects.get(project_id='project_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APIProject>> GetProjectAsResponseAsync(
             string projectId,
@@ -172,7 +172,7 @@ namespace Dataloop
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                 global::Dataloop.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,

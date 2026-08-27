@@ -4,16 +4,16 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GuestType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Development,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Labeling,
     }

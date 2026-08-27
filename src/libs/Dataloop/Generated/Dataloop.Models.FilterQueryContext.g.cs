@@ -4,18 +4,18 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class FilterQueryContext
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("projects")]
         public global::System.Collections.Generic.IList<string>? Projects { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("datasets")]
         public global::System.Collections.Generic.IList<string>? Datasets { get; set; }

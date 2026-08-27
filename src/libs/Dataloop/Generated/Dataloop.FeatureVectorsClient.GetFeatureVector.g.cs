@@ -54,7 +54,7 @@ namespace Dataloop
         /// # <br/>
         /// # :param str feature_id: feature id<br/>
         /// # :return: Feature object<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.APIFeatureVector> GetFeatureVectorAsync(
             string id,
@@ -82,7 +82,7 @@ namespace Dataloop
         /// # <br/>
         /// # :param str feature_id: feature id<br/>
         /// # :return: Feature object<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APIFeatureVector>> GetFeatureVectorAsResponseAsync(
             string id,
@@ -148,7 +148,7 @@ namespace Dataloop
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                 global::Dataloop.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,

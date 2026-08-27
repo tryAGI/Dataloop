@@ -9,7 +9,7 @@ namespace Dataloop
     public enum ProfilingBenchmarkModeType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Profiling,
     }

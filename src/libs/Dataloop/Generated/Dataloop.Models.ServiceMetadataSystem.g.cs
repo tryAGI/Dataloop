@@ -4,25 +4,25 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ServiceMetadataSystem
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("computeConsumptionMethod")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dataloop.JsonConverters.EComputeConsumptionMethodJsonConverter))]
         public global::Dataloop.EComputeConsumptionMethod? ComputeConsumptionMethod { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dynamicConcurrency")]
         public bool? DynamicConcurrency { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("fetchExecutionsFromApi")]
         public bool? FetchExecutionsFromApi { get; set; }

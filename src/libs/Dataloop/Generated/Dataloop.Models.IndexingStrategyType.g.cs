@@ -4,20 +4,20 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum IndexingStrategyType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SeekableJSON,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SeekableLZ4,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Indexed,
     }

@@ -26,7 +26,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # project.drivers.get(driver_id='driver_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.APIDriverConfiguration> GetStorageDriverAsync(
             string id,
@@ -54,7 +54,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # project.drivers.get(driver_id='driver_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APIDriverConfiguration>> GetStorageDriverAsResponseAsync(
             string id,

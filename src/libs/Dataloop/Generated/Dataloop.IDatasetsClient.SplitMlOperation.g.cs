@@ -5,7 +5,7 @@ namespace Dataloop
     public partial interface IDatasetsClient
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="id"></param>
         /// <param name="request"></param>
@@ -22,7 +22,7 @@ namespace Dataloop
         /// # :return: True if the split operation was successful.<br/>
         /// # :rtype: bool<br/>
         /// # :raises: PlatformException on failure and ValueError if percentages do not sum to 100 or invalid keys/values.<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.APICommand> SplitMlOperationAsync(
             string id,
@@ -31,7 +31,7 @@ namespace Dataloop
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="id"></param>
         /// <param name="request"></param>
@@ -48,7 +48,7 @@ namespace Dataloop
         /// # :return: True if the split operation was successful.<br/>
         /// # :rtype: bool<br/>
         /// # :raises: PlatformException on failure and ValueError if percentages do not sum to 100 or invalid keys/values.<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APICommand>> SplitMlOperationAsResponseAsync(
             string id,
@@ -57,7 +57,7 @@ namespace Dataloop
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="id"></param>
         /// <param name="mLSplitList">

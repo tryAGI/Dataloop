@@ -4,16 +4,16 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum NodeMlType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Embeddings,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GenAi,
     }

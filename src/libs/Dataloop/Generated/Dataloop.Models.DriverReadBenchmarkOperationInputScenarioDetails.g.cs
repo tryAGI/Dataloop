@@ -4,20 +4,20 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum DriverReadBenchmarkOperationInputScenarioDetails
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LargeFile,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MediumFile,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SmallFile,
     }

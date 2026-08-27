@@ -4,19 +4,19 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class APIServiceStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("numMessagesInQueue")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double NumMessagesInQueue { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("runtimeStatus")]
         [global::System.Text.Json.Serialization.JsonRequired]

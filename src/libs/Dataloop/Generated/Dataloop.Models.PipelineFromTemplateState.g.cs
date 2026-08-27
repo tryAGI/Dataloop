@@ -4,16 +4,16 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PipelineFromTemplateState
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Dirty,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Initial,
     }

@@ -24,7 +24,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # service.triggers.delete(trigger_id='trigger_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task DeleteTriggersAsync(
             string id,
@@ -50,7 +50,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # service.triggers.delete(trigger_id='trigger_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse> DeleteTriggersAsResponseAsync(
             string id,

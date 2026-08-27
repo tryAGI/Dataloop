@@ -4,26 +4,26 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class TextSearch
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("functions")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Functions { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("projectName")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string ProjectName { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("orgName")]
         [global::System.Text.Json.Serialization.JsonRequired]

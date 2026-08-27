@@ -4,33 +4,33 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class WorkflowsCounters
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("tasksCount")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double TasksCount { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("assignmentsCount")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double AssignmentsCount { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("issuesCount")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double IssuesCount { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("reviewsCount")]
         [global::System.Text.Json.Serialization.JsonRequired]

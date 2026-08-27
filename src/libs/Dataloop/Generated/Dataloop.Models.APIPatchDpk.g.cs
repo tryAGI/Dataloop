@@ -4,7 +4,7 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class APIPatchDpk
     {
@@ -33,7 +33,7 @@ namespace Dataloop
         public string? Icon { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("components")]
         public global::Dataloop.PreviewsComponentsPatch? Components { get; set; }

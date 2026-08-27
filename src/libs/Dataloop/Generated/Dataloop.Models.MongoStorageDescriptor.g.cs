@@ -4,19 +4,19 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class MongoStorageDescriptor
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("totalModified")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Dataloop.StorageModificationDescriptor TotalModified { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("datasets")]
         [global::System.Text.Json.Serialization.JsonRequired]

@@ -4,16 +4,16 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ScopeType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Org,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Project,
     }

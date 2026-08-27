@@ -65,7 +65,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # dataset = project.datasets.get(dataset_id='dataset_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.APIDataset> GetDatasetByIdAsync(
             string id,
@@ -104,7 +104,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # dataset = project.datasets.get(dataset_id='dataset_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APIDataset>> GetDatasetByIdAsResponseAsync(
             string id,
@@ -170,7 +170,7 @@ namespace Dataloop
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                 global::Dataloop.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,

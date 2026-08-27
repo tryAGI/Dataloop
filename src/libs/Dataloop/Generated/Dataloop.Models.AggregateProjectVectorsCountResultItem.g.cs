@@ -4,26 +4,26 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class AggregateProjectVectorsCountResultItem
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("count")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double Count { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("featureSetId")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string FeatureSetId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("datasetId")]
         [global::System.Text.Json.Serialization.JsonRequired]

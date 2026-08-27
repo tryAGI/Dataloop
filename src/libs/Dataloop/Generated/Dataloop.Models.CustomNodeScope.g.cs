@@ -4,20 +4,20 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CustomNodeScope
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Global,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Node,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Project,
     }

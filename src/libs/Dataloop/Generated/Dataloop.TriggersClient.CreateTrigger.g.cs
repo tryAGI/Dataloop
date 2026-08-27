@@ -94,7 +94,7 @@ namespace Dataloop
         /// # filters={'$and': [{'hidden': False},<br/>
         /// # {'type': 'file'}]}<br/>
         /// # )<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.APITrigger> CreateTriggerAsync(
 
@@ -164,7 +164,7 @@ namespace Dataloop
         /// # filters={'$and': [{'hidden': False},<br/>
         /// # {'type': 'file'}]}<br/>
         /// # )<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APITrigger>> CreateTriggerAsResponseAsync(
 
@@ -233,7 +233,7 @@ namespace Dataloop
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                             var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
                             var __httpRequestContent = new global::System.Net.Http.StringContent(

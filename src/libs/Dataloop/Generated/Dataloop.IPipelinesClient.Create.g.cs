@@ -25,7 +25,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # pipeline = project.pipelines.create(name='pipeline_name')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.APIPipeline> CreateAsync(
 
@@ -53,7 +53,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # pipeline = project.pipelines.create(name='pipeline_name')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APIPipeline>> CreateAsResponseAsync(
 

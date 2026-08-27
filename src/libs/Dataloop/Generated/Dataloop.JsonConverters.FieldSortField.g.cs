@@ -20,7 +20,7 @@ namespace Dataloop.JsonConverters
                     {
                         return global::Dataloop.FieldSortFieldExtensions.ToEnum(stringValue) ?? default;
                     }
-                    
+
                     break;
                 }
                 case global::System.Text.Json.JsonTokenType.Number:

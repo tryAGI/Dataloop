@@ -65,7 +65,7 @@ namespace Dataloop
         /// # recipe.ontologies.create(labels='labels_entity',<br/>
         /// # title='new_ontology',<br/>
         /// # project_ids='project_ids')<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<global::Dataloop.APIOntologyV2, global::Dataloop.APIOntology>> CreateOntologyAsync(
 
@@ -106,7 +106,7 @@ namespace Dataloop
         /// # recipe.ontologies.create(labels='labels_entity',<br/>
         /// # title='new_ontology',<br/>
         /// # project_ids='project_ids')<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.AnyOf<global::Dataloop.APIOntologyV2, global::Dataloop.APIOntology>>> CreateOntologyAsResponseAsync(
 
@@ -173,7 +173,7 @@ namespace Dataloop
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                             var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
                             var __httpRequestContent = new global::System.Net.Http.StringContent(

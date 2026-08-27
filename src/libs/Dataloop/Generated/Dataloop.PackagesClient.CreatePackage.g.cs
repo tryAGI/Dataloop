@@ -84,7 +84,7 @@ namespace Dataloop
         /// # version='1.0.0',<br/>
         /// # src_path=os.getcwd()<br/>
         /// # )<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.APIPackage> CreatePackageAsync(
 
@@ -144,7 +144,7 @@ namespace Dataloop
         /// # version='1.0.0',<br/>
         /// # src_path=os.getcwd()<br/>
         /// # )<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APIPackage>> CreatePackageAsResponseAsync(
 
@@ -213,7 +213,7 @@ namespace Dataloop
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                             var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
                             var __httpRequestContent = new global::System.Net.Http.StringContent(

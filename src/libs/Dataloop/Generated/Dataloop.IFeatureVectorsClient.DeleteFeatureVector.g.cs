@@ -18,7 +18,7 @@ namespace Dataloop
         /// # :param str feature_id: feature id to delete<br/>
         /// # :return: success<br/>
         /// # :rtype: bool<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task DeleteFeatureVectorAsync(
             string id,
@@ -38,7 +38,7 @@ namespace Dataloop
         /// # :param str feature_id: feature id to delete<br/>
         /// # :return: success<br/>
         /// # :rtype: bool<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse> DeleteFeatureVectorAsResponseAsync(
             string id,

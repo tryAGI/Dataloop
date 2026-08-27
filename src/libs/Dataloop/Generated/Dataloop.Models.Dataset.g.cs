@@ -4,26 +4,26 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class Dataset
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Id { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Name { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("creator")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -37,41 +37,41 @@ namespace Dataloop
         public required global::System.Collections.Generic.IList<string> Projects { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("driver")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Driver { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("metadata")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Dataloop.DatasetMetadata Metadata { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double Type { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("readableType")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string ReadableType { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("createdAt")]
         public global::System.DateTime? CreatedAt { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("updatedAt")]
         public global::System.DateTime? UpdatedAt { get; set; }
@@ -83,13 +83,13 @@ namespace Dataloop
         public global::System.DateTime? LastStorageSyncDate { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("updatedBy")]
         public string? UpdatedBy { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("accessLevel")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dataloop.JsonConverters.DatasetAccessLevelJsonConverter))]
@@ -131,7 +131,7 @@ namespace Dataloop
         public required bool MarkForDeletion { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("deletionInformation")]
         public global::Dataloop.DatasetDeletionInformation? DeletionInformation { get; set; }
@@ -143,13 +143,13 @@ namespace Dataloop
         public bool? Readonly { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("expirationOptions")]
         public global::Dataloop.ExpirationOptions? ExpirationOptions { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("authz")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -163,7 +163,7 @@ namespace Dataloop
         public global::Dataloop.DatasetSyncStatus? SyncStatus { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("indexDriver")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dataloop.JsonConverters.DatasetIndexDriversJsonConverter))]
@@ -176,14 +176,14 @@ namespace Dataloop
         public bool? EnableSyncWithCloned { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("_schema")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Dataloop.DatasetSchemaMap Schema { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("schema")]
         public global::Dataloop.S2ItemMetadataSchema? Schema2 { get; set; }
@@ -195,7 +195,7 @@ namespace Dataloop
         public global::System.DateTime? SchemaCleanupDate { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("lockProcessCommandId")]
         public string? LockProcessCommandId { get; set; }

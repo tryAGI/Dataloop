@@ -4,20 +4,20 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ChannelType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Application,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Email,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Internal,
     }

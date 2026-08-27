@@ -4,20 +4,20 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum EDebugOptionsStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Activate,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Deactivate,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Placed,
     }

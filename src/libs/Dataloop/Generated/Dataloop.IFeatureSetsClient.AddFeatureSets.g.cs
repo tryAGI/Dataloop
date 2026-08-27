@@ -23,7 +23,7 @@ namespace Dataloop
         /// # :param str model_id: the ID of the model that creates the vectors<br/>
         /// # :param str org_id: the ID of the org where feature set will be created<br/>
         /// # :return: Feature Set object<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Dataloop.APIFeatureSet>> AddFeatureSetsAsync(
 
@@ -49,7 +49,7 @@ namespace Dataloop
         /// # :param str model_id: the ID of the model that creates the vectors<br/>
         /// # :param str org_id: the ID of the org where feature set will be created<br/>
         /// # :return: Feature Set object<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Dataloop.APIFeatureSet>>> AddFeatureSetsAsResponseAsync(
 

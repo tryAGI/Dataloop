@@ -9,25 +9,25 @@ namespace Dataloop
     public sealed partial class ModelPredictionRequestConfig
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("serviceReference")]
         public global::Dataloop.EntityReference? ServiceReference { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("serviceId")]
         public string? ServiceId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("pipeline")]
         public global::Dataloop.ExecutionPipelineStateReference? Pipeline { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("serviceConfig")]
         public global::Dataloop.Dictionary? ServiceConfig { get; set; }

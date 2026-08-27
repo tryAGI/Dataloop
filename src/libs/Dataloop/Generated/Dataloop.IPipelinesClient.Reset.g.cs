@@ -25,7 +25,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # success = project.pipelines.reset(pipeline='pipeline_entity')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.APIPipeline> ResetAsync(
             string pipelineId,
@@ -52,7 +52,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # success = project.pipelines.reset(pipeline='pipeline_entity')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APIPipeline>> ResetAsResponseAsync(
             string pipelineId,

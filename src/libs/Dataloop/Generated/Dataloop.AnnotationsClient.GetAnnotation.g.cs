@@ -62,7 +62,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # annotation = item.annotations.get(annotation_id='annotation_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.APIAnnotation> GetAnnotationAsync(
             string annotationId,
@@ -98,7 +98,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # annotation = item.annotations.get(annotation_id='annotation_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APIAnnotation>> GetAnnotationAsResponseAsync(
             string annotationId,
@@ -164,7 +164,7 @@ namespace Dataloop
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                 global::Dataloop.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,

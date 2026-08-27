@@ -24,7 +24,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # project = dl.projects.create(project_name='project_name')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.APIProject> CreateProjectAsync(
 
@@ -51,7 +51,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # project = dl.projects.create(project_name='project_name')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APIProject>> CreateProjectAsResponseAsync(
 

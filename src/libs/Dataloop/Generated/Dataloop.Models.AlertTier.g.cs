@@ -4,24 +4,24 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum AlertTier
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Acute,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Early,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Enforcement,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Preliminary,
     }

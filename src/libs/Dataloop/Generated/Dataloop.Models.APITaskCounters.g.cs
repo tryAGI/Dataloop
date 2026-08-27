@@ -4,33 +4,33 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class APITaskCounters
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("activeProjects")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double ActiveProjects { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("activeDatasets")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double ActiveDatasets { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("activeTasks")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double ActiveTasks { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("tasksCount")]
         [global::System.Text.Json.Serialization.JsonRequired]

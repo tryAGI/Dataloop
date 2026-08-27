@@ -61,7 +61,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # service_revision = package.services.revisions(service_id='service_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Dataloop.APIService>> GetServiceRevisionsAsync(
             string id,
@@ -96,7 +96,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # service_revision = package.services.revisions(service_id='service_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Dataloop.APIService>>> GetServiceRevisionsAsResponseAsync(
             string id,
@@ -162,7 +162,7 @@ namespace Dataloop
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                 global::Dataloop.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,

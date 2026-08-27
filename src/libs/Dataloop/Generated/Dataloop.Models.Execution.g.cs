@@ -4,7 +4,7 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class Execution
     {
@@ -49,83 +49,83 @@ namespace Dataloop
         public string? UpdatedBy { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("attempts")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double Attempts { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("maxAttempts")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double MaxAttempts { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("toTerminate")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool ToTerminate { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("input")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Dataloop.Dictionary Input { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("output")]
         public global::Dataloop.Dictionary? Output { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("feedbackQueue")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Dataloop.ExecutionFeedbackQueue FeedbackQueue { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Collections.Generic.IList<global::Dataloop.ExecutionStatusReport> Status { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("statusLog")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Collections.Generic.IList<global::Dataloop.ExecutionStatusReport> StatusLog { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("latestStatus")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Dataloop.ExecutionStatusReport LatestStatus { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("duration")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double Duration { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("projectId")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string ProjectId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("functionName")]
         public string? FunctionName { get; set; }
@@ -144,7 +144,7 @@ namespace Dataloop
         public string? TriggerId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("serviceName")]
         public string? ServiceName { get; set; }
@@ -157,14 +157,14 @@ namespace Dataloop
         public required string PackageId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("packageName")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string PackageName { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("packageRevision")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<double?, string>))]
@@ -172,7 +172,7 @@ namespace Dataloop
         public required global::Dataloop.AnyOf<double?, string> PackageRevision { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("serviceVersion")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dataloop.JsonConverters.AnyOfJsonConverter<double?, string>))]
@@ -180,25 +180,25 @@ namespace Dataloop
         public required global::Dataloop.AnyOf<double?, string> ServiceVersion { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("pipeline")]
         public global::Dataloop.ExecutionPipeline? Pipeline { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("moduleName")]
         public string? ModuleName { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("model")]
         public global::Dataloop.ExecutionModel? Model { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("eventContext")]
         public global::Dataloop.ExecutionEventContext? EventContext { get; set; }
@@ -211,96 +211,96 @@ namespace Dataloop
         public required string Id2 { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("authz")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Dataloop.AuthZBlockExecutionContext Authz { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("orgId")]
         public string? OrgId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("global")]
         public bool? Global { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("resources")]
         public global::System.Collections.Generic.IList<global::Dataloop.ExecutionResource>? Resources { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("mode")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dataloop.JsonConverters.ExecutionModeJsonConverter))]
         public global::Dataloop.ExecutionMode? Mode { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("syncReplyTo")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Dataloop.ExecutionSyncReplyTo SyncReplyTo { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("archiveService")]
         public bool? ArchiveService { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("app")]
         public global::Dataloop.IAppDefinition? App { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("driverId")]
         public string? DriverId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("hook")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Dataloop.ExecutionHook Hook { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("timeoutSeconds")]
         public double? TimeoutSeconds { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("deadline")]
         public global::System.DateTime? Deadline { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("apiHandleTimeout")]
         public global::System.DateTime? ApiHandleTimeout { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("phase")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dataloop.JsonConverters.ExecutionPhaseJsonConverter))]
         public global::Dataloop.ExecutionPhase? Phase { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("onReset")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dataloop.JsonConverters.OnResetActionJsonConverter))]

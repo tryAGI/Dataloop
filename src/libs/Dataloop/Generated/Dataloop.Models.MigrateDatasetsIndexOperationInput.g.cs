@@ -4,12 +4,12 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class MigrateDatasetsIndexOperationInput
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("targetItemsSchema")]
         public global::Dataloop.SchemaMap? TargetItemsSchema { get; set; }
@@ -45,7 +45,7 @@ namespace Dataloop
         public bool? DeleteSource { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("targetIndex")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dataloop.JsonConverters.DatasetIndexDriversJsonConverter))]
@@ -53,7 +53,7 @@ namespace Dataloop
         public required global::Dataloop.DatasetIndexDrivers TargetIndex { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("datasetQuery")]
         [global::System.Text.Json.Serialization.JsonRequired]

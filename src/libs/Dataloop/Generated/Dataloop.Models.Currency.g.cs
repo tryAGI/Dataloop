@@ -4,20 +4,20 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum Currency
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Eur,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Nis,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Usd,
     }

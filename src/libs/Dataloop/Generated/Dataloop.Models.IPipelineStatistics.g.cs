@@ -4,32 +4,32 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class IPipelineStatistics
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("pipelineExecutionCounters")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Collections.Generic.IList<global::Dataloop.IPipelineExecutionCount> PipelineExecutionCounters { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("nodeExecutionsCounters")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Collections.Generic.IList<global::Dataloop.INodeExecutionCount> NodeExecutionsCounters { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("pipelineExecutionStatistics")]
         public global::Dataloop.IExecutionStatistics? PipelineExecutionStatistics { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("nodeExecutionStatistics")]
         public global::System.Collections.Generic.IList<global::Dataloop.INodeExecutionStatistics>? NodeExecutionStatistics { get; set; }

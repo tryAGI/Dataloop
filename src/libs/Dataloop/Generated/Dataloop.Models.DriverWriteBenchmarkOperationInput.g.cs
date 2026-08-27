@@ -4,12 +4,12 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class DriverWriteBenchmarkOperationInput
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("scenarioDetails")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dataloop.JsonConverters.DriverWriteBenchmarkOperationInputScenarioDetailsJsonConverter))]
@@ -17,44 +17,44 @@ namespace Dataloop
         public required global::Dataloop.DriverWriteBenchmarkOperationInputScenarioDetails ScenarioDetails { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("projectId")]
         public string? ProjectId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("itemsNumber")]
         public double? ItemsNumber { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("concurrency")]
         public double? Concurrency { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("producersAmount")]
         public double? ProducersAmount { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("waitUntilCompletion")]
         public bool? WaitUntilCompletion { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("datasetWithItemsToStreamId")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string DatasetWithItemsToStreamId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("driverId")]
         [global::System.Text.Json.Serialization.JsonRequired]

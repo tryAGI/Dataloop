@@ -4,24 +4,24 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ServiceDriverType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FargateEks,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Kubernetes,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mock,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Noop,
     }

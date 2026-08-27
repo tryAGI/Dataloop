@@ -68,7 +68,7 @@ namespace Dataloop
         /// # organization_id='organization_id',<br/>
         /// # sure=True,<br/>
         /// # really=True)<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task RemoveOrgMemberAsync(
             string orgId,
@@ -113,7 +113,7 @@ namespace Dataloop
         /// # organization_id='organization_id',<br/>
         /// # sure=True,<br/>
         /// # really=True)<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse> RemoveOrgMemberAsResponseAsync(
             string orgId,
@@ -181,7 +181,7 @@ namespace Dataloop
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                 global::Dataloop.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,

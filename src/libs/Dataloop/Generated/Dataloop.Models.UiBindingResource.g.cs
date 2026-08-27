@@ -4,36 +4,36 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum UiBindingResource
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Annotation,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Assignment,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Dataset,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DatasetQuery,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Item,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Project,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Task,
     }

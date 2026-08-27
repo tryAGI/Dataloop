@@ -24,7 +24,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # dataset.tasks.get(task_id='task_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.APITask> GetAnnotationTaskAsync(
             string id,
@@ -50,7 +50,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # dataset.tasks.get(task_id='task_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APITask>> GetAnnotationTaskAsResponseAsync(
             string id,

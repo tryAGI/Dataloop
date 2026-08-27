@@ -4,24 +4,24 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum DQLResourceQueryQueryEngine
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Elasticsearch,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Json,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mongo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sql,
     }

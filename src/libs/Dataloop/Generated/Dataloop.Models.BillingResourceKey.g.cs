@@ -4,292 +4,292 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum BillingResourceKey
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AccessToCustomerSuccessRepresentationPool,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AdvancedAnalyticsHistory,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AiVideoTracker,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AnalyticsDashboard,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AnnotationToolHours,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApiAccess,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApiCalls,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AutoAnnotationTools,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ComputeBudget,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ComputeCpuHighmemL,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ComputeCpuHighmemM,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ComputeCpuHighmemS,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ComputeCpuHighmemXs,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ComputeCpuRegularL,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ComputeCpuRegularM,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ComputeCpuRegularS,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ComputeCpuRegularXs,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ComputeGpuA1004g,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ComputeGpuA1004gM,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ComputeGpuA100M,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ComputeGpuA100S,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ComputeGpuK80M,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ComputeGpuK80S,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ComputeGpuT4,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ComputeGpuT4M,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CustomProjectDashboard,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DataBugTracking,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DataPipelineFilters,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DataPoints,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DataVersioning,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DataVisualization,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DebugAndGuideViaTrackingSys,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DedicatedCustomerSuccess,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DefaultAnnotationStudios,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DeveloperSuccessAssistance,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EmailCustomerSupport,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EngineeringConsulting,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnterpriseSupportSla,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Faas,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Faq,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HostedStorage,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HumanTasks,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         IngestedDataPoints,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         InstructionalVideoLibraryAccess,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         IpWhitelist,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         KnowledgeBase,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Lidar,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ManagedLabelingService,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MetadataSearch,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MfaIntegration,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MlModelAssistedAnnotation,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ModelManagement,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MonthlyCustomerSuccessCalls,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MultipleWorkforces,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OnDemandCalls,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OnDemandCustomerSuccessCalls,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OutputFormatConverters,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ProfessionalServices,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ProfessionalServicesCustomDevelopment,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ProfessionalServicesOrDeveloperSuccessLeadOnboarding,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         QuarterlyCustomerSuccessCheckIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RoleAndGroupBasedAccessControl,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SdkAccess,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SsoIntegration,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         StorageIntegration,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SystemCompute,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TicketBasedTroubleshooting,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UnlimitedSeats,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VpcDeployment,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         WeeklyCustomerSuccessCalls,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         WorkforceManagementTool,
     }

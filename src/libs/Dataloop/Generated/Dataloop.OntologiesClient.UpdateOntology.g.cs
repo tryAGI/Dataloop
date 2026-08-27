@@ -64,7 +64,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # recipe.ontologies.delete(ontology='ontology_entity')<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<global::Dataloop.APIOntologyV2, global::Dataloop.APIOntology>> UpdateOntologyAsync(
             string id,
@@ -104,7 +104,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # recipe.ontologies.delete(ontology='ontology_entity')<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.AnyOf<global::Dataloop.APIOntologyV2, global::Dataloop.APIOntology>>> UpdateOntologyAsResponseAsync(
             string id,
@@ -175,7 +175,7 @@ namespace Dataloop
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                             var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
                             var __httpRequestContent = new global::System.Net.Http.StringContent(

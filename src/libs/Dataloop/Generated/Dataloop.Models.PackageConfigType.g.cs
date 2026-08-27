@@ -4,16 +4,16 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PackageConfigType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Code,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Codebase,
     }

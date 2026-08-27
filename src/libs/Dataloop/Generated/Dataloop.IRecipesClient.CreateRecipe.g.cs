@@ -29,7 +29,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # dataset.recipes.create(recipe_name='My Recipe', labels=labels))<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<global::Dataloop.APIRecipeV2, global::Dataloop.APIRecipe>> CreateRecipeAsync(
 
@@ -61,7 +61,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # dataset.recipes.create(recipe_name='My Recipe', labels=labels))<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.AnyOf<global::Dataloop.APIRecipeV2, global::Dataloop.APIRecipe>>> CreateRecipeAsResponseAsync(
 

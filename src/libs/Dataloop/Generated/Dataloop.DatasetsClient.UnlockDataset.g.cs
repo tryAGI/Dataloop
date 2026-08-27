@@ -42,7 +42,7 @@ namespace Dataloop
             ref string content);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="id"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -60,7 +60,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # dataset = project.datasets.unlock(dataset='dataset_entity')<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.APIDataset> UnlockDatasetAsync(
             string id,
@@ -76,7 +76,7 @@ namespace Dataloop
             return __response.Body;
         }
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="id"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -94,7 +94,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # dataset = project.datasets.unlock(dataset='dataset_entity')<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APIDataset>> UnlockDatasetAsResponseAsync(
             string id,
@@ -160,7 +160,7 @@ namespace Dataloop
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                 global::Dataloop.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,

@@ -5,7 +5,7 @@ namespace Dataloop
     public partial interface IDatasetsClient
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="id"></param>
         /// <param name="request"></param>
@@ -108,7 +108,7 @@ namespace Dataloop
         /// # )<br/>
         /// # # Store to_version for next diff export<br/>
         /// # next_from_version = manifest.to_version<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<string> ExportDatasetAsZipAsync(
             string id,
@@ -117,7 +117,7 @@ namespace Dataloop
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="id"></param>
         /// <param name="request"></param>
@@ -220,7 +220,7 @@ namespace Dataloop
         /// # )<br/>
         /// # # Store to_version for next diff export<br/>
         /// # next_from_version = manifest.to_version<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<string>> ExportDatasetAsZipAsResponseAsync(
             string id,
@@ -229,7 +229,7 @@ namespace Dataloop
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="id"></param>
         /// <param name="includeItemVectors"></param>

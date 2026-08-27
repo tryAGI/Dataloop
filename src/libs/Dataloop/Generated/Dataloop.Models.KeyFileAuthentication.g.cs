@@ -9,7 +9,7 @@ namespace Dataloop
     public sealed partial class KeyFileAuthentication
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("filepath")]
         [global::System.Text.Json.Serialization.JsonRequired]

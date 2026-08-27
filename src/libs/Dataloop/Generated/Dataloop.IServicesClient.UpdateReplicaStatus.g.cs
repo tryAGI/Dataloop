@@ -27,7 +27,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # status_json = package.services.status(service_id='service_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.APIReplicaStatusUpdate> UpdateReplicaStatusAsync(
             string id,
@@ -58,7 +58,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # status_json = package.services.status(service_id='service_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APIReplicaStatusUpdate>> UpdateReplicaStatusAsResponseAsync(
             string id,

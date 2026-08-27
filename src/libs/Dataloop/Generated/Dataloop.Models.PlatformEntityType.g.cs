@@ -4,36 +4,36 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PlatformEntityType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BillingOrg,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BillingProject,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Dataset,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Org,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Project,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Task,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         User,
     }

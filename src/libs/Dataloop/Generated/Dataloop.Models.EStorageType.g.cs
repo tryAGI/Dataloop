@@ -4,20 +4,20 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum EStorageType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Nfs,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pvc,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         S3,
     }

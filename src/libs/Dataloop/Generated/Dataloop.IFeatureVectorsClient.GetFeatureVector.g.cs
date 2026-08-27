@@ -17,7 +17,7 @@ namespace Dataloop
         /// # <br/>
         /// # :param str feature_id: feature id<br/>
         /// # :return: Feature object<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.APIFeatureVector> GetFeatureVectorAsync(
             string id,
@@ -36,7 +36,7 @@ namespace Dataloop
         /// # <br/>
         /// # :param str feature_id: feature id<br/>
         /// # :return: Feature object<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APIFeatureVector>> GetFeatureVectorAsResponseAsync(
             string id,

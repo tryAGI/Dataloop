@@ -5,7 +5,7 @@ namespace Dataloop
     public partial interface IServicesClient
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="mode"></param>
         /// <param name="request"></param>
@@ -19,7 +19,7 @@ namespace Dataloop
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="mode"></param>
         /// <param name="request"></param>
@@ -33,7 +33,7 @@ namespace Dataloop
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="mode"></param>
         /// <param name="org"></param>

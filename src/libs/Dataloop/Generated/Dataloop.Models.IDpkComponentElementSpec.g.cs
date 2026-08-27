@@ -5,12 +5,12 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct IDpkComponentElementSpec : global::System.IEquatable<IDpkComponentElementSpec>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.IDpkComponentPanel? Panel { get; init; }
@@ -19,7 +19,7 @@ namespace Dataloop
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Panel))]
@@ -27,7 +27,7 @@ namespace Dataloop
         public bool IsPanel => Panel != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickPanel(
 #if NET6_0_OR_GREATER
@@ -40,14 +40,14 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Dataloop.IDpkComponentPanel PickPanel() => IsPanel
             ? Panel!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Panel' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.IDpkComponentModel? Model { get; init; }
@@ -56,7 +56,7 @@ namespace Dataloop
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Model))]
@@ -64,7 +64,7 @@ namespace Dataloop
         public bool IsModel => Model != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickModel(
 #if NET6_0_OR_GREATER
@@ -77,14 +77,14 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Dataloop.IDpkComponentModel PickModel() => IsModel
             ? Model!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Model' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.IDpkComponentModule? Module { get; init; }
@@ -93,7 +93,7 @@ namespace Dataloop
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Module))]
@@ -101,7 +101,7 @@ namespace Dataloop
         public bool IsModule => Module != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickModule(
 #if NET6_0_OR_GREATER
@@ -114,14 +114,14 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Dataloop.IDpkComponentModule PickModule() => IsModule
             ? Module!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Module' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.IDpkComponentTrigger? Trigger { get; init; }
@@ -130,7 +130,7 @@ namespace Dataloop
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Trigger))]
@@ -138,7 +138,7 @@ namespace Dataloop
         public bool IsTrigger => Trigger != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickTrigger(
 #if NET6_0_OR_GREATER
@@ -151,14 +151,14 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Dataloop.IDpkComponentTrigger PickTrigger() => IsTrigger
             ? Trigger!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Trigger' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.IDpkComponentService? Service { get; init; }
@@ -167,7 +167,7 @@ namespace Dataloop
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Service))]
@@ -175,7 +175,7 @@ namespace Dataloop
         public bool IsService => Service != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickService(
 #if NET6_0_OR_GREATER
@@ -188,14 +188,14 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Dataloop.IDpkComponentService PickService() => IsService
             ? Service!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Service' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.IDpkComponentToolbars? Toolbars { get; init; }
@@ -204,7 +204,7 @@ namespace Dataloop
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Toolbars))]
@@ -212,7 +212,7 @@ namespace Dataloop
         public bool IsToolbars => Toolbars != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickToolbars(
 #if NET6_0_OR_GREATER
@@ -225,14 +225,14 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Dataloop.IDpkComponentToolbars PickToolbars() => IsToolbars
             ? Toolbars!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Toolbars' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.IDpkChannel? Channel { get; init; }
@@ -241,7 +241,7 @@ namespace Dataloop
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Channel))]
@@ -249,7 +249,7 @@ namespace Dataloop
         public bool IsChannel => Channel != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickChannel(
 #if NET6_0_OR_GREATER
@@ -262,14 +262,14 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Dataloop.IDpkChannel PickChannel() => IsChannel
             ? Channel!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Channel' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.IDpkComputeConfigs? ComputeConfigs { get; init; }
@@ -278,7 +278,7 @@ namespace Dataloop
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ComputeConfigs))]
@@ -286,7 +286,7 @@ namespace Dataloop
         public bool IsComputeConfigs => ComputeConfigs != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickComputeConfigs(
 #if NET6_0_OR_GREATER
@@ -299,14 +299,14 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Dataloop.IDpkComputeConfigs PickComputeConfigs() => IsComputeConfigs
             ? ComputeConfigs!
             : throw new global::System.InvalidOperationException($"Expected union variant 'ComputeConfigs' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.IDpkPipelineNode? PipelineNode { get; init; }
@@ -315,7 +315,7 @@ namespace Dataloop
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(PipelineNode))]
@@ -323,7 +323,7 @@ namespace Dataloop
         public bool IsPipelineNode => PipelineNode != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickPipelineNode(
 #if NET6_0_OR_GREATER
@@ -336,14 +336,14 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Dataloop.IDpkPipelineNode PickPipelineNode() => IsPipelineNode
             ? PipelineNode!
             : throw new global::System.InvalidOperationException($"Expected union variant 'PipelineNode' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.IDpkPipelineTemplate? PipelineTemplate { get; init; }
@@ -352,7 +352,7 @@ namespace Dataloop
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(PipelineTemplate))]
@@ -360,7 +360,7 @@ namespace Dataloop
         public bool IsPipelineTemplate => PipelineTemplate != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickPipelineTemplate(
 #if NET6_0_OR_GREATER
@@ -373,23 +373,23 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Dataloop.IDpkPipelineTemplate PickPipelineTemplate() => IsPipelineTemplate
             ? PipelineTemplate!
             : throw new global::System.InvalidOperationException($"Expected union variant 'PipelineTemplate' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator IDpkComponentElementSpec(global::Dataloop.IDpkComponentPanel value) => new IDpkComponentElementSpec((global::Dataloop.IDpkComponentPanel?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Dataloop.IDpkComponentPanel?(IDpkComponentElementSpec @this) => @this.Panel;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public IDpkComponentElementSpec(global::Dataloop.IDpkComponentPanel? value)
         {
@@ -397,22 +397,22 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static IDpkComponentElementSpec FromPanel(global::Dataloop.IDpkComponentPanel? value) => new IDpkComponentElementSpec(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator IDpkComponentElementSpec(global::Dataloop.IDpkComponentModel value) => new IDpkComponentElementSpec((global::Dataloop.IDpkComponentModel?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Dataloop.IDpkComponentModel?(IDpkComponentElementSpec @this) => @this.Model;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public IDpkComponentElementSpec(global::Dataloop.IDpkComponentModel? value)
         {
@@ -420,22 +420,22 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static IDpkComponentElementSpec FromModel(global::Dataloop.IDpkComponentModel? value) => new IDpkComponentElementSpec(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator IDpkComponentElementSpec(global::Dataloop.IDpkComponentModule value) => new IDpkComponentElementSpec((global::Dataloop.IDpkComponentModule?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Dataloop.IDpkComponentModule?(IDpkComponentElementSpec @this) => @this.Module;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public IDpkComponentElementSpec(global::Dataloop.IDpkComponentModule? value)
         {
@@ -443,22 +443,22 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static IDpkComponentElementSpec FromModule(global::Dataloop.IDpkComponentModule? value) => new IDpkComponentElementSpec(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator IDpkComponentElementSpec(global::Dataloop.IDpkComponentTrigger value) => new IDpkComponentElementSpec((global::Dataloop.IDpkComponentTrigger?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Dataloop.IDpkComponentTrigger?(IDpkComponentElementSpec @this) => @this.Trigger;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public IDpkComponentElementSpec(global::Dataloop.IDpkComponentTrigger? value)
         {
@@ -466,22 +466,22 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static IDpkComponentElementSpec FromTrigger(global::Dataloop.IDpkComponentTrigger? value) => new IDpkComponentElementSpec(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator IDpkComponentElementSpec(global::Dataloop.IDpkComponentService value) => new IDpkComponentElementSpec((global::Dataloop.IDpkComponentService?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Dataloop.IDpkComponentService?(IDpkComponentElementSpec @this) => @this.Service;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public IDpkComponentElementSpec(global::Dataloop.IDpkComponentService? value)
         {
@@ -489,22 +489,22 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static IDpkComponentElementSpec FromService(global::Dataloop.IDpkComponentService? value) => new IDpkComponentElementSpec(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator IDpkComponentElementSpec(global::Dataloop.IDpkComponentToolbars value) => new IDpkComponentElementSpec((global::Dataloop.IDpkComponentToolbars?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Dataloop.IDpkComponentToolbars?(IDpkComponentElementSpec @this) => @this.Toolbars;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public IDpkComponentElementSpec(global::Dataloop.IDpkComponentToolbars? value)
         {
@@ -512,22 +512,22 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static IDpkComponentElementSpec FromToolbars(global::Dataloop.IDpkComponentToolbars? value) => new IDpkComponentElementSpec(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator IDpkComponentElementSpec(global::Dataloop.IDpkChannel value) => new IDpkComponentElementSpec((global::Dataloop.IDpkChannel?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Dataloop.IDpkChannel?(IDpkComponentElementSpec @this) => @this.Channel;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public IDpkComponentElementSpec(global::Dataloop.IDpkChannel? value)
         {
@@ -535,22 +535,22 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static IDpkComponentElementSpec FromChannel(global::Dataloop.IDpkChannel? value) => new IDpkComponentElementSpec(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator IDpkComponentElementSpec(global::Dataloop.IDpkComputeConfigs value) => new IDpkComponentElementSpec((global::Dataloop.IDpkComputeConfigs?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Dataloop.IDpkComputeConfigs?(IDpkComponentElementSpec @this) => @this.ComputeConfigs;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public IDpkComponentElementSpec(global::Dataloop.IDpkComputeConfigs? value)
         {
@@ -558,22 +558,22 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static IDpkComponentElementSpec FromComputeConfigs(global::Dataloop.IDpkComputeConfigs? value) => new IDpkComponentElementSpec(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator IDpkComponentElementSpec(global::Dataloop.IDpkPipelineNode value) => new IDpkComponentElementSpec((global::Dataloop.IDpkPipelineNode?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Dataloop.IDpkPipelineNode?(IDpkComponentElementSpec @this) => @this.PipelineNode;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public IDpkComponentElementSpec(global::Dataloop.IDpkPipelineNode? value)
         {
@@ -581,22 +581,22 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static IDpkComponentElementSpec FromPipelineNode(global::Dataloop.IDpkPipelineNode? value) => new IDpkComponentElementSpec(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator IDpkComponentElementSpec(global::Dataloop.IDpkPipelineTemplate value) => new IDpkComponentElementSpec((global::Dataloop.IDpkPipelineTemplate?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Dataloop.IDpkPipelineTemplate?(IDpkComponentElementSpec @this) => @this.PipelineTemplate;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public IDpkComponentElementSpec(global::Dataloop.IDpkPipelineTemplate? value)
         {
@@ -604,12 +604,12 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static IDpkComponentElementSpec FromPipelineTemplate(global::Dataloop.IDpkPipelineTemplate? value) => new IDpkComponentElementSpec(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public IDpkComponentElementSpec(
             global::Dataloop.IDpkComponentPanel? panel,
@@ -637,7 +637,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             PipelineTemplate as object ??
@@ -649,11 +649,11 @@ namespace Dataloop
             Trigger as object ??
             Module as object ??
             Model as object ??
-            Panel as object 
+            Panel as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             Panel?.ToString() ??
@@ -665,11 +665,11 @@ namespace Dataloop
             Channel?.ToString() ??
             ComputeConfigs?.ToString() ??
             PipelineNode?.ToString() ??
-            PipelineTemplate?.ToString() 
+            PipelineTemplate?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -677,7 +677,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Dataloop.IDpkComponentPanel, TResult>? panel = null,
@@ -742,7 +742,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Dataloop.IDpkComponentPanel>? panel = null,
@@ -814,7 +814,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Dataloop.IDpkComponentPanel>? panel = null,
@@ -877,7 +877,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -914,7 +914,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(IDpkComponentElementSpec other)
         {
@@ -928,12 +928,12 @@ namespace Dataloop
                 global::System.Collections.Generic.EqualityComparer<global::Dataloop.IDpkChannel?>.Default.Equals(Channel, other.Channel) &&
                 global::System.Collections.Generic.EqualityComparer<global::Dataloop.IDpkComputeConfigs?>.Default.Equals(ComputeConfigs, other.ComputeConfigs) &&
                 global::System.Collections.Generic.EqualityComparer<global::Dataloop.IDpkPipelineNode?>.Default.Equals(PipelineNode, other.PipelineNode) &&
-                global::System.Collections.Generic.EqualityComparer<global::Dataloop.IDpkPipelineTemplate?>.Default.Equals(PipelineTemplate, other.PipelineTemplate) 
+                global::System.Collections.Generic.EqualityComparer<global::Dataloop.IDpkPipelineTemplate?>.Default.Equals(PipelineTemplate, other.PipelineTemplate)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(IDpkComponentElementSpec obj1, IDpkComponentElementSpec obj2)
         {
@@ -941,7 +941,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(IDpkComponentElementSpec obj1, IDpkComponentElementSpec obj2)
         {
@@ -949,7 +949,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

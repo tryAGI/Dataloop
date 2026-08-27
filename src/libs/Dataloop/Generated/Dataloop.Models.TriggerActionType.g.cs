@@ -4,32 +4,32 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum TriggerActionType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Clone,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Created,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Deleted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Updated,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         StatusChanged,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TaskAssigned,
     }

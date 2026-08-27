@@ -4,24 +4,24 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum AssignmentStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CompletedWithIssues,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Done,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         InProgress,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Todo,
     }

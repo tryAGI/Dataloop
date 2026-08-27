@@ -4,7 +4,7 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class DebugSession
     {
@@ -15,13 +15,13 @@ namespace Dataloop
         public bool? ServeDebugIngressCreated { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("time")]
         public global::System.DateTime? Time { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dataloop.JsonConverters.EDebugOptionsStatusJsonConverter))]

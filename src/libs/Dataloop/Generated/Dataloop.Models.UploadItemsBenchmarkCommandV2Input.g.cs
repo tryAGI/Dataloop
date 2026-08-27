@@ -4,12 +4,12 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class UploadItemsBenchmarkCommandV2Input
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("indexDriver")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dataloop.JsonConverters.IndexDriverJsonConverter))]
@@ -17,34 +17,34 @@ namespace Dataloop
         public required global::Dataloop.IndexDriver IndexDriver { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("itemsCount")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double ItemsCount { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("batchSize")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double BatchSize { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("concurrency")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double Concurrency { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("gateUrl")]
         public string? GateUrl { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("uploadFileConfig")]
         public global::Dataloop.UploadItemsBenchmarkCommandV2InputUploadFileConfig? UploadFileConfig { get; set; }

@@ -30,7 +30,7 @@ namespace Dataloop
         /// # <br/>
         /// # assignment = task.assignments.redistribute(workload=dl.Workload([dl.WorkloadUnit(assignee_id="annotator1@dataloop.ai", load=50),<br/>
         /// # dl.WorkloadUnit(assignee_id="annotator2@dataloop.ai", load=50)]))<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<global::Dataloop.APICommand, global::System.Collections.Generic.IList<global::Dataloop.APIAssignment>>> RedistributeAssignmentAsync(
             string id,
@@ -64,7 +64,7 @@ namespace Dataloop
         /// # <br/>
         /// # assignment = task.assignments.redistribute(workload=dl.Workload([dl.WorkloadUnit(assignee_id="annotator1@dataloop.ai", load=50),<br/>
         /// # dl.WorkloadUnit(assignee_id="annotator2@dataloop.ai", load=50)]))<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.AnyOf<global::Dataloop.APICommand, global::System.Collections.Generic.IList<global::Dataloop.APIAssignment>>>> RedistributeAssignmentAsResponseAsync(
             string id,

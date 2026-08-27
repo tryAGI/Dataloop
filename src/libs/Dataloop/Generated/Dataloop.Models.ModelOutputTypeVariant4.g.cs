@@ -4,12 +4,12 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ModelOutputTypeVariant4
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Embedding,
     }

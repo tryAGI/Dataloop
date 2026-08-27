@@ -25,7 +25,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # service.executions.rerun(execution='execution_entity')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<global::Dataloop.APIExecution, global::Dataloop.PiperSettingsCommands>> RerunExecutionAsync(
             string executionId,
@@ -53,7 +53,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # service.executions.rerun(execution='execution_entity')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.AnyOf<global::Dataloop.APIExecution, global::Dataloop.PiperSettingsCommands>>> RerunExecutionAsResponseAsync(
             string executionId,

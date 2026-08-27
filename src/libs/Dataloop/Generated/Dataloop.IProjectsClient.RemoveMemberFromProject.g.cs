@@ -25,7 +25,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # user_json = dl.projects.remove_member(project_id='project_id', email='user@dataloop.ai')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Dataloop.ClientContributor>> RemoveMemberFromProjectAsync(
             string projectId,
@@ -53,7 +53,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # user_json = dl.projects.remove_member(project_id='project_id', email='user@dataloop.ai')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Dataloop.ClientContributor>>> RemoveMemberFromProjectAsResponseAsync(
             string projectId,

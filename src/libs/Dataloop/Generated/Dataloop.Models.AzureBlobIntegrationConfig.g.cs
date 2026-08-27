@@ -4,33 +4,33 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class AzureBlobIntegrationConfig
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("accountName")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string AccountName { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("clientId")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string ClientId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("tenantId")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string TenantId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("clientSecret")]
         [global::System.Text.Json.Serialization.JsonRequired]

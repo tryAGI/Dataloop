@@ -4,60 +4,60 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum DataloopPodType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GpuA1004g,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GpuA1004gM,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GpuA100S,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GpuT4,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GpuT4M,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HighmemL,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HighmemM,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HighmemS,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HighmemXs,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RegularL,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RegularM,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RegularS,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RegularXs,
     }

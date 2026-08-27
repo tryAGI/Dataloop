@@ -68,7 +68,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # user_json = = dl.projects.update_member(project_id='project_id', email='user@dataloop.ai', role=dl.MemberRole.DEVELOPER)<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Dataloop.ClientContributor>> ChangeMemberProjectRoleAsync(
             string projectId,
@@ -112,7 +112,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # user_json = = dl.projects.update_member(project_id='project_id', email='user@dataloop.ai', role=dl.MemberRole.DEVELOPER)<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Dataloop.ClientContributor>>> ChangeMemberProjectRoleAsResponseAsync(
             string projectId,
@@ -185,7 +185,7 @@ namespace Dataloop
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                             var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
                             var __httpRequestContent = new global::System.Net.Http.StringContent(

@@ -9,23 +9,23 @@ namespace Dataloop
     public enum CreateDatasetRequestDriver
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Azureblob,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Fs,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gcs,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mongo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         S3,
     }

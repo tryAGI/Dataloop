@@ -4,19 +4,19 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ExecuteOptions
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("batch")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Dataloop.ExecuteOptionsBatch Batch { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("pipeline")]
         [global::System.Text.Json.Serialization.JsonRequired]

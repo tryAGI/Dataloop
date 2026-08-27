@@ -4,16 +4,16 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum BenchmarkIngestionStrategyType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Batch,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sequentially,
     }

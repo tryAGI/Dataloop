@@ -27,7 +27,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # org = dl.organizations.get(organization_id='organization_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.APIOrg> FindOrgAsync(
             string orgId,
@@ -56,7 +56,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # org = dl.organizations.get(organization_id='organization_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APIOrg>> FindOrgAsResponseAsync(
             string orgId,

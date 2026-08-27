@@ -4,19 +4,19 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class IExecutionStatistics
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("avgTimePerExecution")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double AvgTimePerExecution { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("avgExecutionsPerDay")]
         [global::System.Text.Json.Serialization.JsonRequired]

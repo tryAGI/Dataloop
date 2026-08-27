@@ -4,20 +4,20 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum JobStatusEnum
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Created,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Failure,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Success,
     }

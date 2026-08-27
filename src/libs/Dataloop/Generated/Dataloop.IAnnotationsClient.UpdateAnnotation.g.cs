@@ -29,7 +29,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # annotations = item.annotations.update(annotation='annotation')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.APIAnnotation> UpdateAnnotationAsync(
             string annotationId,
@@ -64,7 +64,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # annotations = item.annotations.update(annotation='annotation')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APIAnnotation>> UpdateAnnotationAsResponseAsync(
             string annotationId,

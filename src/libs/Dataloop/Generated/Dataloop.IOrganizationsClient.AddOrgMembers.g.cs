@@ -32,7 +32,7 @@ namespace Dataloop
         /// # success = dl.organizations.add_member(email='user@domain.com',<br/>
         /// # organization_id='organization_id',<br/>
         /// # role=dl.MemberOrgRole.MEMBER)<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Dataloop.APIOrgUser>> AddOrgMembersAsync(
             string orgId,
@@ -68,7 +68,7 @@ namespace Dataloop
         /// # success = dl.organizations.add_member(email='user@domain.com',<br/>
         /// # organization_id='organization_id',<br/>
         /// # role=dl.MemberOrgRole.MEMBER)<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Dataloop.APIOrgUser>>> AddOrgMembersAsResponseAsync(
             string orgId,

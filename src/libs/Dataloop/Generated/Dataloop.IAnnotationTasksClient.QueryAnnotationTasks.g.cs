@@ -5,7 +5,7 @@ namespace Dataloop
     public partial interface IAnnotationTasksClient
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -32,7 +32,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # dataset.tasks.list(project_ids='project_ids',pages_size=100, page_offset=0)<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.CursorPageAny> QueryAnnotationTasksAsync(
 
@@ -40,7 +40,7 @@ namespace Dataloop
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -67,7 +67,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # dataset.tasks.list(project_ids='project_ids',pages_size=100, page_offset=0)<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.CursorPageAny>> QueryAnnotationTasksAsResponseAsync(
 
@@ -75,7 +75,7 @@ namespace Dataloop
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="context"></param>
         /// <param name="page"></param>

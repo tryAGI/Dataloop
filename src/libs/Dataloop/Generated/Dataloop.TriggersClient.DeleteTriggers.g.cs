@@ -56,7 +56,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # service.triggers.delete(trigger_id='trigger_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task DeleteTriggersAsync(
             string id,
@@ -89,7 +89,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # service.triggers.delete(trigger_id='trigger_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse> DeleteTriggersAsResponseAsync(
             string id,
@@ -155,7 +155,7 @@ namespace Dataloop
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                 global::Dataloop.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,

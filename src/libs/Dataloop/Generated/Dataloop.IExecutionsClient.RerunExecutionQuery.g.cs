@@ -26,7 +26,7 @@ namespace Dataloop
         /// # <br/>
         /// # command = service.executions.rerun_batch(<br/>
         /// # filters=dl.Filters(field='id', values=['executionId'], operator=dl.FiltersOperations.IN, resource=dl.FiltersResource.EXECUTION))<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.APICommand> RerunExecutionQueryAsync(
 
@@ -55,7 +55,7 @@ namespace Dataloop
         /// # <br/>
         /// # command = service.executions.rerun_batch(<br/>
         /// # filters=dl.Filters(field='id', values=['executionId'], operator=dl.FiltersOperations.IN, resource=dl.FiltersResource.EXECUTION))<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APICommand>> RerunExecutionQueryAsResponseAsync(
 

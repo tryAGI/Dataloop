@@ -64,7 +64,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # service.executions.rerun(execution='execution_entity')<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<global::Dataloop.APIExecution, global::Dataloop.PiperSettingsCommands>> RerunExecutionAsync(
             string executionId,
@@ -102,7 +102,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # service.executions.rerun(execution='execution_entity')<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.AnyOf<global::Dataloop.APIExecution, global::Dataloop.PiperSettingsCommands>>> RerunExecutionAsResponseAsync(
             string executionId,
@@ -173,7 +173,7 @@ namespace Dataloop
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                 global::Dataloop.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,

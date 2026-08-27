@@ -27,7 +27,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # user_json = = dl.projects.update_member(project_id='project_id', email='user@dataloop.ai', role=dl.MemberRole.DEVELOPER)<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Dataloop.ClientContributor>> ChangeMemberProjectRoleAsync(
             string projectId,
@@ -59,7 +59,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # user_json = = dl.projects.update_member(project_id='project_id', email='user@dataloop.ai', role=dl.MemberRole.DEVELOPER)<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Dataloop.ClientContributor>>> ChangeMemberProjectRoleAsResponseAsync(
             string projectId,

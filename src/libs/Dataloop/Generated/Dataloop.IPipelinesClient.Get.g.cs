@@ -27,7 +27,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # pipeline = project.pipelines.get(pipeline_id='pipeline_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.APIPipeline> GetAsync(
             string pipelineId,
@@ -56,7 +56,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # pipeline = project.pipelines.get(pipeline_id='pipeline_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APIPipeline>> GetAsResponseAsync(
             string pipelineId,

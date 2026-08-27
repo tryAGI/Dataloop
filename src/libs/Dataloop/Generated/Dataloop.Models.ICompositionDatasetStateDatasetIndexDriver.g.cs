@@ -4,16 +4,16 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ICompositionDatasetStateDatasetIndexDriver
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         V1,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         V2,
     }

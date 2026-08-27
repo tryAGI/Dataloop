@@ -25,7 +25,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # dataset.recipes.delete(recipe_id='recipe_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task DeleteRecipeAsync(
             string id,
@@ -53,7 +53,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # dataset.recipes.delete(recipe_id='recipe_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse> DeleteRecipeAsResponseAsync(
             string id,

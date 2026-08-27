@@ -5,12 +5,12 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct AppMetadata : global::System.IEquatable<AppMetadata>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.EntityReferenceMetadata? EntityReference { get; init; }
@@ -19,7 +19,7 @@ namespace Dataloop
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(EntityReference))]
@@ -27,7 +27,7 @@ namespace Dataloop
         public bool IsEntityReference => EntityReference != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickEntityReference(
 #if NET6_0_OR_GREATER
@@ -40,14 +40,14 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Dataloop.EntityReferenceMetadata PickEntityReference() => IsEntityReference
             ? EntityReference!
             : throw new global::System.InvalidOperationException($"Expected union variant 'EntityReference' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.AppMetadataVariant2? AppMetadataVariant2 { get; init; }
@@ -56,7 +56,7 @@ namespace Dataloop
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(AppMetadataVariant2))]
@@ -64,7 +64,7 @@ namespace Dataloop
         public bool IsAppMetadataVariant2 => AppMetadataVariant2 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickAppMetadataVariant2(
 #if NET6_0_OR_GREATER
@@ -77,23 +77,23 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Dataloop.AppMetadataVariant2 PickAppMetadataVariant2() => IsAppMetadataVariant2
             ? AppMetadataVariant2!
             : throw new global::System.InvalidOperationException($"Expected union variant 'AppMetadataVariant2' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator AppMetadata(global::Dataloop.EntityReferenceMetadata value) => new AppMetadata((global::Dataloop.EntityReferenceMetadata?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Dataloop.EntityReferenceMetadata?(AppMetadata @this) => @this.EntityReference;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AppMetadata(global::Dataloop.EntityReferenceMetadata? value)
         {
@@ -101,22 +101,22 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static AppMetadata FromEntityReference(global::Dataloop.EntityReferenceMetadata? value) => new AppMetadata(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator AppMetadata(global::Dataloop.AppMetadataVariant2 value) => new AppMetadata((global::Dataloop.AppMetadataVariant2?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Dataloop.AppMetadataVariant2?(AppMetadata @this) => @this.AppMetadataVariant2;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AppMetadata(global::Dataloop.AppMetadataVariant2? value)
         {
@@ -124,12 +124,12 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static AppMetadata FromAppMetadataVariant2(global::Dataloop.AppMetadataVariant2? value) => new AppMetadata(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AppMetadata(
             global::Dataloop.EntityReferenceMetadata? entityReference,
@@ -141,23 +141,23 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             AppMetadataVariant2 as object ??
-            EntityReference as object 
+            EntityReference as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             EntityReference?.ToString() ??
-            AppMetadataVariant2?.ToString() 
+            AppMetadataVariant2?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -165,7 +165,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Dataloop.EntityReferenceMetadata, TResult>? entityReference = null,
@@ -190,7 +190,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Dataloop.EntityReferenceMetadata>? entityReference = null,
@@ -214,7 +214,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Dataloop.EntityReferenceMetadata>? entityReference = null,
@@ -237,7 +237,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -258,18 +258,18 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(AppMetadata other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Dataloop.EntityReferenceMetadata?>.Default.Equals(EntityReference, other.EntityReference) &&
-                global::System.Collections.Generic.EqualityComparer<global::Dataloop.AppMetadataVariant2?>.Default.Equals(AppMetadataVariant2, other.AppMetadataVariant2) 
+                global::System.Collections.Generic.EqualityComparer<global::Dataloop.AppMetadataVariant2?>.Default.Equals(AppMetadataVariant2, other.AppMetadataVariant2)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(AppMetadata obj1, AppMetadata obj2)
         {
@@ -277,7 +277,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(AppMetadata obj1, AppMetadata obj2)
         {
@@ -285,7 +285,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

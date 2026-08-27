@@ -4,16 +4,16 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ItemRefOperation
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Create,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Delete,
     }

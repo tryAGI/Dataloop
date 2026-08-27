@@ -4,20 +4,20 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ExecutionPostActionType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Download,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DrawAnnotation,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NoAction,
     }

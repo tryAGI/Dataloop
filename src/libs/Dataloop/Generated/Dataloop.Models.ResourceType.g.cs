@@ -4,136 +4,136 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ResourceType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Accounts,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Annotations,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AnnotationsStatus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Apps,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Assignments,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BillingResources,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Compositions,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Datasets,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Dpk,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Drivers,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Executions,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FeatureVectors,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Groups,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Integrations,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Items,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ItemsStatus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Models,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ontologies,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Orgs,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Packages,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineRun,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pipelines,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ProjectGuests,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Projects,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Recipes,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Services,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Settings,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Subscriptions,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tasks,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TriggerCmds,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Triggers,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Users,
     }

@@ -4,7 +4,7 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateDatasetRequest
     {
@@ -43,26 +43,26 @@ namespace Dataloop
         public global::Dataloop.CreateDatasetRequestAccessLevel? AccessLevel { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("createDefaultRecipe")]
         public bool? CreateDefaultRecipe { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("expirationOptions")]
         public global::Dataloop.ExpirationOptions? ExpirationOptions { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("indexDriver")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dataloop.JsonConverters.IndexDriverJsonConverter))]
         public global::Dataloop.IndexDriver? IndexDriver { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("metadata")]
         public global::Dataloop.DatasetMetadata? Metadata { get; set; }

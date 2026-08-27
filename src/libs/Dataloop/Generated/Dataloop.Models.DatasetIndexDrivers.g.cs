@@ -4,16 +4,16 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum DatasetIndexDrivers
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mongo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sql,
     }

@@ -4,19 +4,19 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class RestoreAnnotationsRequestAnnotation
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("itemId")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string ItemId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("annotationId")]
         [global::System.Text.Json.Serialization.JsonRequired]

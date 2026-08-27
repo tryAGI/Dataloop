@@ -40,7 +40,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # service_logs = package.services.log(service='service_entity')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.ServiceLogsPage> GetLogsAsync(
             string verbose,
@@ -84,7 +84,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # service_logs = package.services.log(service='service_entity')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.ServiceLogsPage>> GetLogsAsResponseAsync(
             string verbose,

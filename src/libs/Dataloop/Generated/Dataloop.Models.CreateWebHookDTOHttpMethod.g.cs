@@ -4,16 +4,16 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateWebHookDTOHttpMethod
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Get,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Post,
     }

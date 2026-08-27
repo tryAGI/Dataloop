@@ -5,7 +5,7 @@ namespace Dataloop
     public partial interface IWebHooksClient
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="pageOffset"></param>
         /// <param name="pageSize"></param>
@@ -18,7 +18,7 @@ namespace Dataloop
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="pageOffset"></param>
         /// <param name="pageSize"></param>

@@ -4,20 +4,20 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum FeatureSetEntityType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Annotation,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Dataset,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Item,
     }

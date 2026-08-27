@@ -5,7 +5,7 @@ namespace Dataloop
     public partial interface IPackagesClient
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="projectsQuery"></param>
         /// <param name="name"></param>
@@ -24,7 +24,7 @@ namespace Dataloop
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="projectsQuery"></param>
         /// <param name="name"></param>

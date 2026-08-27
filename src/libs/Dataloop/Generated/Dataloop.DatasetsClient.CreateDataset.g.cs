@@ -69,7 +69,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # dataset = project.datasets.create(dataset_name='dataset_name', ontology_ids='ontology_ids')<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.APIDataset> CreateDatasetAsync(
 
@@ -114,7 +114,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # dataset = project.datasets.create(dataset_name='dataset_name', ontology_ids='ontology_ids')<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APIDataset>> CreateDatasetAsResponseAsync(
 
@@ -183,7 +183,7 @@ namespace Dataloop
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                             var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
                             var __httpRequestContent = new global::System.Net.Http.StringContent(
@@ -381,7 +381,7 @@ namespace Dataloop
                                 retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
-                            // 
+                            //
                             if ((int)__response.StatusCode == 400)
                             {
                                 string? __content_400 = null;

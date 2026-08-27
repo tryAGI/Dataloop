@@ -9,31 +9,31 @@ namespace Dataloop
     public sealed partial class PartialModule
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
         public string? Name { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("entryPoint")]
         public string? EntryPoint { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("className")]
         public string? ClassName { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("initInputs")]
         public global::System.Collections.Generic.IList<global::Dataloop.PackageIO>? InitInputs { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("functions")]
         public global::System.Collections.Generic.IList<global::Dataloop.DLFunction>? Functions { get; set; }

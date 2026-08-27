@@ -5,12 +5,12 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct IntegrationTypeMetadata : global::System.IEquatable<IntegrationTypeMetadata>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.IKeyValueMetadata? IKeyValue { get; init; }
@@ -19,7 +19,7 @@ namespace Dataloop
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(IKeyValue))]
@@ -27,7 +27,7 @@ namespace Dataloop
         public bool IsIKeyValue => IKeyValue != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickIKeyValue(
 #if NET6_0_OR_GREATER
@@ -40,14 +40,14 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Dataloop.IKeyValueMetadata PickIKeyValue() => IsIKeyValue
             ? IKeyValue!
             : throw new global::System.InvalidOperationException($"Expected union variant 'IKeyValue' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.IS3ApiMetadata? IS3Api { get; init; }
@@ -56,7 +56,7 @@ namespace Dataloop
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(IS3Api))]
@@ -64,7 +64,7 @@ namespace Dataloop
         public bool IsIS3Api => IS3Api != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickIS3Api(
 #if NET6_0_OR_GREATER
@@ -77,23 +77,23 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Dataloop.IS3ApiMetadata PickIS3Api() => IsIS3Api
             ? IS3Api!
             : throw new global::System.InvalidOperationException($"Expected union variant 'IS3Api' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator IntegrationTypeMetadata(global::Dataloop.IKeyValueMetadata value) => new IntegrationTypeMetadata((global::Dataloop.IKeyValueMetadata?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Dataloop.IKeyValueMetadata?(IntegrationTypeMetadata @this) => @this.IKeyValue;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public IntegrationTypeMetadata(global::Dataloop.IKeyValueMetadata? value)
         {
@@ -101,22 +101,22 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static IntegrationTypeMetadata FromIKeyValue(global::Dataloop.IKeyValueMetadata? value) => new IntegrationTypeMetadata(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator IntegrationTypeMetadata(global::Dataloop.IS3ApiMetadata value) => new IntegrationTypeMetadata((global::Dataloop.IS3ApiMetadata?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Dataloop.IS3ApiMetadata?(IntegrationTypeMetadata @this) => @this.IS3Api;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public IntegrationTypeMetadata(global::Dataloop.IS3ApiMetadata? value)
         {
@@ -124,12 +124,12 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static IntegrationTypeMetadata FromIS3Api(global::Dataloop.IS3ApiMetadata? value) => new IntegrationTypeMetadata(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public IntegrationTypeMetadata(
             global::Dataloop.IKeyValueMetadata? iKeyValue,
@@ -141,23 +141,23 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             IS3Api as object ??
-            IKeyValue as object 
+            IKeyValue as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             IKeyValue?.ToString() ??
-            IS3Api?.ToString() 
+            IS3Api?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -165,7 +165,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Dataloop.IKeyValueMetadata, TResult>? iKeyValue = null,
@@ -190,7 +190,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Dataloop.IKeyValueMetadata>? iKeyValue = null,
@@ -214,7 +214,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Dataloop.IKeyValueMetadata>? iKeyValue = null,
@@ -237,7 +237,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -258,18 +258,18 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(IntegrationTypeMetadata other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Dataloop.IKeyValueMetadata?>.Default.Equals(IKeyValue, other.IKeyValue) &&
-                global::System.Collections.Generic.EqualityComparer<global::Dataloop.IS3ApiMetadata?>.Default.Equals(IS3Api, other.IS3Api) 
+                global::System.Collections.Generic.EqualityComparer<global::Dataloop.IS3ApiMetadata?>.Default.Equals(IS3Api, other.IS3Api)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(IntegrationTypeMetadata obj1, IntegrationTypeMetadata obj2)
         {
@@ -277,7 +277,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(IntegrationTypeMetadata obj1, IntegrationTypeMetadata obj2)
         {
@@ -285,7 +285,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

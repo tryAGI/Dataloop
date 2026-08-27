@@ -4,32 +4,32 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ExecutionStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Canceled,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Created,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Failed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         InProgress,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Rerun,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Success,
     }

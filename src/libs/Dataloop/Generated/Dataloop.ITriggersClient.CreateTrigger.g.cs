@@ -57,7 +57,7 @@ namespace Dataloop
         /// # filters={'$and': [{'hidden': False},<br/>
         /// # {'type': 'file'}]}<br/>
         /// # )<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.APITrigger> CreateTriggerAsync(
 
@@ -117,7 +117,7 @@ namespace Dataloop
         /// # filters={'$and': [{'hidden': False},<br/>
         /// # {'type': 'file'}]}<br/>
         /// # )<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APITrigger>> CreateTriggerAsResponseAsync(
 

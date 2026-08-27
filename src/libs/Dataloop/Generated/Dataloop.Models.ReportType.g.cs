@@ -4,16 +4,16 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ReportType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ExecutionStatus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ServiceStatus,
     }

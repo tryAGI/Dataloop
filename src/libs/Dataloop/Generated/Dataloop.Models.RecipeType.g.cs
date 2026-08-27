@@ -4,26 +4,26 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class RecipeType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dataType")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string DataType { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("mlGroup")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string MlGroup { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("mlTask")]
         [global::System.Text.Json.Serialization.JsonRequired]

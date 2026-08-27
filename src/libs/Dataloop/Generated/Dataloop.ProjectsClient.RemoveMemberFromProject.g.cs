@@ -64,7 +64,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # user_json = dl.projects.remove_member(project_id='project_id', email='user@dataloop.ai')<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Dataloop.ClientContributor>> RemoveMemberFromProjectAsync(
             string projectId,
@@ -102,7 +102,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # user_json = dl.projects.remove_member(project_id='project_id', email='user@dataloop.ai')<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Dataloop.ClientContributor>>> RemoveMemberFromProjectAsResponseAsync(
             string projectId,
@@ -170,7 +170,7 @@ namespace Dataloop
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                 global::Dataloop.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,

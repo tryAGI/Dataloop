@@ -4,28 +4,28 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum EComputeStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Failed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Initializing,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pause,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ready,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Validating,
     }

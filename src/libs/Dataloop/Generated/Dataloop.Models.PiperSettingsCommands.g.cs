@@ -4,7 +4,7 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class PiperSettingsCommands
     {
@@ -16,14 +16,14 @@ namespace Dataloop
         public required string Id { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("createdAt")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.DateTime CreatedAt { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("updatedAt")]
         public global::System.DateTime? UpdatedAt { get; set; }
@@ -77,25 +77,25 @@ namespace Dataloop
         public required double ChildsEstimationCount { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("spec")]
         public global::Dataloop.Dictionary? Spec { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("priority")]
         public double? Priority { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("error")]
         public global::Dataloop.CommandError? Error { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dataloop.JsonConverters.CommandStatusJsonConverter))]
@@ -110,28 +110,28 @@ namespace Dataloop
         public required global::System.Collections.Generic.IList<global::Dataloop.CommandStatusHistoryEntry> StatusHistory { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("trackingInfo")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Dataloop.PiperSettingsCommandsTrackingInfo TrackingInfo { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("ctx")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Dataloop.CommandCtx Ctx { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("childrenProgress")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Dataloop.ChildrenCommandsProgress ChildrenProgress { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("domain")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dataloop.JsonConverters.CommandsDomainJsonConverter))]
@@ -139,13 +139,13 @@ namespace Dataloop
         public required global::Dataloop.CommandsDomain Domain { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("report")]
         public global::Dataloop.Dictionary? Report { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("retry")]
         public global::Dataloop.PiperSettingsCommandsRetry? Retry { get; set; }

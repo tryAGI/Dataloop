@@ -4,19 +4,19 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ScoreParameters
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("score")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Dataloop.ScoreParametersScore Score { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("options")]
         public global::Dataloop.ScoreParametersOptions? Options { get; set; }

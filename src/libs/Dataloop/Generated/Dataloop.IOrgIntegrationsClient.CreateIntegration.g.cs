@@ -44,7 +44,7 @@ namespace Dataloop
         /// # project.integrations.create(integrations_type=dl.IntegrationType.S3,<br/>
         /// # name='S3Integration',<br/>
         /// # options={key: "Access key ID", secret: "Secret access key"})<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.APIIntegration> CreateIntegrationAsync(
             string orgId,
@@ -92,7 +92,7 @@ namespace Dataloop
         /// # project.integrations.create(integrations_type=dl.IntegrationType.S3,<br/>
         /// # name='S3Integration',<br/>
         /// # options={key: "Access key ID", secret: "Secret access key"})<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APIIntegration>> CreateIntegrationAsResponseAsync(
             string orgId,

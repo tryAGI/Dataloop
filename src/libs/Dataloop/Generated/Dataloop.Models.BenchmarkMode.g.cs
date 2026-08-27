@@ -5,12 +5,12 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct BenchmarkMode : global::System.IEquatable<BenchmarkMode>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.OneByOneLatencyBenchmarkMode? OneByLatency { get; init; }
@@ -19,7 +19,7 @@ namespace Dataloop
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(OneByLatency))]
@@ -27,7 +27,7 @@ namespace Dataloop
         public bool IsOneByLatency => OneByLatency != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickOneByLatency(
 #if NET6_0_OR_GREATER
@@ -40,14 +40,14 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Dataloop.OneByOneLatencyBenchmarkMode PickOneByLatency() => IsOneByLatency
             ? OneByLatency!
             : throw new global::System.InvalidOperationException($"Expected union variant 'OneByLatency' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.ProfilingBenchmarkMode? Profiling { get; init; }
@@ -56,7 +56,7 @@ namespace Dataloop
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Profiling))]
@@ -64,7 +64,7 @@ namespace Dataloop
         public bool IsProfiling => Profiling != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickProfiling(
 #if NET6_0_OR_GREATER
@@ -77,14 +77,14 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Dataloop.ProfilingBenchmarkMode PickProfiling() => IsProfiling
             ? Profiling!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Profiling' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.ConcurrencyBenchmarkMode? Concurrency { get; init; }
@@ -93,7 +93,7 @@ namespace Dataloop
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Concurrency))]
@@ -101,7 +101,7 @@ namespace Dataloop
         public bool IsConcurrency => Concurrency != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickConcurrency(
 #if NET6_0_OR_GREATER
@@ -114,23 +114,23 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Dataloop.ConcurrencyBenchmarkMode PickConcurrency() => IsConcurrency
             ? Concurrency!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Concurrency' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator BenchmarkMode(global::Dataloop.OneByOneLatencyBenchmarkMode value) => new BenchmarkMode((global::Dataloop.OneByOneLatencyBenchmarkMode?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Dataloop.OneByOneLatencyBenchmarkMode?(BenchmarkMode @this) => @this.OneByLatency;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public BenchmarkMode(global::Dataloop.OneByOneLatencyBenchmarkMode? value)
         {
@@ -138,22 +138,22 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static BenchmarkMode FromOneByLatency(global::Dataloop.OneByOneLatencyBenchmarkMode? value) => new BenchmarkMode(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator BenchmarkMode(global::Dataloop.ProfilingBenchmarkMode value) => new BenchmarkMode((global::Dataloop.ProfilingBenchmarkMode?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Dataloop.ProfilingBenchmarkMode?(BenchmarkMode @this) => @this.Profiling;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public BenchmarkMode(global::Dataloop.ProfilingBenchmarkMode? value)
         {
@@ -161,22 +161,22 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static BenchmarkMode FromProfiling(global::Dataloop.ProfilingBenchmarkMode? value) => new BenchmarkMode(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator BenchmarkMode(global::Dataloop.ConcurrencyBenchmarkMode value) => new BenchmarkMode((global::Dataloop.ConcurrencyBenchmarkMode?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Dataloop.ConcurrencyBenchmarkMode?(BenchmarkMode @this) => @this.Concurrency;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public BenchmarkMode(global::Dataloop.ConcurrencyBenchmarkMode? value)
         {
@@ -184,12 +184,12 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static BenchmarkMode FromConcurrency(global::Dataloop.ConcurrencyBenchmarkMode? value) => new BenchmarkMode(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public BenchmarkMode(
             global::Dataloop.OneByOneLatencyBenchmarkMode? oneByLatency,
@@ -203,25 +203,25 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             Concurrency as object ??
             Profiling as object ??
-            OneByLatency as object 
+            OneByLatency as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             OneByLatency?.ToString() ??
             Profiling?.ToString() ??
-            Concurrency?.ToString() 
+            Concurrency?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -229,7 +229,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Dataloop.OneByOneLatencyBenchmarkMode, TResult>? oneByLatency = null,
@@ -259,7 +259,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Dataloop.OneByOneLatencyBenchmarkMode>? oneByLatency = null,
@@ -289,7 +289,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Dataloop.OneByOneLatencyBenchmarkMode>? oneByLatency = null,
@@ -317,7 +317,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -340,19 +340,19 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(BenchmarkMode other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Dataloop.OneByOneLatencyBenchmarkMode?>.Default.Equals(OneByLatency, other.OneByLatency) &&
                 global::System.Collections.Generic.EqualityComparer<global::Dataloop.ProfilingBenchmarkMode?>.Default.Equals(Profiling, other.Profiling) &&
-                global::System.Collections.Generic.EqualityComparer<global::Dataloop.ConcurrencyBenchmarkMode?>.Default.Equals(Concurrency, other.Concurrency) 
+                global::System.Collections.Generic.EqualityComparer<global::Dataloop.ConcurrencyBenchmarkMode?>.Default.Equals(Concurrency, other.Concurrency)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(BenchmarkMode obj1, BenchmarkMode obj2)
         {
@@ -360,7 +360,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(BenchmarkMode obj1, BenchmarkMode obj2)
         {
@@ -368,7 +368,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

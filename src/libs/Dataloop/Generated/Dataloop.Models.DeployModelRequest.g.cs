@@ -9,26 +9,26 @@ namespace Dataloop
     public sealed partial class DeployModelRequest
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("deployOperation")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dataloop.JsonConverters.ModelOperationTypesJsonConverter))]
         public global::Dataloop.ModelOperationTypes? DeployOperation { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("serviceReference")]
         public global::Dataloop.EntityReference? ServiceReference { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("pipeline")]
         public global::Dataloop.ExecutionPipelineStateReference? Pipeline { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("serviceConfig")]
         public global::Dataloop.Dictionary? ServiceConfig { get; set; }

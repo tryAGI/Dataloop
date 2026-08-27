@@ -29,7 +29,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # project = dl.projects.get(project_id='project_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.APIProject> GetProjectAsync(
             string projectId,
@@ -60,7 +60,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # project = dl.projects.get(project_id='project_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APIProject>> GetProjectAsResponseAsync(
             string projectId,

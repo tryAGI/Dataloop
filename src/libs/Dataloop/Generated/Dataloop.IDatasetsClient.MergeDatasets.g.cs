@@ -5,7 +5,7 @@ namespace Dataloop
     public partial interface IDatasetsClient
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -33,7 +33,7 @@ namespace Dataloop
         /// # with_metadata=True,<br/>
         /// # with_items_annotations=False,<br/>
         /// # with_task_annotations_status=False)<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.APICommand> MergeDatasetsAsync(
 
@@ -41,7 +41,7 @@ namespace Dataloop
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -69,7 +69,7 @@ namespace Dataloop
         /// # with_metadata=True,<br/>
         /// # with_items_annotations=False,<br/>
         /// # with_task_annotations_status=False)<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APICommand>> MergeDatasetsAsResponseAsync(
 
@@ -77,7 +77,7 @@ namespace Dataloop
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="name">
         /// Dataset name

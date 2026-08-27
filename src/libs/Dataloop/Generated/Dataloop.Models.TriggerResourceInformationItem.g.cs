@@ -4,54 +4,54 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class TriggerResourceInformationItem
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("serviceId")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string ServiceId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("serviceName")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string ServiceName { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("triggerId")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string TriggerId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("triggerActions")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Collections.Generic.IList<string> TriggerActions { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("packageModuleName")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string PackageModuleName { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("packageFunctionName")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string PackageFunctionName { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("packageFunctionDescription")]
         [global::System.Text.Json.Serialization.JsonRequired]

@@ -9,7 +9,7 @@ namespace Dataloop
     public sealed partial class PartialItemMetadata
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("system")]
         public global::Dataloop.ItemSystemMetadata? System { get; set; }

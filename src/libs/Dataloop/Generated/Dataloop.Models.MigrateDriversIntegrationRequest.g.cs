@@ -9,21 +9,21 @@ namespace Dataloop
     public sealed partial class MigrateDriversIntegrationRequest
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("newIntegrationType")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string NewIntegrationType { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("newIntegrationId")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string NewIntegrationId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("driverIds")]
         [global::System.Text.Json.Serialization.JsonRequired]

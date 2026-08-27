@@ -4,24 +4,24 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CodebaseType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Filesystem,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Git,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Item,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Local,
     }

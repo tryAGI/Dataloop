@@ -4,20 +4,20 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum TemplateKind
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Global,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Org,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Project,
     }

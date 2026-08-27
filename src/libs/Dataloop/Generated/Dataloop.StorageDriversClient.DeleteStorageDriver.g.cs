@@ -59,7 +59,7 @@ namespace Dataloop
         /// # :param bool really: Really really sure?<br/>
         /// # :return: True if success<br/>
         /// # :rtype: bool<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task DeleteStorageDriverAsync(
             string id,
@@ -95,7 +95,7 @@ namespace Dataloop
         /// # :param bool really: Really really sure?<br/>
         /// # :return: True if success<br/>
         /// # :rtype: bool<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse> DeleteStorageDriverAsResponseAsync(
             string id,
@@ -161,7 +161,7 @@ namespace Dataloop
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                 global::Dataloop.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,

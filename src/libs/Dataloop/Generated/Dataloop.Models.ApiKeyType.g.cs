@@ -4,16 +4,16 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ApiKeyType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Project,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         User,
     }

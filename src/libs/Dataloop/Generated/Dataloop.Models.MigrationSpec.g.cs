@@ -5,12 +5,12 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct MigrationSpec : global::System.IEquatable<MigrationSpec>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.Dictionary? Dictionary { get; init; }
@@ -19,7 +19,7 @@ namespace Dataloop
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Dictionary))]
@@ -27,7 +27,7 @@ namespace Dataloop
         public bool IsDictionary => Dictionary != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickDictionary(
 #if NET6_0_OR_GREATER
@@ -40,14 +40,14 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Dataloop.Dictionary PickDictionary() => IsDictionary
             ? Dictionary!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Dictionary' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dataloop.MigrationSpecVariant2? MigrationSpecVariant2 { get; init; }
@@ -56,7 +56,7 @@ namespace Dataloop
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(MigrationSpecVariant2))]
@@ -64,7 +64,7 @@ namespace Dataloop
         public bool IsMigrationSpecVariant2 => MigrationSpecVariant2 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickMigrationSpecVariant2(
 #if NET6_0_OR_GREATER
@@ -77,23 +77,23 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Dataloop.MigrationSpecVariant2 PickMigrationSpecVariant2() => IsMigrationSpecVariant2
             ? MigrationSpecVariant2!
             : throw new global::System.InvalidOperationException($"Expected union variant 'MigrationSpecVariant2' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator MigrationSpec(global::Dataloop.Dictionary value) => new MigrationSpec((global::Dataloop.Dictionary?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Dataloop.Dictionary?(MigrationSpec @this) => @this.Dictionary;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public MigrationSpec(global::Dataloop.Dictionary? value)
         {
@@ -101,22 +101,22 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static MigrationSpec FromDictionary(global::Dataloop.Dictionary? value) => new MigrationSpec(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator MigrationSpec(global::Dataloop.MigrationSpecVariant2 value) => new MigrationSpec((global::Dataloop.MigrationSpecVariant2?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Dataloop.MigrationSpecVariant2?(MigrationSpec @this) => @this.MigrationSpecVariant2;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public MigrationSpec(global::Dataloop.MigrationSpecVariant2? value)
         {
@@ -124,12 +124,12 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static MigrationSpec FromMigrationSpecVariant2(global::Dataloop.MigrationSpecVariant2? value) => new MigrationSpec(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public MigrationSpec(
             global::Dataloop.Dictionary? dictionary,
@@ -141,23 +141,23 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             MigrationSpecVariant2 as object ??
-            Dictionary as object 
+            Dictionary as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             Dictionary?.ToString() ??
-            MigrationSpecVariant2?.ToString() 
+            MigrationSpecVariant2?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -165,7 +165,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Dataloop.Dictionary, TResult>? dictionary = null,
@@ -190,7 +190,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Dataloop.Dictionary>? dictionary = null,
@@ -214,7 +214,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Dataloop.Dictionary>? dictionary = null,
@@ -237,7 +237,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -258,18 +258,18 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(MigrationSpec other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Dataloop.Dictionary?>.Default.Equals(Dictionary, other.Dictionary) &&
-                global::System.Collections.Generic.EqualityComparer<global::Dataloop.MigrationSpecVariant2?>.Default.Equals(MigrationSpecVariant2, other.MigrationSpecVariant2) 
+                global::System.Collections.Generic.EqualityComparer<global::Dataloop.MigrationSpecVariant2?>.Default.Equals(MigrationSpecVariant2, other.MigrationSpecVariant2)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(MigrationSpec obj1, MigrationSpec obj2)
         {
@@ -277,7 +277,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(MigrationSpec obj1, MigrationSpec obj2)
         {
@@ -285,7 +285,7 @@ namespace Dataloop
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

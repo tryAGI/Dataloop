@@ -4,16 +4,16 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum TaskType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Annotation,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Qa,
     }

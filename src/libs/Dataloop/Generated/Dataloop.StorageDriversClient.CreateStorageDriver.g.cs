@@ -56,7 +56,7 @@ namespace Dataloop
         /// # :return: The created driver object<br/>
         /// # :rtype: dtlpy.entities.driver.Driver<br/>
         /// # :raises PlatformException: If the driver creation fails<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.APIDriverConfiguration> CreateStorageDriverAsync(
 
@@ -88,7 +88,7 @@ namespace Dataloop
         /// # :return: The created driver object<br/>
         /// # :rtype: dtlpy.entities.driver.Driver<br/>
         /// # :raises PlatformException: If the driver creation fails<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APIDriverConfiguration>> CreateStorageDriverAsResponseAsync(
 
@@ -157,7 +157,7 @@ namespace Dataloop
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                             var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
                             var __httpRequestContent = new global::System.Net.Http.StringContent(

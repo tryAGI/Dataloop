@@ -4,16 +4,16 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum StartNodeType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Root,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Trigger,
     }

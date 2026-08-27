@@ -4,16 +4,16 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ReferenceQueryOperation
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Create,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Delete,
     }

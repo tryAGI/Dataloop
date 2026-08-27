@@ -9,7 +9,7 @@ namespace Dataloop
     public sealed partial class IComputeNfsPluginConfig
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("storageSize")]
         [global::System.Text.Json.Serialization.JsonRequired]

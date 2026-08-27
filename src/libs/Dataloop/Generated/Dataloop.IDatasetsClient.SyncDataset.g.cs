@@ -24,7 +24,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # success = project.datasets.sync(dataset_id='dataset_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.APICommand> SyncDatasetAsync(
             string id,
@@ -50,7 +50,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # success = project.datasets.sync(dataset_id='dataset_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APICommand>> SyncDatasetAsResponseAsync(
             string id,

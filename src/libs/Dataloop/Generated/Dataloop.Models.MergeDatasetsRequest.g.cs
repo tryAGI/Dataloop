@@ -4,7 +4,7 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class MergeDatasetsRequest
     {
@@ -23,7 +23,7 @@ namespace Dataloop
         public required global::System.Collections.Generic.IList<string> DatasetsIds { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("mergeDatasetParams")]
         [global::System.Text.Json.Serialization.JsonRequired]

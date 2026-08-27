@@ -62,7 +62,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # service.triggers.get(trigger_id='trigger_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.APITrigger> GetTriggerAsync(
             string id,
@@ -98,7 +98,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # service.triggers.get(trigger_id='trigger_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APITrigger>> GetTriggerAsResponseAsync(
             string id,
@@ -164,7 +164,7 @@ namespace Dataloop
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                 global::Dataloop.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,

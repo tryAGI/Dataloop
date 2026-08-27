@@ -4,28 +4,28 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ReferenceType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         App,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Dpk,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Model,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pipeline,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Service,
     }

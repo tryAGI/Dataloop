@@ -4,20 +4,20 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum InstructionAction
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Annotate,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Change,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Remove,
     }

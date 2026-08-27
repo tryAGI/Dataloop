@@ -24,7 +24,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # project.integrations.list(only_available=True)<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Dataloop.APIIntegration>> GetOrgIntegrationsAsync(
             string orgId,
@@ -50,7 +50,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # project.integrations.list(only_available=True)<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Dataloop.APIIntegration>>> GetOrgIntegrationsAsResponseAsync(
             string orgId,

@@ -24,7 +24,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # service.executions.update(execution='execution_entity')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.APIExecution> UpdateExecutionAsync(
             string id,
@@ -52,7 +52,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # service.executions.update(execution='execution_entity')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APIExecution>> UpdateExecutionAsResponseAsync(
             string id,

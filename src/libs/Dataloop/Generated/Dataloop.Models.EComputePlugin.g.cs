@@ -4,48 +4,48 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum EComputePlugin
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Fluentd,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Grafana,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Keda,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mirrors,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Monitoring,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Nfs,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NginxGateway,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NodeExporter,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Scaler,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         StorageDriver,
     }

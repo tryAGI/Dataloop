@@ -4,108 +4,108 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum AnnotationType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Binary,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Box,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Class,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Comparison,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cube,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cube3d,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ellipse,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gis,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ItemDescription,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Line,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Note,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PdfText,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Point,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Polygon,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Polyline,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Polyline3d,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pose,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Recording,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RefImage,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RefSemantic3d,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Segment,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Semantic3d,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Subtitle,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Text,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TextMark,
     }

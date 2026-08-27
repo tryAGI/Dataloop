@@ -4,19 +4,19 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class UpdateItemMetadataOptions
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("update")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Dataloop.UpdateItemMetadataOptionsUpdate Update { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("systemSpace")]
         public bool? SystemSpace { get; set; }

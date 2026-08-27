@@ -4,36 +4,36 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ReplicaStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Down,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Failed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Full,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Initializing,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Paused,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Running,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Terminating,
     }

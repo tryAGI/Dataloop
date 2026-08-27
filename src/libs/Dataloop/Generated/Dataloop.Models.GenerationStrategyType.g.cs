@@ -4,16 +4,16 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GenerationStrategyType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Parallel,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sequentially,
     }

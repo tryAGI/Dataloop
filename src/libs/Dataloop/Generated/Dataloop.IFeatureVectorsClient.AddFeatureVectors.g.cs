@@ -23,7 +23,7 @@ namespace Dataloop
         /// # :param str parent_id: optional: parent FeatureSet id - used when FeatureVector is a subFeature<br/>
         /// # :param str org_id: the id of the org where featureVector will be created<br/>
         /// # :return: Feature vector:<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Dataloop.APIFeatureVector>> AddFeatureVectorsAsync(
 
@@ -49,7 +49,7 @@ namespace Dataloop
         /// # :param str parent_id: optional: parent FeatureSet id - used when FeatureVector is a subFeature<br/>
         /// # :param str org_id: the id of the org where featureVector will be created<br/>
         /// # :return: Feature vector:<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Dataloop.APIFeatureVector>>> AddFeatureVectorsAsResponseAsync(
 

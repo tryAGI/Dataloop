@@ -25,7 +25,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # project.packages.delete(package='package_entity')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.APIPackage> UpdatePackageAsync(
             string id,
@@ -54,7 +54,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # project.packages.delete(package='package_entity')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APIPackage>> UpdatePackageAsResponseAsync(
             string id,

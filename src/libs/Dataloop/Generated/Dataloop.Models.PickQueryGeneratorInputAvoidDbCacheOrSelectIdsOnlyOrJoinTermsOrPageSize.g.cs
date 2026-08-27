@@ -22,7 +22,7 @@ namespace Dataloop
         public bool? SelectIdsOnly { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("joinTerms")]
         public global::System.Collections.Generic.IList<global::Dataloop.ITermConfiguration>? JoinTerms { get; set; }

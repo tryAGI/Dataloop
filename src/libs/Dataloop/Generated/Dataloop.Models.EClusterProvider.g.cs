@@ -4,40 +4,40 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum EClusterProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Aws,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Azure,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gcp,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hpc,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Local,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Openshift,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RancherK3s,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RancherRke,
     }

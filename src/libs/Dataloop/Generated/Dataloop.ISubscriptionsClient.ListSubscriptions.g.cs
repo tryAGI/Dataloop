@@ -5,7 +5,7 @@ namespace Dataloop
     public partial interface ISubscriptionsClient
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="account"></param>
         /// <param name="org"></param>
@@ -24,7 +24,7 @@ namespace Dataloop
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="account"></param>
         /// <param name="org"></param>

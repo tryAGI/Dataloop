@@ -4,16 +4,16 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum EComponentServiceOperation
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Install,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         None,
     }

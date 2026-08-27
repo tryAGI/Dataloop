@@ -4,78 +4,78 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class DpkComponents
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("integrations")]
         public global::System.Collections.Generic.IList<global::Dataloop.IDpkComponentIntegrations>? Integrations { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("datasets")]
         public global::System.Collections.Generic.IList<global::Dataloop.IDpkComponentDataset>? Datasets { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("pipelineTemplates")]
         public global::System.Collections.Generic.IList<global::Dataloop.IDpkPipelineTemplate>? PipelineTemplates { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("pipelineNodes")]
         public global::System.Collections.Generic.IList<global::Dataloop.IPipelineNode>? PipelineNodes { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("computeConfigs")]
         public global::System.Collections.Generic.IList<global::Dataloop.IDpkComputeConfigs>? ComputeConfigs { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("channels")]
         public global::System.Collections.Generic.IList<global::Dataloop.IDpkChannel>? Channels { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("toolbars")]
         public global::System.Collections.Generic.IList<global::Dataloop.IDpkComponentToolbars>? Toolbars { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("services")]
         public global::System.Collections.Generic.IList<global::Dataloop.IDpkComponentService>? Services { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("triggers")]
         public global::System.Collections.Generic.IList<global::Dataloop.IDpkComponentTrigger>? Triggers { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("modules")]
         public global::System.Collections.Generic.IList<global::Dataloop.IDpkComponentModule>? Modules { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("models")]
         public global::System.Collections.Generic.IList<global::Dataloop.IDpkComponentModel>? Models { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("panels")]
         public global::System.Collections.Generic.IList<global::Dataloop.IDpkComponentPanel>? Panels { get; set; }

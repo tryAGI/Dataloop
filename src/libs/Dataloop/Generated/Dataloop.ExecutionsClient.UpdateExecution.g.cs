@@ -63,7 +63,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # service.executions.update(execution='execution_entity')<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.APIExecution> UpdateExecutionAsync(
             string id,
@@ -102,7 +102,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # service.executions.update(execution='execution_entity')<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APIExecution>> UpdateExecutionAsResponseAsync(
             string id,
@@ -173,7 +173,7 @@ namespace Dataloop
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                             var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
                             var __httpRequestContent = new global::System.Net.Http.StringContent(

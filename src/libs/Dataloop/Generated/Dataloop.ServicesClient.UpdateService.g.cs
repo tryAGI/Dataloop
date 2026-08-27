@@ -67,7 +67,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # service = package.services.update(service='service_entity')<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<global::Dataloop.APIService, string>> UpdateServiceAsync(
             string id,
@@ -110,7 +110,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # service = package.services.update(service='service_entity')<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.AnyOf<global::Dataloop.APIService, string>>> UpdateServiceAsResponseAsync(
             string id,
@@ -186,7 +186,7 @@ namespace Dataloop
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                             var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
                             var __httpRequestContent = new global::System.Net.Http.StringContent(

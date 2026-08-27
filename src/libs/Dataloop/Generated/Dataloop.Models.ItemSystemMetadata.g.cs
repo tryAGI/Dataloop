@@ -4,7 +4,7 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ItemSystemMetadata
     {
@@ -16,28 +16,28 @@ namespace Dataloop
         public required string Originalname { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("mimetype")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Mimetype { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("size")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double Size { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("encoding")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Encoding { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("taskStatusLog")]
         public global::System.Collections.Generic.IList<global::Dataloop.ItemSystemMetadataTaskStatusLogItem>? TaskStatusLog { get; set; }
@@ -68,19 +68,19 @@ namespace Dataloop
         public string? ThumbnailAnnotationsId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("itemLinks")]
         public global::System.Collections.Generic.IList<global::Dataloop.ItemLink>? ItemLinks { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("modalities")]
         public global::System.Collections.Generic.IList<global::Dataloop.Modality>? Modalities { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("systemDatasetType")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dataloop.JsonConverters.SystemDatasetTypeJsonConverter))]

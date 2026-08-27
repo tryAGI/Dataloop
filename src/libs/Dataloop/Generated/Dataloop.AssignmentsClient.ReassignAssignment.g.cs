@@ -68,7 +68,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # assignment = task.assignments.reassign(assignee_ids='annotator1@dataloop.ai')<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<global::Dataloop.APICommand, global::Dataloop.APIAssignment>> ReassignAssignmentAsync(
             string id,
@@ -112,7 +112,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # assignment = task.assignments.reassign(assignee_ids='annotator1@dataloop.ai')<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.AnyOf<global::Dataloop.APICommand, global::Dataloop.APIAssignment>>> ReassignAssignmentAsResponseAsync(
             string id,
@@ -183,7 +183,7 @@ namespace Dataloop
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                             var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
                             var __httpRequestContent = new global::System.Net.Http.StringContent(

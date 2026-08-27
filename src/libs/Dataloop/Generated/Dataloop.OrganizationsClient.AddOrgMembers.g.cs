@@ -71,7 +71,7 @@ namespace Dataloop
         /// # success = dl.organizations.add_member(email='user@domain.com',<br/>
         /// # organization_id='organization_id',<br/>
         /// # role=dl.MemberOrgRole.MEMBER)<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Dataloop.APIOrgUser>> AddOrgMembersAsync(
             string orgId,
@@ -118,7 +118,7 @@ namespace Dataloop
         /// # success = dl.organizations.add_member(email='user@domain.com',<br/>
         /// # organization_id='organization_id',<br/>
         /// # role=dl.MemberOrgRole.MEMBER)<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Dataloop.APIOrgUser>>> AddOrgMembersAsResponseAsync(
             string orgId,
@@ -189,7 +189,7 @@ namespace Dataloop
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                             var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
                             var __httpRequestContent = new global::System.Net.Http.StringContent(

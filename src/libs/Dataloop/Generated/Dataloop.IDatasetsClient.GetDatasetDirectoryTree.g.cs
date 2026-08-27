@@ -27,7 +27,7 @@ namespace Dataloop
         /// # <br/>
         /// # directory_tree = dataset.directory_tree<br/>
         /// # directory_tree = project.datasets.directory_tree(dataset='dataset_entity')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.DatasetDirectoryTree> GetDatasetDirectoryTreeAsync(
             string id,
@@ -56,7 +56,7 @@ namespace Dataloop
         /// # <br/>
         /// # directory_tree = dataset.directory_tree<br/>
         /// # directory_tree = project.datasets.directory_tree(dataset='dataset_entity')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.DatasetDirectoryTree>> GetDatasetDirectoryTreeAsResponseAsync(
             string id,

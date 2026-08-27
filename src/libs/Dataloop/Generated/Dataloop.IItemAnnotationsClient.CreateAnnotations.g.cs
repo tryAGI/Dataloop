@@ -26,7 +26,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # annotations = item.annotations.upload(annotations='builder')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AnyOf<global::Dataloop.APIAnnotation, global::System.Collections.Generic.IList<global::Dataloop.APIAnnotation>>> CreateAnnotationsAsync(
             string itemId,
@@ -56,7 +56,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # annotations = item.annotations.upload(annotations='builder')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.AnyOf<global::Dataloop.APIAnnotation, global::System.Collections.Generic.IList<global::Dataloop.APIAnnotation>>>> CreateAnnotationsAsResponseAsync(
             string itemId,

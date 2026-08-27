@@ -24,7 +24,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # service.executions.terminate(execution='execution_entity')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.APIExecution> TerminateExecutionAsync(
             string id,
@@ -52,7 +52,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # service.executions.terminate(execution='execution_entity')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APIExecution>> TerminateExecutionAsResponseAsync(
             string id,

@@ -5,7 +5,7 @@ namespace Dataloop
     public partial interface IDataloopClient
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="id"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -23,14 +23,14 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # dl.feature_sets.update(feature_set='feature_set')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task EditFeaturesSetByIdAsync(
             string id,
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="id"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -48,7 +48,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # dl.feature_sets.update(feature_set='feature_set')<br/>
-        /// # 
+        /// #
         /// </remarks>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse> EditFeaturesSetByIdAsResponseAsync(
             string id,

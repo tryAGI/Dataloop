@@ -4,16 +4,16 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ServiceType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Regular,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         System,
     }

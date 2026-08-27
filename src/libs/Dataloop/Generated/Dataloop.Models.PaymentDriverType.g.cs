@@ -4,24 +4,24 @@
 namespace Dataloop
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PaymentDriverType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AzureMarketplace,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Credits,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Nop,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Stripe,
     }

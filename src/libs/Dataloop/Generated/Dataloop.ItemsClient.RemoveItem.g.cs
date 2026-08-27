@@ -37,7 +37,7 @@ namespace Dataloop
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="id"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -59,7 +59,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # dataset.items.delete(item_id='item_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task RemoveItemAsync(
             string id,
@@ -73,7 +73,7 @@ namespace Dataloop
             ).ConfigureAwait(false);
         }
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="id"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -95,7 +95,7 @@ namespace Dataloop
         /// # <br/>
         /// # <br/>
         /// # dataset.items.delete(item_id='item_id')<br/>
-        /// # 
+        /// #
         /// </remarks>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse> RemoveItemAsResponseAsync(
             string id,
@@ -161,7 +161,7 @@ namespace Dataloop
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                 global::Dataloop.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,
