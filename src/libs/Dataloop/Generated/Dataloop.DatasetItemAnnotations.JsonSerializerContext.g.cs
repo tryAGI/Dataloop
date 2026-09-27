@@ -5,106 +5,15 @@
 #pragma warning disable CS3016 // Arrays as attribute arguments is not CLS-compliant
 
 namespace Dataloop
-{
-    /// <summary>
-    ///
-    /// </summary>
-    [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
-        Converters = new global::System.Type[]
-        {
-        })]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, string>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, object>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<object>), TypeInfoPropertyName = "SystemCollectionsGeneric_ObjectList")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Text.Json.JsonElement?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(string))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(double))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<string>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.Dictionary))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(object))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.APICommand))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.QueryResource), TypeInfoPropertyName = "QueryResource2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.JoinQuery))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.JoinQueryOn))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.ReferenceQuery))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.ReferenceQueryOperation), TypeInfoPropertyName = "ReferenceQueryOperation2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dataloop.ReferenceQueryRef>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.ReferenceQueryRef))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.PickDQLQueryExcludeKeyofDQLQueryIntersectOrExceptOrLimitOrSortOrSelect))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.PickDQLQueryExcludeKeyofDQLQueryIntersectOrExceptOrLimitOrSortOrSelectQueryEngine), TypeInfoPropertyName = "PickDQLQueryExcludeKeyofDQLQueryIntersectOrExceptOrLimitOrSortOrSelectQueryEngine2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.IntersectQuery))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.OrderBy), TypeInfoPropertyName = "OrderBy2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.SortQuery))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::Dataloop.OrderBy?, global::Dataloop.SortQuery>), TypeInfoPropertyName = "AnyOfOrderBySortQuery2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, double>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.DQLResourceQuery))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.DQLResourceQueryQueryEngine), TypeInfoPropertyName = "DQLResourceQueryQueryEngine2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.DQLResourceQuerySign))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnnotationType), TypeInfoPropertyName = "AnnotationType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.Point))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<object>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.NoteMessage))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.CoordinatesNote))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dataloop.NoteMessage>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.APINoteAnnotationCoordinatesV1))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.PoseCoordinates))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dataloop.Point>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.EllipseCoordinatesV1))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.CubeCoordinatesV1))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.ItemDescriptionCoordinates))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.RefAnnotationsRefType), TypeInfoPropertyName = "RefAnnotationsRefType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.IBaseRefAnnotationCoordinates))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.IRefImageAnnotationsType), TypeInfoPropertyName = "IRefImageAnnotationsType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.APIAnnotationCoordinateTypes), TypeInfoPropertyName = "APIAnnotationCoordinateTypes2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.RequestSource), TypeInfoPropertyName = "RequestSource2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.APIAnnotation))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.APIMetadata))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.UpdateAnnotationRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.APIAnnotationRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dataloop.APIAnnotationRequest>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::Dataloop.APIAnnotationRequest, global::System.Collections.Generic.IList<global::Dataloop.APIAnnotationRequest>>), TypeInfoPropertyName = "AnyOfAPIAnnotationRequestIListAPIAnnotationRequest2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.ArchiveDatasetItemAnnotationToStorageRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.RestoreArchivedDatasetItemAnnotationToDBRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dataloop.APIAnnotation>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::Dataloop.APIAnnotation, global::System.Collections.Generic.IList<global::Dataloop.APIAnnotation>>), TypeInfoPropertyName = "AnyOfAPIAnnotationIListAPIAnnotation2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(double?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.QueryResource?), TypeInfoPropertyName = "NullableQueryResource2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.ReferenceQueryOperation?), TypeInfoPropertyName = "NullableReferenceQueryOperation2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.PickDQLQueryExcludeKeyofDQLQueryIntersectOrExceptOrLimitOrSortOrSelectQueryEngine?), TypeInfoPropertyName = "NullablePickDQLQueryExcludeKeyofDQLQueryIntersectOrExceptOrLimitOrSortOrSelectQueryEngine2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.OrderBy?), TypeInfoPropertyName = "NullableOrderBy2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::Dataloop.OrderBy?, global::Dataloop.SortQuery>?), TypeInfoPropertyName = "NullableAnyOfOrderBySortQuery2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.DQLResourceQueryQueryEngine?), TypeInfoPropertyName = "NullableDQLResourceQueryQueryEngine2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnnotationType?), TypeInfoPropertyName = "NullableAnnotationType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.RefAnnotationsRefType?), TypeInfoPropertyName = "NullableRefAnnotationsRefType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.IRefImageAnnotationsType?), TypeInfoPropertyName = "NullableIRefImageAnnotationsType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.APIAnnotationCoordinateTypes?), TypeInfoPropertyName = "NullableAPIAnnotationCoordinateTypes2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.RequestSource?), TypeInfoPropertyName = "NullableRequestSource2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::Dataloop.APIAnnotationRequest, global::System.Collections.Generic.IList<global::Dataloop.APIAnnotationRequest>>?), TypeInfoPropertyName = "NullableAnyOfAPIAnnotationRequestIListAPIAnnotationRequest2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::Dataloop.APIAnnotation, global::System.Collections.Generic.IList<global::Dataloop.APIAnnotation>>?), TypeInfoPropertyName = "NullableAnyOfAPIAnnotationIListAPIAnnotation2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.ReferenceQueryRef>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.NoteMessage>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::System.Collections.Generic.List<global::Dataloop.Point>>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.Point>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.APIAnnotationRequest>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::Dataloop.APIAnnotationRequest, global::System.Collections.Generic.List<global::Dataloop.APIAnnotationRequest>>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dataloop.APIAnnotation>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dataloop.AnyOf<global::Dataloop.APIAnnotation, global::System.Collections.Generic.List<global::Dataloop.APIAnnotation>>))]
-    internal sealed partial class DatasetItemAnnotationsSourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
-    {
-    }
-    /// <summary>
+{    /// <summary>
     ///
     /// </summary>
     public sealed partial class DatasetItemAnnotationsSourceGenerationContext : global::System.Text.Json.Serialization.JsonSerializerContext
     {
         private static readonly global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver Resolver = new LazyChunkResolver();
+
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        internal static global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver TypeInfoResolver => Resolver;
 
 
         private static readonly global::System.Text.Json.JsonSerializerOptions DefaultOptions = CreateDefaultOptions();
@@ -140,52 +49,7 @@ namespace Dataloop
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
         public static void AddConverters(global::System.Text.Json.JsonSerializerOptions options)
         {
-            options.Converters.Add(new global::Dataloop.JsonConverters.IRefImageAnnotationsTypeJsonConverter());
-            options.Converters.Add(new global::Dataloop.JsonConverters.APIAnnotationCoordinateTypesJsonConverter());
-            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.OrderBy?, global::Dataloop.SortQuery>());
-            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<double?, string>());
-            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<double?, string>());
-            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<double?, string>());
-            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<double?, string>());
-            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<double?, string>());
-            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<double?, string>());
-            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, double?>());
-            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, double?>());
-            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<double?, global::System.Collections.Generic.Dictionary<string, double>>());
-            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIAnnotationRequest, global::System.Collections.Generic.IList<global::Dataloop.APIAnnotationRequest>>());
-            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIAnnotationRequest, global::System.Collections.Generic.IList<global::Dataloop.APIAnnotationRequest>>());
-            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<object, global::Dataloop.APICommand>());
-            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APICommand, object>());
-            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIAnnotation, global::System.Collections.Generic.IList<global::Dataloop.APIAnnotation>>());
-            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, double?>());
-            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, double?>());
-            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<string, double?>());
-            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APICommand, string>());
-            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<global::Dataloop.APIAnnotation, global::System.Collections.Generic.IList<global::Dataloop.APIAnnotation>>());
-            options.Converters.Add(new global::Dataloop.JsonConverters.AnyOfJsonConverter<object, global::Dataloop.APICommand>());
-            options.Converters.Add(new global::Dataloop.JsonConverters.UnixTimestampJsonConverter());
-            options.Converters.Add(new LazyEnumJsonConverterFactory());
+            global::Dataloop.SourceGenerationContext.AddConverters(options);
         }
 
         private static global::System.Text.Json.JsonSerializerOptions CreateDefaultOptions()
@@ -198,132 +62,6 @@ namespace Dataloop
             AddConverters(options);
 
             return options;
-        }
-
-
-        private sealed class LazyEnumJsonConverterFactory : global::System.Text.Json.Serialization.JsonConverterFactory
-        {
-            public override bool CanConvert(global::System.Type typeToConvert)
-            {
-                return
-                    typeToConvert == typeof(global::Dataloop.QueryResource)
-
-                    || typeToConvert == typeof(global::Dataloop.QueryResource?)
-
-                    || typeToConvert == typeof(global::Dataloop.ReferenceQueryOperation)
-
-                    || typeToConvert == typeof(global::Dataloop.ReferenceQueryOperation?)
-
-                    || typeToConvert == typeof(global::Dataloop.PickDQLQueryExcludeKeyofDQLQueryIntersectOrExceptOrLimitOrSortOrSelectQueryEngine)
-
-                    || typeToConvert == typeof(global::Dataloop.PickDQLQueryExcludeKeyofDQLQueryIntersectOrExceptOrLimitOrSortOrSelectQueryEngine?)
-
-                    || typeToConvert == typeof(global::Dataloop.OrderBy)
-
-                    || typeToConvert == typeof(global::Dataloop.OrderBy?)
-
-                    || typeToConvert == typeof(global::Dataloop.DQLResourceQueryQueryEngine)
-
-                    || typeToConvert == typeof(global::Dataloop.DQLResourceQueryQueryEngine?)
-
-                    || typeToConvert == typeof(global::Dataloop.AnnotationType)
-
-                    || typeToConvert == typeof(global::Dataloop.AnnotationType?)
-
-                    || typeToConvert == typeof(global::Dataloop.RefAnnotationsRefType)
-
-                    || typeToConvert == typeof(global::Dataloop.RefAnnotationsRefType?)
-
-                    || typeToConvert == typeof(global::Dataloop.RequestSource)
-
-                    || typeToConvert == typeof(global::Dataloop.RequestSource?);
-            }
-
-            public override global::System.Text.Json.Serialization.JsonConverter CreateConverter(
-                global::System.Type typeToConvert,
-                global::System.Text.Json.JsonSerializerOptions options)
-            {
-                if (typeToConvert == typeof(global::Dataloop.QueryResource))
-                {
-                    return new global::Dataloop.JsonConverters.QueryResourceJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Dataloop.QueryResource?))
-                {
-                    return new global::Dataloop.JsonConverters.QueryResourceNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Dataloop.ReferenceQueryOperation))
-                {
-                    return new global::Dataloop.JsonConverters.ReferenceQueryOperationJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Dataloop.ReferenceQueryOperation?))
-                {
-                    return new global::Dataloop.JsonConverters.ReferenceQueryOperationNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Dataloop.PickDQLQueryExcludeKeyofDQLQueryIntersectOrExceptOrLimitOrSortOrSelectQueryEngine))
-                {
-                    return new global::Dataloop.JsonConverters.PickDQLQueryExcludeKeyofDQLQueryIntersectOrExceptOrLimitOrSortOrSelectQueryEngineJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Dataloop.PickDQLQueryExcludeKeyofDQLQueryIntersectOrExceptOrLimitOrSortOrSelectQueryEngine?))
-                {
-                    return new global::Dataloop.JsonConverters.PickDQLQueryExcludeKeyofDQLQueryIntersectOrExceptOrLimitOrSortOrSelectQueryEngineNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Dataloop.OrderBy))
-                {
-                    return new global::Dataloop.JsonConverters.OrderByJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Dataloop.OrderBy?))
-                {
-                    return new global::Dataloop.JsonConverters.OrderByNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Dataloop.DQLResourceQueryQueryEngine))
-                {
-                    return new global::Dataloop.JsonConverters.DQLResourceQueryQueryEngineJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Dataloop.DQLResourceQueryQueryEngine?))
-                {
-                    return new global::Dataloop.JsonConverters.DQLResourceQueryQueryEngineNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Dataloop.AnnotationType))
-                {
-                    return new global::Dataloop.JsonConverters.AnnotationTypeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Dataloop.AnnotationType?))
-                {
-                    return new global::Dataloop.JsonConverters.AnnotationTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Dataloop.RefAnnotationsRefType))
-                {
-                    return new global::Dataloop.JsonConverters.RefAnnotationsRefTypeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Dataloop.RefAnnotationsRefType?))
-                {
-                    return new global::Dataloop.JsonConverters.RefAnnotationsRefTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Dataloop.RequestSource))
-                {
-                    return new global::Dataloop.JsonConverters.RequestSourceJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Dataloop.RequestSource?))
-                {
-                    return new global::Dataloop.JsonConverters.RequestSourceNullableJsonConverter();
-                }
-                throw new global::System.NotSupportedException($"No generated enum converter is registered for '{typeToConvert}'.");
-            }
         }
 
         private sealed class LazyChunkResolver : global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver
@@ -365,7 +103,7 @@ namespace Dataloop
             {
                 return index switch
                 {
-                    0 => new DatasetItemAnnotationsSourceGenerationContextChunk0(new global::System.Text.Json.JsonSerializerOptions()),
+                    0 => global::Dataloop.SourceGenerationContext.TypeInfoResolver,
                     _ => throw new global::System.ArgumentOutOfRangeException(nameof(index)),
                 };
             }
