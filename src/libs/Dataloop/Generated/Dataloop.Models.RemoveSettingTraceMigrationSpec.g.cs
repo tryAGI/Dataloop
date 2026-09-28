@@ -42,8 +42,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::Dataloop.MigrationSpec PickMigrationSpec() => IsMigrationSpec
-            ? MigrationSpec!.Value
+        public global::Dataloop.MigrationSpec PickMigrationSpec() => MigrationSpec is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'MigrationSpec' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::Dataloop.RemoveSettingTraceMigrationSpecVariant2 PickRemoveSettingTraceMigrationSpecVariant2() => IsRemoveSettingTraceMigrationSpecVariant2
-            ? RemoveSettingTraceMigrationSpecVariant2!
+        public global::Dataloop.RemoveSettingTraceMigrationSpecVariant2 PickRemoveSettingTraceMigrationSpecVariant2() => RemoveSettingTraceMigrationSpecVariant2 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'RemoveSettingTraceMigrationSpecVariant2' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -177,13 +177,13 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsMigrationSpec && migrationSpec != null)
+            if (MigrationSpec is { } __value0 && migrationSpec != null)
             {
-                return migrationSpec(MigrationSpec!);
+                return migrationSpec(__value0);
             }
-            else if (IsRemoveSettingTraceMigrationSpecVariant2 && removeSettingTraceMigrationSpecVariant2 != null)
+            else if (RemoveSettingTraceMigrationSpecVariant2 is { } __value1 && removeSettingTraceMigrationSpecVariant2 != null)
             {
-                return removeSettingTraceMigrationSpecVariant2(RemoveSettingTraceMigrationSpecVariant2!);
+                return removeSettingTraceMigrationSpecVariant2(__value1);
             }
 
             return default(TResult);
@@ -203,13 +203,13 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsMigrationSpec)
+            if (MigrationSpec is { } __value0)
             {
-                migrationSpec?.Invoke(MigrationSpec!);
+                migrationSpec?.Invoke(__value0);
             }
-            else if (IsRemoveSettingTraceMigrationSpecVariant2)
+            else if (RemoveSettingTraceMigrationSpecVariant2 is { } __value1)
             {
-                removeSettingTraceMigrationSpecVariant2?.Invoke(RemoveSettingTraceMigrationSpecVariant2!);
+                removeSettingTraceMigrationSpecVariant2?.Invoke(__value1);
             }
         }
 
@@ -226,13 +226,13 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsMigrationSpec)
+            if (MigrationSpec is { } __value0)
             {
-                migrationSpec?.Invoke(MigrationSpec!);
+                migrationSpec?.Invoke(__value0);
             }
-            else if (IsRemoveSettingTraceMigrationSpecVariant2)
+            else if (RemoveSettingTraceMigrationSpecVariant2 is { } __value1)
             {
-                removeSettingTraceMigrationSpecVariant2?.Invoke(RemoveSettingTraceMigrationSpecVariant2!);
+                removeSettingTraceMigrationSpecVariant2?.Invoke(__value1);
             }
         }
 

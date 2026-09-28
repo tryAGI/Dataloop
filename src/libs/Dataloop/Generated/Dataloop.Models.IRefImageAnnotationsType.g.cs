@@ -42,8 +42,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public object PickIRefImageAnnotationsTypeVariant1() => IsIRefImageAnnotationsTypeVariant1
-            ? IRefImageAnnotationsTypeVariant1!
+        public object PickIRefImageAnnotationsTypeVariant1() => IRefImageAnnotationsTypeVariant1 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'IRefImageAnnotationsTypeVariant1' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::Dataloop.IBaseRefAnnotationCoordinates PickBaseAnnotationCoordinates() => IsBaseAnnotationCoordinates
-            ? BaseAnnotationCoordinates!
+        public global::Dataloop.IBaseRefAnnotationCoordinates PickBaseAnnotationCoordinates() => BaseAnnotationCoordinates is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'BaseAnnotationCoordinates' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -154,13 +154,13 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsIRefImageAnnotationsTypeVariant1 && iRefImageAnnotationsTypeVariant1 != null)
+            if (IRefImageAnnotationsTypeVariant1 is { } __value0 && iRefImageAnnotationsTypeVariant1 != null)
             {
-                return iRefImageAnnotationsTypeVariant1(IRefImageAnnotationsTypeVariant1!);
+                return iRefImageAnnotationsTypeVariant1(__value0);
             }
-            else if (IsBaseAnnotationCoordinates && baseAnnotationCoordinates != null)
+            else if (BaseAnnotationCoordinates is { } __value1 && baseAnnotationCoordinates != null)
             {
-                return baseAnnotationCoordinates(BaseAnnotationCoordinates!);
+                return baseAnnotationCoordinates(__value1);
             }
 
             return default(TResult);
@@ -180,13 +180,13 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsIRefImageAnnotationsTypeVariant1)
+            if (IRefImageAnnotationsTypeVariant1 is { } __value0)
             {
-                iRefImageAnnotationsTypeVariant1?.Invoke(IRefImageAnnotationsTypeVariant1!);
+                iRefImageAnnotationsTypeVariant1?.Invoke(__value0);
             }
-            else if (IsBaseAnnotationCoordinates)
+            else if (BaseAnnotationCoordinates is { } __value1)
             {
-                baseAnnotationCoordinates?.Invoke(BaseAnnotationCoordinates!);
+                baseAnnotationCoordinates?.Invoke(__value1);
             }
         }
 
@@ -203,13 +203,13 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsIRefImageAnnotationsTypeVariant1)
+            if (IRefImageAnnotationsTypeVariant1 is { } __value0)
             {
-                iRefImageAnnotationsTypeVariant1?.Invoke(IRefImageAnnotationsTypeVariant1!);
+                iRefImageAnnotationsTypeVariant1?.Invoke(__value0);
             }
-            else if (IsBaseAnnotationCoordinates)
+            else if (BaseAnnotationCoordinates is { } __value1)
             {
-                baseAnnotationCoordinates?.Invoke(BaseAnnotationCoordinates!);
+                baseAnnotationCoordinates?.Invoke(__value1);
             }
         }
 

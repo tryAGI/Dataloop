@@ -42,8 +42,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::Dataloop.IDpkComponentPanel PickPanel() => IsPanel
-            ? Panel!
+        public global::Dataloop.IDpkComponentPanel PickPanel() => Panel is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Panel' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::Dataloop.IDpkComponentModel PickModel() => IsModel
-            ? Model!
+        public global::Dataloop.IDpkComponentModel PickModel() => Model is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Model' but the value was {ToString()}.");
 
         /// <summary>
@@ -116,8 +116,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::Dataloop.IDpkComponentModule PickModule() => IsModule
-            ? Module!
+        public global::Dataloop.IDpkComponentModule PickModule() => Module is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Module' but the value was {ToString()}.");
 
         /// <summary>
@@ -153,8 +153,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::Dataloop.IDpkComponentTrigger PickTrigger() => IsTrigger
-            ? Trigger!
+        public global::Dataloop.IDpkComponentTrigger PickTrigger() => Trigger is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Trigger' but the value was {ToString()}.");
 
         /// <summary>
@@ -190,8 +190,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::Dataloop.IDpkComponentService PickService() => IsService
-            ? Service!
+        public global::Dataloop.IDpkComponentService PickService() => Service is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Service' but the value was {ToString()}.");
 
         /// <summary>
@@ -227,8 +227,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::Dataloop.IDpkComponentToolbars PickToolbars() => IsToolbars
-            ? Toolbars!
+        public global::Dataloop.IDpkComponentToolbars PickToolbars() => Toolbars is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Toolbars' but the value was {ToString()}.");
 
         /// <summary>
@@ -264,8 +264,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::Dataloop.IDpkChannel PickChannel() => IsChannel
-            ? Channel!
+        public global::Dataloop.IDpkChannel PickChannel() => Channel is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Channel' but the value was {ToString()}.");
 
         /// <summary>
@@ -301,8 +301,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::Dataloop.IDpkComputeConfigs PickComputeConfigs() => IsComputeConfigs
-            ? ComputeConfigs!
+        public global::Dataloop.IDpkComputeConfigs PickComputeConfigs() => ComputeConfigs is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ComputeConfigs' but the value was {ToString()}.");
 
         /// <summary>
@@ -338,8 +338,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::Dataloop.IDpkPipelineNode PickPipelineNode() => IsPipelineNode
-            ? PipelineNode!
+        public global::Dataloop.IDpkPipelineNode PickPipelineNode() => PipelineNode is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'PipelineNode' but the value was {ToString()}.");
 
         /// <summary>
@@ -375,8 +375,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::Dataloop.IDpkPipelineTemplate PickPipelineTemplate() => IsPipelineTemplate
-            ? PipelineTemplate!
+        public global::Dataloop.IDpkPipelineTemplate PickPipelineTemplate() => PipelineTemplate is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'PipelineTemplate' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -697,45 +697,45 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsPanel && panel != null)
+            if (Panel is { } __value0 && panel != null)
             {
-                return panel(Panel!);
+                return panel(__value0);
             }
-            else if (IsModel && model != null)
+            else if (Model is { } __value1 && model != null)
             {
-                return model(Model!);
+                return model(__value1);
             }
-            else if (IsModule && module != null)
+            else if (Module is { } __value2 && module != null)
             {
-                return module(Module!);
+                return module(__value2);
             }
-            else if (IsTrigger && trigger != null)
+            else if (Trigger is { } __value3 && trigger != null)
             {
-                return trigger(Trigger!);
+                return trigger(__value3);
             }
-            else if (IsService && service != null)
+            else if (Service is { } __value4 && service != null)
             {
-                return service(Service!);
+                return service(__value4);
             }
-            else if (IsToolbars && toolbars != null)
+            else if (Toolbars is { } __value5 && toolbars != null)
             {
-                return toolbars(Toolbars!);
+                return toolbars(__value5);
             }
-            else if (IsChannel && channel != null)
+            else if (Channel is { } __value6 && channel != null)
             {
-                return channel(Channel!);
+                return channel(__value6);
             }
-            else if (IsComputeConfigs && computeConfigs != null)
+            else if (ComputeConfigs is { } __value7 && computeConfigs != null)
             {
-                return computeConfigs(ComputeConfigs!);
+                return computeConfigs(__value7);
             }
-            else if (IsPipelineNode && pipelineNode != null)
+            else if (PipelineNode is { } __value8 && pipelineNode != null)
             {
-                return pipelineNode(PipelineNode!);
+                return pipelineNode(__value8);
             }
-            else if (IsPipelineTemplate && pipelineTemplate != null)
+            else if (PipelineTemplate is { } __value9 && pipelineTemplate != null)
             {
-                return pipelineTemplate(PipelineTemplate!);
+                return pipelineTemplate(__value9);
             }
 
             return default(TResult);
@@ -771,45 +771,45 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsPanel)
+            if (Panel is { } __value0)
             {
-                panel?.Invoke(Panel!);
+                panel?.Invoke(__value0);
             }
-            else if (IsModel)
+            else if (Model is { } __value1)
             {
-                model?.Invoke(Model!);
+                model?.Invoke(__value1);
             }
-            else if (IsModule)
+            else if (Module is { } __value2)
             {
-                module?.Invoke(Module!);
+                module?.Invoke(__value2);
             }
-            else if (IsTrigger)
+            else if (Trigger is { } __value3)
             {
-                trigger?.Invoke(Trigger!);
+                trigger?.Invoke(__value3);
             }
-            else if (IsService)
+            else if (Service is { } __value4)
             {
-                service?.Invoke(Service!);
+                service?.Invoke(__value4);
             }
-            else if (IsToolbars)
+            else if (Toolbars is { } __value5)
             {
-                toolbars?.Invoke(Toolbars!);
+                toolbars?.Invoke(__value5);
             }
-            else if (IsChannel)
+            else if (Channel is { } __value6)
             {
-                channel?.Invoke(Channel!);
+                channel?.Invoke(__value6);
             }
-            else if (IsComputeConfigs)
+            else if (ComputeConfigs is { } __value7)
             {
-                computeConfigs?.Invoke(ComputeConfigs!);
+                computeConfigs?.Invoke(__value7);
             }
-            else if (IsPipelineNode)
+            else if (PipelineNode is { } __value8)
             {
-                pipelineNode?.Invoke(PipelineNode!);
+                pipelineNode?.Invoke(__value8);
             }
-            else if (IsPipelineTemplate)
+            else if (PipelineTemplate is { } __value9)
             {
-                pipelineTemplate?.Invoke(PipelineTemplate!);
+                pipelineTemplate?.Invoke(__value9);
             }
         }
 
@@ -834,45 +834,45 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsPanel)
+            if (Panel is { } __value0)
             {
-                panel?.Invoke(Panel!);
+                panel?.Invoke(__value0);
             }
-            else if (IsModel)
+            else if (Model is { } __value1)
             {
-                model?.Invoke(Model!);
+                model?.Invoke(__value1);
             }
-            else if (IsModule)
+            else if (Module is { } __value2)
             {
-                module?.Invoke(Module!);
+                module?.Invoke(__value2);
             }
-            else if (IsTrigger)
+            else if (Trigger is { } __value3)
             {
-                trigger?.Invoke(Trigger!);
+                trigger?.Invoke(__value3);
             }
-            else if (IsService)
+            else if (Service is { } __value4)
             {
-                service?.Invoke(Service!);
+                service?.Invoke(__value4);
             }
-            else if (IsToolbars)
+            else if (Toolbars is { } __value5)
             {
-                toolbars?.Invoke(Toolbars!);
+                toolbars?.Invoke(__value5);
             }
-            else if (IsChannel)
+            else if (Channel is { } __value6)
             {
-                channel?.Invoke(Channel!);
+                channel?.Invoke(__value6);
             }
-            else if (IsComputeConfigs)
+            else if (ComputeConfigs is { } __value7)
             {
-                computeConfigs?.Invoke(ComputeConfigs!);
+                computeConfigs?.Invoke(__value7);
             }
-            else if (IsPipelineNode)
+            else if (PipelineNode is { } __value8)
             {
-                pipelineNode?.Invoke(PipelineNode!);
+                pipelineNode?.Invoke(__value8);
             }
-            else if (IsPipelineTemplate)
+            else if (PipelineTemplate is { } __value9)
             {
-                pipelineTemplate?.Invoke(PipelineTemplate!);
+                pipelineTemplate?.Invoke(__value9);
             }
         }
 

@@ -198,19 +198,19 @@ namespace Dataloop.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::System.DateTime), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::System.DateTime> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::System.DateTime).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Time!.Value, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickTime(), typeInfo);
             }
             else if (value.IsIDateVariant2)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(double), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<double> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(double).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.IDateVariant2!.Value, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickIDateVariant2(), typeInfo);
             }
             else if (value.IsIDateVariant3)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(string), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<string?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(string).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.IDateVariant3!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickIDateVariant3(), typeInfo);
             }
         }
     }

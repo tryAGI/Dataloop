@@ -42,8 +42,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::Dataloop.PickRecipeTitleOrProjectIdsOrOntologyIds PickPickTitleOrProjectIdsOntology() => IsPickTitleOrProjectIdsOntology
-            ? PickTitleOrProjectIdsOntology!
+        public global::Dataloop.PickRecipeTitleOrProjectIdsOrOntologyIds PickPickTitleOrProjectIdsOntology() => PickTitleOrProjectIdsOntology is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'PickTitleOrProjectIdsOntology' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::Dataloop.PartialRecipe PickPartial() => IsPartial
-            ? Partial!
+        public global::Dataloop.PartialRecipe PickPartial() => Partial is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Partial' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -177,13 +177,13 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsPickTitleOrProjectIdsOntology && pickTitleOrProjectIdsOntology != null)
+            if (PickTitleOrProjectIdsOntology is { } __value0 && pickTitleOrProjectIdsOntology != null)
             {
-                return pickTitleOrProjectIdsOntology(PickTitleOrProjectIdsOntology!);
+                return pickTitleOrProjectIdsOntology(__value0);
             }
-            else if (IsPartial && partial != null)
+            else if (Partial is { } __value1 && partial != null)
             {
-                return partial(Partial!);
+                return partial(__value1);
             }
 
             return default(TResult);
@@ -203,13 +203,13 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsPickTitleOrProjectIdsOntology)
+            if (PickTitleOrProjectIdsOntology is { } __value0)
             {
-                pickTitleOrProjectIdsOntology?.Invoke(PickTitleOrProjectIdsOntology!);
+                pickTitleOrProjectIdsOntology?.Invoke(__value0);
             }
-            else if (IsPartial)
+            else if (Partial is { } __value1)
             {
-                partial?.Invoke(Partial!);
+                partial?.Invoke(__value1);
             }
         }
 
@@ -226,13 +226,13 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsPickTitleOrProjectIdsOntology)
+            if (PickTitleOrProjectIdsOntology is { } __value0)
             {
-                pickTitleOrProjectIdsOntology?.Invoke(PickTitleOrProjectIdsOntology!);
+                pickTitleOrProjectIdsOntology?.Invoke(__value0);
             }
-            else if (IsPartial)
+            else if (Partial is { } __value1)
             {
-                partial?.Invoke(Partial!);
+                partial?.Invoke(__value1);
             }
         }
 

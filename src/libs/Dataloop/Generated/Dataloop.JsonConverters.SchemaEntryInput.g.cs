@@ -70,7 +70,7 @@ namespace Dataloop.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.SchemaEntryInputVariant1), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.SchemaEntryInputVariant1?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.SchemaEntryInputVariant1).Name}");
-                var __element0 = global::System.Text.Json.JsonSerializer.SerializeToElement(value.SchemaEntryInputVariant1!, typeInfo);
+                var __element0 = global::System.Text.Json.JsonSerializer.SerializeToElement(value.PickSchemaEntryInputVariant1(), typeInfo);
                 if (__element0.ValueKind != global::System.Text.Json.JsonValueKind.Object)
                 {
                     throw new global::System.Text.Json.JsonException("AllOf values must serialize as JSON objects.");
@@ -88,7 +88,7 @@ namespace Dataloop.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.AnyOf<global::Dataloop.SchemaEntryInputVariant2Variant1, global::Dataloop.SchemaEntryInputVariant2Variant2>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.AnyOf<global::Dataloop.SchemaEntryInputVariant2Variant1, global::Dataloop.SchemaEntryInputVariant2Variant2>> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.AnyOf<global::Dataloop.SchemaEntryInputVariant2Variant1, global::Dataloop.SchemaEntryInputVariant2Variant2>).Name}");
-                var __element1 = global::System.Text.Json.JsonSerializer.SerializeToElement(value.SchemaEntryInputVariant2!.Value, typeInfo);
+                var __element1 = global::System.Text.Json.JsonSerializer.SerializeToElement(value.PickSchemaEntryInputVariant2(), typeInfo);
                 if (__element1.ValueKind != global::System.Text.Json.JsonValueKind.Object)
                 {
                     throw new global::System.Text.Json.JsonException("AllOf values must serialize as JSON objects.");

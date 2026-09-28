@@ -42,8 +42,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::Dataloop.SchemaEntryInputVariant1 PickSchemaEntryInputVariant1() => IsSchemaEntryInputVariant1
-            ? SchemaEntryInputVariant1!
+        public global::Dataloop.SchemaEntryInputVariant1 PickSchemaEntryInputVariant1() => SchemaEntryInputVariant1 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'SchemaEntryInputVariant1' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::Dataloop.AnyOf<global::Dataloop.SchemaEntryInputVariant2Variant1, global::Dataloop.SchemaEntryInputVariant2Variant2> PickSchemaEntryInputVariant2() => IsSchemaEntryInputVariant2
-            ? SchemaEntryInputVariant2!.Value
+        public global::Dataloop.AnyOf<global::Dataloop.SchemaEntryInputVariant2Variant1, global::Dataloop.SchemaEntryInputVariant2Variant2> PickSchemaEntryInputVariant2() => SchemaEntryInputVariant2 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'SchemaEntryInputVariant2' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -177,13 +177,13 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsSchemaEntryInputVariant1 && schemaEntryInputVariant1 != null)
+            if (SchemaEntryInputVariant1 is { } __value0 && schemaEntryInputVariant1 != null)
             {
-                return schemaEntryInputVariant1(SchemaEntryInputVariant1!);
+                return schemaEntryInputVariant1(__value0);
             }
-            else if (IsSchemaEntryInputVariant2 && schemaEntryInputVariant2 != null)
+            else if (SchemaEntryInputVariant2 is { } __value1 && schemaEntryInputVariant2 != null)
             {
-                return schemaEntryInputVariant2(SchemaEntryInputVariant2!);
+                return schemaEntryInputVariant2(__value1);
             }
 
             return default(TResult);
@@ -203,13 +203,13 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsSchemaEntryInputVariant1)
+            if (SchemaEntryInputVariant1 is { } __value0)
             {
-                schemaEntryInputVariant1?.Invoke(SchemaEntryInputVariant1!);
+                schemaEntryInputVariant1?.Invoke(__value0);
             }
-            else if (IsSchemaEntryInputVariant2)
+            else if (SchemaEntryInputVariant2 is { } __value1)
             {
-                schemaEntryInputVariant2?.Invoke(SchemaEntryInputVariant2!);
+                schemaEntryInputVariant2?.Invoke(__value1);
             }
         }
 
@@ -226,13 +226,13 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsSchemaEntryInputVariant1)
+            if (SchemaEntryInputVariant1 is { } __value0)
             {
-                schemaEntryInputVariant1?.Invoke(SchemaEntryInputVariant1!);
+                schemaEntryInputVariant1?.Invoke(__value0);
             }
-            else if (IsSchemaEntryInputVariant2)
+            else if (SchemaEntryInputVariant2 is { } __value1)
             {
-                schemaEntryInputVariant2?.Invoke(SchemaEntryInputVariant2!);
+                schemaEntryInputVariant2?.Invoke(__value1);
             }
         }
 

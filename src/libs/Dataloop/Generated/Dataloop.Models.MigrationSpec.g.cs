@@ -42,8 +42,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::Dataloop.Dictionary PickDictionary() => IsDictionary
-            ? Dictionary!
+        public global::Dataloop.Dictionary PickDictionary() => Dictionary is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Dictionary' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::Dataloop.MigrationSpecVariant2 PickMigrationSpecVariant2() => IsMigrationSpecVariant2
-            ? MigrationSpecVariant2!
+        public global::Dataloop.MigrationSpecVariant2 PickMigrationSpecVariant2() => MigrationSpecVariant2 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'MigrationSpecVariant2' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -177,13 +177,13 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsDictionary && dictionary != null)
+            if (Dictionary is { } __value0 && dictionary != null)
             {
-                return dictionary(Dictionary!);
+                return dictionary(__value0);
             }
-            else if (IsMigrationSpecVariant2 && migrationSpecVariant2 != null)
+            else if (MigrationSpecVariant2 is { } __value1 && migrationSpecVariant2 != null)
             {
-                return migrationSpecVariant2(MigrationSpecVariant2!);
+                return migrationSpecVariant2(__value1);
             }
 
             return default(TResult);
@@ -203,13 +203,13 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsDictionary)
+            if (Dictionary is { } __value0)
             {
-                dictionary?.Invoke(Dictionary!);
+                dictionary?.Invoke(__value0);
             }
-            else if (IsMigrationSpecVariant2)
+            else if (MigrationSpecVariant2 is { } __value1)
             {
-                migrationSpecVariant2?.Invoke(MigrationSpecVariant2!);
+                migrationSpecVariant2?.Invoke(__value1);
             }
         }
 
@@ -226,13 +226,13 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsDictionary)
+            if (Dictionary is { } __value0)
             {
-                dictionary?.Invoke(Dictionary!);
+                dictionary?.Invoke(__value0);
             }
-            else if (IsMigrationSpecVariant2)
+            else if (MigrationSpecVariant2 is { } __value1)
             {
-                migrationSpecVariant2?.Invoke(MigrationSpecVariant2!);
+                migrationSpecVariant2?.Invoke(__value1);
             }
         }
 

@@ -42,8 +42,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::System.DateTime PickTime() => IsTime
-            ? Time!.Value
+        public global::System.DateTime PickTime() => Time is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Time' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public double PickIDateVariant2() => IsIDateVariant2
-            ? IDateVariant2!.Value
+        public double PickIDateVariant2() => IDateVariant2 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'IDateVariant2' but the value was {ToString()}.");
 
         /// <summary>
@@ -116,8 +116,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public string PickIDateVariant3() => IsIDateVariant3
-            ? IDateVariant3!
+        public string PickIDateVariant3() => IDateVariant3 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'IDateVariant3' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -242,17 +242,17 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsTime && time != null)
+            if (Time is { } __value0 && time != null)
             {
-                return time(Time!);
+                return time(__value0);
             }
-            else if (IsIDateVariant2 && iDateVariant2 != null)
+            else if (IDateVariant2 is { } __value1 && iDateVariant2 != null)
             {
-                return iDateVariant2(IDateVariant2!);
+                return iDateVariant2(__value1);
             }
-            else if (IsIDateVariant3 && iDateVariant3 != null)
+            else if (IDateVariant3 is { } __value2 && iDateVariant3 != null)
             {
-                return iDateVariant3(IDateVariant3!);
+                return iDateVariant3(__value2);
             }
 
             return default(TResult);
@@ -274,17 +274,17 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsTime)
+            if (Time is { } __value0)
             {
-                time?.Invoke(Time!);
+                time?.Invoke(__value0);
             }
-            else if (IsIDateVariant2)
+            else if (IDateVariant2 is { } __value1)
             {
-                iDateVariant2?.Invoke(IDateVariant2!);
+                iDateVariant2?.Invoke(__value1);
             }
-            else if (IsIDateVariant3)
+            else if (IDateVariant3 is { } __value2)
             {
-                iDateVariant3?.Invoke(IDateVariant3!);
+                iDateVariant3?.Invoke(__value2);
             }
         }
 
@@ -302,17 +302,17 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsTime)
+            if (Time is { } __value0)
             {
-                time?.Invoke(Time!);
+                time?.Invoke(__value0);
             }
-            else if (IsIDateVariant2)
+            else if (IDateVariant2 is { } __value1)
             {
-                iDateVariant2?.Invoke(IDateVariant2!);
+                iDateVariant2?.Invoke(__value1);
             }
-            else if (IsIDateVariant3)
+            else if (IDateVariant3 is { } __value2)
             {
-                iDateVariant3?.Invoke(IDateVariant3!);
+                iDateVariant3?.Invoke(__value2);
             }
         }
 

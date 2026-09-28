@@ -42,8 +42,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::Dataloop.LineData PickLine() => IsLine
-            ? Line!
+        public global::Dataloop.LineData PickLine() => Line is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Line' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::Dataloop.MatrixData PickMatrix() => IsMatrix
-            ? Matrix!
+        public global::Dataloop.MatrixData PickMatrix() => Matrix is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Matrix' but the value was {ToString()}.");
 
         /// <summary>
@@ -116,8 +116,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::Dataloop.SummaryData PickSummary() => IsSummary
-            ? Summary!
+        public global::Dataloop.SummaryData PickSummary() => Summary is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Summary' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -242,17 +242,17 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsLine && line != null)
+            if (Line is { } __value0 && line != null)
             {
-                return line(Line!);
+                return line(__value0);
             }
-            else if (IsMatrix && matrix != null)
+            else if (Matrix is { } __value1 && matrix != null)
             {
-                return matrix(Matrix!);
+                return matrix(__value1);
             }
-            else if (IsSummary && summary != null)
+            else if (Summary is { } __value2 && summary != null)
             {
-                return summary(Summary!);
+                return summary(__value2);
             }
 
             return default(TResult);
@@ -274,17 +274,17 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsLine)
+            if (Line is { } __value0)
             {
-                line?.Invoke(Line!);
+                line?.Invoke(__value0);
             }
-            else if (IsMatrix)
+            else if (Matrix is { } __value1)
             {
-                matrix?.Invoke(Matrix!);
+                matrix?.Invoke(__value1);
             }
-            else if (IsSummary)
+            else if (Summary is { } __value2)
             {
-                summary?.Invoke(Summary!);
+                summary?.Invoke(__value2);
             }
         }
 
@@ -302,17 +302,17 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsLine)
+            if (Line is { } __value0)
             {
-                line?.Invoke(Line!);
+                line?.Invoke(__value0);
             }
-            else if (IsMatrix)
+            else if (Matrix is { } __value1)
             {
-                matrix?.Invoke(Matrix!);
+                matrix?.Invoke(__value1);
             }
-            else if (IsSummary)
+            else if (Summary is { } __value2)
             {
-                summary?.Invoke(Summary!);
+                summary?.Invoke(__value2);
             }
         }
 

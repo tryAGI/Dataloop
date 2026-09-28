@@ -130,13 +130,13 @@ namespace Dataloop.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.IKeyValueMetadata), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.IKeyValueMetadata?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.IKeyValueMetadata).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.IKeyValue!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickIKeyValue(), typeInfo);
             }
             else if (value.IsIS3Api)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.IS3ApiMetadata), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.IS3ApiMetadata?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.IS3ApiMetadata).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.IS3Api!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickIS3Api(), typeInfo);
             }
         }
     }
