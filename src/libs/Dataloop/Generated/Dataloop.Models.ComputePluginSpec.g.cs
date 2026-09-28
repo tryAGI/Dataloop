@@ -44,8 +44,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.Dictionary<string, global::Dataloop.ComputePluginResourceManifests2> PickResourceManifests() => IsResourceManifests
-            ? ResourceManifests!
+        public global::System.Collections.Generic.Dictionary<string, global::Dataloop.ComputePluginResourceManifests2> PickResourceManifests() => ResourceManifests is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ResourceManifests' but the value was {ToString()}.");
 
         /// <summary>
@@ -81,8 +81,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::Dataloop.ComputePluginSpecVariant2 PickComputePluginSpecVariant2() => IsComputePluginSpecVariant2
-            ? ComputePluginSpecVariant2!
+        public global::Dataloop.ComputePluginSpecVariant2 PickComputePluginSpecVariant2() => ComputePluginSpecVariant2 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ComputePluginSpecVariant2' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -179,13 +179,13 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsResourceManifests && resourceManifests != null)
+            if (ResourceManifests is { } __value0 && resourceManifests != null)
             {
-                return resourceManifests(ResourceManifests!);
+                return resourceManifests(__value0);
             }
-            else if (IsComputePluginSpecVariant2 && computePluginSpecVariant2 != null)
+            else if (ComputePluginSpecVariant2 is { } __value1 && computePluginSpecVariant2 != null)
             {
-                return computePluginSpecVariant2(ComputePluginSpecVariant2!);
+                return computePluginSpecVariant2(__value1);
             }
 
             return default(TResult);
@@ -205,13 +205,13 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsResourceManifests)
+            if (ResourceManifests is { } __value0)
             {
-                resourceManifests?.Invoke(ResourceManifests!);
+                resourceManifests?.Invoke(__value0);
             }
-            else if (IsComputePluginSpecVariant2)
+            else if (ComputePluginSpecVariant2 is { } __value1)
             {
-                computePluginSpecVariant2?.Invoke(ComputePluginSpecVariant2!);
+                computePluginSpecVariant2?.Invoke(__value1);
             }
         }
 
@@ -228,13 +228,13 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsResourceManifests)
+            if (ResourceManifests is { } __value0)
             {
-                resourceManifests?.Invoke(ResourceManifests!);
+                resourceManifests?.Invoke(__value0);
             }
-            else if (IsComputePluginSpecVariant2)
+            else if (ComputePluginSpecVariant2 is { } __value1)
             {
-                computePluginSpecVariant2?.Invoke(ComputePluginSpecVariant2!);
+                computePluginSpecVariant2?.Invoke(__value1);
             }
         }
 

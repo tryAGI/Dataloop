@@ -42,8 +42,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::Dataloop.OneByOneLatencyBenchmarkMode PickOneByLatency() => IsOneByLatency
-            ? OneByLatency!
+        public global::Dataloop.OneByOneLatencyBenchmarkMode PickOneByLatency() => OneByLatency is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'OneByLatency' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::Dataloop.ProfilingBenchmarkMode PickProfiling() => IsProfiling
-            ? Profiling!
+        public global::Dataloop.ProfilingBenchmarkMode PickProfiling() => Profiling is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Profiling' but the value was {ToString()}.");
 
         /// <summary>
@@ -116,8 +116,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::Dataloop.ConcurrencyBenchmarkMode PickConcurrency() => IsConcurrency
-            ? Concurrency!
+        public global::Dataloop.ConcurrencyBenchmarkMode PickConcurrency() => Concurrency is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Concurrency' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -242,17 +242,17 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsOneByLatency && oneByLatency != null)
+            if (OneByLatency is { } __value0 && oneByLatency != null)
             {
-                return oneByLatency(OneByLatency!);
+                return oneByLatency(__value0);
             }
-            else if (IsProfiling && profiling != null)
+            else if (Profiling is { } __value1 && profiling != null)
             {
-                return profiling(Profiling!);
+                return profiling(__value1);
             }
-            else if (IsConcurrency && concurrency != null)
+            else if (Concurrency is { } __value2 && concurrency != null)
             {
-                return concurrency(Concurrency!);
+                return concurrency(__value2);
             }
 
             return default(TResult);
@@ -274,17 +274,17 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsOneByLatency)
+            if (OneByLatency is { } __value0)
             {
-                oneByLatency?.Invoke(OneByLatency!);
+                oneByLatency?.Invoke(__value0);
             }
-            else if (IsProfiling)
+            else if (Profiling is { } __value1)
             {
-                profiling?.Invoke(Profiling!);
+                profiling?.Invoke(__value1);
             }
-            else if (IsConcurrency)
+            else if (Concurrency is { } __value2)
             {
-                concurrency?.Invoke(Concurrency!);
+                concurrency?.Invoke(__value2);
             }
         }
 
@@ -302,17 +302,17 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsOneByLatency)
+            if (OneByLatency is { } __value0)
             {
-                oneByLatency?.Invoke(OneByLatency!);
+                oneByLatency?.Invoke(__value0);
             }
-            else if (IsProfiling)
+            else if (Profiling is { } __value1)
             {
-                profiling?.Invoke(Profiling!);
+                profiling?.Invoke(__value1);
             }
-            else if (IsConcurrency)
+            else if (Concurrency is { } __value2)
             {
-                concurrency?.Invoke(Concurrency!);
+                concurrency?.Invoke(__value2);
             }
         }
 

@@ -42,8 +42,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::Dataloop.Point PickPoint() => IsPoint
-            ? Point!
+        public global::Dataloop.Point PickPoint() => Point is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Point' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dataloop.Point> PickAPIAnnotationCoordinateTypesVariant2() => IsAPIAnnotationCoordinateTypesVariant2
-            ? APIAnnotationCoordinateTypesVariant2!
+        public global::System.Collections.Generic.IList<global::Dataloop.Point> PickAPIAnnotationCoordinateTypesVariant2() => APIAnnotationCoordinateTypesVariant2 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'APIAnnotationCoordinateTypesVariant2' but the value was {ToString()}.");
 
         /// <summary>
@@ -116,8 +116,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>> PickAPIAnnotationCoordinateTypesVariant3() => IsAPIAnnotationCoordinateTypesVariant3
-            ? APIAnnotationCoordinateTypesVariant3!
+        public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>> PickAPIAnnotationCoordinateTypesVariant3() => APIAnnotationCoordinateTypesVariant3 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'APIAnnotationCoordinateTypesVariant3' but the value was {ToString()}.");
 
         /// <summary>
@@ -153,8 +153,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::Dataloop.APINoteAnnotationCoordinatesV1 PickNoteCoordinatesV1() => IsNoteCoordinatesV1
-            ? NoteCoordinatesV1!
+        public global::Dataloop.APINoteAnnotationCoordinatesV1 PickNoteCoordinatesV1() => NoteCoordinatesV1 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'NoteCoordinatesV1' but the value was {ToString()}.");
 
         /// <summary>
@@ -190,8 +190,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public string PickAPIAnnotationCoordinateTypesVariant5() => IsAPIAnnotationCoordinateTypesVariant5
-            ? APIAnnotationCoordinateTypesVariant5!
+        public string PickAPIAnnotationCoordinateTypesVariant5() => APIAnnotationCoordinateTypesVariant5 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'APIAnnotationCoordinateTypesVariant5' but the value was {ToString()}.");
 
         /// <summary>
@@ -227,8 +227,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::Dataloop.PoseCoordinates PickPoseCoordinates() => IsPoseCoordinates
-            ? PoseCoordinates!
+        public global::Dataloop.PoseCoordinates PickPoseCoordinates() => PoseCoordinates is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'PoseCoordinates' but the value was {ToString()}.");
 
         /// <summary>
@@ -264,8 +264,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>> PickPolygonCoordinatesV1() => IsPolygonCoordinatesV1
-            ? PolygonCoordinatesV1!
+        public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>> PickPolygonCoordinatesV1() => PolygonCoordinatesV1 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'PolygonCoordinatesV1' but the value was {ToString()}.");
 
         /// <summary>
@@ -301,8 +301,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>> PickPolylineCoordinatesV3() => IsPolylineCoordinatesV3
-            ? PolylineCoordinatesV3!
+        public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>> PickPolylineCoordinatesV3() => PolylineCoordinatesV3 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'PolylineCoordinatesV3' but the value was {ToString()}.");
 
         /// <summary>
@@ -338,8 +338,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::Dataloop.EllipseCoordinatesV1 PickEllipseCoordinatesV1() => IsEllipseCoordinatesV1
-            ? EllipseCoordinatesV1!
+        public global::Dataloop.EllipseCoordinatesV1 PickEllipseCoordinatesV1() => EllipseCoordinatesV1 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'EllipseCoordinatesV1' but the value was {ToString()}.");
 
         /// <summary>
@@ -375,8 +375,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::Dataloop.CubeCoordinatesV1 PickCubeCoordinatesV1() => IsCubeCoordinatesV1
-            ? CubeCoordinatesV1!
+        public global::Dataloop.CubeCoordinatesV1 PickCubeCoordinatesV1() => CubeCoordinatesV1 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'CubeCoordinatesV1' but the value was {ToString()}.");
 
         /// <summary>
@@ -412,8 +412,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<object> PickBoxCoordinates() => IsBoxCoordinates
-            ? BoxCoordinates!
+        public global::System.Collections.Generic.IList<object> PickBoxCoordinates() => BoxCoordinates is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'BoxCoordinates' but the value was {ToString()}.");
 
         /// <summary>
@@ -449,8 +449,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::Dataloop.ItemDescriptionCoordinates PickItemDescriptionCoordinates() => IsItemDescriptionCoordinates
-            ? ItemDescriptionCoordinates!
+        public global::Dataloop.ItemDescriptionCoordinates PickItemDescriptionCoordinates() => ItemDescriptionCoordinates is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ItemDescriptionCoordinates' but the value was {ToString()}.");
 
         /// <summary>
@@ -486,8 +486,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::Dataloop.IRefImageAnnotationsType PickRefImageAnnotationsType() => IsRefImageAnnotationsType
-            ? RefImageAnnotationsType!.Value
+        public global::Dataloop.IRefImageAnnotationsType PickRefImageAnnotationsType() => RefImageAnnotationsType is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'RefImageAnnotationsType' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -777,57 +777,57 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsPoint && point != null)
+            if (Point is { } __value0 && point != null)
             {
-                return point(Point!);
+                return point(__value0);
             }
-            else if (IsAPIAnnotationCoordinateTypesVariant2 && aPIAnnotationCoordinateTypesVariant2 != null)
+            else if (APIAnnotationCoordinateTypesVariant2 is { } __value1 && aPIAnnotationCoordinateTypesVariant2 != null)
             {
-                return aPIAnnotationCoordinateTypesVariant2(APIAnnotationCoordinateTypesVariant2!);
+                return aPIAnnotationCoordinateTypesVariant2(__value1);
             }
-            else if (IsAPIAnnotationCoordinateTypesVariant3 && aPIAnnotationCoordinateTypesVariant3 != null)
+            else if (APIAnnotationCoordinateTypesVariant3 is { } __value2 && aPIAnnotationCoordinateTypesVariant3 != null)
             {
-                return aPIAnnotationCoordinateTypesVariant3(APIAnnotationCoordinateTypesVariant3!);
+                return aPIAnnotationCoordinateTypesVariant3(__value2);
             }
-            else if (IsNoteCoordinatesV1 && noteCoordinatesV1 != null)
+            else if (NoteCoordinatesV1 is { } __value3 && noteCoordinatesV1 != null)
             {
-                return noteCoordinatesV1(NoteCoordinatesV1!);
+                return noteCoordinatesV1(__value3);
             }
-            else if (IsAPIAnnotationCoordinateTypesVariant5 && aPIAnnotationCoordinateTypesVariant5 != null)
+            else if (APIAnnotationCoordinateTypesVariant5 is { } __value4 && aPIAnnotationCoordinateTypesVariant5 != null)
             {
-                return aPIAnnotationCoordinateTypesVariant5(APIAnnotationCoordinateTypesVariant5!);
+                return aPIAnnotationCoordinateTypesVariant5(__value4);
             }
-            else if (IsPoseCoordinates && poseCoordinates != null)
+            else if (PoseCoordinates is { } __value5 && poseCoordinates != null)
             {
-                return poseCoordinates(PoseCoordinates!);
+                return poseCoordinates(__value5);
             }
-            else if (IsPolygonCoordinatesV1 && polygonCoordinatesV1 != null)
+            else if (PolygonCoordinatesV1 is { } __value6 && polygonCoordinatesV1 != null)
             {
-                return polygonCoordinatesV1(PolygonCoordinatesV1!);
+                return polygonCoordinatesV1(__value6);
             }
-            else if (IsPolylineCoordinatesV3 && polylineCoordinatesV3 != null)
+            else if (PolylineCoordinatesV3 is { } __value7 && polylineCoordinatesV3 != null)
             {
-                return polylineCoordinatesV3(PolylineCoordinatesV3!);
+                return polylineCoordinatesV3(__value7);
             }
-            else if (IsEllipseCoordinatesV1 && ellipseCoordinatesV1 != null)
+            else if (EllipseCoordinatesV1 is { } __value8 && ellipseCoordinatesV1 != null)
             {
-                return ellipseCoordinatesV1(EllipseCoordinatesV1!);
+                return ellipseCoordinatesV1(__value8);
             }
-            else if (IsCubeCoordinatesV1 && cubeCoordinatesV1 != null)
+            else if (CubeCoordinatesV1 is { } __value9 && cubeCoordinatesV1 != null)
             {
-                return cubeCoordinatesV1(CubeCoordinatesV1!);
+                return cubeCoordinatesV1(__value9);
             }
-            else if (IsBoxCoordinates && boxCoordinates != null)
+            else if (BoxCoordinates is { } __value10 && boxCoordinates != null)
             {
-                return boxCoordinates(BoxCoordinates!);
+                return boxCoordinates(__value10);
             }
-            else if (IsItemDescriptionCoordinates && itemDescriptionCoordinates != null)
+            else if (ItemDescriptionCoordinates is { } __value11 && itemDescriptionCoordinates != null)
             {
-                return itemDescriptionCoordinates(ItemDescriptionCoordinates!);
+                return itemDescriptionCoordinates(__value11);
             }
-            else if (IsRefImageAnnotationsType && refImageAnnotationsType != null)
+            else if (RefImageAnnotationsType is { } __value12 && refImageAnnotationsType != null)
             {
-                return refImageAnnotationsType(RefImageAnnotationsType!);
+                return refImageAnnotationsType(__value12);
             }
 
             return default(TResult);
@@ -869,57 +869,57 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsPoint)
+            if (Point is { } __value0)
             {
-                point?.Invoke(Point!);
+                point?.Invoke(__value0);
             }
-            else if (IsAPIAnnotationCoordinateTypesVariant2)
+            else if (APIAnnotationCoordinateTypesVariant2 is { } __value1)
             {
-                aPIAnnotationCoordinateTypesVariant2?.Invoke(APIAnnotationCoordinateTypesVariant2!);
+                aPIAnnotationCoordinateTypesVariant2?.Invoke(__value1);
             }
-            else if (IsAPIAnnotationCoordinateTypesVariant3)
+            else if (APIAnnotationCoordinateTypesVariant3 is { } __value2)
             {
-                aPIAnnotationCoordinateTypesVariant3?.Invoke(APIAnnotationCoordinateTypesVariant3!);
+                aPIAnnotationCoordinateTypesVariant3?.Invoke(__value2);
             }
-            else if (IsNoteCoordinatesV1)
+            else if (NoteCoordinatesV1 is { } __value3)
             {
-                noteCoordinatesV1?.Invoke(NoteCoordinatesV1!);
+                noteCoordinatesV1?.Invoke(__value3);
             }
-            else if (IsAPIAnnotationCoordinateTypesVariant5)
+            else if (APIAnnotationCoordinateTypesVariant5 is { } __value4)
             {
-                aPIAnnotationCoordinateTypesVariant5?.Invoke(APIAnnotationCoordinateTypesVariant5!);
+                aPIAnnotationCoordinateTypesVariant5?.Invoke(__value4);
             }
-            else if (IsPoseCoordinates)
+            else if (PoseCoordinates is { } __value5)
             {
-                poseCoordinates?.Invoke(PoseCoordinates!);
+                poseCoordinates?.Invoke(__value5);
             }
-            else if (IsPolygonCoordinatesV1)
+            else if (PolygonCoordinatesV1 is { } __value6)
             {
-                polygonCoordinatesV1?.Invoke(PolygonCoordinatesV1!);
+                polygonCoordinatesV1?.Invoke(__value6);
             }
-            else if (IsPolylineCoordinatesV3)
+            else if (PolylineCoordinatesV3 is { } __value7)
             {
-                polylineCoordinatesV3?.Invoke(PolylineCoordinatesV3!);
+                polylineCoordinatesV3?.Invoke(__value7);
             }
-            else if (IsEllipseCoordinatesV1)
+            else if (EllipseCoordinatesV1 is { } __value8)
             {
-                ellipseCoordinatesV1?.Invoke(EllipseCoordinatesV1!);
+                ellipseCoordinatesV1?.Invoke(__value8);
             }
-            else if (IsCubeCoordinatesV1)
+            else if (CubeCoordinatesV1 is { } __value9)
             {
-                cubeCoordinatesV1?.Invoke(CubeCoordinatesV1!);
+                cubeCoordinatesV1?.Invoke(__value9);
             }
-            else if (IsBoxCoordinates)
+            else if (BoxCoordinates is { } __value10)
             {
-                boxCoordinates?.Invoke(BoxCoordinates!);
+                boxCoordinates?.Invoke(__value10);
             }
-            else if (IsItemDescriptionCoordinates)
+            else if (ItemDescriptionCoordinates is { } __value11)
             {
-                itemDescriptionCoordinates?.Invoke(ItemDescriptionCoordinates!);
+                itemDescriptionCoordinates?.Invoke(__value11);
             }
-            else if (IsRefImageAnnotationsType)
+            else if (RefImageAnnotationsType is { } __value12)
             {
-                refImageAnnotationsType?.Invoke(RefImageAnnotationsType!);
+                refImageAnnotationsType?.Invoke(__value12);
             }
         }
 
@@ -947,57 +947,57 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsPoint)
+            if (Point is { } __value0)
             {
-                point?.Invoke(Point!);
+                point?.Invoke(__value0);
             }
-            else if (IsAPIAnnotationCoordinateTypesVariant2)
+            else if (APIAnnotationCoordinateTypesVariant2 is { } __value1)
             {
-                aPIAnnotationCoordinateTypesVariant2?.Invoke(APIAnnotationCoordinateTypesVariant2!);
+                aPIAnnotationCoordinateTypesVariant2?.Invoke(__value1);
             }
-            else if (IsAPIAnnotationCoordinateTypesVariant3)
+            else if (APIAnnotationCoordinateTypesVariant3 is { } __value2)
             {
-                aPIAnnotationCoordinateTypesVariant3?.Invoke(APIAnnotationCoordinateTypesVariant3!);
+                aPIAnnotationCoordinateTypesVariant3?.Invoke(__value2);
             }
-            else if (IsNoteCoordinatesV1)
+            else if (NoteCoordinatesV1 is { } __value3)
             {
-                noteCoordinatesV1?.Invoke(NoteCoordinatesV1!);
+                noteCoordinatesV1?.Invoke(__value3);
             }
-            else if (IsAPIAnnotationCoordinateTypesVariant5)
+            else if (APIAnnotationCoordinateTypesVariant5 is { } __value4)
             {
-                aPIAnnotationCoordinateTypesVariant5?.Invoke(APIAnnotationCoordinateTypesVariant5!);
+                aPIAnnotationCoordinateTypesVariant5?.Invoke(__value4);
             }
-            else if (IsPoseCoordinates)
+            else if (PoseCoordinates is { } __value5)
             {
-                poseCoordinates?.Invoke(PoseCoordinates!);
+                poseCoordinates?.Invoke(__value5);
             }
-            else if (IsPolygonCoordinatesV1)
+            else if (PolygonCoordinatesV1 is { } __value6)
             {
-                polygonCoordinatesV1?.Invoke(PolygonCoordinatesV1!);
+                polygonCoordinatesV1?.Invoke(__value6);
             }
-            else if (IsPolylineCoordinatesV3)
+            else if (PolylineCoordinatesV3 is { } __value7)
             {
-                polylineCoordinatesV3?.Invoke(PolylineCoordinatesV3!);
+                polylineCoordinatesV3?.Invoke(__value7);
             }
-            else if (IsEllipseCoordinatesV1)
+            else if (EllipseCoordinatesV1 is { } __value8)
             {
-                ellipseCoordinatesV1?.Invoke(EllipseCoordinatesV1!);
+                ellipseCoordinatesV1?.Invoke(__value8);
             }
-            else if (IsCubeCoordinatesV1)
+            else if (CubeCoordinatesV1 is { } __value9)
             {
-                cubeCoordinatesV1?.Invoke(CubeCoordinatesV1!);
+                cubeCoordinatesV1?.Invoke(__value9);
             }
-            else if (IsBoxCoordinates)
+            else if (BoxCoordinates is { } __value10)
             {
-                boxCoordinates?.Invoke(BoxCoordinates!);
+                boxCoordinates?.Invoke(__value10);
             }
-            else if (IsItemDescriptionCoordinates)
+            else if (ItemDescriptionCoordinates is { } __value11)
             {
-                itemDescriptionCoordinates?.Invoke(ItemDescriptionCoordinates!);
+                itemDescriptionCoordinates?.Invoke(__value11);
             }
-            else if (IsRefImageAnnotationsType)
+            else if (RefImageAnnotationsType is { } __value12)
             {
-                refImageAnnotationsType?.Invoke(RefImageAnnotationsType!);
+                refImageAnnotationsType?.Invoke(__value12);
             }
         }
 

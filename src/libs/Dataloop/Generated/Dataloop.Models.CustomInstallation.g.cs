@@ -42,8 +42,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::Dataloop.PickAPIDpkDependencies PickPickAPIDpkDependencies() => IsPickAPIDpkDependencies
-            ? PickAPIDpkDependencies!
+        public global::Dataloop.PickAPIDpkDependencies PickPickAPIDpkDependencies() => PickAPIDpkDependencies is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'PickAPIDpkDependencies' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::Dataloop.CustomInstallationVariant2 PickCustomInstallationVariant2() => IsCustomInstallationVariant2
-            ? CustomInstallationVariant2!
+        public global::Dataloop.CustomInstallationVariant2 PickCustomInstallationVariant2() => CustomInstallationVariant2 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'CustomInstallationVariant2' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -177,13 +177,13 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsPickAPIDpkDependencies && pickAPIDpkDependencies != null)
+            if (PickAPIDpkDependencies is { } __value0 && pickAPIDpkDependencies != null)
             {
-                return pickAPIDpkDependencies(PickAPIDpkDependencies!);
+                return pickAPIDpkDependencies(__value0);
             }
-            else if (IsCustomInstallationVariant2 && customInstallationVariant2 != null)
+            else if (CustomInstallationVariant2 is { } __value1 && customInstallationVariant2 != null)
             {
-                return customInstallationVariant2(CustomInstallationVariant2!);
+                return customInstallationVariant2(__value1);
             }
 
             return default(TResult);
@@ -203,13 +203,13 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsPickAPIDpkDependencies)
+            if (PickAPIDpkDependencies is { } __value0)
             {
-                pickAPIDpkDependencies?.Invoke(PickAPIDpkDependencies!);
+                pickAPIDpkDependencies?.Invoke(__value0);
             }
-            else if (IsCustomInstallationVariant2)
+            else if (CustomInstallationVariant2 is { } __value1)
             {
-                customInstallationVariant2?.Invoke(CustomInstallationVariant2!);
+                customInstallationVariant2?.Invoke(__value1);
             }
         }
 
@@ -226,13 +226,13 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsPickAPIDpkDependencies)
+            if (PickAPIDpkDependencies is { } __value0)
             {
-                pickAPIDpkDependencies?.Invoke(PickAPIDpkDependencies!);
+                pickAPIDpkDependencies?.Invoke(__value0);
             }
-            else if (IsCustomInstallationVariant2)
+            else if (CustomInstallationVariant2 is { } __value1)
             {
-                customInstallationVariant2?.Invoke(CustomInstallationVariant2!);
+                customInstallationVariant2?.Invoke(__value1);
             }
         }
 

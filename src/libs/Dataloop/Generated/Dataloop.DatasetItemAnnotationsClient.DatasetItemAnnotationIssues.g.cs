@@ -161,9 +161,9 @@ namespace Dataloop
                 PrepareDatasetItemAnnotationIssuesRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    annotationId: annotationId!,
-                    datasetId: datasetId!,
-                    itemId: itemId!);
+                    annotationId: annotationId,
+                    datasetId: datasetId,
+                    itemId: itemId);
 
                 return __httpRequest;
             }
@@ -185,7 +185,7 @@ namespace Dataloop
                                 pathTemplate: "$\"/datasets/{datasetId}/items/{itemId}/annotations/{annotationId}/issue\"",
                                 httpMethod: "PUT",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: null,
                                 clientOptions: Options,
@@ -219,7 +219,7 @@ namespace Dataloop
                                 pathTemplate: "$\"/datasets/{datasetId}/items/{itemId}/annotations/{annotationId}/issue\"",
                                 httpMethod: "PUT",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: __exception,
                                 clientOptions: Options,
@@ -260,7 +260,7 @@ namespace Dataloop
                                 pathTemplate: "$\"/datasets/{datasetId}/items/{itemId}/annotations/{annotationId}/issue\"",
                                 httpMethod: "PUT",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -308,7 +308,7 @@ namespace Dataloop
                                 pathTemplate: "$\"/datasets/{datasetId}/items/{itemId}/annotations/{annotationId}/issue\"",
                                 httpMethod: "PUT",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -330,7 +330,7 @@ namespace Dataloop
                                 pathTemplate: "$\"/datasets/{datasetId}/items/{itemId}/annotations/{annotationId}/issue\"",
                                 httpMethod: "PUT",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,

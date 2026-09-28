@@ -595,79 +595,79 @@ namespace Dataloop.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.Point), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.Point?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.Point).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Point!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickPoint(), typeInfo);
             }
             else if (value.IsAPIAnnotationCoordinateTypesVariant2)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::System.Collections.Generic.IList<global::Dataloop.Point>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::System.Collections.Generic.IList<global::Dataloop.Point>?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::System.Collections.Generic.IList<global::Dataloop.Point>).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.APIAnnotationCoordinateTypesVariant2!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickAPIAnnotationCoordinateTypesVariant2(), typeInfo);
             }
             else if (value.IsAPIAnnotationCoordinateTypesVariant3)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.APIAnnotationCoordinateTypesVariant3!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickAPIAnnotationCoordinateTypesVariant3(), typeInfo);
             }
             else if (value.IsNoteCoordinatesV1)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.APINoteAnnotationCoordinatesV1), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.APINoteAnnotationCoordinatesV1?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.APINoteAnnotationCoordinatesV1).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.NoteCoordinatesV1!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickNoteCoordinatesV1(), typeInfo);
             }
             else if (value.IsAPIAnnotationCoordinateTypesVariant5)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(string), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<string?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(string).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.APIAnnotationCoordinateTypesVariant5!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickAPIAnnotationCoordinateTypesVariant5(), typeInfo);
             }
             else if (value.IsPoseCoordinates)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.PoseCoordinates), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.PoseCoordinates?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.PoseCoordinates).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PoseCoordinates!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickPoseCoordinates(), typeInfo);
             }
             else if (value.IsPolygonCoordinatesV1)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PolygonCoordinatesV1!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickPolygonCoordinatesV1(), typeInfo);
             }
             else if (value.IsPolylineCoordinatesV3)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dataloop.Point>>).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PolylineCoordinatesV3!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickPolylineCoordinatesV3(), typeInfo);
             }
             else if (value.IsEllipseCoordinatesV1)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.EllipseCoordinatesV1), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.EllipseCoordinatesV1?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.EllipseCoordinatesV1).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.EllipseCoordinatesV1!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickEllipseCoordinatesV1(), typeInfo);
             }
             else if (value.IsCubeCoordinatesV1)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.CubeCoordinatesV1), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.CubeCoordinatesV1?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.CubeCoordinatesV1).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.CubeCoordinatesV1!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickCubeCoordinatesV1(), typeInfo);
             }
             else if (value.IsBoxCoordinates)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::System.Collections.Generic.IList<object>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::System.Collections.Generic.IList<object>?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::System.Collections.Generic.IList<object>).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.BoxCoordinates!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickBoxCoordinates(), typeInfo);
             }
             else if (value.IsItemDescriptionCoordinates)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.ItemDescriptionCoordinates), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.ItemDescriptionCoordinates?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.ItemDescriptionCoordinates).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ItemDescriptionCoordinates!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickItemDescriptionCoordinates(), typeInfo);
             }
             else if (value.IsRefImageAnnotationsType)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dataloop.IRefImageAnnotationsType), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dataloop.IRefImageAnnotationsType> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dataloop.IRefImageAnnotationsType).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.RefImageAnnotationsType!.Value, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickRefImageAnnotationsType(), typeInfo);
             }
         }
     }

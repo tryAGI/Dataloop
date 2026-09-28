@@ -42,8 +42,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::Dataloop.EntityReferenceMetadata PickEntityReference() => IsEntityReference
-            ? EntityReference!
+        public global::Dataloop.EntityReferenceMetadata PickEntityReference() => EntityReference is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'EntityReference' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::Dataloop.AppMetadataVariant2 PickAppMetadataVariant2() => IsAppMetadataVariant2
-            ? AppMetadataVariant2!
+        public global::Dataloop.AppMetadataVariant2 PickAppMetadataVariant2() => AppMetadataVariant2 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'AppMetadataVariant2' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -177,13 +177,13 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsEntityReference && entityReference != null)
+            if (EntityReference is { } __value0 && entityReference != null)
             {
-                return entityReference(EntityReference!);
+                return entityReference(__value0);
             }
-            else if (IsAppMetadataVariant2 && appMetadataVariant2 != null)
+            else if (AppMetadataVariant2 is { } __value1 && appMetadataVariant2 != null)
             {
-                return appMetadataVariant2(AppMetadataVariant2!);
+                return appMetadataVariant2(__value1);
             }
 
             return default(TResult);
@@ -203,13 +203,13 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsEntityReference)
+            if (EntityReference is { } __value0)
             {
-                entityReference?.Invoke(EntityReference!);
+                entityReference?.Invoke(__value0);
             }
-            else if (IsAppMetadataVariant2)
+            else if (AppMetadataVariant2 is { } __value1)
             {
-                appMetadataVariant2?.Invoke(AppMetadataVariant2!);
+                appMetadataVariant2?.Invoke(__value1);
             }
         }
 
@@ -226,13 +226,13 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsEntityReference)
+            if (EntityReference is { } __value0)
             {
-                entityReference?.Invoke(EntityReference!);
+                entityReference?.Invoke(__value0);
             }
-            else if (IsAppMetadataVariant2)
+            else if (AppMetadataVariant2 is { } __value1)
             {
-                appMetadataVariant2?.Invoke(AppMetadataVariant2!);
+                appMetadataVariant2?.Invoke(__value1);
             }
         }
 

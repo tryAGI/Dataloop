@@ -42,8 +42,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::Dataloop.Dictionary PickDictionary() => IsDictionary
-            ? Dictionary!
+        public global::Dataloop.Dictionary PickDictionary() => Dictionary is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Dictionary' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::Dataloop.ComputeMetadataVariant2 PickComputeMetadataVariant2() => IsComputeMetadataVariant2
-            ? ComputeMetadataVariant2!
+        public global::Dataloop.ComputeMetadataVariant2 PickComputeMetadataVariant2() => ComputeMetadataVariant2 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ComputeMetadataVariant2' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -177,13 +177,13 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsDictionary && dictionary != null)
+            if (Dictionary is { } __value0 && dictionary != null)
             {
-                return dictionary(Dictionary!);
+                return dictionary(__value0);
             }
-            else if (IsComputeMetadataVariant2 && computeMetadataVariant2 != null)
+            else if (ComputeMetadataVariant2 is { } __value1 && computeMetadataVariant2 != null)
             {
-                return computeMetadataVariant2(ComputeMetadataVariant2!);
+                return computeMetadataVariant2(__value1);
             }
 
             return default(TResult);
@@ -203,13 +203,13 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsDictionary)
+            if (Dictionary is { } __value0)
             {
-                dictionary?.Invoke(Dictionary!);
+                dictionary?.Invoke(__value0);
             }
-            else if (IsComputeMetadataVariant2)
+            else if (ComputeMetadataVariant2 is { } __value1)
             {
-                computeMetadataVariant2?.Invoke(ComputeMetadataVariant2!);
+                computeMetadataVariant2?.Invoke(__value1);
             }
         }
 
@@ -226,13 +226,13 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsDictionary)
+            if (Dictionary is { } __value0)
             {
-                dictionary?.Invoke(Dictionary!);
+                dictionary?.Invoke(__value0);
             }
-            else if (IsComputeMetadataVariant2)
+            else if (ComputeMetadataVariant2 is { } __value1)
             {
-                computeMetadataVariant2?.Invoke(ComputeMetadataVariant2!);
+                computeMetadataVariant2?.Invoke(__value1);
             }
         }
 

@@ -153,8 +153,8 @@ namespace Dataloop
                 PrepareAddAccountToOrgRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    orgId: orgId!,
-                    accountId: accountId!);
+                    orgId: orgId,
+                    accountId: accountId);
 
                 return __httpRequest;
             }
@@ -176,7 +176,7 @@ namespace Dataloop
                                 pathTemplate: "$\"/orgs/{orgId}/accounts/{accountId}\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: null,
                                 clientOptions: Options,
@@ -210,7 +210,7 @@ namespace Dataloop
                                 pathTemplate: "$\"/orgs/{orgId}/accounts/{accountId}\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: __exception,
                                 clientOptions: Options,
@@ -251,7 +251,7 @@ namespace Dataloop
                                 pathTemplate: "$\"/orgs/{orgId}/accounts/{accountId}\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -299,7 +299,7 @@ namespace Dataloop
                                 pathTemplate: "$\"/orgs/{orgId}/accounts/{accountId}\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -321,7 +321,7 @@ namespace Dataloop
                                 pathTemplate: "$\"/orgs/{orgId}/accounts/{accountId}\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,

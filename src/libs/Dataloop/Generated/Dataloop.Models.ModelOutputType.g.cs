@@ -42,8 +42,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::Dataloop.AnnotationType PickAnnotation1() => IsAnnotation1
-            ? Annotation1!.Value
+        public global::Dataloop.AnnotationType PickAnnotation1() => Annotation1 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Annotation1' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::Dataloop.ModelOutputTypeVariant2 PickModelOutputTypeVariant2() => IsModelOutputTypeVariant2
-            ? ModelOutputTypeVariant2!.Value
+        public global::Dataloop.ModelOutputTypeVariant2 PickModelOutputTypeVariant2() => ModelOutputTypeVariant2 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ModelOutputTypeVariant2' but the value was {ToString()}.");
 
         /// <summary>
@@ -116,8 +116,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::Dataloop.AnnotationType PickAnnotation2() => IsAnnotation2
-            ? Annotation2!.Value
+        public global::Dataloop.AnnotationType PickAnnotation2() => Annotation2 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Annotation2' but the value was {ToString()}.");
 
         /// <summary>
@@ -153,8 +153,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::Dataloop.ModelOutputTypeVariant4 PickModelOutputTypeVariant4() => IsModelOutputTypeVariant4
-            ? ModelOutputTypeVariant4!.Value
+        public global::Dataloop.ModelOutputTypeVariant4 PickModelOutputTypeVariant4() => ModelOutputTypeVariant4 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ModelOutputTypeVariant4' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -284,21 +284,21 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsAnnotation1 && annotation1 != null)
+            if (Annotation1 is { } __value0 && annotation1 != null)
             {
-                return annotation1(Annotation1!);
+                return annotation1(__value0);
             }
-            else if (IsModelOutputTypeVariant2 && modelOutputTypeVariant2 != null)
+            else if (ModelOutputTypeVariant2 is { } __value1 && modelOutputTypeVariant2 != null)
             {
-                return modelOutputTypeVariant2(ModelOutputTypeVariant2!);
+                return modelOutputTypeVariant2(__value1);
             }
-            else if (IsAnnotation2 && annotation2 != null)
+            else if (Annotation2 is { } __value2 && annotation2 != null)
             {
-                return annotation2(Annotation2!);
+                return annotation2(__value2);
             }
-            else if (IsModelOutputTypeVariant4 && modelOutputTypeVariant4 != null)
+            else if (ModelOutputTypeVariant4 is { } __value3 && modelOutputTypeVariant4 != null)
             {
-                return modelOutputTypeVariant4(ModelOutputTypeVariant4!);
+                return modelOutputTypeVariant4(__value3);
             }
 
             return default(TResult);
@@ -322,21 +322,21 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsAnnotation1)
+            if (Annotation1 is { } __value0)
             {
-                annotation1?.Invoke(Annotation1!);
+                annotation1?.Invoke(__value0);
             }
-            else if (IsModelOutputTypeVariant2)
+            else if (ModelOutputTypeVariant2 is { } __value1)
             {
-                modelOutputTypeVariant2?.Invoke(ModelOutputTypeVariant2!);
+                modelOutputTypeVariant2?.Invoke(__value1);
             }
-            else if (IsAnnotation2)
+            else if (Annotation2 is { } __value2)
             {
-                annotation2?.Invoke(Annotation2!);
+                annotation2?.Invoke(__value2);
             }
-            else if (IsModelOutputTypeVariant4)
+            else if (ModelOutputTypeVariant4 is { } __value3)
             {
-                modelOutputTypeVariant4?.Invoke(ModelOutputTypeVariant4!);
+                modelOutputTypeVariant4?.Invoke(__value3);
             }
         }
 
@@ -355,21 +355,21 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsAnnotation1)
+            if (Annotation1 is { } __value0)
             {
-                annotation1?.Invoke(Annotation1!);
+                annotation1?.Invoke(__value0);
             }
-            else if (IsModelOutputTypeVariant2)
+            else if (ModelOutputTypeVariant2 is { } __value1)
             {
-                modelOutputTypeVariant2?.Invoke(ModelOutputTypeVariant2!);
+                modelOutputTypeVariant2?.Invoke(__value1);
             }
-            else if (IsAnnotation2)
+            else if (Annotation2 is { } __value2)
             {
-                annotation2?.Invoke(Annotation2!);
+                annotation2?.Invoke(__value2);
             }
-            else if (IsModelOutputTypeVariant4)
+            else if (ModelOutputTypeVariant4 is { } __value3)
             {
-                modelOutputTypeVariant4?.Invoke(ModelOutputTypeVariant4!);
+                modelOutputTypeVariant4?.Invoke(__value3);
             }
         }
 

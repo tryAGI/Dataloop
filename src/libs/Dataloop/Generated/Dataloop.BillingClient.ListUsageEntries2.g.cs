@@ -174,10 +174,10 @@ namespace Dataloop
                 PrepareListUsageEntries2Request(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id!,
-                    startDate: startDate!,
-                    endDate: endDate!,
-                    monthly: monthly!);
+                    id: id,
+                    startDate: startDate,
+                    endDate: endDate,
+                    monthly: monthly);
 
                 return __httpRequest;
             }
@@ -199,7 +199,7 @@ namespace Dataloop
                                 pathTemplate: "$\"/billing/account/{id}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: null,
                                 clientOptions: Options,
@@ -233,7 +233,7 @@ namespace Dataloop
                                 pathTemplate: "$\"/billing/account/{id}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: __exception,
                                 clientOptions: Options,
@@ -274,7 +274,7 @@ namespace Dataloop
                                 pathTemplate: "$\"/billing/account/{id}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -322,7 +322,7 @@ namespace Dataloop
                                 pathTemplate: "$\"/billing/account/{id}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -344,7 +344,7 @@ namespace Dataloop
                                 pathTemplate: "$\"/billing/account/{id}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,

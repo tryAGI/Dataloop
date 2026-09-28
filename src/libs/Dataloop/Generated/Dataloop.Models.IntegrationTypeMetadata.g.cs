@@ -42,8 +42,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::Dataloop.IKeyValueMetadata PickIKeyValue() => IsIKeyValue
-            ? IKeyValue!
+        public global::Dataloop.IKeyValueMetadata PickIKeyValue() => IKeyValue is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'IKeyValue' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Dataloop
         /// <summary>
         ///
         /// </summary>
-        public global::Dataloop.IS3ApiMetadata PickIS3Api() => IsIS3Api
-            ? IS3Api!
+        public global::Dataloop.IS3ApiMetadata PickIS3Api() => IS3Api is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'IS3Api' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -177,13 +177,13 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsIKeyValue && iKeyValue != null)
+            if (IKeyValue is { } __value0 && iKeyValue != null)
             {
-                return iKeyValue(IKeyValue!);
+                return iKeyValue(__value0);
             }
-            else if (IsIS3Api && iS3Api != null)
+            else if (IS3Api is { } __value1 && iS3Api != null)
             {
-                return iS3Api(IS3Api!);
+                return iS3Api(__value1);
             }
 
             return default(TResult);
@@ -203,13 +203,13 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsIKeyValue)
+            if (IKeyValue is { } __value0)
             {
-                iKeyValue?.Invoke(IKeyValue!);
+                iKeyValue?.Invoke(__value0);
             }
-            else if (IsIS3Api)
+            else if (IS3Api is { } __value1)
             {
-                iS3Api?.Invoke(IS3Api!);
+                iS3Api?.Invoke(__value1);
             }
         }
 
@@ -226,13 +226,13 @@ namespace Dataloop
                 Validate();
             }
 
-            if (IsIKeyValue)
+            if (IKeyValue is { } __value0)
             {
-                iKeyValue?.Invoke(IKeyValue!);
+                iKeyValue?.Invoke(__value0);
             }
-            else if (IsIS3Api)
+            else if (IS3Api is { } __value1)
             {
-                iS3Api?.Invoke(IS3Api!);
+                iS3Api?.Invoke(__value1);
             }
         }
 
