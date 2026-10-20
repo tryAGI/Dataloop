@@ -31,6 +31,10 @@ namespace Dataloop.JsonConverters
             catch (global::System.InvalidOperationException)
             {
             }
+            catch (global::System.ArgumentOutOfRangeException __enumTokenException) when (__enumTokenException.ParamName == "reader")
+            {
+                // Legacy enum converters signal an incompatible JSON token with this exception.
+            }
 
             global::Dataloop.CustomInstallationVariant2? customInstallationVariant2 = default;
             try
@@ -44,6 +48,10 @@ namespace Dataloop.JsonConverters
             }
             catch (global::System.InvalidOperationException)
             {
+            }
+            catch (global::System.ArgumentOutOfRangeException __enumTokenException) when (__enumTokenException.ParamName == "reader")
+            {
+                // Legacy enum converters signal an incompatible JSON token with this exception.
             }
             var __value = new global::Dataloop.CustomInstallation(
                 pickAPIDpkDependencies,
