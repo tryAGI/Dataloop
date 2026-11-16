@@ -15,7 +15,7 @@ namespace Dataloop
         global::System.Threading.Tasks.Task<global::Dataloop.WorkflowsCounters> GetCountersForProjectAsync(
             string projectId,
 
-            global::Dataloop.GetCountersForProjectRequest2 request,
+            global::Dataloop.GetCountersForProjectRequest request,
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
@@ -29,7 +29,7 @@ namespace Dataloop
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.WorkflowsCounters>> GetCountersForProjectAsResponseAsync(
             string projectId,
 
-            global::Dataloop.GetCountersForProjectRequest2 request,
+            global::Dataloop.GetCountersForProjectRequest request,
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>

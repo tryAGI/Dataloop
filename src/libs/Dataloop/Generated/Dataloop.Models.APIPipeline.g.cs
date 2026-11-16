@@ -140,7 +140,7 @@ namespace Dataloop
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("template")]
-        public global::Dataloop.APIPipelineTemplate? Template { get; set; }
+        public global::Dataloop.APIPipelineTemplate2? Template { get; set; }
 
         /// <summary>
         ///
@@ -201,7 +201,7 @@ namespace Dataloop
             global::Dataloop.IPipelineSettings? settings,
             global::System.Collections.Generic.IList<global::Dataloop.PipelineVariable>? variables,
             global::System.DateTime? resetTimestamp,
-            global::Dataloop.APIPipelineTemplate? template,
+            global::Dataloop.APIPipelineTemplate2? template,
             double? versionNumber)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));

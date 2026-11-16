@@ -6,7 +6,7 @@ namespace Dataloop
     /// <summary>
     ///
     /// </summary>
-    public sealed partial class Metadata2
+    public sealed partial class Metadata
     {
         /// <summary>
         ///
@@ -21,22 +21,22 @@ namespace Dataloop
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Metadata2" /> class.
+        /// Initializes a new instance of the <see cref="Metadata" /> class.
         /// </summary>
         /// <param name="system"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
-        public Metadata2(
+        public Metadata(
             global::Dataloop.Dictionary? system)
         {
             this.System = system;
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Metadata2" /> class.
+        /// Initializes a new instance of the <see cref="Metadata" /> class.
         /// </summary>
-        public Metadata2()
+        public Metadata()
         {
         }
 

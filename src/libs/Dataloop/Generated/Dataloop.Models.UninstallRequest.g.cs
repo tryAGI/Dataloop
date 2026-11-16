@@ -9,7 +9,7 @@ namespace Dataloop
     public sealed partial class UninstallRequest
     {
         /// <summary>
-        /// Keep Composition Triggers Active
+        /// Boolean value
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("value")]
         public bool? Value { get; set; }
@@ -24,7 +24,7 @@ namespace Dataloop
         /// Initializes a new instance of the <see cref="UninstallRequest" /> class.
         /// </summary>
         /// <param name="value">
-        /// Keep Composition Triggers Active
+        /// Boolean value
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]

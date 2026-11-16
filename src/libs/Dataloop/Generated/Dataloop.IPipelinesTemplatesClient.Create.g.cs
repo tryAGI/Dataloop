@@ -13,7 +13,7 @@ namespace Dataloop
         /// <exception cref="global::Dataloop.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Dataloop.APIPipeline> CreateAsync(
 
-            global::Dataloop.APIPipelineTemplate2 request,
+            global::Dataloop.APIPipelineTemplate request,
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
@@ -25,7 +25,7 @@ namespace Dataloop
         /// <exception cref="global::Dataloop.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APIPipeline>> CreateAsResponseAsync(
 
-            global::Dataloop.APIPipelineTemplate2 request,
+            global::Dataloop.APIPipelineTemplate request,
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>

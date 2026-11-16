@@ -14,7 +14,7 @@ namespace Dataloop
         /// <exception cref="global::Dataloop.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Dataloop.APITaskCounters> GetProjectsActiveCountersAsync(
 
-            global::Dataloop.GetProjectsActiveCountersRequest2 request,
+            global::Dataloop.GetProjectsActiveCountersRequest request,
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
@@ -27,7 +27,7 @@ namespace Dataloop
         /// <exception cref="global::Dataloop.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APITaskCounters>> GetProjectsActiveCountersAsResponseAsync(
 
-            global::Dataloop.GetProjectsActiveCountersRequest2 request,
+            global::Dataloop.GetProjectsActiveCountersRequest request,
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
