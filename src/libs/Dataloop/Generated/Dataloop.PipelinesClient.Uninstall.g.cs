@@ -28,12 +28,12 @@ namespace Dataloop
         partial void PrepareUninstallArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string pipelineId,
-            global::Dataloop.UninstallRequest2 request);
+            global::Dataloop.UninstallRequest request);
         partial void PrepareUninstallRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string pipelineId,
-            global::Dataloop.UninstallRequest2 request);
+            global::Dataloop.UninstallRequest request);
         partial void ProcessUninstallResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -68,7 +68,7 @@ namespace Dataloop
         public async global::System.Threading.Tasks.Task<global::Dataloop.APIPipeline> UninstallAsync(
             string pipelineId,
 
-            global::Dataloop.UninstallRequest2 request,
+            global::Dataloop.UninstallRequest request,
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -107,7 +107,7 @@ namespace Dataloop
         public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APIPipeline>> UninstallAsResponseAsync(
             string pipelineId,
 
-            global::Dataloop.UninstallRequest2 request,
+            global::Dataloop.UninstallRequest request,
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -484,7 +484,7 @@ namespace Dataloop
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::Dataloop.UninstallRequest2
+            var __request = new global::Dataloop.UninstallRequest
             {
                 Value = value,
             };

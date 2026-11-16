@@ -29,7 +29,7 @@ namespace Dataloop
         global::System.Threading.Tasks.Task<global::Dataloop.APIPipeline> InstallAsync(
             string pipelineId,
 
-            global::Dataloop.InstallRequest2 request,
+            global::Dataloop.InstallRequest request,
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
@@ -57,7 +57,7 @@ namespace Dataloop
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APIPipeline>> InstallAsResponseAsync(
             string pipelineId,
 
-            global::Dataloop.InstallRequest2 request,
+            global::Dataloop.InstallRequest request,
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>

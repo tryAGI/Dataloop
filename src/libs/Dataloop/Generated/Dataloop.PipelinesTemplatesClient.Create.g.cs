@@ -27,11 +27,11 @@ namespace Dataloop
             };
         partial void PrepareCreateArguments(
             global::System.Net.Http.HttpClient httpClient,
-            global::Dataloop.APIPipelineTemplate2 request);
+            global::Dataloop.APIPipelineTemplate request);
         partial void PrepareCreateRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::Dataloop.APIPipelineTemplate2 request);
+            global::Dataloop.APIPipelineTemplate request);
         partial void ProcessCreateResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -50,7 +50,7 @@ namespace Dataloop
         /// <exception cref="global::Dataloop.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Dataloop.APIPipeline> CreateAsync(
 
-            global::Dataloop.APIPipelineTemplate2 request,
+            global::Dataloop.APIPipelineTemplate request,
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -72,7 +72,7 @@ namespace Dataloop
         /// <exception cref="global::Dataloop.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APIPipeline>> CreateAsResponseAsync(
 
-            global::Dataloop.APIPipelineTemplate2 request,
+            global::Dataloop.APIPipelineTemplate request,
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -485,7 +485,7 @@ namespace Dataloop
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::Dataloop.APIPipelineTemplate2
+            var __request = new global::Dataloop.APIPipelineTemplate
             {
                 Id = id,
                 Url = url,

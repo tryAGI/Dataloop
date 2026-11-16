@@ -28,12 +28,12 @@ namespace Dataloop
         partial void PrepareGetCountersForProjectArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string projectId,
-            global::Dataloop.GetCountersForProjectRequest2 request);
+            global::Dataloop.GetCountersForProjectRequest request);
         partial void PrepareGetCountersForProjectRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string projectId,
-            global::Dataloop.GetCountersForProjectRequest2 request);
+            global::Dataloop.GetCountersForProjectRequest request);
         partial void ProcessGetCountersForProjectResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -54,7 +54,7 @@ namespace Dataloop
         public async global::System.Threading.Tasks.Task<global::Dataloop.WorkflowsCounters> GetCountersForProjectAsync(
             string projectId,
 
-            global::Dataloop.GetCountersForProjectRequest2 request,
+            global::Dataloop.GetCountersForProjectRequest request,
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -79,7 +79,7 @@ namespace Dataloop
         public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.WorkflowsCounters>> GetCountersForProjectAsResponseAsync(
             string projectId,
 
-            global::Dataloop.GetCountersForProjectRequest2 request,
+            global::Dataloop.GetCountersForProjectRequest request,
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -454,7 +454,7 @@ namespace Dataloop
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::Dataloop.GetCountersForProjectRequest2
+            var __request = new global::Dataloop.GetCountersForProjectRequest
             {
                 Contributors = contributors,
             };

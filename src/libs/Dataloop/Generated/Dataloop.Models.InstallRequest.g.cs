@@ -4,7 +4,7 @@
 namespace Dataloop
 {
     /// <summary>
-    /// Pipeline resume option
+    ///
     /// </summary>
     public sealed partial class InstallRequest
     {

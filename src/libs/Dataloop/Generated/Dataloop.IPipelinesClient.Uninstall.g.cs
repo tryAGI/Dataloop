@@ -29,7 +29,7 @@ namespace Dataloop
         global::System.Threading.Tasks.Task<global::Dataloop.APIPipeline> UninstallAsync(
             string pipelineId,
 
-            global::Dataloop.UninstallRequest2 request,
+            global::Dataloop.UninstallRequest request,
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
@@ -57,7 +57,7 @@ namespace Dataloop
         global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APIPipeline>> UninstallAsResponseAsync(
             string pipelineId,
 
-            global::Dataloop.UninstallRequest2 request,
+            global::Dataloop.UninstallRequest request,
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>

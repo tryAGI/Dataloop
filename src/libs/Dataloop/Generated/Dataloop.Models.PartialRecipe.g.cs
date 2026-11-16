@@ -72,7 +72,7 @@ namespace Dataloop
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("metadata")]
-        public global::Dataloop.Metadata2? Metadata { get; set; }
+        public global::Dataloop.Metadata? Metadata { get; set; }
 
         /// <summary>
         ///
@@ -150,7 +150,7 @@ namespace Dataloop
             global::Dataloop.PartialRecipeExamples? examples,
             global::System.Collections.Generic.IList<global::Dataloop.CustomAction>? customActions,
             global::Dataloop.Dictionary? uiSettings,
-            global::Dataloop.Metadata2? metadata,
+            global::Dataloop.Metadata? metadata,
             global::Dataloop.AuthZBlockRecipeContext? authz,
             string? deprecatedBy,
             global::System.DateTime? createdAt,

@@ -28,12 +28,12 @@ namespace Dataloop
         partial void PrepareInstallArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string pipelineId,
-            global::Dataloop.InstallRequest2 request);
+            global::Dataloop.InstallRequest request);
         partial void PrepareInstallRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string pipelineId,
-            global::Dataloop.InstallRequest2 request);
+            global::Dataloop.InstallRequest request);
         partial void ProcessInstallResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -68,7 +68,7 @@ namespace Dataloop
         public async global::System.Threading.Tasks.Task<global::Dataloop.APIPipeline> InstallAsync(
             string pipelineId,
 
-            global::Dataloop.InstallRequest2 request,
+            global::Dataloop.InstallRequest request,
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -107,7 +107,7 @@ namespace Dataloop
         public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APIPipeline>> InstallAsResponseAsync(
             string pipelineId,
 
-            global::Dataloop.InstallRequest2 request,
+            global::Dataloop.InstallRequest request,
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -482,7 +482,7 @@ namespace Dataloop
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::Dataloop.InstallRequest2
+            var __request = new global::Dataloop.InstallRequest
             {
                 ResumeOption = resumeOption,
             };

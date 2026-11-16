@@ -27,11 +27,11 @@ namespace Dataloop
             };
         partial void PrepareGetProjectsActiveCountersArguments(
             global::System.Net.Http.HttpClient httpClient,
-            global::Dataloop.GetProjectsActiveCountersRequest2 request);
+            global::Dataloop.GetProjectsActiveCountersRequest request);
         partial void PrepareGetProjectsActiveCountersRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::Dataloop.GetProjectsActiveCountersRequest2 request);
+            global::Dataloop.GetProjectsActiveCountersRequest request);
         partial void ProcessGetProjectsActiveCountersResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -51,7 +51,7 @@ namespace Dataloop
         /// <exception cref="global::Dataloop.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Dataloop.APITaskCounters> GetProjectsActiveCountersAsync(
 
-            global::Dataloop.GetProjectsActiveCountersRequest2 request,
+            global::Dataloop.GetProjectsActiveCountersRequest request,
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -74,7 +74,7 @@ namespace Dataloop
         /// <exception cref="global::Dataloop.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Dataloop.AutoSDKHttpResponse<global::Dataloop.APITaskCounters>> GetProjectsActiveCountersAsResponseAsync(
 
-            global::Dataloop.GetProjectsActiveCountersRequest2 request,
+            global::Dataloop.GetProjectsActiveCountersRequest request,
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -448,7 +448,7 @@ namespace Dataloop
             global::Dataloop.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::Dataloop.GetProjectsActiveCountersRequest2
+            var __request = new global::Dataloop.GetProjectsActiveCountersRequest
             {
                 DatasetId = datasetId,
                 ProjectIds = projectIds,
